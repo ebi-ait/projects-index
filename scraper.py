@@ -21,6 +21,10 @@ def get_data(uuid):
     except:
         raise Exception("Something went wrong. Is this a valid project UUID?")
 
+def get_uuids(input_file):
+    with open(input_file, "r") as file:
+        return file.read().splitlines()
+
 def make_ae_links(proj):
     try:
         return [f"https://identifiers.org/arrayexpress:{acc}" for acc in proj["content"]['array_express_accessions']]
@@ -45,16 +49,25 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=description)
 
     parser.add_argument("-u", "--uuid", help="Project UUID to scrape")
+    parser.add_argument("-i", "--input", help="File containing a list of UUIDs to scrape. Each UUID must be on a new line")
     parser.add_argument("-o", "--output", help="Output JSON file", default="data.json")
 
     args = parser.parse_args()
 
+    if args.input and args.uuid:
+        raise TypeError("Cannot use both --uuid and --input together.")
+
+    uuids = [args.uuid] if args.uuid else get_uuids(args.input)
+
     with open(args.output, 'r+') as out:
         existing_data = json.load(out) or []
         out.seek(0)
-        if args.uuid in [x["project_uuid"] for x in existing_data]:
-            print(f"{args.uuid} already in data, skipping...")
-        else:
-            existing_data.append(get_data(args.uuid))
-            json.dump(existing_data, out, indent=4, sort_keys=True)
-            out.truncate()
+        
+        for uuid in uuids:
+            if uuid in [x["project_uuid"] for x in existing_data]:
+                print(f"{uuid} already in data, skipping...")
+            else:
+                existing_data.append(get_data(uuid))
+        
+        json.dump(existing_data, out, indent=4, sort_keys=True)    
+        out.truncate()

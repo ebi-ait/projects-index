@@ -131,5 +131,203 @@
         },
         "project_uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc",
         "publication_links": []
+    },
+    {
+        "accession_links": {
+            "ae": [],
+            "ena": [
+                "https://identifiers.org/ena.embl:ERP114427"
+            ]
+        },
+        "contributors": [
+            {
+                "address": "Deutscher Pl. 6, 04103 Leipzig",
+                "corresponding_contributor": true,
+                "country": "Germany",
+                "email": "barbara_treutlein@eva.mpg.de",
+                "institution": "Max Planck Institute for Evolutionary Anthropology",
+                "name": "Barbara,,Treutlein",
+                "orcid_id": "0000-0002-3299-5597",
+                "project_role": {
+                    "ontology": "EFO:0009736",
+                    "ontology_label": "principal investigator",
+                    "text": "principal investigator"
+                }
+            },
+            {
+                "address": "Deutscher Pl. 6, 04103 Leipzig",
+                "corresponding_contributor": false,
+                "country": "Germany",
+                "email": "gray_camp@eva.mpg.de",
+                "institution": "Max Planck Institute for Evolutionary Anthropology",
+                "name": "J,Gray,Camp"
+            },
+            {
+                "address": "Deutscher Pl. 6, 04103 Leipzig",
+                "corresponding_contributor": false,
+                "country": "Germany",
+                "email": "zhisong_he@eva.mpg.de",
+                "institution": "Max Planck Institute for Evolutionary Anthropology",
+                "name": "Zhisong,,He"
+            },
+            {
+                "address": "Deutscher Pl. 6, 04103 Leipzig",
+                "corresponding_contributor": false,
+                "country": "Germany",
+                "email": "sabina_kanton@eva.mpg.de",
+                "institution": "Max Planck Institute for Evolutionary Anthropology",
+                "name": "Sabina,,Kanton"
+            },
+            {
+                "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                "corresponding_contributor": false,
+                "country": "UK",
+                "email": "mfreeberg@ebi.ac.uk",
+                "institution": "EMBL-EBI",
+                "laboratory": "Human Cell Atlas Data Coordination Platform",
+                "name": "Mallory,Ann,Freeberg",
+                "orcid_id": "0000-0003-2949-3921",
+                "project_role": {
+                    "ontology": "EFO:0009737",
+                    "ontology_label": "data curator",
+                    "text": "Human Cell Atlas wrangler"
+                }
+            }
+        ],
+        "project_core": {
+            "project_description": "The purpose of this project is to assess the relevance of pluripotent stem cell-derived cerebral and liver organoids to recapitulate the variation in cell-type specific gene expression programs between individuals. Towards this aim, we will generate reference atlases of the developing cortex and liver from multiple individuals, derive iPSC lines from these same individuals, and determine if inter-individual gene expression variation is recapitulated in cerebral and liver organoids from the same individual from which we have reference maps. In parallel we will assess the genetic contribution to variablity between organoids from different iPSCs of multiple human individuals that are available in existing iPSC resources (e.g. HipSci).",
+            "project_short_name": "HPSI human cerebral organoids",
+            "project_title": "Assessing the relevance of organoids to model inter-individual variation"
+        },
+        "project_uuid": "005d611a-14d5-4fbf-846e-571a1f874f70",
+        "publication_links": []
+    },
+    {
+        "accession_links": {
+            "ae": [
+                "https://identifiers.org/arrayexpress:E-MTAB-6678",
+                "https://identifiers.org/arrayexpress:E-MTAB-6701"
+            ],
+            "ena": [
+                "https://identifiers.org/ena.embl:ERP107748",
+                "https://identifiers.org/ena.embl:ERP110450"
+            ]
+        },
+        "contributors": [
+            {
+                "address": "Wellcome Trust Genome Campus, Cambridge",
+                "corresponding_contributor": false,
+                "country": "UK",
+                "email": "mahogny@areta.org",
+                "institution": "Wellcome Trust Sanger Institute",
+                "name": "Johan,,Henriksson"
+            },
+            {
+                "address": "Wellcome Trust Genome Campus, Cambridge",
+                "corresponding_contributor": true,
+                "country": "UK",
+                "email": "me5@sanger.ac.uk",
+                "institution": "Wellcome Trust Sanger Institute",
+                "name": "Mirjana,,Efremova"
+            },
+            {
+                "address": "Wellcome Trust Genome Campus, Cambridge",
+                "corresponding_contributor": true,
+                "country": "UK",
+                "email": "rv4@sanger.ac.uk",
+                "institution": "Wellcome Trust Sanger Institute",
+                "name": "Roser,,Vento-Tormo"
+            },
+            {
+                "address": "Newcastle upon Tyne, NE2 4HH",
+                "corresponding_contributor": true,
+                "country": "UK",
+                "email": "m.a.haniffa@ncl.ac.uk",
+                "institution": "Newcastle University",
+                "laboratory": "Institute of Cellular Medicine",
+                "name": "Muzlifah,,Haniffa",
+                "project_role": {
+                    "ontology": "EFO:0009735",
+                    "text": "co-investigator"
+                }
+            },
+            {
+                "address": "Cambridge, CB2 3EG",
+                "corresponding_contributor": true,
+                "country": "UK",
+                "email": "am485@cam.ac.uk",
+                "institution": "University of Cambridge",
+                "laboratory": "Centre for Trophoblast Research",
+                "name": "Ashley,,Moffett",
+                "project_role": {
+                    "text": "co-investigator"
+                }
+            },
+            {
+                "address": "Wellcome Trust Genome Campus, Cambridge",
+                "corresponding_contributor": true,
+                "country": "UK",
+                "email": "st9@sanger.ac.uk",
+                "institution": "Wellcome Trust Sanger Institute",
+                "name": "Sarah,A,Teichmann",
+                "project_role": {
+                    "ontology": "EFO:0009736",
+                    "ontology_label": "principal investigator",
+                    "text": "principal investigator"
+                }
+            },
+            {
+                "address": "Wellcome Trust Genome Campus, Cambridge",
+                "corresponding_contributor": false,
+                "country": "UK",
+                "email": "mfreeberg@ebi.ac.uk",
+                "institution": "EMBL-EBI",
+                "laboratory": "Human Cell Atlas Data Coordination Platform",
+                "name": "Mallory,Ann,Freeberg",
+                "orcid_id": "0000-0003-2949-3921",
+                "project_role": {
+                    "ontology": "EFO:0009737",
+                    "ontology_label": "data curator",
+                    "text": "Human Cell Atlas wrangler"
+                }
+            },
+            {
+                "address": "Wellcome Trust Genome Campus, Cambridge",
+                "corresponding_contributor": false,
+                "country": "UK",
+                "email": "zina@ebi.ac.uk",
+                "institution": "EMBL-EBI",
+                "laboratory": "Human Cell Atlas Data Coordination Platform",
+                "name": "Zinaida, A, Perova",
+                "orcid_id": "0000-0001-9913-3249",
+                "project_role": {
+                    "ontology": "EFO:0009737",
+                    "ontology_label": "data curator",
+                    "text": "Human Cell Atlas wrangler"
+                }
+            },
+            {
+                "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                "corresponding_contributor": false,
+                "country": "UK",
+                "email": "anjaf@ebi.ac.uk",
+                "institution": "EMBL-EBI",
+                "laboratory": "ArrayExpress",
+                "name": "Anja,,Fullgrabe",
+                "orcid_id": "0000-0002-8674-0039",
+                "project_role": {
+                    "ontology": "EFO:0009737",
+                    "ontology_label": "data curator",
+                    "text": "external curator"
+                }
+            }
+        ],
+        "project_core": {
+            "project_description": "During early human pregnancy the uterine mucosa transforms into the decidua, into which the fetal placenta implants and where placental trophoblast cells intermingle and communicate with maternal cells. Trophoblast\u2013decidual interactions underlie common diseases of pregnancy, including pre-eclampsia and stillbirth. Here we profile the transcriptomes of about 70,000 single cells from first-trimester placentas with matched maternal blood and decidual cells. The cellular composition of human decidua reveals subsets of perivascular and stromal cells that are located in distinct decidual layers. There are three major subsets of decidual natural killer cells that have distinctive immunomodulatory and chemokine profiles. We develop a repository of ligand\u2013receptor complexes and a statistical tool to predict the cell-type specificity of cell\u2013cell communication via these molecular interactions. Our data identify many regulatory interactions that prevent harmful innate or adaptive immune responses in this environment. Our single-cell atlas of the maternal\u2013fetal interface reveals the cellular organization of the decidua and placenta, and the interactions that are critical for placentation and reproductive success.",
+            "project_short_name": "Fetal/Maternal Interface",
+            "project_title": "Reconstructing the human first trimester fetal-maternal interface using single cell transcriptomics"
+        },
+        "project_uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde",
+        "publication_links": []
     }
 ]
