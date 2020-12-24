@@ -1,6 +1,139 @@
 [
     {
         "accession_links": {
+            "ae": [
+                "https://identifiers.org/arrayexpress:E-GEOD-84133"
+            ],
+            "ena": [
+                "https://identifiers.org/ena.embl:SRP078321"
+            ]
+        },
+        "contributors": [
+            {
+                "address": "Haifa, 3200003",
+                "corresponding_contributor": false,
+                "country": "Israel",
+                "institution": "Technion - Israel Institute of Technology",
+                "laboratory": "Faculty of Biology",
+                "name": "Maayan,,Baron"
+            },
+            {
+                "address": "7 Divinity Ave Cambridge, MA 02138",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Harvard University",
+                "laboratory": "Department of Stem Cell and Regenerative Biology",
+                "name": "Adrian,,Veres"
+            },
+            {
+                "address": "200 Longwood Ave Boston, MA 02115",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Harvard Medical School",
+                "laboratory": "Department of Systems Biology",
+                "name": "Samuel,L,Wolock"
+            },
+            {
+                "address": "7 Divinity Ave Cambridge, MA 02138",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Harvard University",
+                "laboratory": "Department of Stem Cell and Regenerative Biology",
+                "name": "Aubrey,L,Faust"
+            },
+            {
+                "address": "Haifa, 3200003",
+                "corresponding_contributor": false,
+                "country": "Israel",
+                "institution": "Technion - Israel Institute of Technology",
+                "laboratory": "Department of Immunology, Faculty of Medicine",
+                "name": "Renaud,,Gaujoux"
+            },
+            {
+                "address": "Cambridge, MA 02142",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Broad Institute",
+                "laboratory": "Center for the Science of Therapeutics",
+                "name": "Amedeo,,Vetere"
+            },
+            {
+                "address": "7 Divinity Ave Cambridge, MA 02138",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Harvard University",
+                "laboratory": "Department of Stem Cell and Regenerative Biology",
+                "name": "Jennifer,Hyoje,Ryu"
+            },
+            {
+                "address": "Cambridge, MA 02142",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Broad Institute",
+                "laboratory": "Center for the Science of Therapeutics",
+                "name": "Bridget,K,Wagner"
+            },
+            {
+                "address": "Haifa, 3200003",
+                "corresponding_contributor": false,
+                "country": "Israel",
+                "institution": "Technion - Israel Institute of Technology",
+                "laboratory": "Department of Immunology, Faculty of Medicine",
+                "name": "Shai,S,Shen-Orr"
+            },
+            {
+                "address": "200 Longwood Ave Boston, MA 02115",
+                "corresponding_contributor": true,
+                "country": "USA",
+                "email": "allon_klein@hms.harvard.edu",
+                "institution": "Harvard Medical School",
+                "laboratory": "Department of Systems Biology",
+                "name": "Allon,M,Klein"
+            },
+            {
+                "address": "7 Divinity Ave Cambridge, MA 02138",
+                "corresponding_contributor": true,
+                "country": "USA",
+                "email": "dmelton@harvard.edu",
+                "institution": "Harvard University",
+                "laboratory": "Department of Stem Cell and Regenerative Biology",
+                "name": "Douglas,A,Melton"
+            },
+            {
+                "address": "Haifa, 3200003",
+                "corresponding_contributor": true,
+                "country": "Israel",
+                "email": "itai.yanai@nyumc.org",
+                "institution": "Technion - Israel Institute of Technology",
+                "laboratory": "Faculty of Biology",
+                "name": "Itai,,Yana"
+            },
+            {
+                "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                "corresponding_contributor": false,
+                "country": "UK",
+                "email": "mfreeberg@ebi.ac.uk",
+                "institution": "EMBL-EBI",
+                "laboratory": "Human Cell Atlas Data Coordination Platform",
+                "name": "Mallory,Ann,Freeberg",
+                "orcid_id": "0000-0003-2949-3921",
+                "project_role": {
+                    "ontology": "EFO:0009737",
+                    "ontology_label": "data curator",
+                    "text": "Human Cell Atlas wrangler"
+                }
+            }
+        ],
+        "project_core": {
+            "project_description": "Although the function of the mammalian pancreas hinges on complex interactions of distinct cell types, gene expression profiles have primarily been described with bulk mixtures. Here we implemented a droplet-based, single-cell RNA-seq method to determine the transcriptomes of over 12,000 individual pancreatic cells from four human donors and two mouse strains. Cells could be divided into 15 clusters that matched previously characterized cell types: all endocrine cell types, including rare epsilon-cells; exocrine cell types; vascular cells; Schwann cells; quiescent and activated stellate cells; and four types of immune cells. We detected subpopulations of ductal cells with distinct expression profiles and validated their existence with immuno-histochemistry stains. Moreover, among human beta- cells, we detected heterogeneity in the regulation of genes relating to functional maturation and levels of ER stress. Finally, we deconvolved bulk gene expression samples using the single-cell data to detect disease-associated differential expression. Our dataset provides a resource for the discovery of novel cell type-specific transcription factors, signaling receptors, and medically relevant genes.",
+            "project_short_name": "HumanMousePancreas",
+            "project_title": "A Single-Cell Transcriptomic Map of the Human and Mouse Pancreas Reveals Inter- and Intra-cell Population Structure"
+        },
+        "project_uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc",
+        "publication_links": []
+    },
+    {
+        "accession_links": {
             "ae": [],
             "ena": [
                 "https://identifiers.org/ena.embl:ERP114427"
@@ -195,139 +328,6 @@
             "project_title": "Reconstructing the human first trimester fetal-maternal interface using single cell transcriptomics"
         },
         "project_uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde",
-        "publication_links": []
-    },
-    {
-        "accession_links": {
-            "ae": [
-                "https://identifiers.org/arrayexpress:E-GEOD-84133"
-            ],
-            "ena": [
-                "https://identifiers.org/ena.embl:SRP078321"
-            ]
-        },
-        "contributors": [
-            {
-                "address": "Haifa, 3200003",
-                "corresponding_contributor": false,
-                "country": "Israel",
-                "institution": "Technion - Israel Institute of Technology",
-                "laboratory": "Faculty of Biology",
-                "name": "Maayan,,Baron"
-            },
-            {
-                "address": "7 Divinity Ave Cambridge, MA 02138",
-                "corresponding_contributor": false,
-                "country": "USA",
-                "institution": "Harvard University",
-                "laboratory": "Department of Stem Cell and Regenerative Biology",
-                "name": "Adrian,,Veres"
-            },
-            {
-                "address": "200 Longwood Ave Boston, MA 02115",
-                "corresponding_contributor": false,
-                "country": "USA",
-                "institution": "Harvard Medical School",
-                "laboratory": "Department of Systems Biology",
-                "name": "Samuel,L,Wolock"
-            },
-            {
-                "address": "7 Divinity Ave Cambridge, MA 02138",
-                "corresponding_contributor": false,
-                "country": "USA",
-                "institution": "Harvard University",
-                "laboratory": "Department of Stem Cell and Regenerative Biology",
-                "name": "Aubrey,L,Faust"
-            },
-            {
-                "address": "Haifa, 3200003",
-                "corresponding_contributor": false,
-                "country": "Israel",
-                "institution": "Technion - Israel Institute of Technology",
-                "laboratory": "Department of Immunology, Faculty of Medicine",
-                "name": "Renaud,,Gaujoux"
-            },
-            {
-                "address": "Cambridge, MA 02142",
-                "corresponding_contributor": false,
-                "country": "USA",
-                "institution": "Broad Institute",
-                "laboratory": "Center for the Science of Therapeutics",
-                "name": "Amedeo,,Vetere"
-            },
-            {
-                "address": "7 Divinity Ave Cambridge, MA 02138",
-                "corresponding_contributor": false,
-                "country": "USA",
-                "institution": "Harvard University",
-                "laboratory": "Department of Stem Cell and Regenerative Biology",
-                "name": "Jennifer,Hyoje,Ryu"
-            },
-            {
-                "address": "Cambridge, MA 02142",
-                "corresponding_contributor": false,
-                "country": "USA",
-                "institution": "Broad Institute",
-                "laboratory": "Center for the Science of Therapeutics",
-                "name": "Bridget,K,Wagner"
-            },
-            {
-                "address": "Haifa, 3200003",
-                "corresponding_contributor": false,
-                "country": "Israel",
-                "institution": "Technion - Israel Institute of Technology",
-                "laboratory": "Department of Immunology, Faculty of Medicine",
-                "name": "Shai,S,Shen-Orr"
-            },
-            {
-                "address": "200 Longwood Ave Boston, MA 02115",
-                "corresponding_contributor": true,
-                "country": "USA",
-                "email": "allon_klein@hms.harvard.edu",
-                "institution": "Harvard Medical School",
-                "laboratory": "Department of Systems Biology",
-                "name": "Allon,M,Klein"
-            },
-            {
-                "address": "7 Divinity Ave Cambridge, MA 02138",
-                "corresponding_contributor": true,
-                "country": "USA",
-                "email": "dmelton@harvard.edu",
-                "institution": "Harvard University",
-                "laboratory": "Department of Stem Cell and Regenerative Biology",
-                "name": "Douglas,A,Melton"
-            },
-            {
-                "address": "Haifa, 3200003",
-                "corresponding_contributor": true,
-                "country": "Israel",
-                "email": "itai.yanai@nyumc.org",
-                "institution": "Technion - Israel Institute of Technology",
-                "laboratory": "Faculty of Biology",
-                "name": "Itai,,Yana"
-            },
-            {
-                "address": "Wellcome Trust Genome Campus, Cambridge UK",
-                "corresponding_contributor": false,
-                "country": "UK",
-                "email": "mfreeberg@ebi.ac.uk",
-                "institution": "EMBL-EBI",
-                "laboratory": "Human Cell Atlas Data Coordination Platform",
-                "name": "Mallory,Ann,Freeberg",
-                "orcid_id": "0000-0003-2949-3921",
-                "project_role": {
-                    "ontology": "EFO:0009737",
-                    "ontology_label": "data curator",
-                    "text": "Human Cell Atlas wrangler"
-                }
-            }
-        ],
-        "project_core": {
-            "project_description": "Although the function of the mammalian pancreas hinges on complex interactions of distinct cell types, gene expression profiles have primarily been described with bulk mixtures. Here we implemented a droplet-based, single-cell RNA-seq method to determine the transcriptomes of over 12,000 individual pancreatic cells from four human donors and two mouse strains. Cells could be divided into 15 clusters that matched previously characterized cell types: all endocrine cell types, including rare epsilon-cells; exocrine cell types; vascular cells; Schwann cells; quiescent and activated stellate cells; and four types of immune cells. We detected subpopulations of ductal cells with distinct expression profiles and validated their existence with immuno-histochemistry stains. Moreover, among human beta- cells, we detected heterogeneity in the regulation of genes relating to functional maturation and levels of ER stress. Finally, we deconvolved bulk gene expression samples using the single-cell data to detect disease-associated differential expression. Our dataset provides a resource for the discovery of novel cell type-specific transcription factors, signaling receptors, and medically relevant genes.",
-            "project_short_name": "HumanMousePancreas",
-            "project_title": "A Single-Cell Transcriptomic Map of the Human and Mouse Pancreas Reveals Inter- and Intra-cell Population Structure"
-        },
-        "project_uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc",
         "publication_links": []
     }
 ]
