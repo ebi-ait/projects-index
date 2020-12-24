@@ -55,13 +55,19 @@ if __name__ == "__main__":
 
     uuids = get_uuids(args.input)
 
-    with open(args.output, 'w') as out:
-        # Use a hashmap to ensure no duplicate UUIDs. Can't use a set as projects could have same UUID but diff content.
-        hashmap = {}
+    with open(args.output, 'r+') as out:
+        existing_data = json.load(out) or []
+        # Use a hashmap to ensure no duplicates but allow updates
+        hashmap = { x["project_uuid"] : x for x in existing_data}
         out.seek(0)
         
         for uuid in uuids:
             hashmap[uuid] = get_data(uuid)
+
+        for uuid in list(hashmap.keys()):
+            if uuid not in uuids:
+                print(f"Removing {uuid} from data...")
+                del hashmap[uuid]
         
         json.dump(list(hashmap.values()), out)    
         out.truncate()
