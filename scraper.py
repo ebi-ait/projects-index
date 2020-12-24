@@ -1,62 +1,60 @@
-import requests
+#!/usr/bin/env python3
+import getopt, argparse, json, requests
 
-def get_organs(project_uuid):
+def get_data(uuid):
     try:
-        organ_dict = {}
-        proj_resp = requests.get("https://api.ingest.archive.data.humancellatlas.org/projects/search/findByUuid?uuid={}".format(project_uuid))
-        sub_env_resp = requests.get(proj_resp.json()['_links']['submissionEnvelopes']['href'])
-        for sub_env in sub_env_resp.json()['_embedded']['submissionEnvelopes']:
-            biomaterials = requests.get(sub_env['_links']['biomaterials']['href']).json()['_embedded']['biomaterials'] 
-            for bio in biomaterials:
-                try: 
-                    organ_dict[bio['content']['organ']['ontology_label']] = bio['content']['organ']['ontology']
-                except KeyError:
-                    pass
-                try:
-                    organ_dict[bio['content']['model_organ']['ontology_label']] = bio['content']['model_organ']['ontology']
-                except:
-                    pass
-        return organ_dict
-    except KeyError:
-        return None
+        proj_url = f"https://api.ingest.archive.data.humancellatlas.org/projects/search/findByUuid?uuid={uuid}"
+        print(f"Getting project from {proj_url}")
+        proj = requests.get(proj_url).json()
+    
+        # TODO When retrieving this info in the UI make sure that it is agnostic to thet data format as this just pulls info but when switching to using API will use schema
+        return {
+            "project_uuid": uuid,
+            "project_core": proj["content"]["project_core"],
+            "contributors": proj["content"]["contributors"],
+            "accession_links": {
+                "ena": make_ena_links(proj),
+                "ae": make_ae_links(proj)
+            },
+            "publication_links": make_pub_links(proj)
+        }
+    except:
+        raise Exception("Something went wrong. Is this a valid project UUID?")
 
-def get_organ_parts(project_uuid):
+def make_ae_links(proj):
     try:
-        organ_dict = {}
-        proj_resp = requests.get("https://api.ingest.archive.data.humancellatlas.org/projects/search/findByUuid?uuid={}".format(project_uuid))
-        sub_env_resp = requests.get(proj_resp.json()['_links']['submissionEnvelopes']['href'])
-        for sub_env in sub_env_resp.json()['_embedded']['submissionEnvelopes']:
-            biomaterials = requests.get(sub_env['_links']['biomaterials']['href']).json()['_embedded']['biomaterials']
-            for bio in biomaterials:
-                try: 
-                    for part in bio['content']['organ_parts']:
-                        organ_dict[part['ontology_label']] = part['ontology']
-                except KeyError:
-                    pass
-                try:
-                    for part in bio['content']['model_organ_parts']:
-                        organ_dict[part['ontology_label']] = part['ontology']
-                except:
-                    pass
-        return organ_dict
+        return [f"https://identifiers.org/arrayexpress:{acc}" for acc in proj["content"]['array_express_accessions']]
     except KeyError:
-        return None
+        return []
 
-def make_ae_links(project_content):
+def make_ena_links(proj):
     try:
-        return ["https://identifiers.org/arrayexpress:{}".format(acc) for acc in project_content['array_express_accessions']]
+        return [f"https://identifiers.org/ena.embl:{acc}" for acc in proj["content"]['insdc_project_accessions']]
     except KeyError:
-        return None
+        return []
 
-def make_ena_links(project_content):
+def make_pub_links(proj):
     try:
-        return ["https://identifiers.org/ena.embl:{}".format(acc) for acc in project_content['insdc_project_accessions']]
+        doi_list = [x['doi'] for x in proj["content"]['publications']]
+        return [f"https://doi.org/{doi}" for doi in doi_list]
     except KeyError:
-        return None
+        return []
 
-def make_pub_links(project_content):
-    try:
-        doi_list = [x['doi'] for x in project_content['publications']]
-        return ["https://doi.org/{}".format(doi) for doi in doi_list]
-    except KeyError:
-        return None
+if __name__ == "__main__":
+    description = "Scrape Ingest API for published projects data."
+    parser = argparse.ArgumentParser(description=description)
+
+    parser.add_argument("-u", "--uuid", help="Project UUID to scrape")
+    parser.add_argument("-o", "--output", help="Output JSON file", default="data.json")
+
+    args = parser.parse_args()
+
+    with open(args.output, 'r+') as out:
+        existing_data = json.load(out) or []
+        out.seek(0)
+        if args.uuid in [x["project_uuid"] for x in existing_data]:
+            print(f"{args.uuid} already in data, skipping...")
+        else:
+            existing_data.append(get_data(args.uuid))
+            json.dump(existing_data, out, indent=4, sort_keys=True)
+            out.truncate()
