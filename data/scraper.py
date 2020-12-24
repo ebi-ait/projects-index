@@ -63,5 +63,5 @@ if __name__ == "__main__":
         for uuid in uuids:
             hashmap[uuid] = get_data(uuid)
         
-        json.dump(list(hashmap.values()), out, indent=4, sort_keys=True)    
+        json.dump(list(hashmap.values()), out)    
         out.truncate()
