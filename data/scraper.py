@@ -69,5 +69,5 @@ if __name__ == "__main__":
                 print(f"Removing {uuid} from data...")
                 del hashmap[uuid]
         
-        json.dump(list(hashmap.values()), out)    
+        json.dump(list(hashmap.values()), out, indent=4, sort_keys=True)    
         out.truncate()
