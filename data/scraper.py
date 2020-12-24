@@ -48,7 +48,7 @@ if __name__ == "__main__":
     description = "Scrape Ingest API for published projects data."
     parser = argparse.ArgumentParser(description=description)
 
-    parser.add_argument("-i", "--input", help="File containing a list of UUIDs to scrape. Each UUID must be on a new line.")
+    parser.add_argument("-i", "--input", help="File containing a list of UUIDs to scrape. Each UUID must be on a new line.", default="published_uuids.txt")
     parser.add_argument("-o", "--output", help="Output JSON file", default="data.json")
 
     args = parser.parse_args()
