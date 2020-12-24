@@ -48,16 +48,12 @@ if __name__ == "__main__":
     description = "Scrape Ingest API for published projects data."
     parser = argparse.ArgumentParser(description=description)
 
-    parser.add_argument("-u", "--uuid", help="Project UUID to scrape")
-    parser.add_argument("-i", "--input", help="File containing a list of UUIDs to scrape. Each UUID must be on a new line")
+    parser.add_argument("-i", "--input", help="File containing a list of UUIDs to scrape. Each UUID must be on a new line.")
     parser.add_argument("-o", "--output", help="Output JSON file", default="data.json")
 
     args = parser.parse_args()
 
-    if args.input and args.uuid:
-        raise TypeError("Cannot use both --uuid and --input together.")
-
-    uuids = [args.uuid] if args.uuid else get_uuids(args.input)
+    uuids = get_uuids(args.input)
 
     with open(args.output, 'r+') as out:
         existing_data = json.load(out) or []
