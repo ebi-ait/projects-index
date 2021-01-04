@@ -1,12 +1,12 @@
 [
     {
+        "added_to_index": 1609774337,
         "project_uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc",
         "project_core": {
             "project_short_name": "HumanMousePancreas",
             "project_title": "A Single-Cell Transcriptomic Map of the Human and Mouse Pancreas Reveals Inter- and Intra-cell Population Structure",
             "project_description": "Although the function of the mammalian pancreas hinges on complex interactions of distinct cell types, gene expression profiles have primarily been described with bulk mixtures. Here we implemented a droplet-based, single-cell RNA-seq method to determine the transcriptomes of over 12,000 individual pancreatic cells from four human donors and two mouse strains. Cells could be divided into 15 clusters that matched previously characterized cell types: all endocrine cell types, including rare epsilon-cells; exocrine cell types; vascular cells; Schwann cells; quiescent and activated stellate cells; and four types of immune cells. We detected subpopulations of ductal cells with distinct expression profiles and validated their existence with immuno-histochemistry stains. Moreover, among human beta- cells, we detected heterogeneity in the regulation of genes relating to functional maturation and levels of ER stress. Finally, we deconvolved bulk gene expression samples using the single-cell data to detect disease-associated differential expression. Our dataset provides a resource for the discovery of novel cell type-specific transcription factors, signaling receptors, and medically relevant genes."
         },
-        "added_to_index": 1609774337,
         "contributors": [
             {
                 "name": "Maayan,,Baron",
@@ -135,13 +135,13 @@
         "publication_links": []
     },
     {
+        "added_to_index": 1609774338,
         "project_uuid": "005d611a-14d5-4fbf-846e-571a1f874f70",
         "project_core": {
             "project_short_name": "HPSI human cerebral organoids",
             "project_title": "Assessing the relevance of organoids to model inter-individual variation",
             "project_description": "The purpose of this project is to assess the relevance of pluripotent stem cell-derived cerebral and liver organoids to recapitulate the variation in cell-type specific gene expression programs between individuals. Towards this aim, we will generate reference atlases of the developing cortex and liver from multiple individuals, derive iPSC lines from these same individuals, and determine if inter-individual gene expression variation is recapitulated in cerebral and liver organoids from the same individual from which we have reference maps. In parallel we will assess the genetic contribution to variablity between organoids from different iPSCs of multiple human individuals that are available in existing iPSC resources (e.g. HipSci)."
         },
-        "added_to_index": 1609774338,
         "contributors": [
             {
                 "name": "Barbara,,Treutlein",
@@ -207,13 +207,13 @@
         "publication_links": []
     },
     {
+        "added_to_index": 1609774338,
         "project_uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde",
         "project_core": {
             "project_short_name": "Fetal/Maternal Interface",
             "project_title": "Reconstructing the human first trimester fetal-maternal interface using single cell transcriptomics",
             "project_description": "During early human pregnancy the uterine mucosa transforms into the decidua, into which the fetal placenta implants and where placental trophoblast cells intermingle and communicate with maternal cells. Trophoblast\u2013decidual interactions underlie common diseases of pregnancy, including pre-eclampsia and stillbirth. Here we profile the transcriptomes of about 70,000 single cells from first-trimester placentas with matched maternal blood and decidual cells. The cellular composition of human decidua reveals subsets of perivascular and stromal cells that are located in distinct decidual layers. There are three major subsets of decidual natural killer cells that have distinctive immunomodulatory and chemokine profiles. We develop a repository of ligand\u2013receptor complexes and a statistical tool to predict the cell-type specificity of cell\u2013cell communication via these molecular interactions. Our data identify many regulatory interactions that prevent harmful innate or adaptive immune responses in this environment. Our single-cell atlas of the maternal\u2013fetal interface reveals the cellular organization of the decidua and placenta, and the interactions that are critical for placentation and reproductive success."
         },
-        "added_to_index": 1609774338,
         "contributors": [
             {
                 "name": "Johan,,Henriksson",
@@ -337,249 +337,250 @@
         "publication_links": []
     },
     {
-        "accession_links": {
-            "ae": [],
-            "ena": [
-                "https://identifiers.org/ena.embl:SRP218543"
-            ]
-        },
         "added_to_index": 1609783526,
+        "project_uuid": "c1a9a93d-d9de-4e65-9619-a9cec1052eaa",
+        "project_core": {
+            "project_short_name": "PulmonaryFibrosisGSE135893",
+            "project_title": "Single-cell RNA-sequencing reveals profibrotic roles of distinct epithelial and mesenchymal lineages in pulmonary fibrosis",
+            "project_description": "Pulmonary fibrosis (PF) is a form of chronic lung disease characterized by progressive destruction of normal alveolar gas-exchange surfaces and accumulation of extracellular matrix (ECM). In order to comprehensively define the cell types, mechanisms and mediators driving ECM deposition and fibrotic remodeling in lungs with pulmonary fibrosis, we performed single-cell RNA-sequencing (scRNA-seq) of single-cell suspensions generated from non-fibrotic control and PF lungs. Analysis of over 114,000 cells from 20 PF and 10 control lungs identified 31 distinct cell types. We identified multiple distinct lineages directly contribute to ECM expansion, including a novel HAS1hi fibroblast subtype and a previously undescribed KRT5-/KRT17+, collagen and ECM-producing epithelial cell population that was highly enriched in PF lungs. Together these data provide high-resolution insights into the basic mechanisms of pulmonary fibrosis, and indicate a direct profibrotic role of the lung epithelium in PF pathogenesis. Overall design: We performed single-cell RNA-sequencing (scRNA-seq) of single-cell suspensions generated from non-fibrotic control and pulmonary fibrosis (PF) lungs"
+        },
         "contributors": [
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Arun,C,Habermann",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Arun,C,Habermann"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "address": "445 N. Fifth Street",
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Austin,J,Gutierrez",
                 "institution": "Translational Genomics Research Institute",
                 "laboratory": "Integrated Cancer genomics division",
-                "name": "Austin,J,Gutierrez"
+                "address": "445 N. Fifth Street",
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "address": "445 N. Fifth Street",
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Linh,T,Bui",
                 "institution": "Translational Genomics Research Institute",
                 "laboratory": "Integrated Cancer genomics division",
-                "name": "Linh,T,Bui"
+                "address": "445 N. Fifth Street",
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "address": "445 N. Fifth Street",
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Stephanie,L,Yahn",
                 "institution": "Translational Genomics Research Institute",
                 "laboratory": "Integrated Cancer genomics division",
-                "name": "Stephanie,L,Yahn"
+                "address": "445 N. Fifth Street",
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Nichelle,I,Winters",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Nichelle,I,Winters"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Carla,L,Calvi",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Carla,L,Calvi"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "address": "445 N. Fifth Street",
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Lance,,Peter",
                 "institution": "Translational Genomics Research Institute",
                 "laboratory": "Integrated Cancer genomics division",
-                "name": "Lance,,Peter"
+                "address": "445 N. Fifth Street",
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "address": "445 N. Fifth Street",
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Mei-I,,Chung",
                 "institution": "Translational Genomics Research Institute",
                 "laboratory": "Integrated Cancer genomics division",
-                "name": "Mei-I,,Chung"
+                "address": "445 N. Fifth Street",
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Chase,J,Taylor",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Chase,J,Taylor"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Christopher,,Jetter",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Neonatology, Department of Pediatrics",
-                "name": "Christopher,,Jetter"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Latha,,Raju",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Vanderbilt Center for Advanced Genomics",
-                "name": "Latha,,Raju"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Jamie,,Roberson",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Vanderbilt Center for Advanced Genomics",
-                "name": "Jamie,,Roberson"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Guixiao,,Ding",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Guixiao,,Ding"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Lori,,Wood",
                 "institution": "Norton Thoracic Institute",
                 "laboratory": "Department of Thoracic Disease and Transplantation",
-                "name": "Lori,,Wood"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Jennifer,MS,Sucre",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Neonatology, Department of Pediatrics",
-                "name": "Jennifer,MS,Sucre"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Bradley,W,Richmond",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Bradley,W,Richmond"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Ana,P,Serezani",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Ana,P,Serezani"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Wyatt,J,McDonnell",
                 "institution": "Vanderbilt University",
                 "laboratory": "Deparment of Pathology, Microbiology and Immunology",
-                "name": "Wyatt,J,McDonnell"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Simon,B,Mallal",
                 "institution": "Vanderbilt University",
                 "laboratory": "Deparment of Pathology, Microbiology and Immunology",
-                "name": "Simon,B,Mallal"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Matthew,J,Bacchetta",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Deparment of Thoracic Surgery",
-                "name": "Matthew,J,Bacchetta"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "James,E,Loyd",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "James,E,Loyd"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Ciara,M,Shaver",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Ciara,M,Shaver"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Lorraine,B,Ware",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Lorraine,B,Ware"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Ross,,Bremner",
                 "institution": "Norton Thoracic Institute",
                 "laboratory": "Department of Thoracic Disease and Transplantation",
-                "name": "Ross,,Bremner"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Rajat,,Walia",
                 "institution": "Norton Thoracic Institute",
                 "laboratory": "Department of Thoracic Disease and Transplantation",
-                "name": "Rajat,,Walia"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "corresponding_contributor": false,
-                "country": "USA",
+                "name": "Timothy,S,Blackwell",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Timothy,S,Blackwell"
+                "country": "USA",
+                "corresponding_contributor": false
             },
             {
-                "address": "445 N. Fifth Street",
-                "corresponding_contributor": true,
-                "country": "USA",
+                "name": "Nicholas,E,Banovich",
                 "email": "nbanovich@tgen.org",
+                "phone": "(+1) 602-343-8432",
                 "institution": "Translational Genomics Research Institute",
                 "laboratory": "Integrated Cancer genomics division",
-                "name": "Nicholas,E,Banovich",
-                "phone": "(+1) 602-343-8432",
+                "address": "445 N. Fifth Street",
+                "country": "USA",
+                "corresponding_contributor": true,
                 "project_role": {
+                    "text": "principal investigator",
                     "ontology": "EFO:0009736",
-                    "ontology_label": "principal investigator",
-                    "text": "principal investigator"
+                    "ontology_label": "principal investigator"
                 }
             },
             {
-                "corresponding_contributor": true,
-                "country": "USA",
+                "name": "Jonathan,A,Kropski",
                 "email": "jon.kropski@vumc.org",
                 "institution": "Vanderbilt University Medical Center",
                 "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
-                "name": "Jonathan,A,Kropski",
+                "country": "USA",
+                "corresponding_contributor": true,
                 "project_role": {
+                    "text": "principal investigator",
                     "ontology": "EFO:0009736",
-                    "ontology_label": "principal investigator",
-                    "text": "principal investigator"
+                    "ontology_label": "principal investigator"
                 }
             },
             {
-                "address": "Wellcome Genome Campus, Hinxton, Cambridge CB10 1SA",
-                "corresponding_contributor": false,
-                "country": "UK",
+                "name": "Enrique,,Sapena Ventura",
                 "institution": "EMBL-EBI",
                 "laboratory": "Human Cell Atlas Data Coordination Platform",
-                "name": "Enrique,,Sapena Ventura",
+                "address": "Wellcome Genome Campus, Hinxton, Cambridge CB10 1SA",
+                "country": "UK",
+                "corresponding_contributor": false,
                 "project_role": {
+                    "text": "Human Cell Atlas wrangler",
                     "ontology": "EFO:0009737",
-                    "ontology_label": "data curator",
-                    "text": "Human Cell Atlas wrangler"
+                    "ontology_label": "data curator"
                 }
             }
         ],
-        "project_core": {
-            "project_description": "Pulmonary fibrosis (PF) is a form of chronic lung disease characterized by progressive destruction of normal alveolar gas-exchange surfaces and accumulation of extracellular matrix (ECM). In order to comprehensively define the cell types, mechanisms and mediators driving ECM deposition and fibrotic remodeling in lungs with pulmonary fibrosis, we performed single-cell RNA-sequencing (scRNA-seq) of single-cell suspensions generated from non-fibrotic control and PF lungs. Analysis of over 114,000 cells from 20 PF and 10 control lungs identified 31 distinct cell types. We identified multiple distinct lineages directly contribute to ECM expansion, including a novel HAS1hi fibroblast subtype and a previously undescribed KRT5-/KRT17+, collagen and ECM-producing epithelial cell population that was highly enriched in PF lungs. Together these data provide high-resolution insights into the basic mechanisms of pulmonary fibrosis, and indicate a direct profibrotic role of the lung epithelium in PF pathogenesis. Overall design: We performed single-cell RNA-sequencing (scRNA-seq) of single-cell suspensions generated from non-fibrotic control and pulmonary fibrosis (PF) lungs",
-            "project_short_name": "PulmonaryFibrosisGSE135893",
-            "project_title": "Single-cell RNA-sequencing reveals profibrotic roles of distinct epithelial and mesenchymal lineages in pulmonary fibrosis"
+        "accession_links": {
+            "ena": [
+                "https://identifiers.org/ena.embl:SRP218543"
+            ],
+            "ae": [],
+            "dcp": "https://data.humancellatlas.org/explore/projects/c1a9a93d-d9de-4e65-9619-a9cec1052eaa?catalog=dcp2"
         },
-        "project_uuid": "c1a9a93d-d9de-4e65-9619-a9cec1052eaa",
         "publication_links": [
             "https://doi.org/10.1101/753806"
         ]
