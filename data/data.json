@@ -131,7 +131,8 @@
             ],
             "publications": null
         },
-        "uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc"
+        "uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc",
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc?catalog=dcp2"
     },
     {
         "added_to_index": 1609786713,
@@ -202,7 +203,8 @@
             ],
             "publications": null
         },
-        "uuid": "005d611a-14d5-4fbf-846e-571a1f874f70"
+        "uuid": "005d611a-14d5-4fbf-846e-571a1f874f70",
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/005d611a-14d5-4fbf-846e-571a1f874f70?catalog=dcp2"
     },
     {
         "added_to_index": 1609786713,
@@ -331,7 +333,8 @@
             ],
             "publications": null
         },
-        "uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde"
+        "uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde",
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde?catalog=dcp2"
     },
     {
         "added_to_index": 1609786714,
@@ -613,6 +616,7 @@
                 }
             ]
         },
-        "uuid": "c1a9a93d-d9de-4e65-9619-a9cec1052eaa"
+        "uuid": "c1a9a93d-d9de-4e65-9619-a9cec1052eaa",
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/c1a9a93d-d9de-4e65-9619-a9cec1052eaa?catalog=dcp2"
     }
 ]

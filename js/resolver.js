@@ -55,7 +55,7 @@ const fetchData = async (url = process.env.STATIC_DATA_URL) => {
   return await axios
     .get(url)
     .then((res) => res.data)
-    .then(data => data.map(({ uuid, added_to_index, content }) => ({ uuid, added_to_index, ...content })))
+    .then(data => data.map(({ uuid, added_to_index, dcp_url, content }) => ({ uuid, added_to_index, dcp_url, ...content })))
     .then(formatTimestamp)
     .then(formatAuthorNames)
     .then(addPublicationInfo)

@@ -13,7 +13,8 @@ def get_data(uuid):
         return {
             "added_to_index": int(time.time()),
             "content": {k: proj["content"].get(k, None) for k in desired_content_keys},
-            "uuid": uuid
+            "uuid": uuid,
+            "dcp_url": make_dcp_link(uuid)
         }
     except:
         raise Exception("Something went wrong. Is this a valid project UUID?")
@@ -22,33 +23,14 @@ def get_uuids(input_file):
     with open(input_file, "r") as file:
         return file.read().splitlines()
 
-def make_ae_links(proj):
-    try:
-        return [f"https://identifiers.org/arrayexpress:{acc}" for acc in proj["content"]['array_express_accessions']]
-    except KeyError:
-        return []
-
-def make_ena_links(proj):
-    try:
-        return [f"https://identifiers.org/ena.embl:{acc}" for acc in proj["content"]['insdc_project_accessions']]
-    except KeyError:
-        return []
-
-def make_pub_links(proj):
-    try:
-        doi_list = [x['doi'] for x in proj["content"]['publications']]
-        return [f"https://doi.org/{doi}" for doi in doi_list]
-    except KeyError:
-        return []
-
-
 def make_dcp_link(prj_uuid):
+    # TODO This should probably be replicated in the ingest API once we move there
     catalog = "dcp2"
     azul_proj_url = "https://service.azul.data.humancellatlas.org/index/projects/{}?catalog={}".format(prj_uuid, catalog)
     if requests.get(azul_proj_url):
         return "https://data.humancellatlas.org/explore/projects/{}?catalog={}".format(prj_uuid, catalog)
     else:
-        return ""
+        return None
 
 
 if __name__ == "__main__":

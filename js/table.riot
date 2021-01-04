@@ -66,7 +66,20 @@
           <a href={publication.url} target="_blank">{publication.publisher}</a>
         </p>
       </td>
-      <td class="vf-table__cell">London, U.K.</td>
+      <td class="vf-table__cell">
+        <ul style="list-style: none; margin: 0; padding: 0;">
+          <li each={ena_accession in item.insdc_project_accessions}>
+            <a href={`https://identifiers.org/ena.embl:${ena_accession}`}>{ena_accession}</a>
+          </li>
+          <li each={ae_accession in item.array_express_accessions}>
+            <a href={`https://identifiers.org/arrayexpress:${ae_accession}`}>{ae_accession}</a>
+          </li>
+          <li>
+            <a href={item.dcp_url}>{item.uuid}</a>
+          </li>
+        </ul>
+      
+      </td>
     </tr>
   </tbody>
 </table>
