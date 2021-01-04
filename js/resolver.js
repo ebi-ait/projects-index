@@ -23,7 +23,6 @@ const formatAuthorNames = (data) => {
     dataPoint["author_names"] = dataPoint.contributors
       .map((contributor) => contributor.name)
       .join(", ");
-    dataPoint["author_names_truncated"] = truncate(dataPoint["author_names"]);
     return dataPoint;
   });
 };

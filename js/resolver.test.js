@@ -8,8 +8,25 @@ jest.mock("axios");
 
 test("resolves published data", async () => {
   axios.get.mockImplementationOnce(() => Promise.resolve({ data: data }));
+  const response = await resolve();
 
-  expect(await resolve()).toEqual(data);
+  response.forEach((dataPoint, i) => {
+    const expected = data[i];
+    expect(dataPoint.uuid).toEqual(expected.uuid);
+    expect(dataPoint.dcp_url).toEqual(expected.dcp_url);
+    expect(dataPoint.core).toEqual(expected.content.core);
+    expect(dataPoint.added_to_index).toEqual(expected.added_to_index);
+    expect(dataPoint.added_to_index_formatted).toEqual(
+      expect.stringContaining("")
+    );
+    expect(dataPoint).toHaveProperty("array_express_accessions");
+    expect(dataPoint.author_names).toEqual(expect.stringContaining(""));
+    expect(dataPoint).toHaveProperty("contributors");
+    expect(dataPoint.dcp_url).toEqual(expect.stringContaining(""));
+    expect(dataPoint).toHaveProperty("insdc_project_accessions");
+    expect(dataPoint).toHaveProperty("publications");
+  });
+
   expect(axios.get).toHaveBeenCalled();
 });
 
