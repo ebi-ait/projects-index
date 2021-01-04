@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import getopt, argparse, json, requests
+import getopt, argparse, json, requests, time
 
 def get_data(uuid):
     try:
@@ -9,6 +9,7 @@ def get_data(uuid):
     
         # TODO When retrieving this info in the UI make sure that it is agnostic to thet data format as this just pulls info but when switching to using API will use schema
         return {
+            "added_to_index": int(time.time()),
             "project_uuid": uuid,
             "project_core": proj["content"]["project_core"],
             "contributors": proj["content"]["contributors"],
@@ -66,13 +67,27 @@ if __name__ == "__main__":
 
     uuids = get_uuids(args.input)
 
-    with open(args.output, 'w') as out:
-        # Use a hashmap to ensure no duplicate UUIDs. Can't use a set as projects could have same UUID but diff content.
-        hashmap = {}
+    with open(args.output, 'r+') as out:
+        existing_data = json.load(out) or []
+        # Use a hashmap to ensure no duplicates but allow updates
+        hashmap = { x["project_uuid"] : x for x in existing_data}
         out.seek(0)
         
         for uuid in uuids:
+            old_timestamp = None
+            if uuid in hashmap and "added_to_index" in hashmap[uuid]:
+                print(f"{uuid} already in data, updating...")
+                old_timestamp = hashmap[uuid]["added_to_index"]
+
             hashmap[uuid] = get_data(uuid)
+
+            if old_timestamp:
+                hashmap[uuid]["added_to_index"] = old_timestamp
+
+        for uuid in list(hashmap.keys()):
+            if uuid not in uuids:
+                print(f"Removing {uuid} from data...")
+                del hashmap[uuid]
         
         json.dump(list(hashmap.values()), out, indent=4)
         out.truncate()

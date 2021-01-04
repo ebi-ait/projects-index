@@ -6,6 +6,7 @@
             "project_title": "A Single-Cell Transcriptomic Map of the Human and Mouse Pancreas Reveals Inter- and Intra-cell Population Structure",
             "project_description": "Although the function of the mammalian pancreas hinges on complex interactions of distinct cell types, gene expression profiles have primarily been described with bulk mixtures. Here we implemented a droplet-based, single-cell RNA-seq method to determine the transcriptomes of over 12,000 individual pancreatic cells from four human donors and two mouse strains. Cells could be divided into 15 clusters that matched previously characterized cell types: all endocrine cell types, including rare epsilon-cells; exocrine cell types; vascular cells; Schwann cells; quiescent and activated stellate cells; and four types of immune cells. We detected subpopulations of ductal cells with distinct expression profiles and validated their existence with immuno-histochemistry stains. Moreover, among human beta- cells, we detected heterogeneity in the regulation of genes relating to functional maturation and levels of ER stress. Finally, we deconvolved bulk gene expression samples using the single-cell data to detect disease-associated differential expression. Our dataset provides a resource for the discovery of novel cell type-specific transcription factors, signaling receptors, and medically relevant genes."
         },
+        "added_to_index": 1609774337,
         "contributors": [
             {
                 "name": "Maayan,,Baron",
@@ -140,6 +141,7 @@
             "project_title": "Assessing the relevance of organoids to model inter-individual variation",
             "project_description": "The purpose of this project is to assess the relevance of pluripotent stem cell-derived cerebral and liver organoids to recapitulate the variation in cell-type specific gene expression programs between individuals. Towards this aim, we will generate reference atlases of the developing cortex and liver from multiple individuals, derive iPSC lines from these same individuals, and determine if inter-individual gene expression variation is recapitulated in cerebral and liver organoids from the same individual from which we have reference maps. In parallel we will assess the genetic contribution to variablity between organoids from different iPSCs of multiple human individuals that are available in existing iPSC resources (e.g. HipSci)."
         },
+        "added_to_index": 1609774338,
         "contributors": [
             {
                 "name": "Barbara,,Treutlein",
@@ -211,6 +213,7 @@
             "project_title": "Reconstructing the human first trimester fetal-maternal interface using single cell transcriptomics",
             "project_description": "During early human pregnancy the uterine mucosa transforms into the decidua, into which the fetal placenta implants and where placental trophoblast cells intermingle and communicate with maternal cells. Trophoblast\u2013decidual interactions underlie common diseases of pregnancy, including pre-eclampsia and stillbirth. Here we profile the transcriptomes of about 70,000 single cells from first-trimester placentas with matched maternal blood and decidual cells. The cellular composition of human decidua reveals subsets of perivascular and stromal cells that are located in distinct decidual layers. There are three major subsets of decidual natural killer cells that have distinctive immunomodulatory and chemokine profiles. We develop a repository of ligand\u2013receptor complexes and a statistical tool to predict the cell-type specificity of cell\u2013cell communication via these molecular interactions. Our data identify many regulatory interactions that prevent harmful innate or adaptive immune responses in this environment. Our single-cell atlas of the maternal\u2013fetal interface reveals the cellular organization of the decidua and placenta, and the interactions that are critical for placentation and reproductive success."
         },
+        "added_to_index": 1609774338,
         "contributors": [
             {
                 "name": "Johan,,Henriksson",
