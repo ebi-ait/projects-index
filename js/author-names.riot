@@ -1,0 +1,35 @@
+<author-names>
+    <p>
+        {state.isTruncated ? state.truncatedText : props.authorNames }&nbsp;
+        <a href="#" onclick={showMore} if={state.isTruncated}>more</a>
+    </p>
+    <p if={!state.isTruncated}>
+    <a href="#" onclick={showLess}>Show less</a>
+    </p>
+
+
+    <script>
+        export default {
+            onMounted(props) {
+                // Get JS handle to props
+                const {authorNames} = props
+                const MAX_LENGTH = 40
+                this.update({
+                    hasLongText: authorNames.length > MAX_LENGTH,
+                    truncatedText: authorNames.length > MAX_LENGTH ? `${authorNames.substring(0, MAX_LENGTH)}...` : authorNames,
+                    isTruncated: authorNames.length > MAX_LENGTH
+                });
+            },
+            showMore() {
+                this.update({
+                    isTruncated: false
+                })
+            },
+            showLess() {
+                this.update({
+                    isTruncated: true
+                })
+            }
+        }
+    </script>
+</author-names>

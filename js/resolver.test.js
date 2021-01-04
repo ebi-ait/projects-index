@@ -7,7 +7,7 @@ const data = require("../data/data.json");
 jest.mock("axios");
 
 test("resolves published data", async () => {
-  axios.get.mockImplementationOnce(() => Promise.resolve(data));
+  axios.get.mockImplementationOnce(() => Promise.resolve({ data: data }));
 
   expect(await resolve()).toEqual(data);
   expect(axios.get).toHaveBeenCalled();
