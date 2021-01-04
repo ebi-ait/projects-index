@@ -28,21 +28,24 @@ const formatAuthorNames = (data) => {
   });
 };
 
-const retrieveCitation = async doi => {
+const retrieveCitation = async ({ doi, url }) => {
   const cjs = await Cite.inputAsync(doi);
   return {
-    doi: cjs[0].DOI,
-    url: cjs[0].URL,
+    doi,
+    url,
     publisher: cjs[0].publisher,
   };
-}
+};
 
 const addPublicationInfo = async (data) =>
   Promise.all(
     data.map(async (dataPoint) => {
+      if(!dataPoint.publications) return dataPoint;
+      
       dataPoint.publications = await Promise.all(
-        dataPoint["publication_links"].map(retrieveCitation)
+        dataPoint.publications.map(retrieveCitation)
       );
+      
       return dataPoint;
     })
   );
@@ -52,9 +55,10 @@ const fetchData = async (url = process.env.STATIC_DATA_URL) => {
   return await axios
     .get(url)
     .then((res) => res.data)
+    .then(data => data.map(({ uuid, added_to_index, content }) => ({ uuid, added_to_index, ...content })))
     .then(formatTimestamp)
     .then(formatAuthorNames)
-    .then(addPublicationInfo);
+    .then(addPublicationInfo)
 };
 
 module.exports = fetchData;

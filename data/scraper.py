@@ -8,17 +8,12 @@ def get_data(uuid):
         proj = requests.get(proj_url).json()
     
         # TODO When retrieving this info in the UI make sure that it is agnostic to thet data format as this just pulls info but when switching to using API will use schema
+        desired_content_keys = ["project_core", "contributors", "array_express_accessions", "insdc_project_accessions", "publications"]
+        
         return {
             "added_to_index": int(time.time()),
-            "project_uuid": uuid,
-            "project_core": proj["content"]["project_core"],
-            "contributors": proj["content"]["contributors"],
-            "accession_links": {
-                "ena": make_ena_links(proj),
-                "ae": make_ae_links(proj),
-                "dcp": make_dcp_link(uuid)
-            },
-            "publication_links": make_pub_links(proj)
+            "content": {k: proj["content"].get(k, None) for k in desired_content_keys},
+            "uuid": uuid
         }
     except:
         raise Exception("Something went wrong. Is this a valid project UUID?")
@@ -70,7 +65,7 @@ if __name__ == "__main__":
     with open(args.output, 'r+') as out:
         existing_data = json.load(out) or []
         # Use a hashmap to ensure no duplicates but allow updates
-        hashmap = { x["project_uuid"] : x for x in existing_data}
+        hashmap = { x["uuid"] : x for x in existing_data}
         out.seek(0)
         
         for uuid in uuids:
