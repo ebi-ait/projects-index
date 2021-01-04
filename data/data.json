@@ -332,5 +332,253 @@
         },
         "project_uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde",
         "publication_links": []
+    },
+    {
+        "accession_links": {
+            "ae": [],
+            "ena": [
+                "https://identifiers.org/ena.embl:SRP218543"
+            ]
+        },
+        "added_to_index": 1609783526,
+        "contributors": [
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Arun,C,Habermann"
+            },
+            {
+                "address": "445 N. Fifth Street",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Translational Genomics Research Institute",
+                "laboratory": "Integrated Cancer genomics division",
+                "name": "Austin,J,Gutierrez"
+            },
+            {
+                "address": "445 N. Fifth Street",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Translational Genomics Research Institute",
+                "laboratory": "Integrated Cancer genomics division",
+                "name": "Linh,T,Bui"
+            },
+            {
+                "address": "445 N. Fifth Street",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Translational Genomics Research Institute",
+                "laboratory": "Integrated Cancer genomics division",
+                "name": "Stephanie,L,Yahn"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Nichelle,I,Winters"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Carla,L,Calvi"
+            },
+            {
+                "address": "445 N. Fifth Street",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Translational Genomics Research Institute",
+                "laboratory": "Integrated Cancer genomics division",
+                "name": "Lance,,Peter"
+            },
+            {
+                "address": "445 N. Fifth Street",
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Translational Genomics Research Institute",
+                "laboratory": "Integrated Cancer genomics division",
+                "name": "Mei-I,,Chung"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Chase,J,Taylor"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Neonatology, Department of Pediatrics",
+                "name": "Christopher,,Jetter"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Vanderbilt Center for Advanced Genomics",
+                "name": "Latha,,Raju"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Vanderbilt Center for Advanced Genomics",
+                "name": "Jamie,,Roberson"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Guixiao,,Ding"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Norton Thoracic Institute",
+                "laboratory": "Department of Thoracic Disease and Transplantation",
+                "name": "Lori,,Wood"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Neonatology, Department of Pediatrics",
+                "name": "Jennifer,MS,Sucre"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Bradley,W,Richmond"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Ana,P,Serezani"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University",
+                "laboratory": "Deparment of Pathology, Microbiology and Immunology",
+                "name": "Wyatt,J,McDonnell"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University",
+                "laboratory": "Deparment of Pathology, Microbiology and Immunology",
+                "name": "Simon,B,Mallal"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Deparment of Thoracic Surgery",
+                "name": "Matthew,J,Bacchetta"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "James,E,Loyd"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Ciara,M,Shaver"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Lorraine,B,Ware"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Norton Thoracic Institute",
+                "laboratory": "Department of Thoracic Disease and Transplantation",
+                "name": "Ross,,Bremner"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Norton Thoracic Institute",
+                "laboratory": "Department of Thoracic Disease and Transplantation",
+                "name": "Rajat,,Walia"
+            },
+            {
+                "corresponding_contributor": false,
+                "country": "USA",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Timothy,S,Blackwell"
+            },
+            {
+                "address": "445 N. Fifth Street",
+                "corresponding_contributor": true,
+                "country": "USA",
+                "email": "nbanovich@tgen.org",
+                "institution": "Translational Genomics Research Institute",
+                "laboratory": "Integrated Cancer genomics division",
+                "name": "Nicholas,E,Banovich",
+                "phone": "(+1) 602-343-8432",
+                "project_role": {
+                    "ontology": "EFO:0009736",
+                    "ontology_label": "principal investigator",
+                    "text": "principal investigator"
+                }
+            },
+            {
+                "corresponding_contributor": true,
+                "country": "USA",
+                "email": "jon.kropski@vumc.org",
+                "institution": "Vanderbilt University Medical Center",
+                "laboratory": "Division of Allergy, Pulmonary and Critical Care Medicine",
+                "name": "Jonathan,A,Kropski",
+                "project_role": {
+                    "ontology": "EFO:0009736",
+                    "ontology_label": "principal investigator",
+                    "text": "principal investigator"
+                }
+            },
+            {
+                "address": "Wellcome Genome Campus, Hinxton, Cambridge CB10 1SA",
+                "corresponding_contributor": false,
+                "country": "UK",
+                "institution": "EMBL-EBI",
+                "laboratory": "Human Cell Atlas Data Coordination Platform",
+                "name": "Enrique,,Sapena Ventura",
+                "project_role": {
+                    "ontology": "EFO:0009737",
+                    "ontology_label": "data curator",
+                    "text": "Human Cell Atlas wrangler"
+                }
+            }
+        ],
+        "project_core": {
+            "project_description": "Pulmonary fibrosis (PF) is a form of chronic lung disease characterized by progressive destruction of normal alveolar gas-exchange surfaces and accumulation of extracellular matrix (ECM). In order to comprehensively define the cell types, mechanisms and mediators driving ECM deposition and fibrotic remodeling in lungs with pulmonary fibrosis, we performed single-cell RNA-sequencing (scRNA-seq) of single-cell suspensions generated from non-fibrotic control and PF lungs. Analysis of over 114,000 cells from 20 PF and 10 control lungs identified 31 distinct cell types. We identified multiple distinct lineages directly contribute to ECM expansion, including a novel HAS1hi fibroblast subtype and a previously undescribed KRT5-/KRT17+, collagen and ECM-producing epithelial cell population that was highly enriched in PF lungs. Together these data provide high-resolution insights into the basic mechanisms of pulmonary fibrosis, and indicate a direct profibrotic role of the lung epithelium in PF pathogenesis. Overall design: We performed single-cell RNA-sequencing (scRNA-seq) of single-cell suspensions generated from non-fibrotic control and pulmonary fibrosis (PF) lungs",
+            "project_short_name": "PulmonaryFibrosisGSE135893",
+            "project_title": "Single-cell RNA-sequencing reveals profibrotic roles of distinct epithelial and mesenchymal lineages in pulmonary fibrosis"
+        },
+        "project_uuid": "c1a9a93d-d9de-4e65-9619-a9cec1052eaa",
+        "publication_links": [
+            "https://doi.org/10.1101/753806"
+        ]
     }
 ]
