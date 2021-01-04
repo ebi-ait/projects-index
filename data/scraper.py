@@ -14,7 +14,8 @@ def get_data(uuid):
             "contributors": proj["content"]["contributors"],
             "accession_links": {
                 "ena": make_ena_links(proj),
-                "ae": make_ae_links(proj)
+                "ae": make_ae_links(proj),
+                "dcp": make_dcp_link(uuid)
             },
             "publication_links": make_pub_links(proj)
         }
@@ -44,6 +45,16 @@ def make_pub_links(proj):
     except KeyError:
         return []
 
+
+def make_dcp_link(prj_uuid):
+    catalog = "dcp2"
+    azul_proj_url = "https://service.azul.data.humancellatlas.org/index/projects/{}?catalog={}".format(prj_uuid, catalog)
+    if requests.get(azul_proj_url):
+        return "https://data.humancellatlas.org/explore/projects/{}?catalog={}".format(prj_uuid, catalog)
+    else:
+        return ""
+
+
 if __name__ == "__main__":
     description = "Scrape Ingest API for published projects data."
     parser = argparse.ArgumentParser(description=description)
@@ -63,5 +74,5 @@ if __name__ == "__main__":
         for uuid in uuids:
             hashmap[uuid] = get_data(uuid)
         
-        json.dump(list(hashmap.values()), out)    
+        json.dump(list(hashmap.values()), out, indent=4)
         out.truncate()
