@@ -22,9 +22,11 @@ test("resolves published data", async () => {
     expect(dataPoint).toHaveProperty("array_express_accessions");
     expect(dataPoint.author_names).toEqual(expect.stringContaining(""));
     expect(dataPoint).toHaveProperty("contributors");
-    expect(dataPoint.dcp_url).toEqual(expect.stringContaining(""));
     expect(dataPoint).toHaveProperty("insdc_project_accessions");
     expect(dataPoint).toHaveProperty("publications");
+    expect(dataPoint).toHaveProperty("author_names")
+    expect(dataPoint).toHaveProperty("added_to_index")
+    expect(dataPoint).toHaveProperty("dcp_url")
   });
 
   expect(axios.get).toHaveBeenCalled();
