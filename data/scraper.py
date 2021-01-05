@@ -12,10 +12,11 @@ def get_data(uuid):
             "added_to_index": int(time.time()),
             "project_uuid": uuid,
             "project_core": proj["content"]["project_core"],
-            "contributors": proj["content"]["contributors"],
+            "contributors": filter_contributors(proj["content"]["contributors"]),
             "accession_links": {
                 "ena": make_ena_links(proj),
                 "ae": make_ae_links(proj),
+                "geo": make_geo_links(proj),
                 "dcp": make_dcp_link(uuid)
             },
             "publication_links": make_pub_links(proj)
@@ -30,6 +31,12 @@ def get_uuids(input_file):
 def make_ae_links(proj):
     try:
         return [f"https://identifiers.org/arrayexpress:{acc}" for acc in proj["content"]['array_express_accessions']]
+    except KeyError:
+        return []
+
+def make_geo_links(proj):
+    try:
+        return [f"https://identifiers.org/geo:{acc}" for acc in proj["content"]['geo_series_accessions']]
     except KeyError:
         return []
 
@@ -56,6 +63,23 @@ def make_dcp_link(prj_uuid):
         return ""
 
 
+def filter_contributors(contributor_list):
+    i = 0
+    remove_contributors = []
+    for contributor in contributor_list:
+        try:
+            if contributor['project_role']['ontology'] == 'EFO:0009737':
+                remove_contributors.append(i)
+        except KeyError:
+            pass
+        i += 1
+    if len(remove_contributors) > 0:
+        remove_contributors.sort(reverse=True)
+        for ind in remove_contributors:
+            del contributor_list[ind]
+    return contributor_list
+
+
 if __name__ == "__main__":
     description = "Scrape Ingest API for published projects data."
     parser = argparse.ArgumentParser(description=description)
@@ -70,7 +94,7 @@ if __name__ == "__main__":
     with open(args.output, 'r+') as out:
         existing_data = json.load(out) or []
         # Use a hashmap to ensure no duplicates but allow updates
-        hashmap = { x["project_uuid"] : x for x in existing_data}
+        hashmap = { x["project_uuid"] : x for x in existing_data }
         out.seek(0)
         
         for uuid in uuids:
