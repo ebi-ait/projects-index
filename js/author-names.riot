@@ -1,10 +1,9 @@
 <author-names>
-    <p>
-        {state.isTruncated ? state.truncatedText : props.authorNames }&nbsp;
-        <a href="#" onclick={showMore} if={state.isTruncated}>more</a>
-    </p>
+    {state.isTruncated ? state.truncatedText : props.authorNames }&nbsp;
+    <a href="#" onclick={showMore} if={state.isTruncated}>more ></a>
+    
     <p if={!state.isTruncated}>
-    <a href="#" onclick={showLess}>Show less</a>
+        <a href="#" onclick={showLess}>less</a>
     </p>
 
 

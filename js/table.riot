@@ -13,7 +13,7 @@
   </defs>
 </svg>
 
-<table class="vf-table vf-table--sortable" style="table-layout: fixed; width: 100%;">
+<table class="vf-table vf-table--sortable vf-table--striped" id="published-table">
   <thead class="vf-table__header">
     <tr class="vf-table__row">
       <th class="vf-table__heading" scope="col"><button class="vf-button vf-button--sm vf-button--icon">
@@ -65,24 +65,94 @@
         <p each={ publication in item.publications}>
           <a href={publication.url} target="_blank">{publication.journal_title}</a>
         </p>
+        <p if={ !publications || publications.length === 0} style="text-align: center;">
+          -
+        </p>
       </td>
       <td class="vf-table__cell">
-        <ul style="list-style: none; margin: 0; padding: 0;">
-          <li each={ena_accession in item.insdc_project_accessions}>
-            <a href={`https://identifiers.org/ena.embl:${ena_accession}`}>{ena_accession}</a>
-          </li>
-          <li each={ae_accession in item.array_express_accessions}>
-            <a href={`https://identifiers.org/arrayexpress:${ae_accession}`}>{ae_accession}</a>
-          </li>
-          <li if={item.dcp_url}>
-            <a href={item.dcp_url}>HCA DCP</a>
-          </li>
-        </ul>
-      
+      <ul class="plain-list">
+        <li if={item.insdc_project_accessions}>ENA: 
+          <ul class="comma-list">
+            <li each={ena_accession in item.insdc_project_accessions}>
+              <a href={`https://identifiers.org/ena.embl:${ena_accession}`}>{ena_accession}</a>
+            </li>
+          </ul>
+        </li>
+        <li if={item.array_express_accessions}>Arrayexpress:
+          <ul class="comma-list">
+            <li each={ae_accession in item.array_express_accessions}>
+              <a href={`https://identifiers.org/arrayexpress:${ae_accession}`}>{ae_accession}</a>
+            </li>
+          </ul>
+        </li>
+        <li if={item.dcp_url}>
+          <a href={item.dcp_url}>HCA DCP</a>
+        </li>
+      </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+<style>
+  .plain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .plain-list li {
+    margin-bottom: .2rem;
+  }
+
+  .comma-list {
+    list-style: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+
+  .comma-list li {
+    display: inline;
+  }
+
+  .comma-list li::after {
+    content: ", ";
+  }
+
+  .comma-list li:last-child::after {
+      content: "";
+  }
+
+  #published-table {
+    table-layout: fixed;
+    width: 100%;
+    overflow: hidden;
+    min-width: 950px;
+  }
+
+  #published-table thead tr th button {
+    font-weight: 450
+  }
+
+  #published-table tbody td {
+    padding: 22px 16px;
+  }
+
+  #published-table thead tr th:nth-child(1) {
+    width: 10%;
+  }
+  #published-table thead tr th:nth-child(2) {
+    width: 30%;
+  }
+  #published-table thead tr th:nth-child(3) {
+    width: 30%;
+  }
+
+  #published-table tbody tr td:nth-child(5) {
+    font-size: 0.95em;
+  }
+</style>
 
 <script>
     import AuthorNames from "./author-names.riot";

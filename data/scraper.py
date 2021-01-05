@@ -35,7 +35,7 @@ def make_dcp_link(prj_uuid):
 
 def get_publications_journal(publications):
     # Use crossref API to get extra meta info
-    # This should be replicated in ingest API endpoint when we have one
+    # This should be replicated in ingest API endpoint when we have an endpoint
     # Not done on client side for speed
     results = []
     for publication in publications:
