@@ -11,4 +11,4 @@ Data for the UI is in `data/data.json` and is created/updated by running the `sc
 3. `./scraper.py`
 4. Commit and push the changes in git
 
-*Note: Running `./scraper.py --help` will show other options available. In particular the `--clean` flag may be useful.*
+_Note: Running `./scraper.py --help` will show other options available. In particular the `--clean` flag may be useful._
