@@ -39,10 +39,14 @@ if __name__ == "__main__":
 
     parser.add_argument("-i", "--input", help="File containing a list of UUIDs to scrape. Each UUID must be on a new line.", default="published_uuids.txt")
     parser.add_argument("-o", "--output", help="Output JSON file", default="data.json")
+    parser.add_argument("-c", "--clean", help="Do a clean run. Will update all timestamps.", action="store_true")
 
     args = parser.parse_args()
 
     uuids = get_uuids(args.input)
+
+    if args.clean:
+        print("Running with clean option. This will update preexisting timestamps.")
 
     with open(args.output, 'r+') as out:
         existing_data = json.load(out) or []
@@ -52,7 +56,7 @@ if __name__ == "__main__":
         
         for uuid in uuids:
             old_timestamp = None
-            if uuid in hashmap and "added_to_index" in hashmap[uuid]:
+            if uuid in hashmap and "added_to_index" in hashmap[uuid] and not args.clean:
                 print(f"{uuid} already in data, updating...")
                 old_timestamp = hashmap[uuid]["added_to_index"]
 
