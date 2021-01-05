@@ -65,7 +65,7 @@
         <p each={ publication in item.publications}>
           <a href={publication.url} target="_blank">{publication.journal_title}</a>
         </p>
-        <p if={ !publications || publications.length === 0} style="text-align: center;">
+        <p if={ !item.publications} style="text-align: center;">
           -
         </p>
       </td>
