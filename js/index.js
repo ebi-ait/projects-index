@@ -7,6 +7,6 @@ import DataTable from "./table.riot";
 
   riot.register("data-table", DataTable);
   riot.mount("data-table", { data });
-  
+
   // TODO SHOW ERROR MESSAGE
 })().catch((err) => console.error(err));

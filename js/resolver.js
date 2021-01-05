@@ -39,12 +39,12 @@ const retrieveCitation = async ({ doi, url }) => {
 const addPublicationInfo = async (data) =>
   Promise.all(
     data.map(async (dataPoint) => {
-      if(!dataPoint.publications) return dataPoint;
-      
+      if (!dataPoint.publications) return dataPoint;
+
       dataPoint.publications = await Promise.all(
         dataPoint.publications.map(retrieveCitation)
       );
-      
+
       return dataPoint;
     })
   );
@@ -54,10 +54,17 @@ const fetchData = async (url = process.env.STATIC_DATA_URL) => {
   return await axios
     .get(url)
     .then((res) => res.data)
-    .then(data => data.map(({ uuid, added_to_index, dcp_url, content }) => ({ uuid, added_to_index, dcp_url, ...content })))
+    .then((data) =>
+      data.map(({ uuid, added_to_index, dcp_url, content }) => ({
+        uuid,
+        added_to_index,
+        dcp_url,
+        ...content,
+      }))
+    )
     .then(formatTimestamp)
     .then(formatAuthorNames)
-    .then(addPublicationInfo)
+    .then(addPublicationInfo);
 };
 
 module.exports = fetchData;
