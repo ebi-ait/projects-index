@@ -128,11 +128,11 @@
             ],
             "insdc_project_accessions": [
                 "SRP078321"
-            ],
-            "publications": null
+            ]
         },
         "uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc?catalog=dcp2",
+        "publications": null
     },
     {
         "added_to_index": 1609786713,
@@ -200,11 +200,11 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP114427"
-            ],
-            "publications": null
+            ]
         },
         "uuid": "005d611a-14d5-4fbf-846e-571a1f874f70",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/005d611a-14d5-4fbf-846e-571a1f874f70?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/005d611a-14d5-4fbf-846e-571a1f874f70?catalog=dcp2",
+        "publications": null
     },
     {
         "added_to_index": 1609786713,
@@ -330,11 +330,11 @@
             "insdc_project_accessions": [
                 "ERP107748",
                 "ERP110450"
-            ],
-            "publications": null
+            ]
         },
         "uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde?catalog=dcp2",
+        "publications": null
     },
     {
         "added_to_index": 1609786714,
@@ -577,47 +577,48 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP218543"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Habermann AC",
-                        "Gutierrez  AJ",
-                        "Bui LT",
-                        "Yahn SL",
-                        "Winters NI",
-                        "Calvi CL",
-                        "Peter L",
-                        "Chung MI",
-                        "Taylor CJ",
-                        "Jetter C",
-                        "Raju L",
-                        "Roberson J",
-                        "Ding G",
-                        "Wood L",
-                        "Sucre JMS",
-                        "Richmond BW",
-                        "Serezani AP",
-                        "McDonnell WJ",
-                        "Mallal SB",
-                        "Bacchetta MJ",
-                        "Loyd JE",
-                        "Shaver CM",
-                        "Ware LB",
-                        "Bremner R",
-                        "Walia R",
-                        "Blackwell TS",
-                        "Banovich NE",
-                        "Kropski JA"
-                    ],
-                    "title": "Single-cell RNA-sequencing reveals profibrotic roles of distinct epithelial and mesenchymal lineages in pulmonary fibrosis",
-                    "doi": "10.1101/753806",
-                    "url": "https://www.biorxiv.org/content/10.1101/753806v1"
-                }
             ]
         },
         "uuid": "c1a9a93d-d9de-4e65-9619-a9cec1052eaa",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/c1a9a93d-d9de-4e65-9619-a9cec1052eaa?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/c1a9a93d-d9de-4e65-9619-a9cec1052eaa?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1101/753806",
+                "url": "http://dx.doi.org/10.1101/753806",
+                "journal_title": "Cold Spring Harbor Laboratory",
+                "title": "Single-cell RNA-sequencing reveals profibrotic roles of distinct epithelial and mesenchymal lineages in pulmonary fibrosis",
+                "authors": [
+                    "Habermann AC",
+                    "Gutierrez  AJ",
+                    "Bui LT",
+                    "Yahn SL",
+                    "Winters NI",
+                    "Calvi CL",
+                    "Peter L",
+                    "Chung MI",
+                    "Taylor CJ",
+                    "Jetter C",
+                    "Raju L",
+                    "Roberson J",
+                    "Ding G",
+                    "Wood L",
+                    "Sucre JMS",
+                    "Richmond BW",
+                    "Serezani AP",
+                    "McDonnell WJ",
+                    "Mallal SB",
+                    "Bacchetta MJ",
+                    "Loyd JE",
+                    "Shaver CM",
+                    "Ware LB",
+                    "Bremner R",
+                    "Walia R",
+                    "Blackwell TS",
+                    "Banovich NE",
+                    "Kropski JA"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844541,
@@ -720,28 +721,28 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "publications": [
-                {
-                    "authors": [
-                        "Wu H",
-                        "Malone AF",
-                        "Donnelly EL",
-                        "Kirita Y",
-                        "Uchimura K",
-                        "Ramakrishnan SM",
-                        "Gaut JP",
-                        "Humphreys BD"
-                    ],
-                    "title": "Single-Cell Transcriptomics of a Human Kidney Allograft Biopsy Specimen Defines a Diverse Inflammatory Response",
-                    "doi": "10.1681/ASN.2018020125",
-                    "pmid": 29980650,
-                    "url": "https://jasn.asnjournals.org/content/29/8/2069"
-                }
-            ]
+            "insdc_project_accessions": null
         },
         "uuid": "027c51c6-0719-469f-a7f5-640fe57cbece",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/027c51c6-0719-469f-a7f5-640fe57cbece?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/027c51c6-0719-469f-a7f5-640fe57cbece?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1681/ASN.2018020125",
+                "url": "http://dx.doi.org/10.1681/asn.2018020125",
+                "journal_title": "Journal of the American Society of Nephrology",
+                "title": "Single-Cell Transcriptomics of a Human Kidney Allograft Biopsy Specimen Defines a Diverse Inflammatory Response",
+                "authors": [
+                    "Wu H",
+                    "Malone AF",
+                    "Donnelly EL",
+                    "Kirita Y",
+                    "Uchimura K",
+                    "Ramakrishnan SM",
+                    "Gaut JP",
+                    "Humphreys BD"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844542,
@@ -920,33 +921,33 @@
             ],
             "insdc_project_accessions": [
                 "ERP121018"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Elmentaite R",
-                        "Ross, A",
-                        "James KR",
-                        "Ortmann D",
-                        "Gomes T",
-                        "Roberts K",
-                        "Nayak K",
-                        "Tuck L",
-                        "Bayraktar OA",
-                        "Heuschkel R",
-                        "Vallier L",
-                        "Teichmann SA",
-                        "Zilbauer M"
-                    ],
-                    "title": "Single-Cell Sequencing of Developing Human Gut Reveals Transcriptional Links to Childhood Crohn\u2019s Disease",
-                    "doi": "10.1016/j.devcel.2020.11.010",
-                    "pmid": 33290721,
-                    "url": "https://doi.org/10.1016/j.devcel.2020.11.010"
-                }
             ]
         },
         "uuid": "0b2cbf1a-3f40-4e01-a99d-901fa6091ee5",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1016/j.devcel.2020.11.010",
+                "url": "http://dx.doi.org/10.1016/j.devcel.2020.11.010",
+                "journal_title": "Developmental Cell",
+                "title": "Single-Cell Sequencing of Developing Human Gut Reveals Transcriptional Links to Childhood Crohn\u2019s Disease",
+                "authors": [
+                    "Elmentaite R",
+                    "Ross, A",
+                    "James KR",
+                    "Ortmann D",
+                    "Gomes T",
+                    "Roberts K",
+                    "Nayak K",
+                    "Tuck L",
+                    "Bayraktar OA",
+                    "Heuschkel R",
+                    "Vallier L",
+                    "Teichmann SA",
+                    "Zilbauer M"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844543,
@@ -1038,11 +1039,11 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP120400"
-            ],
-            "publications": null
+            ]
         },
         "uuid": "116965f3-f094-4769-9d28-ae675c1b569c",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/116965f3-f094-4769-9d28-ae675c1b569c?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/116965f3-f094-4769-9d28-ae675c1b569c?catalog=dcp2",
+        "publications": null
     },
     {
         "added_to_index": 1609844544,
@@ -1145,29 +1146,29 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP162461"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Suryawanshi H",
-                        "Morozov P",
-                        "Straus A",
-                        "Sahasrabudhe N",
-                        "Max KEA",
-                        "Garzia A",
-                        "Kustagi M",
-                        "Tuschl T",
-                        "Williams Z"
-                    ],
-                    "title": "A single-cell survey of the human first-trimester placenta and decidua",
-                    "doi": "10.1126/sciadv.aau4788",
-                    "pmid": 30402542,
-                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/30402542/"
-                }
             ]
         },
         "uuid": "1cd1f41f-f81a-486b-a05b-66ec60f81dcf",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1126/sciadv.aau4788",
+                "url": "http://dx.doi.org/10.1126/sciadv.aau4788",
+                "journal_title": "Science Advances",
+                "title": "A single-cell survey of the human first-trimester placenta and decidua",
+                "authors": [
+                    "Suryawanshi H",
+                    "Morozov P",
+                    "Straus A",
+                    "Sahasrabudhe N",
+                    "Max KEA",
+                    "Garzia A",
+                    "Kustagi M",
+                    "Tuschl T",
+                    "Williams Z"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844545,
@@ -1391,36 +1392,36 @@
             ],
             "insdc_project_accessions": [
                 "ERP110801"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Pijuan-Sala B",
-                        "Griffiths JA",
-                        "Guibentif C",
-                        "Hiscock TW",
-                        "Jawaid W",
-                        "Calero-Nieto FJ",
-                        "Mulas C",
-                        "Ibarra-Soria X",
-                        "Tyser RCV",
-                        "Ho DLL",
-                        "Reik W",
-                        "Srinivas S",
-                        "Simons BD",
-                        "Nichols J",
-                        "Marioni JC",
-                        "G\u00f6ttgens B"
-                    ],
-                    "title": "A single-cell molecular map of mouse gastrulation and early organogenesis",
-                    "doi": "10.1038/s41586-019-0933-9",
-                    "pmid": 30787436,
-                    "url": "https://www.nature.com/articles/s41586-019-0933-9"
-                }
             ]
         },
         "uuid": "1defdada-a365-44ad-9b29-443b06bd11d6",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/1defdada-a365-44ad-9b29-443b06bd11d6?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/1defdada-a365-44ad-9b29-443b06bd11d6?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1038/s41586-019-0933-9",
+                "url": "http://dx.doi.org/10.1038/s41586-019-0933-9",
+                "journal_title": "Nature",
+                "title": "A single-cell molecular map of mouse gastrulation and early organogenesis",
+                "authors": [
+                    "Pijuan-Sala B",
+                    "Griffiths JA",
+                    "Guibentif C",
+                    "Hiscock TW",
+                    "Jawaid W",
+                    "Calero-Nieto FJ",
+                    "Mulas C",
+                    "Ibarra-Soria X",
+                    "Tyser RCV",
+                    "Ho DLL",
+                    "Reik W",
+                    "Srinivas S",
+                    "Simons BD",
+                    "Nichols J",
+                    "Marioni JC",
+                    "G\u00f6ttgens B"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844546,
@@ -1613,43 +1614,43 @@
             ],
             "insdc_project_accessions": [
                 "SRP096727"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Close JL",
-                        "Yao Z",
-                        "Levi BP",
-                        "Miller JA",
-                        "Bakken TE",
-                        "Menon V",
-                        "Ting JT",
-                        "Wall A",
-                        "Krostag AR",
-                        "Thomsen ER",
-                        "Nelson AM",
-                        "Mich JK",
-                        "Hodge RD",
-                        "Shehata SI",
-                        "Glass IA",
-                        "Bort S",
-                        "Shapovalova NV",
-                        "Ngo NK",
-                        "Grimley JS",
-                        "Phillips JW",
-                        "Thompson CL",
-                        "Ramanathan S",
-                        "Lein E"
-                    ],
-                    "title": "Single-Cell Profiling of an In\u00a0Vitro Model of Human Interneuron Development Reveals Temporal Dynamics of Cell Type Production and Maturation.",
-                    "doi": "10.1016/j.neuron.2017.02.014",
-                    "pmid": 28279351,
-                    "url": "https://europepmc.org/abstract/MED/28279351"
-                }
             ]
         },
         "uuid": "2043c65a-1cf8-4828-a656-9e247d4e64f1",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/2043c65a-1cf8-4828-a656-9e247d4e64f1?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/2043c65a-1cf8-4828-a656-9e247d4e64f1?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1016/j.neuron.2017.02.014",
+                "url": "http://dx.doi.org/10.1016/j.neuron.2017.02.014",
+                "journal_title": "Neuron",
+                "title": "Single-Cell Profiling of an In\u00a0Vitro Model of Human Interneuron Development Reveals Temporal Dynamics of Cell Type Production and Maturation.",
+                "authors": [
+                    "Close JL",
+                    "Yao Z",
+                    "Levi BP",
+                    "Miller JA",
+                    "Bakken TE",
+                    "Menon V",
+                    "Ting JT",
+                    "Wall A",
+                    "Krostag AR",
+                    "Thomsen ER",
+                    "Nelson AM",
+                    "Mich JK",
+                    "Hodge RD",
+                    "Shehata SI",
+                    "Glass IA",
+                    "Bort S",
+                    "Shapovalova NV",
+                    "Ngo NK",
+                    "Grimley JS",
+                    "Phillips JW",
+                    "Thompson CL",
+                    "Ramanathan S",
+                    "Lein E"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844546,
@@ -1778,32 +1779,32 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP201293"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Goodyer WR",
-                        "Beyersdorf BM",
-                        "Paik DT",
-                        "Tian L",
-                        "Buikema JW",
-                        "Chirikian O",
-                        "Choi S",
-                        "Venkatraman S",
-                        "Adams EL",
-                        "Tessier-Lavigne M",
-                        "Wu JC",
-                        "Wu SM"
-                    ],
-                    "title": "Transcriptomic Profiling of the Developing Cardiac Conduction System at Single-Cell Resolution.",
-                    "doi": "10.1161/CIRCRESAHA.118.314578",
-                    "pmid": 31284824,
-                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/31284824"
-                }
             ]
         },
         "uuid": "2086eb05-10b9-432b-b7f0-169ccc49d270",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/2086eb05-10b9-432b-b7f0-169ccc49d270?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/2086eb05-10b9-432b-b7f0-169ccc49d270?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1161/CIRCRESAHA.118.314578",
+                "url": "http://dx.doi.org/10.1161/circresaha.118.314578",
+                "journal_title": "Circulation Research",
+                "title": "Transcriptomic Profiling of the Developing Cardiac Conduction System at Single-Cell Resolution.",
+                "authors": [
+                    "Goodyer WR",
+                    "Beyersdorf BM",
+                    "Paik DT",
+                    "Tian L",
+                    "Buikema JW",
+                    "Chirikian O",
+                    "Choi S",
+                    "Venkatraman S",
+                    "Adams EL",
+                    "Tessier-Lavigne M",
+                    "Wu JC",
+                    "Wu SM"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844547,
@@ -1904,31 +1905,32 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP199294"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Liao J",
-                        "Yu Z",
-                        "Chen Y",
-                        "Bao M",
-                        "Zou C",
-                        "Zhang H",
-                        "Liu D",
-                        "Li T",
-                        "Zhang Q",
-                        "Li J",
-                        "Cheng J",
-                        "Mo Z"
-                    ],
-                    "title": "Single-cell RNA sequencing of human kidney",
-                    "doi": "10.1038/s41597-019-0351-8",
-                    "url": "https://www.nature.com/articles/s41597-019-0351-8"
-                }
             ]
         },
         "uuid": "2ef3655a-973d-4d69-9b41-21fa4041eed7",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/2ef3655a-973d-4d69-9b41-21fa4041eed7?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/2ef3655a-973d-4d69-9b41-21fa4041eed7?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1038/s41597-019-0351-8",
+                "url": "http://dx.doi.org/10.1038/s41597-019-0351-8",
+                "journal_title": "Scientific Data",
+                "title": "Single-cell RNA sequencing of human kidney",
+                "authors": [
+                    "Liao J",
+                    "Yu Z",
+                    "Chen Y",
+                    "Bao M",
+                    "Zou C",
+                    "Zhang H",
+                    "Liu D",
+                    "Li T",
+                    "Zhang Q",
+                    "Li J",
+                    "Cheng J",
+                    "Mo Z"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844548,
@@ -2089,36 +2091,36 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP226817"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Cillo AR",
-                        "K\u00fcrten CHL",
-                        "Tabib T",
-                        "Qi Z",
-                        "Onkar S",
-                        "Wang T",
-                        "Liu A",
-                        "Duvvuri U",
-                        "Kim S",
-                        "Soose RJ",
-                        "Oesterreich S",
-                        "Chen W",
-                        "Lafyatis R",
-                        "Bruno TC",
-                        "Ferris RL",
-                        "Vignali DAA"
-                    ],
-                    "title": "Immune Landscape of Viral- and Carcinogen-Driven Head and Neck Cancer.",
-                    "doi": "10.1016/j.immuni.2019.11.014",
-                    "pmid": 31924475,
-                    "url": "https://www.sciencedirect.com/science/article/pii/S1074761319304959"
-                }
             ]
         },
         "uuid": "3089d311-f9ed-44dd-bb10-397059bad4dc",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1016/j.immuni.2019.11.014",
+                "url": "http://dx.doi.org/10.1016/j.immuni.2019.11.014",
+                "journal_title": "Immunity",
+                "title": "Immune Landscape of Viral- and Carcinogen-Driven Head and Neck Cancer.",
+                "authors": [
+                    "Cillo AR",
+                    "K\u00fcrten CHL",
+                    "Tabib T",
+                    "Qi Z",
+                    "Onkar S",
+                    "Wang T",
+                    "Liu A",
+                    "Duvvuri U",
+                    "Kim S",
+                    "Soose RJ",
+                    "Oesterreich S",
+                    "Chen W",
+                    "Lafyatis R",
+                    "Bruno TC",
+                    "Ferris RL",
+                    "Vignali DAA"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844549,
@@ -2251,27 +2253,28 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP197355"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Sol\u00e9-Boldo L",
-                        "Raddatz G",
-                        "Sch\u00fctz S",
-                        "Mallm JP",
-                        "Rippe K",
-                        "Lonsdorf AS",
-                        "Rodr\u00edguez-Paredes M",
-                        "Lyko F"
-                    ],
-                    "title": "Single-cell transcriptomes of the human skin reveal age-related loss of fibroblast priming.",
-                    "doi": "10.1038/s42003-020-0922-4",
-                    "pmid": 32327715
-                }
             ]
         },
         "uuid": "3138bf07-b24a-49c8-b1f3-61329d7abc3b",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1038/s42003-020-0922-4",
+                "url": "http://dx.doi.org/10.1038/s42003-020-0922-4",
+                "journal_title": "Communications Biology",
+                "title": "Single-cell transcriptomes of the human skin reveal age-related loss of fibroblast priming.",
+                "authors": [
+                    "Sol\u00e9-Boldo L",
+                    "Raddatz G",
+                    "Sch\u00fctz S",
+                    "Mallm JP",
+                    "Rippe K",
+                    "Lonsdorf AS",
+                    "Rodr\u00edguez-Paredes M",
+                    "Lyko F"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844550,
@@ -2437,30 +2440,30 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP122827"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "J\u00e4kel S",
-                        "Agirre E",
-                        "Falc\u00e3o AM",
-                        "van Bruggen D",
-                        "Lee KW",
-                        "Knuesel I",
-                        "Malhotra D",
-                        "ffrench-Constant C",
-                        "Williams A",
-                        "Castelo-Branco G"
-                    ],
-                    "title": "Altered human oligodendrocyte heterogeneity in multiple sclerosis",
-                    "doi": "10.1038/s41586-019-0903-2",
-                    "pmid": 30747918,
-                    "url": "https://www.nature.com/articles/s41586-019-0903-2"
-                }
             ]
         },
         "uuid": "38449aea-70b5-40db-84b3-1e08f32efe34",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/38449aea-70b5-40db-84b3-1e08f32efe34?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/38449aea-70b5-40db-84b3-1e08f32efe34?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1038/s41586-019-0903-2",
+                "url": "http://dx.doi.org/10.1038/s41586-019-0903-2",
+                "journal_title": "Nature",
+                "title": "Altered human oligodendrocyte heterogeneity in multiple sclerosis",
+                "authors": [
+                    "J\u00e4kel S",
+                    "Agirre E",
+                    "Falc\u00e3o AM",
+                    "van Bruggen D",
+                    "Lee KW",
+                    "Knuesel I",
+                    "Malhotra D",
+                    "ffrench-Constant C",
+                    "Williams A",
+                    "Castelo-Branco G"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844551,
@@ -2563,28 +2566,28 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP192693"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Merrick D",
-                        "Sakers A",
-                        "Irgebay Z",
-                        "Okada C",
-                        "Calvert C",
-                        "Morley MP",
-                        "Percec I",
-                        "Seale P"
-                    ],
-                    "title": "Identification of a mesenchymal progenitor cell hierarchy in adipose tissue.",
-                    "doi": "10.1126/science.aav2501",
-                    "pmid": 31023895,
-                    "url": "https://science.sciencemag.org/content/364/6438/eaav2501"
-                }
             ]
         },
         "uuid": "42d4f8d4-5422-4b78-adae-e7c3c2ef511c",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/42d4f8d4-5422-4b78-adae-e7c3c2ef511c?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/42d4f8d4-5422-4b78-adae-e7c3c2ef511c?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1126/science.aav2501",
+                "url": "http://dx.doi.org/10.1126/science.aav2501",
+                "journal_title": "Science",
+                "title": "Identification of a mesenchymal progenitor cell hierarchy in adipose tissue.",
+                "authors": [
+                    "Merrick D",
+                    "Sakers A",
+                    "Irgebay Z",
+                    "Okada C",
+                    "Calvert C",
+                    "Morley MP",
+                    "Percec I",
+                    "Seale P"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844552,
@@ -2613,20 +2616,21 @@
             "array_express_accessions": [
                 "E-MTAB-6149"
             ],
-            "insdc_project_accessions": null,
-            "publications": [
-                {
-                    "authors": [
-                        "Lambrechts D, Wauters E, Boeckx B, Aibar S, Nittner D, Burton O, Bassez A, Decaluw\u00e9 H, Pircher A, Van den Eynde K, Weynand B, Verbeken E, De Leyn P, Liston A, Vansteenkiste J, Carmeliet P, Aerts S, Thienpont B"
-                    ],
-                    "title": "Phenotype molding of stromal cells in the lung tumor microenvironment",
-                    "doi": "10.1038/s41591-018-0096-5",
-                    "pmid": 29988129
-                }
-            ]
+            "insdc_project_accessions": null
         },
         "uuid": "453d7ee2-319f-496c-9862-99d397870b63",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1038/s41591-018-0096-5",
+                "url": "http://dx.doi.org/10.1038/s41591-018-0096-5",
+                "journal_title": "Nature Medicine",
+                "title": "Phenotype molding of stromal cells in the lung tumor microenvironment",
+                "authors": [
+                    "Lambrechts D, Wauters E, Boeckx B, Aibar S, Nittner D, Burton O, Bassez A, Decaluw\u00e9 H, Pircher A, Van den Eynde K, Weynand B, Verbeken E, De Leyn P, Liston A, Vansteenkiste J, Carmeliet P, Aerts S, Thienpont B"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844553,
@@ -2752,11 +2756,11 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "publications": null
+            "insdc_project_accessions": null
         },
         "uuid": "4a95101c-9ffc-4f30-a809-f04518a23803",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/4a95101c-9ffc-4f30-a809-f04518a23803?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/4a95101c-9ffc-4f30-a809-f04518a23803?catalog=dcp2",
+        "publications": null
     },
     {
         "added_to_index": 1609844554,
@@ -3215,53 +3219,53 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP149989"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "MacParland SA",
-                        "Liu JC",
-                        "Ma XZ",
-                        "Innes BT",
-                        "Bartczak AM",
-                        "Gage BK",
-                        "Manuel J",
-                        "Khuu N",
-                        "Echeverri J",
-                        "Linares I",
-                        "Gupta R",
-                        "Cheng ML",
-                        "Liu LY",
-                        "Camat D",
-                        "Chung SW",
-                        "Seliga RK",
-                        "Shao Z",
-                        "Lee E",
-                        "Ogawa S",
-                        "Ogawa M",
-                        "Wilson MD",
-                        "Fish JE",
-                        "Selzner M",
-                        "Ghanekar A",
-                        "Grant D",
-                        "Greig P",
-                        "Sapisochin G",
-                        "Selzner N",
-                        "Winegarden N",
-                        "Adeyi O",
-                        "Keller G",
-                        "Bader GD",
-                        "McGilvray ID"
-                    ],
-                    "title": "Single cell RNA sequencing of human liver reveals distinct intrahepatic macrophage populations",
-                    "doi": "10.1038/s41467-018-06318-7",
-                    "pmid": 30348985,
-                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6197289/"
-                }
             ]
         },
         "uuid": "4d6f6c96-2a83-43d8-8fe1-0f53bffd4674",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/4d6f6c96-2a83-43d8-8fe1-0f53bffd4674?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/4d6f6c96-2a83-43d8-8fe1-0f53bffd4674?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1038/s41467-018-06318-7",
+                "url": "http://dx.doi.org/10.1038/s41467-018-06318-7",
+                "journal_title": "Nature Communications",
+                "title": "Single cell RNA sequencing of human liver reveals distinct intrahepatic macrophage populations",
+                "authors": [
+                    "MacParland SA",
+                    "Liu JC",
+                    "Ma XZ",
+                    "Innes BT",
+                    "Bartczak AM",
+                    "Gage BK",
+                    "Manuel J",
+                    "Khuu N",
+                    "Echeverri J",
+                    "Linares I",
+                    "Gupta R",
+                    "Cheng ML",
+                    "Liu LY",
+                    "Camat D",
+                    "Chung SW",
+                    "Seliga RK",
+                    "Shao Z",
+                    "Lee E",
+                    "Ogawa S",
+                    "Ogawa M",
+                    "Wilson MD",
+                    "Fish JE",
+                    "Selzner M",
+                    "Ghanekar A",
+                    "Grant D",
+                    "Greig P",
+                    "Sapisochin G",
+                    "Selzner N",
+                    "Winegarden N",
+                    "Adeyi O",
+                    "Keller G",
+                    "Bader GD",
+                    "McGilvray ID"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844555,
@@ -3510,21 +3514,21 @@
             "insdc_project_accessions": [
                 "SRP171031",
                 "SRP171152"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Sonja Nowotschin, Manu Setty, Ying-Yi Kuo, Vincent Liu, Vidur Garg, Roshan Sharma, Claire S. Simon, Nestor Saiz, Rui Gardner, St\u00e9phane C. Boutet, Deanna M. Church, Pamela A. Hoodless, Anna-Katerina Hadjantonakis, Dana Pe'er"
-                    ],
-                    "title": "The emergent landscape of the mouse gut endoderm at single-cell resolution",
-                    "doi": "10.1038/s41586-019-1127-1",
-                    "pmid": 30959515,
-                    "url": "https://www.nature.com/articles/s41586-019-1127-1"
-                }
             ]
         },
         "uuid": "4e6f083b-5b9a-4393-9890-2a83da8188f1",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/4e6f083b-5b9a-4393-9890-2a83da8188f1?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/4e6f083b-5b9a-4393-9890-2a83da8188f1?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1038/s41586-019-1127-1",
+                "url": "http://dx.doi.org/10.1038/s41586-019-1127-1",
+                "journal_title": "Nature",
+                "title": "The emergent landscape of the mouse gut endoderm at single-cell resolution",
+                "authors": [
+                    "Sonja Nowotschin, Manu Setty, Ying-Yi Kuo, Vincent Liu, Vidur Garg, Roshan Sharma, Claire S. Simon, Nestor Saiz, Rui Gardner, St\u00e9phane C. Boutet, Deanna M. Church, Pamela A. Hoodless, Anna-Katerina Hadjantonakis, Dana Pe'er"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844555,
@@ -3631,33 +3635,33 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP179761"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Zhao J",
-                        "Zhang S",
-                        "Liu Y",
-                        "He X",
-                        "Qu M",
-                        "Xu G",
-                        "Wang H",
-                        "Huang M",
-                        "Pan J",
-                        "Liu Z",
-                        "Li Z",
-                        "Liu L",
-                        "Zhang Z"
-                    ],
-                    "title": "Single-cell RNA sequencing reveals the heterogeneity of liver-resident immune cells in human.",
-                    "doi": "10.1038/s41421-020-0157-z",
-                    "pmid": 32351704,
-                    "url": "https://www.nature.com/articles/s41421-020-0157-z"
-                }
             ]
         },
         "uuid": "559bb888-7829-41f2-ace5-2c05c7eb81e9",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1038/s41421-020-0157-z",
+                "url": "http://dx.doi.org/10.1038/s41421-020-0157-z",
+                "journal_title": "Cell Discovery",
+                "title": "Single-cell RNA sequencing reveals the heterogeneity of liver-resident immune cells in human.",
+                "authors": [
+                    "Zhao J",
+                    "Zhang S",
+                    "Liu Y",
+                    "He X",
+                    "Qu M",
+                    "Xu G",
+                    "Wang H",
+                    "Huang M",
+                    "Pan J",
+                    "Liu Z",
+                    "Li Z",
+                    "Liu L",
+                    "Zhang Z"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844556,
@@ -3809,27 +3813,28 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "publications": [
-                {
-                    "authors": [
-                        "Humphreys BD",
-                        "Wilson PC",
-                        "Rennke HG",
-                        "Welling PA",
-                        "Waikar SS",
-                        "Wu H",
-                        "Kirita Y",
-                        "Uchimura K"
-                    ],
-                    "title": "The Single Cell Transcriptomic Landscape of Early Human Diabetic Nephropathy",
-                    "doi": "10.1101/645424",
-                    "url": "https://www.biorxiv.org/content/10.1101/645424v1"
-                }
-            ]
+            "insdc_project_accessions": null
         },
         "uuid": "577c946d-6de5-4b55-a854-cd3fde40bff2",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/577c946d-6de5-4b55-a854-cd3fde40bff2?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/577c946d-6de5-4b55-a854-cd3fde40bff2?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1101/645424",
+                "url": "http://dx.doi.org/10.1101/645424",
+                "journal_title": "Cold Spring Harbor Laboratory",
+                "title": "The Single Cell Transcriptomic Landscape of Early Human Diabetic Nephropathy",
+                "authors": [
+                    "Humphreys BD",
+                    "Wilson PC",
+                    "Rennke HG",
+                    "Welling PA",
+                    "Waikar SS",
+                    "Wu H",
+                    "Kirita Y",
+                    "Uchimura K"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844557,
@@ -3903,27 +3908,27 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP075496"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Enge M",
-                        "Arda HE",
-                        "Mignardi M",
-                        "Beausang J",
-                        "Bottino R",
-                        "Kim SK",
-                        "Quake SR"
-                    ],
-                    "title": "Single-Cell Analysis of Human Pancreas Reveals Transcriptional Signatures of Aging and Somatic Mutation Patterns.",
-                    "doi": "10.1016/j.cell.2017.09.004",
-                    "pmid": 28965763,
-                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/28965763"
-                }
             ]
         },
         "uuid": "592a97ab-d575-4e91-b68e-547d1d66d087",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1016/j.cell.2017.09.004",
+                "url": "http://dx.doi.org/10.1016/j.cell.2017.09.004",
+                "journal_title": "Cell",
+                "title": "Single-Cell Analysis of Human Pancreas Reveals Transcriptional Signatures of Aging and Somatic Mutation Patterns.",
+                "authors": [
+                    "Enge M",
+                    "Arda HE",
+                    "Mignardi M",
+                    "Beausang J",
+                    "Bottino R",
+                    "Kim SK",
+                    "Quake SR"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844558,
@@ -4036,25 +4041,26 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP123269"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Welch J",
-                        "Kozareva V",
-                        "Ferreira A",
-                        "Vanderburg C",
-                        "Martin C",
-                        "Macosko E"
-                    ],
-                    "title": "Single-cell multi-omic integration compares and contrasts features of brain cell identity",
-                    "doi": "10.1101/459891",
-                    "url": "https://www.biorxiv.org/content/10.1101/459891v1"
-                }
             ]
         },
         "uuid": "5b5f05b7-2482-468d-b76d-8f68c04a7a47",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/5b5f05b7-2482-468d-b76d-8f68c04a7a47?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/5b5f05b7-2482-468d-b76d-8f68c04a7a47?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1101/459891",
+                "url": "http://dx.doi.org/10.1101/459891",
+                "journal_title": "Cold Spring Harbor Laboratory",
+                "title": "Single-cell multi-omic integration compares and contrasts features of brain cell identity",
+                "authors": [
+                    "Welch J",
+                    "Kozareva V",
+                    "Ferreira A",
+                    "Vanderburg C",
+                    "Martin C",
+                    "Macosko E"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844559,
@@ -4191,33 +4197,33 @@
             "insdc_project_accessions": [
                 "SRP198482",
                 "SRP159104"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Zhong S",
-                        "Ding W",
-                        "Sun L",
-                        "Lu Y",
-                        "Dong H",
-                        "Fan X",
-                        "Liu Z",
-                        "Chen R",
-                        "Zhang S",
-                        "Ma Q",
-                        "Tang F",
-                        "Wu Q",
-                        "Wang X"
-                    ],
-                    "title": "Decoding the development of the human hippocampus.",
-                    "doi": "10.1038/s41586-019-1917-5",
-                    "pmid": 31942070,
-                    "url": "https://www.nature.com/articles/s41586-019-1917-5"
-                }
             ]
         },
         "uuid": "6c040a93-8cf8-4fd5-98de-2297eb07e9f6",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1038/s41586-019-1917-5",
+                "url": "http://dx.doi.org/10.1038/s41586-019-1917-5",
+                "journal_title": "Nature",
+                "title": "Decoding the development of the human hippocampus.",
+                "authors": [
+                    "Zhong S",
+                    "Ding W",
+                    "Sun L",
+                    "Lu Y",
+                    "Dong H",
+                    "Fan X",
+                    "Liu Z",
+                    "Chen R",
+                    "Zhang S",
+                    "Ma Q",
+                    "Tang F",
+                    "Wu Q",
+                    "Wang X"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844560,
@@ -4305,26 +4311,26 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP198380"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Hill MC",
-                        "Kadow ZA",
-                        "Li L",
-                        "Tran TT",
-                        "Wythe JD",
-                        "Martin JF"
-                    ],
-                    "title": "A cellular atlas of Pit2x-dependent cardiac development.",
-                    "doi": "10.1242/dev.180398",
-                    "pmid": 31201182,
-                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/31201182"
-                }
             ]
         },
         "uuid": "7027adc6-c9c9-46f3-84ee-9badc3a4f53b",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/7027adc6-c9c9-46f3-84ee-9badc3a4f53b?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/7027adc6-c9c9-46f3-84ee-9badc3a4f53b?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1242/dev.180398",
+                "url": "http://dx.doi.org/10.1242/dev.180398",
+                "journal_title": "Development",
+                "title": "A cellular atlas of Pit2x-dependent cardiac development.",
+                "authors": [
+                    "Hill MC",
+                    "Kadow ZA",
+                    "Li L",
+                    "Tran TT",
+                    "Wythe JD",
+                    "Martin JF"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844561,
@@ -4423,11 +4429,11 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP096558"
-            ],
-            "publications": null
+            ]
         },
         "uuid": "74b6d569-3b11-42ef-b6b1-a0454522b4a0",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/74b6d569-3b11-42ef-b6b1-a0454522b4a0?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/74b6d569-3b11-42ef-b6b1-a0454522b4a0?catalog=dcp2",
+        "publications": null
     },
     {
         "added_to_index": 1609844562,
@@ -4785,43 +4791,43 @@
             "array_express_accessions": [
                 "E-MTAB-7316"
             ],
-            "insdc_project_accessions": null,
-            "publications": [
-                {
-                    "authors": [
-                        "Lukowski SW",
-                        "Lo CY",
-                        "Sharov AA",
-                        "Nguyen Q",
-                        "Fang L",
-                        "Hung SS",
-                        "Zhu L",
-                        "Zhang T",
-                        "Gr\u00fcnert U",
-                        "Nguyen T",
-                        "Senabouth A",
-                        "Jabbari JS",
-                        "Welby E",
-                        "Sowden JC",
-                        "Waugh HS",
-                        "Mackey A",
-                        "Pollock G",
-                        "Lamb TD",
-                        "Wang PY",
-                        "Hewitt AW",
-                        "Gillies MC",
-                        "Powell JE",
-                        "Wong RC"
-                    ],
-                    "title": "A single\u2010cell transcriptome atlas of the adult human retina",
-                    "doi": "10.15252/embj.2018100811",
-                    "pmid": 31436334,
-                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/31436334"
-                }
-            ]
+            "insdc_project_accessions": null
         },
         "uuid": "8185730f-4113-40d3-9cc3-929271784c2b",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/8185730f-4113-40d3-9cc3-929271784c2b?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/8185730f-4113-40d3-9cc3-929271784c2b?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.15252/embj.2018100811",
+                "url": "http://dx.doi.org/10.15252/embj.2018100811",
+                "journal_title": "The EMBO Journal",
+                "title": "A single\u2010cell transcriptome atlas of the adult human retina",
+                "authors": [
+                    "Lukowski SW",
+                    "Lo CY",
+                    "Sharov AA",
+                    "Nguyen Q",
+                    "Fang L",
+                    "Hung SS",
+                    "Zhu L",
+                    "Zhang T",
+                    "Gr\u00fcnert U",
+                    "Nguyen T",
+                    "Senabouth A",
+                    "Jabbari JS",
+                    "Welby E",
+                    "Sowden JC",
+                    "Waugh HS",
+                    "Mackey A",
+                    "Pollock G",
+                    "Lamb TD",
+                    "Wang PY",
+                    "Hewitt AW",
+                    "Gillies MC",
+                    "Powell JE",
+                    "Wong RC"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844563,
@@ -5171,69 +5177,70 @@
                 "ERP118315",
                 "ERP118165",
                 "ERP118273"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Meyer KB",
-                        "Elmentaite R",
-                        "Gomes T",
-                        "Petrova VN",
-                        "Kumar N",
-                        "Polanski K",
-                        "Lawley TD",
-                        "Stares MD",
-                        "Gulliver EL",
-                        "Clatworthy MR",
-                        "Ferdinand JR",
-                        "Bareham  BR",
-                        "Forster SC",
-                        "Howlett S",
-                        "Jarvis LB",
-                        "King HW",
-                        "Saeb-Parsy K",
-                        "Suchanek O",
-                        "James LK",
-                        "Jones JL",
-                        "Teichmann SA"
-                    ],
-                    "title": "Distinct microbial and immune niches of the human colon",
-                    "doi": "10.1101/2019.12.12.871657",
-                    "url": "https://www.biorxiv.org/content/10.1101/2019.12.12.871657v1"
-                },
-                {
-                    "authors": [
-                        "Meyer KB",
-                        "Elmentaite R",
-                        "Gomes T",
-                        "Petrova VN",
-                        "Kumar N",
-                        "Polanski K",
-                        "Lawley TD",
-                        "Stares MD",
-                        "Gulliver EL",
-                        "Clatworthy MR",
-                        "Ferdinand JR",
-                        "Bareham  BR",
-                        "Forster SC",
-                        "Howlett S",
-                        "Jarvis LB",
-                        "King HW",
-                        "Saeb-Parsy K",
-                        "Suchanek O",
-                        "James LK",
-                        "Jones JL",
-                        "Teichmann SA"
-                    ],
-                    "title": "Distinct microbial and immune niches of the human colon",
-                    "doi": "10.1038/s41590-020-0602-z",
-                    "pmid": 32066951,
-                    "url": "https://www.nature.com/articles/s41590-020-0602-z"
-                }
             ]
         },
         "uuid": "83f5188e-3bf7-4956-9544-cea4f8997756",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/83f5188e-3bf7-4956-9544-cea4f8997756?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/83f5188e-3bf7-4956-9544-cea4f8997756?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1101/2019.12.12.871657",
+                "url": "http://dx.doi.org/10.1101/2019.12.12.871657",
+                "journal_title": "Cold Spring Harbor Laboratory",
+                "title": "Distinct microbial and immune niches of the human colon",
+                "authors": [
+                    "Meyer KB",
+                    "Elmentaite R",
+                    "Gomes T",
+                    "Petrova VN",
+                    "Kumar N",
+                    "Polanski K",
+                    "Lawley TD",
+                    "Stares MD",
+                    "Gulliver EL",
+                    "Clatworthy MR",
+                    "Ferdinand JR",
+                    "Bareham  BR",
+                    "Forster SC",
+                    "Howlett S",
+                    "Jarvis LB",
+                    "King HW",
+                    "Saeb-Parsy K",
+                    "Suchanek O",
+                    "James LK",
+                    "Jones JL",
+                    "Teichmann SA"
+                ]
+            },
+            {
+                "doi": "10.1038/s41590-020-0602-z",
+                "url": "http://dx.doi.org/10.1038/s41590-020-0602-z",
+                "journal_title": "Nature Immunology",
+                "title": "Distinct microbial and immune niches of the human colon",
+                "authors": [
+                    "Meyer KB",
+                    "Elmentaite R",
+                    "Gomes T",
+                    "Petrova VN",
+                    "Kumar N",
+                    "Polanski K",
+                    "Lawley TD",
+                    "Stares MD",
+                    "Gulliver EL",
+                    "Clatworthy MR",
+                    "Ferdinand JR",
+                    "Bareham  BR",
+                    "Forster SC",
+                    "Howlett S",
+                    "Jarvis LB",
+                    "King HW",
+                    "Saeb-Parsy K",
+                    "Suchanek O",
+                    "James LK",
+                    "Jones JL",
+                    "Teichmann SA"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844564,
@@ -5353,28 +5360,28 @@
             "insdc_project_accessions": [
                 "SRP144908",
                 "SRP131373"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Wu H",
-                        "Malone AF",
-                        "Donnelly EL",
-                        "Kirita Y",
-                        "Uchimura K",
-                        "Ramakrishnan SM",
-                        "Gaut JP",
-                        "Humphreys BD"
-                    ],
-                    "title": "Single-Cell Transcriptomics of a Human Kidney Allograft Biopsy Specimen Defines a Diverse Inflammatory Response",
-                    "doi": "10.1681/ASN.2018020125",
-                    "pmid": 29980650,
-                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6065085/"
-                }
             ]
         },
         "uuid": "87215108-e533-4364-abd4-0fe71edd35c1",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1681/ASN.2018020125",
+                "url": "http://dx.doi.org/10.1681/asn.2018020125",
+                "journal_title": "Journal of the American Society of Nephrology",
+                "title": "Single-Cell Transcriptomics of a Human Kidney Allograft Biopsy Specimen Defines a Diverse Inflammatory Response",
+                "authors": [
+                    "Wu H",
+                    "Malone AF",
+                    "Donnelly EL",
+                    "Kirita Y",
+                    "Uchimura K",
+                    "Ramakrishnan SM",
+                    "Gaut JP",
+                    "Humphreys BD"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844565,
@@ -5729,20 +5736,21 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP200058"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Ding J;Adiconis X;Simmons SK;Kowalczyk MS;Hession CC;Marjanovic ND;Hughes TK;MH Wadsworth MH;Burks T;Nguyen LT;Kwon JY;Barak B;Ge W;Kedaigle AJ;Carroll S;Li S;Hacohen N;Rozenblatt-Rosen O;Shalek AK;Villani C;Regev A;Levin JZ"
-                    ],
-                    "title": "Systematic comparative analysis of single cell RNA-sequencing methods",
-                    "doi": "10.1101/632216",
-                    "url": "https://www.biorxiv.org/content/10.1101/632216v2"
-                }
             ]
         },
         "uuid": "88ec040b-8705-4f77-8f41-f81e57632f7d",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/88ec040b-8705-4f77-8f41-f81e57632f7d?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/88ec040b-8705-4f77-8f41-f81e57632f7d?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1101/632216",
+                "url": "http://dx.doi.org/10.1101/632216",
+                "journal_title": "Cold Spring Harbor Laboratory",
+                "title": "Systematic comparative analysis of single cell RNA-sequencing methods",
+                "authors": [
+                    "Ding J;Adiconis X;Simmons SK;Kowalczyk MS;Hession CC;Marjanovic ND;Hughes TK;MH Wadsworth MH;Burks T;Nguyen LT;Kwon JY;Barak B;Ge W;Kedaigle AJ;Carroll S;Li S;Hacohen N;Rozenblatt-Rosen O;Shalek AK;Villani C;Regev A;Levin JZ"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844566,
@@ -5898,32 +5906,33 @@
             ],
             "insdc_project_accessions": [
                 "ERP112843"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Davidson S",
-                        "Efremova M",
-                        "Riedel A",
-                        "Mahata B",
-                        "Pramanik J",
-                        "Huuhtanen F",
-                        "Kar G",
-                        "Vento-Tormo R",
-                        "Hagai T",
-                        "Chen X",
-                        "Haniffa MA",
-                        "Shields JD",
-                        "Teichmann SA"
-                    ],
-                    "title": "Single-cell RNA sequencing reveals a dynamic stromal niche within the evolving tumour microenvironment",
-                    "doi": "10.1101/467225",
-                    "url": "https://www.biorxiv.org/content/10.1101/467225v1"
-                }
             ]
         },
         "uuid": "8c3c290d-dfff-4553-8868-54ce45f4ba7f",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/8c3c290d-dfff-4553-8868-54ce45f4ba7f?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/8c3c290d-dfff-4553-8868-54ce45f4ba7f?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1101/467225",
+                "url": "http://dx.doi.org/10.1101/467225",
+                "journal_title": "Cold Spring Harbor Laboratory",
+                "title": "Single-cell RNA sequencing reveals a dynamic stromal niche within the evolving tumour microenvironment",
+                "authors": [
+                    "Davidson S",
+                    "Efremova M",
+                    "Riedel A",
+                    "Mahata B",
+                    "Pramanik J",
+                    "Huuhtanen F",
+                    "Kar G",
+                    "Vento-Tormo R",
+                    "Hagai T",
+                    "Chen X",
+                    "Haniffa MA",
+                    "Shields JD",
+                    "Teichmann SA"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844567,
@@ -5977,33 +5986,33 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP124157"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Patil VS",
-                        "Madrigal A",
-                        "Schmiedel BJ",
-                        "Clarke J",
-                        "ORourke P",
-                        "Harris E",
-                        "de Silva AD",
-                        "Harris E",
-                        "Peters B",
-                        "Seumois G",
-                        "Weiskopf D",
-                        "Sette A",
-                        "Vijayanand P"
-                    ],
-                    "title": "Precursors of human CD4+ cytotoxic T lymphocytes identified by single-cell transcriptome analysis.",
-                    "doi": "10.1126/sciimmunol.aan8664",
-                    "pmid": 29352091,
-                    "url": "http://immunology.sciencemag.org/content/3/19/eaan8664.long"
-                }
             ]
         },
         "uuid": "90bd6933-40c0-48d4-8d76-778c103bf545",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/90bd6933-40c0-48d4-8d76-778c103bf545?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/90bd6933-40c0-48d4-8d76-778c103bf545?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1126/sciimmunol.aan8664",
+                "url": "http://dx.doi.org/10.1126/sciimmunol.aan8664",
+                "journal_title": "Science Immunology",
+                "title": "Precursors of human CD4+ cytotoxic T lymphocytes identified by single-cell transcriptome analysis.",
+                "authors": [
+                    "Patil VS",
+                    "Madrigal A",
+                    "Schmiedel BJ",
+                    "Clarke J",
+                    "ORourke P",
+                    "Harris E",
+                    "de Silva AD",
+                    "Harris E",
+                    "Peters B",
+                    "Seumois G",
+                    "Weiskopf D",
+                    "Sette A",
+                    "Vijayanand P"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844568,
@@ -6198,38 +6207,38 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP259912"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Lee JS",
-                        "Park S",
-                        "Jeong HW",
-                        "Ahn JY",
-                        "Choi SJ",
-                        "Lee H",
-                        "Choi B",
-                        "Nam SK",
-                        "Sa M",
-                        "Kwon JS",
-                        "Jeong SJ",
-                        "Lee HK",
-                        "Park SH",
-                        "Park SH",
-                        "Choi JY",
-                        "Kim SH",
-                        "Jung I",
-                        "Shin EC"
-                    ],
-                    "title": "Immunophenotyping of COVID-19 and influenza highlights the role of type I interferons in development of severe COVID-19.",
-                    "doi": "10.1126/sciimmunol.abd1554",
-                    "pmid": 32651212,
-                    "url": "https://immunology.sciencemag.org/content/5/49/eabd1554"
-                }
             ]
         },
         "uuid": "95f07e6e-6a73-4e1b-a880-c83996b3aa5c",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/95f07e6e-6a73-4e1b-a880-c83996b3aa5c?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/95f07e6e-6a73-4e1b-a880-c83996b3aa5c?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1126/sciimmunol.abd1554",
+                "url": "http://dx.doi.org/10.1126/sciimmunol.abd1554",
+                "journal_title": "Science Immunology",
+                "title": "Immunophenotyping of COVID-19 and influenza highlights the role of type I interferons in development of severe COVID-19.",
+                "authors": [
+                    "Lee JS",
+                    "Park S",
+                    "Jeong HW",
+                    "Ahn JY",
+                    "Choi SJ",
+                    "Lee H",
+                    "Choi B",
+                    "Nam SK",
+                    "Sa M",
+                    "Kwon JS",
+                    "Jeong SJ",
+                    "Lee HK",
+                    "Park SH",
+                    "Park SH",
+                    "Choi JY",
+                    "Kim SH",
+                    "Jung I",
+                    "Shin EC"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844569,
@@ -6321,29 +6330,29 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP229590"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Agarwal D",
-                        "Sandor C",
-                        "Volpato V",
-                        "Caffrey TM",
-                        "Monz\u00f3n-Sandoval J",
-                        "Bowden R",
-                        "Alegre-Abarrategui J",
-                        "Wade-Martins R",
-                        "Webber C"
-                    ],
-                    "title": "A single-cell atlas of the human substantia nigra reveals cell-specific pathways associated with neurological disorders.",
-                    "doi": "10.1038/s41467-020-17876-0",
-                    "pmid": 32826893,
-                    "url": "https://www.nature.com/articles/s41467-020-17876-0"
-                }
             ]
         },
         "uuid": "996120f9-e84f-409f-a01e-732ab58ca8b9",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1038/s41467-020-17876-0",
+                "url": "http://dx.doi.org/10.1038/s41467-020-17876-0",
+                "journal_title": "Nature Communications",
+                "title": "A single-cell atlas of the human substantia nigra reveals cell-specific pathways associated with neurological disorders.",
+                "authors": [
+                    "Agarwal D",
+                    "Sandor C",
+                    "Volpato V",
+                    "Caffrey TM",
+                    "Monz\u00f3n-Sandoval J",
+                    "Bowden R",
+                    "Alegre-Abarrategui J",
+                    "Wade-Martins R",
+                    "Webber C"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844570,
@@ -6412,53 +6421,53 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "publications": [
-                {
-                    "title": "Single cell dissection of plasma cell heterogeneity in symptomatic and asymptomatic myeloma",
-                    "authors": [
-                        "Ledergor, G",
-                        "Weiner, A",
-                        "Zada, M",
-                        "Wang, S-Y",
-                        "Cohen, YC",
-                        "Gatt, ME",
-                        "Snir, N",
-                        "Magen, H",
-                        "Koren-Michowitz, M",
-                        "Herzog-Tzarfati, K",
-                        "Keren-Shaul, H",
-                        "Bornstein, C",
-                        "Rotkopf, R",
-                        "Yofe, I",
-                        "David, E",
-                        "Yellapantula, V",
-                        "Kay, S",
-                        "Salai, M",
-                        "Ben Yehuda, D",
-                        "Nagler, A",
-                        "Shvidel, L",
-                        "Orr-Urtreger, A",
-                        "Halpern, KB",
-                        "Itzkovitz, S",
-                        "Landgren, O",
-                        "San-Miguel, J",
-                        "Paiva, B",
-                        "Keats, JJ",
-                        "Papaemmanuil, E",
-                        "Avivi, I",
-                        "Barbash, GI",
-                        "Tanay, A",
-                        "Amit, I"
-                    ],
-                    "url": "https://www.nature.com/articles/s41591-018-0269-2",
-                    "doi": "10.1038/s41591-018-0269-2",
-                    "pmid": 30523328
-                }
-            ]
+            "insdc_project_accessions": null
         },
         "uuid": "a29952d9-925e-40f4-8a1c-274f118f1f51",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/a29952d9-925e-40f4-8a1c-274f118f1f51?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/a29952d9-925e-40f4-8a1c-274f118f1f51?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1038/s41591-018-0269-2",
+                "url": "http://dx.doi.org/10.1038/s41591-018-0269-2",
+                "journal_title": "Nature Medicine",
+                "title": "Single cell dissection of plasma cell heterogeneity in symptomatic and asymptomatic myeloma",
+                "authors": [
+                    "Ledergor, G",
+                    "Weiner, A",
+                    "Zada, M",
+                    "Wang, S-Y",
+                    "Cohen, YC",
+                    "Gatt, ME",
+                    "Snir, N",
+                    "Magen, H",
+                    "Koren-Michowitz, M",
+                    "Herzog-Tzarfati, K",
+                    "Keren-Shaul, H",
+                    "Bornstein, C",
+                    "Rotkopf, R",
+                    "Yofe, I",
+                    "David, E",
+                    "Yellapantula, V",
+                    "Kay, S",
+                    "Salai, M",
+                    "Ben Yehuda, D",
+                    "Nagler, A",
+                    "Shvidel, L",
+                    "Orr-Urtreger, A",
+                    "Halpern, KB",
+                    "Itzkovitz, S",
+                    "Landgren, O",
+                    "San-Miguel, J",
+                    "Paiva, B",
+                    "Keats, JJ",
+                    "Papaemmanuil, E",
+                    "Avivi, I",
+                    "Barbash, GI",
+                    "Tanay, A",
+                    "Amit, I"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844570,
@@ -6497,26 +6506,27 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "publications": [
-                {
-                    "authors": [
-                        "Li R",
-                        "Bernau K",
-                        "Sandbo N",
-                        "Gu J",
-                        "Preissl S",
-                        "Sun X",
-                        ""
-                    ],
-                    "title": "Pdgfra marks a cellular lineage with distinct contributions to myofibroblasts in lung maturation and injury response.",
-                    "doi": "10.7554/eLife.36865",
-                    "pmid": 30178747
-                }
-            ]
+            "insdc_project_accessions": null
         },
         "uuid": "a72bed96-a4f7-401a-a67a-17b8a7357faf",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.7554/eLife.36865",
+                "url": "http://dx.doi.org/10.7554/elife.36865",
+                "journal_title": "eLife",
+                "title": "Pdgfra marks a cellular lineage with distinct contributions to myofibroblasts in lung maturation and injury response.",
+                "authors": [
+                    "Li R",
+                    "Bernau K",
+                    "Sandbo N",
+                    "Gu J",
+                    "Preissl S",
+                    "Sun X",
+                    ""
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844571,
@@ -6635,35 +6645,35 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP118904"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Zhong S",
-                        "Zhang S",
-                        "Fan X",
-                        "Wu Q",
-                        "Yan L",
-                        "Dong J",
-                        "Zhang H",
-                        "Li L",
-                        "Sun L",
-                        "Pan N",
-                        "Xu X",
-                        "Tang F",
-                        "Zhang J",
-                        "Qiao J",
-                        "Wang X"
-                    ],
-                    "title": "A single-cell RNA-seq survey of the developmental landscape of the human prefrontal cortex.",
-                    "doi": "10.1038/nature25980",
-                    "pmid": 29539641,
-                    "url": "https://www.nature.com/articles/nature25980"
-                }
             ]
         },
         "uuid": "a815c84b-8999-433f-958e-422c0720e00d",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1038/nature25980",
+                "url": "http://dx.doi.org/10.1038/nature25980",
+                "journal_title": "Nature",
+                "title": "A single-cell RNA-seq survey of the developmental landscape of the human prefrontal cortex.",
+                "authors": [
+                    "Zhong S",
+                    "Zhang S",
+                    "Fan X",
+                    "Wu Q",
+                    "Yan L",
+                    "Dong J",
+                    "Zhang H",
+                    "Li L",
+                    "Sun L",
+                    "Pan N",
+                    "Xu X",
+                    "Tang F",
+                    "Zhang J",
+                    "Qiao J",
+                    "Wang X"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844572,
@@ -6754,31 +6764,32 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "publications": [
-                {
-                    "authors": [
-                        "Selewa Alan",
-                        "Dohn Ryan",
-                        "Eckart Heather",
-                        "Lozano Stephanie",
-                        "Xie Bingqing",
-                        "Gauchat Eric",
-                        "Elorbany Reem",
-                        "Rhodes Katherine",
-                        "Burnett Jonathan",
-                        "Gilad Yoav",
-                        "Pott Sebastian",
-                        "Basu Anindita"
-                    ],
-                    "title": "Systematic Comparison of High-throughput Single-Cell and  Single-Nucleus Transcriptomes during Cardiomyocyte Differentiation",
-                    "doi": "10.1101/585901",
-                    "url": "https://www.biorxiv.org/content/10.1101/585901v2"
-                }
-            ]
+            "insdc_project_accessions": null
         },
         "uuid": "a9c022b4-c771-4468-b769-cabcf9738de3",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/a9c022b4-c771-4468-b769-cabcf9738de3?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/a9c022b4-c771-4468-b769-cabcf9738de3?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1101/585901",
+                "url": "http://dx.doi.org/10.1101/585901",
+                "journal_title": "Cold Spring Harbor Laboratory",
+                "title": "Systematic Comparison of High-throughput Single-Cell and  Single-Nucleus Transcriptomes during Cardiomyocyte Differentiation",
+                "authors": [
+                    "Selewa Alan",
+                    "Dohn Ryan",
+                    "Eckart Heather",
+                    "Lozano Stephanie",
+                    "Xie Bingqing",
+                    "Gauchat Eric",
+                    "Elorbany Reem",
+                    "Rhodes Katherine",
+                    "Burnett Jonathan",
+                    "Gilad Yoav",
+                    "Pott Sebastian",
+                    "Basu Anindita"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844573,
@@ -6927,62 +6938,63 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP120466"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Stewart JB",
-                        "Ferdinand RJ",
-                        "Young DM",
-                        "Mitchell JT",
-                        "Loudon WK",
-                        "Riding MA",
-                        "Richoz N",
-                        "Frazer LG",
-                        "Staniforth LUJ",
-                        "Braga VAF",
-                        "Botting AR",
-                        "Popescu D",
-                        "Vento-Tormo R",
-                        "Stephenson E",
-                        "Cagan A",
-                        "Farndon JS",
-                        "Polanski K",
-                        "Efremova M",
-                        "Green K",
-                        "Velasco-Herrera CDM",
-                        "Guzzo C",
-                        "Collord G",
-                        "Mamanova L",
-                        "Aho T",
-                        "Armitage NJ",
-                        "Riddick PCA",
-                        "Mushtaq I",
-                        "Farrell S",
-                        "Rampling D",
-                        "Nicholson J",
-                        "Filby A",
-                        "Burge J",
-                        "Lisgo S",
-                        "Lindsay S",
-                        "Bajenoff M",
-                        "Warren YA",
-                        "Stewart DG",
-                        "Sebire N",
-                        "Coleman N",
-                        "Haniffa M",
-                        "Teichmann AS",
-                        "Behjati S",
-                        "Clatworthy RM"
-                    ],
-                    "title": "Spatiotemporal immune zonation of the human kidney",
-                    "doi": "10.1126/science.aat5031",
-                    "url": "https://science.sciencemag.org/content/365/6460/1461"
-                }
             ]
         },
         "uuid": "abe1a013-af7a-45ed-8c26-f3793c24a1f4",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/abe1a013-af7a-45ed-8c26-f3793c24a1f4?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/abe1a013-af7a-45ed-8c26-f3793c24a1f4?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1126/science.aat5031",
+                "url": "http://dx.doi.org/10.1126/science.aat5031",
+                "journal_title": "Science",
+                "title": "Spatiotemporal immune zonation of the human kidney",
+                "authors": [
+                    "Stewart JB",
+                    "Ferdinand RJ",
+                    "Young DM",
+                    "Mitchell JT",
+                    "Loudon WK",
+                    "Riding MA",
+                    "Richoz N",
+                    "Frazer LG",
+                    "Staniforth LUJ",
+                    "Braga VAF",
+                    "Botting AR",
+                    "Popescu D",
+                    "Vento-Tormo R",
+                    "Stephenson E",
+                    "Cagan A",
+                    "Farndon JS",
+                    "Polanski K",
+                    "Efremova M",
+                    "Green K",
+                    "Velasco-Herrera CDM",
+                    "Guzzo C",
+                    "Collord G",
+                    "Mamanova L",
+                    "Aho T",
+                    "Armitage NJ",
+                    "Riddick PCA",
+                    "Mushtaq I",
+                    "Farrell S",
+                    "Rampling D",
+                    "Nicholson J",
+                    "Filby A",
+                    "Burge J",
+                    "Lisgo S",
+                    "Lindsay S",
+                    "Bajenoff M",
+                    "Warren YA",
+                    "Stewart DG",
+                    "Sebire N",
+                    "Coleman N",
+                    "Haniffa M",
+                    "Teichmann AS",
+                    "Behjati S",
+                    "Clatworthy RM"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844574,
@@ -7401,51 +7413,52 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP123138"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Litvi\u0148ukov\u00e1 M",
-                        "Talavera-L\u00f3pez C",
-                        "Maatz H",
-                        "Reichart D",
-                        "Worth C",
-                        "Lindberg E",
-                        "Kanda M",
-                        "Polanski K",
-                        "Fasouli E",
-                        "Samari S",
-                        "Roberts K",
-                        "Tuck L",
-                        "Heinig M",
-                        "DeLaughter D",
-                        "McDonough B",
-                        "Wakimoto H",
-                        "Gorham J",
-                        "Nadelmann E",
-                        "Mahbubani K",
-                        "Saeb-Parsy K",
-                        "Patone G",
-                        "Boyle J",
-                        "Zhang H",
-                        "Zhang H",
-                        "Viveiros A",
-                        "Oudit G",
-                        "Bayraktar O",
-                        "Seidman J",
-                        "Seidman C",
-                        "Noseda M",
-                        "H\u00fcbner N",
-                        "Teichmann S"
-                    ],
-                    "title": "Cells of the adult human heart",
-                    "doi": "10.1038/s41586-020-2797-4",
-                    "url": "https://www.nature.com/articles/s41586-020-2797-4"
-                }
             ]
         },
         "uuid": "ad98d3cd-26fb-4ee3-99c9-8a2ab085e737",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/ad98d3cd-26fb-4ee3-99c9-8a2ab085e737?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/ad98d3cd-26fb-4ee3-99c9-8a2ab085e737?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1038/s41586-020-2797-4",
+                "url": "http://dx.doi.org/10.1038/s41586-020-2797-4",
+                "journal_title": "Nature",
+                "title": "Cells of the adult human heart",
+                "authors": [
+                    "Litvi\u0148ukov\u00e1 M",
+                    "Talavera-L\u00f3pez C",
+                    "Maatz H",
+                    "Reichart D",
+                    "Worth C",
+                    "Lindberg E",
+                    "Kanda M",
+                    "Polanski K",
+                    "Fasouli E",
+                    "Samari S",
+                    "Roberts K",
+                    "Tuck L",
+                    "Heinig M",
+                    "DeLaughter D",
+                    "McDonough B",
+                    "Wakimoto H",
+                    "Gorham J",
+                    "Nadelmann E",
+                    "Mahbubani K",
+                    "Saeb-Parsy K",
+                    "Patone G",
+                    "Boyle J",
+                    "Zhang H",
+                    "Zhang H",
+                    "Viveiros A",
+                    "Oudit G",
+                    "Bayraktar O",
+                    "Seidman J",
+                    "Seidman C",
+                    "Noseda M",
+                    "H\u00fcbner N",
+                    "Teichmann S"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844575,
@@ -7534,34 +7547,34 @@
             ],
             "insdc_project_accessions": [
                 "ERP017126"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Segerstolpe A",
-                        "Palasantza A",
-                        "Eliasson P",
-                        "Andersson EM",
-                        "Andreasson AC",
-                        "Sun X",
-                        "Picelli S",
-                        "Sabirsh A",
-                        "Clausen M",
-                        "Bjursell MK",
-                        "Smith DM",
-                        "Kasper M",
-                        "Ammala C",
-                        "Sandberg R"
-                    ],
-                    "title": "Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes",
-                    "doi": "10.1016/j.cmet.2016.08.020",
-                    "pmid": 27667667,
-                    "url": "https://europepmc.org/abstract/MED/27667667"
-                }
             ]
         },
         "uuid": "ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1016/j.cmet.2016.08.020",
+                "url": "http://dx.doi.org/10.1016/j.cmet.2016.08.020",
+                "journal_title": "Cell Metabolism",
+                "title": "Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes",
+                "authors": [
+                    "Segerstolpe A",
+                    "Palasantza A",
+                    "Eliasson P",
+                    "Andersson EM",
+                    "Andreasson AC",
+                    "Sun X",
+                    "Picelli S",
+                    "Sabirsh A",
+                    "Clausen M",
+                    "Bjursell MK",
+                    "Smith DM",
+                    "Kasper M",
+                    "Ammala C",
+                    "Sandberg R"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844576,
@@ -7645,11 +7658,11 @@
             ],
             "insdc_project_accessions": [
                 "ERP119958"
-            ],
-            "publications": null
+            ]
         },
         "uuid": "b176d756-62d8-4933-83a4-8b026380262f",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/b176d756-62d8-4933-83a4-8b026380262f?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/b176d756-62d8-4933-83a4-8b026380262f?catalog=dcp2",
+        "publications": null
     },
     {
         "added_to_index": 1609844577,
@@ -7781,35 +7794,35 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP192409"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Peyser R",
-                        "MacDonnell S",
-                        "Gao Y",
-                        "Cheng L",
-                        "Kim Y",
-                        "Kaplan T",
-                        "Ruan Q",
-                        "Wei Y",
-                        "Ni M",
-                        "Adler C",
-                        "Zhang W",
-                        "Devalaraja-Narashimha K",
-                        "Grindley J",
-                        "Halasz G",
-                        "Morton L"
-                    ],
-                    "title": "Defining the Activated Fibroblast Population in Lung Fibrosis Using Single-Cell Sequencing.",
-                    "doi": "10.1165/rcmb.2018-0313OC",
-                    "pmid": 30848683,
-                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/30848683"
-                }
             ]
         },
         "uuid": "b4a7d12f-6c2f-40a3-9e35-9756997857e3",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/b4a7d12f-6c2f-40a3-9e35-9756997857e3?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/b4a7d12f-6c2f-40a3-9e35-9756997857e3?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1165/rcmb.2018-0313OC",
+                "url": "http://dx.doi.org/10.1165/rcmb.2018-0313oc",
+                "journal_title": "American Journal of Respiratory Cell and Molecular Biology",
+                "title": "Defining the Activated Fibroblast Population in Lung Fibrosis Using Single-Cell Sequencing.",
+                "authors": [
+                    "Peyser R",
+                    "MacDonnell S",
+                    "Gao Y",
+                    "Cheng L",
+                    "Kim Y",
+                    "Kaplan T",
+                    "Ruan Q",
+                    "Wei Y",
+                    "Ni M",
+                    "Adler C",
+                    "Zhang W",
+                    "Devalaraja-Narashimha K",
+                    "Grindley J",
+                    "Halasz G",
+                    "Morton L"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844578,
@@ -8372,21 +8385,21 @@
             ],
             "insdc_project_accessions": [
                 "ERP119282"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Park JE"
-                    ],
-                    "title": "A cell atlas of human thymic development defines T cell repertoire formation.",
-                    "doi": "10.1126/science.aay3224",
-                    "pmid": 32079746,
-                    "url": "https://science.sciencemag.org/content/367/6480/eaay3224"
-                }
             ]
         },
         "uuid": "c1810dbc-16d2-45c3-b45e-3e675f88d87b",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1126/science.aay3224",
+                "url": "http://dx.doi.org/10.1126/science.aay3224",
+                "journal_title": "Science",
+                "title": "A cell atlas of human thymic development defines T cell repertoire formation.",
+                "authors": [
+                    "Park JE"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844580,
@@ -8761,41 +8774,41 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP114453"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Madissoon E",
-                        "Wilbrey-Clark  A",
-                        "Miragaia RJ",
-                        "Saeb-Parsy K",
-                        "Mahbubani K",
-                        "Georgakopoulos N",
-                        "Harding P",
-                        "Polanski K",
-                        "Nowicki-Osuch K",
-                        "Fitzgerald RC",
-                        "Loudon KW",
-                        "Ferdinand JR",
-                        "Clatworthy M",
-                        "Tsingene  A",
-                        "Van Dongen S",
-                        "Dabrowska M",
-                        "Patel M",
-                        "Stubbington MJT",
-                        "Teichmann S",
-                        "Stegle O",
-                        "Meyer KB"
-                    ],
-                    "title": "scRNA-seq assessment of the human lung, spleen, and esophagus tissue stability after cold preservation",
-                    "doi": "10.1186/s13059-019-1906-x",
-                    "pmid": 31892341,
-                    "url": "https://doi.org/10.1186/s13059-019-1906-x"
-                }
             ]
         },
         "uuid": "c4077b3c-5c98-4d26-a614-246d12c2e5d7",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/c4077b3c-5c98-4d26-a614-246d12c2e5d7?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/c4077b3c-5c98-4d26-a614-246d12c2e5d7?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1186/s13059-019-1906-x",
+                "url": "http://dx.doi.org/10.1186/s13059-019-1906-x",
+                "journal_title": "Genome Biology",
+                "title": "scRNA-seq assessment of the human lung, spleen, and esophagus tissue stability after cold preservation",
+                "authors": [
+                    "Madissoon E",
+                    "Wilbrey-Clark  A",
+                    "Miragaia RJ",
+                    "Saeb-Parsy K",
+                    "Mahbubani K",
+                    "Georgakopoulos N",
+                    "Harding P",
+                    "Polanski K",
+                    "Nowicki-Osuch K",
+                    "Fitzgerald RC",
+                    "Loudon KW",
+                    "Ferdinand JR",
+                    "Clatworthy M",
+                    "Tsingene  A",
+                    "Van Dongen S",
+                    "Dabrowska M",
+                    "Patel M",
+                    "Stubbington MJT",
+                    "Teichmann S",
+                    "Stegle O",
+                    "Meyer KB"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844580,
@@ -9023,43 +9036,44 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP218975"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Wilson-Kanamori JR",
-                        "Henderson NC",
-                        "Dobie R",
-                        "Dora EF",
-                        "Portman JR",
-                        "Matchett KP",
-                        "Brice M",
-                        "Marwick JA",
-                        "Efremova M",
-                        "Vento-Tormo R",
-                        "Carragher NO",
-                        "Kendall TJ",
-                        "Fallowfield JA",
-                        "Harrison EM",
-                        "Mole DJ",
-                        "Wigmore SJ",
-                        "Newsome PN",
-                        "Weston CJ",
-                        "Iredale JP",
-                        "Tacke F",
-                        "Pollard JW",
-                        "Ponting CP",
-                        "Marioni JC",
-                        "Teichmann SA"
-                    ],
-                    "title": "Resolving the fibrotic niche of human liver cirrhosis at single-cell level",
-                    "doi": "10.1038/s41586-019-1631-3",
-                    "pmid": 31597160
-                }
             ]
         },
         "uuid": "c41dffbf-ad83-447c-a0e1-13e689d9b258",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/c41dffbf-ad83-447c-a0e1-13e689d9b258?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/c41dffbf-ad83-447c-a0e1-13e689d9b258?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1038/s41586-019-1631-3",
+                "url": "http://dx.doi.org/10.1038/s41586-019-1631-3",
+                "journal_title": "Nature",
+                "title": "Resolving the fibrotic niche of human liver cirrhosis at single-cell level",
+                "authors": [
+                    "Wilson-Kanamori JR",
+                    "Henderson NC",
+                    "Dobie R",
+                    "Dora EF",
+                    "Portman JR",
+                    "Matchett KP",
+                    "Brice M",
+                    "Marwick JA",
+                    "Efremova M",
+                    "Vento-Tormo R",
+                    "Carragher NO",
+                    "Kendall TJ",
+                    "Fallowfield JA",
+                    "Harrison EM",
+                    "Mole DJ",
+                    "Wigmore SJ",
+                    "Newsome PN",
+                    "Weston CJ",
+                    "Iredale JP",
+                    "Tacke F",
+                    "Pollard JW",
+                    "Ponting CP",
+                    "Marioni JC",
+                    "Teichmann SA"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844581,
@@ -9211,11 +9225,11 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP122984"
-            ],
-            "publications": null
+            ]
         },
         "uuid": "cc95ff89-2e68-4a08-a234-480eca21ce79",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79?catalog=dcp2",
+        "publications": null
     },
     {
         "added_to_index": 1609844583,
@@ -9268,27 +9282,27 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP075496"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Enge M",
-                        "Arda HE",
-                        "Mignardi M",
-                        "Beausang J",
-                        "Bottino R",
-                        "Kim SK",
-                        "Quake SR"
-                    ],
-                    "title": "Single-Cell Analysis of Human Pancreas Reveals Transcriptional Signatures of Aging and Somatic Mutation Patterns.",
-                    "doi": "10.1016/j.cell.2017.09.004",
-                    "pmid": 28965763,
-                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/28965763"
-                }
             ]
         },
         "uuid": "cddab57b-6868-4be4-806f-395ed9dd635a",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/cddab57b-6868-4be4-806f-395ed9dd635a?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/cddab57b-6868-4be4-806f-395ed9dd635a?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1016/j.cell.2017.09.004",
+                "url": "http://dx.doi.org/10.1016/j.cell.2017.09.004",
+                "journal_title": "Cell",
+                "title": "Single-Cell Analysis of Human Pancreas Reveals Transcriptional Signatures of Aging and Somatic Mutation Patterns.",
+                "authors": [
+                    "Enge M",
+                    "Arda HE",
+                    "Mignardi M",
+                    "Beausang J",
+                    "Bottino R",
+                    "Kim SK",
+                    "Quake SR"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844584,
@@ -9342,29 +9356,30 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP131661"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "The Tabula Muris Consortium, Quake SR,  Wyss-Coray T, Darmanis S"
-                    ],
-                    "title": "Transcriptomic characterization of 20 organs and tissues from mouse at single cell resolution creates a Tabula Muris",
-                    "doi": "10.1101/237446",
-                    "url": "https://www.biorxiv.org/content/early/2018/03/29/237446"
-                },
-                {
-                    "authors": [
-                        "The Tabula Muris Consortium, Quake SR,  Wyss-Coray T, Darmanis S"
-                    ],
-                    "title": "Single-cell transcriptomics of 20 mouse organs creates a Tabula Muris",
-                    "doi": "10.1038/s41586-018-0590-4",
-                    "pmid": 30283141,
-                    "url": "https://www.nature.com/articles/s41586-018-0590-4"
-                }
             ]
         },
         "uuid": "e0009214-c0a0-4a7b-96e2-d6a83e966ce0",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/e0009214-c0a0-4a7b-96e2-d6a83e966ce0?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/e0009214-c0a0-4a7b-96e2-d6a83e966ce0?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1101/237446",
+                "url": "http://dx.doi.org/10.1101/237446",
+                "journal_title": "Cold Spring Harbor Laboratory",
+                "title": "Transcriptomic characterization of 20 organs and tissues from mouse at single cell resolution creates a Tabula Muris",
+                "authors": [
+                    "The Tabula Muris Consortium, Quake SR,  Wyss-Coray T, Darmanis S"
+                ]
+            },
+            {
+                "doi": "10.1038/s41586-018-0590-4",
+                "url": "http://dx.doi.org/10.1038/s41586-018-0590-4",
+                "journal_title": "Nature",
+                "title": "Single-cell transcriptomics of 20 mouse organs creates a Tabula Muris",
+                "authors": [
+                    "The Tabula Muris Consortium, Quake SR,  Wyss-Coray T, Darmanis S"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844585,
@@ -9493,32 +9508,32 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP201293"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Goodyer WR",
-                        "Beyersdorf BM",
-                        "Paik DT",
-                        "Tian L",
-                        "Buikema JW",
-                        "Chirikian O",
-                        "Choi S",
-                        "Venkatraman S",
-                        "Adams EL",
-                        "Tessier-Lavigne M",
-                        "Wu JC",
-                        "Wu SM"
-                    ],
-                    "title": "Transcriptomic Profiling of the Developing Cardiac Conduction System at Single-Cell Resolution.",
-                    "doi": "10.1161/CIRCRESAHA.118.314578",
-                    "pmid": 31284824,
-                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/31284824"
-                }
             ]
         },
         "uuid": "e07897dc-c25e-453d-b04c-27ca33adb630",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1161/CIRCRESAHA.118.314578",
+                "url": "http://dx.doi.org/10.1161/circresaha.118.314578",
+                "journal_title": "Circulation Research",
+                "title": "Transcriptomic Profiling of the Developing Cardiac Conduction System at Single-Cell Resolution.",
+                "authors": [
+                    "Goodyer WR",
+                    "Beyersdorf BM",
+                    "Paik DT",
+                    "Tian L",
+                    "Buikema JW",
+                    "Chirikian O",
+                    "Choi S",
+                    "Venkatraman S",
+                    "Adams EL",
+                    "Tessier-Lavigne M",
+                    "Wu JC",
+                    "Wu SM"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844586,
@@ -9668,36 +9683,36 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP214255"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Guo J",
-                        "Nie X",
-                        "Giebler M",
-                        "Mlcochova H",
-                        "Wang Y",
-                        "Grow EJ",
-                        "",
-                        "Kim R",
-                        "Tharmalingam M",
-                        "Matilionyte G",
-                        "Lindskog C",
-                        "Carrell DT",
-                        "Mitchell RT",
-                        "Goriely A",
-                        "Hotaling JM",
-                        "Cairns BR"
-                    ],
-                    "title": "The Dynamic Transcriptional Cell Atlas of Testis Development during Human Puberty.",
-                    "doi": "10.1016/j.stem.2019.12.005",
-                    "pmid": 31928944,
-                    "url": "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(19)30523-5"
-                }
             ]
         },
         "uuid": "e579d0f4-18ef-4d42-90fa-4d2afb60a862",
-        "dcp_url": null
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1016/j.stem.2019.12.005",
+                "url": "http://dx.doi.org/10.1016/j.stem.2019.12.005",
+                "journal_title": "Cell Stem Cell",
+                "title": "The Dynamic Transcriptional Cell Atlas of Testis Development during Human Puberty.",
+                "authors": [
+                    "Guo J",
+                    "Nie X",
+                    "Giebler M",
+                    "Mlcochova H",
+                    "Wang Y",
+                    "Grow EJ",
+                    "",
+                    "Kim R",
+                    "Tharmalingam M",
+                    "Matilionyte G",
+                    "Lindskog C",
+                    "Carrell DT",
+                    "Mitchell RT",
+                    "Goriely A",
+                    "Hotaling JM",
+                    "Cairns BR"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844587,
@@ -9933,74 +9948,74 @@
             ],
             "insdc_project_accessions": [
                 "ERP111845"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Popescu D-M",
-                        "Botting RA",
-                        "Stephenson E",
-                        "Green K",
-                        "Jardine L",
-                        "Calderbank EF",
-                        "Efremova M",
-                        "Acres M",
-                        "Maunder D",
-                        "Vegh P",
-                        "Goh I",
-                        "Gitton Y",
-                        "Park J",
-                        "Polanski K",
-                        "Vento-Tormo R",
-                        "Miao Z",
-                        "Rowell R",
-                        "McDonald D",
-                        "Fletcher J",
-                        "Dixon D",
-                        "Poyner E",
-                        "Reynolds G",
-                        "Mather M",
-                        "Moldovan C",
-                        "Mamanova L",
-                        "Greig F",
-                        "Young M",
-                        "Meyer K",
-                        "Lisgo S",
-                        "Bacardit J",
-                        "Fuller A",
-                        "Millar B",
-                        "Innes B",
-                        "Lindsay S",
-                        "Stubbington MJT",
-                        "Kowalczyk MS",
-                        "Li B",
-                        "Ashenbrg O",
-                        "Tabaka M",
-                        "Dionne D",
-                        "Tickle TL",
-                        "Slyper M",
-                        "Rozenblatt-Rosen O",
-                        "Filby A",
-                        "Villani A-C",
-                        "Roy A",
-                        "Regev A",
-                        "Chedotal A",
-                        "Roberts I",
-                        "G\u00f6ttgens B",
-                        "Laurenti E",
-                        "Behjati S",
-                        "Teichmann SA",
-                        "Haniffa M"
-                    ],
-                    "title": "Decoding human fetal liver haematopoiesis",
-                    "doi": "10.1038/s41586-019-1652-y",
-                    "pmid": 31597962,
-                    "url": "https://www.nature.com/articles/s41586-019-1652-y"
-                }
             ]
         },
         "uuid": "f2fe82f0-4454-4d84-b416-a885f3121e59",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/f2fe82f0-4454-4d84-b416-a885f3121e59?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/f2fe82f0-4454-4d84-b416-a885f3121e59?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1038/s41586-019-1652-y",
+                "url": "http://dx.doi.org/10.1038/s41586-019-1652-y",
+                "journal_title": "Nature",
+                "title": "Decoding human fetal liver haematopoiesis",
+                "authors": [
+                    "Popescu D-M",
+                    "Botting RA",
+                    "Stephenson E",
+                    "Green K",
+                    "Jardine L",
+                    "Calderbank EF",
+                    "Efremova M",
+                    "Acres M",
+                    "Maunder D",
+                    "Vegh P",
+                    "Goh I",
+                    "Gitton Y",
+                    "Park J",
+                    "Polanski K",
+                    "Vento-Tormo R",
+                    "Miao Z",
+                    "Rowell R",
+                    "McDonald D",
+                    "Fletcher J",
+                    "Dixon D",
+                    "Poyner E",
+                    "Reynolds G",
+                    "Mather M",
+                    "Moldovan C",
+                    "Mamanova L",
+                    "Greig F",
+                    "Young M",
+                    "Meyer K",
+                    "Lisgo S",
+                    "Bacardit J",
+                    "Fuller A",
+                    "Millar B",
+                    "Innes B",
+                    "Lindsay S",
+                    "Stubbington MJT",
+                    "Kowalczyk MS",
+                    "Li B",
+                    "Ashenbrg O",
+                    "Tabaka M",
+                    "Dionne D",
+                    "Tickle TL",
+                    "Slyper M",
+                    "Rozenblatt-Rosen O",
+                    "Filby A",
+                    "Villani A-C",
+                    "Roy A",
+                    "Regev A",
+                    "Chedotal A",
+                    "Roberts I",
+                    "G\u00f6ttgens B",
+                    "Laurenti E",
+                    "Behjati S",
+                    "Teichmann SA",
+                    "Haniffa M"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844588,
@@ -10079,25 +10094,26 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP188375"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Zhou L",
-                        "Adrianto I",
-                        "Wang J",
-                        "Wu X",
-                        "Datta I",
-                        "Mi QS"
-                    ],
-                    "title": "Single-Cell RNA-Seq Analysis Uncovers Distinct Functional Human NKT Cell Sub-Populations in Peripheral Blood.",
-                    "doi": "10.3389/fcell.2020.00384",
-                    "pmid": 32528956
-                }
             ]
         },
         "uuid": "f48e7c39-cc67-4055-9d79-bc437892840c",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/f48e7c39-cc67-4055-9d79-bc437892840c?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/f48e7c39-cc67-4055-9d79-bc437892840c?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.3389/fcell.2020.00384",
+                "url": "http://dx.doi.org/10.3389/fcell.2020.00384",
+                "journal_title": "Frontiers in Cell and Developmental Biology",
+                "title": "Single-Cell RNA-Seq Analysis Uncovers Distinct Functional Human NKT Cell Sub-Populations in Peripheral Blood.",
+                "authors": [
+                    "Zhou L",
+                    "Adrianto I",
+                    "Wang J",
+                    "Wu X",
+                    "Datta I",
+                    "Mi QS"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844589,
@@ -10180,28 +10196,28 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "publications": [
-                {
-                    "authors": [
-                        "Stoeckius M",
-                        "Zheng S",
-                        "Houck-Loomis B",
-                        "Hao S",
-                        "Yeung BZ",
-                        "Mauck III WM",
-                        "Smibert P",
-                        "Satija R"
-                    ],
-                    "title": "Cell Hashing with barcoded antibodies enables multiplexing and doublet detection for single cell genomics",
-                    "doi": "10.1186/s13059-018-1603-1",
-                    "pmid": 30567574,
-                    "url": "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1603-1"
-                }
-            ]
+            "insdc_project_accessions": null
         },
         "uuid": "f81efc03-9f56-4354-aabb-6ce819c3d414",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/f81efc03-9f56-4354-aabb-6ce819c3d414?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/f81efc03-9f56-4354-aabb-6ce819c3d414?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1186/s13059-018-1603-1",
+                "url": "http://dx.doi.org/10.1186/s13059-018-1603-1",
+                "journal_title": "Genome Biology",
+                "title": "Cell Hashing with barcoded antibodies enables multiplexing and doublet detection for single cell genomics",
+                "authors": [
+                    "Stoeckius M",
+                    "Zheng S",
+                    "Houck-Loomis B",
+                    "Hao S",
+                    "Yeung BZ",
+                    "Mauck III WM",
+                    "Smibert P",
+                    "Satija R"
+                ]
+            }
+        ]
     },
     {
         "added_to_index": 1609844591,
@@ -10394,39 +10410,39 @@
                 "SRP100793",
                 "SRP100795",
                 "SRP145547"
-            ],
-            "publications": [
-                {
-                    "authors": [
-                        "Kinchen J",
-                        "Chen HH",
-                        "Parikh K",
-                        "Antanaviciute A",
-                        "Jagielowicz M",
-                        "Fawkner-Corbett D",
-                        "Ashley N",
-                        "Cubitt L",
-                        "Mellado-Gomez E",
-                        "Attar M",
-                        "Sharma E",
-                        "Wills Q",
-                        "Bowden R",
-                        "Richter FC",
-                        "Ahern D",
-                        "Puri KD",
-                        "Henault J",
-                        "Gervais F",
-                        "Koohy H",
-                        "Simmons A"
-                    ],
-                    "title": "Structural Remodeling of the Human Colonic Mesenchyme in Inflammatory Bowel Disease",
-                    "doi": "10.1016/j.cell.2018.08.067",
-                    "pmid": 30270042,
-                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/30270042"
-                }
             ]
         },
         "uuid": "f8aa201c-4ff1-45a4-890e-840d63459ca2",
-        "dcp_url": "https://data.humancellatlas.org/explore/projects/f8aa201c-4ff1-45a4-890e-840d63459ca2?catalog=dcp2"
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/f8aa201c-4ff1-45a4-890e-840d63459ca2?catalog=dcp2",
+        "publications": [
+            {
+                "doi": "10.1016/j.cell.2018.08.067",
+                "url": "http://dx.doi.org/10.1016/j.cell.2018.08.067",
+                "journal_title": "Cell",
+                "title": "Structural Remodeling of the Human Colonic Mesenchyme in Inflammatory Bowel Disease",
+                "authors": [
+                    "Kinchen J",
+                    "Chen HH",
+                    "Parikh K",
+                    "Antanaviciute A",
+                    "Jagielowicz M",
+                    "Fawkner-Corbett D",
+                    "Ashley N",
+                    "Cubitt L",
+                    "Mellado-Gomez E",
+                    "Attar M",
+                    "Sharma E",
+                    "Wills Q",
+                    "Bowden R",
+                    "Richter FC",
+                    "Ahern D",
+                    "Puri KD",
+                    "Henault J",
+                    "Gervais F",
+                    "Koohy H",
+                    "Simmons A"
+                ]
+            }
+        ]
     }
 ]

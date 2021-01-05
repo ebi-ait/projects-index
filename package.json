@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "citation-js": "^0.5.0-alpha.9",
     "dotenv": "^8.2.0",
     "moment": "^2.29.1",
     "riot": "^5.1.2"

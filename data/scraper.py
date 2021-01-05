@@ -8,13 +8,14 @@ def get_data(uuid):
         proj = requests.get(proj_url).json()
     
         # TODO When retrieving this info in the UI make sure that it is agnostic to thet data format as this just pulls info but when switching to using API will use schema
-        desired_content_keys = ["project_core", "contributors", "array_express_accessions", "insdc_project_accessions", "publications"]
+        desired_content_keys = ["project_core", "contributors", "array_express_accessions", "insdc_project_accessions"]
         
         return {
             "added_to_index": int(time.time()),
             "content": {k: proj["content"].get(k, None) for k in desired_content_keys},
             "uuid": uuid,
-            "dcp_url": make_dcp_link(uuid)
+            "dcp_url": make_dcp_link(uuid),
+            "publications": get_publications_journal(proj["content"]["publications"]) if "publications" in proj["content"] else None
         }
     except:
         raise Exception("Something went wrong. Is this a valid project UUID?")
@@ -32,6 +33,25 @@ def make_dcp_link(prj_uuid):
     else:
         return None
 
+def get_publications_journal(publications):
+    # Use crossref API to get extra meta info
+    # This should be replicated in ingest API endpoint when we have one
+    # Not done on client side for speed
+    results = []
+    for publication in publications:
+        try:
+            crossref = requests.get(f"https://api.crossref.org/works/{publication['doi']}").json()['message']
+            journal_title = crossref['container-title'][0] if len(crossref['container-title']) > 0 else crossref['publisher']
+            results.append({
+                "doi": publication['doi'],
+                "url": crossref['URL'],
+                "journal_title": journal_title,
+                "title": publication['title'],
+                "authors": publication['authors']
+            })
+        except:
+            print(f"Something went wrong retrieving metainformation for publication {publication['doi']}")
+    return results
 
 if __name__ == "__main__":
     description = "Scrape Ingest API for published projects data."

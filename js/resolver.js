@@ -1,5 +1,4 @@
 import axios from "axios";
-import Cite from "citation-js";
 
 const reportError = (func) => (dataPoint) => {
   try {
@@ -31,34 +30,6 @@ const formatAuthorNames = (dataPoint) => {
   return dataPoint;
 };
 
-const retrieveCitation = async ({ doi, url }) => {
-  if (!doi) {
-    throw new Error("Publication has no doi.");
-  }
-  const cjs = await Cite.inputAsync(doi);
-  return {
-    doi,
-    url: cjs[0].URL,
-    publisher: cjs[0]["container-title"],
-  };
-};
-
-const addPublicationInfo = async (dataPoint) => {
-  if (!dataPoint.publications) {
-    dataPoint.publications = [];
-  }
-
-  try {
-    dataPoint.publications = await Promise.all(
-      dataPoint.publications.map(retrieveCitation)
-    );
-  } catch (e) {
-    throw new Error(`Error in project ${dataPoint.uuid}: ${e.message}`);
-  }
-
-  return dataPoint;
-};
-
 const fetchData = (url = process.env.STATIC_DATA_URL) => {
   // Fetching from URL rather than using dynamic imports asc will eventually use ingest API
   return axios
@@ -66,14 +37,14 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
     .then((res) => res.data)
     .then(
       (data) =>
-        data.map(({ uuid, added_to_index, dcp_url, content }) => ({
+        data.map(({ uuid, added_to_index, dcp_url, publications, content }) => ({
           uuid,
           added_to_index,
           dcp_url,
+          publications,
           ...content,
         })) // Flatten
     )
-    .then((data) => Promise.all(data.map(addPublicationInfo)))
     .then((data) =>
       data.map(reportError(formatTimestamp)).map(reportError(formatAuthorNames))
     );
