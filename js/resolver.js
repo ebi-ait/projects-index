@@ -37,13 +37,15 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
     .then((res) => res.data)
     .then(
       (data) =>
-        data.map(({ uuid, added_to_index, dcp_url, publications, content }) => ({
-          uuid,
-          added_to_index,
-          dcp_url,
-          publications,
-          ...content,
-        })) // Flatten
+        data.map(
+          ({ uuid, added_to_index, dcp_url, publications, content }) => ({
+            uuid,
+            added_to_index,
+            dcp_url,
+            publications,
+            ...content,
+          })
+        ) // Flatten
     )
     .then((data) =>
       data.map(reportError(formatTimestamp)).map(reportError(formatAuthorNames))
