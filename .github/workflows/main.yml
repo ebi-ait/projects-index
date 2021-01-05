@@ -45,6 +45,9 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn test
+      # Copy data.json to dist so that it is deployed to GH-pages. The version deployed to GH-pages is the one used by live site.
+      # This ensures that if unit tests fail because of malformed data, live is not affected.
+      - run: cp data/data.json dist/data.json 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy 🚀
