@@ -41,7 +41,13 @@ def get_publications_journal(publications):
     for publication in publications:
         try:
             crossref = requests.get(f"https://api.crossref.org/works/{publication['doi']}").json()['message']
-            journal_title = crossref['container-title'][0] if len(crossref['container-title']) > 0 else crossref['publisher']
+            if len(crossref['container-title']) > 0:
+                journal_title = crossref['container-title'][0]
+            elif "name" in crossref['institution']:
+                journal_title = crossref['institution']['name']
+            else:
+                journal_title = crossref['publisher']
+
             results.append({
                 "doi": publication['doi'],
                 "url": crossref['URL'],
