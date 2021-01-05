@@ -39,7 +39,7 @@ const retrieveCitation = async ({ doi, url }) => {
   return {
     doi,
     url: cjs[0].URL,
-    publisher: cjs[0].publisher,
+    publisher: cjs[0]["container-title"],
   };
 };
 
