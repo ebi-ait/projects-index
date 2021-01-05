@@ -53,7 +53,7 @@ const addPublicationInfo = async (dataPoint) => {
       dataPoint.publications.map(retrieveCitation)
     );
   } catch (e) {
-    // throw new Error(`Error in project ${dataPoint.uuid}: ${e.message}`)
+    throw new Error(`Error in project ${dataPoint.uuid}: ${e.message}`)
   }
 
   return dataPoint;
