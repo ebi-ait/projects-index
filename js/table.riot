@@ -74,7 +74,7 @@
           <li each={ae_accession in item.array_express_accessions}>
             <a href={`https://identifiers.org/arrayexpress:${ae_accession}`}>{ae_accession}</a>
           </li>
-          <li>
+          <li if={item.dcp_url}>
             <a href={item.dcp_url}>HCA DCP</a>
           </li>
         </ul>
