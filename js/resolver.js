@@ -49,7 +49,8 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
     )
     .then((data) =>
       data.map(reportError(formatTimestamp)).map(reportError(formatAuthorNames))
-    );
+    )
+    .then(data => data.sort((a, b) => a.added_to_index <= b.added_to_index ? 1 : -1))
 };
 
 module.exports = fetchData;
