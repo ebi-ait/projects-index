@@ -46,7 +46,12 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
             ...content,
           })
         ) // Flatten
-    )
+    ).then(data => data.map(({ insdc_project_accessions, array_express_accessions, ...rest}) => ({
+      // These properties might be null but better treated as always arrays
+      insdc_project_accessions: insdc_project_accessions ? insdc_project_accessions : [],
+      array_express_accessions: array_express_accessions ? array_express_accessions : [],
+      ...rest
+    })))
     .then((data) =>
       data.map(reportError(formatTimestamp)).map(reportError(formatAuthorNames))
     )

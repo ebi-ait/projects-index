@@ -72,14 +72,14 @@
       </td>
       <td class="vf-table__cell">
       <ul class="plain-list">
-        <li if={item.insdc_project_accessions}>ENA: 
+        <li if={item.insdc_project_accessions.length}>ENA: 
           <ul class="comma-list">
             <li each={ena_accession in item.insdc_project_accessions}>
               <a href={`https://identifiers.org/ena.embl:${ena_accession}`}>{ena_accession}</a>
             </li>
           </ul>
         </li>
-        <li if={item.array_express_accessions}>Arrayexpress:
+        <li if={item.array_express_accessions.length}>Arrayexpress:
           <ul class="comma-list">
             <li each={ae_accession in item.array_express_accessions}>
               <a href={`https://identifiers.org/arrayexpress:${ae_accession}`}>{ae_accession}</a>

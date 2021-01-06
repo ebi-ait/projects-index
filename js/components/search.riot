@@ -1,0 +1,23 @@
+<search>
+<div class="vf-search__item" id="search-box">
+    <label class="vf-form__label vf-u-sr-only | vf-search__label" for="inlinesearchitem">Search projects</label>
+    <input oninput={this.triggerSearch} type="search" placeholder="Search projects (by uuid, title, contributor, or accessions)" id="inlinesearchitem" class="vf-form__input | vf-search__input">
+</div>
+  <script>
+    import throttle from "lodash/throttle";
+
+    export default {
+        onMounted() {
+            this.throttledSearch = throttle(this.props.search, 300);
+        },
+        triggerSearch(e) {
+            this.throttledSearch(e.target.value);
+        }
+    }
+  </script>
+  <style>
+    #search-box {
+        margin-bottom: 2rem;
+    }
+  </style>
+</search>
