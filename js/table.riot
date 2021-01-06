@@ -16,7 +16,8 @@
 <table class="vf-table vf-table--sortable vf-table--striped" id="published-table">
   <thead class="vf-table__header">
     <tr class="vf-table__row">
-      <th class="vf-table__heading" scope="col"><button class="vf-button vf-button--sm vf-button--icon">
+      <th class="vf-table__heading" scope="col">
+        <button onclick={toggleSortTimestamp} class="vf-button vf-button--sm vf-button--icon">
           Date added
           <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
             <use xlink:href="#vf-table-sortable"></use>
@@ -55,7 +56,7 @@
   </thead>
 
   <tbody class="vf-table__body">
-    <tr class="vf-table__row" each={ item in props.data }>
+    <tr class="vf-table__row" each={ item in state.data }>
       <td class="vf-table__cell">{item.added_to_index_formatted}</td>
       <td class="vf-table__cell">{item.project_core.project_title}</td>
       <td class="vf-table__cell">
@@ -158,6 +159,30 @@
     import AuthorNames from "./author-names.riot";
 
     export default {
+       onMounted() {
+          this.update({
+            data: this.props.data,
+            sortTimestampDesc: true
+          });
+        },
+        sort() {
+          let sorted;
+          if (this.state.sortTimestampDesc) {
+            sorted = this.state.data.sort((a, b) => a.added_to_index <= b.added_to_index ? 1 : -1);
+          }
+          else {
+            sorted = this.state.data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
+          }
+          this.update({
+            data: sorted,
+          });
+        },
+        toggleSortTimestamp() {
+          this.update({
+            sortTimestampDesc: !this.state.sortTimestampDesc,
+          });
+          this.sort();
+        },
         components: {
             AuthorNames
         }
