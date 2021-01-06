@@ -40,7 +40,7 @@
   </thead>
 
   <tbody class="vf-table__body">
-    <tr class="vf-table__row" each={ item in props.data }>
+    <tr class="vf-table__row" each={ item in props.data } key={item.uuid}>
       <td class="vf-table__cell">{item.added_to_index_formatted}</td>
       <td class="vf-table__cell">{item.project_core.project_title}</td>
       <td class="vf-table__cell">

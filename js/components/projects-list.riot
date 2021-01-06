@@ -34,7 +34,7 @@
             search(val) {
                 const filtered = this.state.unfilteredData.filter(
                     dataPoint => [                             
-                            dataPoint["author_names"].toLowerCase(),
+                            dataPoint["author_names"],
                             dataPoint["uuid"],
                             dataPoint["project_core"]["project_title"],
                             dataPoint["insdc_project_accessions"].join(" "),

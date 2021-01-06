@@ -9,9 +9,9 @@
 
     <script>
         export default {
-            onMounted(props) {
+            onMounted() {
                 // Get JS handle to props
-                const {authorNames} = props
+                const {authorNames} = this.props
                 const MAX_LENGTH = 40
                 this.update({
                     hasLongText: authorNames.length > MAX_LENGTH,
