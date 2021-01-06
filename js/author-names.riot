@@ -19,15 +19,17 @@
                     isTruncated: authorNames.length > MAX_LENGTH
                 });
             },
-            showMore() {
+            showMore(e) {
+                e.preventDefault();
                 this.update({
                     isTruncated: false
-                })
+                });
             },
-            showLess() {
+            showLess(e) {
+                e.preventDefault();
                 this.update({
                     isTruncated: true
-                })
+                });
             }
         }
     </script>
