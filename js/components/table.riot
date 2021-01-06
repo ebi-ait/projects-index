@@ -56,7 +56,7 @@
   </thead>
 
   <tbody class="vf-table__body">
-    <tr class="vf-table__row" each={ item in state.data }>
+    <tr class="vf-table__row" each={ item in props.data }>
       <td class="vf-table__cell">{item.added_to_index_formatted}</td>
       <td class="vf-table__cell">{item.project_core.project_title}</td>
       <td class="vf-table__cell">
@@ -161,27 +161,14 @@
     export default {
        onMounted() {
           this.update({
-            data: this.props.data,
             sortTimestampDesc: true
-          });
-        },
-        sort() {
-          let sorted;
-          if (this.state.sortTimestampDesc) {
-            sorted = this.state.data.sort((a, b) => a.added_to_index <= b.added_to_index ? 1 : -1);
-          }
-          else {
-            sorted = this.state.data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
-          }
-          this.update({
-            data: sorted,
           });
         },
         toggleSortTimestamp() {
           this.update({
             sortTimestampDesc: !this.state.sortTimestampDesc,
           });
-          this.sort();
+          this.props.sortByTimestamp(this.state.sortTimestampDesc);
         },
         components: {
             AuthorNames

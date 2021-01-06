@@ -1,0 +1,36 @@
+<!--Parent component that handles logic for gathering data-->
+<projects-list>
+    <data-table data={this.state.data} sortByTimestamp={this.sortByTimestamp}></data-table>
+
+    <script>
+        import DataTable from "./table.riot";
+        import resolve from "../resolver";
+
+        export default {
+            onMounted() {
+                this.update({ data: [] })
+
+                resolve().then(data => {
+                    this.update({
+                        data: data
+                    });
+                });
+            },
+            sortByTimestamp(desc) {
+                let sorted;
+                if (desc) {
+                    sorted = this.state.data.sort((a, b) => a.added_to_index <= b.added_to_index ? 1 : -1);
+                }
+                else {
+                    sorted = this.state.data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
+                }
+                this.update({
+                    data: sorted,
+                });
+            },
+            components: {
+                DataTable
+            }
+        }
+    </script>
+</projects-list>

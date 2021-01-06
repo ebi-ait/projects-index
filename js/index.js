@@ -1,12 +1,8 @@
 import resolve from "./resolver";
 import * as riot from "riot";
-import DataTable from "./table.riot";
+import ProjectsList from "./components/projects-list.riot";
 
-(async () => {
-  const data = await resolve();
-
-  riot.register("data-table", DataTable);
-  riot.mount("data-table", { data });
-
-  // TODO SHOW ERROR MESSAGE
-})().catch((err) => console.error(err));
+(() => {
+  riot.register("projects-list", ProjectsList);
+  riot.mount("projects-list");
+})();
