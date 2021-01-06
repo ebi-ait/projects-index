@@ -24,33 +24,17 @@
           </svg>
         </button>
       </th>
-      <th class="vf-table__heading" scope="col"><button class="vf-button vf-button--sm vf-button--icon">
+      <th class="vf-table__heading" scope="col">
           Project title
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-            <use xlink:href="#vf-table-sortable"></use>
-          </svg>
-        </button>
       </th>
-      <th class="vf-table__heading" scope="col"><button class="vf-button vf-button--sm vf-button--icon">
+      <th class="vf-table__heading" scope="col">
           Contributors
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-            <use xlink:href="#vf-table-sortable"></use>
-          </svg>
-        </button>
       </th>
-      <th class="vf-table__heading" scope="col"><button class="vf-button vf-button--sm vf-button--icon">
+      <th class="vf-table__heading" scope="col">
           Publications
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-            <use xlink:href="#vf-table-sortable"></use>
-          </svg>
-        </button>
       </th>
-      <th class="vf-table__heading" scope="col"><button class="vf-button vf-button--sm vf-button--icon">
+      <th class="vf-table__heading" scope="col">
           Data location
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-            <use xlink:href="#vf-table-sortable"></use>
-          </svg>
-        </button>
       </th>
     </tr>
   </thead>
@@ -132,8 +116,13 @@
     min-width: 950px;
   }
 
-  #published-table thead tr th button {
-    font-weight: 450
+  #published-table thead tr th, #published-table thead tr th button {
+    font-weight: 450;
+    font-size: 16px;
+  }
+  
+  #published-table thead tr th button svg {
+    opacity: 1 !important;
   }
 
   #published-table tbody td {
