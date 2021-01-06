@@ -1,4 +1,5 @@
 # Projects Index (name TBD)
+
 [Web page here](https://ebi-ait.github.io/projects-index/)
 
 ## Updating Projects
