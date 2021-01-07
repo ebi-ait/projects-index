@@ -1,6 +1,7 @@
 <!--Parent component that handles logic for gathering data-->
 <projects-list>
     <search search={this.search}></search>
+    <p if={this.state.data} style="text-align: right; color: #505050; margin-bottom: 0;" class="vf-text-body vf-text-body--3">{this.state.data.length} projects shown</p>
     <data-table data={this.state.data} setSort={this.setSort} sort={this.state.sort}></data-table>
 
     <script>
