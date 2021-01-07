@@ -21,7 +21,6 @@ test("resolves published data", async () => {
       "added_to_index",
       "added_to_index_formatted",
       "array_express_accessions",
-      "author_names",
       "contributors",
       "dcp_url",
       "insdc_project_accessions",
@@ -33,12 +32,16 @@ test("resolves published data", async () => {
     expect(dataPoint.added_to_index_formatted).toEqual(
       expect.stringContaining("")
     );
-    expect(dataPoint.author_names).toEqual(expect.stringContaining(""));
     expect(typeof dataPoint["added_to_index"]).toBe("number");
     expect(Array.isArray(dataPoint["insdc_project_accessions"])).toBe(true);
     expect(Array.isArray(dataPoint["array_express_accessions"])).toBe(true);
     expect(Array.isArray(dataPoint["geo_series_accessions"])).toBe(true);
     expect(Array.isArray(dataPoint["publications"])).toBe(true);
+    expect(Array.isArray(dataPoint["contributors"])).toBe(true);
+
+    dataPoint["contributors"].forEach((contributor) => {
+      expect(contributor).toHaveProperty("formatted_name");
+    });
 
     ["doi", "journal_title", "title", "url"].forEach((prop) =>
       dataPoint["publications"].forEach((pub) =>
