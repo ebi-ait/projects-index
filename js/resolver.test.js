@@ -36,10 +36,10 @@ test("resolves published data", async () => {
     expect(typeof dataPoint["added_to_index"]).toBe("number");
     expect(Array.isArray(dataPoint["insdc_project_accessions"])).toBe(true);
     expect(Array.isArray(dataPoint["array_express_accessions"])).toBe(true);
+    expect(Array.isArray(dataPoint["publications"])).toBe(true);
 
     ["doi", "journal_title", "title", "url"].forEach(
       (prop) =>
-        dataPoint["publications"] &&
         dataPoint["publications"].forEach((pub) =>
           expect(pub).toHaveProperty(prop)
         )
