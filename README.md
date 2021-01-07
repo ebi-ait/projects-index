@@ -65,6 +65,7 @@ Deployments are done using GitHub actions on push to master. Two jobs are perfor
     - `dist/` is copied to GitHub pages branch
 
 ### Developing
+
 - `yarn start`
   - Will spin up the dev server
 - `yarn test:watch`
