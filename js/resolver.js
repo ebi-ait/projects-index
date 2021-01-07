@@ -24,15 +24,16 @@ const formatTimestamp = (dataPoint) => {
 };
 
 const formatAuthorNames = (dataPoint) => {
-  dataPoint.contributors = dataPoint.contributors
-    .map(contributor => { 
-      const names = contributor.name.split(",");
-      const formatted_name = `${names[names.length - 1]} ${names[0][0].toUpperCase()}.` 
-      return {
-        formatted_name,
-        ...contributor
-      }
-    })
+  dataPoint.contributors = dataPoint.contributors.map((contributor) => {
+    const names = contributor.name.split(",");
+    const formatted_name = `${
+      names[names.length - 1]
+    } ${names[0][0].toUpperCase()}.`;
+    return {
+      formatted_name,
+      ...contributor,
+    };
+  });
   return dataPoint;
 };
 
