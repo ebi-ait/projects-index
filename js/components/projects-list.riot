@@ -39,7 +39,7 @@
             search(val) {
                 const filtered = this.state.unfilteredData.filter(
                     dataPoint => [                             
-                            dataPoint["author_names"],
+                            dataPoint["contributors"].map(contributor => contributor.name).join(", "),
                             dataPoint["uuid"],
                             dataPoint["project_core"]["project_title"],
                             dataPoint["insdc_project_accessions"].join(" "),
