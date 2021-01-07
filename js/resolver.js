@@ -52,12 +52,14 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
         ({
           insdc_project_accessions,
           array_express_accessions,
+          geo_series_accessions,
           publications,
           ...rest
         }) => ({
           // These properties might be null but better treated as always arrays
           insdc_project_accessions: insdc_project_accessions || [],
           array_express_accessions: array_express_accessions || [],
+          geo_series_accessions: geo_series_accessions || [],
           publications: publications || [],
           ...rest,
         })

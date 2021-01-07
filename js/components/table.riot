@@ -59,19 +59,26 @@
         <li if={item.insdc_project_accessions.length}>ENA: 
           <ul class="comma-list">
             <li each={ena_accession in item.insdc_project_accessions}>
-              <a href={`https://identifiers.org/ena.embl:${ena_accession}`}>{ena_accession}</a>
+              <a href={`https://identifiers.org/ena.embl:${ena_accession}`} target="_blank">{ena_accession}</a>
             </li>
           </ul>
         </li>
         <li if={item.array_express_accessions.length}>Arrayexpress:
           <ul class="comma-list">
             <li each={ae_accession in item.array_express_accessions}>
-              <a href={`https://identifiers.org/arrayexpress:${ae_accession}`}>{ae_accession}</a>
+              <a href={`https://identifiers.org/arrayexpress:${ae_accession}`} target="_blank">{ae_accession}</a>
+            </li>
+          </ul>
+        </li>
+        <li if={item.geo_series_accessions.length}>GEO: 
+          <ul class="comma-list">
+            <li each={geo_accession in item.geo_series_accessions}>
+              <a href={`https://identifiers.org/geo:${geo_accession}`} target="_blank">{geo_accession}</a>
             </li>
           </ul>
         </li>
         <li if={item.dcp_url}>
-          <a href={item.dcp_url}>HCA DCP</a>
+          <a href={item.dcp_url} target="_blank">HCA DCP</a>
         </li>
       </ul>
       </td>

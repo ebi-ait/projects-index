@@ -128,6 +128,9 @@
             ],
             "insdc_project_accessions": [
                 "SRP078321"
+            ],
+            "geo_series_accessions": [
+                "GSE84133"
             ]
         },
         "uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc",
@@ -200,7 +203,8 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP114427"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "005d611a-14d5-4fbf-846e-571a1f874f70",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/005d611a-14d5-4fbf-846e-571a1f874f70?catalog=dcp2",
@@ -330,7 +334,8 @@
             "insdc_project_accessions": [
                 "ERP107748",
                 "ERP110450"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde?catalog=dcp2",
@@ -577,6 +582,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP218543"
+            ],
+            "geo_series_accessions": [
+                "GSE135893"
             ]
         },
         "uuid": "c1a9a93d-d9de-4e65-9619-a9cec1052eaa",
@@ -721,7 +729,8 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
         },
         "uuid": "027c51c6-0719-469f-a7f5-640fe57cbece",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/027c51c6-0719-469f-a7f5-640fe57cbece?catalog=dcp2",
@@ -921,7 +930,8 @@
             ],
             "insdc_project_accessions": [
                 "ERP121018"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "0b2cbf1a-3f40-4e01-a99d-901fa6091ee5",
         "dcp_url": null,
@@ -1039,7 +1049,8 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP120400"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "116965f3-f094-4769-9d28-ae675c1b569c",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/116965f3-f094-4769-9d28-ae675c1b569c?catalog=dcp2",
@@ -1146,7 +1157,8 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP162461"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "1cd1f41f-f81a-486b-a05b-66ec60f81dcf",
         "dcp_url": null,
@@ -1392,6 +1404,9 @@
             ],
             "insdc_project_accessions": [
                 "ERP110801"
+            ],
+            "geo_series_accessions": [
+                "GSE87038"
             ]
         },
         "uuid": "1defdada-a365-44ad-9b29-443b06bd11d6",
@@ -1614,6 +1629,9 @@
             ],
             "insdc_project_accessions": [
                 "SRP096727"
+            ],
+            "geo_series_accessions": [
+                "GSE93593"
             ]
         },
         "uuid": "2043c65a-1cf8-4828-a656-9e247d4e64f1",
@@ -1779,6 +1797,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP201293"
+            ],
+            "geo_series_accessions": [
+                "GSE132658"
             ]
         },
         "uuid": "2086eb05-10b9-432b-b7f0-169ccc49d270",
@@ -1905,6 +1926,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP199294"
+            ],
+            "geo_series_accessions": [
+                "GSE131685"
             ]
         },
         "uuid": "2ef3655a-973d-4d69-9b41-21fa4041eed7",
@@ -2091,6 +2115,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP226817"
+            ],
+            "geo_series_accessions": [
+                "GSE139324"
             ]
         },
         "uuid": "3089d311-f9ed-44dd-bb10-397059bad4dc",
@@ -2253,6 +2280,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP197355"
+            ],
+            "geo_series_accessions": [
+                "GSE130973"
             ]
         },
         "uuid": "3138bf07-b24a-49c8-b1f3-61329d7abc3b",
@@ -2440,6 +2470,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP122827"
+            ],
+            "geo_series_accessions": [
+                "GSE118257"
             ]
         },
         "uuid": "38449aea-70b5-40db-84b3-1e08f32efe34",
@@ -2566,6 +2599,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP192693"
+            ],
+            "geo_series_accessions": [
+                "GSE128890"
             ]
         },
         "uuid": "42d4f8d4-5422-4b78-adae-e7c3c2ef511c",
@@ -2616,7 +2652,8 @@
             "array_express_accessions": [
                 "E-MTAB-6149"
             ],
-            "insdc_project_accessions": null
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
         },
         "uuid": "453d7ee2-319f-496c-9862-99d397870b63",
         "dcp_url": null,
@@ -2756,7 +2793,8 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
         },
         "uuid": "4a95101c-9ffc-4f30-a809-f04518a23803",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/4a95101c-9ffc-4f30-a809-f04518a23803?catalog=dcp2",
@@ -3219,6 +3257,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP149989"
+            ],
+            "geo_series_accessions": [
+                "GSE115469"
             ]
         },
         "uuid": "4d6f6c96-2a83-43d8-8fe1-0f53bffd4674",
@@ -3514,6 +3555,10 @@
             "insdc_project_accessions": [
                 "SRP171031",
                 "SRP171152"
+            ],
+            "geo_series_accessions": [
+                "GSE123046",
+                "GSE123124"
             ]
         },
         "uuid": "4e6f083b-5b9a-4393-9890-2a83da8188f1",
@@ -3635,6 +3680,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP179761"
+            ],
+            "geo_series_accessions": [
+                "GSE125188"
             ]
         },
         "uuid": "559bb888-7829-41f2-ace5-2c05c7eb81e9",
@@ -3813,7 +3861,10 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null
+            "insdc_project_accessions": null,
+            "geo_series_accessions": [
+                "GSE131882"
+            ]
         },
         "uuid": "577c946d-6de5-4b55-a854-cd3fde40bff2",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/577c946d-6de5-4b55-a854-cd3fde40bff2?catalog=dcp2",
@@ -3908,6 +3959,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP075496"
+            ],
+            "geo_series_accessions": [
+                "GSE81547"
             ]
         },
         "uuid": "592a97ab-d575-4e91-b68e-547d1d66d087",
@@ -4041,6 +4095,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP123269"
+            ],
+            "geo_series_accessions": [
+                "GSE126836"
             ]
         },
         "uuid": "5b5f05b7-2482-468d-b76d-8f68c04a7a47",
@@ -4197,6 +4254,9 @@
             "insdc_project_accessions": [
                 "SRP198482",
                 "SRP159104"
+            ],
+            "geo_series_accessions": [
+                "GSE131258"
             ]
         },
         "uuid": "6c040a93-8cf8-4fd5-98de-2297eb07e9f6",
@@ -4311,6 +4371,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP198380"
+            ],
+            "geo_series_accessions": [
+                "GSE131181"
             ]
         },
         "uuid": "7027adc6-c9c9-46f3-84ee-9badc3a4f53b",
@@ -4429,6 +4492,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP096558"
+            ],
+            "geo_series_accessions": [
+                "GSE93421"
             ]
         },
         "uuid": "74b6d569-3b11-42ef-b6b1-a0454522b4a0",
@@ -4791,7 +4857,8 @@
             "array_express_accessions": [
                 "E-MTAB-7316"
             ],
-            "insdc_project_accessions": null
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
         },
         "uuid": "8185730f-4113-40d3-9cc3-929271784c2b",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/8185730f-4113-40d3-9cc3-929271784c2b?catalog=dcp2",
@@ -5177,7 +5244,8 @@
                 "ERP118315",
                 "ERP118165",
                 "ERP118273"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "83f5188e-3bf7-4956-9544-cea4f8997756",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/83f5188e-3bf7-4956-9544-cea4f8997756?catalog=dcp2",
@@ -5360,6 +5428,10 @@
             "insdc_project_accessions": [
                 "SRP144908",
                 "SRP131373"
+            ],
+            "geo_series_accessions": [
+                "GSE114156",
+                "GSE109564"
             ]
         },
         "uuid": "87215108-e533-4364-abd4-0fe71edd35c1",
@@ -5736,6 +5808,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP200058"
+            ],
+            "geo_series_accessions": [
+                "GSE132044"
             ]
         },
         "uuid": "88ec040b-8705-4f77-8f41-f81e57632f7d",
@@ -5906,7 +5981,8 @@
             ],
             "insdc_project_accessions": [
                 "ERP112843"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "8c3c290d-dfff-4553-8868-54ce45f4ba7f",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/8c3c290d-dfff-4553-8868-54ce45f4ba7f?catalog=dcp2",
@@ -5986,6 +6062,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP124157"
+            ],
+            "geo_series_accessions": [
+                "GSE106540"
             ]
         },
         "uuid": "90bd6933-40c0-48d4-8d76-778c103bf545",
@@ -6207,6 +6286,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP259912"
+            ],
+            "geo_series_accessions": [
+                "GSE149689"
             ]
         },
         "uuid": "95f07e6e-6a73-4e1b-a880-c83996b3aa5c",
@@ -6330,6 +6412,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP229590"
+            ],
+            "geo_series_accessions": [
+                "GSE140231"
             ]
         },
         "uuid": "996120f9-e84f-409f-a01e-732ab58ca8b9",
@@ -6421,7 +6506,8 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
         },
         "uuid": "a29952d9-925e-40f4-8a1c-274f118f1f51",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/a29952d9-925e-40f4-8a1c-274f118f1f51?catalog=dcp2",
@@ -6506,7 +6592,10 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null
+            "insdc_project_accessions": null,
+            "geo_series_accessions": [
+                "GSE118555"
+            ]
         },
         "uuid": "a72bed96-a4f7-401a-a67a-17b8a7357faf",
         "dcp_url": null,
@@ -6645,6 +6734,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP118904"
+            ],
+            "geo_series_accessions": [
+                "GSE104276"
             ]
         },
         "uuid": "a815c84b-8999-433f-958e-422c0720e00d",
@@ -6764,7 +6856,8 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
         },
         "uuid": "a9c022b4-c771-4468-b769-cabcf9738de3",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/a9c022b4-c771-4468-b769-cabcf9738de3?catalog=dcp2",
@@ -6938,7 +7031,8 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP120466"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "abe1a013-af7a-45ed-8c26-f3793c24a1f4",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/abe1a013-af7a-45ed-8c26-f3793c24a1f4?catalog=dcp2",
@@ -7413,7 +7507,8 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP123138"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "ad98d3cd-26fb-4ee3-99c9-8a2ab085e737",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/ad98d3cd-26fb-4ee3-99c9-8a2ab085e737?catalog=dcp2",
@@ -7547,7 +7642,8 @@
             ],
             "insdc_project_accessions": [
                 "ERP017126"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad?catalog=dcp2",
@@ -7658,7 +7754,8 @@
             ],
             "insdc_project_accessions": [
                 "ERP119958"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "b176d756-62d8-4933-83a4-8b026380262f",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/b176d756-62d8-4933-83a4-8b026380262f?catalog=dcp2",
@@ -7794,6 +7891,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP192409"
+            ],
+            "geo_series_accessions": [
+                "GSE129605"
             ]
         },
         "uuid": "b4a7d12f-6c2f-40a3-9e35-9756997857e3",
@@ -8385,7 +8485,8 @@
             ],
             "insdc_project_accessions": [
                 "ERP119282"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "c1810dbc-16d2-45c3-b45e-3e675f88d87b",
         "dcp_url": null,
@@ -8774,7 +8875,8 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP114453"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "c4077b3c-5c98-4d26-a614-246d12c2e5d7",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/c4077b3c-5c98-4d26-a614-246d12c2e5d7?catalog=dcp2",
@@ -9036,6 +9138,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP218975"
+            ],
+            "geo_series_accessions": [
+                "GSE136103"
             ]
         },
         "uuid": "c41dffbf-ad83-447c-a0e1-13e689d9b258",
@@ -9225,7 +9330,8 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "ERP122984"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "cc95ff89-2e68-4a08-a234-480eca21ce79",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79?catalog=dcp2",
@@ -9282,6 +9388,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP075496"
+            ],
+            "geo_series_accessions": [
+                "GSE81547"
             ]
         },
         "uuid": "cddab57b-6868-4be4-806f-395ed9dd635a",
@@ -9356,6 +9465,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP131661"
+            ],
+            "geo_series_accessions": [
+                "GSE109774"
             ]
         },
         "uuid": "e0009214-c0a0-4a7b-96e2-d6a83e966ce0",
@@ -9508,6 +9620,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP201293"
+            ],
+            "geo_series_accessions": [
+                "GSE132658"
             ]
         },
         "uuid": "e07897dc-c25e-453d-b04c-27ca33adb630",
@@ -9683,6 +9798,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP214255"
+            ],
+            "geo_series_accessions": [
+                "GSE134144"
             ]
         },
         "uuid": "e579d0f4-18ef-4d42-90fa-4d2afb60a862",
@@ -9948,7 +10066,8 @@
             ],
             "insdc_project_accessions": [
                 "ERP111845"
-            ]
+            ],
+            "geo_series_accessions": null
         },
         "uuid": "f2fe82f0-4454-4d84-b416-a885f3121e59",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f2fe82f0-4454-4d84-b416-a885f3121e59?catalog=dcp2",
@@ -10094,6 +10213,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": [
                 "SRP188375"
+            ],
+            "geo_series_accessions": [
+                "GSE128243"
             ]
         },
         "uuid": "f48e7c39-cc67-4055-9d79-bc437892840c",
@@ -10196,7 +10318,8 @@
                 }
             ],
             "array_express_accessions": null,
-            "insdc_project_accessions": null
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
         },
         "uuid": "f81efc03-9f56-4354-aabb-6ce819c3d414",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f81efc03-9f56-4354-aabb-6ce819c3d414?catalog=dcp2",
@@ -10410,6 +10533,12 @@
                 "SRP100793",
                 "SRP100795",
                 "SRP145547"
+            ],
+            "geo_series_accessions": [
+                "GSE95435",
+                "GSE95446",
+                "GSE95450",
+                "GSE114374"
             ]
         },
         "uuid": "f8aa201c-4ff1-45a4-890e-840d63459ca2",
