@@ -49,7 +49,12 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
     )
     .then((data) =>
       data.map(
-        ({ insdc_project_accessions, array_express_accessions, publications, ...rest }) => ({
+        ({
+          insdc_project_accessions,
+          array_express_accessions,
+          publications,
+          ...rest
+        }) => ({
           // These properties might be null but better treated as always arrays
           insdc_project_accessions: insdc_project_accessions || [],
           array_express_accessions: array_express_accessions || [],

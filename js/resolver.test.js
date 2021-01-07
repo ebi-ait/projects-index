@@ -38,11 +38,10 @@ test("resolves published data", async () => {
     expect(Array.isArray(dataPoint["array_express_accessions"])).toBe(true);
     expect(Array.isArray(dataPoint["publications"])).toBe(true);
 
-    ["doi", "journal_title", "title", "url"].forEach(
-      (prop) =>
-        dataPoint["publications"].forEach((pub) =>
-          expect(pub).toHaveProperty(prop)
-        )
+    ["doi", "journal_title", "title", "url"].forEach((prop) =>
+      dataPoint["publications"].forEach((pub) =>
+        expect(pub).toHaveProperty(prop)
+      )
     );
   });
 
