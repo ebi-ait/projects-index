@@ -27,7 +27,7 @@ test("resolves published data", async () => {
       "insdc_project_accessions",
       "project_core",
       "publications",
-      "geo_series_accessions"
+      "geo_series_accessions",
     ].forEach((prop) => expect(dataPoint).toHaveProperty(prop));
 
     expect(dataPoint.added_to_index_formatted).toEqual(
