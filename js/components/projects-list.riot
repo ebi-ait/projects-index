@@ -33,9 +33,7 @@
                 if (timestampDesc) {
                     return data.sort((a, b) => a.added_to_index <= b.added_to_index ? 1 : -1);
                 }
-                else {
-                    return data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
-                }
+                return data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
             },
             search(val) {
                 const filtered = this.state.unfilteredData.filter(

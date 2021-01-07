@@ -35,6 +35,13 @@ _Note: Running `./scraper.py --help` will show other options available. In parti
   - Shares a similiar design princible to React but without JSX/HTML in JS
 - [Jest](https://jestjs.io/)
   - For unit tests
+- [Parcel](https://parceljs.org/)
+  - For building
+- [Babel](https://babeljs.io/)
+  - JS transpilation
+  - Different config for building (with Parcel) and unit tests (with Jest)
+- [Yarn](https://yarnpkg.com/)
+  - Package manager (instead of npm)
 
 ### Design
 
@@ -56,3 +63,9 @@ Deployments are done using GitHub actions on push to master. Two jobs are perfor
     - `data.json` is copied to GitHub pages branch
       - If the build fails for some reason, live data will not be affected as this copy step won't be ran
     - `dist/` is copied to GitHub pages branch
+
+### Developing
+- `yarn start`
+  - Will spin up the dev server
+- `yarn test:watch`
+  - Run the unit tests in watch mode
