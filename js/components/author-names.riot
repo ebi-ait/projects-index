@@ -1,8 +1,11 @@
 <author-names>
-    {state.isTruncated ? state.truncatedText : props.authorNames }&nbsp;
-    <a href="#" onclick={showMore} if={state.isTruncated}>more ></a>
-    
-    <p if={!state.isTruncated}>
+    <ul class="comma-list">
+        <li each={contributor in this.state.contributors}>
+            {contributor.formatted_name}
+        </li>
+    </ul>
+    <span if={state.isTooLong && !state.isShowingMore}>, ... <a href="#" onclick={showMore}>more ></a></span>    
+    <p if={state.isTooLong && state.isShowingMore}>
         <a href="#" onclick={showLess}>less</a>
     </p>
 
@@ -11,24 +14,29 @@
         export default {
             onMounted() {
                 // Get JS handle to props
-                const {authorNames} = this.props
-                const MAX_LENGTH = 40
+                const {contributors} = this.props;
+                this.MAX_LENGTH = 5;
+                
                 this.update({
-                    hasLongText: authorNames.length > MAX_LENGTH,
-                    truncatedText: authorNames.length > MAX_LENGTH ? `${authorNames.substring(0, MAX_LENGTH)}...` : authorNames,
-                    isTruncated: authorNames.length > MAX_LENGTH
+                    contributors: contributors.slice(0, this.MAX_LENGTH),
+                    isTooLong: contributors.length > this.MAX_LENGTH,
+                    isShowingMore: false
                 });
             },
             showMore(e) {
                 e.preventDefault();
                 this.update({
-                    isTruncated: false
+                    isShowingMore: true,
+                    contributors: this.props.contributors 
                 });
             },
             showLess(e) {
                 e.preventDefault();
+                const { contributors } = this.props;
+
                 this.update({
-                    isTruncated: true
+                    isShowingMore: false,
+                    contributors: contributors.slice(0, this.MAX_LENGTH)
                 });
             }
         }
