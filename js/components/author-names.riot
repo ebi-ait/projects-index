@@ -3,8 +3,10 @@
         <li each={contributor in this.state.contributors}>
             {contributor.formatted_name}
         </li>
+        <li if={state.isTooLong && !state.isShowingMore}>
+            ... <a href="#" onclick={showMore}>more ></a>
+        </li>
     </ul>
-    <span if={state.isTooLong && !state.isShowingMore}>, ... <a href="#" onclick={showMore}>more ></a></span>    
     <p if={state.isTooLong && state.isShowingMore}>
         <a href="#" onclick={showLess}>less</a>
     </p>
