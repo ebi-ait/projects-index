@@ -1,7 +1,7 @@
 <!--Parent component that handles logic for gathering data-->
 <projects-list>
     <search search={this.search}></search>
-    <data-table data={this.state.data} sortByTimestamp={this.sortByTimestamp}></data-table>
+    <data-table data={this.state.data} setSort={this.setSort} sort={this.state.sort}></data-table>
 
     <script>
         import DataTable from "./table.riot";
@@ -15,21 +15,27 @@
                 resolve().then(data => {
                     this.update({
                         unfilteredData: data,
-                        data: data
+                        data: data,
+                        sort: {
+                            timestampDesc: true
+                        }
                     });
                 });
             },
-            sortByTimestamp(desc) {
-                let sorted;
-                if (desc) {
-                    sorted = this.state.data.sort((a, b) => a.added_to_index <= b.added_to_index ? 1 : -1);
+            setSort(sortBy) {
+                this.update({
+                    sort: sortBy,
+                    data: this.sortData(this.state.data, sortBy)
+                });
+            },
+            sortData: (data, { timestampDesc }) => {
+                // Arrow function as this is "static" (pure function) and should not change state
+                if (timestampDesc) {
+                    return data.sort((a, b) => a.added_to_index <= b.added_to_index ? 1 : -1);
                 }
                 else {
-                    sorted = this.state.data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
+                    return data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
                 }
-                this.update({
-                    data: sorted,
-                });
             },
             search(val) {
                 const filtered = this.state.unfilteredData.filter(
@@ -42,7 +48,7 @@
                         ].map(x => x.toLowerCase()).join(" ").includes(val.toLowerCase())
                 );
                 this.update({
-                    data: filtered
+                    data: this.sortData(filtered, this.state.sort)
                 });
             },
             components: {
