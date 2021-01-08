@@ -28,7 +28,7 @@ const formatAuthorNames = (dataPoint) => {
     const names = contributor.name.split(",");
     const formatted_name = `${
       names[names.length - 1]
-    } ${names[0][0].toUpperCase()}.`;
+    } ${names[0][0].toUpperCase()}`;
     return {
       formatted_name,
       ...contributor,
