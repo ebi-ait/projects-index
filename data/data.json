@@ -10573,5 +10573,432 @@
                 ]
             }
         ]
+    },
+    {
+        "added_to_index": 1610452958,
+        "content": {
+            "project_core": {
+                "project_short_name": "HDCA-Sweden-10x",
+                "project_title": "RNA-seq of human embryonic heart, lung, and cerebellum",
+                "project_description": "Each run contains single cell RNA-seq data from unbiased sampling of single cells from the indicated human tissue. Single cell suspensions were prepared using enzymatic dissociation followed by tituration. The samples were processed using the 10XChromium 3' v3 sequencing pipeline, sequenced on an Illumina NovaSeq 6000, and analyzed using the cellranger software and aligned to the human GRCh38 genome version 93."
+            },
+            "contributors": [
+                {
+                    "name": "Sten,,Linnarsson",
+                    "email": "sten.linnarsson@ki.se",
+                    "institution": "Karolinska Institutet",
+                    "country": "Sweden",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "principal investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    }
+                }
+            ],
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
+        },
+        "uuid": "fc232d87-7b10-47f7-9197-b2c6cf210dea",
+        "dcp_url": null,
+        "publications": null
+    },
+    {
+        "added_to_index": 1610452959,
+        "content": {
+            "project_core": {
+                "project_short_name": "HumanEndometriumInVivoInVitro",
+                "project_title": "Mapping the temporal and spatial dynamics of the human endometrium in vivo and in vitro",
+                "project_description": "The endometrium, the mucosal lining of the uterus, undergoes dynamic changes throughout the menstrual cycle in response to ovarian hormones. We have generated single-cell and spatial reference maps of the human uterus and 3D endometrial organoid cultures. We dissect the signalling pathways that determine cell fate of the epithelial lineages in the lumenal and glandular microenvironments. Our benchmark of the endometrial organoids highlights common pathways regulating the differentiation of secretory and ciliated lineage in vivo and in vitro . We show in vitro that downregulation of WNT or NOTCH pathways increases the differentiation efficiency along the secretory and ciliated lineages, respectively. These mechanistic insights provide a platform for future development of treatments for a range of common endometrial disorders including endometriosis and carcinoma."
+            },
+            "contributors": [
+                {
+                    "name": "Luz,Garcia-Alonso"
+                },
+                {
+                    "name": "Louis-Fran\u00e7ois,Handfield"
+                },
+                {
+                    "name": "Kenny,Roberts"
+                },
+                {
+                    "name": "Konstantina,Nikolakopoulou"
+                },
+                {
+                    "name": "Ridma,Fernando"
+                },
+                {
+                    "name": "Lucy,Gardner"
+                },
+                {
+                    "name": "Ben,Woodhams"
+                },
+                {
+                    "name": "Anna,Arutyunyan"
+                },
+                {
+                    "name": "Krzysztof,Polanski"
+                },
+                {
+                    "name": "Regina,Hoo"
+                },
+                {
+                    "name": "Carmen,Sancho-Serra"
+                },
+                {
+                    "name": "Tong,Li"
+                },
+                {
+                    "name": "Kwasi,Kwakwa"
+                },
+                {
+                    "name": "Elizabeth,Tuck"
+                },
+                {
+                    "name": "Vitalii,Kleshchevnikov"
+                },
+                {
+                    "name": "Aleksandra,Tarkowska"
+                },
+                {
+                    "name": "Tarryn,Porter"
+                },
+                {
+                    "name": "Cecilia,Icoresi,Mazzeo"
+                },
+                {
+                    "name": "Stijn,van Dongen"
+                },
+                {
+                    "name": "Monika,Dabrowska"
+                },
+                {
+                    "name": "Vasyl,Vaskivskyi"
+                },
+                {
+                    "name": "Krishna,Mahbubani"
+                },
+                {
+                    "name": "Jong-eun,Park"
+                },
+                {
+                    "name": "Mercedes,Jimenez-Linan"
+                },
+                {
+                    "name": "Lia,Campos"
+                },
+                {
+                    "name": "Vladimir,Kiselev"
+                },
+                {
+                    "name": "Cecilia,Lindskog"
+                },
+                {
+                    "name": "Paul,Ayuk"
+                },
+                {
+                    "name": "Elena,Prigmore"
+                },
+                {
+                    "name": "Michael,Stratton"
+                },
+                {
+                    "name": "Kourosh,Saeb-Parsy"
+                },
+                {
+                    "name": "Ashley,Moffett"
+                },
+                {
+                    "name": "Luiza,Moore"
+                },
+                {
+                    "name": "Omer,Bayraktar"
+                },
+                {
+                    "name": "Sarah,Teichmann"
+                },
+                {
+                    "name": "Margherita,Turco"
+                },
+                {
+                    "name": "Roser,Vento-Tormo"
+                }
+            ],
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
+        },
+        "uuid": "b43c36dd-c8ec-4cf1-a8f4-6ab5f30eabc3",
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1101/2021.01.02.425073",
+                "url": "http://dx.doi.org/10.1101/2021.01.02.425073",
+                "journal_title": "bioRxiv",
+                "title": "Mapping the temporal and spatial dynamics of the human endometrium in vivo and in vitro",
+                "authors": [
+                    "Garcia-Alonso L",
+                    "Handfield L",
+                    "Roberts K",
+                    "Nikolakopoulou K",
+                    "Fernando RC",
+                    "Gardner L",
+                    "Woodhams B",
+                    "Arutyunyan A",
+                    "Polanski K",
+                    "Hoo R",
+                    "Sancho-Serra C",
+                    "Li T",
+                    "Kwakwa K",
+                    "Tuck E",
+                    "Kleshchevnikov V",
+                    "Tarkowska A",
+                    "Porter T",
+                    "Mazzeo CI",
+                    "van Dongen S",
+                    "Dabrowska M",
+                    "Vaskivskyi V",
+                    "Mahbubani KT",
+                    "Park J",
+                    "Jimenez-Linan M",
+                    "Campos L",
+                    "Kiselev V",
+                    "Lindskog C",
+                    "Ayuk P",
+                    "Prigmore E",
+                    "Stratton MR",
+                    "Saeb-Parsy K",
+                    "Moffett A",
+                    "Moore L",
+                    "Bayraktar OA",
+                    "Teichmann SA",
+                    "Turco MY",
+                    "Vento-Tormo R."
+                ]
+            }
+        ]
+    },
+    {
+        "added_to_index": 1610452961,
+        "content": {
+            "project_core": {
+                "project_short_name": "HumanColonRewiringUlcerativeColitis",
+                "project_title": "Intra- and Inter-cellular Rewiring of the Human Colon during Ulcerative Colitis.",
+                "project_description": "Genome-wide association studies (GWAS) have revealed risk alleles for ulcerative colitis (UC). To understand their cell type specificities and pathways of action, we generate an atlas of 366,650 cells from the colon mucosa of 18\u00a0UC patients and 12 healthy individuals, revealing 51 epithelial, stromal, and immune cell subsets, including BEST4<sup>+</sup> enterocytes, microfold-like cells, and IL13RA2<sup>+</sup>IL11<sup>+</sup> inflammatory fibroblasts, which we associate with resistance to anti-TNF treatment. Inflammatory fibroblasts, inflammatory monocytes, microfold-like cells, and T\u00a0cells that co-express CD8 and IL-17 expand with disease, forming intercellular interaction hubs. Many UC risk genes are cell type specific and co-regulated within relatively few gene modules, suggesting convergence onto limited sets of cell types and pathways. Using this observation, we nominate and infer functions for specific risk genes across GWAS loci. Our work provides a framework for interrogating complex human diseases and mapping risk variants to cell types and pathways."
+            },
+            "contributors": [
+                {
+                    "name": "Christopher,S,Smillie",
+                    "institution": "Broad Institute",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Moshe,Biton",
+                    "institution": "Broad Institute",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": " Cambridge, MA",
+                    "country": "USA",
+                    "orcid_id": "0000-0001-8330-1674"
+                },
+                {
+                    "name": "Jose,Ordovas-Montanes",
+                    "institution": "Broad Institute",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": " USA",
+                    "orcid_id": "0000-0001-5444-5601"
+                },
+                {
+                    "name": "Keri,M,Sullivan",
+                    "institution": "Massachusetts General Hospital ",
+                    "laboratory": "Gastrointestinal Unit and Center for the Study of Inflammatory Bowel Disease",
+                    "address": "Boston, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Grace,Burgin",
+                    "institution": "Broad Institute",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": " USA"
+                },
+                {
+                    "name": "Daniel,B,Graham",
+                    "institution": "Department of Molecular Biology, MGH, Boston, MA, USA"
+                },
+                {
+                    "name": "Rebecca,H,Herbst",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA"
+                },
+                {
+                    "name": "Noga,Rogel",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "Michal,Slyper",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "Julia,Waldman",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "Malika,Sud",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "Elizabeth,Andrews",
+                    "institution": "Gastrointestinal Unit and Center for the Study of Inflammatory Bowel Disease, MGH, Boston, MA, USA."
+                },
+                {
+                    "name": "Gabriella,Velonias",
+                    "institution": "Gastrointestinal Unit and Center for the Study of Inflammatory Bowel Disease, MGH, Boston, MA, USA."
+                },
+                {
+                    "name": "Adam,L,Haber",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "Karthik,Jagadeesh",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "Sanja,Vickovic",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "Junmei,Yao",
+                    "institution": "Center for Computational and Integrative Biology, MGH, Boston, MA, USA."
+                },
+                {
+                    "name": "Christine,Stevens",
+                    "institution": "Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "Danielle,Dionne",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA.",
+                    "orcid_id": "0000-0002-8338-4323"
+                },
+                {
+                    "name": "Lan,T,Nguyen",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "Alexandra-Chlo\u00e9,Villani",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA"
+                },
+                {
+                    "name": "Matan,Hofree",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA.",
+                    "orcid_id": "0000-0001-8368-0299"
+                },
+                {
+                    "name": "Elizabeth,A,Creasey",
+                    "institution": "Center for Computational and Integrative Biology, MGH, Boston, MA, USA."
+                },
+                {
+                    "name": "Hailiang,Huang",
+                    "institution": "Medical and Population Genetics, Broad Institute, Cambridge, MA, USA"
+                },
+                {
+                    "name": "Orit,Rozenblatt-Rosen",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+                },
+                {
+                    "name": "John,J,Garber",
+                    "institution": "Gastrointestinal Unit and Center for the Study of Inflammatory Bowel Disease, MGH, Boston, MA, USA."
+                },
+                {
+                    "name": "Hamed,Khalili",
+                    "institution": "Gastrointestinal Unit and Center for the Study of Inflammatory Bowel Disease, MGH, Boston, MA, USA."
+                },
+                {
+                    "name": "A,Nicole,Desch",
+                    "institution": "Broad Institute, Cambridge, MA, USA"
+                },
+                {
+                    "name": "Mark,J,Daly",
+                    "institution": "Medical and Population Genetics, Broad Institute, Cambridge, MA, USA"
+                },
+                {
+                    "name": "Ashwin,N,Ananthakrishnan",
+                    "email": "aananthakrishnan@mgh.harvard.edu",
+                    "institution": "Gastrointestinal Unit and Center for the Study of Inflammatory Bowel Disease, MGH, Boston, MA, USA. Electronic address: aananthakrishnan@mgh.harvard.edu.",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Alex,K,Shalek",
+                    "email": "shalek@mit.edu",
+                    "institution": "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Ramnik,J,Xavier",
+                    "email": "xavier@molbio.mgh.harvard.edu",
+                    "institution": "Department of Molecular Biology, MGH, Boston, MA, USA",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Aviv,Regev",
+                    "email": "aregev@broadinstitute.org",
+                    "institution": "Broad Institute",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                }
+            ],
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null
+        },
+        "uuid": "cd61771b-661a-4e19-b269-6e5d95350de6",
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1016/j.cell.2019.06.029",
+                "url": "http://dx.doi.org/10.1016/j.cell.2019.06.029",
+                "journal_title": "Cell",
+                "title": "Intra- and Inter-cellular Rewiring of the Human Colon during Ulcerative Colitis.",
+                "authors": [
+                    "Smillie CS",
+                    "Biton M",
+                    "Ordovas-Montanes J",
+                    "Sullivan KM",
+                    "Burgin G",
+                    "Graham DB",
+                    "Herbst RH",
+                    "Rogel N",
+                    "Slyper M",
+                    "Waldman J",
+                    "Sud M",
+                    "Andrews E",
+                    "Velonias G",
+                    "Haber AL",
+                    "Jagadeesh K",
+                    "Vickovic S",
+                    "Yao J",
+                    "Stevens C",
+                    "Dionne D",
+                    "Nguyen LT",
+                    "Villani AC",
+                    "Hofree M",
+                    "Creasey EA",
+                    "Huang H",
+                    "Rozenblatt-Rosen O",
+                    "Garber JJ",
+                    "Khalili H",
+                    "Desch AN",
+                    "Daly MJ",
+                    "Ananthakrishnan AN",
+                    "Shalek AK",
+                    "Xavier RJ",
+                    "Regev A."
+                ]
+            }
+        ]
     }
 ]
