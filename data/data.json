@@ -131,7 +131,8 @@
             ],
             "geo_series_accessions": [
                 "GSE84133"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc?catalog=dcp2",
@@ -204,7 +205,8 @@
             "insdc_project_accessions": [
                 "ERP114427"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "005d611a-14d5-4fbf-846e-571a1f874f70",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/005d611a-14d5-4fbf-846e-571a1f874f70?catalog=dcp2",
@@ -335,7 +337,13 @@
                 "ERP107748",
                 "ERP110450"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6678/",
+                "https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6701/",
+                "https://www.ebi.ac.uk/ena/data/view/PRJEB25794",
+                "https://www.ebi.ac.uk/ena/data/view/PRJEB28266"
+            ]
         },
         "uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde?catalog=dcp2",
@@ -585,7 +593,8 @@
             ],
             "geo_series_accessions": [
                 "GSE135893"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "c1a9a93d-d9de-4e65-9619-a9cec1052eaa",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/c1a9a93d-d9de-4e65-9619-a9cec1052eaa?catalog=dcp2",
@@ -730,7 +739,8 @@
             ],
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "027c51c6-0719-469f-a7f5-640fe57cbece",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/027c51c6-0719-469f-a7f5-640fe57cbece?catalog=dcp2",
@@ -931,7 +941,10 @@
             "insdc_project_accessions": [
                 "ERP121018"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "http://www.gutcellatlas.org/"
+            ]
         },
         "uuid": "0b2cbf1a-3f40-4e01-a99d-901fa6091ee5",
         "dcp_url": null,
@@ -1050,7 +1063,8 @@
             "insdc_project_accessions": [
                 "ERP120400"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "116965f3-f094-4769-9d28-ae675c1b569c",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/116965f3-f094-4769-9d28-ae675c1b569c?catalog=dcp2",
@@ -1158,7 +1172,8 @@
             "insdc_project_accessions": [
                 "SRP162461"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "1cd1f41f-f81a-486b-a05b-66ec60f81dcf",
         "dcp_url": null,
@@ -1407,6 +1422,10 @@
             ],
             "geo_series_accessions": [
                 "GSE87038"
+            ],
+            "supplementary_links": [
+                "https://github.com/MarioniLab/EmbryoTimecourse2018",
+                "https://marionilab.cruk.cam.ac.uk/MouseGastrulation2018/"
             ]
         },
         "uuid": "1defdada-a365-44ad-9b29-443b06bd11d6",
@@ -1632,6 +1651,9 @@
             ],
             "geo_series_accessions": [
                 "GSE93593"
+            ],
+            "supplementary_links": [
+                "https://www.ebi.ac.uk/gxa/sc/experiments/E-GEOD-93593/Results"
             ]
         },
         "uuid": "2043c65a-1cf8-4828-a656-9e247d4e64f1",
@@ -1800,7 +1822,8 @@
             ],
             "geo_series_accessions": [
                 "GSE132658"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "2086eb05-10b9-432b-b7f0-169ccc49d270",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/2086eb05-10b9-432b-b7f0-169ccc49d270?catalog=dcp2",
@@ -1929,7 +1952,8 @@
             ],
             "geo_series_accessions": [
                 "GSE131685"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "2ef3655a-973d-4d69-9b41-21fa4041eed7",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/2ef3655a-973d-4d69-9b41-21fa4041eed7?catalog=dcp2",
@@ -2118,7 +2142,8 @@
             ],
             "geo_series_accessions": [
                 "GSE139324"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "3089d311-f9ed-44dd-bb10-397059bad4dc",
         "dcp_url": null,
@@ -2283,7 +2308,8 @@
             ],
             "geo_series_accessions": [
                 "GSE130973"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "3138bf07-b24a-49c8-b1f3-61329d7abc3b",
         "dcp_url": null,
@@ -2473,6 +2499,11 @@
             ],
             "geo_series_accessions": [
                 "GSE118257"
+            ],
+            "supplementary_links": [
+                "https://ki.se/en/mbb/oligointernode",
+                "https://castelobranco.shinyapps.io/MSCtrl_CCA_18/",
+                "https://www.ebi.ac.uk/ega/studies/EGAS00001003412"
             ]
         },
         "uuid": "38449aea-70b5-40db-84b3-1e08f32efe34",
@@ -2602,7 +2633,8 @@
             ],
             "geo_series_accessions": [
                 "GSE128890"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "42d4f8d4-5422-4b78-adae-e7c3c2ef511c",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/42d4f8d4-5422-4b78-adae-e7c3c2ef511c?catalog=dcp2",
@@ -2653,7 +2685,8 @@
                 "E-MTAB-6149"
             ],
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "453d7ee2-319f-496c-9862-99d397870b63",
         "dcp_url": null,
@@ -2794,7 +2827,8 @@
             ],
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "4a95101c-9ffc-4f30-a809-f04518a23803",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/4a95101c-9ffc-4f30-a809-f04518a23803?catalog=dcp2",
@@ -3260,6 +3294,9 @@
             ],
             "geo_series_accessions": [
                 "GSE115469"
+            ],
+            "supplementary_links": [
+                "https://github.com/BaderLab/HumanLiver"
             ]
         },
         "uuid": "4d6f6c96-2a83-43d8-8fe1-0f53bffd4674",
@@ -3559,6 +3596,9 @@
             "geo_series_accessions": [
                 "GSE123046",
                 "GSE123124"
+            ],
+            "supplementary_links": [
+                "https://github.com/dpeerlab/Harmony"
             ]
         },
         "uuid": "4e6f083b-5b9a-4393-9890-2a83da8188f1",
@@ -3683,7 +3723,8 @@
             ],
             "geo_series_accessions": [
                 "GSE125188"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "559bb888-7829-41f2-ace5-2c05c7eb81e9",
         "dcp_url": null,
@@ -3864,7 +3905,8 @@
             "insdc_project_accessions": null,
             "geo_series_accessions": [
                 "GSE131882"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "577c946d-6de5-4b55-a854-cd3fde40bff2",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/577c946d-6de5-4b55-a854-cd3fde40bff2?catalog=dcp2",
@@ -3962,6 +4004,9 @@
             ],
             "geo_series_accessions": [
                 "GSE81547"
+            ],
+            "supplementary_links": [
+                "https://www.ebi.ac.uk/gxa/sc/experiments/E-GEOD-81547/Results"
             ]
         },
         "uuid": "592a97ab-d575-4e91-b68e-547d1d66d087",
@@ -4098,7 +4143,8 @@
             ],
             "geo_series_accessions": [
                 "GSE126836"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "5b5f05b7-2482-468d-b76d-8f68c04a7a47",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/5b5f05b7-2482-468d-b76d-8f68c04a7a47?catalog=dcp2",
@@ -4257,7 +4303,8 @@
             ],
             "geo_series_accessions": [
                 "GSE131258"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "6c040a93-8cf8-4fd5-98de-2297eb07e9f6",
         "dcp_url": null,
@@ -4374,7 +4421,8 @@
             ],
             "geo_series_accessions": [
                 "GSE131181"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "7027adc6-c9c9-46f3-84ee-9badc3a4f53b",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/7027adc6-c9c9-46f3-84ee-9badc3a4f53b?catalog=dcp2",
@@ -4495,6 +4543,9 @@
             ],
             "geo_series_accessions": [
                 "GSE93421"
+            ],
+            "supplementary_links": [
+                "https://support.10xgenomics.com/single-cell-gene-expression/datasets/1.3.0/1M_neurons"
             ]
         },
         "uuid": "74b6d569-3b11-42ef-b6b1-a0454522b4a0",
@@ -4858,7 +4909,12 @@
                 "E-MTAB-7316"
             ],
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://github.com/satijalab/seurat",
+                "https://github.com/powellgenomicslab/ascend",
+                "https://github.com/IMB-Computational-Genomics-Lab/scGPS"
+            ]
         },
         "uuid": "8185730f-4113-40d3-9cc3-929271784c2b",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/8185730f-4113-40d3-9cc3-929271784c2b?catalog=dcp2",
@@ -5245,7 +5301,10 @@
                 "ERP118165",
                 "ERP118273"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.gutcellatlas.org/"
+            ]
         },
         "uuid": "83f5188e-3bf7-4956-9544-cea4f8997756",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/83f5188e-3bf7-4956-9544-cea4f8997756?catalog=dcp2",
@@ -5432,7 +5491,8 @@
             "geo_series_accessions": [
                 "GSE114156",
                 "GSE109564"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "87215108-e533-4364-abd4-0fe71edd35c1",
         "dcp_url": null,
@@ -5811,6 +5871,9 @@
             ],
             "geo_series_accessions": [
                 "GSE132044"
+            ],
+            "supplementary_links": [
+                "https://bitbucket.org/jerry00/scumi-dev/src/master/"
             ]
         },
         "uuid": "88ec040b-8705-4f77-8f41-f81e57632f7d",
@@ -5982,7 +6045,10 @@
             "insdc_project_accessions": [
                 "ERP112843"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.ebi.ac.uk/gxa/sc/experiments/E-EHCA-2/Results"
+            ]
         },
         "uuid": "8c3c290d-dfff-4553-8868-54ce45f4ba7f",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/8c3c290d-dfff-4553-8868-54ce45f4ba7f?catalog=dcp2",
@@ -6065,6 +6131,9 @@
             ],
             "geo_series_accessions": [
                 "GSE106540"
+            ],
+            "supplementary_links": [
+                "https://www.ebi.ac.uk/gxa/sc/experiments/E-GEOD-106540/Results"
             ]
         },
         "uuid": "90bd6933-40c0-48d4-8d76-778c103bf545",
@@ -6289,7 +6358,8 @@
             ],
             "geo_series_accessions": [
                 "GSE149689"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "95f07e6e-6a73-4e1b-a880-c83996b3aa5c",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/95f07e6e-6a73-4e1b-a880-c83996b3aa5c?catalog=dcp2",
@@ -6415,7 +6485,8 @@
             ],
             "geo_series_accessions": [
                 "GSE140231"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "996120f9-e84f-409f-a01e-732ab58ca8b9",
         "dcp_url": null,
@@ -6507,7 +6578,8 @@
             ],
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "a29952d9-925e-40f4-8a1c-274f118f1f51",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/a29952d9-925e-40f4-8a1c-274f118f1f51?catalog=dcp2",
@@ -6595,7 +6667,8 @@
             "insdc_project_accessions": null,
             "geo_series_accessions": [
                 "GSE118555"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "a72bed96-a4f7-401a-a67a-17b8a7357faf",
         "dcp_url": null,
@@ -6737,7 +6810,8 @@
             ],
             "geo_series_accessions": [
                 "GSE104276"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "a815c84b-8999-433f-958e-422c0720e00d",
         "dcp_url": null,
@@ -6857,7 +6931,8 @@
             ],
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "a9c022b4-c771-4468-b769-cabcf9738de3",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/a9c022b4-c771-4468-b769-cabcf9738de3?catalog=dcp2",
@@ -7032,7 +7107,16 @@
             "insdc_project_accessions": [
                 "ERP120466"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "http://www.kidneycellatlas.org/",
+                "https://github.com/bjstewart1/kidney_sc_immune",
+                "https://github.com/constantAmateur/scKidneyTumors",
+                "https://www.ebi.ac.uk/ega/studies/EGAS00001002171",
+                "https://www.ebi.ac.uk/ega/studies/EGAS00001002486",
+                "https://www.ebi.ac.uk/ega/studies/EGAS00001002325",
+                "https://www.ebi.ac.uk/ega/studies/EGAS0000100255"
+            ]
         },
         "uuid": "abe1a013-af7a-45ed-8c26-f3793c24a1f4",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/abe1a013-af7a-45ed-8c26-f3793c24a1f4?catalog=dcp2",
@@ -7508,7 +7592,10 @@
             "insdc_project_accessions": [
                 "ERP123138"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.heartcellatlas.org/"
+            ]
         },
         "uuid": "ad98d3cd-26fb-4ee3-99c9-8a2ab085e737",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/ad98d3cd-26fb-4ee3-99c9-8a2ab085e737?catalog=dcp2",
@@ -7643,7 +7730,10 @@
             "insdc_project_accessions": [
                 "ERP017126"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.ebi.ac.uk/gxa/sc/experiments/E-MTAB-5061/Results"
+            ]
         },
         "uuid": "ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad?catalog=dcp2",
@@ -7755,7 +7845,8 @@
             "insdc_project_accessions": [
                 "ERP119958"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "b176d756-62d8-4933-83a4-8b026380262f",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/b176d756-62d8-4933-83a4-8b026380262f?catalog=dcp2",
@@ -7894,7 +7985,8 @@
             ],
             "geo_series_accessions": [
                 "GSE129605"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "b4a7d12f-6c2f-40a3-9e35-9756997857e3",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/b4a7d12f-6c2f-40a3-9e35-9756997857e3?catalog=dcp2",
@@ -8486,7 +8578,10 @@
             "insdc_project_accessions": [
                 "ERP119282"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://developmentcellatlas.ncl.ac.uk/datasets/HCA_thymus/"
+            ]
         },
         "uuid": "c1810dbc-16d2-45c3-b45e-3e675f88d87b",
         "dcp_url": null,
@@ -8876,7 +8971,10 @@
             "insdc_project_accessions": [
                 "ERP114453"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.tissuestabilitycellatlas.org/"
+            ]
         },
         "uuid": "c4077b3c-5c98-4d26-a614-246d12c2e5d7",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/c4077b3c-5c98-4d26-a614-246d12c2e5d7?catalog=dcp2",
@@ -9141,7 +9239,8 @@
             ],
             "geo_series_accessions": [
                 "GSE136103"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "c41dffbf-ad83-447c-a0e1-13e689d9b258",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/c41dffbf-ad83-447c-a0e1-13e689d9b258?catalog=dcp2",
@@ -9331,7 +9430,8 @@
             "insdc_project_accessions": [
                 "ERP122984"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "cc95ff89-2e68-4a08-a234-480eca21ce79",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79?catalog=dcp2",
@@ -9391,6 +9491,9 @@
             ],
             "geo_series_accessions": [
                 "GSE81547"
+            ],
+            "supplementary_links": [
+                "https://www.ebi.ac.uk/gxa/sc/experiments/E-GEOD-81547/Results"
             ]
         },
         "uuid": "cddab57b-6868-4be4-806f-395ed9dd635a",
@@ -9468,6 +9571,28 @@
             ],
             "geo_series_accessions": [
                 "GSE109774"
+            ],
+            "supplementary_links": [
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Bladder.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Brain_Microglia.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Brain_Neurons.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Colon.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Fat.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Heart.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Kidney.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Liver.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Lung.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Mammary.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Marrow.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Muscle.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Pancreas.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_RAW.tar",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Skin.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Spleen.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Thymus.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Tongue.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_Trachea.tar.gz",
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_list_of_SRR_accessions_and_raw_filenames.txt.gz"
             ]
         },
         "uuid": "e0009214-c0a0-4a7b-96e2-d6a83e966ce0",
@@ -9623,7 +9748,8 @@
             ],
             "geo_series_accessions": [
                 "GSE132658"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "e07897dc-c25e-453d-b04c-27ca33adb630",
         "dcp_url": null,
@@ -9801,6 +9927,9 @@
             ],
             "geo_series_accessions": [
                 "GSE134144"
+            ],
+            "supplementary_links": [
+                "https://humantestisatlas.shinyapps.io/humantestisatlas1/"
             ]
         },
         "uuid": "e579d0f4-18ef-4d42-90fa-4d2afb60a862",
@@ -10067,7 +10196,11 @@
             "insdc_project_accessions": [
                 "ERP111845"
             ],
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://developmentcellatlas.ncl.ac.uk/datasets/hca_liver/",
+                "https://github.com/haniffalab/FCA_liver"
+            ]
         },
         "uuid": "f2fe82f0-4454-4d84-b416-a885f3121e59",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f2fe82f0-4454-4d84-b416-a885f3121e59?catalog=dcp2",
@@ -10216,7 +10349,8 @@
             ],
             "geo_series_accessions": [
                 "GSE128243"
-            ]
+            ],
+            "supplementary_links": null
         },
         "uuid": "f48e7c39-cc67-4055-9d79-bc437892840c",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f48e7c39-cc67-4055-9d79-bc437892840c?catalog=dcp2",
@@ -10319,7 +10453,8 @@
             ],
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": null
         },
         "uuid": "f81efc03-9f56-4354-aabb-6ce819c3d414",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f81efc03-9f56-4354-aabb-6ce819c3d414?catalog=dcp2",
@@ -10539,6 +10674,9 @@
                 "GSE95446",
                 "GSE95450",
                 "GSE114374"
+            ],
+            "supplementary_links": [
+                "https://github.com/agneantanaviciute/colonmesenchymescrnaseq"
             ]
         },
         "uuid": "f8aa201c-4ff1-45a4-890e-840d63459ca2",
@@ -10579,7 +10717,7 @@
         "content": {
             "project_core": {
                 "project_short_name": "HDCA-Sweden-10x",
-                "project_title": "RNA-seq of human embryonic heart, lung, and cerebellum",
+                "project_title": "Human Developmental Cell Atlas Sweden",
                 "project_description": "Each run contains single cell RNA-seq data from unbiased sampling of single cells from the indicated human tissue. Single cell suspensions were prepared using enzymatic dissociation followed by tituration. The samples were processed using the 10XChromium 3' v3 sequencing pipeline, sequenced on an Illumina NovaSeq 6000, and analyzed using the cellranger software and aligned to the human GRCh38 genome version 93."
             },
             "contributors": [
@@ -10598,7 +10736,11 @@
             ],
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://ega-archive.org/studies/EGAS00001004375",
+                "https://hdca-sweden.scilifelab.se/"
+            ]
         },
         "uuid": "fc232d87-7b10-47f7-9197-b2c6cf210dea",
         "dcp_url": null,
@@ -10727,7 +10869,10 @@
             ],
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.reproductivecellatlas.org/"
+            ]
         },
         "uuid": "b43c36dd-c8ec-4cf1-a8f4-6ab5f30eabc3",
         "dcp_url": null,
@@ -10953,7 +11098,10 @@
             ],
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://singlecell.broadinstitute.org/single_cell/study/SCP259"
+            ]
         },
         "uuid": "cd61771b-661a-4e19-b269-6e5d95350de6",
         "dcp_url": null,
@@ -10997,6 +11145,173 @@
                     "Shalek AK",
                     "Xavier RJ",
                     "Regev A."
+                ]
+            }
+        ]
+    },
+    {
+        "added_to_index": 1610470834,
+        "content": {
+            "project_core": {
+                "project_short_name": "FoetalBoneMarrowscSeq",
+                "project_title": "Foetal Bone Marrow single cell sequencing",
+                "project_description": "Haematopoeisis emerges in the human fetal bone marrow (BM) at around 12 post conception weeks. This constitutes the second wave of definitive haematopoiesis following on from the first wave in fetal liver from around 6 post conception weeks. The BM emerges as the dominant site of haematopoiesis, responsible for lifelong blood and immune cell production. Yet, little is known about how the composition of the fetal BM, the microenvironment permissive to establishing haematopoiesis and the interplay with other sites of fetal haematopoiesis in fetal health or disease. Herein we utilise single cell RNA sequencing to describe fetal haematopoeisis throughout gestation and better understand the development of the human immune system. The raw and processed fetal bone marrow 10x scRNA-seq data for this study are deposited at ArrayExpress or European Nucleotide Archive, with accession codes as follows: E-MTAB-9389 and ERP125305. Related accession codes for this study (including Smart-seq2 and CITE-seq data) are noted in the manuscript and linked to the main accessions at E-MTAB-9389, E-MTAB-9801."
+            },
+            "contributors": [
+                {
+                    "name": "Sam,Behjati",
+                    "email": "sam.behjati@sanger.ac.uk",
+                    "institution": "Wellcome Sanger Institute",
+                    "laboratory": "Behjati Group",
+                    "address": "Wellcome Genome Campus",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": true
+                }
+            ],
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "ERP125305"
+            ],
+            "geo_series_accessions": null,
+            "supplementary_links": null
+        },
+        "uuid": "e165262b-ebac-4820-8517-69e8b88b399e",
+        "dcp_url": null,
+        "publications": null
+    },
+    {
+        "added_to_index": 1610470834,
+        "content": {
+            "project_core": {
+                "project_short_name": "LungCellAtlas",
+                "project_title": "A molecular cell atlas of the human lung from single-cell RNA sequencing.",
+                "project_description": "Although single-cell RNA sequencing studies have begun to provide compendia of cell expression profiles<sup>1-9</sup>, it has been difficult to systematically identify and localize all molecular\u00a0cell types in individual organs to create a full molecular cell atlas. Here, using droplet- and plate-based single-cell RNA sequencing of approximately 75,000 human cells across all lung tissue compartments and circulating blood, combined with a multi-pronged cell annotation approach, we create an extensive cell atlas of the human lung. We define the gene expression profiles and anatomical locations of 58 cell populations in the human lung, including 41 out of 45 previously known cell types and 14 previously unknown ones. This comprehensive molecular atlas identifies the biochemical functions of lung cells and the transcription factors and markers for making and monitoring them; defines the cell targets of circulating hormones and predicts local signalling interactions and immune cell homing; and identifies cell types that are directly affected by lung disease genes and respiratory viruses. By comparing human and mouse data, we identified 17 molecular cell types that have been gained or lost during lung evolution and others with substantially altered expression profiles, revealing extensive plasticity of cell types and cell-type-specific gene expression during organ evolution including expression switches between cell types. This atlas provides the molecular foundation for investigating how lung cell identities, functions and interactions are achieved in development and tissue engineering and altered in disease and evolution."
+            },
+            "contributors": [
+                {
+                    "name": "Kyle,J,Travaglini",
+                    "institution": "Department of Biochemistry, Howard Hughes Medical Institute, Stanford University School of Medicine, Stanford, CA, USA.",
+                    "orcid_id": "0000-0003-3164-6448"
+                },
+                {
+                    "name": "Ahmad,N,Nabhan",
+                    "institution": "Department of Biochemistry, Howard Hughes Medical Institute, Stanford University School of Medicine, Stanford, CA, USA."
+                },
+                {
+                    "name": "Lolita,Penland",
+                    "institution": "Chan Zuckerberg Biohub, San Francisco, CA, USA."
+                },
+                {
+                    "name": "Rahul,Sinha",
+                    "institution": "Institute for Stem Cell Biology and Regenerative Medicine, Stanford University School of Medicine, Stanford, CA, USA."
+                },
+                {
+                    "name": "Astrid,Gillich",
+                    "institution": "Department of Biochemistry, Howard Hughes Medical Institute, Stanford University School of Medicine, Stanford, CA, USA.",
+                    "orcid_id": "0000-0002-7016-0494"
+                },
+                {
+                    "name": "Rene,V,Sit",
+                    "institution": "Chan Zuckerberg Biohub, San Francisco, CA, USA."
+                },
+                {
+                    "name": "Stephen,Chang",
+                    "institution": "Department of Biochemistry, Howard Hughes Medical Institute, Stanford University School of Medicine, Stanford, CA, USA.",
+                    "orcid_id": "0000-0001-7385-075X"
+                },
+                {
+                    "name": "Stephanie,D,Conley",
+                    "institution": "Institute for Stem Cell Biology and Regenerative Medicine, Stanford University School of Medicine, Stanford, CA, USA."
+                },
+                {
+                    "name": "Yasuo,Mori",
+                    "institution": "Institute for Stem Cell Biology and Regenerative Medicine, Stanford University School of Medicine, Stanford, CA, USA."
+                },
+                {
+                    "name": "Jun,Seita",
+                    "institution": "Institute for Stem Cell Biology and Regenerative Medicine, Stanford University School of Medicine, Stanford, CA, USA."
+                },
+                {
+                    "name": "Gerald,J,Berry",
+                    "institution": "Department of Pathology, Stanford University School of Medicine, Stanford, CA, USA."
+                },
+                {
+                    "name": "Joseph,B,Shrager",
+                    "institution": "Department of Cardiothoracic Surgery, Stanford University School of Medicine, Stanford, CA, USA."
+                },
+                {
+                    "name": "Ross,J,Metzger",
+                    "institution": "Vera Moulton Wall Center for Pulmonary Vascular Disease, Stanford University School of Medicine, Stanford, CA, USA.",
+                    "orcid_id": "0000-0003-0069-4949"
+                },
+                {
+                    "name": "Christin,S,Kuo",
+                    "institution": "Department of Pediatrics, Pulmonary Medicine, Stanford University School of Medicine, Stanford, CA, USA."
+                },
+                {
+                    "name": "Norma,Neff",
+                    "institution": "Chan Zuckerberg Biohub, San Francisco, CA, USA.",
+                    "orcid_id": "0000-0001-7141-5420"
+                },
+                {
+                    "name": "Irving,L,Weissman",
+                    "institution": "Institute for Stem Cell Biology and Regenerative Medicine, Stanford University School of Medicine, Stanford, CA, USA.",
+                    "orcid_id": "0000-0002-9077-7467"
+                },
+                {
+                    "name": "Stephen,R,Quake",
+                    "email": "steve@czbiohub.org",
+                    "institution": "Chan Zuckerberg Biohub",
+                    "address": "San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-1613-0809"
+                },
+                {
+                    "name": "Mark,A,Krasnow",
+                    "email": "krasnow@stanford.edu",
+                    "institution": "Stanford University",
+                    "laboratory": "Department of Biochemistry, Howard Hughes Medical Institute, Stanford University School of Medicine, ",
+                    "address": "Stanford, CA",
+                    "country": "USA",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-1976-5471"
+                }
+            ],
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://ega-archive.org/studies/EGAS00001004344"
+            ]
+        },
+        "uuid": "6936da41-3692-46bb-bca1-cd0f507991e9",
+        "dcp_url": null,
+        "publications": [
+            {
+                "doi": "10.1038/s41586-020-2922-4",
+                "url": "http://dx.doi.org/10.1038/s41586-020-2922-4",
+                "journal_title": "Nature",
+                "title": "A molecular cell atlas of the human lung from single-cell RNA sequencing.",
+                "authors": [
+                    "Travaglini KJ",
+                    "Nabhan AN",
+                    "Penland L",
+                    "Sinha R",
+                    "Gillich A",
+                    "Sit RV",
+                    "Chang S",
+                    "Conley SD",
+                    "Mori Y",
+                    "Seita J",
+                    "Berry GJ",
+                    "Shrager JB",
+                    "Metzger RJ",
+                    "Kuo CS",
+                    "Neff N",
+                    "Weissman IL",
+                    "Quake SR",
+                    "Krasnow MA."
                 ]
             }
         ]

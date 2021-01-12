@@ -8,7 +8,7 @@ def get_data(uuid):
         proj = requests.get(proj_url).json()
     
         # TODO When retrieving this info in the UI make sure that it is agnostic to thet data format as this just pulls info but when switching to using API will use schema
-        desired_content_keys = ["project_core", "contributors", "array_express_accessions", "insdc_project_accessions", "geo_series_accessions"]
+        desired_content_keys = ["project_core", "contributors", "array_express_accessions", "insdc_project_accessions", "geo_series_accessions", "supplementary_links"]
         
         return {
             "added_to_index": int(time.time()),
