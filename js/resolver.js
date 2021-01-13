@@ -38,7 +38,7 @@ const formatAuthorNames = (dataPoint) => {
 };
 
 const hoistEga = (dataPoint) => {
-  // Ideally EGA accessions would be part of the schema 
+  // Ideally EGA accessions would be part of the schema
   // However, they are listed in supplementary_links so we need to "hoist" them to their own field
   const egaStudiesPrefix = "https://ega-archive.org/studies/";
   const egaDatasetsPrefix = "https://ega-archive.org/datasets/";

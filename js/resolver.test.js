@@ -28,7 +28,7 @@ test("resolves published data", async () => {
       "publications",
       "geo_series_accessions",
       "ega_studies_accessions",
-      "ega_datasets_accessions"
+      "ega_datasets_accessions",
     ].forEach((prop) => expect(dataPoint).toHaveProperty(prop));
 
     expect(dataPoint.added_to_index_formatted).toEqual(
