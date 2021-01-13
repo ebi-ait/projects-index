@@ -8,14 +8,18 @@ def get_data(uuid):
         proj = requests.get(proj_url).json()
     
         # TODO When retrieving this info in the UI make sure that it is agnostic to thet data format as this just pulls info but when switching to using API will use schema
-        desired_content_keys = ["project_core", "contributors", "array_express_accessions", "insdc_project_accessions", "geo_series_accessions", "supplementary_links"]
+        desired_content_keys = ["project_core", "array_express_accessions", "insdc_project_accessions", "geo_series_accessions", "supplementary_links"]
         
         return {
+            "content": {
+                **{k: proj["content"].get(k, None) for k in desired_content_keys},
+                "publications": get_publications_journal(proj["content"]["publications"]) if "publications" in proj["content"] else None,
+                "contributors": remove_wranglers(proj["content"]["contributors"])
+            },
+            # These properties are not returned by the Ingest API so left out of content
             "added_to_index": int(time.time()),
-            "content": {k: proj["content"].get(k, None) for k in desired_content_keys},
             "uuid": uuid,
             "dcp_url": make_dcp_link(uuid),
-            "publications": get_publications_journal(proj["content"]["publications"]) if "publications" in proj["content"] else None
         }
     except:
         raise Exception("Something went wrong. Is this a valid project UUID?")
@@ -23,6 +27,19 @@ def get_data(uuid):
 def get_uuids(input_file):
     with open(input_file, "r") as file:
         return file.read().splitlines()
+
+def remove_wranglers(contributors):
+    new_contributors = []
+    for contributor in contributors:
+        # Keys might not exist in dict (annoying API...) so can't use normal list comprehension here
+        try:
+            if contributor["project_role"]["ontology"] == "EFO:0009737":
+                continue
+            new_contributors.append(contributor)
+        except KeyError:
+            new_contributors.append(contributor)
+    return new_contributors
+                
 
 def make_dcp_link(prj_uuid):
     # TODO This should probably be replicated in the ingest API once we move there
