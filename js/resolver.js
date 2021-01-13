@@ -60,14 +60,12 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
     .then((res) => res.data)
     .then(
       (data) =>
-        data.map(
-          ({ uuid, added_to_index, dcp_url, content }) => ({
-            uuid,
-            added_to_index,
-            dcp_url,
-            ...content,
-          })
-        ) // Flatten
+        data.map(({ uuid, added_to_index, dcp_url, content }) => ({
+          uuid,
+          added_to_index,
+          dcp_url,
+          ...content,
+        })) // Flatten
     )
     .then((data) =>
       data.map(
