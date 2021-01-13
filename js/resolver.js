@@ -38,18 +38,18 @@ const formatAuthorNames = (dataPoint) => {
 };
 
 const hoistEga = (dataPoint) => {
-  const egaStudiesPrefix = "https://ega-archive.org/studies/"
-  const egaDatasetsPrefix = "https://ega-archive.org/datasets/"
+  const egaStudiesPrefix = "https://ega-archive.org/studies/";
+  const egaDatasetsPrefix = "https://ega-archive.org/datasets/";
   dataPoint["ega_studies_accessions"] = dataPoint["supplementary_links"]
-    .filter(link => link.includes(egaStudiesPrefix))
-    .map(link => link.replace(egaStudiesPrefix, ""))
+    .filter((link) => link.includes(egaStudiesPrefix))
+    .map((link) => link.replace(egaStudiesPrefix, ""));
 
   dataPoint["ega_datasets_accessions"] = dataPoint["supplementary_links"]
-  .filter(link => link.includes(egaDatasetsPrefix))
-  .map(link => link.replace(egaDatasetsPrefix, ""))
+    .filter((link) => link.includes(egaDatasetsPrefix))
+    .map((link) => link.replace(egaDatasetsPrefix, ""));
 
   return dataPoint;
-}
+};
 
 const fetchData = (url = process.env.STATIC_DATA_URL) => {
   // Fetching from URL rather than using dynamic imports asc will eventually use ingest API
@@ -87,7 +87,8 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
           ...rest,
         })
       )
-    ).then(data => data.map(hoistEga))
+    )
+    .then((data) => data.map(hoistEga))
     .then((data) =>
       data.map(reportError(formatTimestamp)).map(reportError(formatAuthorNames))
     )
