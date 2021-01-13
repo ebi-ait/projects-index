@@ -33,7 +33,8 @@
                         },
                         loading: false
                     });
-                }).catch(() => {
+                }).catch(e => {
+                    console.error(e);
                     this.update({
                         error: true,
                         loading: false

@@ -40,15 +40,17 @@ const formatAuthorNames = (dataPoint) => {
 const hoistEga = (dataPoint) => {
   // Ideally EGA accessions would be part of the schema
   // However, they are listed in supplementary_links so we need to "hoist" them to their own field
-  const egaStudiesPrefix = "https://ega-archive.org/studies/";
-  const egaDatasetsPrefix = "https://ega-archive.org/datasets/";
+  const egaStudiesRegex = /.*\/studies\/(EGAS\d*).*/i
+  const egaDatasetsRegex= /.*\/studies\/(EGAD\d*).*/i
   dataPoint["ega_studies_accessions"] = dataPoint["supplementary_links"]
-    .filter((link) => link.includes(egaStudiesPrefix))
-    .map((link) => link.replace(egaStudiesPrefix, ""));
+    .map((link) => egaStudiesRegex.exec(link))
+    .filter(match => match && match.length)
+    .map(match => match[1])
 
   dataPoint["ega_datasets_accessions"] = dataPoint["supplementary_links"]
-    .filter((link) => link.includes(egaDatasetsPrefix))
-    .map((link) => link.replace(egaDatasetsPrefix, ""));
+    .map((link) => egaDatasetsRegex.exec(link))
+    .filter(match => match && match.length)
+    .map(match => match[1])
 
   return dataPoint;
 };
