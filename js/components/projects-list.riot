@@ -43,7 +43,10 @@
                             dataPoint["uuid"],
                             dataPoint["project_core"]["project_title"],
                             dataPoint["insdc_project_accessions"].join(" "),
-                            dataPoint["array_express_accessions"].join(" ")
+                            dataPoint["array_express_accessions"].join(" "),
+                            dataPoint["ega_studies_accessions"].join(" "),
+                            dataPoint["ega_datasets_accessions"].join(" ")
+
                         ].map(x => x.toLowerCase()).join(" ").includes(val.toLowerCase())
                 );
                 this.update({
