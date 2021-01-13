@@ -1,0 +1,12 @@
+solr:
+  image: solr:6.6-alpine
+  ports:
+    - 8983:8983
+  volumes:
+    - data:/var/solr
+  environment:
+    - VERBOSE=yes
+    - SOLR_HEAP=1g
+  entrypoint:
+    - solr-precreate
+    - projects
