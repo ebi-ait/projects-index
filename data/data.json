@@ -11153,36 +11153,6 @@
         "added_to_index": 1610470834,
         "content": {
             "project_core": {
-                "project_short_name": "FoetalBoneMarrowscSeq",
-                "project_title": "Foetal Bone Marrow single cell sequencing",
-                "project_description": "Haematopoeisis emerges in the human fetal bone marrow (BM) at around 12 post conception weeks. This constitutes the second wave of definitive haematopoiesis following on from the first wave in fetal liver from around 6 post conception weeks. The BM emerges as the dominant site of haematopoiesis, responsible for lifelong blood and immune cell production. Yet, little is known about how the composition of the fetal BM, the microenvironment permissive to establishing haematopoiesis and the interplay with other sites of fetal haematopoiesis in fetal health or disease. Herein we utilise single cell RNA sequencing to describe fetal haematopoeisis throughout gestation and better understand the development of the human immune system. The raw and processed fetal bone marrow 10x scRNA-seq data for this study are deposited at ArrayExpress or European Nucleotide Archive, with accession codes as follows: E-MTAB-9389 and ERP125305. Related accession codes for this study (including Smart-seq2 and CITE-seq data) are noted in the manuscript and linked to the main accessions at E-MTAB-9389, E-MTAB-9801."
-            },
-            "contributors": [
-                {
-                    "name": "Sam,Behjati",
-                    "email": "sam.behjati@sanger.ac.uk",
-                    "institution": "Wellcome Sanger Institute",
-                    "laboratory": "Behjati Group",
-                    "address": "Wellcome Genome Campus",
-                    "country": "United Kingdom",
-                    "corresponding_contributor": true
-                }
-            ],
-            "array_express_accessions": null,
-            "insdc_project_accessions": [
-                "ERP125305"
-            ],
-            "geo_series_accessions": null,
-            "supplementary_links": null
-        },
-        "uuid": "e165262b-ebac-4820-8517-69e8b88b399e",
-        "dcp_url": null,
-        "publications": null
-    },
-    {
-        "added_to_index": 1610470834,
-        "content": {
-            "project_core": {
                 "project_short_name": "LungCellAtlas",
                 "project_title": "A molecular cell atlas of the human lung from single-cell RNA sequencing.",
                 "project_description": "Although single-cell RNA sequencing studies have begun to provide compendia of cell expression profiles<sup>1-9</sup>, it has been difficult to systematically identify and localize all molecular\u00a0cell types in individual organs to create a full molecular cell atlas. Here, using droplet- and plate-based single-cell RNA sequencing of approximately 75,000 human cells across all lung tissue compartments and circulating blood, combined with a multi-pronged cell annotation approach, we create an extensive cell atlas of the human lung. We define the gene expression profiles and anatomical locations of 58 cell populations in the human lung, including 41 out of 45 previously known cell types and 14 previously unknown ones. This comprehensive molecular atlas identifies the biochemical functions of lung cells and the transcription factors and markers for making and monitoring them; defines the cell targets of circulating hormones and predicts local signalling interactions and immune cell homing; and identifies cell types that are directly affected by lung disease genes and respiratory viruses. By comparing human and mouse data, we identified 17 molecular cell types that have been gained or lost during lung evolution and others with substantially altered expression profiles, revealing extensive plasticity of cell types and cell-type-specific gene expression during organ evolution including expression switches between cell types. This atlas provides the molecular foundation for investigating how lung cell identities, functions and interactions are achieved in development and tissue engineering and altered in disease and evolution."
