@@ -27,6 +27,8 @@ test("resolves published data", async () => {
       "project_core",
       "publications",
       "geo_series_accessions",
+      "ega_studies_accessions",
+      "ega_datasets_accessions"
     ].forEach((prop) => expect(dataPoint).toHaveProperty(prop));
 
     expect(dataPoint.added_to_index_formatted).toEqual(
@@ -36,6 +38,8 @@ test("resolves published data", async () => {
     expect(Array.isArray(dataPoint["insdc_project_accessions"])).toBe(true);
     expect(Array.isArray(dataPoint["array_express_accessions"])).toBe(true);
     expect(Array.isArray(dataPoint["geo_series_accessions"])).toBe(true);
+    expect(Array.isArray(dataPoint["ega_studies_accessions"])).toBe(true);
+    expect(Array.isArray(dataPoint["ega_datasets_accessions"])).toBe(true);
     expect(Array.isArray(dataPoint["publications"])).toBe(true);
     expect(Array.isArray(dataPoint["contributors"])).toBe(true);
 
