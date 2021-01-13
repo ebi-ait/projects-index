@@ -61,11 +61,10 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
     .then(
       (data) =>
         data.map(
-          ({ uuid, added_to_index, dcp_url, publications, content }) => ({
+          ({ uuid, added_to_index, dcp_url, content }) => ({
             uuid,
             added_to_index,
             dcp_url,
-            publications,
             ...content,
           })
         ) // Flatten
@@ -90,7 +89,7 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
         })
       )
     )
-    .then((data) => data.map(hoistEga))
+    .then((data) => data.map(reportError(hoistEga)))
     .then((data) =>
       data.map(reportError(formatTimestamp)).map(reportError(formatAuthorNames))
     )

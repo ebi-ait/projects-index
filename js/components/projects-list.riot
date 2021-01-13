@@ -1,8 +1,19 @@
 <!--Parent component that handles logic for gathering data-->
 <projects-list>
-    <search search={this.search}></search>
-    <p if={this.state.data} style="text-align: right; color: #505050; margin-bottom: 0;" class="vf-text-body vf-text-body--3">{this.state.data.length} projects shown</p>
-    <data-table data={this.state.data} setSort={this.setSort} sort={this.state.sort}></data-table>
+    <p if={this.state.loading}>Loading...</p>
+    <template if={!this.state.loading && !this.state.error}>
+        <search search={this.search}></search>
+        <template if={this.state.data}>
+            <p style="text-align: right; color: #505050; margin-bottom: 0;" class="vf-text-body vf-text-body--3">{this.state.data.length} projects shown</p>
+            <data-table data={this.state.data} setSort={this.setSort} sort={this.state.sort}></data-table>
+        </template>
+    </template>
+    <template if={this.state.error}>
+        <div style="text-align: center;">
+            <h1>Something went wrong</h1>
+            <p>Please try refreshing the page.</p>
+        </div>
+    </template>
 
     <script>
         import DataTable from "./table.riot";
@@ -11,7 +22,7 @@
 
         export default {
             onMounted() {
-                this.update({ data: [] })
+                this.update({ data: [], loading: true })
 
                 resolve().then(data => {
                     this.update({
@@ -19,9 +30,15 @@
                         data: data,
                         sort: {
                             timestampDesc: true
-                        }
+                        },
+                        loading: false
                     });
-                });
+                }).catch(() => {
+                    this.update({
+                        error: true,
+                        loading: false
+                    })
+                })
             },
             setSort(sortBy) {
                 this.update({

@@ -39,7 +39,7 @@
     </tr>
   </thead>
 
-  <tbody class="vf-table__body">
+  <tbody class="vf-table__body" if={props.data.length}>
     <tr class="vf-table__row" each={ item in props.data } key={item.uuid}>
       <td class="vf-table__cell">{item.added_to_index_formatted}</td>
       <td class="vf-table__cell">{item.project_core.project_title}</td>
@@ -95,6 +95,8 @@
     </tr>
   </tbody>
 </table>
+
+<p style="text-align:center" if={!props.data.length}>No projects</p>
 
 <style>
   .plain-list {
