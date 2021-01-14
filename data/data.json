@@ -9735,12 +9735,41 @@
                     "name": "Sten,,Linnarsson",
                     "email": "sten.linnarsson@ki.se",
                     "institution": "Karolinska Institutet",
+                    "laboratory": "Unit of Molecular neurobiology",
+                    "address": "Solnav\u00e4gen 9, 171 65 Solna",
                     "country": "Sweden",
                     "corresponding_contributor": true,
                     "project_role": {
                         "text": "principal investigator",
                         "ontology": "EFO:0009736",
                         "ontology_label": "principal investigator"
+                    }
+                },
+                {
+                    "name": "Emelie,,Brown",
+                    "email": "emelie.brown@ki.se",
+                    "institution": "Karolinska Institutet",
+                    "laboratory": "Unit of Molecular neurobiology",
+                    "address": "Solnav\u00e4gen 9, 171 65 Solna",
+                    "country": "Sweden",
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Peter,,L\u00f6nnerberg",
+                    "email": "peter.lonnerberg@ki.se",
+                    "institution": "Karolinska Institutet",
+                    "laboratory": "Unit of Molecular neurobiology",
+                    "address": "Solnav\u00e4gen 9, 171 65 Solna",
+                    "country": "Sweden",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "technician",
+                        "ontology": "EFO:0009739",
+                        "ontology_label": "technician"
                     }
                 }
             ]
@@ -10287,6 +10316,1285 @@
         },
         "added_to_index": 1610470834,
         "uuid": "6936da41-3692-46bb-bca1-cd0f507991e9",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "scRNAseqHumanPreimplantationEmbryos",
+                "project_title": "Single-Cell RNA-Seq Reveals Lineage and X Chromosome Dynamics in Human Preimplantation Embryos.",
+                "project_description": "Mouse studies have been instrumental in forming our current understanding of early cell-lineage decisions; however, similar insights into the early human development are severely limited. Here, we present a comprehensive transcriptional map of human embryo development, including the sequenced transcriptomes of 1,529 individual cells from 88 human preimplantation embryos. These data show that cells undergo an intermediate state of co-expression of lineage-specific genes, followed by a concurrent establishment of the trophectoderm, epiblast, and primitive endoderm lineages, which coincide with blastocyst formation. Female cells of all three lineages achieve dosage compensation of X chromosome RNA levels prior to implantation. However, in contrast to the mouse, XIST is transcribed from both alleles throughout the progression of this expression dampening, and X chromosome genes maintain biallelic expression while dosage compensation proceeds. We envision broad utility of this transcriptional atlas in future studies on human development as well as in stem cell research."
+            },
+            "array_express_accessions": [
+                "E-MTAB-3929"
+            ],
+            "insdc_project_accessions": [
+                "ERP012552"
+            ],
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1016/j.cell.2016.03.023",
+                    "url": "http://dx.doi.org/10.1016/j.cell.2016.03.023",
+                    "journal_title": "Cell",
+                    "title": "Single-Cell RNA-Seq Reveals Lineage and X Chromosome Dynamics in Human Preimplantation Embryos.",
+                    "authors": [
+                        "Petropoulos S",
+                        "Edsg\u00e4rd D",
+                        "Reinius B",
+                        "Deng Q",
+                        "Panula SP",
+                        "Codeluppi S",
+                        "Plaza Reyes A",
+                        "Linnarsson S",
+                        "Sandberg R",
+                        "Lanner F."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Sophie,Petropoulos",
+                    "email": "sophie.petropoulos@gmail.com",
+                    "institution": "Karolinska Institutet and Karolinska Universitetssjukhuset ",
+                    "laboratory": "Department of Clinical Science, Intervention and Technology and Division of Obstetrics and Gynecology",
+                    "address": "141 86 Stockholm,",
+                    "country": "Sweden",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Daniel,Edsg\u00e4rd",
+                    "institution": "Ludwig Institute for Cancer Research, Box 240, 171 77 Stockholm, Sweden"
+                },
+                {
+                    "name": "Bj\u00f6rn,Reinius",
+                    "institution": "Ludwig Institute for Cancer Research, Box 240, 171 77 Stockholm, Sweden",
+                    "orcid_id": "0000-0002-7021-5248"
+                },
+                {
+                    "name": "Qiaolin,Deng",
+                    "institution": "Ludwig Institute for Cancer Research, Box 240, 171 77 Stockholm, Sweden",
+                    "orcid_id": "0000-0001-5934-7816"
+                },
+                {
+                    "name": "Sarita,Pauliina,Panula",
+                    "institution": "Department of Clinical Science, Intervention and Technology, Karolinska Institutet, and Division of Obstetrics and Gynecology, Karolinska Universitetssjukhuset, 141 86 Stockholm, Sweden."
+                },
+                {
+                    "name": "Simone,Codeluppi",
+                    "institution": "Karolinska Institutet",
+                    "laboratory": "Department of Physiology and Pharmacology",
+                    "address": "171 77 Stockholm",
+                    "country": "Sweden",
+                    "orcid_id": "0000-0002-7053-0520"
+                },
+                {
+                    "name": "Alvaro,Plaza Reyes",
+                    "institution": "Karolinska Institutet and Karolinska Universitetssjukhuset",
+                    "laboratory": "Department of Clinical Science, Intervention and Technology and Division of Obstetrics and Gynecology",
+                    "address": ", 141 86 Stockholm, ",
+                    "country": "Sweden",
+                    "orcid_id": "0000-0003-1167-6316"
+                },
+                {
+                    "name": "Sten,Linnarsson",
+                    "institution": " Karolinska Institutet",
+                    "laboratory": "Department of Medical Biochemistry and Biophysics",
+                    "address": "171 77 Stockholm",
+                    "country": "Sweden"
+                },
+                {
+                    "name": "Rickard,Sandberg",
+                    "email": "rickard.sandberg@ki.se",
+                    "institution": "Ludwig Institute for Cancer Research",
+                    "address": "Box 240, 171 77 Stockholm",
+                    "country": "Sweden",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Fredrik,Lanner",
+                    "email": "fredrik.lanner@ki.se",
+                    "institution": "Karolinska Institutet and Karolinska Universitetssjukhuset",
+                    "laboratory": "Department of Clinical Science, Intervention and Technology and Division of Obstetrics and Gynecology",
+                    "address": "141 86 Stockholm",
+                    "country": "Sweden",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-2771-7445"
+                }
+            ]
+        },
+        "added_to_index": 1610626454,
+        "uuid": "183c7b4c-b64c-4d07-bf62-4dad77af5778",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "LavaertHumanThymus",
+                "project_title": "Integrated scRNA-Seq Identifies Human Postnatal Thymus Seeding Progenitors and Regulatory Dynamics of Differentiating Immature Thymocytes",
+                "project_description": "During postnatal life, thymopoiesis depends on the continuous colonization of the thymus by bone marrow-derived hematopoietic progenitors that migrate through the bloodstream. The current understanding of the nature of thymic immigrants is largely based on data from pre-clinical models. Here, we employed single-cell RNA sequencing (scRNA-seq) to examine the immature postnatal thymocyte population in humans. Integration of bone marrow and peripheral blood precursor datasets identified two putative thymus seeding precursors that varied in expression of CD7; CD10; and the homing receptors CCR7, CCR9, and ITGB7. Whereas both precursors supported T cell development, only one contributed to intrathymic dendritic cell (DC) differentiation, predominantly of plasmacytoid dendritic cells. Trajectory inference delineated the transcriptional dynamics underlying early human T lineage development, enabling prediction of transcription factor (TF) modules that drive stage-specific steps of human T cell development. This comprehensive dataset defines the expression signature of immature human thymocytes and provides a resource for the further study of human thymopoiesis. Overall design: Single cell transcriptional libraries were generated from CD34+ human post-natal thymocyte samples using the 10X Genomics Chromium 3\u2019 sequencing V2 kit."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP247592"
+            ],
+            "geo_series_accessions": [
+                "GSE144870"
+            ],
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1016/j.immuni.2020.03.019",
+                    "url": "http://dx.doi.org/10.1016/j.immuni.2020.03.019",
+                    "journal_title": "Immunity",
+                    "title": "Integrated scRNA-Seq Identifies Human Postnatal Thymus Seeding Progenitors and Regulatory Dynamics of Differentiating Immature Thymocytes.",
+                    "authors": [
+                        "Lavaert M",
+                        "Liang KL",
+                        "Vandamme N",
+                        "Park JE",
+                        "Roels J",
+                        "Kowalczyk MS",
+                        "Li B",
+                        "Ashenberg O",
+                        "Tabaka M",
+                        "Dionne D",
+                        "Tickle TL",
+                        "Slyper M",
+                        "Rozenblatt-Rosen O",
+                        "Vandekerckhove B",
+                        "Leclercq G",
+                        "Regev A",
+                        "Van Vlierberghe P",
+                        "Guilliams M",
+                        "Teichmann SA",
+                        "Saeys Y",
+                        "Taghon T"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Marieke,,Lavaert",
+                    "institution": "Ghent University",
+                    "laboratory": "Faculty of Medicine and Health Sciences, Department of Diagnostic Sciences",
+                    "address": "C. Heymanslaan 10, MRB2, Entrance 38, 9000 Ghent",
+                    "country": "Belgium"
+                },
+                {
+                    "name": "Kai Ling,,Liang",
+                    "institution": "Ghent University",
+                    "laboratory": "Faculty of Medicine and Health Sciences, Department of Diagnostic Sciences",
+                    "address": "C. Heymanslaan 10, MRB2, Entrance 38, 9000 Ghent",
+                    "country": "Belgium"
+                },
+                {
+                    "name": "Niels,,Vandamme",
+                    "institution": "VIB Center for Inflammation Research",
+                    "laboratory": "Data Mining and Modeling for Biomedicine",
+                    "address": "Ghent",
+                    "country": "Belgium"
+                },
+                {
+                    "name": "Jong-Eun,,Park",
+                    "institution": "Wellcome Sanger Institute, Wellcome Genome Campus",
+                    "address": "Hinxton, Cambridge CB10 1SA",
+                    "country": "UK"
+                },
+                {
+                    "name": "Juliette,,Roels",
+                    "institution": "Ghent University",
+                    "laboratory": "Faculty of Medicine and Health Sciences, Department of Diagnostic Sciences",
+                    "address": "C. Heymanslaan 10, MRB2, Entrance 38, 9000 Ghent",
+                    "country": "Belgium"
+                },
+                {
+                    "name": "Monica S,,Kowalczyk",
+                    "institution": "Broad Institute of Harvard and MIT",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Bo,,Li",
+                    "institution": "Broad Institute of Harvard and MIT",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Orr,,Ashenberg",
+                    "institution": "Broad Institute of Harvard and MIT",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Marcin,,Tabaka",
+                    "institution": "Broad Institute of Harvard and MIT",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Danielle,,Dionne",
+                    "institution": "Broad Institute of Harvard and MIT",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Timothy L,,Tickle",
+                    "institution": "Broad Institute of Harvard and MIT",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Michal,,Slyper",
+                    "institution": "Broad Institute of Harvard and MIT",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Orit,,Rozenblatt-Rosen",
+                    "institution": "Broad Institute of Harvard and MIT",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Bart,,Vandekerckhove",
+                    "institution": "Ghent University",
+                    "laboratory": "Faculty of Medicine and Health Sciences, Department of Diagnostic Sciences",
+                    "address": "C. Heymanslaan 10, MRB2, Entrance 38, 9000 Ghent",
+                    "country": "Belgium"
+                },
+                {
+                    "name": "Georges,,Leclercq",
+                    "institution": "Ghent University",
+                    "laboratory": "Faculty of Medicine and Health Sciences, Department of Diagnostic Sciences",
+                    "address": "C. Heymanslaan 10, MRB2, Entrance 38, 9000 Ghent",
+                    "country": "Belgium"
+                },
+                {
+                    "name": "Aviv,,Regev",
+                    "institution": "Broad Institute of Harvard and MIT",
+                    "laboratory": "Klarman Cell Observatory",
+                    "address": "Cambridge, MA",
+                    "country": "USA"
+                },
+                {
+                    "name": "Pieter,,Van Vlierberghe",
+                    "institution": "Cancer Research Institute Ghent (CRIG), Ghent University",
+                    "address": "Ghent",
+                    "country": "Belgium"
+                },
+                {
+                    "name": "Martin,,Guilliams",
+                    "institution": "VIB Center for Inflammation Research",
+                    "laboratory": "Laboratory of Myeloid Cell Ontogeny and Functional Specialization",
+                    "address": "Ghent",
+                    "country": "Belgium"
+                },
+                {
+                    "name": "Sarah A,,Teichmann",
+                    "institution": "Wellcome Sanger Institute, Wellcome Genome Campus",
+                    "address": "Hinxton, Cambridge CB10 1SA",
+                    "country": "UK"
+                },
+                {
+                    "name": "Yvan,,Saeys",
+                    "institution": "VIB Center for Inflammation Research",
+                    "laboratory": "Data Mining and Modeling for Biomedicine",
+                    "address": "Ghent",
+                    "country": "Belgium"
+                },
+                {
+                    "name": "Tom,,Taghon",
+                    "institution": "Ghent University",
+                    "laboratory": "Faculty of Medicine and Health Sciences, Department of Diagnostic Sciences",
+                    "address": "C. Heymanslaan 10, MRB2, Entrance 38, 9000 Ghent",
+                    "country": "Belgium",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Ray,,Stefancsik",
+                    "institution": "EMBL-EBI",
+                    "address": "Hinxton, Cambridge CB10 1SA",
+                    "country": "UK"
+                }
+            ]
+        },
+        "added_to_index": 1610626455,
+        "uuid": "dbd836cf-bfc2-41f0-9834-41cc6c0b235a",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "COVID-19AirwayEpitheliumImmune",
+                "project_title": "COVID-19 severity correlates with airway epithelium-immune cell interactions identified by single-cell analysis.",
+                "project_description": "To investigate the immune response and mechanisms associated with severe coronavirus disease 2019 (COVID-19), we performed single-cell RNA sequencing on nasopharyngeal and bronchial samples from 19 clinically well-characterized patients with moderate or critical disease and from five healthy controls. We identified airway epithelial cell types and states vulnerable to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection. In patients with COVID-19, epithelial cells showed an average three-fold increase in expression of the SARS-CoV-2 entry receptor ACE2, which correlated with interferon signals by immune cells. Compared to moderate cases, critical cases exhibited stronger interactions between epithelial and immune cells, as indicated by ligand-receptor expression profiles, and activated immune cells, including inflammatory macrophages expressing CCL2, CCL3, CCL20, CXCL1, CXCL3, CXCL10, IL8, IL1B and TNF. The transcriptional differences in critical cases compared to moderate cases likely contribute to clinical observations of heightened inflammatory tissue damage, lung injury and respiratory failure. Our data suggest that pharmacologic inhibition of the CCR1 and/or CCR5 pathways might suppress immune hyperactivation in critical COVID-19."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://ega-archive.org/studies/EGAS00001004481"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1038/s41587-020-0602-4",
+                    "url": "http://dx.doi.org/10.1038/s41587-020-0602-4",
+                    "journal_title": "Nature Biotechnology",
+                    "title": "COVID-19 severity correlates with airway epithelium-immune cell interactions identified by single-cell analysis.",
+                    "authors": [
+                        "Chua RL",
+                        "Lukassen S",
+                        "Trump S",
+                        "Hennig BP",
+                        "Wendisch D",
+                        "Pott F",
+                        "Debnath O",
+                        "Th\u00fcrmann L",
+                        "Kurth F",
+                        "V\u00f6lker MT",
+                        "Kazmierski J",
+                        "Timmermann B",
+                        "Twardziok S",
+                        "Schneider S",
+                        "Machleidt F",
+                        "M\u00fcller-Redetzky H",
+                        "Maier M",
+                        "Krannich A",
+                        "Schmidt S",
+                        "Balzer F",
+                        "Liebig J",
+                        "Loske J",
+                        "Suttorp N",
+                        "Eils J",
+                        "Ishaque N",
+                        "Liebert UG",
+                        "von Kalle C",
+                        "Hocke A",
+                        "Witzenrath M",
+                        "Goffinet C",
+                        "Drosten C",
+                        "Laudi S",
+                        "Lehmann I",
+                        "Conrad C",
+                        "Sander LE",
+                        "Eils R."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Robert,Lorenz,Chua",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0001-5945-9957"
+                },
+                {
+                    "name": "Soeren,Lukassen",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0001-7045-6327"
+                },
+                {
+                    "name": "Saskia,Trump",
+                    "laboratory": "Molecular Epidemiology Unit, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-9894-1807"
+                },
+                {
+                    "name": "Bianca,P,Hennig",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-7733-8160"
+                },
+                {
+                    "name": "Daniel,Wendisch",
+                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0003-1968-5751"
+                },
+                {
+                    "name": "Fabian,Pott",
+                    "laboratory": "Institute of Virology, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0003-3700-1691"
+                },
+                {
+                    "name": "Olivia,Debnath",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Loreen,Th\u00fcrmann",
+                    "laboratory": "Molecular Epidemiology Unit, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0003-1109-1924"
+                },
+                {
+                    "name": "Florian,Kurth",
+                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-3807-473X"
+                },
+                {
+                    "name": "Maria,Theresa,V\u00f6lker",
+                    "laboratory": "Department of Anesthesiology and Intensive Care, University Hospital Leipzig, Leipzig, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Julia,Kazmierski",
+                    "laboratory": "Institute of Virology, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-7962-2165"
+                },
+                {
+                    "name": "Bernd,Timmermann",
+                    "laboratory": "Sequencing Core Facility, Max Planck Institute for Molecular Genetics, Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Sven,Twardziok",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Stefan,Schneider",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Felix,Machleidt",
+                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-6108-5269"
+                },
+                {
+                    "name": "Holger,M\u00fcller-Redetzky",
+                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Melanie,Maier",
+                    "laboratory": "Institute of Virology, University Hospital Leipzig, Leipzig, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Alexander,Krannich",
+                    "laboratory": "Clinical Study Center, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Sein,Schmidt",
+                    "laboratory": "Clinical Study Center, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Felix,Balzer",
+                    "laboratory": "Department of Anestesiology and Intensive Care Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Johannes,Liebig",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-9188-036X"
+                },
+                {
+                    "name": "Jennifer,Loske",
+                    "laboratory": "Molecular Epidemiology Unit, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0003-3222-9777"
+                },
+                {
+                    "name": "Norbert,Suttorp",
+                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "J\u00fcrgen,Eils",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Naveed,Ishaque",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-8426-901X"
+                },
+                {
+                    "name": "Uwe,Gerd,Liebert",
+                    "laboratory": "Institute of Virology, University Hospital Leipzig, Leipzig, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-5129-0875"
+                },
+                {
+                    "name": "Christof,von Kalle",
+                    "laboratory": "Clinical Study Center, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Andreas,Hocke",
+                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Martin,Witzenrath",
+                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Christine,Goffinet",
+                    "laboratory": "Institute of Virology, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-3959-004X"
+                },
+                {
+                    "name": "Christian,Drosten",
+                    "laboratory": "Institute of Virology, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0001-7923-0519"
+                },
+                {
+                    "name": "Sven,Laudi",
+                    "email": "sven.laudi@medizin.uni-leipzig.de",
+                    "laboratory": "Department of Anesthesiology and Intensive Care, University Hospital Leipzig, Leipzig, Germany. .",
+                    "country": "Germany",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-2117-0944"
+                },
+                {
+                    "name": "Irina,Lehmann",
+                    "email": "irina.lehmann@charite.de",
+                    "laboratory": "Molecular Epidemiology Unit, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany. .",
+                    "country": "Germany",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0001-8875-5587"
+                },
+                {
+                    "name": "Christian,Conrad",
+                    "email": "christian.conrad@charite.de",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany. .",
+                    "country": "Germany",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0001-7036-342X"
+                },
+                {
+                    "name": "Leif-Erik,Sander",
+                    "email": "leif-erik.sander@charite.de",
+                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany. .",
+                    "country": "Germany",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-0476-9947"
+                },
+                {
+                    "name": "Roland,Eils",
+                    "email": "roland.eils@charite.de",
+                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany. .",
+                    "country": "Germany",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-0034-4036"
+                }
+            ]
+        },
+        "added_to_index": 1610626457,
+        "uuid": "7ac8822c-4ef0-4194-adf0-74290611b1c6",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "LongitudinalCOVID19PeripheralBlood",
+                "project_title": "Longitudinal Multi-omics Analyses Identify Responses of Megakaryocytes, Erythroid Cells, and Plasmablasts as Hallmarks of Severe COVID-19.",
+                "project_description": "Temporal resolution of cellular features associated with a severe COVID-19 disease trajectory is needed for understanding skewed immune responses and defining predictors of outcome. Here, we performed a longitudinal multi-omics study using a two-center cohort of 14 patients. We analyzed the bulk transcriptome, bulk DNA methylome, and single-cell transcriptome (>358,000 cells, including BCR profiles) of peripheral blood samples harvested from up to 5 time points. Validation was performed in two independent cohorts of COVID-19 patients. Severe COVID-19 was characterized by an increase of proliferating, metabolically hyperactive plasmablasts. Coinciding with critical illness, we also identified an expansion of interferon-activated circulating megakaryocytes and increased erythropoiesis with features of hypoxic signaling. Megakaryocyte- and erythroid-cell-derived co-expression modules were predictive of fatal disease outcome. The study demonstrates broad cellular effects of SARS-CoV-2 infection beyond adaptive immune cells and provides an entry point toward developing biomarkers and targeted treatments of patients with COVID-19."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": [
+                "GSE161777",
+                "GSE161678"
+            ],
+            "supplementary_links": [
+                "https://beta.fastgenomics.org/p/565003",
+                "https://github.com/Systems-Immunology-IKMB/COVIDOMICS"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1016/j.immuni.2020.11.017",
+                    "url": "http://dx.doi.org/10.1016/j.immuni.2020.11.017",
+                    "journal_title": "Immunity",
+                    "title": "Longitudinal Multi-omics Analyses Identify Responses of Megakaryocytes, Erythroid Cells, and Plasmablasts as Hallmarks of Severe COVID-19.",
+                    "authors": [
+                        "Bernardes JP",
+                        "Mishra N",
+                        "Tran F",
+                        "Bahmer T",
+                        "Best L",
+                        "Blase JI",
+                        "Bordoni D",
+                        "Franzenburg J",
+                        "Geisen U",
+                        "Josephs-Spaulding J",
+                        "K\u00f6hler P",
+                        "K\u00fcnstner A",
+                        "Rosati E",
+                        "Aschenbrenner AC",
+                        "Bacher P",
+                        "Baran N",
+                        "Boysen T",
+                        "Brandt B",
+                        "Bruse N",
+                        "D\u00f6rr J",
+                        "Dr\u00e4ger A",
+                        "Elke G",
+                        "Ellinghaus D",
+                        "Fischer J",
+                        "Forster M",
+                        "Franke A",
+                        "Franzenburg S",
+                        "Frey N",
+                        "Friedrichs A",
+                        "Fu\u00df J",
+                        "Gl\u00fcck A",
+                        "Hamm J",
+                        "Hinrichsen F",
+                        "Hoeppner MP",
+                        "Imm S",
+                        "Junker R",
+                        "Kaiser S",
+                        "Kan YH",
+                        "Knoll R",
+                        "Lange C",
+                        "Laue G",
+                        "Lier C",
+                        "Lindner M",
+                        "Marinos G",
+                        "Markewitz R",
+                        "Nattermann J",
+                        "Noth R",
+                        "Pickkers P",
+                        "Rabe KF",
+                        "Renz A",
+                        "R\u00f6cken C",
+                        "Rupp J",
+                        "Schaffarzyk A",
+                        "Scheffold A",
+                        "Schulte-Schrepping J",
+                        "Schunk D",
+                        "Skowasch D",
+                        "Ulas T",
+                        "Wandinger KP",
+                        "Wittig M",
+                        "Zimmermann J",
+                        "Busch H",
+                        "Hoyer BF",
+                        "Kaleta C",
+                        "Heyckendorf J",
+                        "Kox M",
+                        "Rybniker J",
+                        "Schreiber S",
+                        "Schultze JL",
+                        "Rosenstiel P",
+                        "HCA Lung Biological Network",
+                        "Deutsche COVID-19 Omics Initiative (DeCOI)."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Joana,P,Bernardes",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Neha,Mishra",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Florian,Tran",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Thomas,Bahmer",
+                    "laboratory": "Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Lena,Best",
+                    "laboratory": "Institute for Experimental Medicine, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0003-2772-153X"
+                },
+                {
+                    "name": "Johanna,I,Blase",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Dora,Bordoni",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Jeanette,Franzenburg",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Ulf,Geisen",
+                    "laboratory": "Section for Rheumatology, Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-6583-460X"
+                },
+                {
+                    "name": "Jonathan,Josephs-Spaulding",
+                    "laboratory": "Institute for Experimental Medicine, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Philipp,K\u00f6hler",
+                    "laboratory": "Department I of Internal Medicine, University of Cologne and University Hospital Cologne"
+                },
+                {
+                    "name": "Axel,K\u00fcnstner",
+                    "laboratory": "Center for Molecular Medicine Cologne (CMMC), University of Cologne, 50931, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Elisa,Rosati",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Anna,C,Aschenbrenner",
+                    "laboratory": "Genomics & Immunoregulation, Life & Medical Sciences (LIMES) Institute, University of Bonn, 53115 Bonn, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Petra,Bacher",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Nathan,Baran",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Teide,Boysen",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Burkhard,Brandt",
+                    "laboratory": "Institute of Clinical Chemistry, University Medical Center Schleswig-Holstein, 24105 Kiel and 23562 L\u00fcbeck, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Niklas,Bruse",
+                    "laboratory": "Departments of Intensive Care Medicine and Radboud Center for Infectious Diseases (RCI), Radboud University Medical Center, 6500 HB Nijmegen, the Netherlands.",
+                    "country": "Netherlands"
+                },
+                {
+                    "name": "Jonathan,D\u00f6rr",
+                    "laboratory": "Section for Rheumatology, Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Andreas,Dr\u00e4ger",
+                    "laboratory": "Department of Computer Science, Institute for Bioinformatics and Medical Informatics (IBMI), University of T\u00fcbingen and German Center for Infection Research (DZIF), Partner site T\u00fcbingen, 72076 T\u00fcbingen, Germany.",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-1240-5553"
+                },
+                {
+                    "name": "Gunnar,Elke",
+                    "laboratory": "Department of Anaesthesiology and Intensive Care Medicine, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "David,Ellinghaus",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Julia,Fischer",
+                    "laboratory": "Department I of Internal Medicine, University of Cologne and University Hospital Cologne"
+                },
+                {
+                    "name": "Michael,Forster",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Andre,Franke",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "S\u00f6ren,Franzenburg",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Norbert,Frey",
+                    "laboratory": "Department of Internal Medicine III, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Anette,Friedrichs",
+                    "laboratory": "Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Janina,Fu\u00df",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Andreas,Gl\u00fcck",
+                    "laboratory": "Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Jacob,Hamm",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Finn,Hinrichsen",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Marc,P,Hoeppner",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Simon,Imm",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Ralf,Junker",
+                    "laboratory": "Institute of Clinical Chemistry, University Medical Center Schleswig-Holstein, 24105 Kiel and 23562 L\u00fcbeck, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Sina,Kaiser",
+                    "laboratory": "Section for Rheumatology, Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Ying,H,Kan",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Rainer,Knoll",
+                    "laboratory": "Systems Medicine, German Center for Neurodegenerative Diseases (DZNE), 53127 Bonn, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Christoph,Lange",
+                    "laboratory": "Division of Clinical Infectious Diseases, Research Center Borstel and German Center for Infection Research (DZIF), TTU-TB, 23845 Borstel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Georg,Laue",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Clemens,Lier",
+                    "laboratory": "Institute of Clinical Chemistry, University Medical Center Schleswig-Holstein, 24105 Kiel and 23562 L\u00fcbeck, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Matthias,Lindner",
+                    "laboratory": "Department of Anaesthesiology and Intensive Care Medicine, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Georgios,Marinos",
+                    "laboratory": "Institute for Experimental Medicine, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Robert,Markewitz",
+                    "laboratory": "Institute of Clinical Chemistry, University Medical Center Schleswig-Holstein, 24105 Kiel and 23562 L\u00fcbeck, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Jacob,Nattermann",
+                    "laboratory": "Department of Internal Medicine I and German Center for Infection Research (DZIF), University of Bonn, 53217 Bonn, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Rainer,Noth",
+                    "laboratory": "Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Peter,Pickkers",
+                    "laboratory": "Departments of Intensive Care Medicine and Radboud Center for Infectious Diseases (RCI), Radboud University Medical Center, 6500 HB Nijmegen, the Netherlands.",
+                    "country": "Netherlands"
+                },
+                {
+                    "name": "Klaus,F,Rabe",
+                    "laboratory": "Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Alina,Renz",
+                    "laboratory": "Department of Computer Science, Institute for Bioinformatics and Medical Informatics (IBMI), University of T\u00fcbingen and German Center for Infection Research (DZIF), Partner site T\u00fcbingen, 72076 T\u00fcbingen, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Christoph,R\u00f6cken",
+                    "laboratory": "Department of Pathology, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Jan,Rupp",
+                    "laboratory": "Department of Infectious Diseases and Microbiology, University of L\u00fcbeck, 23562 L\u00fcbeck, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Annika,Schaffarzyk",
+                    "laboratory": "Section for Rheumatology, Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Alexander,Scheffold",
+                    "laboratory": "Institute of Immunology, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Jonas,Schulte-Schrepping",
+                    "laboratory": "Genomics & Immunoregulation, Life & Medical Sciences (LIMES) Institute, University of Bonn, 53115 Bonn, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Domagoj,Schunk",
+                    "laboratory": "Department for Emergency Medicine, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Dirk,Skowasch",
+                    "laboratory": "Section of Pneumology, Department of Internal Medicine II, University Hospital Bonn, , 53127 Bonn, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Thomas,Ulas",
+                    "laboratory": "Genomics & Immunoregulation, Life & Medical Sciences (LIMES) Institute, University of Bonn, 53115 Bonn, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Klaus-Peter,Wandinger",
+                    "laboratory": "Institute of Clinical Chemistry, University Medical Center Schleswig-Holstein, 24105 Kiel and 23562 L\u00fcbeck, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Michael,Wittig",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Johannes,Zimmermann",
+                    "laboratory": "Institute for Experimental Medicine, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Hauke,Busch",
+                    "laboratory": "L\u00fcbeck Institute of Experimental Dermatology, University of L\u00fcbeck, 23562 L\u00fcbeck, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Bimba,F,Hoyer",
+                    "laboratory": "Section for Rheumatology, Department of Internal Medicine I, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Christoph,Kaleta",
+                    "laboratory": "Institute for Experimental Medicine, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Jan,Heyckendorf",
+                    "laboratory": "Department of Internal Medicine III, University Medical Center Schleswig-Holstein, 24105 Kiel, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Matthijs,Kox",
+                    "laboratory": "Genomics & Immunoregulation, Life & Medical Sciences (LIMES) Institute, University of Bonn, 53115 Bonn, Germany.",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Jan,Rybniker",
+                    "laboratory": "Department I of Internal Medicine, University of Cologne and University Hospital Cologne"
+                },
+                {
+                    "name": "Stefan,Schreiber",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Joachim,L,Schultze",
+                    "laboratory": "Genomics & Immunoregulation, Life & Medical Sciences (LIMES) Institute, University of Bonn, 53115 Bonn, Germany",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Philip,Rosenstiel",
+                    "email": "p.rosenstiel@mucosa.de",
+                    "laboratory": "Institute of Clinical Molecular Biology, Kiel University and University Medical Center Schleswig-Holstein, 24105 Kiel, Germany. ",
+                    "country": "Germany",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "HCA Lung Biological Network"
+                },
+                {
+                    "name": "Deutsche COVID-19 Omics Initiative (DeCOI)"
+                }
+            ]
+        },
+        "added_to_index": 1610626458,
+        "uuid": "cb0f2027-d080-49fc-bce4-1d5b44eba1c1",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "HealthyPsoriasisDevelopingSkin",
+                "project_title": "Poised cell circuits in human skin are activated in disease",
+                "project_description": "The human skin confers biophysical and immunological protection through a complex cellular network that is established early in development. We profiled ~500,000 single cells using RNA-sequencing from healthy adult and developing skin, and skin from patients with atopic dermatitis and psoriasis. Our findings reveal a predominance of innate lymphoid cells and macrophages in developing skin in contrast to T cells and migratory dendritic cells in adult skin. We demonstrate dual keratinocyte differentiation trajectories and activated cellular circuits comprising vascular endothelial cells mediating immune cell trafficking, disease-specific clonally expanded IL13/IL22 and IL17A/F -expressing lymphocytes, epidermal IL23 -expressing dendritic cells and inflammatory keratinocytes in disease. Our findings provide key insights into the dynamic cellular landscape of human skin in health and disease. <h4>One Sentence Summary</h4> Single cell atlas of human skin reveals cell circuits which are quantitatively and qualitatively reconfigured in inflammatory skin disease."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1101/2020.11.05.369363",
+                    "url": "http://dx.doi.org/10.1101/2020.11.05.369363",
+                    "journal_title": "bioRxiv",
+                    "title": "Poised cell circuits in human skin are activated in disease",
+                    "authors": [
+                        "Reynolds G",
+                        "Vegh P",
+                        "Fletcher J",
+                        "Poyner EF",
+                        "Stephenson E",
+                        "Goh I",
+                        "Botting RA",
+                        "Huang N",
+                        "Olabi B",
+                        "Dubois A",
+                        "Dixon D",
+                        "Green K",
+                        "Maunder D",
+                        "Engelbert J",
+                        "Efremova M",
+                        "Pola\u0144ski K",
+                        "Jardine L",
+                        "Jones C",
+                        "Ness T",
+                        "Horsfall D",
+                        "McGrath J",
+                        "Carey C",
+                        "Popescu D",
+                        "Webb S",
+                        "Wang X",
+                        "Sayer B",
+                        "Park J",
+                        "Negri VA",
+                        "Belokhvostova D",
+                        "Lynch M",
+                        "McDonald D",
+                        "Filby A",
+                        "Hagai T",
+                        "Meyer KB",
+                        "Husain A",
+                        "Coxhead J",
+                        "Vento-Tormo R",
+                        "Behjati S",
+                        "Lisgo S",
+                        "Villani A",
+                        "Bacardit J",
+                        "Jones P",
+                        "O\u2019Toole EA",
+                        "Ogg GS",
+                        "Rajan N",
+                        "Reynolds NJ",
+                        "Teichmann SA",
+                        "Watt F",
+                        "Haniffa M."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Gary,Reynolds"
+                },
+                {
+                    "name": "Peter,Vegh"
+                },
+                {
+                    "name": "James,Fletcher"
+                },
+                {
+                    "name": "Elizabeth,F.M.,Poyner"
+                },
+                {
+                    "name": "Emily,Stephenson"
+                },
+                {
+                    "name": "Issac,Goh"
+                },
+                {
+                    "name": "Rachel,Botting"
+                },
+                {
+                    "name": "Ni,Huang"
+                },
+                {
+                    "name": "Bayanne,Olabi"
+                },
+                {
+                    "name": "Anna,Dubois"
+                },
+                {
+                    "name": "David,Dixon"
+                },
+                {
+                    "name": "Kile,Green"
+                },
+                {
+                    "name": "Daniel,Maunder"
+                },
+                {
+                    "name": "Justin,Engelbert"
+                },
+                {
+                    "name": "Mirjana,Efremova"
+                },
+                {
+                    "name": "Krzysztof,Pola\u0144ski"
+                },
+                {
+                    "name": "Laura,Jardine"
+                },
+                {
+                    "name": "Claire,Jones"
+                },
+                {
+                    "name": "Thomas,Ness"
+                },
+                {
+                    "name": "Dave,Horsfall"
+                },
+                {
+                    "name": "Jim,McGrath"
+                },
+                {
+                    "name": "Christopher,Carey"
+                },
+                {
+                    "name": "Dorin-Mirel,Popescu"
+                },
+                {
+                    "name": "Simone,Webb"
+                },
+                {
+                    "name": "Xiao-nong,Wang"
+                },
+                {
+                    "name": "Ben,Sayer"
+                },
+                {
+                    "name": "Jong-Eun,Park"
+                },
+                {
+                    "name": "Victor,Negri"
+                },
+                {
+                    "name": "Daria,Belokhvostova"
+                },
+                {
+                    "name": "Magnus,Lynch"
+                },
+                {
+                    "name": "David,McDonald"
+                },
+                {
+                    "name": "Andrew,Filby"
+                },
+                {
+                    "name": "Tzachi,Hagai"
+                },
+                {
+                    "name": "Kerstin,Meyer"
+                },
+                {
+                    "name": "Akhtar,Husain"
+                },
+                {
+                    "name": "Jonathan,Coxhead"
+                },
+                {
+                    "name": "Roser,Vento-Tormo"
+                },
+                {
+                    "name": "Sam,Behjati"
+                },
+                {
+                    "name": "Steven,Lisgo"
+                },
+                {
+                    "name": "Alexandra-Chlo\u00e9,Villani"
+                },
+                {
+                    "name": "Jaume,Bacardit"
+                },
+                {
+                    "name": "Phil,Jones"
+                },
+                {
+                    "name": "Edel,O\u2019Toole"
+                },
+                {
+                    "name": "Graham,Ogg"
+                },
+                {
+                    "name": "Neil,Rajan"
+                },
+                {
+                    "name": "Nick,Reynolds"
+                },
+                {
+                    "name": "Sarah,Teichmann"
+                },
+                {
+                    "name": "Fiona,Watt"
+                },
+                {
+                    "name": "Muzlifah,Haniffa"
+                }
+            ]
+        },
+        "added_to_index": 1610626460,
+        "uuid": "d4222caa-3813-4f66-a25a-572c1d287c1d",
         "dcp_url": null
     }
 ]
