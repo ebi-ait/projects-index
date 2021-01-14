@@ -4,11 +4,11 @@ import requests, json, argparse
 INDEXED_FIELDS = [
     {
         "field": "content.project_core.project_title",
-        "type": "string"
+        "type": "text_general"
     },
     {
         "field": "content.project_core.project_description",
-        "type": "string"
+        "type": "text_general"
     },
     {
         "field": "uuid",
@@ -16,15 +16,18 @@ INDEXED_FIELDS = [
     },
     {
         "field": "content.contributors.names",
-        "type": "strings"
+        "type": "text_general",
+        "multivalued": "true"
     },
     {
         "field": "content.contributors.institutions",
-        "type": "strings"
+        "type": "text_general",
+        "multivalued": "true"
     },
      {
         "field": "content.contributors.laboratories",
-        "type": "strings"
+        "type": "text_general",
+        "multivalued": "true"
     },
     {
         "field": "content.array_express_accessions",
@@ -98,17 +101,16 @@ def flatten_json(data):
 
 def index_data(solr_url, core, data):
     required_fields_formatted = [f"/{x['field']}" for x in INDEXED_FIELDS]
-    print(required_fields_formatted)
     
     print(f"Indexing {len(data)} projects...")
     
     for data_point in data:
         flattened_json = flatten_json(data_point)
-        print(flattened_json)
         res = requests.post(
             f"{solr_url}/{core}/update/json/docs",
             params={
                 "f": required_fields_formatted,
+                "commit": "true"
             },
             json=flattened_json
         ).json()
