@@ -49,6 +49,7 @@
         import Search from "./search.riot";
         import resolve from "../resolver";
         import compose from "lodash/fp/compose";
+        import query from "../query";
 
         export default {
             onMounted() {
@@ -80,32 +81,28 @@
                 }
                 return data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
             },
-            getFilteredBySearch: (val = "") => data => {
-                return data.filter(
-                    dataPoint => [                             
-                            dataPoint["contributors"].map(contributor => contributor.name).join(", "),
-                            dataPoint["uuid"],
-                            dataPoint["project_core"]["project_title"],
-                            dataPoint["insdc_project_accessions"].join(" "),
-                            dataPoint["array_express_accessions"].join(" "),
-                            dataPoint["ega_studies_accessions"].join(" "),
-                            dataPoint["ega_datasets_accessions"].join(" "),
-                            dataPoint["dcp_url"] ? "dcp" : ""
-                        ].map(x => x.toLowerCase()).join(" ").includes(val.toLowerCase())
-                );
-            },
             getFilteredByCategories: (filterInDcp) => data => {
                 return data.filter(dataPoint => filterInDcp ? !!dataPoint["dcp_url"]: true);
             },
             applyFiltering() {
-                const data = compose(
-                    this.getSorted(this.state.sort),
-                    this.getFilteredBySearch(this.state.searchVal),
-                    this.getFilteredByCategories(this.state.filterInDcp)
-                )(this.state.unfilteredData);
-                this.update({
-                    data
-                })
+                return new Promise(async (resolve, reject) => {
+                    let data = this.state.unfilteredData;
+
+                    if(this.state.searchVal) {
+                        const filteredUuids = await query(this.state.searchVal);
+                        data = data.filter(project => filteredUuids.includes(project.uuid))
+                    }
+
+                    data = compose(
+                        this.getSorted(this.state.sort),
+                        this.getFilteredByCategories(this.state.filterInDcp)
+                    )(data);
+                    
+                    this.update({
+                        data
+                    });
+                    resolve();
+                });
             },
             search(val) {
                 this.update({

@@ -1,0 +1,1 @@
+./index.py -i "../data/data.json" -s "http://wp-np2-40.ebi.ac.uk:8983/solr"
