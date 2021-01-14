@@ -42,6 +42,8 @@ _Note: Running `./scraper.py --help` will show other options available. In parti
   - Different config for building (with Parcel) and unit tests (with Jest)
 - [Yarn](https://yarnpkg.com/)
   - Package manager (instead of npm)
+- [Solr](https://lucene.apache.org/solr/)
+  - For search (in dev)
 
 ### Design
 
