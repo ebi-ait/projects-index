@@ -13230,7 +13230,6 @@
                     "country": "France",
                     "orcid_id": "0000-0001-7585-472X"
                 },
-                {},
                 {
                     "name": "Laurent,Mailly",
                     "laboratory": "Institut National de la Sant\u00e9 et de la Recherche M\u00e9dicale, Unit\u00e9 1110, Institut de Recherche sur les Maladies Virales et H\u00e9patiques, Strasbourg, France.",
@@ -13253,17 +13252,17 @@
                 },
                 {
                     "name": "Thomas,F,Baumert",
-                    "laboratory": "Institut National de la Sant\u00e9 et de la Recherche M\u00e9dicale, Unit\u00e9 1110, Institut de Recherche sur les Maladies Virales et H\u00e9patiques, Strasbourg, France. .",
-                    "corresponding_contributor": true,
                     "email": "thomas.baumert@unistra.fr",
-                    "country": "France"
+                    "laboratory": "Institut National de la Sant\u00e9 et de la Recherche M\u00e9dicale, Unit\u00e9 1110, Institut de Recherche sur les Maladies Virales et H\u00e9patiques, Strasbourg, France. .",
+                    "country": "France",
+                    "corresponding_contributor": true
                 },
                 {
                     "name": "Dominic,Gr\u00fcn",
-                    "laboratory": "Max-Planck-Institute of Immunobiology and Epigenetics, Freiburg, Germany. .",
-                    "corresponding_contributor": true,
                     "email": "gruen@ie-freiburg.mpg.de",
-                    "country": "Germany"
+                    "laboratory": "Max-Planck-Institute of Immunobiology and Epigenetics, Freiburg, Germany. .",
+                    "country": "Germany",
+                    "corresponding_contributor": true
                 }
             ]
         },
@@ -15855,11 +15854,8 @@
                     "corresponding_contributor": true
                 },
                 {
-                    "name": "HCA Lung Biological Network. Electronic address: lung-network@humancellatlas.org",
-                    "institution": "not applicable"
-                },
-                {
                     "name": "HCA Lung Biological Network",
+                    "email": "lung-network@humancellatlas.org",
                     "institution": "not applicable"
                 }
             ]
