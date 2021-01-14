@@ -15,9 +15,6 @@ const formatTimestamp = (dataPoint) => {
   dataPoint["added_to_index_formatted"] = new Date(
     dataPoint["added_to_index"] * 1000
   ).toLocaleDateString("en-gb", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
     timeZone: "utc",
   });
   return dataPoint;
