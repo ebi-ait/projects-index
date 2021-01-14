@@ -15,15 +15,15 @@ INDEXED_FIELDS = [
         "type": "string"
     },
     {
-        "field": "content.contributors.name",
+        "field": "content.contributors.names",
         "type": "strings"
     },
     {
-        "field": "content.contributors.institution",
+        "field": "content.contributors.institutions",
         "type": "strings"
     },
      {
-        "field": "content.contributors.laboratory",
+        "field": "content.contributors.laboratories",
         "type": "strings"
     },
     {
@@ -65,8 +65,26 @@ def create_schema(solr_url, core, data):
         
         if 'errors' in res:
             raise Exception(res['errors'])
-def flatten_json(y):
+
+def flatten_json(data):
     out = {}
+
+    data["content.contributors.names"] = set()
+    data["content.contributors.institutions"] = set()
+    data["content.contributors.laboratories"] = set()
+
+    for contributor in data["content"]["contributors"]:
+        if "name" in contributor:
+            data["content.contributors.names"].add(contributor["name"])
+        if "institution" in contributor:
+            data["content.contributors.institutions"].add(contributor["institution"])
+        if "laboratory" in contributor:
+            data["content.contributors.laboratories"].add(contributor["laboratory"])
+    
+    del data["content"]["contributors"]
+    data["content.contributors.names"] = list(data["content.contributors.names"])
+    data["content.contributors.institutions"] = list(data["content.contributors.institutions"])
+    data["content.contributors.laboratories"] = list(data["content.contributors.laboratories"])
 
     def flatten(x, name=''):
         if type(x) is dict:
@@ -75,16 +93,11 @@ def flatten_json(y):
         else:
             out[name[:-1]] = x
 
-    flatten(y)
+    flatten(data)
     return out
 
 def index_data(solr_url, core, data):
-    required_fields = [x["field"] for x in INDEXED_FIELDS]
-    split_on = "content.contributors"
-    required_fields_formatted = []
-    for field in required_fields:
-        split = field.replace(f'{split_on}.', f'{split_on}/')
-        required_fields_formatted.append(f'{field}:/{split}')
+    required_fields_formatted = [f"/{x['field']}" for x in INDEXED_FIELDS]
     print(required_fields_formatted)
     
     print(f"Indexing {len(data)} projects...")
@@ -95,7 +108,6 @@ def index_data(solr_url, core, data):
         res = requests.post(
             f"{solr_url}/{core}/update/json/docs",
             params={
-                "split": f'/{split_on}',
                 "f": required_fields_formatted,
             },
             json=flattened_json
@@ -109,7 +121,7 @@ if __name__ == "__main__":
     description = "Index data in Solr for the projects index. This will also create the relevent schema. Make sure Solr is up and running before executing this."
     parser = argparse.ArgumentParser(description=description)
 
-    parser.add_argument("-i", "--input", help="File containing JSON data to index", default="data.json")
+    parser.add_argument("-i", "--input", help="File containing JSON data to index")
     parser.add_argument("-s", "--url", help="URL to Solr instance", default="http://localhost:8983/solr")
     parser.add_argument("-x", "--core", help="Name of core/collection", default="projects")
 
@@ -120,7 +132,7 @@ if __name__ == "__main__":
         if not data:
             raise IOError("Input file is empty")
 
-        # create_schema(args.url, args.core, data)
-        index_data(args.url, args.core, data[:10])
+        create_schema(args.url, args.core, data)
+        index_data(args.url, args.core, data)
 
     print("Indexing complete. It will take a few minutes for Solr to complete searching.")
