@@ -48,6 +48,7 @@
         import DataTable from "./table.riot";
         import Search from "./search.riot";
         import resolve from "../resolver";
+        import compose from "lodash/fp/compose";
 
         export default {
             onMounted() {
@@ -61,6 +62,7 @@
                             timestampDesc: true
                         },
                         filterInDcp: false,
+                        searchVal: "",
                         loading: false
                     });
                 }).catch(e => {
@@ -71,21 +73,15 @@
                     })
                 })
             },
-            setSort(sortBy) {
-                this.update({
-                    sort: sortBy,
-                    data: this.sortData(this.state.data, sortBy)
-                });
-            },
-            sortData: (data, { timestampDesc }) => {
+            getSorted: ({ timestampDesc }) => data => {
                 // Arrow function as this is "static" (pure function) and should not change state
                 if (timestampDesc) {
                     return data.sort((a, b) => a.added_to_index <= b.added_to_index ? 1 : -1);
                 }
                 return data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
             },
-            search(val) {
-                const filtered = this.state.unfilteredData.filter(
+            getFilteredBySearch: (val = "") => data => {
+                return data.filter(
                     dataPoint => [                             
                             dataPoint["contributors"].map(contributor => contributor.name).join(", "),
                             dataPoint["uuid"],
@@ -97,25 +93,50 @@
                             dataPoint["dcp_url"] ? "dcp" : ""
                         ].map(x => x.toLowerCase()).join(" ").includes(val.toLowerCase())
                 );
+            },
+            getFilteredByCategories: (filterInDcp) => data => {
+                return data.filter(dataPoint => filterInDcp ? !!dataPoint["dcp_url"]: true);
+            },
+            applyFiltering() {
+                const data = compose(
+                    this.getSorted(this.state.sort),
+                    this.getFilteredBySearch(this.state.searchVal),
+                    this.getFilteredByCategories(this.state.filterInDcp)
+                )(this.state.unfilteredData);
                 this.update({
-                    data: this.sortData(filtered, this.state.sort)
+                    data
+                })
+            },
+            search(val) {
+                this.update({
+                    searchVal: val,
                 });
+                this.applyFiltering()
+
             },
             toggleFilterInDcp() {
-                if (this.state.filterInDcp) {
-                    this.resetData();
-                    return;
-                }
                 this.update({
-                    data: this.state.unfilteredData.filter(dataPoint => !!dataPoint["dcp_url"]),
-                    filterInDcp: true
+                    filterInDcp: !this.state.filterInDcp
                 });
+                this.applyFiltering()
+
+            },
+            setSort(sortBy) {
+                this.update({
+                    sort: sortBy,
+                });
+                this.applyFiltering()
+
             },
             resetData() {
                 this.update({
-                    data: this.state.unfilteredData,
-                    filterInDcp: false
+                    filterInDcp: false,
+                    searchVal: "",
+                    sort: {
+                        timestampDesc: true
+                    },
                 });
+                this.applyFiltering()
             },
             components: {
                 DataTable,
