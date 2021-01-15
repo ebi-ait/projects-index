@@ -8,10 +8,13 @@ Data for the UI is in `data/data.json` and is created/updated by running the `sc
 
 **You will need Python3 to run the script**
 
+1. Create a new branch
 1. `cd data`
-2. Update `published_uuids.txt` as per requirements
-3. `./scraper.py`
-4. Commit and push the changes in git
+1. Update `published_uuids.txt` as per requirements
+1. `./scraper.py`
+1. Commit and push the changes in git
+1. Create a pull request and merge once unit tests have passed
+1. This will be automatically deployed
 
 _Note: Running `./scraper.py --help` will show other options available. In particular the `--clean` flag may be useful._
 
