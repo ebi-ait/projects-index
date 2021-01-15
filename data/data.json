@@ -13379,5 +13379,387 @@
         "added_to_index": 1610718656,
         "uuid": "a7800f1b-d2d0-4a65-861f-fe1612a73162",
         "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "HumanHematopoieticProfiling",
+                "project_title": "Profiling of CD34+ cells from human bone marrow to understand hematopoiesis",
+                "project_description": "Differentiation is among the most fundamental processes in cell biology. Single cell RNA-seq studies have demonstrated that differentiation is a continuous process and in particular cell states are observed to reside on largely continuous spaces. We have developed Palantir, a graph based algorithm to model continuities in cell state transitions and cell fate choices. Modeling differentiation as a Markov chain, Palantir determines probabilities of reaching terminal states from cells in each intermediate state. The entropy of these probabilities represent the differentiation potential of the cell in the corresponding state. Applied to single cell RNA-seq dataset of CD34+ hematopoietic cells from human bone marrows, Palantir accurately identified key events leading up to cell fate commitment. Integration with ATAC-seq data from bulk sorted populations helped identify key regulators that correlate with cell fate specification and commitment."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "ERP120467"
+            ],
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://github.com/dpeerlab/Palantir/"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1038/s41587-019-0068-4",
+                    "url": "http://dx.doi.org/10.1038/s41587-019-0068-4",
+                    "journal_title": "Nature Biotechnology",
+                    "title": "Characterization of cell fate probabilities in single-cell data with Palantir",
+                    "authors": [
+                        "Setty M",
+                        "Kieseliovas V",
+                        "Levine J",
+                        "Gayoso A",
+                        "Mazutis L",
+                        "Pe'er D"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Manu,, Setty",
+                    "email": "manu.talanki@gmail.com",
+                    "phone": "9175451407",
+                    "institution": "Sloan Kettering Institute",
+                    "laboratory": "Pe'er",
+                    "address": "Memorial Sloan Kettering Cancer Center, 1275 York Avenue, New York, NY 10065",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Vaidotas,, Kiseliovas",
+                    "email": "vaidotaskiseliovas@yahoo.com",
+                    "phone": "6463480473",
+                    "institution": "Sloan Kettering Institute",
+                    "laboratory": "Pe'er",
+                    "address": "Memorial Sloan Kettering Cancer Center, 1275 York Avenue, New York, NY 10065",
+                    "country": "USA"
+                },
+                {
+                    "name": "Dana,, Pe'er",
+                    "email": "peerster@gmail.com",
+                    "phone": "646-888-2619",
+                    "institution": "Sloan Kettering Institute",
+                    "laboratory": "Pe'er",
+                    "address": "Memorial Sloan Kettering Cancer Center, 1275 York Avenue, New York, NY 10065",
+                    "country": "USA",
+                    "project_role": {
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator",
+                        "text": "principal investigator"
+                    },
+                    "orcid_id": "0000-0002-9259-8817",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1610719927,
+        "uuid": "091cf39b-01bc-42e5-9437-f419a66c8a45",
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/091cf39b-01bc-42e5-9437-f419a66c8a45?catalog=dcp2"
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "AdultHemOrgans",
+                "project_title": "Transcriptomic characterisation of haematopoietic stem and progenitor cells from human adult bone marrow, spleen and peripheral blood",
+                "project_description": "Haematopoietic stem and progenitor cells (HSPCs), the precursors of all blood cells, reside predominantly in the bone marrow (BM). Recent evidence suggests that other anatomical sites may contribute significantly to blood production, but the cellular, molecular and functional composition of extramedullary HSPC pools remains unexplored. Here, we comprehensively characterized the single-cell composition of the adult human HSPC pool within paired BM, spleen and peripheral blood (PB) from two healthy organ donors. 10x scRNA-seq of 30000 HSPCs from all three sites defined transcriptionally distinct cell clusters that correspond to precursors of all haematopoietic lineages but also stem cells (HSCs). Although most clusters were common to all organs, their proportions significantly differed between tissues. Altogether our data provides evidence that different organs sustain distinct topologies of the hematopoietic hierarchy, originating from HSC subsets with distinct lineage preferences.\n\nThis dataset is part of the Human Cell Atlas."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1101/2020.01.26.919753",
+                    "url": "http://dx.doi.org/10.1101/2020.01.26.919753",
+                    "journal_title": "bioRxiv",
+                    "title": "Quantitative and molecular differences distinguish adult human medullary and extramedullary haematopoietic stem and progenitor cell landscapes.",
+                    "authors": [
+                        "Mende N",
+                        "Bastos H",
+                        "Santoro A",
+                        "Sham K",
+                        "Mahbubani K",
+                        "Curd A",
+                        "Takizawa H",
+                        "Wilson N",
+                        "G\u00f6ttgens B",
+                        "Saeb-Parsy K",
+                        "Laurenti E"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Hugo,P,Bastos",
+                    "email": "hpb29@cam.ac.uk",
+                    "institution": "Wellcome - MRC Cambridge Stem Cell Institute",
+                    "laboratory": "Laboratory of Dr Elisa Laurenti",
+                    "address": "Jeffrey Cheah Biomedical Centre,\nPuddicombe Way, CB2 0AW, Cambridge",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "bioinformatician",
+                        "ontology": "EFO:0009742",
+                        "ontology_label": "computational scientist"
+                    }
+                },
+                {
+                    "name": "Nicole,,Mende",
+                    "email": "nm636@cam.ac.uk",
+                    "phone": "+44 (0)1223 62118",
+                    "institution": "Wellcome - MRC Cambridge Stem Cell Institute",
+                    "laboratory": "Laboratory of Dr Elisa Laurenti",
+                    "address": "Jeffrey Cheah Biomedical Centre,\nPuddicombe Way, CB2 0AW, Cambridge",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    },
+                    "orcid_id": "0000-0002-5078-2333"
+                },
+                {
+                    "name": "Krishnaa,,Mahbubani",
+                    "email": "ktam2@cam.ac.uk",
+                    "institution": "University of Cambridge",
+                    "laboratory": "Cambridge Biorepository for Translational Medicine",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    },
+                    "orcid_id": "0000-0002-1327-2334"
+                },
+                {
+                    "name": "Abbie,,Curd",
+                    "email": "amc244@cam.ac.uk",
+                    "institution": "University of Cambridge",
+                    "laboratory": "Cambridge Biorepository for Translational Medicine",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Kourosh,,Saeb-Parsy",
+                    "email": "ks10014@cam.ac.uk",
+                    "institution": "University of Cambridge",
+                    "laboratory": "Department of Surgery",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "principal investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    },
+                    "orcid_id": "0000-0002-0633-3696"
+                },
+                {
+                    "name": "Elisa,,Laurenti",
+                    "email": "el422@cam.ac.uk",
+                    "phone": "+44 (0) 1223 762044",
+                    "institution": "Wellcome - MRC Cambridge Stem Cell Institute",
+                    "laboratory": "Department of Haematology",
+                    "address": "Jeffrey Cheah Biomedical Centre,\nPuddicombe Way, CB2 0AW, Cambridge",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "principal investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    },
+                    "orcid_id": "0000-0002-9917-9092"
+                }
+            ]
+        },
+        "added_to_index": 1610719928,
+        "uuid": "455b46e6-d8ea-4611-861e-de720a562ada",
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/455b46e6-d8ea-4611-861e-de720a562ada?catalog=dcp2"
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "snRNA-seq_for_human_retina",
+                "project_title": "Transcriptomic classification of human retinal cell types with single-nuclei RNA-seq.",
+                "project_description": "The human neural retina is a heterogenous tissue that is an ordered array of approximately 70 different types of neurons, each playing a unique role in processing the visual signal. Currently, the transcriptomic-level classification of human retinal cell types is still limited. Using single-nuclei RNA-seq, a comprehensive single-cell profiling study has been carried out for healthy human retina from four individual donors. With the transcriptomic profiles for a total of over 200K nuclei being generated, we aim at revealing the transcriptome profiles for most subtypes of the retinal cells. Comparison with previous published macaque and mice dataset indicates an overall good alignment among species. In addition, the gene expression profile that is unique to human has been discovered. Furthermore, over 200 genes associated with human retinal diseases are investigated in our dataset and are found to show both cell type and regional specificity. In summary, results from our study serves as not only a cell atlas reference but also the foundation for future studies of human retinal diseases."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": null,
+            "contributors": [
+                {
+                    "name": "Qingnan,,Liang",
+                    "email": "qingnan.liang@bcm.edu",
+                    "phone": "(+1)7137983610",
+                    "institution": "Baylor College of Medicine",
+                    "laboratory": "Human Genome Sequencing Center, Department of Molecular and Human Genetics,",
+                    "address": "One Baylor Plaza, Houston, Texas, 77054",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Xuesen,,Cheng",
+                    "email": "xuesen.cheng@bcm.edu",
+                    "phone": "(+1)7137983654",
+                    "institution": "Baylor College of Medicine",
+                    "laboratory": "Human Genome Sequencing Center, Department of Molecular and Human Genetics,",
+                    "address": "One Baylor Plaza, Houston, Texas, 77054",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Yumei,,Li",
+                    "email": "yumeil@bcm.edu",
+                    "phone": "(+1)7137987565",
+                    "institution": "Baylor College of Medicine",
+                    "laboratory": "Human Genome Sequencing Center, Department of Molecular and Human Genetics,",
+                    "address": "One Baylor Plaza, Houston, Texas, 77054",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Leah,,Owen",
+                    "email": "leah.owen@hsc.utah.edu",
+                    "phone": "(+1)8015812352",
+                    "institution": "University of Utah",
+                    "laboratory": "Department of Ophthalmology and Visual Sciences",
+                    "address": "65 Mario Capecchi Drive, Salt Lake City, Utah, 84132",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Denise,,Morgan",
+                    "email": "denisej.jones@hsc.utah.edu",
+                    "institution": "University of Utah",
+                    "laboratory": "Department of Ophthalmology and Visual Sciences",
+                    "address": "65 Mario Capecchi Drive, Salt Lake City, Utah, 84132",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Sangbae,,Kim",
+                    "email": "sangbae.kim@bcm.edu",
+                    "phone": "(+1)7137983348",
+                    "institution": "Baylor College of Medicine",
+                    "laboratory": "Human Genome Sequencing Center, Department of Molecular and Human Genetics,",
+                    "address": "One Baylor Plaza, Houston, Texas, 77054",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Albert,,Vitale",
+                    "email": "Albert.Vitale@hsc.utah.edu",
+                    "phone": "(+1)8015812352",
+                    "institution": "University of Utah",
+                    "laboratory": "Department of Ophthalmology and Visual Sciences",
+                    "address": "65 Mario Capecchi Drive, Salt Lake City, Utah, 84132",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Ivana,,Kim",
+                    "email": "Ivana_Kim@meei.harvard.edu",
+                    "phone": "(+1)6175733367",
+                    "institution": "University of Utah",
+                    "laboratory": "Department of Ophthalmology and Visual Sciences",
+                    "address": "65 Mario Capecchi Drive, Salt Lake City, Utah, 84132",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Akbar,,Shakoor",
+                    "email": "akbar.shakoor@hsc.utah.edu",
+                    "phone": "(+1)8015856701",
+                    "institution": "University of Utah",
+                    "laboratory": "Department of Ophthalmology and Visual Sciences",
+                    "address": "65 Mario Capecchi Drive, Salt Lake City, Utah, 84132",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Margaret,,DeAngelis",
+                    "email": "margaret.deangelis@utah.edu",
+                    "phone": "(+1)8015812352",
+                    "institution": "University of Utah",
+                    "laboratory": "Department of Ophthalmology and Visual Sciences",
+                    "address": "65 Mario Capecchi Drive, Salt Lake City, Utah, 84132",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "principal investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    }
+                },
+                {
+                    "name": "Rui,,Chen",
+                    "email": "ruichen@bcm.edu",
+                    "phone": "(+1)7137985194",
+                    "institution": "Baylor College of Medicine",
+                    "laboratory": "Human Genome Sequencing Center, Department of Molecular and Human Genetics,",
+                    "address": "One Baylor Plaza, Houston, Texas, 77054",
+                    "country": "USA",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "principal investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    }
+                }
+            ]
+        },
+        "added_to_index": 1610719929,
+        "uuid": "9c20a245-f2c0-43ae-82c9-2232ec6b594f",
+        "dcp_url": "https://data.humancellatlas.org/explore/projects/9c20a245-f2c0-43ae-82c9-2232ec6b594f?catalog=dcp2"
     }
 ]
