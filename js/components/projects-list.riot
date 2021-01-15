@@ -81,22 +81,14 @@
                 }
                 return data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
             },
-            getFilteredByCategories: (filterInDcp) => data => {
-                return data.filter(dataPoint => filterInDcp ? !!dataPoint["dcp_url"]: true);
-            },
             applyFiltering() {
                 return new Promise(async (resolve, reject) => {
-                    let data = this.state.unfilteredData;
 
-                    if(this.state.searchVal) {
-                        const filteredUuids = await query(this.state.searchVal);
-                        data = data.filter(project => filteredUuids.includes(project.uuid))
-                    }
+                    const filteredUuids = await query(this.state.searchVal, this.state.filterInDcp);
+                    let data = this.state.unfilteredData
+                        .filter(project => filteredUuids.includes(project.uuid))
 
-                    data = compose(
-                        this.getSorted(this.state.sort),
-                        this.getFilteredByCategories(this.state.filterInDcp)
-                    )(data);
+                    data = this.getSorted(this.state.sort)(data);
                     
                     this.update({
                         data
