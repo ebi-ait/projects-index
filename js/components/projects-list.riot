@@ -81,15 +81,25 @@
                 }
                 return data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
             },
+            getFilteredByCategories: (filterInDcp, data) => {
+                return data.filter(dataPoint => filterInDcp ? !!dataPoint["dcp_url"]: true);
+            },
             async applyFiltering() {
                 const { searchVal, filterInDcp, sort, unfilteredData } = this.state;
-                const filteredUuids = await query(searchVal, filterInDcp);
                 
-                let data = unfilteredData
-                    .filter(project => filteredUuids.includes(project.uuid))
+                let data = unfilteredData;
+
+                if(this.state.searchVal) {
+                    const filteredUuids = await query(this.state.searchVal);
+                    data = filteredUuids.map(uuid => data.find(project => project.uuid === uuid))
+                } else {
+                    data = this.sortData(sort, data)
+                }
+
+                data = this.getFilteredByCategories(filterInDcp, data);
                 
                 this.update({
-                    data: this.sortData(sort, data)
+                    data
                 });
             },
             search(val) {
