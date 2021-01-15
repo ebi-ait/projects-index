@@ -74,26 +74,22 @@
                     })
                 })
             },
-            getSorted: ({ timestampDesc }) => data => {
+            sortData: ({ timestampDesc }, data) => {
                 // Arrow function as this is "static" (pure function) and should not change state
                 if (timestampDesc) {
                     return data.sort((a, b) => a.added_to_index <= b.added_to_index ? 1 : -1);
                 }
                 return data.sort((a, b) => a.added_to_index <= b.added_to_index ? -1 : 1);
             },
-            applyFiltering() {
-                return new Promise(async (resolve, reject) => {
-
-                    const filteredUuids = await query(this.state.searchVal, this.state.filterInDcp);
-                    let data = this.state.unfilteredData
-                        .filter(project => filteredUuids.includes(project.uuid))
-
-                    data = this.getSorted(this.state.sort)(data);
-                    
-                    this.update({
-                        data
-                    });
-                    resolve();
+            async applyFiltering() {
+                const { searchVal, filterInDcp, sort, unfilteredData } = this.state;
+                const filteredUuids = await query(searchVal, filterInDcp);
+                
+                let data = unfilteredData
+                    .filter(project => filteredUuids.includes(project.uuid))
+                
+                this.update({
+                    data: this.sortData(sort, data)
                 });
             },
             search(val) {
@@ -101,31 +97,18 @@
                     searchVal: val,
                 });
                 this.applyFiltering()
-
             },
             toggleFilterInDcp() {
                 this.update({
                     filterInDcp: !this.state.filterInDcp
                 });
                 this.applyFiltering()
-
             },
             setSort(sortBy) {
                 this.update({
                     sort: sortBy,
+                    data: this.sortData(sortBy, this.state.data)
                 });
-                this.applyFiltering()
-
-            },
-            resetData() {
-                this.update({
-                    filterInDcp: false,
-                    searchVal: "",
-                    sort: {
-                        timestampDesc: true
-                    },
-                });
-                this.applyFiltering()
             },
             components: {
                 DataTable,

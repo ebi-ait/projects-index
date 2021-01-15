@@ -1,4 +1,5 @@
 import axios from "axios";
+
 const SOLR_URL = process.env.SOLR_URL;
 const MAX_ROWS = 1000; // Large number for max rows for now as we don't have pagination
 
