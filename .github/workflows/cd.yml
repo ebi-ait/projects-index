@@ -7,30 +7,31 @@ on:
     types: 
       - completed
 
-deploy:
-  runs-on: ubuntu-latest
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v2.3.1
-      with:
-        persist-credentials: false
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn install --frozen-lockfile
-    - run: yarn build
-    - run: yarn test
-    # Copy data.json to dist so that it is deployed to GH-pages. The version deployed to GH-pages is the one used by live site.
-    # This ensures that if unit tests fail because of malformed data, live is not affected.
-    - run: cp data/data.json dist/data.json 
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.7.1
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: dist # The folder the action should deploy.
-        CLEAN: true # Automatically remove deleted files from the deploy branch
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: yarn test
+      # Copy data.json to dist so that it is deployed to GH-pages. The version deployed to GH-pages is the one used by live site.
+      # This ensures that if unit tests fail because of malformed data, live is not affected.
+      - run: cp data/data.json dist/data.json 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: dist # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
