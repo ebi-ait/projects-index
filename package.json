@@ -8,7 +8,8 @@
   "scripts": {
     "serve:data": "http-server data/ --cors",
     "serve:ui": "parcel index.html",
-    "start": "concurrently --kill-others \"npm run serve:data\" \"npm run serve:ui\"",
+    "serve:solr": "(cd solr_infra && ./run_local.sh)",
+    "start": "npm run serve:solr && concurrently --kill-others \"npm run serve:data\" \"npm run serve:ui\"",
     "build": "parcel build index.html --public-url ./",
     "test": "jest",
     "test:watch": "jest --watch"
