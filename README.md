@@ -70,6 +70,6 @@ Deployments are done using GitHub actions on push to master. Two jobs are perfor
 ### Developing
 
 - `yarn start`
-  - Will spin up the dev server
+  - Will start running Solr, index the locally held data.json, serve the locally held data.json, and start the UI
 - `yarn test:watch`
   - Run the unit tests in watch mode
