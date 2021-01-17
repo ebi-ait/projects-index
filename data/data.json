@@ -12299,7 +12299,9 @@
                 "GSE130148"
             ],
             "supplementary_links": [
-                "https://ega-archive.org/studies/EGAS00001001755"
+                "https://ega-archive.org/studies/EGAS00001001755",
+                "https://asthma.cellgeni.sanger.ac.uk/",
+                "https://www.covid19cellatlas.org/index.healthy.html#vieira19-nasal"
             ],
             "publications": [
                 {
@@ -16311,6 +16313,1044 @@
         },
         "added_to_index": 1610801091,
         "uuid": "c9e87292-4444-4852-a498-ae5305018223",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "SARS\u2010CoV\u20102 receptor ACE2 and TMPRSS2 are primarily expressed in bronchial transient secretory cells",
+                "project_description": "<h4>SUMMARY</h4> The SARS-CoV-2 pandemic affecting the human respiratory system severely challenges public health and urgently demands for increasing our understanding of COVID-19 pathogenesis, especially host factors facilitating virus infection and replication. SARS-CoV-2 was reported to enter cells via binding to ACE2, followed by its priming by TMPRSS2. Here, we investigate ACE2 and TMPRSS2 expression levels and their distribution across cell types in lung tissue (twelve donors, 39,778 cells) and in cells derived from subsegmental bronchial branches (four donors, 17,521 cells) by single nuclei and single cell RNA sequencing, respectively. While TMPRSS2 is expressed in both tissues, in the subsegmental bronchial branches ACE2 is predominantly expressed in a transient secretory cell type. Interestingly, these transiently differentiating cells show an enrichment for pathways related to RHO GTPase function and viral processes suggesting increased vulnerability for SARS-CoV-2 infection. Our data provide a rich resource for future investigations of COVID-19 infection and pathogenesis."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://ega-archive.org/studies/EGAS00001004419",
+                "https://doi.org/10.6084/m9.figshare.11981034.v1",
+                "https://www.covid19cellatlas.org/index.healthy.html#lukassen20-hbec"
+            ],
+            "publications": [
+                {
+                    "doi": "10.15252/embj.20105114",
+                    "url": "http://dx.doi.org/10.15252/embj.20105114",
+                    "journal_title": "The EMBO Journal",
+                    "title": "SARS\u2010CoV\u20102 receptor ACE2 and TMPRSS2 are primarily expressed in bronchial transient secretory cells",
+                    "authors": [
+                        "Lukassen S",
+                        "Chua RL",
+                        "Trefzer T",
+                        "Kahn NC",
+                        "Schneider MA",
+                        "Muley T",
+                        "Winter H",
+                        "Meister M",
+                        "Veith C",
+                        "Boots AW",
+                        "Hennig BP",
+                        "Kreuter M",
+                        "Conrad C",
+                        "Eils R."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Soeren,Lukassen"
+                },
+                {
+                    "name": "Robert,Lorenz,Chua"
+                },
+                {
+                    "name": "Timo,Trefzer"
+                },
+                {
+                    "name": "Nicolas,Kahn"
+                },
+                {
+                    "name": "Marc,Schneider"
+                },
+                {
+                    "name": "Thomas,Muley"
+                },
+                {
+                    "name": "Hauke,Winter"
+                },
+                {
+                    "name": "Michael,Meister"
+                },
+                {
+                    "name": "Carmen,Veith"
+                },
+                {
+                    "name": "Agnes,Boots"
+                },
+                {
+                    "name": "Bianca,Hennig"
+                },
+                {
+                    "name": "Michael,Kreuter"
+                },
+                {
+                    "name": "Christian,Conrad"
+                },
+                {
+                    "name": "Roland,Eils"
+                }
+            ]
+        },
+        "added_to_index": 1610896325,
+        "uuid": "58028aa8-0ed2-49ca-b60f-15e2ed5989d5",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "Adult_Nonmobilised_PB",
+                "project_title": "Transcriptomic characterisation of haematopoietic stem and progenitor cells from adult human homeostatic (non-mobilised) peripheral blood",
+                "project_description": "Haematopoietic stem and progenitor cells (HSPCs), the precursors of all blood cells, reside predominantly in the bone marrow. Yet, a  small proportion (<1%) of phenotypic HSPCs circulates through peripheral blood (PB) at any given time. To date, the detailed characterization of steady-state circulating HSPCs in adult humans remains very poor. Here, we analyse the single-cell composition of the adult human HSPC pool within non-mobilised PB from four healthy donors. 10x scRNA-seq of 22000 HSPCs from all four donors was paired with single-cell functional analysis using most immature haematopoietic stem cells and multipotent progenitors (HSC/MPPs). We find that long-term functional HSC/MPPs are very rare in non-mobilised PB, and that a large fraction of circulating HSPCs is biased towards the erythroid lineage. In particular, we detect the enrichment of a subset of exclusively erythroid/megakaryocyte-primed quiescent HSC-like cells within the phenotypic PB HSC/MPP compartment."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "ERP122459"
+            ],
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": null,
+            "contributors": [
+                {
+                    "name": "Elisa,,Laurenti",
+                    "email": "el422@cam.ac.uk",
+                    "phone": "+44 (0) 1223 762044",
+                    "institution": "Wellcome - MRC Cambridge Stem Cell Institute",
+                    "laboratory": "Department of Haematology",
+                    "address": "Jeffrey Cheah Biomedical Centre,\nPuddicombe Way, CB2 0AW, Cambridge",
+                    "country": "UK",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "principal investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    },
+                    "orcid_id": "0000-0002-9917-9092"
+                },
+                {
+                    "name": "Hugo,P,Bastos",
+                    "email": "hpb29@cam.ac.uk",
+                    "institution": "Wellcome - MRC Cambridge Stem Cell Institute",
+                    "laboratory": "Laboratory of Dr Elisa Laurenti",
+                    "address": "Jeffrey Cheah Biomedical Centre,\nPuddicombe Way, CB2 0AW, Cambridge",
+                    "country": "UK",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "bioinformatician",
+                        "ontology": "EFO:0009742",
+                        "ontology_label": "computational scientist"
+                    }
+                },
+                {
+                    "name": "Nicole,,Mende",
+                    "email": "nm636@cam.ac.uk",
+                    "phone": "+44 (0)1223 62118",
+                    "institution": "Wellcome - MRC Cambridge Stem Cell Institute",
+                    "laboratory": "Laboratory of Dr Elisa Laurenti",
+                    "address": "Jeffrey Cheah Biomedical Centre,\nPuddicombe Way, CB2 0AW, Cambridge",
+                    "country": "UK",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    },
+                    "orcid_id": "0000-0002-5078-2333"
+                }
+            ]
+        },
+        "added_to_index": 1610896326,
+        "uuid": "fc55bd4a-8694-4a28-9a35-59a685bda323",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Myocyte-Specific Upregulation of ACE2 in Cardiovascular Disease: Implications for SARS-CoV-2-Mediated Myocarditis.",
+                "project_description": "Coronavirus disease 2019 (COVID-19) is a global pandemic caused by the novel severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). SARS-CoV-2 infection occurs predominantly by binding of the viral surface spike protein to the human angiotensin-converting enzyme 2 (ACE2) receptor.1 Hypertension and preexisting cardiovascular disease are risk factors for morbidity from COVID-19, and it remains uncertain whether the use of angiotensin-converting enzyme inhibitors (ACEis) or angiotensin receptor blockers affects infection and disease. This uncertainty has provoked public statements by the American Heart Association, the Heart Failure Society of America, and the American College of Cardiology advising continuation of these agents in the absence of compelling new data.\nWe aim to shed light on these questions by assessing ACE2 expression by performing bulk and single nucleus RNA-Seq on the left ventricles of 11 individuals with dilated cardiomyopathy, 15 individuals with hypertrophic cardiomyopathy, and 16 controls with nonfailing hearts from the Penn Human Heart Tissue Biobank. All studies were approved by the institutional review boards at each institution. Single-cell sequencing was performed largely as described in our recent study detailing the transcriptional diversity of the cell subtypes and associated gene programs in the normal human heart.3 Data generated by the 10X Genomics 3\u2032 solution v3 were processed with the CellRanger 3.1.0 toolkit followed by strict quality control for transcriptional complexity, mitochondrial read counts, proportion of spliced reads, and entropy. Differential gene expression was performed by summing gene counts across all nuclei in each cell type and applying a limma-voom testing pipeline, adjusting for age and sex."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://singlecell.broadinstitute.org/single_cell/study/SCP846"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1161/circulationaha.120.047911",
+                    "url": "http://dx.doi.org/10.1161/circulationaha.120.047911",
+                    "journal_title": "Circulation",
+                    "title": "Myocyte-Specific Upregulation of <i>ACE2</i> in Cardiovascular Disease: Implications for SARS-CoV-2-Mediated Myocarditis.",
+                    "authors": [
+                        "Tucker NR",
+                        "Chaffin M",
+                        "Bedi KC",
+                        "Papangeli I",
+                        "Akkad AD",
+                        "Arduini A",
+                        "Hayat S",
+                        "Eraslan G",
+                        "Muus C",
+                        "Bhattacharyya RP",
+                        "Stegmann CM",
+                        "Human Cell Atlas Lung Biological Network",
+                        "Margulies KB",
+                        "Ellinor PT",
+                        "Human Cell Atlas Lung Biological Network Consortium Members."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Nathan,R,Tucker",
+                    "institution": "Broad Institute",
+                    "laboratory": "Precision Cardiology Laboratory, The Broad Institute, Cambridge, MA (N.R.T., M.C., A.A., P.T.E.).",
+                    "country": "United States"
+                },
+                {
+                    "name": "Mark,Chaffin",
+                    "institution": "Broad Institute",
+                    "laboratory": "Precision Cardiology Laboratory, The Broad Institute, Cambridge, MA (N.R.T., M.C., A.A., P.T.E.).",
+                    "country": "United States"
+                },
+                {
+                    "name": "Kenneth,C,Bedi",
+                    "institution": "University of Pennsylvania",
+                    "laboratory": " Raymond and Ruth Perelman School of Medicine at the University of Pennsylvania",
+                    "country": "United States"
+                },
+                {
+                    "name": "Irinna,Papangeli",
+                    "institution": "Bayer US LLC",
+                    "laboratory": " Precision Cardiology Laboratory",
+                    "country": "United States"
+                },
+                {
+                    "name": "Amer-Denis,Akkad",
+                    "institution": "Bayer US LLC",
+                    "laboratory": "  Precision Cardiology Laboratory",
+                    "country": "United States"
+                },
+                {
+                    "name": "Alessandro,Arduini",
+                    "institution": "Broad Institute",
+                    "laboratory": "Precision Cardiology Laboratory, The Broad Institute, Cambridge, MA (N.R.T., M.C., A.A., P.T.E.).",
+                    "country": "United States"
+                },
+                {
+                    "name": "Sikander,Hayat",
+                    "institution": "Bayer US LLC",
+                    "laboratory": "  Precision Cardiology Laboratory",
+                    "country": "United States"
+                },
+                {
+                    "name": "G\u00f6kcen,Eraslan",
+                    "institution": "Massachusetts Institute of Technology",
+                    "laboratory": "The Broad Institute of MIT and Harvard, Cambridge, MA (G.E., C.M., R.P.B.).",
+                    "country": "United States"
+                },
+                {
+                    "name": "Christoph,Muus",
+                    "institution": "Harvard University",
+                    "laboratory": "John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA (C.M.).",
+                    "country": "United States"
+                },
+                {
+                    "name": "Roby,P,Bhattacharyya",
+                    "institution": "Massachusetts Institute of Technology",
+                    "laboratory": "The Broad Institute of MIT and Harvard, Cambridge, MA (G.E., C.M., R.P.B.).",
+                    "country": "United States",
+                    "orcid_id": "0000-0001-6955-5088"
+                },
+                {
+                    "name": "Christian,M,Stegmann",
+                    "institution": "Bayer US LLC",
+                    "laboratory": " Precision Cardiology Laboratory",
+                    "country": "United States"
+                },
+                {
+                    "name": "Human Cell Atlas Lung Biological Network",
+                    "institution": "not applicable"
+                },
+                {
+                    "name": "Kenneth,B,Margulies",
+                    "institution": "University of Pennsylvania",
+                    "laboratory": " Raymond and Ruth Perelman School of Medicine at the University of Pennsylvania",
+                    "country": "United States"
+                },
+                {
+                    "name": "Patrick,T,Ellinor",
+                    "email": "ellinor@mgh.harvard.edu",
+                    "institution": "Broad Institute",
+                    "laboratory": "Precision Cardiology Laboratory, The Broad Institute, Cambridge, MA (N.R.T., M.C., A.A., P.T.E.).",
+                    "country": "United States",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-2067-5033"
+                },
+                {
+                    "name": "Human Cell Atlas Lung Biological Network Consortium Members",
+                    "institution": "not applicable"
+                }
+            ]
+        },
+        "added_to_index": 1610896328,
+        "uuid": "d84fd289-1b4b-43f0-aa84-9f0928937106",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Single-cell atlas of a non-human primate reveals new pathogenic mechanisms of COVID-19",
+                "project_description": "<h4>ABSTRACT</h4> Stopping COVID-19 is a priority worldwide. Understanding which cell types are targeted by SARS-CoV-2 virus, whether interspecies differences exist, and how variations in cell state influence viral entry is fundamental for accelerating therapeutic and preventative approaches. In this endeavor, we profiled the transcriptome of nine tissues from a Macaca fascicularis monkey at single-cell resolution. The distribution of SARS-CoV-2 facilitators, ACE2 and TMRPSS2, in different cell subtypes showed substantial heterogeneity across lung, kidney, and liver. Through co-expression analysis, we identified immunomodulatory proteins such as IDO2 and ANPEP as potential SARS-CoV-2 targets responsible for immune cell exhaustion. Furthermore, single-cell chromatin accessibility analysis of the kidney unveiled a plausible link between IL6-mediated innate immune responses aiming to protect tissue and enhanced ACE2 expression that could promote viral entry. Our work constitutes a unique resource for understanding the physiology and pathophysiology of two phylogenetically close species, which might guide in the development of therapeutic approaches in humans. <h4>Bullet points</h4> We generated a single-cell transcriptome atlas of 9 monkey tissues to study COVID-19. ACE2 + TMPRSS2 + epithelial cells of lung, kidney and liver are targets for SARS-CoV-2. ACE2 correlation analysis shows IDO2 and ANPEP as potential therapeutic opportunities. We unveil a link between IL6, STAT transcription factors and boosted SARS-CoV-2 entry."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://db.cngb.org/cnsa/project/CNP0000986/public/"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1101/2020.04.10.022103",
+                    "url": "http://dx.doi.org/10.1101/2020.04.10.022103",
+                    "journal_title": "bioRxiv",
+                    "title": "Single-cell atlas of a non-human primate reveals new pathogenic mechanisms of COVID-19",
+                    "authors": [
+                        "Han L",
+                        "Wei X",
+                        "Liu C",
+                        "Volpe G",
+                        "Wang Z",
+                        "Pan T",
+                        "Yuan Y",
+                        "Lei Y",
+                        "Lai Y",
+                        "Ward C",
+                        "Yu Y",
+                        "Wang M",
+                        "Shi Q",
+                        "Wu T",
+                        "Wu L",
+                        "Liu Y",
+                        "Wang C",
+                        "Zhang Y",
+                        "Sun H",
+                        "Yu H",
+                        "Zhuang Z",
+                        "Tang T",
+                        "Huang Y",
+                        "Lu H",
+                        "Xu L",
+                        "Xu J",
+                        "Cheng M",
+                        "Liu Y",
+                        "Wong CW",
+                        "Tan T",
+                        "Ji W",
+                        "Maxwell PH",
+                        "Yang H",
+                        "Wang J",
+                        "Zhu S",
+                        "Liu S",
+                        "Xu X",
+                        "Hou Y",
+                        "Esteban MA",
+                        "Liu L",
+                        "South China Greater Bay Area-Single Cell Consortium (SC-GBA-C)."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Lei,Han"
+                },
+                {
+                    "name": "Xiaoyu,Wei"
+                },
+                {
+                    "name": "Chuanyu,Liu"
+                },
+                {
+                    "name": "Giacomo,Volpe"
+                },
+                {
+                    "name": "Zhifeng,Wang"
+                },
+                {
+                    "name": "Taotao,Pan"
+                },
+                {
+                    "name": "Yue,Yuan"
+                },
+                {
+                    "name": "Ying,Lei"
+                },
+                {
+                    "name": "Yiwei,Lai"
+                },
+                {
+                    "name": "Carl,Ward"
+                },
+                {
+                    "name": "Yeya,Yu"
+                },
+                {
+                    "name": "Mingyue,Wang"
+                },
+                {
+                    "name": "Quan,Shi"
+                },
+                {
+                    "name": "Tao,Wu"
+                },
+                {
+                    "name": "Liang,Wu"
+                },
+                {
+                    "name": "Ya,Liu"
+                },
+                {
+                    "name": "Chunqing,Wang"
+                },
+                {
+                    "name": "Yuanhang,Zhang"
+                },
+                {
+                    "name": "Haixi,Sun"
+                },
+                {
+                    "name": "Hao,Yu"
+                },
+                {
+                    "name": "Zhenkun,Zhuang"
+                },
+                {
+                    "name": "Tingting,Tang"
+                },
+                {
+                    "name": "Yunting,Huang"
+                },
+                {
+                    "name": "Haorong,Lu"
+                },
+                {
+                    "name": "Liqin,Xu"
+                },
+                {
+                    "name": "Jiangshan,Xu"
+                },
+                {
+                    "name": "Mengnan,Cheng"
+                },
+                {
+                    "name": "Yang,Liu"
+                },
+                {
+                    "name": "Chi,Wai,Wong"
+                },
+                {
+                    "name": "Tao,Tan"
+                },
+                {
+                    "name": "Weizhi,Ji"
+                },
+                {
+                    "name": "Patrick,Maxwell"
+                },
+                {
+                    "name": "Huanming,Yang"
+                },
+                {
+                    "name": "Jian,Wang"
+                },
+                {
+                    "name": "Shida,Zhu"
+                },
+                {
+                    "name": "Shiping,Liu"
+                },
+                {
+                    "name": "Xun,Xu"
+                },
+                {
+                    "name": "Yong,Hou"
+                },
+                {
+                    "name": "Miguel,Esteban"
+                },
+                {
+                    "name": "Longqi,Liu"
+                },
+                {
+                    "name": "South China Greater Bay Area-Single Cell Consortium (SC-GBA-C)",
+                    "institution": "not applicable"
+                }
+            ]
+        },
+        "added_to_index": 1610896329,
+        "uuid": "6c0e3b28-5be0-45b6-9e17-809048f18284",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Integrated Single-Cell Atlases Reveal an Oral SARS-CoV-2 Infection and Transmission Axis",
+                "project_description": "<h4>ABSTRACT</h4> Despite signs of infection, the involvement of the oral cavity in COVID-19 is poorly understood. To address this, single-cell RNA sequencing data-sets were integrated from human minor salivary glands and gingiva to identify 11 epithelial, 7 mesenchymal, and 15 immune cell clusters. Analysis of SARS-CoV-2 viral entry factor expression showed enrichment in epithelia including the ducts and acini of the salivary glands and the suprabasal cells of the mucosae. COVID-19 autopsy tissues confirmed in vivo SARS-CoV-2 infection in the salivary glands and mucosa. Saliva from SARS-CoV-2-infected individuals harbored epithelial cells exhibiting ACE2 expression and SARS-CoV-2 RNA. Matched nasopharyngeal and saliva samples found distinct viral shedding dynamics and viral burden in saliva correlated with COVID-19 symptoms including taste loss. Upon recovery, this cohort exhibited salivary antibodies against SARS-CoV-2 proteins. Collectively, the oral cavity represents a robust site for COVID-19 infection and implicates saliva in viral transmission."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.covid19cellatlas.org/index.healthy.html#warner20"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1101/2020.10.26.20219089",
+                    "url": "http://dx.doi.org/10.1101/2020.10.26.20219089",
+                    "journal_title": "medRxiv",
+                    "title": "Integrated Single-Cell Atlases Reveal an Oral SARS-CoV-2 Infection and Transmission Axis",
+                    "authors": [
+                        "Huang N",
+                        "Perez P",
+                        "Kato T",
+                        "Mikami Y",
+                        "Okuda K",
+                        "Gilmore RC",
+                        "Dom\u00ednguez Conde C",
+                        "Gasmi B",
+                        "Stein S",
+                        "Beach M",
+                        "Pelayo E",
+                        "Maldonado J",
+                        "LaFont B",
+                        "Padilla R",
+                        "Murrah V",
+                        "Maile R",
+                        "Lovell W",
+                        "Wallet S",
+                        "Bowman NM",
+                        "Meinig SL",
+                        "Wolfgang MC",
+                        "Choudhury SN",
+                        "Novotny M",
+                        "Aevermann BD",
+                        "Scheuermann R",
+                        "Cannon G",
+                        "Anderson C",
+                        "Marchesan J",
+                        "Bush M",
+                        "Freire M",
+                        "Kimple A",
+                        "Herr DL",
+                        "Rabin J",
+                        "Grazioli A",
+                        "French BN",
+                        "Pranzatelli T",
+                        "Chiorini JA",
+                        "Kleiner DE",
+                        "Pittaluga S",
+                        "Hewitt S",
+                        "Burbelo PD",
+                        "Chertow D",
+                        "Frank K",
+                        "Lee J",
+                        "Boucher RC",
+                        "Teichmann SA",
+                        "Warner BM",
+                        "Byrd KM",
+                        "NIH COVID-19 Autopsy Consortium",
+                        "HCA Oral and Craniofacial Biological Network."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Ni,Huang"
+                },
+                {
+                    "name": "Paola,Perez"
+                },
+                {
+                    "name": "Takafumi,Kato"
+                },
+                {
+                    "name": "Yu,Mikami"
+                },
+                {
+                    "name": "Kenichi,Okuda"
+                },
+                {
+                    "name": "Rodney,Gilmore"
+                },
+                {
+                    "name": "Cecilia,Dom\u00ednguez Conde"
+                },
+                {
+                    "name": "Billel,Gasmi"
+                },
+                {
+                    "name": "Sydney,Stein"
+                },
+                {
+                    "name": "Margaret,Beach"
+                },
+                {
+                    "name": "Eileen,Pelayo"
+                },
+                {
+                    "name": "Jose,Maldonado"
+                },
+                {
+                    "name": "Bernard,LaFont"
+                },
+                {
+                    "name": "Ricardo,Padilla"
+                },
+                {
+                    "name": "Valerie,Murrah"
+                },
+                {
+                    "name": "Robert,Maile"
+                },
+                {
+                    "name": "Will,Lovell"
+                },
+                {
+                    "name": "Shannon,Wallet"
+                },
+                {
+                    "name": "Natalie,Bowman"
+                },
+                {
+                    "name": "Suzanne,Meinig"
+                },
+                {
+                    "name": "Matthew,Wolfgang"
+                },
+                {
+                    "name": "Saibyasachi,Choudhury"
+                },
+                {
+                    "name": "Mark,Novotny"
+                },
+                {
+                    "name": "Brian,Aevermann"
+                },
+                {
+                    "name": "Richard,Scheuermann"
+                },
+                {
+                    "name": "Gabrielle,Cannon"
+                },
+                {
+                    "name": "Carlton,Anderson"
+                },
+                {
+                    "name": "Julie,Marchesan"
+                },
+                {
+                    "name": "Mandy,Bush"
+                },
+                {
+                    "name": "Marcelo,Freire"
+                },
+                {
+                    "name": "Adam,Kimple"
+                },
+                {
+                    "name": "Daniel,Herr"
+                },
+                {
+                    "name": "Joseph,Rabin"
+                },
+                {
+                    "name": "Alison,Grazioli"
+                },
+                {
+                    "name": "Benjamin,French"
+                },
+                {
+                    "name": "Thomas,Pranzatelli"
+                },
+                {
+                    "name": "John,Chiorini"
+                },
+                {
+                    "name": "David,Kleiner"
+                },
+                {
+                    "name": "Stefania,Pittaluga"
+                },
+                {
+                    "name": "Stephen,Hewitt"
+                },
+                {
+                    "name": "Peter,Burbelo"
+                },
+                {
+                    "name": "Daniel,Chertow"
+                },
+                {
+                    "name": "Karen,Frank"
+                },
+                {
+                    "name": "Janice,Lee"
+                },
+                {
+                    "name": "Richard,Boucher"
+                },
+                {
+                    "name": "Sarah,Teichmann"
+                },
+                {
+                    "name": "Blake,Warner",
+                    "email": "blake.warner@nih.gov",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Kevin,Byrd",
+                    "email": "byrdk@ada.org"
+                },
+                {
+                    "name": "NIH COVID-19 Autopsy Consortium",
+                    "institution": "not applicable"
+                },
+                {
+                    "name": "HCA Oral and Craniofacial Biological Network",
+                    "institution": "not applicable"
+                }
+            ]
+        },
+        "added_to_index": 1610896331,
+        "uuid": "69d798a1-80b3-4fc8-b124-e3a256422127",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "SARS-CoV-2 entry factors are highly expressed in nasal epithelial cells together with innate immune genes.",
+                "project_description": "We investigated SARS-CoV-2 potential tropism by surveying expression of viral entry-associated genes in single-cell RNA-sequencing data from multiple tissues from healthy human donors. We co-detected these transcripts in specific respiratory, corneal and intestinal epithelial cells, potentially explaining the high efficiency of SARS-CoV-2 transmission. These genes are co-expressed in nasal epithelial cells with genes involved in innate immunity, highlighting the cells' potential role in initial viral infection, spread and clearance. The study offers a useful resource for further lines of inquiry with valuable clinical samples from COVID-19 patients and we provide our data in a comprehensive, open and user-friendly fashion at www.covid19cellatlas.org."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.covid19cellatlas.org/"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1038/s41591-020-0868-6",
+                    "url": "http://dx.doi.org/10.1038/s41591-020-0868-6",
+                    "journal_title": "Nature Medicine",
+                    "title": "SARS-CoV-2 entry factors are highly expressed in nasal epithelial cells together with innate immune genes.",
+                    "authors": [
+                        "Sungnak W",
+                        "Huang N",
+                        "B\u00e9cavin C",
+                        "Berg M",
+                        "Queen R",
+                        "Litvinukova M",
+                        "Talavera-L\u00f3pez C",
+                        "Maatz H",
+                        "Reichart D",
+                        "Sampaziotis F",
+                        "Worlock KB",
+                        "Yoshida M",
+                        "Barnes JL",
+                        "HCA Lung Biological Network."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Waradon,Sungnak",
+                    "email": "ws4@sanger.ac.uk",
+                    "institution": "Wellcome Sanger Institute",
+                    "laboratory": "",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-0136-4960"
+                },
+                {
+                    "name": "Ni,Huang",
+                    "institution": "Wellcome Sanger Institute",
+                    "laboratory": "",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Christophe,B\u00e9cavin",
+                    "institution": "Universit\u00e9 C\u00f4te d'Azur",
+                    "laboratory": " French National Centre for Scientific Research Institut de Pharmacologie Mol\u00e9culaire et Cellulaire",
+                    "country": "France",
+                    "orcid_id": "0000-0003-1555-3153"
+                },
+                {
+                    "name": "Marijn,Berg",
+                    "institution": "University of Groningen",
+                    "laboratory": "Department of Pathology and Medical Biology, University Medical Centre Groningen",
+                    "country": "Netherlands"
+                },
+                {
+                    "name": "Rachel,Queen",
+                    "institution": "Newcastle University",
+                    "laboratory": "Bioinformatics Core Facility, Newcastle University Biosciences Institute, Faculty of Medical Sciences,",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Monika,Litvinukova",
+                    "institution": "Wellcome Sanger Institute",
+                    "laboratory": "",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Carlos,Talavera-L\u00f3pez",
+                    "institution": "Wellcome Sanger Institute",
+                    "laboratory": "",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Henrike,Maatz",
+                    "institution": "Max Delbr\u00fcck Center for Molecular Medicine",
+                    "laboratory": "Cardiovascular and Metabolic Sciences, Max Delbr\u00fcck Center for Molecular Medicine in the Helmholtz Association (MDC)",
+                    "country": "Germany"
+                },
+                {
+                    "name": "Daniel,Reichart",
+                    "institution": "Harvard Medical School",
+                    "laboratory": "Department of Genetics, Harvard Medical School, Boston, MA, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Fotios,Sampaziotis",
+                    "institution": "University of Cambridge",
+                    "laboratory": " Medical Research Council",
+                    "country": "United Kingdom",
+                    "orcid_id": "0000-0003-0812-7586"
+                },
+                {
+                    "name": "Kaylee,B,Worlock",
+                    "institution": "University College London",
+                    "laboratory": " UCL Biomedical Research Centre University College London Hospitals NHS Foundation Trust",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Masahiro,Yoshida",
+                    "institution": "University College London",
+                    "laboratory": " UCL Biomedical Research Centre University College London Hospitals NHS Foundation Trust",
+                    "country": "United Kingdom",
+                    "orcid_id": "0000-0002-3521-5322"
+                },
+                {
+                    "name": "Josephine,L,Barnes",
+                    "institution": "University College London",
+                    "laboratory": " UCL Biomedical Research Centre University College London Hospitals NHS Foundation Trust",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "HCA Lung Biological Network",
+                    "institution": "not applicable"
+                }
+            ]
+        },
+        "added_to_index": 1610896332,
+        "uuid": "859affdc-3e85-4444-bb87-fe3887d6238c",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Gene set inference from single-cell sequencing data using a hybrid of matrix factorization and variational autoencoders",
+                "project_description": "Recent advances in single-cell RNA sequencing (scRNA-Seq) have driven the simultaneous measurement of the expression of 1,000s of genes in 1,000s of single cells. These growing data sets allow us to model gene sets in biological networks at an unprecedented level of detail, in spite of heterogenous cell populations. Here, we propose an unsupervised deep neural network model that is a hybrid of matrix factorization and conditional variational autoencoders (CVA), which utilizes weights as matrix factorizations to obtain gene sets, while class-specific inputs to the latent variable space facilitate a plausible identification of cell types. This artificial neural network model seamlessly integrates functional gene set inference, experimental batch effect correction, and static gene identification, which we conceptually prove here for three single-cell RNA-Seq datasets and suggest for future single-cell-gene analytics."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1038/s42256-020-00269-9",
+                    "url": "http://dx.doi.org/10.1038/s42256-020-00269-9",
+                    "journal_title": "Nature Machine Intelligence",
+                    "title": "Gene set inference from single-cell sequencing data using a hybrid of matrix factorization and variational autoencoders",
+                    "authors": [
+                        "Lukassen S",
+                        "Ten FW",
+                        "Eils R",
+                        "Conrad C."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Soeren,Lukassen",
+                    "institution": "Universit\u00e4tsmedizin Berlin",
+                    "orcid_id": "0000-0001-7045-6327"
+                },
+                {
+                    "name": "Foo,Wei,Ten",
+                    "institution": "Universit\u00e4tsmedizin Berlin"
+                },
+                {
+                    "name": "Roland,Eils",
+                    "institution": "Universit\u00e4tsmedizin Berlin",
+                    "corresponding_contributor": false,
+                    "orcid_id": "0000-0002-0034-4036"
+                },
+                {
+                    "name": "Christian,Conrad",
+                    "institution": "Universit\u00e4tsmedizin Berlin"
+                }
+            ]
+        },
+        "added_to_index": 1610896334,
+        "uuid": "f656f20b-f93a-49ad-961f-e6783ba66fcc",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "The Organoid Cell Atlas."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1038/s41587-020-00762-x",
+                    "url": "http://dx.doi.org/10.1038/s41587-020-00762-x",
+                    "journal_title": "Nature Biotechnology",
+                    "title": "The Organoid Cell Atlas.",
+                    "authors": [
+                        "Bock C",
+                        "Boutros M",
+                        "Camp JG",
+                        "Clarke L",
+                        "Clevers H",
+                        "Knoblich JA",
+                        "Liberali P",
+                        "Regev A",
+                        "Rios AC",
+                        "Stegle O",
+                        "Stunnenberg HG",
+                        "Teichmann SA",
+                        "Treutlein B",
+                        "Vries RGJ",
+                        "Human Cell Atlas \u2018Biological Network\u2019 Organoids."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Christoph,Bock",
+                    "email": "cbock@cemm.oeaw.ac.at",
+                    "institution": "CeMM Research Center for Molecular Medicine of the Austrian Academy of Sciences",
+                    "laboratory": "",
+                    "country": "Austria",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0001-6091-3088"
+                },
+                {
+                    "name": "Michael,Boutros",
+                    "institution": "Heidelberg University",
+                    "laboratory": " German Cancer Research Center",
+                    "country": "Germany"
+                },
+                {
+                    "name": "J,Gray,Camp",
+                    "institution": "Institute of Molecular and Clinical Ophthalmology Basel",
+                    "laboratory": "",
+                    "country": "Switzerland"
+                },
+                {
+                    "name": "Laura,Clarke",
+                    "institution": "EMBL-EBI",
+                    "laboratory": "",
+                    "country": "United Kingdom",
+                    "orcid_id": "0000-0002-5989-6898"
+                },
+                {
+                    "name": "Hans,Clevers",
+                    "institution": "Oncode Institute",
+                    "laboratory": " Royal Netherlands Academy of Arts and Sciences",
+                    "country": "Netherlands"
+                },
+                {
+                    "name": "Juergen,A,Knoblich",
+                    "institution": "Institute of Molecular Biotechnology",
+                    "laboratory": " Vienna Biocenter",
+                    "country": "Austria"
+                },
+                {
+                    "name": "Prisca,Liberali",
+                    "institution": "Friedrich Miescher Institute",
+                    "laboratory": "Friedrich Miescher Institute for Biomedical Research (FMI), Basel, Switzerland.",
+                    "country": "Switzerland"
+                },
+                {
+                    "name": "Aviv,Regev",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "Klarman Cell Observatory",
+                    "country": "United States"
+                },
+                {
+                    "name": "Anne,C,Rios",
+                    "institution": "Oncode Institute",
+                    "laboratory": " Royal Netherlands Academy of Arts and Sciences",
+                    "country": "Netherlands"
+                },
+                {
+                    "name": "Oliver,Stegle",
+                    "institution": "German Cancer Research Center",
+                    "laboratory": "Divison of Computational Genomics and Systems Genetics",
+                    "country": "Germany",
+                    "orcid_id": "0000-0002-8818-7193"
+                },
+                {
+                    "name": "Hendrik,G,Stunnenberg",
+                    "institution": "Princess M\u00e1xima Center for Pediatric Oncology",
+                    "laboratory": "",
+                    "country": "Netherlands"
+                },
+                {
+                    "name": "Sarah,A,Teichmann",
+                    "institution": "Wellcome Sanger Institute",
+                    "laboratory": "",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Barbara,Treutlein",
+                    "institution": "Eidgen\u00f6ssische Technische Hochschule (ETH) Zurich",
+                    "laboratory": "Department of Biosystems Science and Engineering",
+                    "country": "Switzerland"
+                },
+                {
+                    "name": "Robert,G,J,Vries",
+                    "institution": "Foundation Hubrecht Organoid Technology",
+                    "laboratory": "",
+                    "country": "Netherlands"
+                },
+                {
+                    "name": "Human Cell Atlas \u2018Biological Network\u2019 Organoids",
+                    "institution": "not applicable"
+                }
+            ]
+        },
+        "added_to_index": 1610896335,
+        "uuid": "bcd4c6b4-9387-4793-9a44-21dd9cd36c50",
         "dcp_url": null
     }
 ]
