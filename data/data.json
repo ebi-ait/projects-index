@@ -10643,7 +10643,9 @@
             "insdc_project_accessions": null,
             "geo_series_accessions": null,
             "supplementary_links": [
-                "https://ega-archive.org/studies/EGAS00001004481"
+                "https://ega-archive.org/studies/EGAS00001004481",
+                "https://doi.org/10.6084/m9.figshare.12436517",
+                "https://digital.bihealth.org/"
             ],
             "publications": [
                 {
@@ -16040,285 +16042,6 @@
         "content": {
             "project_core": {
                 "project_short_name": "tba",
-                "project_title": "COVID-19 severity correlates with airway epithelium-immune cell interactions identified by single-cell analysis.",
-                "project_description": "To investigate the immune response and mechanisms associated with severe coronavirus disease 2019 (COVID-19), we performed single-cell RNA sequencing on nasopharyngeal and bronchial samples from 19 clinically well-characterized patients with moderate or critical disease and from five healthy controls. We identified airway epithelial cell types and states vulnerable to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection. In patients with COVID-19, epithelial cells showed an average three-fold increase in expression of the SARS-CoV-2 entry receptor ACE2, which correlated with interferon signals by immune cells. Compared to moderate cases, critical cases exhibited stronger interactions between epithelial and immune cells, as indicated by ligand-receptor expression profiles, and activated immune cells, including inflammatory macrophages expressing CCL2, CCL3, CCL20, CXCL1, CXCL3, CXCL10, IL8, IL1B and TNF. The transcriptional differences in critical cases compared to moderate cases likely contribute to clinical observations of heightened inflammatory tissue damage, lung injury and respiratory failure. Our data suggest that pharmacologic inhibition of the CCR1 and/or CCR5 pathways might suppress immune hyperactivation in critical COVID-19."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "geo_series_accessions": null,
-            "supplementary_links": [
-                "https://ega-archive.org/studies/EGAS00001004481",
-                "https://doi.org/10.6084/m9.figshare.12436517",
-                "https://digital.bihealth.org/"
-            ],
-            "publications": [
-                {
-                    "doi": "10.1038/s41587-020-0602-4",
-                    "url": "http://dx.doi.org/10.1038/s41587-020-0602-4",
-                    "journal_title": "Nature Biotechnology",
-                    "title": "COVID-19 severity correlates with airway epithelium-immune cell interactions identified by single-cell analysis.",
-                    "authors": [
-                        "Chua RL",
-                        "Lukassen S",
-                        "Trump S",
-                        "Hennig BP",
-                        "Wendisch D",
-                        "Pott F",
-                        "Debnath O",
-                        "Th\u00fcrmann L",
-                        "Kurth F",
-                        "V\u00f6lker MT",
-                        "Kazmierski J",
-                        "Timmermann B",
-                        "Twardziok S",
-                        "Schneider S",
-                        "Machleidt F",
-                        "M\u00fcller-Redetzky H",
-                        "Maier M",
-                        "Krannich A",
-                        "Schmidt S",
-                        "Balzer F",
-                        "Liebig J",
-                        "Loske J",
-                        "Suttorp N",
-                        "Eils J",
-                        "Ishaque N",
-                        "Liebert UG",
-                        "von Kalle C",
-                        "Hocke A",
-                        "Witzenrath M",
-                        "Goffinet C",
-                        "Drosten C",
-                        "Laudi S",
-                        "Lehmann I",
-                        "Conrad C",
-                        "Sander LE",
-                        "Eils R."
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "Robert,Lorenz,Chua",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0001-5945-9957"
-                },
-                {
-                    "name": "Soeren,Lukassen",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0001-7045-6327"
-                },
-                {
-                    "name": "Saskia,Trump",
-                    "laboratory": "Molecular Epidemiology Unit, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-9894-1807"
-                },
-                {
-                    "name": "Bianca,P,Hennig",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-7733-8160"
-                },
-                {
-                    "name": "Daniel,Wendisch",
-                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0003-1968-5751"
-                },
-                {
-                    "name": "Fabian,Pott",
-                    "laboratory": "Institute of Virology, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0003-3700-1691"
-                },
-                {
-                    "name": "Olivia,Debnath",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Loreen,Th\u00fcrmann",
-                    "laboratory": "Molecular Epidemiology Unit, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0003-1109-1924"
-                },
-                {
-                    "name": "Florian,Kurth",
-                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-3807-473X"
-                },
-                {
-                    "name": "Maria,Theresa,V\u00f6lker",
-                    "laboratory": "Department of Anesthesiology and Intensive Care, University Hospital Leipzig, Leipzig, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Julia,Kazmierski",
-                    "laboratory": "Institute of Virology, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-7962-2165"
-                },
-                {
-                    "name": "Bernd,Timmermann",
-                    "laboratory": "Sequencing Core Facility, Max Planck Institute for Molecular Genetics, Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Sven,Twardziok",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Stefan,Schneider",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Felix,Machleidt",
-                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-6108-5269"
-                },
-                {
-                    "name": "Holger,M\u00fcller-Redetzky",
-                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Melanie,Maier",
-                    "laboratory": "Institute of Virology, University Hospital Leipzig, Leipzig, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Alexander,Krannich",
-                    "laboratory": "Clinical Study Center, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Sein,Schmidt",
-                    "laboratory": "Clinical Study Center, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Felix,Balzer",
-                    "laboratory": "Department of Anestesiology and Intensive Care Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Johannes,Liebig",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-9188-036X"
-                },
-                {
-                    "name": "Jennifer,Loske",
-                    "laboratory": "Molecular Epidemiology Unit, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0003-3222-9777"
-                },
-                {
-                    "name": "Norbert,Suttorp",
-                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "J\u00fcrgen,Eils",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Naveed,Ishaque",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-8426-901X"
-                },
-                {
-                    "name": "Uwe,Gerd,Liebert",
-                    "laboratory": "Institute of Virology, University Hospital Leipzig, Leipzig, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-5129-0875"
-                },
-                {
-                    "name": "Christof,von Kalle",
-                    "laboratory": "Clinical Study Center, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Andreas,Hocke",
-                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Martin,Witzenrath",
-                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Christine,Goffinet",
-                    "laboratory": "Institute of Virology, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-3959-004X"
-                },
-                {
-                    "name": "Christian,Drosten",
-                    "laboratory": "Institute of Virology, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0001-7923-0519"
-                },
-                {
-                    "name": "Sven,Laudi",
-                    "email": "sven.laudi@medizin.uni-leipzig.de",
-                    "laboratory": "Department of Anesthesiology and Intensive Care, University Hospital Leipzig, Leipzig, Germany. .",
-                    "country": "Germany",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0002-2117-0944"
-                },
-                {
-                    "name": "Irina,Lehmann",
-                    "email": "irina.lehmann@charite.de",
-                    "laboratory": "Molecular Epidemiology Unit, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin and Berlin Institute of Health (BIH), Berlin, Germany. .",
-                    "country": "Germany",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0001-8875-5587"
-                },
-                {
-                    "name": "Christian,Conrad",
-                    "email": "christian.conrad@charite.de",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany. .",
-                    "country": "Germany",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0001-7036-342X"
-                },
-                {
-                    "name": "Leif-Erik,Sander",
-                    "email": "leif-erik.sander@charite.de",
-                    "laboratory": "Department of Infectious Diseases and Respiratory Medicine, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health (BIH), Berlin, Germany. .",
-                    "country": "Germany",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0002-0476-9947"
-                },
-                {
-                    "name": "Roland,Eils",
-                    "email": "roland.eils@charite.de",
-                    "laboratory": "Center for Digital Health, Berlin Institute of Health (BIH) and Charit\u00e9 - Universit\u00e4tsmedizin Berlin, corporate member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, Berlin, Germany. .",
-                    "country": "Germany",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0002-0034-4036"
-                }
-            ]
-        },
-        "added_to_index": 1610801091,
-        "uuid": "c9e87292-4444-4852-a498-ae5305018223",
-        "dcp_url": null
-    },
-    {
-        "content": {
-            "project_core": {
-                "project_short_name": "tba",
                 "project_title": "SARS\u2010CoV\u20102 receptor ACE2 and TMPRSS2 are primarily expressed in bronchial transient secretory cells",
                 "project_description": "<h4>SUMMARY</h4> The SARS-CoV-2 pandemic affecting the human respiratory system severely challenges public health and urgently demands for increasing our understanding of COVID-19 pathogenesis, especially host factors facilitating virus infection and replication. SARS-CoV-2 was reported to enter cells via binding to ACE2, followed by its priming by TMPRSS2. Here, we investigate ACE2 and TMPRSS2 expression levels and their distribution across cell types in lung tissue (twelve donors, 39,778 cells) and in cells derived from subsegmental bronchial branches (four donors, 17,521 cells) by single nuclei and single cell RNA sequencing, respectively. While TMPRSS2 is expressed in both tissues, in the subsegmental bronchial branches ACE2 is predominantly expressed in a transient secretory cell type. Interestingly, these transiently differentiating cells show an enrichment for pathways related to RHO GTPase function and viral processes suggesting increased vulnerability for SARS-CoV-2 infection. Our data provide a rich resource for future investigations of COVID-19 infection and pathogenesis."
             },
@@ -17351,6 +17074,773 @@
         },
         "added_to_index": 1610896335,
         "uuid": "bcd4c6b4-9387-4793-9a44-21dd9cd36c50",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Single cell profiling of COVID-19 patients: an international data resource from multiple tissues",
+                "project_description": "<h4>[Abstract]</h4> In late 2019 and through 2020, the COVID-19 pandemic swept the world, presenting both scientific and medical challenges associated with understanding and treating a previously unknown disease. To help address the need for great understanding of COVID-19, the scientific community mobilized and banded together rapidly to characterize SARS-CoV-2 infection, pathogenesis and its distinct disease trajectories. The urgency of COVID-19 provided a pressing use-case for leveraging relatively new tools, technologies, and nascent collaborative networks. Single-cell biology is one such example that has emerged over the last decade as a powerful approach that provides unprecedented resolution to the cellular and molecular underpinnings of biological processes. Early foundational work within the single-cell community, including the Human Cell Atlas, utilized published and unpublished data to characterize the putative target cells of SARS-CoV-2 sampled from diverse organs based on expression of the viral receptor ACE2 and associated entry factors TMPRSS2 and CTSL (Muus et al., 2020; Sungnak et al., 2020; Ziegler et al., 2020). This initial characterization of reference data provided an important foundation for framing infection and pathology in the airway as well as other organs. However, initial community analysis was limited to samples derived from uninfected donors and other previously-sampled disease indications. This report provides an overview of a single-cell data resource derived from samples from COVID-19 patients along with initial observations and guidance on data reuse and exploration."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://www.covid19cellatlas.org/index.patient.html"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1101/2020.11.20.20227355",
+                    "url": "http://dx.doi.org/10.1101/2020.11.20.20227355",
+                    "journal_title": "medRxiv",
+                    "title": "Single cell profiling of COVID-19 patients: an international data resource from multiple tissues",
+                    "authors": [
+                        "Chan Zuckerberg Initiative Single-Cell COVID-19 Consortia",
+                        "Ballestar E",
+                        "Farber DL",
+                        "Glover S",
+                        "Horwitz B",
+                        "Meyer K",
+                        "Nikoli\u0107 M",
+                        "Ordovas-Montanes J",
+                        "Sims P",
+                        "Shalek A",
+                        "Vandamme N",
+                        "Vandekerckhove L",
+                        "Vento-Tormo R",
+                        "Villani AC."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Chan Zuckerberg Initiative Single-Cell COVID-19 Consortia",
+                    "institution": "not applicable"
+                },
+                {
+                    "name": "Esteban,Ballestar",
+                    "orcid_id": "0000-0002-1400-2440"
+                },
+                {
+                    "name": "Donna,Farber"
+                },
+                {
+                    "name": "Sarah,Glover"
+                },
+                {
+                    "name": "Bruce,Horwitz"
+                },
+                {
+                    "name": "Kerstin,Meyer"
+                },
+                {
+                    "name": "Marko,Nikoli\u0107"
+                },
+                {
+                    "name": "Jose,Ordovas-Montanes"
+                },
+                {
+                    "name": "Peter,Sims"
+                },
+                {
+                    "name": "Alex,Shalek"
+                },
+                {
+                    "name": "Niels,Vandamme"
+                },
+                {
+                    "name": "Linos,Vandekerckhove"
+                },
+                {
+                    "name": "Roser,Vento-Tormo"
+                },
+                {
+                    "name": "Alexandra,Chloe,Villani"
+                }
+            ]
+        },
+        "added_to_index": 1610969897,
+        "uuid": "2d4d89f2-ebeb-467c-ae60-a3efc5e8d4ba",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "CITEseqPBMCProject",
+                "project_title": "Dissecting the protein and transcriptional responses of human immune cells to T cell and monocyte specific activation",
+                "project_description": "Single cell profiling is a powerful tool for studying the molecular and cellular (dys)function of activated peripheral blood mononuclear cells (PBMCs) in the context of disease. We combined CITE-seq with two levels of multiplexing (cell hashing and individuals\u2019 genotypes) to derive a reference database of immune cell gene/protein responses to different activation conditions. PBMCs from 10 healthy adults were profiled before and after stimulating i) T cells via anti-CD3/CD28 or ii) monocytes via LPS. By using a comprehensive antibody panel (n=39) of cell type (e.g., CD16, CD14) and cell state (e.g., CD69, CD25) markers, we discovered that all lymphocytes responded to anti-CD3/CD28 stimulation, whereas LPS specifically induced inflammation in monocytes. Pseudo-temporal analyses further revealed cell- and condition-specific heterogeneity in responses to activation that were independent of individual-specific variation. Together, these data are shared within an interactive web application (https://czi-pbmc-cite-seq.jax.org/) and will serve as a resource to guide future studies of immune cell responses."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "ERP124005"
+            ],
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://czi-pbmc-cite-seq.jax.org/"
+            ],
+            "publications": null,
+            "contributors": [
+                {
+                    "name": "Nathan,,Lawlor",
+                    "email": "nathan.lawlor@jax.org",
+                    "phone": "(+1) 860-837-2059",
+                    "institution": "The Jackson Laboratory",
+                    "laboratory": "Michael Stitzel Lab",
+                    "address": "10 Discovery Drive, Farmington, CT 06032",
+                    "country": "USA",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "computational scientist",
+                        "ontology": "EFO:0009742",
+                        "ontology_label": "computational scientist"
+                    }
+                },
+                {
+                    "name": "Djamel,,Nehar-Belaid",
+                    "email": "Djamel.Nehar-belaid@jax.org",
+                    "phone": "(+1) 860-837-2120",
+                    "institution": "The Jackson Laboratory",
+                    "laboratory": "Jacques Banchereau Lab",
+                    "address": "10 Discovery Drive, Farmington, CT 06032",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "computational scientist",
+                        "ontology": "EFO:0009742",
+                        "ontology_label": "computational scientist"
+                    }
+                },
+                {
+                    "name": "Jessica,,Grassmann",
+                    "email": "Jessica.Grassmann@jax.org",
+                    "phone": "(+1) 860-837-2122",
+                    "institution": "The Jackson Laboratory",
+                    "laboratory": "Adam Williams Lab",
+                    "address": "10 Discovery Drive, Farmington, CT 06032",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "Experimental Scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Marlon,,Stoeckius",
+                    "email": "marlon@stoeckius.de",
+                    "institution": "The New York Genome Center",
+                    "laboratory": "Technology Innovation Lab",
+                    "address": "101 6th Ave, New York, NY 10013",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "Experimental Scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Peter,,Smibert",
+                    "email": "psmibert@NYGENOME.ORG",
+                    "institution": "The New York Genome Center",
+                    "laboratory": "Technology Innovation Lab",
+                    "address": "101 6th Ave, New York, NY 10013",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "Principal Investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    }
+                },
+                {
+                    "name": "Michael,,Stitzel",
+                    "email": "Michael.Stitzel@jax.org",
+                    "phone": "(+1) 860-837-2431",
+                    "institution": "The Jackson Laboratory",
+                    "laboratory": "Michael Stitzel Lab",
+                    "address": "10 Discovery Drive, Farmington, CT 06032",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "Principal Investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    }
+                },
+                {
+                    "name": "Virginia,,Pascual",
+                    "email": "vip2021@med.cornell.edu",
+                    "institution": "Weill Cornell Medicine",
+                    "laboratory": "Gale and Ira Drukier Institute for Children's Health",
+                    "address": "413 E. 69th StreetNew York, NY 10021",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "Principal Investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    }
+                },
+                {
+                    "name": "Jacques,,Banchereau",
+                    "email": "Jacques.Banchereau@jax.org",
+                    "phone": "(+1) 860-837-2443",
+                    "institution": "The Jackson Laboratory",
+                    "laboratory": "Jacques Banchereau Lab",
+                    "address": "10 Discovery Drive, Farmington, CT 06032",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "Principal Investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    }
+                },
+                {
+                    "name": "Adam,,Williams",
+                    "email": "Adam.Williams@jax.org",
+                    "phone": "(+1) 860-837-2351",
+                    "institution": "The Jackson Laboratory",
+                    "laboratory": "Adam Williams Lab",
+                    "address": "10 Discovery Drive, Farmington, CT 06032",
+                    "country": "USA",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "Principal Investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    }
+                },
+                {
+                    "name": "Duygu,,Ucar",
+                    "email": "Duygu.Ucar@jax.org",
+                    "phone": "(+1) 860-837-2436",
+                    "institution": "The Jackson Laboratory",
+                    "laboratory": "Duygu Ucar Lab",
+                    "address": "10 Discovery Drive, Farmington, CT 06032",
+                    "country": "USA",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "Principal Investigator",
+                        "ontology": "EFO:0009736",
+                        "ontology_label": "principal investigator"
+                    }
+                }
+            ]
+        },
+        "added_to_index": 1610969898,
+        "uuid": "efea6426-510a-4b60-9a19-277e52bfa815",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Deep learning and alignment of spatially-resolved whole transcriptomes of single cells in the mouse brain with Tangram",
+                "project_description": "Charting a biological atlas of an organ, such as the brain, requires us to spatially-resolve whole transcriptomes of single cells, and to relate such cellular features to the histological and anatomical scales. Single-cell and single-nucleus RNA-Seq (sc/snRNA-seq) can map cells comprehensively 5,6 , but relating those to their histological and anatomical positions in the context of an organ\u2019s common coordinate framework remains a major challenge and barrier to the construction of a cell atlas 7\u201310 . Conversely, Spatial Transcriptomics allows for in-situ measurements 11\u201313 at the histological level, but at lower spatial resolution and with limited sensitivity. Targeted in situ technologies 1\u20133 solve both issues, but are limited in gene throughput which impedes profiling of the entire transcriptome. Finally, as samples are collected for profiling, their registration to anatomical atlases often require human supervision, which is a major obstacle to build pipelines at scale. Here, we demonstrate spatial mapping of cells, histology, and anatomy in the somatomotor area and the visual area of the healthy adult mouse brain. We devise Tangram, a method that aligns snRNA-seq data to various forms of spatial data collected from the same brain region, including MERFISH 1 , STARmap 2 , smFISH 3 , and Spatial Transcriptomics 4 (Visium), as well as histological images and public atlases. Tangram can map any type of sc/snRNA-seq data, including multi-modal data such as SHARE-seq data 5 , which we used to reveal spatial patterns of chromatin accessibility. We equipped Tangram with a deep learning computer vision pipeline, which allows for automatic identification of anatomical annotations on histological images of mouse brain. By doing so, Tangram reconstructs a genome-wide, anatomically-integrated, spatial map of the visual and somatomotor area with \u223c30,000 genes at single-cell resolution, revealing spatial gene expression and chromatin accessibility patterning beyond current limitation of in-situ technologies."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1101/2020.08.29.272831",
+                    "url": "http://dx.doi.org/10.1101/2020.08.29.272831",
+                    "journal_title": "bioRxiv",
+                    "title": "Deep learning and alignment of spatially-resolved whole transcriptomes of single cells in the mouse brain with Tangram",
+                    "authors": [
+                        "Biancalani T",
+                        "Scalia G",
+                        "Buffoni L",
+                        "Avasthi R",
+                        "Lu Z",
+                        "Sanger A",
+                        "Tokcan N",
+                        "Vanderburg CR",
+                        "Segerstolpe A",
+                        "Zhang M",
+                        "Avraham-Davidi I",
+                        "Vickovic S",
+                        "Nitzan M",
+                        "Ma S",
+                        "Buenrostro J",
+                        "Brown NB",
+                        "Fanelli D",
+                        "Zhuang X",
+                        "Macosko EZ",
+                        "Regev A."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Tommaso,Biancalani"
+                },
+                {
+                    "name": "Gabriele,Scalia",
+                    "orcid_id": "0000-0003-3305-9220"
+                },
+                {
+                    "name": "Lorenzo,Buffoni"
+                },
+                {
+                    "name": "Raghav,Avasthi"
+                },
+                {
+                    "name": "Ziqing,Lu"
+                },
+                {
+                    "name": "Aman,Sanger"
+                },
+                {
+                    "name": "Neriman,Tokcan"
+                },
+                {
+                    "name": "Charles,Vanderburg"
+                },
+                {
+                    "name": "Asa,Segerstolpe"
+                },
+                {
+                    "name": "Meng,Zhang"
+                },
+                {
+                    "name": "Inbal,Avraham-Davidi"
+                },
+                {
+                    "name": "Sanja,Vickovic"
+                },
+                {
+                    "name": "Mor,Nitzan"
+                },
+                {
+                    "name": "Sai,Ma"
+                },
+                {
+                    "name": "Jason,Buenrostro"
+                },
+                {
+                    "name": "Nik,Bear,Brown"
+                },
+                {
+                    "name": "Duccio,Fanelli"
+                },
+                {
+                    "name": "Xiaowei,Zhuang"
+                },
+                {
+                    "name": "Evan,Macosko"
+                },
+                {
+                    "name": "Aviv,Regev"
+                }
+            ]
+        },
+        "added_to_index": 1610969900,
+        "uuid": "0406796c-5a6e-4eeb-b6e4-12de1e659bd9",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Single-Cell Transcriptomic Analysis of Human Lung Provides Insights into the Pathobiology of Pulmonary Fibrosis.",
+                "project_description": "Rationale: The contributions of diverse cell populations in the human lung to pulmonary fibrosis pathogenesis are poorly understood. Single-cell RNA sequencing can reveal changes within individual cell populations during pulmonary fibrosis that are important for disease pathogenesis. Objectives: To determine whether single-cell RNA sequencing can reveal disease-related heterogeneity within alveolar macrophages, epithelial cells, or other cell types in lung tissue from subjects with pulmonary fibrosis compared with control subjects. Methods: We performed single-cell RNA sequencing on lung tissue obtained from eight transplant donors and eight recipients with pulmonary fibrosis and on one bronchoscopic cryobiospy sample from a patient with idiopathic pulmonary fibrosis. We validated these data using in situ RNA hybridization, immunohistochemistry, and bulk RNA-sequencing on flow-sorted cells from 22 additional subjects. Measurements and Main Results: We identified a distinct, novel population of profibrotic alveolar macrophages exclusively in patients with fibrosis. Within epithelial cells, the expression of genes involved in Wnt secretion and response was restricted to nonoverlapping cells. We identified rare cell populations including airway stem cells and senescent cells emerging during pulmonary fibrosis. We developed a web-based tool to explore these data. Conclusions: We generated a single-cell atlas of pulmonary fibrosis. Using this atlas, we demonstrated heterogeneity within alveolar macrophages and epithelial cells from subjects with pulmonary fibrosis. These results support the feasibility of discovery-based approaches using next-generation sequencing technologies to identify signaling pathways for targeting in the development of personalized therapies for patients with pulmonary fibrosis."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1164/rccm.201712-2410oc",
+                    "url": "http://dx.doi.org/10.1164/rccm.201712-2410oc",
+                    "journal_title": "American Journal of Respiratory and Critical Care Medicine",
+                    "title": "Single-Cell Transcriptomic Analysis of Human Lung Provides Insights into the Pathobiology of Pulmonary Fibrosis.",
+                    "authors": [
+                        "Reyfman PA",
+                        "Walter JM",
+                        "Joshi N",
+                        "Anekalla KR",
+                        "McQuattie-Pimentel AC",
+                        "Chiu S",
+                        "Fernandez R",
+                        "Akbarpour M",
+                        "Chen CI",
+                        "Ren Z",
+                        "Verma R",
+                        "Abdala-Valencia H",
+                        "Nam K",
+                        "Chi M",
+                        "Han S",
+                        "Gonzalez-Gonzalez FJ",
+                        "Soberanes S",
+                        "Watanabe S",
+                        "Williams KJN",
+                        "Flozak AS",
+                        "Nicholson TT",
+                        "Morgan VK",
+                        "Winter DR",
+                        "Hinchcliff M",
+                        "Hrusch CL",
+                        "Guzy RD",
+                        "Bonham CA",
+                        "Sperling AI",
+                        "Bag R",
+                        "Hamanaka RB",
+                        "Mutlu GM",
+                        "Yeldandi AV",
+                        "Marshall SA",
+                        "Shilatifard A",
+                        "Amaral LAN",
+                        "Perlman H",
+                        "Sznajder JI",
+                        "Argento AC",
+                        "Gillespie CT",
+                        "Dematte J",
+                        "Jain M",
+                        "Singer BD",
+                        "Ridge KM",
+                        "Lam AP",
+                        "Bharat A",
+                        "Bhorade SM",
+                        "Gottardi CJ",
+                        "Budinger GRS",
+                        "Misharin AV."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Paul,A,Reyfman",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine.",
+                    "orcid_id": "0000-0002-6435-6001"
+                },
+                {
+                    "name": "James,M,Walter",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine.",
+                    "orcid_id": "0000-0001-7428-3101"
+                },
+                {
+                    "name": "Nikita,Joshi",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine.",
+                    "orcid_id": "0000-0001-8330-0663"
+                },
+                {
+                    "name": "Kishore,R,Anekalla",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine.",
+                    "orcid_id": "0000-0002-8366-5782"
+                },
+                {
+                    "name": "Alexandra,C,McQuattie-Pimentel",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Stephen,Chiu",
+                    "laboratory": "2 Division of Thoracic Surgery, Department of Surgery."
+                },
+                {
+                    "name": "Ramiro,Fernandez",
+                    "laboratory": "2 Division of Thoracic Surgery, Department of Surgery."
+                },
+                {
+                    "name": "Mahzad,Akbarpour",
+                    "laboratory": "2 Division of Thoracic Surgery, Department of Surgery."
+                },
+                {
+                    "name": "Ching-I,Chen",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Ziyou,Ren",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Rohan,Verma",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Hiam,Abdala-Valencia",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Kiwon,Nam",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Monica,Chi",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "SeungHye,Han",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Francisco,J,Gonzalez-Gonzalez",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Saul,Soberanes",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Satoshi,Watanabe",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Kinola,J,N,Williams",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Annette,S,Flozak",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Trevor,T,Nicholson",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Vince,K,Morgan",
+                    "laboratory": "3 Division of Rheumatology, Department of Medicine."
+                },
+                {
+                    "name": "Deborah,R,Winter",
+                    "laboratory": "3 Division of Rheumatology, Department of Medicine."
+                },
+                {
+                    "name": "Monique,Hinchcliff",
+                    "laboratory": "3 Division of Rheumatology, Department of Medicine."
+                },
+                {
+                    "name": "Cara,L,Hrusch",
+                    "laboratory": "4 Section of Pulmonary and Critical Care Medicine, University of Chicago, Chicago, Illinois"
+                },
+                {
+                    "name": "Robert,D,Guzy",
+                    "laboratory": "4 Section of Pulmonary and Critical Care Medicine, University of Chicago, Chicago, Illinois"
+                },
+                {
+                    "name": "Catherine,A,Bonham",
+                    "laboratory": "4 Section of Pulmonary and Critical Care Medicine, University of Chicago, Chicago, Illinois",
+                    "orcid_id": "0000-0001-9132-4083"
+                },
+                {
+                    "name": "Anne,I,Sperling",
+                    "laboratory": "4 Section of Pulmonary and Critical Care Medicine, University of Chicago, Chicago, Illinois"
+                },
+                {
+                    "name": "Remzi,Bag",
+                    "laboratory": "4 Section of Pulmonary and Critical Care Medicine, University of Chicago, Chicago, Illinois"
+                },
+                {
+                    "name": "Robert,B,Hamanaka",
+                    "laboratory": "4 Section of Pulmonary and Critical Care Medicine, University of Chicago, Chicago, Illinois",
+                    "orcid_id": "0000-0002-8909-356X"
+                },
+                {
+                    "name": "G\u00f6khan,M,Mutlu",
+                    "laboratory": "4 Section of Pulmonary and Critical Care Medicine, University of Chicago, Chicago, Illinois"
+                },
+                {
+                    "name": "Anjana,V,Yeldandi",
+                    "laboratory": "5 Department of Pathology, and."
+                },
+                {
+                    "name": "Stacy,A,Marshall",
+                    "laboratory": "6 Department of Biochemistry and Molecular Genetics, Feinberg School of Medicine, Northwestern University, Chicago, Illinois."
+                },
+                {
+                    "name": "Ali,Shilatifard",
+                    "laboratory": "6 Department of Biochemistry and Molecular Genetics, Feinberg School of Medicine, Northwestern University, Chicago, Illinois."
+                },
+                {
+                    "name": "Luis,A,N,Amaral",
+                    "laboratory": "7 Department of Chemical and Biological Engineering, Weinberg College of Arts and Sciences, Northwestern University, Evanston, Illinois."
+                },
+                {
+                    "name": "Harris,Perlman",
+                    "laboratory": "3 Division of Rheumatology, Department of Medicine."
+                },
+                {
+                    "name": "Jacob,I,Sznajder",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "A,Christine,Argento",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Colin,T,Gillespie",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Jane,Dematte",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Manu,Jain",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Benjamin,D,Singer",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine.",
+                    "orcid_id": "0000-0001-5775-8427"
+                },
+                {
+                    "name": "Karen,M,Ridge",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Anna,P,Lam",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Ankit,Bharat",
+                    "laboratory": "2 Division of Thoracic Surgery, Department of Surgery."
+                },
+                {
+                    "name": "Sangeeta,M,Bhorade",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "Cara,J,Gottardi",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine."
+                },
+                {
+                    "name": "G,R,Scott,Budinger",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine.",
+                    "orcid_id": "0000-0002-3114-5208"
+                },
+                {
+                    "name": "Alexander,V,Misharin",
+                    "laboratory": "1 Division of Pulmonary and Critical Care Medicine, Department of Medicine.",
+                    "orcid_id": "0000-0003-2879-3789"
+                }
+            ]
+        },
+        "added_to_index": 1610969901,
+        "uuid": "daf9d982-7ce6-43f6-ab51-272577290606",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Integrated single cell analysis of human lung fibrosis resolves cellular origins of predictive protein signatures in body fluids",
+                "project_description": "Single cell genomics enables characterization of disease specific cell states, while improvements in mass spectrometry workflows bring the clinical use of body fluid proteomics within reach. The correspondence of cell state changes in diseased organs to peripheral protein signatures is currently unknown. Here, we leverage single cell RNA-seq and proteomic analysis of large pulmonary fibrosis patient cohorts to identify disease specific changes on the cellular level and their corresponding reflection in body fluid proteomes. We discovered and validated transcriptional changes in 45 cell types across three patient cohorts that translated into distinct changes in the bronchoalveolar lavage fluid and plasma proteome. These protein signatures correlated with diagnosis, lung function, smoking and injury status. Specifically, the altered expression of a novel marker of lung health, CRTAC1, in alveolar epithelium is robustly reflected in patient plasma. Our findings have direct implications for future non-invasive prediction and monitoring of pathological cell state changes in patient organs. <h4>Abstract Figure</h4>"
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://github.com/theislab/2020_Mayr"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1101/2020.01.21.20018358",
+                    "url": "http://dx.doi.org/10.1101/2020.01.21.20018358",
+                    "journal_title": "medRxiv",
+                    "title": "Integrated single cell analysis of human lung fibrosis resolves cellular origins of predictive protein signatures in body fluids",
+                    "authors": [
+                        "Mayr CH",
+                        "Simon LM",
+                        "Leuschner G",
+                        "Ansari M",
+                        "Geyer PE",
+                        "Angelidis I",
+                        "Strunz M",
+                        "Singh P",
+                        "Kneidinger N",
+                        "Reichenberger F",
+                        "Silbernagel E",
+                        "B\u00f6hm S",
+                        "Adler H",
+                        "Hilgendorff A",
+                        "Lindner M",
+                        "Prasse A",
+                        "Behr J",
+                        "Mann M",
+                        "Eickelberg O",
+                        "Theis FJ",
+                        "Schiller HB."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Christoph,Mayr"
+                },
+                {
+                    "name": "Lukas,Simon"
+                },
+                {
+                    "name": "Gabriela,Leuschner"
+                },
+                {
+                    "name": "Meshal,Ansari"
+                },
+                {
+                    "name": "Philipp,Geyer"
+                },
+                {
+                    "name": "Ilias,Angelidis"
+                },
+                {
+                    "name": "Maximilian,Strunz"
+                },
+                {
+                    "name": "Pawandeep,Singh"
+                },
+                {
+                    "name": "Nikolaus,Kneidinger"
+                },
+                {
+                    "name": "Frank,Reichenberger"
+                },
+                {
+                    "name": "Edith,Silbernagel"
+                },
+                {
+                    "name": "Stephan,B\u00f6hm"
+                },
+                {
+                    "name": "Heiko,Adler"
+                },
+                {
+                    "name": "Anne,Hilgendorff"
+                },
+                {
+                    "name": "Michael,Lindner"
+                },
+                {
+                    "name": "Antje,Prasse"
+                },
+                {
+                    "name": "J\u00fcrgen,Behr"
+                },
+                {
+                    "name": "Matthias,Mann"
+                },
+                {
+                    "name": "Oliver,Eickelberg"
+                },
+                {
+                    "name": "Fabian,Theis",
+                    "email": "fabian.theis@helmholtz-muenchen.de",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Herbert,Schiller",
+                    "email": "herbert.schiller@helmholtz-muenchen.de",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1610969902,
+        "uuid": "30d5c857-9d46-465b-9fd8-236ff31f2f5a",
         "dcp_url": null
     }
 ]
