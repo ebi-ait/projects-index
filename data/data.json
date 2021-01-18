@@ -16919,21 +16919,38 @@
                 {
                     "name": "Soeren,Lukassen",
                     "institution": "Universit\u00e4tsmedizin Berlin",
+                    "laboratory": "Digital Health Center",
+                    "country": "Germany",
                     "orcid_id": "0000-0001-7045-6327"
                 },
                 {
                     "name": "Foo,Wei,Ten",
-                    "institution": "Universit\u00e4tsmedizin Berlin"
+                    "institution": "Universit\u00e4tsmedizin Berlin",
+                    "laboratory": "Digital Health Center",
+                    "country": "Germany"
                 },
                 {
                     "name": "Roland,Eils",
                     "institution": "Universit\u00e4tsmedizin Berlin",
-                    "corresponding_contributor": false,
+                    "laboratory": "Digital Health Center",
+                    "country": "Germany",
+                    "corresponding_contributor": true,
                     "orcid_id": "0000-0002-0034-4036"
                 },
                 {
                     "name": "Christian,Conrad",
-                    "institution": "Universit\u00e4tsmedizin Berlin"
+                    "institution": "Universit\u00e4tsmedizin Berlin",
+                    "laboratory": "Digital Health Center",
+                    "country": "Germany",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0001-7036-342X"
+                },
+                {
+                    "name": "Lukas,Adam",
+                    "institution": "Universit\u00e4tsmedizin Berlin",
+                    "laboratory": "Digital Health Center",
+                    "country": "Germany",
+                    "orcid_id": "0000-0003-4182-5300"
                 }
             ]
         },
@@ -17344,7 +17361,9 @@
             "array_express_accessions": null,
             "insdc_project_accessions": null,
             "geo_series_accessions": null,
-            "supplementary_links": null,
+            "supplementary_links": [
+                "https://github.com/broadinstitute/Tangram"
+            ],
             "publications": [
                 {
                     "doi": "10.1101/2020.08.29.272831",
@@ -17841,6 +17860,744 @@
         },
         "added_to_index": 1610969902,
         "uuid": "30d5c857-9d46-465b-9fd8-236ff31f2f5a",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Single cell transcriptional and chromatin accessibility profiling redefine cellular heterogeneity in the adult human kidney",
+                "project_description": "The integration of single cell transcriptome and chromatin accessibility datasets enables a deeper understanding of cell heterogeneity. We performed single nucleus ATAC (snATAC-seq) and RNA (snRNA-seq) sequencing to generate paired, cell-type-specific chromatin accessibility and transcriptional profiles of the adult human kidney. We demonstrate that snATAC-seq is comparable to snRNA-seq in the assignment of cell identity and can further refine our understanding of functional heterogeneity in the nephron. The majority of differentially accessible chromatin regions are localized to promoters and a significant proportion are closely-associated with differentially expressed genes. Cell-type-specific enrichment of transcription factor binding motifs implicates the activation of NF\u03baB that promotes VCAM1 expression and drives transition between a subpopulation of proximal tubule epithelial cells. These datasets can be visualized at this resource: http://humphreyslab.com/SingleCell/ . Our multi-omics approach improves the ability to detect unique cell states within the kidney and redefines cellular heterogeneity in the proximal tubule and thick ascending limb."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "http://humphreyslab.com/SingleCell/"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1101/2020.06.14.151167",
+                    "url": "http://dx.doi.org/10.1101/2020.06.14.151167",
+                    "journal_title": "bioRxiv",
+                    "title": "Single cell transcriptional and chromatin accessibility profiling redefine cellular heterogeneity in the adult human kidney",
+                    "authors": [
+                        "Muto Y",
+                        "Wilson PC",
+                        "Wu H",
+                        "Waikar SS",
+                        "Humphreys BD."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Yoshiharu,Muto",
+                    "orcid_id": "0000-0002-0358-9442"
+                },
+                {
+                    "name": "Parker,Wilson",
+                    "orcid_id": "0000-0001-8647-9662"
+                },
+                {
+                    "name": "Haojia,Wu",
+                    "orcid_id": "0000-0002-7866-2544"
+                },
+                {
+                    "name": "Sushrut,Waikar",
+                    "orcid_id": "0000-0003-4004-326X"
+                },
+                {
+                    "name": "Benjamin,Humphreys",
+                    "email": "humphreysbd@wustl.edu",
+                    "orcid_id": "0000-0002-6420-8703"
+                }
+            ]
+        },
+        "added_to_index": 1610989010,
+        "uuid": "e4b2e4d9-2b9b-46cf-b0e0-bb23ff28030a",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "A single cell atlas of the healthy breast tissues reveal clinically relevant clusters of breast epithelial cells",
+                "project_description": "<h4>Summary</h4> Single cell RNA sequencing is an evolving field to elucidate cellular architecture of adult organs. Using normal breast tissues from healthy volunteers and a rapid procurement/processing/sequencing protocol, 13 breast epithelial cell clusters were identified. Approximately 90% of breast cancers were enriched for cell-of-origin signatures derived from differentiated luminal clusters and two minor luminal progenitor clusters. Expression of cell cycle and chromosome segregation-related genes were higher in one of the minor clusters and breast tumors with this cluster signature displayed the highest mutation rate and poor outcome. We identified TBX3 and PDK4 as genes co-expressed with estrogen receptor (ER) in the normal breasts and their expression analyses in >550 breast cancers enabled prognostically relevant cell-of-origin based subclassification of ER+ breast cancers. <h4>Significance</h4> This study elucidates different epithelial cell types of the normal breasts and identifies a minor subpopulation of cells from which the majority of breast cancers may originate. This observation should help to develop methods to characterize breast tumors based on cell-of-origin. Although it was suggested that intrinsic subtypes of breast cancers have distinct cells of origins, this study suggests multiple cell-of-origin for an intrinsic subtype of breast cancer, including for hormone responsive breast cancers. Cell-of-origin signatures allowed survival-associated subclassification of intrinsic subtypes. Critically, this normal breast cell atlas would allow for the classification of genes differentially expressed in a breast tumor compared to normal breast due to the cell-of-origin of tumor and those that are acquired due to genomic aberrations."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1101/2020.06.25.171793",
+                    "url": "http://dx.doi.org/10.1101/2020.06.25.171793",
+                    "journal_title": "bioRxiv",
+                    "title": "A single cell atlas of the healthy breast tissues reveal clinically relevant clusters of breast epithelial cells",
+                    "authors": [
+                        "Bhat-Nakshatri P",
+                        "Gao H",
+                        "McGuire PC",
+                        "Xuei X",
+                        "Sheng L",
+                        "Wan J",
+                        "Liu Y",
+                        "Althouse SK",
+                        "Colter A",
+                        "Sandusky G",
+                        "Storniolo AM",
+                        "Nakshatri H."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Poornima,Bhat-Nakshatri"
+                },
+                {
+                    "name": "Hongyu,Gao"
+                },
+                {
+                    "name": "Patrick,McGuire"
+                },
+                {
+                    "name": "Xiaoling,Xuei"
+                },
+                {
+                    "name": "Liu,Sheng"
+                },
+                {
+                    "name": "Jun,Wan"
+                },
+                {
+                    "name": "Yunlong,Liu"
+                },
+                {
+                    "name": "Sandra,Althouse"
+                },
+                {
+                    "name": "Austyn,Colter"
+                },
+                {
+                    "name": "George,Sandusky"
+                },
+                {
+                    "name": "Anna,Maria,Storniolo"
+                },
+                {
+                    "name": "Harikrishna,Nakshatri",
+                    "email": "hnakshat@iupui.edu",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1610989011,
+        "uuid": "d363d09f-924b-43dd-9634-6988f1e46db2",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Single cell census of human kidney organoids shows reproducibility and diminished off-target cells after transplantation.",
+                "project_description": "Human iPSC-derived kidney organoids have the potential to revolutionize discovery, but assessing their consistency and reproducibility across iPSC lines, and reducing the generation of off-target cells remain an open challenge. Here, we profile four human iPSC lines for a total of 450,118 single cells to show how organoid composition and development are comparable to human fetal and adult kidneys. Although cell classes are largely reproducible across time points, protocols, and replicates, we detect variability in cell proportions between different iPSC lines, largely due to off-target cells. To address this, we analyze organoids transplanted under the mouse kidney capsule and find diminished off-target cells. Our work shows how single cell RNA-seq (scRNA-seq) can score organoids for reproducibility, faithfulness and quality, that kidney organoids derived from different iPSC lines are comparable surrogates for human kidney, and that transplantation enhances their formation by diminishing off-target cells."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP219278"
+            ],
+            "geo_series_accessions": [
+                "GSE136314"
+            ],
+            "supplementary_links": [
+                "https://singlecell.broadinstitute.org/single_cell/study/SCP211/human-kidney-organoids-atlas"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1038/s41467-019-13382-0",
+                    "url": "http://dx.doi.org/10.1038/s41467-019-13382-0",
+                    "journal_title": "Nature Communications",
+                    "title": "Single cell census of human kidney organoids shows reproducibility and diminished off-target cells after transplantation.",
+                    "authors": [
+                        "Subramanian A",
+                        "Sidhom EH",
+                        "Emani M",
+                        "Vernon K",
+                        "Sahakian N",
+                        "Zhou Y",
+                        "Kost-Alimova M",
+                        "Slyper M",
+                        "Waldman J",
+                        "Dionne D",
+                        "Nguyen LT",
+                        "Weins A",
+                        "Marshall JL",
+                        "Rosenblatt-Rosen O",
+                        "Regev A",
+                        "Greka A."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Ayshwarya,Subramanian",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States",
+                    "orcid_id": "0000-0002-4134-7612"
+                },
+                {
+                    "name": "Eriene-Heidi,Sidhom",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States",
+                    "orcid_id": "0000-0002-2658-9672"
+                },
+                {
+                    "name": "Maheswarareddy,Emani",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States"
+                },
+                {
+                    "name": "Katherine,Vernon",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States"
+                },
+                {
+                    "name": "Nareh,Sahakian",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States"
+                },
+                {
+                    "name": "Yiming,Zhou",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States",
+                    "orcid_id": "0000-0002-2109-4320"
+                },
+                {
+                    "name": "Maria,Kost-Alimova",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "Center for the Development of Therapeutics",
+                    "country": "USA"
+                },
+                {
+                    "name": "Michal,Slyper",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States"
+                },
+                {
+                    "name": "Julia,Waldman",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States"
+                },
+                {
+                    "name": "Danielle,Dionne",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States",
+                    "orcid_id": "0000-0002-8338-4323"
+                },
+                {
+                    "name": "Lan,T,Nguyen",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States"
+                },
+                {
+                    "name": "Astrid,Weins",
+                    "institution": "Harvard Medical School",
+                    "laboratory": " Brigham and Women's Hospital",
+                    "country": "United States"
+                },
+                {
+                    "name": "Jamie,L,Marshall",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States",
+                    "orcid_id": "0000-0002-2364-391X"
+                },
+                {
+                    "name": "Orit,Rosenblatt-Rosen",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States"
+                },
+                {
+                    "name": "Aviv,Regev",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States",
+                    "orcid_id": "0000-0003-3293-3158"
+                },
+                {
+                    "name": "Anna,Greka",
+                    "email": "agreka@bwh.harvard.edu",
+                    "institution": "Broad Institute of MIT and Harvard",
+                    "laboratory": "",
+                    "country": "United States",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0001-5697-7791"
+                }
+            ]
+        },
+        "added_to_index": 1610989013,
+        "uuid": "2bda737d-bd81-412f-b37b-cf76b059f778",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "In\u00a0Vitro and In\u00a0Vivo Development of the Human Airway at Single-Cell Resolution.",
+                "project_description": "Bud tip progenitor cells give rise to all murine lung epithelial lineages and have been described in the developing human lung; however, the mechanisms controlling human bud tip differentiation into specific lineages are unclear. Here, we used homogeneous human bud tip organoid cultures and identified SMAD signaling as a key regulator of the bud tip-to-airway transition. SMAD induction led to the differentiation of airway-like organoids possessing functional basal cells capable of clonal expansion\u00a0and\u00a0multilineage differentiation. To benchmark in\u00a0vitro-derived organoids, we developed a single-cell mRNA sequencing atlas of the human lung from 11.5 to 21\u00a0weeks of development, which revealed high degrees of similarity between the in\u00a0vitro-derived and in\u00a0vivo airway. Together, this work sheds light on human airway differentiation in\u00a0vitro and provides a single-cell atlas of the developing human lung."
+            },
+            "array_express_accessions": [
+                "E-MTAB-8221"
+            ],
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1016/j.devcel.2020.01.033",
+                    "url": "http://dx.doi.org/10.1016/j.devcel.2020.01.033",
+                    "journal_title": "Developmental Cell",
+                    "title": "In\u00a0Vitro and In\u00a0Vivo Development of the Human Airway at Single-Cell Resolution.",
+                    "authors": [
+                        "Miller AJ",
+                        "Yu Q",
+                        "Czerwinski M",
+                        "Tsai YH",
+                        "Conway RF",
+                        "Wu A",
+                        "Holloway EM",
+                        "Walker T",
+                        "Glass IA",
+                        "Treutlein B",
+                        "Camp JG",
+                        "Spence JR."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Alyssa,J,Miller",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Qianhui,Yu",
+                    "institution": "Institute of Molecular and Clinical Ophthalmology Basel",
+                    "laboratory": "Institute of Molecular and Clinical Ophthalmology Basel (IOB), Basel, Switzerland; University of Basel, Basel, Switzerland; Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany.",
+                    "country": "Switzerland"
+                },
+                {
+                    "name": "Michael,Czerwinski",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Yu-Hwai,Tsai",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Renee,F,Conway",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Angeline,Wu",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Emily,M,Holloway",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States",
+                    "orcid_id": "0000-0003-3661-1957"
+                },
+                {
+                    "name": "Taylor,Walker",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Ian,A,Glass",
+                    "institution": "University of Washington",
+                    "laboratory": "Department of Pediatrics, Genetic Medicine, University of Washington, Seattle, WA 98195, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Barbara,Treutlein",
+                    "email": "barbara.treutlein@bsse.ethz.ch",
+                    "institution": "ETH Zurich",
+                    "laboratory": "Department of Biosystems Science and Engineering, ETH Z\u00fcrich, Basel, Switzerland; Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany. Electronic address: barbara.treutlein@bsse.ethz.ch.",
+                    "country": "Switzerland",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-3299-5597"
+                },
+                {
+                    "name": "J,Gray,Camp",
+                    "email": "grayson.camp@iob.ch",
+                    "institution": "Institute of Molecular and Clinical Ophthalmology Basel",
+                    "laboratory": "Institute of Molecular and Clinical Ophthalmology Basel (IOB), Basel, Switzerland; University of Basel, Basel, Switzerland; Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany. Electronic address: grayson.camp@iob.ch.",
+                    "country": "Switzerland",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Jason,R,Spence",
+                    "email": "spencejr@umich.edu",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1610989014,
+        "uuid": "87e600d2-57ca-4f16-addd-d357ab2f24ee",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Mapping Development of the Human Intestinal Niche at Single-Cell Resolution.",
+                "project_description": "The human intestinal stem cell niche supports self-renewal and epithelial function, but little is known about its development. We used single-cell mRNA sequencing with in situ validation approaches to interrogate human intestinal development from 7-21\u00a0weeks post conception, assigning molecular identities and spatial locations to cells and factors that comprise the niche. Smooth muscle cells of the muscularis mucosa, in close proximity to proliferative crypts, are a source of WNT and RSPONDIN ligands, whereas EGF is expressed far from crypts in the villus epithelium. Instead, an PDGFRA<sup>HI</sup>/F3<sup>HI</sup>/DLL1<sup>HI</sup> mesenchymal population lines the crypt-villus axis and is the source of the epidermal growth factor (EGF) family member NEUREGULIN1 (NRG1). In developing intestine enteroid cultures, NRG1, but not EGF, permitted increased cellular diversity via differentiation of secretory lineages. This work highlights the complexities of intestinal EGF/ERBB signaling and delineates key niche cells and signals of the developing intestine."
+            },
+            "array_express_accessions": [
+                "E-MTAB-9489",
+                "E-MTAB-9720"
+            ],
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1016/j.stem.2020.11.008",
+                    "url": "http://dx.doi.org/10.1016/j.stem.2020.11.008",
+                    "journal_title": "Cell Stem Cell",
+                    "title": "Mapping Development of the Human Intestinal Niche at Single-Cell Resolution.",
+                    "authors": [
+                        "Holloway EM",
+                        "Czerwinski M",
+                        "Tsai YH",
+                        "Wu JH",
+                        "Wu A",
+                        "Childs CJ",
+                        "Walton KD",
+                        "Sweet CW",
+                        "Yu Q",
+                        "Glass I",
+                        "Treutlein B",
+                        "Camp JG",
+                        "Spence JR."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Emily,M,Holloway",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Michael,Czerwinski",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Yu-Hwai,Tsai",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Joshua,H,Wu",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Angeline,Wu",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Charlie,J,Childs",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Katherine,D,Walton",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Caden,W,Sweet",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Qianhui,Yu",
+                    "institution": "Institute of Molecular and Clinical Ophthalmology Basel",
+                    "laboratory": "Institute of Molecular and Clinical Ophthalmology Basel (IOB), Basel, Switzerland.",
+                    "country": "Switzerland"
+                },
+                {
+                    "name": "Ian,Glass",
+                    "institution": "University of Washington",
+                    "laboratory": "Department of Pediatrics, Genetic Medicine, University of Washington, Seattle, WA 98195, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Barbara,Treutlein",
+                    "institution": "ETH Zurich",
+                    "laboratory": "Department of Biosystems Science and Engineering, ETH Z\u00fcrich, Basel, Switzerland.",
+                    "country": "Switzerland"
+                },
+                {
+                    "name": "J,Gray,Camp",
+                    "institution": "Institute of Molecular and Clinical Ophthalmology Basel",
+                    "laboratory": "Institute of Molecular and Clinical Ophthalmology Basel (IOB), Basel, Switzerland; University of Basel, Basel, Switzerland.",
+                    "country": "Switzerland"
+                },
+                {
+                    "name": "Jason,R,Spence",
+                    "email": "spencejr@umich.edu",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1610989016,
+        "uuid": "fc934a13-4a98-4901-8208-590534cd7b87",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "An organoid and multi-organ developmental cell atlas reveals multilineage fate specification in the human intestine",
+                "project_description": "Human intestinal organoids (HIOs) generated from pluripotent stem cells provide extraordinary opportunities to explore development and disease. Here, we generate a single-cell transcriptome reference atlas from HIOs and from multiple developing human organs to quantify the specificity of HIO cell fate acquisition, and to explore alternative fates. We identify epithelium-mesenchyme interactions, transcriptional regulators involved in cell fate specification, and stem cell maturation features in the primary tissue that are recapitulated in HIOs. We use an HIO time course to reconstruct the molecular dynamics of intestinal stem cell emergence, as well as the specification of multiple mesenchyme subtypes. We find that the intestinal master regulator CDX2 correlates with distinct phases of epithelial and mesenchymal development, and CDX2 deletion perturbs the differentiation of both intestinal epithelium and mesenchyme. Collectively our data provides a comprehensive and quantitative assessment of HIO development, and illuminates the molecular machinery underlying endodermal and mesodermal cell fate specification."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1101/2020.07.24.219147",
+                    "url": "http://dx.doi.org/10.1101/2020.07.24.219147",
+                    "journal_title": "bioRxiv",
+                    "title": "An organoid and multi-organ developmental cell atlas reveals multilineage fate specification in the human intestine",
+                    "authors": [
+                        "Yu Q",
+                        "Kilik U",
+                        "Holloway EM",
+                        "Tsai Y",
+                        "Wu A",
+                        "Wu JH",
+                        "Czerwinski M",
+                        "Childs C",
+                        "He Z",
+                        "Glass IA",
+                        "Higgins PDR",
+                        "Treutlein B",
+                        "Spence JR",
+                        "Camp JG."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Qianhui,Yu"
+                },
+                {
+                    "name": "Umut,Kilik"
+                },
+                {
+                    "name": "Emily,Holloway"
+                },
+                {
+                    "name": "Yu-Hwai,Tsai"
+                },
+                {
+                    "name": "Angeline,Wu"
+                },
+                {
+                    "name": "Joshua,Wu"
+                },
+                {
+                    "name": "Michael,Czerwinski"
+                },
+                {
+                    "name": "Charlie,Childs"
+                },
+                {
+                    "name": "Zhisong,He"
+                },
+                {
+                    "name": "Ian,Glass"
+                },
+                {
+                    "name": "Peter,Higgins"
+                },
+                {
+                    "name": "Barbara,Treutlein"
+                },
+                {
+                    "name": "Jason,Spence"
+                },
+                {
+                    "name": "Gray,Camp"
+                }
+            ]
+        },
+        "added_to_index": 1610989017,
+        "uuid": "a6ac6702-1938-436f-8437-67d08161fdeb",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Differentiation of Human Intestinal Organoids with Endogenous Vascular Endothelial Cells.",
+                "project_description": "Human pluripotent stem cell (hPSC)-derived intestinal organoids (HIOs) lack some cellular populations found in the native organ, including vasculature. Using single-cell RNA sequencing (scRNA-seq), we have identified a population of endothelial cells (ECs) present early in HIO differentiation that declines over time in culture. Here, we developed a method to expand and maintain this endogenous population of ECs within HIOs (vHIOs). Given that ECs possess organ-specific gene expression, morphology, and function, we used bulk RNA-seq and scRNA-seq to interrogate the developing human intestine, lung, and kidney in order to identify organ-enriched EC gene signatures. By comparing these gene signatures and validated markers to HIO ECs, we find that HIO ECs grown in\u00a0vitro share the highest similarity with native intestinal ECs relative to kidney and lung. Together, these data demonstrate that HIOs can co-differentiate a native EC population that is properly patterned with an intestine-specific EC transcriptional signature in\u00a0vitro."
+            },
+            "array_express_accessions": [
+                "E-MTAB-9083",
+                "E-MTAB-9228",
+                "E-MTAB-9363",
+                "E-MTAB-9372"
+            ],
+            "insdc_project_accessions": [
+                "ERP121803",
+                "ERP122411",
+                "ERP123686",
+                "ERP122960"
+            ],
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://github.com/jason-spence-lab/Holloway2020"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1016/j.devcel.2020.07.023",
+                    "url": "http://dx.doi.org/10.1016/j.devcel.2020.07.023",
+                    "journal_title": "Developmental Cell",
+                    "title": "Differentiation of Human Intestinal Organoids with Endogenous Vascular Endothelial Cells.",
+                    "authors": [
+                        "Holloway EM",
+                        "Wu JH",
+                        "Czerwinski M",
+                        "Sweet CW",
+                        "Wu A",
+                        "Tsai YH",
+                        "Huang S",
+                        "Stoddard AE",
+                        "Capeling MM",
+                        "Glass I",
+                        "Spence JR."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Emily,M,Holloway",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Joshua,H,Wu",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Michael,Czerwinski",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Caden,W,Sweet",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Angeline,Wu",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Yu-Hwai,Tsai",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Sha,Huang",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States"
+                },
+                {
+                    "name": "Amy,E,Stoddard",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": "Department of Biomedical Engineering, University of Michigan College of Engineering, Ann Arbor, MI 48109, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Meghan,M,Capeling",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": "Department of Biomedical Engineering, University of Michigan College of Engineering, Ann Arbor, MI 48109, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Ian,Glass",
+                    "institution": "University of Washington",
+                    "laboratory": "Department of Pediatrics, Genetic Medicine, University of Washington, Seattle, WA 98195, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Jason,R,Spence",
+                    "email": "spencejr@umich.edu",
+                    "institution": "University of Michigan\u2013Ann Arbor",
+                    "laboratory": " University of Michigan Medical School",
+                    "country": "United States",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1610989019,
+        "uuid": "c535ac1f-1902-43bc-86a5-1e1643a5578e",
         "dcp_url": null
     }
 ]
