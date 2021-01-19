@@ -48,7 +48,7 @@
       </td>
       <td class="vf-table__cell">
         <p each={ publication in item.publications}>
-          <a href={publication.url} target="_blank">{publication.journal_title}</a>
+          <a class="vf-link" href={publication.url} target="_blank">{publication.journal_title}</a>
         </p>
         <p if={ !item.publications.length } style="text-align: center;">
           -
@@ -59,36 +59,36 @@
         <li if={item.insdc_project_accessions.length}>ENA: 
           <ul class="comma-list">
             <li each={ena_accession in item.insdc_project_accessions}>
-              <a href={`https://identifiers.org/ena.embl:${ena_accession}`} target="_blank">{ena_accession}</a>
+              <a class="vf-link" href={`https://identifiers.org/ena.embl:${ena_accession}`} target="_blank">{ena_accession}</a>
             </li>
           </ul>
         </li>
         <li if={item.array_express_accessions.length}>Arrayexpress:
           <ul class="comma-list">
             <li each={ae_accession in item.array_express_accessions}>
-              <a href={`https://identifiers.org/arrayexpress:${ae_accession}`} target="_blank">{ae_accession}</a>
+              <a class="vf-link" href={`https://identifiers.org/arrayexpress:${ae_accession}`} target="_blank">{ae_accession}</a>
             </li>
           </ul>
         </li>
         <li if={item.geo_series_accessions.length}>GEO: 
           <ul class="comma-list">
             <li each={geo_accession in item.geo_series_accessions}>
-              <a href={`https://identifiers.org/geo:${geo_accession}`} target="_blank">{geo_accession}</a>
+              <a class="vf-link" href={`https://identifiers.org/geo:${geo_accession}`} target="_blank">{geo_accession}</a>
             </li>
           </ul>
         </li>
         <li if={item.ega_studies_accessions.length || item.ega_datasets_accessions.length}>EGA: 
           <ul class="comma-list">
             <li each={accession in item.ega_studies_accessions}>
-              <a href={`https://ega-archive.org/studies/${accession}`} target="_blank">{accession}</a>
+              <a class="vf-link" href={`https://ega-archive.org/studies/${accession}`} target="_blank">{accession}</a>
             </li>
             <li each={accession in item.ega_datasets_accessions}>
-              <a href={`https://ega-archive.org/datasets/${accession}`} target="_blank">{accession}</a>
+              <a class="vf-link" href={`https://ega-archive.org/datasets/${accession}`} target="_blank">{accession}</a>
             </li>
           </ul>
         </li>
         <li if={item.dcp_url}>
-          <a href={item.dcp_url} target="_blank">HCA DCP</a>
+          <a class="vf-link" href={item.dcp_url} target="_blank">HCA DCP</a>
         </li>
       </ul>
       </td>
