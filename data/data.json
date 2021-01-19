@@ -12561,90 +12561,6 @@
         "content": {
             "project_core": {
                 "project_short_name": "tba",
-                "project_title": "Besca, a single-cell transcriptomics analysis toolkit to accelerate translational research",
-                "project_description": "Single-cell RNA sequencing (scRNA-seq) revolutionised our understanding of disease biology and presented the promise of transforming translational research. We developed Besca , a toolkit that streamlines scRNA-seq analyses according to current best practices. A standard workflow covers quality control, filtering, and clustering. Two complementary Besca modules, utilizing hierarchical cell signatures or supervised machine learning, automate cell annotation and provide harmonised nomenclatures across studies. Subsequently, Besca enables estimation of cell type proportions in bulk transcriptomics studies. Using multiple heterogeneous scRNA-seq datasets we show how Besca aids acceleration, interoperability, reusability, and interpretability of scRNA-seq data analysis, crucial aspects in translational research and beyond."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "geo_series_accessions": null,
-            "supplementary_links": null,
-            "publications": [
-                {
-                    "doi": "10.1101/2020.08.11.245795",
-                    "url": "http://dx.doi.org/10.1101/2020.08.11.245795",
-                    "journal_title": "bioRxiv",
-                    "title": "Besca, a single-cell transcriptomics analysis toolkit to accelerate translational research",
-                    "authors": [
-                        "M\u00e4dler SC",
-                        "Julien-Laferriere A",
-                        "Wyss L",
-                        "Phan M",
-                        "Kang ASW",
-                        "Ulrich E",
-                        "Schmucki R",
-                        "Zhang JD",
-                        "Ebeling M",
-                        "Badi L",
-                        "Kam-Thong T",
-                        "Schwalie PC",
-                        "Hatje K."
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "Sophia,Clara,M\u00e4dler"
-                },
-                {
-                    "name": "Alice,Julien-Laferriere"
-                },
-                {
-                    "name": "Luis,Wyss"
-                },
-                {
-                    "name": "Miroslav,Phan"
-                },
-                {
-                    "name": "Albert,Kang"
-                },
-                {
-                    "name": "Eric,Ulrich"
-                },
-                {
-                    "name": "Roland,Schmucki"
-                },
-                {
-                    "name": "Jitao,David,Zhang"
-                },
-                {
-                    "name": "Martin,Ebeling"
-                },
-                {
-                    "name": "Laura,Badi"
-                },
-                {
-                    "name": "Tony,Kam-Thong"
-                },
-                {
-                    "name": "Petra,Schwalie"
-                },
-                {
-                    "name": "Klas,Hatje",
-                    "email": "klas.hatje@roche.com",
-                    "institution": "Roche Innovation Center Basel",
-                    "country": "Switzerland",
-                    "corresponding_contributor": true
-                }
-            ]
-        },
-        "added_to_index": 1610717675,
-        "uuid": "70f78dc8-c621-4455-b746-1beab48cfed1",
-        "dcp_url": null
-    },
-    {
-        "content": {
-            "project_core": {
-                "project_short_name": "tba",
                 "project_title": "SARS-CoV-2 receptor networks in diabetic and COVID-19-associated kidney disease.",
                 "project_description": "COVID-19 morbidity and mortality are increased via unknown mechanisms in patients with diabetes and kidney disease. SARS-CoV-2 uses angiotensin-converting enzyme 2 (ACE2) for entry into host cells. Because ACE2 is a susceptibility factor for infection, we investigated how diabetic kidney disease and medications alter ACE2 receptor expression in kidneys. Single cell RNA profiling of kidney biopsies from healthy living donors and patients with diabetic kidney disease revealed ACE2 expression primarily in proximal tubular epithelial cells. This cell-specific localization was confirmed by in situ hybridization. ACE2 expression levels were unaltered by exposures to renin-angiotensin-aldosterone system inhibitors in diabetic kidney disease. Bayesian integrative analysis of a large compendium of public -omics datasets identified molecular network modules induced in ACE2-expressing proximal tubular epithelial cells in diabetic kidney disease (searchable at hb.flatironinstitute.org/covid-kidney) that were linked to viral entry, immune activation, endomembrane reorganization, and RNA processing. The diabetic kidney disease ACE2-positive proximal tubular epithelial cell module overlapped with expression patterns seen in SARS-CoV-2-infected cells. Similar cellular programs were seen in ACE2-positive proximal tubular epithelial cells obtained from urine samples of 13 hospitalized patients with COVID-19, suggesting a consistent ACE2-coregulated proximal tubular epithelial cell expression program that may interact with the SARS-CoV-2 infection processes. Thus SARS-CoV-2 receptor networks can seed further research into risk stratification and therapeutic strategies for COVID-19-related kidney damage."
             },
@@ -12942,347 +12858,6 @@
         },
         "added_to_index": 1610717678,
         "uuid": "0d4b87ea-6e9e-4569-82e4-1343e0e3259f",
-        "dcp_url": null
-    },
-    {
-        "content": {
-            "project_core": {
-                "project_short_name": "tba",
-                "project_title": "Deep generative model embedding of single-cell RNA-Seq profiles on hyperspheres and hyperbolic spaces",
-                "project_description": "Single-cell RNA-Seq (scRNA-seq) has become an invaluable tool for studying biological systems in health and diseases. While dimensionality reduction is a crucial step in interpreting the relation between cells based on scRNA-seq, current methods often are hampered by \u201ccrowding\u201d of cells in the center of the latent space, biased by batch effects, or inadequately capture developmental relationships. Here, we introduced scPhere, a scalable deep generative model to embed cells into low-dimensional hyperspherical or hyperbolic spaces, as a more accurate representation of the data. ScPhere resolves cell crowding, corrects multiple, complex batch factors, facilitates interactive visualization of large datasets, and gracefully uncovers pseudotemporal trajectories. We demonstrate scPhere on six large datasets in complex tissue from human patients or animal development, demonstrating how it controls for both technical and biological factors and highlights complex cellular relations and biological insights."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "geo_series_accessions": null,
-            "supplementary_links": [
-                "https://github.com/klarman-cell-observatory/scPhere",
-                "https://singlecell.broadinstitute.org/single_cell/study/SCP551"
-            ],
-            "publications": [
-                {
-                    "doi": "10.1101/853457",
-                    "url": "http://dx.doi.org/10.1101/853457",
-                    "journal_title": "bioRxiv",
-                    "title": "Deep generative model embedding of single-cell RNA-Seq profiles on hyperspheres and hyperbolic spaces",
-                    "authors": [
-                        "Ding J",
-                        "Regev A."
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "Jiarui,Ding",
-                    "email": "jding@broadinstitute.org",
-                    "institution": "Broad Institute of MIT and Harvard",
-                    "laboratory": "Klarman Cell Observatory",
-                    "address": "Cambridge MA 02142",
-                    "country": "USA",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0003-3670-7764"
-                },
-                {
-                    "name": "Aviv,Regev",
-                    "email": "aregev@broadinstitute.org",
-                    "institution": "Broad Institute of MIT and Harvard",
-                    "laboratory": "Klarman Cell Observatory",
-                    "address": "Cambridge MA 02142",
-                    "country": "USA",
-                    "corresponding_contributor": true
-                }
-            ]
-        },
-        "added_to_index": 1610717679,
-        "uuid": "ca0ace94-b19f-431a-8263-eed4affd57ad",
-        "dcp_url": null
-    },
-    {
-        "content": {
-            "project_core": {
-                "project_short_name": "tba",
-                "project_title": "Benchmarking single-cell RNA-sequencing protocols for cell atlas projects.",
-                "project_description": "Single-cell RNA sequencing (scRNA-seq) is the leading technique for characterizing the transcriptomes of individual cells in a sample. The latest protocols are scalable to thousands of cells and are being used to compile cell atlases of tissues, organs and organisms. However, the protocols differ substantially with respect to their RNA capture efficiency, bias, scale and costs, and their relative advantages for different applications are unclear. In the present study, we generated benchmark datasets to systematically evaluate protocols in terms of their power to comprehensively describe cell types and states. We performed a multicenter study comparing 13 commonly used scRNA-seq and single-nucleus RNA-seq protocols applied to a heterogeneous reference sample resource. Comparative analysis revealed marked differences in protocol performance. The protocols differed in library complexity and their ability to detect cell-type markers, impacting their predictive value and suitability for integration into reference cell atlases. These results provide guidance both for individual researchers and for consortium projects such as the Human Cell Atlas."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "geo_series_accessions": [
-                "GSE133549"
-            ],
-            "supplementary_links": null,
-            "publications": [
-                {
-                    "doi": "10.1038/s41587-020-0469-4",
-                    "url": "http://dx.doi.org/10.1038/s41587-020-0469-4",
-                    "journal_title": "Nature Biotechnology",
-                    "title": "Benchmarking single-cell RNA-sequencing protocols for cell atlas projects.",
-                    "authors": [
-                        "Mereu E",
-                        "Lafzi A",
-                        "Moutinho C",
-                        "Ziegenhain C",
-                        "McCarthy DJ",
-                        "\u00c1lvarez-Varela A",
-                        "Batlle E",
-                        "Sagar",
-                        "Gr\u00fcn D",
-                        "Lau JK",
-                        "Boutet SC",
-                        "Sanada C",
-                        "Ooi A",
-                        "Jones RC",
-                        "Kaihara K",
-                        "Brampton C",
-                        "Talaga Y",
-                        "Sasagawa Y",
-                        "Tanaka K",
-                        "Hayashi T",
-                        "Braeuning C",
-                        "Fischer C",
-                        "Sauer S",
-                        "Trefzer T",
-                        "Conrad C",
-                        "Adiconis X",
-                        "Nguyen LT",
-                        "Regev A",
-                        "Levin JZ",
-                        "Parekh S",
-                        "Janjic A",
-                        "Wange LE",
-                        "Bagnoli JW",
-                        "Enard W",
-                        "Gut M",
-                        "Sandberg R",
-                        "Nikaido I",
-                        "Gut I",
-                        "Stegle O",
-                        "Heyn H."
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "Elisabetta,Mereu",
-                    "laboratory": "CNAG-CRG, Centre for Genomic Regulation, Barcelona Institute of Science and Technology, Barcelona, Spain.",
-                    "country": "Spain"
-                },
-                {
-                    "name": "Atefeh,Lafzi",
-                    "laboratory": "CNAG-CRG, Centre for Genomic Regulation, Barcelona Institute of Science and Technology, Barcelona, Spain.",
-                    "country": "Spain"
-                },
-                {
-                    "name": "Catia,Moutinho",
-                    "laboratory": "CNAG-CRG, Centre for Genomic Regulation, Barcelona Institute of Science and Technology, Barcelona, Spain.",
-                    "country": "Spain"
-                },
-                {
-                    "name": "Christoph,Ziegenhain",
-                    "laboratory": "Department of Cell and Molecular Biology, Karolinska Institutet, Stockholm, Sweden.",
-                    "country": "Sweden",
-                    "orcid_id": "0000-0003-2208-4877"
-                },
-                {
-                    "name": "Davis,J,McCarthy",
-                    "laboratory": "European Molecular Biology Laboratory, European Bioinformatics Institute, Hinxton, Cambridge, UK.",
-                    "country": "UK",
-                    "orcid_id": "0000-0002-2218-6833"
-                },
-                {
-                    "name": "Adri\u00e1n,\u00c1lvarez-Varela",
-                    "laboratory": "Institute for Research in Biomedicine, Barcelona Institute of Science and Technology, Barcelona, Spain.",
-                    "country": "Spain"
-                },
-                {
-                    "name": "Eduard,Batlle",
-                    "laboratory": "Institute for Research in Biomedicine, Barcelona Institute of Science and Technology, Barcelona, Spain.",
-                    "country": "Spain",
-                    "orcid_id": "0000-0003-2422-0326"
-                },
-                {
-                    "name": "Dominic,Gr\u00fcn",
-                    "laboratory": "Max-Planck-Institute of Immunobiology and Epigenetics, Freiburg, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-3364-5898"
-                },
-                {
-                    "name": "Julia,K,Lau",
-                    "laboratory": "10x Genomics, Pleasanton, CA, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "St\u00e9phane,C,Boutet",
-                    "laboratory": "10x Genomics, Pleasanton, CA, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Chad,Sanada",
-                    "laboratory": "Fluidigm Corporation, South San Francisco, CA, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Aik,Ooi",
-                    "laboratory": "Fluidigm Corporation, South San Francisco, CA, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Robert,C,Jones",
-                    "laboratory": "Department of Bioengineering, Stanford University, Stanford, CA, USA.",
-                    "country": "USA",
-                    "orcid_id": "0000-0001-7235-9854"
-                },
-                {
-                    "name": "Kelly,Kaihara",
-                    "laboratory": "Bio-Rad, Hercules, CA, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Chris,Brampton",
-                    "laboratory": "Bio-Rad, Hercules, CA, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Yasha,Talaga",
-                    "laboratory": "Bio-Rad, Hercules, CA, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Yohei,Sasagawa",
-                    "laboratory": "Laboratory for Bioinformatics Research, RIKEN Center for Biosystems, Dynamics Research, Saitama, Japan.",
-                    "country": "Japan"
-                },
-                {
-                    "name": "Kaori,Tanaka",
-                    "laboratory": "Laboratory for Bioinformatics Research, RIKEN Center for Biosystems, Dynamics Research, Saitama, Japan.",
-                    "country": "Japan"
-                },
-                {
-                    "name": "Tetsutaro,Hayashi",
-                    "laboratory": "Laboratory for Bioinformatics Research, RIKEN Center for Biosystems, Dynamics Research, Saitama, Japan.",
-                    "country": "Japan"
-                },
-                {
-                    "name": "Caroline,Braeuning",
-                    "laboratory": "Max Delbr\u00fcck Center for Molecular Medicine/Berlin Institute of Health, Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Cornelius,Fischer",
-                    "laboratory": "Max Delbr\u00fcck Center for Molecular Medicine/Berlin Institute of Health, Berlin, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0003-0329-2435"
-                },
-                {
-                    "name": "Sascha,Sauer",
-                    "laboratory": "Max Delbr\u00fcck Center for Molecular Medicine/Berlin Institute of Health, Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Timo,Trefzer",
-                    "laboratory": "Digital Health Center, Berlin Institute of Health, Charit\u00e9-Universit\u00e4tsmedizin Berlin, Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Christian,Conrad",
-                    "laboratory": "Digital Health Center, Berlin Institute of Health, Charit\u00e9-Universit\u00e4tsmedizin Berlin, Berlin, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Xian,Adiconis",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Lan,T,Nguyen",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Aviv,Regev",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
-                    "country": "USA",
-                    "orcid_id": "0000-0003-3293-3158"
-                },
-                {
-                    "name": "Joshua,Z,Levin",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
-                    "country": "USA",
-                    "orcid_id": "0000-0002-0170-3598"
-                },
-                {
-                    "name": "Swati,Parekh",
-                    "laboratory": "Max-Planck-Institute for Biology of Ageing, Cologne, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-4826-1651"
-                },
-                {
-                    "name": "Aleksandar,Janjic",
-                    "laboratory": "Anthropology & Human Genomics, Department of Biology II, Ludwig-Maximilians-University, Martinsried, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0001-7180-5381"
-                },
-                {
-                    "name": "Lucas,E,Wange",
-                    "laboratory": "Anthropology & Human Genomics, Department of Biology II, Ludwig-Maximilians-University, Martinsried, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-3275-9156"
-                },
-                {
-                    "name": "Johannes,W,Bagnoli",
-                    "laboratory": "Anthropology & Human Genomics, Department of Biology II, Ludwig-Maximilians-University, Martinsried, Germany.",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Wolfgang,Enard",
-                    "laboratory": "Anthropology & Human Genomics, Department of Biology II, Ludwig-Maximilians-University, Martinsried, Germany.",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-4056-0550"
-                },
-                {
-                    "name": "Marta,Gut",
-                    "laboratory": "CNAG-CRG, Centre for Genomic Regulation, Barcelona Institute of Science and Technology, Barcelona, Spain.",
-                    "country": "Spain"
-                },
-                {
-                    "name": "Rickard,Sandberg",
-                    "laboratory": "Department of Cell and Molecular Biology, Karolinska Institutet, Stockholm, Sweden.",
-                    "country": "Sweden",
-                    "orcid_id": "0000-0001-6473-1740"
-                },
-                {
-                    "name": "Itoshi,Nikaido",
-                    "laboratory": "Laboratory for Bioinformatics Research, RIKEN Center for Biosystems, Dynamics Research, Saitama, Japan.",
-                    "country": "Japan",
-                    "orcid_id": "0000-0002-7261-2570"
-                },
-                {
-                    "name": "Ivo,Gut",
-                    "laboratory": "CNAG-CRG, Centre for Genomic Regulation, Barcelona Institute of Science and Technology, Barcelona, Spain.",
-                    "country": "Spain",
-                    "orcid_id": "0000-0001-7219-632X"
-                },
-                {
-                    "name": "Oliver,Stegle",
-                    "laboratory": "European Molecular Biology Laboratory, European Bioinformatics Institute, Hinxton, Cambridge, UK.",
-                    "country": "UK",
-                    "orcid_id": "0000-0002-8818-7193"
-                },
-                {
-                    "name": "Holger,Heyn",
-                    "email": "holger.heyn@cnag.crg.eu",
-                    "laboratory": "CNAG-CRG, Centre for Genomic Regulation, Barcelona Institute of Science and Technology, Barcelona, Spain. .",
-                    "country": "Spain",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0002-3276-1889"
-                },
-                {
-                    "name": "Sagar",
-                    "institution": "Max-Planck-Institute of Immunobiology and Epigenetics",
-                    "country": "Germany"
-                }
-            ]
-        },
-        "added_to_index": 1610717681,
-        "uuid": "6e177195-0ac0-468b-99a2-87de96dc9db4",
         "dcp_url": null
     },
     {
@@ -14201,144 +13776,6 @@
         },
         "added_to_index": 1610731922,
         "uuid": "769a08d1-b8a4-4f1e-95f7-6071a9827555",
-        "dcp_url": null
-    },
-    {
-        "content": {
-            "project_core": {
-                "project_short_name": "tba",
-                "project_title": "Nuclei multiplexing with barcoded antibodies for single-nucleus genomics.",
-                "project_description": "Single-nucleus RNA-seq (snRNA-seq) enables the interrogation of cellular states in complex tissues that are challenging to dissociate or are frozen, and opens the way to human genetics studies, clinical trials, and precise cell atlases of large organs. However, such applications are currently limited by batch effects, processing, and costs. Here, we present an approach for multiplexing snRNA-seq, using sample-barcoded antibodies to uniquely label nuclei from distinct samples. Comparing human brain cortex samples profiled with or without hashing antibodies, we demonstrate that nucleus hashing does not significantly alter recovered profiles. We develop DemuxEM, a computational tool that detects inter-sample multiplets and assigns singlets to their sample of origin, and validate its accuracy using sex-specific gene expression, species-mixing and natural genetic variation. Our approach will facilitate tissue atlases of isogenic model organisms or from multiple biopsies or longitudinal samples of one donor, and large-scale perturbation screens."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": [
-                "SRP187985"
-            ],
-            "geo_series_accessions": null,
-            "supplementary_links": [
-                "https://singlecell.broadinstitute.org/single_cell/study/SCP377"
-            ],
-            "publications": [
-                {
-                    "doi": "10.1038/s41467-019-10756-2",
-                    "url": "http://dx.doi.org/10.1038/s41467-019-10756-2",
-                    "journal_title": "Nature Communications",
-                    "title": "Nuclei multiplexing with barcoded antibodies for single-nucleus genomics.",
-                    "authors": [
-                        "Gaublomme JT",
-                        "Li B",
-                        "McCabe C",
-                        "Knecht A",
-                        "Yang Y",
-                        "Drokhlyansky E",
-                        "Van Wittenberghe N",
-                        "Waldman J",
-                        "Dionne D",
-                        "Nguyen L",
-                        "De Jager PL",
-                        "Yeung B",
-                        "Zhao X",
-                        "Habib N",
-                        "Rozenblatt-Rosen O",
-                        "Regev A."
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "Jellert,T,Gaublomme",
-                    "email": "jellert.gaublomme@columbia.edu",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA. .",
-                    "country": "USA",
-                    "corresponding_contributor": true
-                },
-                {
-                    "name": "Bo,Li",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA.",
-                    "country": "USA",
-                    "orcid_id": "0000-0003-0668-1620"
-                },
-                {
-                    "name": "Cristin,McCabe",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Abigail,Knecht",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Yiming,Yang",
-                    "laboratory": "Center for Immunology and Inflammatory Diseases, Division of Rheumatology, Allergy, and Immunology Massachusetts General Hospital and Harvard Medical School, Boston, MA, 02129, USA.",
-                    "country": "USA",
-                    "orcid_id": "0000-0002-0386-9428"
-                },
-                {
-                    "name": "Eugene,Drokhlyansky",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Nicholas,Van Wittenberghe",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Julia,Waldman",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Danielle,Dionne",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA.",
-                    "country": "USA",
-                    "orcid_id": "0000-0002-8338-4323"
-                },
-                {
-                    "name": "Lan,Nguyen",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Philip,L,De Jager",
-                    "laboratory": "Center for Translational & Computational Neuroimmunology, Columbia University Medical Center, New York, NY, 10019, USA.",
-                    "country": "USA",
-                    "orcid_id": "0000-0002-8057-2505"
-                },
-                {
-                    "name": "Bertrand,Yeung",
-                    "laboratory": "BioLegend Inc., San Diego, CA, 92121, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Xinfang,Zhao",
-                    "laboratory": "BioLegend Inc., San Diego, CA, 92121, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Naomi,Habib",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Orit,Rozenblatt-Rosen",
-                    "email": "orit@broadinstitute.org",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA. .",
-                    "country": "USA",
-                    "corresponding_contributor": true
-                },
-                {
-                    "name": "Aviv,Regev",
-                    "email": "aregev@broadinstitute.org",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute of Harvard and MIT, Cambridge, MA, 02142, USA. .",
-                    "country": "USA",
-                    "corresponding_contributor": true
-                }
-            ]
-        },
-        "added_to_index": 1610731923,
-        "uuid": "dc1a41f6-9e09-42a6-959e-3be23db6da56",
         "dcp_url": null
     },
     {
@@ -15399,120 +14836,6 @@
         "content": {
             "project_core": {
                 "project_short_name": "tba",
-                "project_title": "Toward a Common Coordinate Framework for the Human Body.",
-                "project_description": "Understanding the genetic and molecular drivers of phenotypic heterogeneity across individuals is central to biology. As new technologies enable fine-grained and spatially resolved molecular profiling, we need new computational approaches to integrate data from the same organ across different individuals into a consistent reference and to construct maps of molecular and cellular organization at histological and anatomical scales. Here, we review previous efforts and discuss challenges involved in establishing such a common coordinate framework, the underlying map of tissues and organs. We focus on strategies to handle anatomical variation across individuals and highlight the need for new technologies and analytical methods spanning multiple hierarchical scales of spatial resolution."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "geo_series_accessions": null,
-            "supplementary_links": null,
-            "publications": [
-                {
-                    "doi": "10.1016/j.cell.2019.11.019",
-                    "url": "http://dx.doi.org/10.1016/j.cell.2019.11.019",
-                    "journal_title": "Cell",
-                    "title": "Toward a Common Coordinate Framework for the Human Body.",
-                    "authors": [
-                        "Rood JE",
-                        "Stuart T",
-                        "Ghazanfar S",
-                        "Biancalani T",
-                        "Fisher E",
-                        "Butler A",
-                        "Hupalowska A",
-                        "Gaffney L",
-                        "Mauck W",
-                        "Eraslan G",
-                        "Marioni JC",
-                        "Regev A",
-                        "Satija R."
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "Jennifer,E,Rood",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute, Cambridge, MA 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Tim,Stuart",
-                    "laboratory": "New York Genome Center, New York, NY 10013, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Shila,Ghazanfar",
-                    "laboratory": "Cancer Research UK Cambridge Institute, University of Cambridge, Li Ka Shing Centre, Robinson Way, Cambridge CB2 0RE, UK.",
-                    "country": "UK",
-                    "orcid_id": "0000-0001-7861-6997"
-                },
-                {
-                    "name": "Tommaso,Biancalani",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute, Cambridge, MA 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Eyal,Fisher",
-                    "laboratory": "Cancer Research UK Cambridge Institute, University of Cambridge, Li Ka Shing Centre, Robinson Way, Cambridge CB2 0RE, UK.",
-                    "country": "UK",
-                    "orcid_id": "0000-0003-3546-6153"
-                },
-                {
-                    "name": "Andrew,Butler",
-                    "laboratory": "New York Genome Center, New York, NY 10013, USA",
-                    "country": "USA"
-                },
-                {
-                    "name": "Anna,Hupalowska",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute, Cambridge, MA 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "Leslie,Gaffney",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute, Cambridge, MA 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "William,Mauck",
-                    "laboratory": "New York Genome Center, New York, NY 10013, USA",
-                    "country": "USA"
-                },
-                {
-                    "name": "G\u00f6k\u00e7en,Eraslan",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute, Cambridge, MA 02142, USA.",
-                    "country": "USA"
-                },
-                {
-                    "name": "John,C,Marioni",
-                    "email": "marioni@ebi.ac.uk",
-                    "laboratory": "Cancer Research UK Cambridge Institute, University of Cambridge, Li Ka Shing Centre, Robinson Way, Cambridge CB2 0RE, UK",
-                    "country": "UK",
-                    "corresponding_contributor": true
-                },
-                {
-                    "name": "Aviv,Regev",
-                    "email": "aregev@broadinstitute.org",
-                    "laboratory": "Klarman Cell Observatory, Broad Institute, Cambridge, MA 02142, USA",
-                    "country": "USA",
-                    "corresponding_contributor": true
-                },
-                {
-                    "name": "Rahul,Satija",
-                    "email": "rsatija@nygenome.org",
-                    "laboratory": "New York Genome Center, New York, NY 10013, USA",
-                    "country": "USA",
-                    "corresponding_contributor": true
-                }
-            ]
-        },
-        "added_to_index": 1610801085,
-        "uuid": "9f36fdbd-f6ad-4297-9c0e-2d548974499e",
-        "dcp_url": null
-    },
-    {
-        "content": {
-            "project_core": {
-                "project_short_name": "tba",
                 "project_title": "Construction of a human cell landscape at single-cell level.",
                 "project_description": "Single-cell analysis is a valuable tool for dissecting cellular heterogeneity in complex systems<sup>1</sup>. However, a comprehensive single-cell atlas has not been achieved for humans. Here we use single-cell mRNA sequencing to determine the cell-type composition of all major human organs and construct a scheme for the human cell landscape (HCL). We have uncovered a single-cell hierarchy for many tissues that have not been well characterized. We established a 'single-cell HCL analysis' pipeline that helps to define human cell identity. Finally, we performed a single-cell comparative analysis of landscapes from human and mouse to identify conserved genetic networks. We found that stem and progenitor cells exhibit strong transcriptomic stochasticity, whereas differentiated cells are more distinct. Our results provide a useful resource for the study of human biology."
             },
@@ -15939,103 +15262,6 @@
         },
         "added_to_index": 1610801088,
         "uuid": "4ba0a537-c21b-4bc1-a54f-4ebd5fc8cf45",
-        "dcp_url": null
-    },
-    {
-        "content": {
-            "project_core": {
-                "project_short_name": "tba",
-                "project_title": "Sampling artifacts in single-cell genomics cohort studies",
-                "project_description": "Robust protocols and automation now enable large-scale single-cell RNA and ATAC sequencing experiments and their application on biobank and clinical cohorts. However, technical biases introduced during sample acquisition can hinder solid, reproducible results and a systematic benchmarking is required before entering large-scale data production. Here, we report the existence and extent of gene expression and chromatin accessibility artifacts introduced during sampling and identify experimental and computational solutions for their prevention."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "geo_series_accessions": [
-                "GSE132065"
-            ],
-            "supplementary_links": [
-                "https://github.com/massonix/sampling_artifacts"
-            ],
-            "publications": [
-                {
-                    "doi": "10.1186/s13059-020-02032-0",
-                    "url": "http://dx.doi.org/10.1186/s13059-020-02032-0",
-                    "journal_title": "Genome Biology",
-                    "title": "Sampling time-dependent artifacts in single-cell genomics studies",
-                    "authors": [
-                        "Massoni-Badosa R",
-                        "Iacono G",
-                        "Moutinho C",
-                        "Kulis M",
-                        "Palau N",
-                        "Marchese D",
-                        "Rodr\u00edguez-Ubreva J",
-                        "Ballestar E",
-                        "Rodriguez-Esteban G",
-                        "Marsal S",
-                        "Aymerich M",
-                        "Colomer D",
-                        "Campo E",
-                        "Juli\u00e0 A",
-                        "Mart\u00edn-Subero JI",
-                        "Heyn H."
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "Ramon,Massoni-Badosa"
-                },
-                {
-                    "name": "Giovanni,Iacono"
-                },
-                {
-                    "name": "Catia,Moutinho"
-                },
-                {
-                    "name": "Marta,Kulis"
-                },
-                {
-                    "name": "N\u00faria,Palau"
-                },
-                {
-                    "name": "Domenica,Marchese"
-                },
-                {
-                    "name": "Javier,Rodr\u00edguez-Ubreva"
-                },
-                {
-                    "name": "Esteban,Ballestar"
-                },
-                {
-                    "name": "Gustavo,Rodriguez-Esteban"
-                },
-                {
-                    "name": "Sara,Marsal"
-                },
-                {
-                    "name": "Marta,Aymerich"
-                },
-                {
-                    "name": "Dolors,Colomer"
-                },
-                {
-                    "name": "Elias,Campo"
-                },
-                {
-                    "name": "Antonio,Juli\u00e0"
-                },
-                {
-                    "name": "Jos\u00e9,Ignacio,Mart\u00edn-Subero"
-                },
-                {
-                    "name": "Holger,Heyn",
-                    "orcid_id": "0000-0002-3276-1889"
-                }
-            ]
-        },
-        "added_to_index": 1610801090,
-        "uuid": "333212d1-872f-4cd0-96c2-4385e4c8331f",
         "dcp_url": null
     },
     {
@@ -16888,209 +16114,6 @@
         },
         "added_to_index": 1610896332,
         "uuid": "859affdc-3e85-4444-bb87-fe3887d6238c",
-        "dcp_url": null
-    },
-    {
-        "content": {
-            "project_core": {
-                "project_short_name": "tba",
-                "project_title": "Gene set inference from single-cell sequencing data using a hybrid of matrix factorization and variational autoencoders",
-                "project_description": "Recent advances in single-cell RNA sequencing (scRNA-Seq) have driven the simultaneous measurement of the expression of 1,000s of genes in 1,000s of single cells. These growing data sets allow us to model gene sets in biological networks at an unprecedented level of detail, in spite of heterogenous cell populations. Here, we propose an unsupervised deep neural network model that is a hybrid of matrix factorization and conditional variational autoencoders (CVA), which utilizes weights as matrix factorizations to obtain gene sets, while class-specific inputs to the latent variable space facilitate a plausible identification of cell types. This artificial neural network model seamlessly integrates functional gene set inference, experimental batch effect correction, and static gene identification, which we conceptually prove here for three single-cell RNA-Seq datasets and suggest for future single-cell-gene analytics."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "geo_series_accessions": null,
-            "supplementary_links": null,
-            "publications": [
-                {
-                    "doi": "10.1038/s42256-020-00269-9",
-                    "url": "http://dx.doi.org/10.1038/s42256-020-00269-9",
-                    "journal_title": "Nature Machine Intelligence",
-                    "title": "Gene set inference from single-cell sequencing data using a hybrid of matrix factorization and variational autoencoders",
-                    "authors": [
-                        "Lukassen S",
-                        "Ten FW",
-                        "Eils R",
-                        "Conrad C."
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "Soeren,Lukassen",
-                    "institution": "Universit\u00e4tsmedizin Berlin",
-                    "laboratory": "Digital Health Center",
-                    "country": "Germany",
-                    "orcid_id": "0000-0001-7045-6327"
-                },
-                {
-                    "name": "Foo,Wei,Ten",
-                    "institution": "Universit\u00e4tsmedizin Berlin",
-                    "laboratory": "Digital Health Center",
-                    "country": "Germany"
-                },
-                {
-                    "name": "Roland,Eils",
-                    "institution": "Universit\u00e4tsmedizin Berlin",
-                    "laboratory": "Digital Health Center",
-                    "country": "Germany",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0002-0034-4036"
-                },
-                {
-                    "name": "Christian,Conrad",
-                    "institution": "Universit\u00e4tsmedizin Berlin",
-                    "laboratory": "Digital Health Center",
-                    "country": "Germany",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0001-7036-342X"
-                },
-                {
-                    "name": "Lukas,Adam",
-                    "institution": "Universit\u00e4tsmedizin Berlin",
-                    "laboratory": "Digital Health Center",
-                    "country": "Germany",
-                    "orcid_id": "0000-0003-4182-5300"
-                }
-            ]
-        },
-        "added_to_index": 1610896334,
-        "uuid": "f656f20b-f93a-49ad-961f-e6783ba66fcc",
-        "dcp_url": null
-    },
-    {
-        "content": {
-            "project_core": {
-                "project_short_name": "tba",
-                "project_title": "The Organoid Cell Atlas."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": null,
-            "geo_series_accessions": null,
-            "supplementary_links": null,
-            "publications": [
-                {
-                    "doi": "10.1038/s41587-020-00762-x",
-                    "url": "http://dx.doi.org/10.1038/s41587-020-00762-x",
-                    "journal_title": "Nature Biotechnology",
-                    "title": "The Organoid Cell Atlas.",
-                    "authors": [
-                        "Bock C",
-                        "Boutros M",
-                        "Camp JG",
-                        "Clarke L",
-                        "Clevers H",
-                        "Knoblich JA",
-                        "Liberali P",
-                        "Regev A",
-                        "Rios AC",
-                        "Stegle O",
-                        "Stunnenberg HG",
-                        "Teichmann SA",
-                        "Treutlein B",
-                        "Vries RGJ",
-                        "Human Cell Atlas \u2018Biological Network\u2019 Organoids."
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "Christoph,Bock",
-                    "email": "cbock@cemm.oeaw.ac.at",
-                    "institution": "CeMM Research Center for Molecular Medicine of the Austrian Academy of Sciences",
-                    "laboratory": "",
-                    "country": "Austria",
-                    "corresponding_contributor": true,
-                    "orcid_id": "0000-0001-6091-3088"
-                },
-                {
-                    "name": "Michael,Boutros",
-                    "institution": "Heidelberg University",
-                    "laboratory": " German Cancer Research Center",
-                    "country": "Germany"
-                },
-                {
-                    "name": "J,Gray,Camp",
-                    "institution": "Institute of Molecular and Clinical Ophthalmology Basel",
-                    "laboratory": "",
-                    "country": "Switzerland"
-                },
-                {
-                    "name": "Laura,Clarke",
-                    "institution": "EMBL-EBI",
-                    "laboratory": "",
-                    "country": "United Kingdom",
-                    "orcid_id": "0000-0002-5989-6898"
-                },
-                {
-                    "name": "Hans,Clevers",
-                    "institution": "Oncode Institute",
-                    "laboratory": " Royal Netherlands Academy of Arts and Sciences",
-                    "country": "Netherlands"
-                },
-                {
-                    "name": "Juergen,A,Knoblich",
-                    "institution": "Institute of Molecular Biotechnology",
-                    "laboratory": " Vienna Biocenter",
-                    "country": "Austria"
-                },
-                {
-                    "name": "Prisca,Liberali",
-                    "institution": "Friedrich Miescher Institute",
-                    "laboratory": "Friedrich Miescher Institute for Biomedical Research (FMI), Basel, Switzerland.",
-                    "country": "Switzerland"
-                },
-                {
-                    "name": "Aviv,Regev",
-                    "institution": "Broad Institute of MIT and Harvard",
-                    "laboratory": "Klarman Cell Observatory",
-                    "country": "United States"
-                },
-                {
-                    "name": "Anne,C,Rios",
-                    "institution": "Oncode Institute",
-                    "laboratory": " Royal Netherlands Academy of Arts and Sciences",
-                    "country": "Netherlands"
-                },
-                {
-                    "name": "Oliver,Stegle",
-                    "institution": "German Cancer Research Center",
-                    "laboratory": "Divison of Computational Genomics and Systems Genetics",
-                    "country": "Germany",
-                    "orcid_id": "0000-0002-8818-7193"
-                },
-                {
-                    "name": "Hendrik,G,Stunnenberg",
-                    "institution": "Princess M\u00e1xima Center for Pediatric Oncology",
-                    "laboratory": "",
-                    "country": "Netherlands"
-                },
-                {
-                    "name": "Sarah,A,Teichmann",
-                    "institution": "Wellcome Sanger Institute",
-                    "laboratory": "",
-                    "country": "United Kingdom"
-                },
-                {
-                    "name": "Barbara,Treutlein",
-                    "institution": "Eidgen\u00f6ssische Technische Hochschule (ETH) Zurich",
-                    "laboratory": "Department of Biosystems Science and Engineering",
-                    "country": "Switzerland"
-                },
-                {
-                    "name": "Robert,G,J,Vries",
-                    "institution": "Foundation Hubrecht Organoid Technology",
-                    "laboratory": "",
-                    "country": "Netherlands"
-                },
-                {
-                    "name": "Human Cell Atlas \u2018Biological Network\u2019 Organoids",
-                    "institution": "not applicable"
-                }
-            ]
-        },
-        "added_to_index": 1610896335,
-        "uuid": "bcd4c6b4-9387-4793-9a44-21dd9cd36c50",
         "dcp_url": null
     },
     {
@@ -18598,6 +17621,147 @@
         },
         "added_to_index": 1610989019,
         "uuid": "c535ac1f-1902-43bc-86a5-1e1643a5578e",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Single-cell landscape of bronchoalveolar immune cells in patients with COVID-19.",
+                "project_description": "Respiratory immune characteristics associated with Coronavirus Disease 2019 (COVID-19) severity are currently unclear. We characterized bronchoalveolar lavage fluid immune cells from patients with varying severity of COVID-19 and from healthy people by using single-cell RNA sequencing. Proinflammatory monocyte-derived macrophages were abundant in the bronchoalveolar lavage fluid from patients with severe COVID-9. Moderate cases were characterized by the presence of highly clonally expanded CD8<sup>+</sup> T cells. This atlas of the bronchoalveolar immune microenvironment suggests potential mechanisms underlying pathogenesis and recovery in COVID-19."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": [
+                "GSE145926"
+            ],
+            "supplementary_links": [
+                "https://github.com/zhangzlab/covid_balf"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1038/s41591-020-0901-9",
+                    "url": "http://dx.doi.org/10.1038/s41591-020-0901-9",
+                    "journal_title": "Nature Medicine",
+                    "title": "Single-cell landscape of bronchoalveolar immune cells in patients with COVID-19.",
+                    "authors": [
+                        "Liao M",
+                        "Liu Y",
+                        "Yuan J",
+                        "Wen Y",
+                        "Xu G",
+                        "Zhao J",
+                        "Cheng L",
+                        "Li J",
+                        "Wang X",
+                        "Wang F",
+                        "Liu L",
+                        "Amit I",
+                        "Zhang S",
+                        "Zhang Z."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Mingfeng,Liao",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Institute for Hepatology, National Clinical Research Center for Infectious Disease, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Yang,Liu",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Institute for Hepatology, National Clinical Research Center for Infectious Disease, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Jing,Yuan",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Department for Infectious Diseases, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Yanling,Wen",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Institute for Hepatology, National Clinical Research Center for Infectious Disease, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Gang,Xu",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Institute for Hepatology, National Clinical Research Center for Infectious Disease, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Juanjuan,Zhao",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Institute for Hepatology, National Clinical Research Center for Infectious Disease, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Lin,Cheng",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Institute for Hepatology, National Clinical Research Center for Infectious Disease, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Jinxiu,Li",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Department for Infectious Diseases, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Xin,Wang",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Institute for Hepatology, National Clinical Research Center for Infectious Disease, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Fuxiang,Wang",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Department for Infectious Diseases, Shenzhen Third People's Hospital, Shenzhen, China.",
+                    "country": "China"
+                },
+                {
+                    "name": "Lei,Liu",
+                    "email": "liulei3322@aliyun.com",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Institute for Hepatology, National Clinical Research Center for Infectious Disease, Shenzhen Third People's Hospital, Shenzhen, China. liulei3322@aliyun.com.",
+                    "country": "China",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Ido,Amit",
+                    "email": "ido.amit@weizmann.ac.il",
+                    "institution": "Weizmann Institute of Science",
+                    "laboratory": "Department of Immunology, Weizmann Institute of Science, Rehovot, Israel. ido.amit@weizmann.ac.il.",
+                    "country": "Israel",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0003-2968-877X"
+                },
+                {
+                    "name": "Shuye,Zhang",
+                    "email": "zhangshuye@shphc.org.cn",
+                    "institution": "Fudan University",
+                    "laboratory": " Shanghai Public Health Clinical Center",
+                    "country": "China",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-4749-6790"
+                },
+                {
+                    "name": "Zheng,Zhang",
+                    "email": "zhangzheng1975@aliyun.com",
+                    "institution": "Shenzhen Third People\u2019s Hospital",
+                    "laboratory": "Institute for Hepatology, National Clinical Research Center for Infectious Disease, Shenzhen Third People's Hospital, Shenzhen, China. zhangzheng1975@aliyun.com.",
+                    "country": "China",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-3544-1389"
+                }
+            ]
+        },
+        "added_to_index": 1611065475,
+        "uuid": "08fb10df-32e5-456c-9882-e33fcd49077a",
         "dcp_url": null
     }
 ]
