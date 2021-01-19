@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- See the VF No JS docs: https://stable.visual-framework.dev/components/vf-no-js/ -->
+    <script>
+      // Detect if JS is on and swap vf-no-js for vf-js on the html element
+      (function(H){H.className=H.className.replace(/\bvf-no-js\b/,'vf-js')})(document.documentElement);
+    </script>
+    
     <title>Published Projects Catalogue</title>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport">
+
     <!-- CSS only -->
-    <link
-      rel="stylesheet"
-      href="https://assets.emblstatic.net/vf/v2.4.3/css/styles.css"
-    />
-    <link rel="stylesheet" href="https://dev.assets.emblstatic.net/vf/develop/assets/ebi-header-footer/ebi-header-footer.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.4.5/css/styles.css">
 
     <!--Favicon-->
     <link rel="shortcut icon" href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/favicon.ico">
@@ -21,22 +26,37 @@
     <meta name="theme-color" content="#ffffff">
                   
     <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <style>
+      /* Hide one of the cookie banners. See: https://github.com/ebiwd/EBI-Framework/issues/164 */
+      .vf-banner.vf-banner--fixed.vf-banner--bottom.vf-banner--notice {
+        display: none !important; 
+      }
+    </style>
   </head>
-  <body>
+  <body class="vf-body">
+    <!-- embl-ebi global header -->
+    <header id="masthead-black-bar" class="clearfix masthead-black-bar | ebi-header-footer vf-content vf-u-fullbleed"></header>
+    <link rel="import" href="https://www.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=6682&pattern=node-body&source=contenthub" data-target="self" data-embl-js-content-hub-loader>
+    <link rel="stylesheet" href="//ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+
     <header class="vf-global-header width-override">
       <a href="/" class="vf-logo | vf-logo--has-text">
         <img class="vf-logo__image" src="https://assets.emblstatic.net/vf/v2.4.3/assets/embl-logo/assets/logo.svg" alt="Visual Framework for Life Science websites" loading="eager">
-        <span class="vf-logo__text">Published projects catalogue</span>
+        <span class="vf-logo__text">Human Cell Atlas Project Catalogue</span>
       </a>
 
     </header>
 
     <hr class="vf-divider" style="margin-top: 1rem;"/>
 
-    <div class="vf-body">
+    <div style="margin-bottom: 4rem;">
       <section class="vf-content" style="margin-bottom: 2rem;">
-        <h1 class="vf-text vf-text-heading--1">Projects</h1>
-        <p class="vf-text-body vf-text-body--3" style="color:#505050; ">A catalogue of single cell projects made available to the community and eligible for the Human Cell Atlas.</p>
+        <a href="https://www.humancellatlas.org/" target="_blank" style="float:right; margin-top: .4rem;">
+          <img height="50" src="https://contribute.data.humancellatlas.org/assets/HCA_logo_full_transparent.png" />
+        </a>
+        <h1 class="vf-text vf-text-heading--1">Project Catalogue</h1>
+        <p class="vf-text-body vf-text-body--3" style="margin-top: 2rem;" style="color:#505050; ">A catalogue of single cell projects eligible for the Human Cell Atlas, selected and curated by the HCA DCP wrangling teams.</p>
       </section>
      
       <section>
@@ -44,21 +64,10 @@
       </section>
     </div>
 
-    <footer style="margin-top: 2rem;">
-      <div id="global-footer" class="global-footer | ebi-header-footer vf-content">
-        <nav id="global-nav-expanded" class="global-nav-expanded row">
-          <!-- Footer will be automatically inserted by footer.js -->
-        </nav>
-        <section id="ebi-footer-meta" class="ebi-footer-meta row">
-          <!-- Footer meta will be automatically inserted by footer.js -->
-        </section>
-      </div>
-    </footer>
-    
-    <script defer="defer" src="//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
-
-    <!-- JS -->
-    <script src="js/index.js"></script>
-    <script src="https://assets.emblstatic.net/vf/v2.4.3/scripts/scripts.js"></script>
+    <!-- embl-ebi global footer -->
+    <link rel="import" href="https://www.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=106902&pattern=node-body&source=contenthub" data-target="self" data-embl-js-content-hub-loader />
+    <script defer src="js/index.js"></script>
+    <script defer src="https://assets.emblstatic.net/vf/v2.4.5/scripts/scripts.js"></script>
+    <script defer src="//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>  
   </body>
 </html>
