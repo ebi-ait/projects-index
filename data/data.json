@@ -2107,8 +2107,7 @@
             ],
             "supplementary_links": [
                 "https://ki.se/en/mbb/oligointernode",
-                "https://castelobranco.shinyapps.io/MSCtrl_CCA_18/",
-                "https://www.ebi.ac.uk/ega/studies/EGAS00001003412"
+                "https://castelobranco.shinyapps.io/MSCtrl_CCA_18/"
             ],
             "publications": [
                 {
@@ -17762,6 +17761,163 @@
         },
         "added_to_index": 1611065475,
         "uuid": "08fb10df-32e5-456c-9882-e33fcd49077a",
+        "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Profiling human breast epithelial cells using single cell RNA sequencing identifies cell diversity.",
+                "project_description": "Breast cancer arises from breast epithelial cells that acquire genetic alterations leading to subsequent loss of tissue homeostasis. Several distinct epithelial subpopulations have been proposed, but complete understanding of the spectrum of heterogeneity and differentiation hierarchy in the human breast remains elusive. Here, we use single-cell mRNA sequencing (scRNAseq) to profile the transcriptomes of 25,790 primary human breast epithelial cells isolated from reduction mammoplasties of seven individuals. Unbiased clustering analysis reveals the existence of three distinct epithelial cell populations, one basal and two luminal cell types, which we identify as secretory L1- and hormone-responsive L2-type cells. Pseudotemporal reconstruction of differentiation trajectories produces one continuous lineage hierarchy that closely connects the basal lineage to the two differentiated luminal branches. Our comprehensive cell atlas provides insights into\u00a0the cellular blueprint of the human breast epithelium and will form the foundation to understand how the system goes awry during breast cancer."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": [
+                "GSE113196"
+            ],
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1038/s41467-018-04334-1",
+                    "url": "http://dx.doi.org/10.1038/s41467-018-04334-1",
+                    "journal_title": "Nature Communications",
+                    "title": "Profiling human breast epithelial cells using single cell RNA sequencing identifies cell diversity.",
+                    "authors": [
+                        "Nguyen QH",
+                        "Pervolarakis N",
+                        "Blake K",
+                        "Ma D",
+                        "Davis RT",
+                        "James N",
+                        "Phung AT",
+                        "Willey E",
+                        "Kumar R",
+                        "Jabart E",
+                        "Driver I",
+                        "Rock J",
+                        "Goga A",
+                        "Khan SA",
+                        "Lawson DA",
+                        "Werb Z",
+                        "Kessenbrock K."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Quy,H,Nguyen",
+                    "institution": "University of California, Irvine",
+                    "laboratory": "Department of Biological Chemistry, University of California, Irvine, Irvine, CA, 92697, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Nicholas,Pervolarakis",
+                    "institution": "University of California, Irvine",
+                    "laboratory": "Center for Complex Biological Systems, University of California, Irvine, Irvine, CA, 92697, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Kerrigan,Blake",
+                    "institution": "University of California, Irvine",
+                    "laboratory": "Center for Complex Biological Systems, University of California, Irvine, Irvine, CA, 92697, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Dennis,Ma",
+                    "institution": "University of California, Irvine",
+                    "laboratory": "Department of Biological Chemistry, University of California, Irvine, Irvine, CA, 92697, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Ryan,Tevia,Davis",
+                    "institution": "University of California, Irvine",
+                    "laboratory": "Department of Physiology and Biophysics, University of California, Irvine, Irvine, CA, 92697, USA.",
+                    "country": "United States",
+                    "orcid_id": "0000-0003-0036-4085"
+                },
+                {
+                    "name": "Nathan,James",
+                    "institution": "University of California, Irvine",
+                    "laboratory": "Department of Biological Chemistry, University of California, Irvine, Irvine, CA, 92697, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Anh,T,Phung",
+                    "institution": "University of California, Irvine",
+                    "laboratory": "Department of Physiology and Biophysics, University of California, Irvine, Irvine, CA, 92697, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Elizabeth,Willey",
+                    "institution": "University of California, San Francisco",
+                    "laboratory": "Department of Anatomy and Biomedical Sciences Program, University of California, San Francisco, CA, 94143-0452, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Raj,Kumar",
+                    "institution": "University of California, San Francisco",
+                    "laboratory": "Department of Anatomy and Biomedical Sciences Program, University of California, San Francisco, CA, 94143-0452, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Eric,Jabart",
+                    "institution": "ProteinSimple (United States)",
+                    "laboratory": "ProteinSimple, 3001 Orchard Parkway, San Jose, CA, 95134, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Ian,Driver",
+                    "institution": "University of California, San Francisco",
+                    "laboratory": "Department of Anatomy and Biomedical Sciences Program, University of California, San Francisco, CA, 94143-0452, USA.",
+                    "country": "United States",
+                    "orcid_id": "0000-0002-2674-5532"
+                },
+                {
+                    "name": "Jason,Rock",
+                    "institution": "University of California, San Francisco",
+                    "laboratory": "Department of Anatomy and Biomedical Sciences Program, University of California, San Francisco, CA, 94143-0452, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Andrei,Goga",
+                    "institution": "University of California, San Francisco",
+                    "laboratory": "Department of Cell and Tissue Biology, University of California, San Francisco, CA, 94143-0452, USA.",
+                    "country": "United States",
+                    "orcid_id": "0000-0001-9127-0986"
+                },
+                {
+                    "name": "Seema,A,Khan",
+                    "institution": "Northwestern University",
+                    "laboratory": " University of Northwestern",
+                    "country": "United States"
+                },
+                {
+                    "name": "Devon,A,Lawson",
+                    "institution": "University of California, Irvine",
+                    "laboratory": "Department of Physiology and Biophysics, University of California, Irvine, Irvine, CA, 92697, USA.",
+                    "country": "United States"
+                },
+                {
+                    "name": "Zena,Werb",
+                    "email": "zena.werb@ucsf.edu",
+                    "institution": "University of California, San Francisco",
+                    "laboratory": "Department of Anatomy and Biomedical Sciences Program, University of California, San Francisco, CA, 94143-0452, USA. zena.werb@ucsf.edu.",
+                    "country": "United States",
+                    "corresponding_contributor": true,
+                    "orcid_id": "0000-0002-6525-3872"
+                },
+                {
+                    "name": "Kai,Kessenbrock",
+                    "email": "kai.kessenbrock@uci.edu",
+                    "institution": "University of California, Irvine",
+                    "laboratory": "Department of Biological Chemistry, University of California, Irvine, Irvine, CA, 92697, USA. kai.kessenbrock@uci.edu.",
+                    "country": "United States",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1611075376,
+        "uuid": "f71d4ab7-8115-4208-83b6-bf03dec07b74",
         "dcp_url": null
     }
 ]
