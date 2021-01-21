@@ -1,0 +1,4 @@
+commonLabels:
+  app: humancellatlas-project-catalogue
+resources:
+  - deployment.yaml

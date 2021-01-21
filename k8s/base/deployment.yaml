@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: humancellatlas-project-catalogue-service
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  selector:
+    app: humancellatlas-project-catalogue
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: humancellatlas-project-catalogue
+spec:
+  selector:
+    matchLabels:
+      app: humancellatlas-project-catalogue
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: humancellatlas-project-catalogue
+    spec:
+      containers:
+        - name: humancellatlas-project-catalogue
+          image: humancellatlas-project-catalogue:latest
+          ports:
+            - containerPort: 8080

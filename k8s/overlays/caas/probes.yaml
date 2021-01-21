@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: humancellatlas-project-catalogue
+spec:
+  template:
+    spec:
+      containers:
+        - name: humancellatlas-project-catalogue
+          readinessProbe:
+            httpGet:
+              path: /humancellatlas/project-catalogue/data.json
+              port: 8080
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
+            periodSeconds: 15
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 8080
+            initialDelaySeconds: 15
+            timeoutSeconds: 1
+            periodSeconds: 15
