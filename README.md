@@ -59,7 +59,7 @@ Since a new endpoint in Ingest API will eventually be created, the JSON file cre
 ### Deployments
 All changed in `master` are automatically deployed to the dev environment. In order to deploy to the production environment, follow the below steps:
 
-1. Make sure you have the [https://github.com/rdgoite/hca-developer-tools/blob/master/gitconfig](git release) command in your gitconfig.
+1. Make sure you have the [https://github.com/rdgoite/hca-developer-tools/blob/master/gitconfig](`git release`) command in your gitconfig.
 2. `git checkout master`
 3. `git log` -> check latest commit is the commit to be released
 4. `git release`
