@@ -88,6 +88,7 @@ def flatten_json(data):
     data["content.contributors.names"] = list(data["content.contributors.names"])
     data["content.contributors.institutions"] = list(data["content.contributors.institutions"])
     data["content.contributors.laboratories"] = list(data["content.contributors.laboratories"])
+    data["id"] = data["uuid"]
 
     def flatten(x, name=''):
         if type(x) is dict:
