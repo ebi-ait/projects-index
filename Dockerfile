@@ -2,6 +2,7 @@ FROM ebiwd/node-bower-gulp:12 as builder
 
 WORKDIR /app
 COPY . /app
+ENV NODE_ENV production
 RUN yarn install --frozen-lockfile && yarn build && yarn test && rm -rf node_modules
 RUN cp data/data.json dist/data.json
 
