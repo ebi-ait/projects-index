@@ -4,11 +4,11 @@
             {contributor.formatted_name}
         </li>
         <li if={state.isTooLong && !state.isShowingMore}>
-            ... <a href="#" onclick={showMore}>more ></a>
+            ... <a href="#" class="vf-link" onclick={showMore}>more ></a>
         </li>
     </ul>
     <p if={state.isTooLong && state.isShowingMore}>
-        <a href="#" onclick={showLess}>less</a>
+        <a href="#" class="vf-link" onclick={showLess}>less</a>
     </p>
 
 

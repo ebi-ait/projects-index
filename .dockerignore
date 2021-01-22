@@ -1,0 +1,5 @@
+.cache
+node_modules
+solr_infra
+dist
+.github

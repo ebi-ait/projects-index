@@ -1,0 +1,10 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: humancellatlas-project-catalogue
+spec:
+  template:
+    spec:
+      containers:
+        - name: humancellatlas-project-catalogue
+          image: $IMAGE_NAME
