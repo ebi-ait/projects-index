@@ -41,6 +41,10 @@ INDEXED_FIELDS = [
         "field": "content.insdc_project_accessions",
         "type": "strings"
     },
+    {
+        "field": "id",
+        "type": "strings"
+    },
 ]
 
 def create_schema(solr_url, core, data):
@@ -52,7 +56,7 @@ def create_schema(solr_url, core, data):
             }
         }
     )
-
+    
     for field in INDEXED_FIELDS:
         print(f"Adding {field['field']} to schema")
         res = requests.post(
@@ -98,6 +102,7 @@ def flatten_json(data):
             out[name[:-1]] = x
 
     flatten(data)
+    out["id"] = out["uuid"]
     return out
 
 def index_data(solr_url, core, data):
@@ -135,7 +140,7 @@ if __name__ == "__main__":
         if not data:
             raise IOError("Input file is empty")
 
-        create_schema(args.url, args.core, data)
+        # create_schema(args.url, args.core, data)
         index_data(args.url, args.core, data)
 
     print("Indexing complete. It will take a few minutes for Solr to complete searching.")
