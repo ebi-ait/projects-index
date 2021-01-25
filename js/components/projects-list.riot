@@ -5,11 +5,10 @@
         <search search={this.search}></search>
         <div style="display: flex; justify-content: space-between; align-items: flex-end;">
             <p 
-                style="float: right; color: #505050; margin-bottom: 0;"
                 class="vf-text-body vf-text-body--3"
                 if={this.state.data}
                 >
-                    {this.state.data.length} projects shown
+                    Showing <strong>{this.state.data.length}</strong> results
                 </p>
         </div>
         <data-table 
