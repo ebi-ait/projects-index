@@ -50,7 +50,7 @@
         <author-names contributors={item.contributors}/>
       </td>
       <td class="vf-table__cell">
-        <p each={ publication in item.publications}>
+        <p each={ publication in item.publications} style="margin: 0; padding: 0;">
           <a class="vf-link" href={publication.url} target="_blank">{publication.journal_title}</a>
         </p>
         <p if={ !item.publications.length } style="text-align: center;">
