@@ -35,7 +35,7 @@
 
         export default {
             onMounted() {
-                this.ALLOWED_DATA__LOCATIONS = ["DCP", "GEO", "ENA", "ArrayExpress", "EGA"];
+                this.ALLOWED_DATA__LOCATIONS = ["HCA Data Portal", "GEO", "ENA", "ArrayExpress", "EGA"];
                 this.update({ data: [], loading: true })
 
                 resolve().then(data => {
@@ -83,7 +83,7 @@
                     return data;
                 }
                 switch(dataLocation) {
-                    case "DCP":
+                    case "HCA Data Portal":
                         return data.filter(dataPoint => !!dataPoint["dcp_url"]);
                     case "GEO":
                         return data.filter(dataPoint => dataPoint["geo_series_accessions"].length);
