@@ -37,11 +37,14 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPBLNF48GJ"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      var host = window.location.hostname;
+      if(host !=="localhost" && host !== "wwwdev.ebi.ac.uk") {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'G-KPBLNF48GJ');
+        gtag('config', 'G-KPBLNF48GJ');
+      }
     </script>
   </head>
   <body class="vf-body">
