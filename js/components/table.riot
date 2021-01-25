@@ -34,7 +34,10 @@
           Publications
       </th>
       <th class="vf-table__heading" scope="col">
-          Data location
+          <select name="Data Location" class="vf-form__select" onchange={e => props.filterByDataLocation(e.target.value)}>
+            <option selected disabled hidden>Data location</option>
+            <option each={ location in props.dataLocations } value={location}>{location}</option>
+          </select>
       </th>
     </tr>
   </thead>
