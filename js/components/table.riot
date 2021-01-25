@@ -32,6 +32,7 @@
           <select name="Data Location" class="vf-form__select" onchange={e => props.filterByDataLocation(e.target.value)}>
             <option selected disabled hidden>Data location</option>
             <option each={ location in props.dataLocations } value={location}>{location}</option>
+            <option value="">Show all</option>
           </select>
       </th>
     </tr>
