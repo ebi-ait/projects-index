@@ -4,36 +4,19 @@
     <template if={!this.state.loading && !this.state.error}>
         <search search={this.search}></search>
         <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-            <button
-                onclick={this.toggleFilterInDcp}
-                class="vf-button vf-button--primary vf-button--pill vf-button--sm {this.state.filterInDcp ? " vf-button--outline" : ""}"
-                style="float:left; padding: .6em"
-            >
-                In DCP 
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    height="20"
-                    width="20"
-                    style="float:right; margin: -3px 0px 0 5px"
-                    if={this.state.filterInDcp}
-                >
-                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-            </button>
             <p 
-                style="float: right; color: #505050; margin-bottom: 0;"
                 class="vf-text-body vf-text-body--3"
                 if={this.state.data}
                 >
-                    {this.state.data.length} projects shown
+                    Showing <strong>{this.state.data.length}</strong> results
                 </p>
         </div>
         <data-table 
             data={this.state.data}
             setSort={this.setSort}
             sort={this.state.sort}
+            dataLocations={this.ALLOWED_DATA__LOCATIONS}
+            filterByDataLocation={this.filterByDataLocation}
             if={this.state.data}
         ></data-table>
     </template>
@@ -52,6 +35,7 @@
 
         export default {
             onMounted() {
+                this.ALLOWED_DATA__LOCATIONS = ["HCA Data Portal", "GEO", "ENA", "ArrayExpress", "EGA"];
                 this.update({ data: [], loading: true })
 
                 resolve().then(data => {
@@ -61,7 +45,7 @@
                         sort: {
                             timestampDesc: true
                         },
-                        filterInDcp: false,
+                        dataLocation: [],
                         searchVal: "",
                         loading: false
                     });
@@ -90,23 +74,38 @@
                             dataPoint["array_express_accessions"].join(" "),
                             dataPoint["ega_studies_accessions"].join(" "),
                             dataPoint["ega_datasets_accessions"].join(" "),
-                            dataPoint["geo_series_accessions"].join(" "),
-                            dataPoint["dcp_url"] ? "dcp" : ""
+                            dataPoint["geo_series_accessions"].join(" ")
                         ].map(x => x.toLowerCase()).join(" ").includes(val.toLowerCase())
                 );
             },
-            getFilteredByCategories: (filterInDcp) => data => {
-                return data.filter(dataPoint => filterInDcp ? !!dataPoint["dcp_url"]: true);
+            getFilteredByCategories: (dataLocation) => data => {
+                if (!dataLocation) {
+                    return data;
+                }
+                switch(dataLocation) {
+                    case "HCA Data Portal":
+                        return data.filter(dataPoint => !!dataPoint["dcp_url"]);
+                    case "GEO":
+                        return data.filter(dataPoint => dataPoint["geo_series_accessions"].length);
+                    case "ArrayExpress":
+                        return data.filter(dataPoint => dataPoint["array_express_accessions"].length);
+                    case "ENA":
+                        return data.filter(dataPoint => dataPoint["insdc_project_accessions"].length);
+                    case "EGA":
+                        return data.filter(dataPoint => dataPoint["ega_studies_accessions"].length || dataPoint["ega_datasets_accessions"].length);
+                    default:
+                        return data;
+                }
             },
             applyFiltering() {
                 const data = compose(
                     this.getSorted(this.state.sort),
                     this.getFilteredBySearch(this.state.searchVal),
-                    this.getFilteredByCategories(this.state.filterInDcp)
+                    this.getFilteredByCategories(this.state.dataLocation)
                 )(this.state.unfilteredData);
                 this.update({
                     data
-                })
+                });
             },
             search(val) {
                 this.update({
@@ -115,19 +114,17 @@
                 this.applyFiltering()
 
             },
-            toggleFilterInDcp() {
+            filterByDataLocation(dataLocation = []) {
                 this.update({
-                    filterInDcp: !this.state.filterInDcp
+                    dataLocation
                 });
-                this.applyFiltering()
-
+                this.applyFiltering();
             },
             setSort(sortBy) {
                 this.update({
                     sort: sortBy,
                 });
                 this.applyFiltering()
-
             },
             resetData() {
                 this.update({
