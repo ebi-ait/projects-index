@@ -45,6 +45,21 @@
       .vf-banner.vf-banner--fixed.vf-banner--bottom.vf-banner--notice {
         display: none !important; 
       }
+
+      .feedback-button {
+        position: fixed;
+        background-color: #386CB4;
+        display: block;
+        top: 50%;
+        right: 0;
+        transform-origin: right;
+        transform: translate(-17.5%, -50%) rotate(-90deg);
+        color: white;
+        text-transform: uppercase;
+        padding: .6rem 1rem;
+        text-decoration: none;
+        font-weight: 500;
+      }
     </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -78,7 +93,15 @@
       <section>
         <projects-list></projects-list>
       </section>
+
+      <p>
+        Have feedback or want to suggest a project for the HCA Project Catalogue? <a class="vf-link" href="mailto:{{FEEDBACK_EMAIL}}?subject={{FEEDBACK_SUBJECT}}" target="_blank">Email the data wrangling team</a>.
+      </p>
     </div>
+
+    <a class="feedback-button" href="mailto:{{FEEDBACK_EMAIL}}?subject={{FEEDBACK_SUBJECT}}" target="_blank">
+      Feedback
+    </a>
 
     <!-- embl-ebi global footer -->
     <link rel="import" href="https://www.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=106902&pattern=node-body&source=contenthub" data-target="self" data-embl-js-content-hub-loader />
