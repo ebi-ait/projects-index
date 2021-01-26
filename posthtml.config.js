@@ -1,7 +1,7 @@
 module.exports = {
-    plugins: {
-      "posthtml-expressions": {
-        locals: process.env
-      }
-    }
-  };
+  plugins: {
+    "posthtml-expressions": {
+      locals: process.env,
+    },
+  },
+};
