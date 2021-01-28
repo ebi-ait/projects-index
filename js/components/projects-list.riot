@@ -116,8 +116,7 @@
                 window.dataLayer.push({
                     event: "search_projects",
                     search_term: val,
-                    search_results_project_name: this.state.data.map(dataPoint => dataPoint.project_core.project_title),
-                    search_results_project_uuid: this.state.data.map(dataPoint => dataPoint.uuid)
+                    search_project_results: this.state.data.map(dataPoint => ({ title: dataPoint.project_core.project_title, uuid: dataPoint.uuid })),
                 });
             },
             filterByDataLocation(dataLocation = []) {
