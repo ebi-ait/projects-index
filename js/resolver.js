@@ -34,6 +34,13 @@ const formatAuthorNames = (dataPoint) => {
   return dataPoint;
 };
 
+const formatOrgans = (dataPoint) => {
+  dataPoint.organ_names = dataPoint.organ.ontologies.map(
+    (ontology) => ontology.ontology_label
+  );
+  return dataPoint;
+};
+
 const hoistEga = (dataPoint) => {
   // Ideally EGA accessions would be part of the schema
   // However, they are listed in supplementary_links so we need to "hoist" them to their own field
@@ -53,7 +60,7 @@ const hoistEga = (dataPoint) => {
 };
 
 const fetchData = (url = process.env.STATIC_DATA_URL) => {
-  // Fetching from URL rather than using dynamic imports asc will eventually use ingest API
+  // Fetching from URL rather than using dynamic imports as will eventually use ingest API
   return axios
     .get(url)
     .then((res) => res.data)
@@ -86,9 +93,12 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
         })
       )
     )
-    .then((data) => data.map(reportError(hoistEga)))
     .then((data) =>
-      data.map(reportError(formatTimestamp)).map(reportError(formatAuthorNames))
+      data
+        .map(reportError(hoistEga))
+        .map(reportError(formatOrgans))
+        .map(reportError(formatTimestamp))
+        .map(reportError(formatAuthorNames))
     )
     .then((data) =>
       data.sort((a, b) => (a.added_to_index <= b.added_to_index ? 1 : -1))

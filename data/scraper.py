@@ -8,7 +8,7 @@ def get_data(uuid, base_url):
         proj = requests.get(proj_url).json()
     
         # TODO When retrieving this info in the UI make sure that it is agnostic to thet data format as this just pulls info but when switching to using API will use schema
-        desired_content_keys = ["project_core", "array_express_accessions", "insdc_project_accessions", "geo_series_accessions", "supplementary_links"]
+        desired_content_keys = ["project_core", "array_express_accessions", "insdc_project_accessions", "geo_series_accessions", "supplementary_links", "organ"]
         
         return {
             "content": {
@@ -27,7 +27,7 @@ def get_data(uuid, base_url):
 def get_uuids(input_file):
     with open(input_file, "r") as file:
         return file.read().splitlines()
-
+        
 def remove_wranglers(contributors):
     new_contributors = []
     for contributor in contributors:
