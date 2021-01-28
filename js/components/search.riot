@@ -8,7 +8,7 @@
 
     export default {
         onMounted() {
-            this.throttledSearch = throttle(this.props.search, 300);
+            this.throttledSearch = throttle(this.props.search, 500);
         },
         triggerSearch(e) {
             this.throttledSearch(e.target.value);

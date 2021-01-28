@@ -61,18 +61,18 @@
       }
     </style>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPBLNF48GJ"></script>
     <script>
-      var host = window.location.hostname;
-      if(host !=="localhost" && host !== "wwwdev.ebi.ac.uk") {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-KPBLNF48GJ');
-      }
+      dataLayer = [];
     </script>
+    <!-- Google Tag Manager -->
+    <script>(
+      function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P72BXLR');
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body class="vf-body">
     <!-- embl-ebi global header -->
@@ -106,6 +106,10 @@
     <link rel="import" href="https://www.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=106902&pattern=node-body&source=contenthub" data-target="self" data-embl-js-content-hub-loader />
     <script defer src="js/index.js"></script>
     <script defer src="https://assets.emblstatic.net/vf/v2.4.5/scripts/scripts.js"></script>
-    <script src="//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>  
+    <script src="//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P72BXLR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
