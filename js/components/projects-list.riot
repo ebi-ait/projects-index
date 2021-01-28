@@ -74,7 +74,8 @@
                             dataPoint["array_express_accessions"].join(" "),
                             dataPoint["ega_studies_accessions"].join(" "),
                             dataPoint["ega_datasets_accessions"].join(" "),
-                            dataPoint["geo_series_accessions"].join(" ")
+                            dataPoint["geo_series_accessions"].join(" "),
+                            dataPoint["organ_names"].join(" ")
                         ].map(x => x.toLowerCase()).join(" ").includes(val.toLowerCase())
                 );
             },
