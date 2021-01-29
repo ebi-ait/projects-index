@@ -49,6 +49,7 @@ _Note: Running `./scraper.py --help` will show other options available. In parti
   - Package manager (instead of npm)
 
 ### Overview of infrastructure
+
 ![infrastructure overview](./infrastructure.png)
 
 ### Design
