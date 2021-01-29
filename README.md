@@ -48,6 +48,9 @@ _Note: Running `./scraper.py --help` will show other options available. In parti
 - [Yarn](https://yarnpkg.com/)
   - Package manager (instead of npm)
 
+### Overview of infrastructure
+![infrastructure overview](./infrastructure.png)
+
 ### Design
 
 The current implementation of this project circumvents the need to create a new endpoint in Ingest API by using a Python scraper to gather data for projects. The `/projects/` endpoint in Ingest API is protected but the `projects/search/findByUuid` endpoint is not. The scraper uses a list of Project UUIDs and gathers required data from each project and collates the data into a JSON file that is served by GitHub pages.
