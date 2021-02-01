@@ -17919,5 +17919,140 @@
         "added_to_index": 1611075376,
         "uuid": "f71d4ab7-8115-4208-83b6-bf03dec07b74",
         "dcp_url": null
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "tba",
+                "project_title": "Spatiotemporal analysis of human intestinal development at single-cell resolution.",
+                "project_description": "Development of the human intestine is not well understood. Here, we link single-cell RNA sequencing and spatial transcriptomics to characterize intestinal morphogenesis through time. We identify 101 cell states including epithelial and mesenchymal progenitor populations and programs linked to key morphogenetic milestones. We describe principles of crypt-villus axis formation; neural, vascular, mesenchymal morphogenesis, and immune population of the developing gut. We identify the differentiation hierarchies of developing fibroblast and myofibroblast subtypes and describe diverse functions for these including as vascular niche cells. We pinpoint the origins of Peyer's patches and gut-associated lymphoid tissue (GALT) and describe location-specific immune programs. We use our resource to present an unbiased analysis of morphogen gradients that direct sequential waves of cellular differentiation and define cells and locations linked to rare developmental intestinal disorders. We compile a publicly available online resource, spatio-temporal analysis resource of fetal intestinal development (STAR-FINDer), to facilitate further work."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": [
+                "GSE158702",
+                "GSE158328"
+            ],
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1016/j.cell.2020.12.016",
+                    "url": "http://dx.doi.org/10.1016/j.cell.2020.12.016",
+                    "journal_title": "Cell",
+                    "title": "Spatiotemporal analysis of human intestinal development at single-cell resolution.",
+                    "authors": [
+                        "Fawkner-Corbett D",
+                        "Antanaviciute A",
+                        "Parikh K",
+                        "Jagielowicz M",
+                        "Ger\u00f3s AS",
+                        "Gupta T",
+                        "Ashley N",
+                        "Khamis D",
+                        "Fowler D",
+                        "Morrissey E",
+                        "Cunningham C",
+                        "Johnson PRV",
+                        "Koohy H",
+                        "Simmons A."
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "David,Fawkner-Corbett",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Weatherall Institute of Molecular Medicine Medical Research Council University of Oxford",
+                    "country": "United Kingdom",
+                    "orcid_id": "0000-0002-5273-3682"
+                },
+                {
+                    "name": "Agne,Antanaviciute",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Weatherall Institute of Molecular Medicine Medical Research Council University of Oxford",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Kaushal,Parikh",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Weatherall Institute of Molecular Medicine Medical Research Council University of Oxford",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Marta,Jagielowicz",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Weatherall Institute of Molecular Medicine Medical Research Council University of Oxford",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Ana,Sousa,Ger\u00f3s",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Weatherall Institute of Molecular Medicine Medical Research Council University of Oxford",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Tarun,Gupta",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Weatherall Institute of Molecular Medicine Medical Research Council University of Oxford",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Neil,Ashley",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Medical Research Council University of Oxford",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Doran,Khamis",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Medical Research Council University of Oxford",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Darren,Fowler",
+                    "institution": "National Health Service",
+                    "laboratory": " National Health Service Wales University of Oxford",
+                    "country": "United Kingdom",
+                    "orcid_id": "0000-0002-3731-0948"
+                },
+                {
+                    "name": "Edward,Morrissey",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Medical Research Council University of Oxford",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Chris,Cunningham",
+                    "institution": "National Health Service",
+                    "laboratory": " National Health Service Wales University of Oxford",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Paul,R,V,Johnson",
+                    "institution": "University of Oxford",
+                    "laboratory": "Academic Paediatric Surgery Unit (APSU), Nuffield Department of Surgical Sciences, University of Oxford, Oxford OX3 9DU, UK.",
+                    "country": "United Kingdom"
+                },
+                {
+                    "name": "Hashem,Koohy",
+                    "email": "hashem.koohy@imm.ox.ac.uk",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Weatherall Institute of Molecular Medicine Medical Research Council University of Oxford",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Alison,Simmons",
+                    "email": "alison.simmons@imm.ox.ac.uk",
+                    "institution": "John Radcliffe Hospital",
+                    "laboratory": " Weatherall Institute of Molecular Medicine Medical Research Council University of Oxford",
+                    "country": "United Kingdom",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1611665593,
+        "uuid": "fa3f460f-4fb9-4ced-b548-8ba6a8ecae3f",
+        "dcp_url": null
     }
 ]
