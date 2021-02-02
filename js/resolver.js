@@ -35,6 +35,7 @@ const formatAuthorNames = (dataPoint) => {
 };
 
 const formatOrgans = (dataPoint) => {
+  if (!dataPoint.organ) return dataPoint
   dataPoint.organ_names = dataPoint.organ.ontologies.map(
     (ontology) => ontology.ontology_label
   );

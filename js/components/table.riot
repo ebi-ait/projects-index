@@ -13,20 +13,28 @@
     <tr class="vf-table__row">
       <th class="vf-table__heading" scope="col">
         <button onclick={ this.toggleTimestampSort } class="vf-button vf-button--sm vf-button--icon">
-          Date added
+          <span>Date added</span>
           <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
             <use xlink:href="#vf-table-sortable"></use>
           </svg>
         </button>
       </th>
       <th class="vf-table__heading" scope="col">
-          Project title
+          Project
       </th>
       <th class="vf-table__heading" scope="col">
-          Contributors
+          <select name="Organ" class="vf-form__select" onchange={e => props.filterByDataLocation(e.target.value)}>
+            <option selected disabled hidden>Organ</option>
+            <option each={ location in props.dataLocations } value={location}>{location}</option>
+            <option value="">Show all</option>
+          </select>
       </th>
       <th class="vf-table__heading" scope="col">
-          Publications
+          <select name="Technology" class="vf-form__select" onchange={e => props.filterByDataLocation(e.target.value)}>
+            <option selected disabled hidden>Technology</option>
+            <option each={ location in props.dataLocations } value={location}>{location}</option>
+            <option value="">Show all</option>
+          </select>
       </th>
       <th class="vf-table__heading" scope="col">
           <select name="Data Location" class="vf-form__select" onchange={e => props.filterByDataLocation(e.target.value)}>
@@ -41,9 +49,12 @@
   <tbody class="vf-table__body" if={props.data.length}>
     <tr class="vf-table__row" each={ item in props.data } key={item.uuid}>
       <td class="vf-table__cell">{item.added_to_index_formatted}</td>
-      <td class="vf-table__cell">{item.project_core.project_title}</td>
       <td class="vf-table__cell">
+        <p style="margin-top: 0;">{item.project_core.project_title}</p>
         <author-names contributors={item.contributors}/>
+        <p each={ publication in item.publications} style="display: inline;">
+          <a class="vf-link" href={publication.url} target="_blank">{publication.journal_title}</a>
+        </p>
       </td>
       <td class="vf-table__cell">
         <ul class="comma-list">
@@ -53,12 +64,11 @@
         </ul>
       </td>
       <td class="vf-table__cell">
-        <p each={ publication in item.publications} style="margin: 0; padding: 0;">
-          <a class="vf-link" href={publication.url} target="_blank">{publication.journal_title}</a>
-        </p>
-        <p if={ !item.publications.length } style="text-align: left;">
-          -
-        </p>
+        <ul class="comma-list">
+          <li each={technology in item.technologies}>
+            {technology}
+          </li>
+        </ul>
       </td>
       <td class="vf-table__cell">
       <ul class="plain-list">
@@ -165,14 +175,12 @@
   }
 
   #published-table thead tr th:nth-child(1) {
-    width: 13%;
+    width: 11.6%;
   }
   #published-table thead tr th:nth-child(2) {
-    width: 30%;
+    width: 40%;
   }
-  #published-table thead tr th:nth-child(3) {
-    width: 25%;
-  }
+
 
   #published-table tbody tr td:nth-child(5) {
     font-size: 0.95em;
