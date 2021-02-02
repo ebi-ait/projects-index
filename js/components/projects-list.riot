@@ -116,6 +116,7 @@
                 window.dataLayer.push({
                     event: "search_projects",
                     search_term: val,
+                    search_projects_results_formatted: this.state.data.map(dataPoint => `title: ${dataPoint.project_core.project_title} uuid: ${dataPoint.uuid}`).join(", "),
                     search_projects_results: this.state.data.map(dataPoint => ({ title: dataPoint.project_core.project_title, uuid: dataPoint.uuid }))
                 });
             },
