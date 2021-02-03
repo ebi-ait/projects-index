@@ -23,6 +23,8 @@ test("resolves published data", async () => {
       "array_express_accessions",
       "contributors",
       "dcp_url",
+      "organ_names",
+      "technology_names",
       "insdc_project_accessions",
       "project_core",
       "publications",
@@ -42,6 +44,8 @@ test("resolves published data", async () => {
     expect(Array.isArray(dataPoint["ega_datasets_accessions"])).toBe(true);
     expect(Array.isArray(dataPoint["publications"])).toBe(true);
     expect(Array.isArray(dataPoint["contributors"])).toBe(true);
+    expect(Array.isArray(dataPoint["organ_names"])).toBe(true);
+    expect(Array.isArray(dataPoint["technology_names"])).toBe(true);
 
     dataPoint["contributors"].forEach((contributor) => {
       expect(contributor).toHaveProperty("formatted_name");

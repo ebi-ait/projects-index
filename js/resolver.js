@@ -34,6 +34,23 @@ const formatAuthorNames = (dataPoint) => {
   return dataPoint;
 };
 
+const formatOntologies = (fieldName) => dataPoint => {
+  if(!dataPoint[fieldName]) {
+    dataPoint[`${fieldName}_names`] = [];
+    return dataPoint;
+  }
+  if(dataPoint[fieldName].ontologies) {
+    dataPoint[`${fieldName}_names`] = dataPoint[fieldName].ontologies.map(
+      (ontology) => ontology.ontology_label
+    );
+  }
+  else if(dataPoint[fieldName].others) {
+    dataPoint[`${fieldName}_names`] = dataPoint[fieldName].others;
+  }
+  return dataPoint;
+};
+
+
 const hoistEga = (dataPoint) => {
   // Ideally EGA accessions would be part of the schema
   // However, they are listed in supplementary_links so we need to "hoist" them to their own field
@@ -53,16 +70,18 @@ const hoistEga = (dataPoint) => {
 };
 
 const fetchData = (url = process.env.STATIC_DATA_URL) => {
-  // Fetching from URL rather than using dynamic imports asc will eventually use ingest API
+  // Fetching from URL rather than using dynamic imports as will eventually use ingest API
   return axios
     .get(url)
     .then((res) => res.data)
     .then(
       (data) =>
-        data.map(({ uuid, added_to_index, dcp_url, content }) => ({
+        data.map(({ uuid, added_to_index, dcp_url, content, organ, technology }) => ({
           uuid,
           added_to_index,
           dcp_url,
+          organ,
+          technology,
           ...content,
         })) // Flatten
     )
@@ -86,9 +105,13 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
         })
       )
     )
-    .then((data) => data.map(reportError(hoistEga)))
     .then((data) =>
-      data.map(reportError(formatTimestamp)).map(reportError(formatAuthorNames))
+      data
+        .map(reportError(hoistEga))
+        .map(reportError(formatOntologies("organ")))
+        .map(reportError(formatOntologies("technology")))
+        .map(reportError(formatTimestamp))
+        .map(reportError(formatAuthorNames))
     )
     .then((data) =>
       data.sort((a, b) => (a.added_to_index <= b.added_to_index ? 1 : -1))

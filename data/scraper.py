@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import getopt, argparse, json, requests, time
 
-def get_data(uuid):
+def get_data(uuid, base_url):
     try:
-        proj_url = f"https://api.ingest.archive.data.humancellatlas.org/projects/search/findByUuid?uuid={uuid}"
+        proj_url = f"{base_url}/projects/search/findByUuid?uuid={uuid}"
         print(f"Getting project from {proj_url}")
         proj = requests.get(proj_url).json()
     
@@ -20,6 +20,8 @@ def get_data(uuid):
             "added_to_index": int(time.time()),
             "uuid": uuid,
             "dcp_url": make_dcp_link(uuid),
+            "organ": proj["organ"],
+            "technology": proj["technology"]
         }
     except:
         raise Exception("Something went wrong. Is this a valid project UUID?")
@@ -27,7 +29,7 @@ def get_data(uuid):
 def get_uuids(input_file):
     with open(input_file, "r") as file:
         return file.read().splitlines()
-
+        
 def remove_wranglers(contributors):
     new_contributors = []
     for contributor in contributors:
@@ -83,6 +85,7 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", help="File containing a list of UUIDs to scrape. Each UUID must be on a new line.", default="published_uuids.txt")
     parser.add_argument("-o", "--output", help="Output JSON file", default="data.json")
     parser.add_argument("-c", "--clean", help="Do a clean run. Will update all timestamps.", action="store_true")
+    parser.add_argument("-u", "--url", help="Base URL for Ingest API", default="https://api.ingest.archive.data.humancellatlas.org")
 
     args = parser.parse_args()
 
@@ -103,7 +106,7 @@ if __name__ == "__main__":
                 print(f"{uuid} already in data, updating...")
                 old_timestamp = hashmap[uuid]["added_to_index"]
 
-            hashmap[uuid] = get_data(uuid)
+            hashmap[uuid] = get_data(uuid, args.url)
 
             if old_timestamp:
                 hashmap[uuid]["added_to_index"] = old_timestamp

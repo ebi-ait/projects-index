@@ -1,14 +1,12 @@
 <author-names>
-    <ul class="comma-list">
-        <li each={contributor in this.state.contributors}>
-            {contributor.formatted_name}
-        </li>
-        <li if={state.isTooLong && !state.isShowingMore}>
-            ... <a href="#" class="vf-link" onclick={showMore}>more ></a>
-        </li>
-    </ul>
-    <p if={state.isTooLong && state.isShowingMore}>
-        <a href="#" class="vf-link" onclick={showLess}>less</a>
+    <p style={ !state.isShowingMore && "display: inline; margin-right: 2rem"}>
+        <a href="#" class="vf-link" onclick={toggleContributors}>
+            {this.getFormattedContributors()}
+        </a>
+        <a href="#" class="vf-link" onclick={toggleContributors}>
+            <span if={state.isTooLong && !state.isShowingMore} class="arrow-right"></span>
+            <span if={state.isShowingMore} class="arrow-left"></span>
+        </a>
     </p>
 
 
@@ -17,30 +15,46 @@
             onMounted() {
                 // Get JS handle to props
                 const {contributors} = this.props;
-                this.MAX_LENGTH = 5;
                 
                 this.update({
-                    contributors: contributors.slice(0, this.MAX_LENGTH),
-                    isTooLong: contributors.length > this.MAX_LENGTH,
+                    isTooLong: contributors.length > 1,
                     isShowingMore: false
                 });
             },
-            showMore(e) {
-                e.preventDefault();
-                this.update({
-                    isShowingMore: true,
-                    contributors: this.props.contributors 
-                });
+            getFormattedContributors() {
+                if(this.state.isShowingMore) {
+                    return this.props.contributors.map(contributor => contributor.formatted_name).join(", ");
+                }
+                return `${this.props.contributors[0].formatted_name} et. al.`
             },
-            showLess(e) {
+            toggleContributors(e) {
                 e.preventDefault();
-                const { contributors } = this.props;
-
+                const contributorsToShow = this.state.isShowingMore ? this.props.contributors : [this.props.contributors[0]];
                 this.update({
-                    isShowingMore: false,
-                    contributors: contributors.slice(0, this.MAX_LENGTH)
+                    isShowingMore: !this.state.isShowingMore
                 });
             }
         }
     </script>
+
+    <style>
+        .arrow-right {
+            display: inline-block;
+            margin-left: .8rem;
+            width: 0; 
+            height: 0; 
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 6px solid #3b6fb6;
+        }
+        .arrow-left {
+            display: inline-block;
+            margin-left: .8rem;
+            width: 0; 
+            height: 0; 
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-right: 6px solid #3b6fb6;
+        }
+    </style>
 </author-names>
