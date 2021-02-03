@@ -23,21 +23,21 @@
           Project
       </th>
       <th class="vf-table__heading" scope="col">
-          <select name="Organ" class="vf-form__select" onchange={e => props.filterByDataLocation(e.target.value)}>
+          <select name="Organ" class="vf-form__select" onchange={e => props.setFilters({ organName: e.target.value })}>
             <option selected disabled hidden>Organ</option>
-            <option each={ location in props.dataLocations } value={location}>{location}</option>
+            <option each={ organName in props.organNames } value={organName}>{organName}</option>
             <option value="">Show all</option>
           </select>
       </th>
       <th class="vf-table__heading" scope="col">
-          <select name="Technology" class="vf-form__select" onchange={e => props.filterByDataLocation(e.target.value)}>
+          <select name="Technology" class="vf-form__select" onchange={e => props.setFilters({ technologyName: e.target.value })}>
             <option selected disabled hidden>Technology</option>
-            <option each={ location in props.dataLocations } value={location}>{location}</option>
+            <option each={ technologyName in props.technologyNames } value={technologyName}>{technologyName}</option>
             <option value="">Show all</option>
           </select>
       </th>
       <th class="vf-table__heading" scope="col">
-          <select name="Data Location" class="vf-form__select" onchange={e => props.filterByDataLocation(e.target.value)}>
+          <select name="Data Location" class="vf-form__select" onchange={e => props.setFilters({ dataLocation: e.target.value })}>
             <option selected disabled hidden>Data location</option>
             <option each={ location in props.dataLocations } value={location}>{location}</option>
             <option value="">Show all</option>
@@ -62,12 +62,14 @@
             {organ_name}
           </li>
         </ul>
+        <p if={ !item.organ_names.length}> - </p>
       </td>
       <td class="vf-table__cell">
         <ul class="comma-list">
-          <li each={technology in item.technologies}>
-            {technology}
+          <li each={technology_name in item.technology_names}>
+            {technology_name}
           </li>
+          <p if={ !item.technology_names.length}> - </p>
         </ul>
       </td>
       <td class="vf-table__cell">

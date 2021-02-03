@@ -34,13 +34,22 @@ const formatAuthorNames = (dataPoint) => {
   return dataPoint;
 };
 
-const formatOrgans = (dataPoint) => {
-  if (!dataPoint.organ) return dataPoint
-  dataPoint.organ_names = dataPoint.organ.ontologies.map(
-    (ontology) => ontology.ontology_label
-  );
+const formatOntologies = (fieldName) => dataPoint => {
+  if(!dataPoint[fieldName]) {
+    dataPoint[`${fieldName}_names`] = [];
+    return dataPoint;
+  }
+  if(dataPoint[fieldName].ontologies) {
+    dataPoint[`${fieldName}_names`] = dataPoint[fieldName].ontologies.map(
+      (ontology) => ontology.ontology_label
+    );
+  }
+  else if(dataPoint[fieldName].others) {
+    dataPoint[`${fieldName}_names`] = dataPoint[fieldName].others;
+  }
   return dataPoint;
 };
+
 
 const hoistEga = (dataPoint) => {
   // Ideally EGA accessions would be part of the schema
@@ -67,10 +76,12 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
     .then((res) => res.data)
     .then(
       (data) =>
-        data.map(({ uuid, added_to_index, dcp_url, content }) => ({
+        data.map(({ uuid, added_to_index, dcp_url, content, organ, technology }) => ({
           uuid,
           added_to_index,
           dcp_url,
+          organ,
+          technology,
           ...content,
         })) // Flatten
     )
@@ -97,7 +108,8 @@ const fetchData = (url = process.env.STATIC_DATA_URL) => {
     .then((data) =>
       data
         .map(reportError(hoistEga))
-        .map(reportError(formatOrgans))
+        .map(reportError(formatOntologies("organ")))
+        .map(reportError(formatOntologies("technology")))
         .map(reportError(formatTimestamp))
         .map(reportError(formatAuthorNames))
     )

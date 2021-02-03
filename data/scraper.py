@@ -3,12 +3,12 @@ import getopt, argparse, json, requests, time
 
 def get_data(uuid, base_url):
     try:
-        proj_url = f"f{base_url}/projects/search/findByUuid?uuid={uuid}"
+        proj_url = f"{base_url}/projects/search/findByUuid?uuid={uuid}"
         print(f"Getting project from {proj_url}")
         proj = requests.get(proj_url).json()
     
         # TODO When retrieving this info in the UI make sure that it is agnostic to thet data format as this just pulls info but when switching to using API will use schema
-        desired_content_keys = ["project_core", "array_express_accessions", "insdc_project_accessions", "geo_series_accessions", "supplementary_links", "organ"]
+        desired_content_keys = ["project_core", "array_express_accessions", "insdc_project_accessions", "geo_series_accessions", "supplementary_links"]
         
         return {
             "content": {
@@ -20,6 +20,8 @@ def get_data(uuid, base_url):
             "added_to_index": int(time.time()),
             "uuid": uuid,
             "dcp_url": make_dcp_link(uuid),
+            "organ": proj["organ"],
+            "technology": proj["technology"]
         }
     except:
         raise Exception("Something went wrong. Is this a valid project UUID?")

@@ -16,7 +16,9 @@
             setSort={this.setSort}
             sort={this.state.sort}
             dataLocations={this.ALLOWED_DATA__LOCATIONS}
-            filterByDataLocation={this.filterByDataLocation}
+            organNames={this.organNames}
+            technologyNames={this.technologyNames}
+            setFilters={this.setFilters}
             if={this.state.data}
         ></data-table>
     </template>
@@ -32,6 +34,9 @@
         import Search from "./search.riot";
         import resolve from "../resolver";
         import compose from "lodash/fp/compose";
+        import flatten from "lodash/flatten";
+        import uniq from "lodash/uniq";
+        import defaults from "lodash/defaults";
 
         export default {
             onMounted() {
@@ -39,11 +44,19 @@
                 this.update({ data: [], loading: true })
 
                 resolve().then(data => {
+                    this.organNames = uniq(flatten(data.map(dataPoint => dataPoint.organ_names)));
+                    this.technologyNames = uniq(flatten(data.map(dataPoint => dataPoint.technology_names)));
+
                     this.update({
                         unfilteredData: data,
                         data: data,
                         sort: {
                             timestampDesc: true
+                        },
+                        filters: {
+                            organName: "",
+                            technologyName: "",
+                            dataLocation: ""
                         },
                         dataLocation: [],
                         searchVal: "",
@@ -75,34 +88,36 @@
                             dataPoint["ega_studies_accessions"].join(" "),
                             dataPoint["ega_datasets_accessions"].join(" "),
                             dataPoint["geo_series_accessions"].join(" "),
-                            dataPoint["organ_names"].join(" ")
+                            dataPoint["organ_names"].join(" "),
+                            dataPoint["technology_names"].join(" ")
                         ].map(x => x.toLowerCase()).join(" ").includes(val.toLowerCase())
                 );
             },
-            getFilteredByCategories: (dataLocation) => data => {
-                if (!dataLocation) {
-                    return data;
-                }
+            getFiltered: ({ organName, technologyName, dataLocation }) => data => {
+                let filteredData = data
+                    .filter(dataPoint => organName ? dataPoint.organ_names.includes(organName) : true)
+                    .filter(dataPoint => technologyName ? dataPoint.technology_names.includes(technologyName): true);
+
                 switch(dataLocation) {
                     case "HCA Data Portal":
-                        return data.filter(dataPoint => !!dataPoint["dcp_url"]);
+                        return filteredData.filter(dataPoint => !!dataPoint["dcp_url"]);
                     case "GEO":
-                        return data.filter(dataPoint => dataPoint["geo_series_accessions"].length);
+                        return filteredData.filter(dataPoint => dataPoint["geo_series_accessions"].length);
                     case "ArrayExpress":
-                        return data.filter(dataPoint => dataPoint["array_express_accessions"].length);
+                        return filteredData.filter(dataPoint => dataPoint["array_express_accessions"].length);
                     case "ENA":
-                        return data.filter(dataPoint => dataPoint["insdc_project_accessions"].length);
+                        return filteredData.filter(dataPoint => dataPoint["insdc_project_accessions"].length);
                     case "EGA":
-                        return data.filter(dataPoint => dataPoint["ega_studies_accessions"].length || dataPoint["ega_datasets_accessions"].length);
+                        return filteredData.filter(dataPoint => dataPoint["ega_studies_accessions"].length || dataPoint["ega_datasets_accessions"].length);
                     default:
-                        return data;
+                        return filteredData;
                 }
             },
             applyFiltering() {
                 const data = compose(
                     this.getSorted(this.state.sort),
                     this.getFilteredBySearch(this.state.searchVal),
-                    this.getFilteredByCategories(this.state.dataLocation)
+                    this.getFiltered(this.state.filters)
                 )(this.state.unfilteredData);
                 this.update({
                     data
@@ -115,9 +130,9 @@
                 this.applyFiltering()
 
             },
-            filterByDataLocation(dataLocation = []) {
+            setFilters({ organName, technologyName, dataLocation }) {
                 this.update({
-                    dataLocation
+                    filters: defaults({ organName, technologyName, dataLocation}, this.state.filters)
                 });
                 this.applyFiltering();
             },
