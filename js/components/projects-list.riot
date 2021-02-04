@@ -3,13 +3,6 @@
     <p if={this.state.loading}>Loading...</p>
     <template if={!this.state.loading && !this.state.error}>
         <search search={this.search}></search>
-        <a
-            class="vf-button vf-button--primary vf-button--sm" 
-            style="display: inline-block; padding: 10px;"
-            href="mailto:{FEEDBACK_EMAIL}?subject={ADD_PROJECT_SUBJECT}"
-        >
-            Add a project
-        </a>
         <div style="display: flex; justify-content: space-between; align-items: flex-end;">
             <p 
                 class="vf-text-body vf-text-body--3"
