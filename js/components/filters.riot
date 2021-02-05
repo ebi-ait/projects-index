@@ -1,0 +1,46 @@
+<filters>
+    <div id="filters-container">
+
+        <search search={props.search}></search>
+
+        <select name="Organ" class="vf-form__select" onchange={e => props.setFilters({ organName: e.target.value })}>
+            <option selected disabled hidden>Organ</option>
+            <option each={ organName in props.organNames } value={organName}>{organName}</option>
+            <option value="">Show all</option>
+        </select>
+        <select name="Technology" class="vf-form__select" onchange={e => props.setFilters({ technologyName: e.target.value })}>
+            <option selected disabled hidden>Technology</option>
+            <option each={ technologyName in props.technologyNames } value={technologyName}>{technologyName}</option>
+            <option value="">Show all</option>
+        </select>
+        <select name="Data Location" class="vf-form__select" onchange={e => props.setFilters({ dataLocation: e.target.value })}>
+            <option selected disabled hidden>Data location</option>
+            <option each={ location in props.dataLocations } value={location}>{location}</option>
+            <option value="">Show all</option>
+        </select>
+
+    </div>
+    <style>
+        #filters-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        #filters-container > * {
+            flex: 1 0;
+            max-width: 250px;
+            min-width: 250px;
+        }
+    </style>
+
+    <script>
+        import Search from "./search.riot";
+
+        export default {
+            components: {
+                Search,
+            }
+        }
+    </script>
+</filters>

@@ -20,28 +20,16 @@
         </button>
       </th>
       <th class="vf-table__heading" scope="col">
-          Project
+        Project
       </th>
       <th class="vf-table__heading" scope="col">
-          <select name="Organ" class="vf-form__select" onchange={e => props.setFilters({ organName: e.target.value })}>
-            <option selected disabled hidden>Organ</option>
-            <option each={ organName in props.organNames } value={organName}>{organName}</option>
-            <option value="">Show all</option>
-          </select>
+        Organ
       </th>
       <th class="vf-table__heading" scope="col">
-          <select name="Technology" class="vf-form__select" onchange={e => props.setFilters({ technologyName: e.target.value })}>
-            <option selected disabled hidden>Technology</option>
-            <option each={ technologyName in props.technologyNames } value={technologyName}>{technologyName}</option>
-            <option value="">Show all</option>
-          </select>
+        Technology
       </th>
       <th class="vf-table__heading" scope="col">
-          <select name="Data Location" class="vf-form__select" onchange={e => props.setFilters({ dataLocation: e.target.value })}>
-            <option selected disabled hidden>Data location</option>
-            <option each={ location in props.dataLocations } value={location}>{location}</option>
-            <option value="">Show all</option>
-          </select>
+        Data location
       </th>
     </tr>
   </thead>

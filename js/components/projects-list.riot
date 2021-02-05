@@ -2,7 +2,14 @@
 <projects-list>
     <p if={this.state.loading}>Loading...</p>
     <template if={!this.state.loading && !this.state.error}>
-        <search search={this.search}></search>
+        <filters 
+            dataLocations={this.ALLOWED_DATA__LOCATIONS}
+            organNames={this.organNames}
+            technologyNames={this.technologyNames}
+            setFilters={this.setFilters}
+            search={this.search}    
+        >
+        </filters>
         <div style="display: flex; justify-content: space-between; align-items: flex-end;">
             <p 
                 class="vf-text-body vf-text-body--3"
@@ -31,7 +38,7 @@
 
     <script>
         import DataTable from "./table.riot";
-        import Search from "./search.riot";
+        import Filters from "./filters.riot";
         import resolve from "../resolver";
         import compose from "lodash/fp/compose";
         import flatten from "lodash/flatten";
@@ -154,7 +161,7 @@
             },
             components: {
                 DataTable,
-                Search
+                Filters
             }
         }
     </script>
