@@ -1,7 +1,7 @@
 <search>
-<div class="vf-search__item" id="search-box">
+<div class="vf-search__item">
     <label class="vf-form__label vf-u-sr-only | vf-search__label" for="inlinesearchitem">Search projects</label>
-    <input oninput={this.triggerSearch} type="search" placeholder="Search projects (by uuid, title, contributor, or accessions)" id="inlinesearchitem" class="vf-form__input | vf-search__input">
+    <input oninput={this.triggerSearch} type="search" placeholder="Search projects" id="inlinesearchitem" class="vf-form__input | vf-search__input">
 </div>
   <script>
     import throttle from "lodash/throttle";
@@ -15,13 +15,4 @@
         }
     }
   </script>
-  <style>
-    #search-box {
-        margin-bottom: 1.5rem;
-        max-width: 900px;
-        width: 100%;
-        display: inline-block;
-        margin-right: 1rem;
-    }
-  </style>
 </search>
