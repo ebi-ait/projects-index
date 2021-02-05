@@ -4,58 +4,108 @@
     <!-- See the VF No JS docs: https://stable.visual-framework.dev/components/vf-no-js/ -->
     <script>
       // Detect if JS is on and swap vf-no-js for vf-js on the html element
-      (function(H){H.className=H.className.replace(/\bvf-no-js\b/,'vf-js')})(document.documentElement);
+      (function (H) {
+        H.className = H.className.replace(/\bvf-no-js\b/, "vf-js");
+      })(document.documentElement);
     </script>
-    
-    <title>EMBL-EBI Catalogue of single cell data for the Human Cell Atlas</title>
 
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport">
+    <title>
+      EMBL-EBI Catalogue of single cell data for the Human Cell Atlas
+    </title>
 
-    <meta name="description" content="A curated and comprehensive list of single cell projects from the Human Cell Atlas community, maintained by EMBL-EBI curators." />
-    <meta name="author" content="Tony Burdett, Laura Clarke, Marion Shadbolt, Jacob Windsor, Galabina Yordanova, AIT, EBL-EBI, HCA" />
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+
+    <meta
+      name="description"
+      content="A curated and comprehensive list of single cell projects from the Human Cell Atlas community, maintained by EMBL-EBI curators."
+    />
+    <meta
+      name="author"
+      content="Tony Burdett, Laura Clarke, Marion Shadbolt, Jacob Windsor, Galabina Yordanova, AIT, EBL-EBI, HCA"
+    />
 
     <!-- Content descriptors -->
-    <meta name="embl:who" content="AIT"> <!-- the people, groups and teams involved -->
-    <meta name="embl:what" content="Human Cell Atlas"> <!-- the activities covered -->
+    <meta name="embl:who" content="AIT" />
+    <!-- the people, groups and teams involved -->
+    <meta name="embl:what" content="Human Cell Atlas" />
+    <!-- the activities covered -->
 
     <!-- Content role -->
-    <meta name="embl:reach" content="-5"> <!-- if content is externally (public) or internally focused (those that work at EMBL) -->
+    <meta name="embl:reach" content="-5" />
+    <!-- if content is externally (public) or internally focused (those that work at EMBL) -->
 
     <!-- Page infromation -->
-    <meta name="embl:maintainer" content="Archival Infrastructure and Technology Team"> <!-- the contact person or group responsible for the page -->
+    <meta
+      name="embl:maintainer"
+      content="Archival Infrastructure and Technology Team"
+    />
+    <!-- the contact person or group responsible for the page -->
 
     <!-- CSS only -->
-    <link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.4.5/css/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://assets.emblstatic.net/vf/v2.4.5/css/styles.css"
+    />
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/favicon-16x16.png">
-    <link rel="manifest" href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/site.webmanifest">
-    <link rel="mask-icon" href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/safari-pinned-tab.svg" color="#ffffff">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-                  
-    <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link
+      rel="shortcut icon"
+      href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href="https://www.embl.org/guidelines/design/assets/embl-favicon/assets/safari-pinned-tab.svg"
+      color="#ffffff"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <script
+      nomodule
+      src="https://polyfill.io/v3/polyfill.min.js?features=default"
+    ></script>
 
     <style>
       /* Hide one of the cookie banners. See: https://github.com/ebiwd/EBI-Framework/issues/164 */
       .vf-banner.vf-banner--fixed.vf-banner--bottom.vf-banner--notice {
-        display: none !important; 
+        display: none !important;
       }
 
       .feedback-button {
         position: fixed;
-        background-color: #386CB4;
+        background-color: #386cb4;
         display: block;
         top: 50%;
         right: 0;
         transform: translate(35%, -50%) rotate(-90deg);
         color: white;
         text-transform: uppercase;
-        padding: .6rem 1rem;
+        padding: 0.6rem 1rem;
         text-decoration: none;
         font-weight: 500;
       }
@@ -65,55 +115,252 @@
       dataLayer = [];
     </script>
     <!-- Google Tag Manager -->
-    <script>(
-      function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-P72BXLR');
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P72BXLR");
     </script>
     <!-- End Google Tag Manager -->
   </head>
   <body class="vf-body">
     <!-- embl-ebi global header -->
-    <header id="masthead-black-bar" class="clearfix masthead-black-bar | ebi-header-footer vf-content vf-u-fullbleed"></header>
-    <link rel="import" href="https://www.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=6682&pattern=node-body&source=contenthub" data-target="self" data-embl-js-content-hub-loader>
-    <link rel="stylesheet" href="//ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+    <header
+      id="masthead-black-bar"
+      class="clearfix masthead-black-bar | ebi-header-footer vf-content vf-u-fullbleed"
+    ></header>
+    <link
+      rel="import"
+      href="https://www.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=6682&pattern=node-body&source=contenthub"
+      data-target="self"
+      data-embl-js-content-hub-loader
+    />
+    <link
+      rel="stylesheet"
+      href="//ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
+      type="text/css"
+      media="all"
+    />
 
-    <div style="margin: 4rem 0;">
+    <div style="margin: 4rem 0">
       <nav class="vf-breadcrumbs" aria-label="Breadcrumb">
         <ul class="vf-breadcrumbs__list | vf-list vf-list--inline">
           <li class="vf-breadcrumbs__item">
-            <a href="./index.html" class="vf-breadcrumbs__link">HCA Project Catalogue</a>
+            <a href="./index.html" class="vf-breadcrumbs__link"
+              >HCA Project Catalogue</a
+            >
           </li>
           <li class="vf-breadcrumbs__item" aria-current="location">
             <a href="./about.html" class="vf-breadcrumbs__link">About</a>
           </li>
         </ul>
       </nav>
-      <header class="vf-content" style="margin-bottom: 3rem;">
-        <h1 class="vf-text vf-text-heading--1" style="float:left;">Project Catalogue</h1>
-        <a href="https://www.ebi.ac.uk/" target="_blank" style="display: inline-block; margin: .4rem 0 0 2rem;">
-          <img height="50" src="https://raw.githubusercontent.com/ebiwd/EBI-Framework/v1.4/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg" />
+      <header class="vf-content" style="margin-bottom: 3rem">
+        <h1 class="vf-text vf-text-heading--1" style="float: left">
+          Project Catalogue
+        </h1>
+        <a
+          href="https://www.ebi.ac.uk/"
+          target="_blank"
+          style="display: inline-block; margin: 0.4rem 0 0 2rem"
+        >
+          <img
+            height="50"
+            src="https://raw.githubusercontent.com/ebiwd/EBI-Framework/v1.4/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg"
+          />
         </a>
-        <a href="https://www.humancellatlas.org/" target="_blank" style="display: inline-block; margin: .4rem 0 0 2rem;">
-          <img height="50" src="https://contribute.data.humancellatlas.org/assets/HCA_logo_full_transparent.png" />
+        <a
+          href="https://www.humancellatlas.org/"
+          target="_blank"
+          style="display: inline-block; margin: 0.4rem 0 0 2rem"
+        >
+          <img
+            height="50"
+            src="https://contribute.data.humancellatlas.org/assets/HCA_logo_full_transparent.png"
+          />
         </a>
       </header>
     </div>
 
-    <section class="vf-content">
+    <section class="vf-content" style="margin-bottom: 8rem;">
+      <div class="vf-grid vf-grid__col-4">
+        <h class="vf-text vf-text-heading--4"> Aims </h>
+        <div class="vf-grid__col--span-3">
+          <p>
+            The Human Cell Atlas (HCA) Project Catalogue by EMBL-EBI aims to
+            provide a comprehensive list of all the cellular resolution data
+            generated by and available to the HCA community.
+          </p>
+          <p>
+            By providing links to the publications and the resources where the
+            data is located, the catalogue allows quick access to all newly
+            generated data in the HCA community, and accelerates collaboration
+            in the building of the atlas.
+          </p>
 
+          <p>
+            The list is curated by the HCA Data Wrangling team at EMBL-EBI, but
+            is open for contribution of any suitable projects. To suggest a
+            project for the catalogue which we have missed out,
+            <a href="mailto:{{FEEDBACK_EMAIL}}"
+              >send an email to the data wrangler team</a
+            >.
+          </p>
+        </div>
+
+        <h class="vf-text vf-text-heading--4"> Data sources </h>
+
+        <div class="vf-grid__col--span-3">
+          <p>
+            HCA Project Catalogue contains projects which are selected and
+            curated by the HCA Data Coordination Platform wranglers, from these
+            main sources:
+          </p>
+
+          <ul>
+            <li>The official HCA publications list</li>
+            <li>The HCA Data Portal</li>
+            <li>
+              Projects a funded to contribute datato the HCA including:
+              <ul>
+                <li>Wellcome Strategic Science Support Award</li>
+                <li>MRC Developmental Cell Atlas</li>
+                <li>Organoid Horizon 2020 award</li>
+                <li>CZI seed network funding</li>
+                <li>CZI biological network funding</li>
+              </ul>
+            </li>
+            <li>
+              Established data archives
+              <ul>
+                <li>GEO</li>
+                <li>ArrayExpress</li>
+              </ul>
+            </li>
+            <li>
+              Specialised databases
+              <ul>
+                <li>Single Cell Expression Atlas</li>
+                <li>
+                  <a
+                    href="https://www.nxn.se/single-cell-studies"
+                    target="_blank"
+                    >The Single cell studies database</a
+                  >, maintained by Valentine Svensson
+                </li>
+                <li>
+                  <a href="https://www.covid19cellatlas.org" target="_blank"
+                    >The COVID19 Cell Atlas</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>Suggestions from the HCA community (that means you!)</li>
+          </ul>
+        </div>
+
+        <h class="vf-text vf-text-heading--4">Criteria</h>
+
+        <div class="vf-grid__col--span-3">
+          <p>
+            The selection and curation process for projects in the HCA Project
+            Catalogue is based on these criteria:
+          </p>
+        </div>
+
+        <h class="vf-text vf-text-heading--4">Contribute a project </h>
+
+        <div class="vf-grid__col--span-3">
+          <p>
+            This catalogue is created for and by the HCA community and aims to
+            provide quick and easy access to suitable data. Help us build a
+            comprehensive catalogue by letting us know if we have missed a
+            project.
+          </p>
+          <p>
+            The Data wrangling team can support the inclusion of these types of
+            projects:
+          </p>
+          <ul>
+            <li>
+              A project, which is already published and the data is available
+              elsewhere
+            </li>
+            <li>
+              A project, which is in the process of publication, and data is
+              pending or needs an accession
+            </li>
+            <li>
+              A project, which is under way, but there is no publication or data
+              available yet. (The Data Wrangling team can support you in
+              gathering and organising its metadata)
+            </li>
+          </ul>
+
+          <a
+            class="vf-button vf-button--primary vf-button--sm"
+            href="mailto:{{FEEDBACK_EMAIL}}?subject={{ADD_PROJECT_SUBJECT}}"
+          >
+            Suggest a project
+          </a>
+        </div>
+      </div>
+
+      <h class="vf-text vf-text-heading--4">Join the community</h>
+
+      <div class="vf-grid__col--span-3">
+        <p>
+          To join the HCA community, <a href="https://www.humancellatlas.org/join-hca/" target="_blank">register your interest here</a> to stay up to date with community happenings and events.
+        </p>
+      </div>
     </section>
 
+    <p>
+      Have feedback or want to suggest a project for the HCA Project Catalogue?
+      <a
+        class="vf-link"
+        href="mailto:{{FEEDBACK_EMAIL}}?subject={{FEEDBACK_SUBJECT}}"
+        target="_blank"
+        >Email the data wrangling team</a
+      >.
+    </p>
+
+    <a
+      class="feedback-button"
+      href="mailto:{{FEEDBACK_EMAIL}}?subject={{FEEDBACK_SUBJECT}}"
+      target="_blank"
+    >
+      Feedback
+    </a>
+
     <!-- embl-ebi global footer -->
-    <link rel="import" href="https://www.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=106902&pattern=node-body&source=contenthub" data-target="self" data-embl-js-content-hub-loader />
+    <link
+      rel="import"
+      href="https://www.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=106902&pattern=node-body&source=contenthub"
+      data-target="self"
+      data-embl-js-content-hub-loader
+    />
     <script defer src="js/index.js"></script>
-    <script defer src="https://assets.emblstatic.net/vf/v2.4.5/scripts/scripts.js"></script>
+    <script
+      defer
+      src="https://assets.emblstatic.net/vf/v2.4.5/scripts/scripts.js"
+    ></script>
     <script src="//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P72BXLR"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P72BXLR"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
