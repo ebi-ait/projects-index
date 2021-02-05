@@ -4,19 +4,16 @@
         <search search={props.search}></search>
 
         <select name="Organ" class="vf-form__select" onchange={e => props.setFilters({ organName: e.target.value })}>
-            <option selected disabled hidden>Organ</option>
+            <option selected value="">All organs</option>
             <option each={ organName in props.organNames } value={organName}>{organName}</option>
-            <option value="">Show all</option>
         </select>
         <select name="Technology" class="vf-form__select" onchange={e => props.setFilters({ technologyName: e.target.value })}>
-            <option selected disabled hidden>Technology</option>
+            <option selected value="">All technologies</option>
             <option each={ technologyName in props.technologyNames } value={technologyName}>{technologyName}</option>
-            <option value="">Show all</option>
         </select>
         <select name="Data Location" class="vf-form__select" onchange={e => props.setFilters({ dataLocation: e.target.value })}>
-            <option selected disabled hidden>Data location</option>
+            <option selected value="">All data locations</option>
             <option each={ location in props.dataLocations } value={location}>{location}</option>
-            <option value="">Show all</option>
         </select>
 
     </div>
