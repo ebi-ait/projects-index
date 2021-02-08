@@ -183,8 +183,34 @@
         "added_to_index": 1609786713,
         "uuid": "005d611a-14d5-4fbf-846e-571a1f874f70",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/005d611a-14d5-4fbf-846e-571a1f874f70?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "skin of body",
+                    "ontology": "UBERON:0002097",
+                    "ontology_label": "skin of body"
+                },
+                {
+                    "text": "stem cell",
+                    "ontology": "CL:0000034",
+                    "ontology_label": "stem cell"
+                },
+                {
+                    "text": "Brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Chromium 3' Single Cell v2",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -670,8 +696,24 @@
         "added_to_index": 1609844541,
         "uuid": "027c51c6-0719-469f-a7f5-640fe57cbece",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/027c51c6-0719-469f-a7f5-640fe57cbece?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "High-throughput single-cell labeling with indexing droplets",
+                    "ontology": "EFO:0008780",
+                    "ontology_label": "inDrop"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -866,11 +908,24 @@
         "added_to_index": 1609844542,
         "uuid": "0b2cbf1a-3f40-4e01-a99d-901fa6091ee5",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "large intestine",
+                    "ontology": "UBERON:0000059",
+                    "ontology_label": "large intestine"
+                },
+                {
+                    "text": "small intestine",
+                    "ontology": "UBERON:0002108",
+                    "ontology_label": "small intestine"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
-                    "text": "10X 3' v2 sequencing",
+                    "text": "10x v2 3 prime",
                     "ontology": "EFO:0009899",
                     "ontology_label": "10X 3' v2 sequencing"
                 }
@@ -961,8 +1016,39 @@
         "added_to_index": 1609844543,
         "uuid": "116965f3-f094-4769-9d28-ae675c1b569c",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/116965f3-f094-4769-9d28-ae675c1b569c?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "embryo",
+                    "ontology": "UBERON:0000922",
+                    "ontology_label": "embryo"
+                },
+                {
+                    "text": "immune system",
+                    "ontology": "UBERON:0002405",
+                    "ontology_label": "immune system"
+                },
+                {
+                    "text": "skin of body",
+                    "ontology": "UBERON:0002097",
+                    "ontology_label": "skin of body"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 sequencing",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                },
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -1076,8 +1162,29 @@
         "added_to_index": 1609844544,
         "uuid": "1cd1f41f-f81a-486b-a05b-66ec60f81dcf",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Decidua",
+                    "ontology": "UBERON:0001987",
+                    "ontology_label": "placenta"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "Drop-Seq",
+                    "ontology": "EFO:0008722",
+                    "ontology_label": "Drop-seq"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -1326,8 +1433,24 @@
         "added_to_index": 1609844545,
         "uuid": "1defdada-a365-44ad-9b29-443b06bd11d6",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/1defdada-a365-44ad-9b29-443b06bd11d6?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "embryo",
+                    "ontology": "UBERON:0000922",
+                    "ontology_label": "embryo"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v1 sequencing",
+                    "ontology": "EFO:0009901",
+                    "ontology_label": "10X 3' v1 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -7403,7 +7526,8 @@
             ],
             "geo_series_accessions": null,
             "supplementary_links": [
-                "https://developmentcellatlas.ncl.ac.uk/datasets/HCA_thymus/"
+                "https://developmentcellatlas.ncl.ac.uk/datasets/HCA_thymus/",
+                "https://doi.org/10.5281/zenodo.3572421"
             ],
             "publications": [
                 {
@@ -9912,9 +10036,32 @@
         "added_to_index": 1610452958,
         "uuid": "fc232d87-7b10-47f7-9197-b2c6cf210dea",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                },
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "heart",
+                    "ontology": "UBERON:0000948",
+                    "ontology_label": "heart"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
+                {
+                    "text": "10X",
+                    "ontology": "EFO:0008995",
+                    "ontology_label": "10X sequencing"
+                },
                 {
                     "text": "10x 3' v3 sequencing",
                     "ontology": "EFO:0009922",
@@ -10100,8 +10247,44 @@
         "added_to_index": 1610452959,
         "uuid": "b43c36dd-c8ec-4cf1-a8f4-6ab5f30eabc3",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "uterus",
+                    "ontology": "UBERON:0000995",
+                    "ontology_label": "uterus"
+                },
+                {
+                    "text": "endometrium",
+                    "ontology": "UBERON:0001295",
+                    "ontology_label": "endometrium"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "smFISH",
+                    "ontology": "EFO:0009918",
+                    "ontology_label": "smFISH"
+                },
+                {
+                    "text": "10X v2 3'",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "10X v3 3'",
+                    "ontology": "EFO:0009922",
+                    "ontology_label": "10x 3' v3 sequencing"
+                },
+                {
+                    "text": "Visium",
+                    "ontology": "EFO:0008994",
+                    "ontology_label": "spatial transcriptomics"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -10327,9 +10510,22 @@
         "added_to_index": 1610452961,
         "uuid": "cd61771b-661a-4e19-b269-6e5d95350de6",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Colon",
+                    "ontology": "UBERON:0001155",
+                    "ontology_label": "colon"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
+                {
+                    "text": "10x",
+                    "ontology": "EFO:0008995",
+                    "ontology_label": "10X sequencing"
+                },
                 {
                     "text": "10X 3' v2 sequencing",
                     "ontology": "EFO:0009899",
@@ -10350,9 +10546,6 @@
                     "ontology": "EFO:0009918",
                     "ontology_label": "smFISH"
                 }
-            ],
-            "others": [
-                "GemCode, Immunofluorescence assay (IFA)"
             ]
         }
     },
@@ -10492,7 +10685,20 @@
         "added_to_index": 1610470834,
         "uuid": "6936da41-3692-46bb-bca1-cd0f507991e9",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "Lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -10622,7 +10828,15 @@
         "added_to_index": 1610626454,
         "uuid": "183c7b4c-b64c-4d07-bf62-4dad77af5778",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Embryo",
+                    "ontology": "UBERON:0000922",
+                    "ontology_label": "embryo"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -11117,8 +11331,12 @@
         "added_to_index": 1610626457,
         "uuid": "7ac8822c-4ef0-4194-adf0-74290611b1c6",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": []
+        },
+        "technology": {
+            "ontologies": []
+        }
     },
     {
         "content": {
@@ -11583,8 +11801,24 @@
         "added_to_index": 1610626458,
         "uuid": "cb0f2027-d080-49fc-bce4-1d5b44eba1c1",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v1 5'",
+                    "ontology": "EFO:0009897",
+                    "ontology_label": "10x v1 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -11822,8 +12056,39 @@
         "added_to_index": 1610626460,
         "uuid": "d4222caa-3813-4f66-a25a-572c1d287c1d",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "skin",
+                    "ontology": "UBERON:0000014",
+                    "ontology_label": "zone of skin"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 3'",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "10X v2 5'",
+                    "ontology": "EFO:0009900",
+                    "ontology_label": "10X 5' v2 sequencing"
+                },
+                {
+                    "text": "10X v2 VDJ",
+                    "ontology": "EFO:0010713",
+                    "ontology_label": "10X Immune profiling"
+                },
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -11953,8 +12218,23 @@
         "added_to_index": 1610714150,
         "uuid": "ef1e3497-515e-4bbe-8d4c-10161854b699",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "Airways",
+                    "ontology": "UBERON:0001005",
+                    "ontology_label": "respiratory airway"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": []
+        }
     },
     {
         "content": {
@@ -12062,7 +12342,15 @@
         "added_to_index": 1610714151,
         "uuid": "1a119c22-4564-4e92-8790-19f77d7e3766",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "liver",
+                    "ontology": "UBERON:0002107",
+                    "ontology_label": "liver"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -12514,9 +12802,57 @@
         "added_to_index": 1610714153,
         "uuid": "1e281905-8dac-4f6d-9e10-f698fb9aa805",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "small intestine",
+                    "ontology": "UBERON:0002108",
+                    "ontology_label": "small intestine"
+                },
+                {
+                    "text": "nasal",
+                    "ontology": "UBERON:0000402",
+                    "ontology_label": "nasal vestibule"
+                },
+                {
+                    "text": "bone marrow",
+                    "ontology": "UBERON:0002371",
+                    "ontology_label": "bone marrow"
+                },
+                {
+                    "text": "large intestine",
+                    "ontology": "UBERON:0000059",
+                    "ontology_label": "large intestine"
+                },
+                {
+                    "text": "thymus",
+                    "ontology": "UBERON:0002370",
+                    "ontology_label": "thymus"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
+                {
+                    "text": "Seq-Well",
+                    "ontology": "EFO:0008919",
+                    "ontology_label": "Seq-Well"
+                },
+                {
+                    "text": "10X 3' v2",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "Smart-Seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                },
                 {
                     "text": "CEL-seq2",
                     "ontology": "EFO:0010010",
@@ -12793,13 +13129,26 @@
         "added_to_index": 1610717673,
         "uuid": "c0518445-3b3b-49c6-b8fc-c41daa4eacba",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
-                    "text": "10X 3' v2 sequencing",
-                    "ontology": "EFO:0009899",
-                    "ontology_label": "10X 3' v2 sequencing"
+                    "text": "10X",
+                    "ontology": "EFO:0008995",
+                    "ontology_label": "10X sequencing"
+                },
+                {
+                    "text": "Drop-seq",
+                    "ontology": "EFO:0008722",
+                    "ontology_label": "Drop-seq"
                 },
                 {
                     "text": "Smart-seq2",
@@ -12807,9 +13156,9 @@
                     "ontology_label": "Smart-seq2"
                 },
                 {
-                    "text": "Drop-seq",
-                    "ontology": "EFO:0008722",
-                    "ontology_label": "Drop-seq"
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
                 }
             ]
         }
@@ -13041,7 +13390,20 @@
         "added_to_index": 1610717676,
         "uuid": "8319c26c-6fb5-40cb-b511-f50f10bf05a7",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                },
+                {
+                    "text": "urine",
+                    "ontology": "UBERON:0001088",
+                    "ontology_label": "urine"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -13126,7 +13488,15 @@
         "added_to_index": 1610717678,
         "uuid": "0d4b87ea-6e9e-4569-82e4-1343e0e3259f",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -13234,20 +13604,37 @@
         "added_to_index": 1610718656,
         "uuid": "a7800f1b-d2d0-4a65-861f-fe1612a73162",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "colon",
+                    "ontology": "UBERON:0001155",
+                    "ontology_label": "colon"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
+                {
+                    "text": "RAISIN RNA-seq",
+                    "ontology": "EFO:0008896",
+                    "ontology_label": "RNA-Seq"
+                },
+                {
+                    "text": "sn Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                },
+                {
+                    "text": "MIRACL-Seq",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
                 {
                     "text": "smFISH",
                     "ontology": "EFO:0009918",
                     "ontology_label": "smFISH"
                 }
-            ],
-            "others": [
-                "RNA-fish",
-                "RAISIN RNA-Seq",
-                "MIRACL-Seq",
-                "TEM"
             ]
         }
     },
@@ -13779,7 +14166,20 @@
         "added_to_index": 1610731918,
         "uuid": "29ed62cc-8875-4c8c-b962-74670d892745",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Skin",
+                    "ontology": "UBERON:0000014",
+                    "ontology_label": "zone of skin"
+                },
+                {
+                    "text": "PBMC",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -13787,9 +14187,6 @@
                     "ontology": "EFO:0008931",
                     "ontology_label": "Smart-seq2"
                 }
-            ],
-            "others": [
-                "bulk RNA sequencing"
             ]
         }
     },
@@ -13912,7 +14309,15 @@
         "added_to_index": 1610731920,
         "uuid": "85a9263b-0887-48ed-ab1a-ddfa773727b6",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -14099,7 +14504,15 @@
         "added_to_index": 1610731922,
         "uuid": "769a08d1-b8a4-4f1e-95f7-6071a9827555",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "airway",
+                    "ontology": "UBERON:0001005",
+                    "ontology_label": "respiratory airway"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -14534,9 +14947,22 @@
         "added_to_index": 1610731925,
         "uuid": "165dea71-a95a-44e1-88cd-b2d9ad68bb1e",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
+                {
+                    "text": "single nuclei SSv4",
+                    "ontology": "EFO:0009809",
+                    "ontology_label": "single nucleus sequencing"
+                },
                 {
                     "text": "Smart-seq",
                     "ontology": "EFO:0008930",
@@ -14760,7 +15186,15 @@
         "added_to_index": 1610801081,
         "uuid": "ffb57f6c-6ea1-4222-9f94-aeef9e273405",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -14772,10 +15206,12 @@
                     "text": "10x 3' v3 sequencing",
                     "ontology": "EFO:0009922",
                     "ontology_label": "10x 3' v3 sequencing"
+                },
+                {
+                    "text": "RNAScope",
+                    "ontology": "OBI:0001686",
+                    "ontology_label": "in-situ hybridization assay"
                 }
-            ],
-            "others": [
-                "In situ sequencint with CARTANA / RNA-FISH"
             ]
         }
     },
@@ -14843,17 +15279,27 @@
         "added_to_index": 1610801082,
         "uuid": "77423e58-0fbb-495a-9ec2-bd9a8010f21d",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "small intestine",
+                    "ontology": "UBERON:0002108",
+                    "ontology_label": "small intestine"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
+                {
+                    "text": "SORT-seq",
+                    "ontology": "EFO:0009919",
+                    "ontology_label": "SPLiT-seq"
+                },
                 {
                     "text": "CEL-seq2",
                     "ontology": "EFO:0010010",
                     "ontology_label": "CEL-seq2"
                 }
-            ],
-            "others": [
-                "SORTseq"
             ]
         }
     },
@@ -15206,7 +15652,9 @@
         "added_to_index": 1610801084,
         "uuid": "5850583c-baec-4427-8656-cd3c96c07727",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": []
+        },
         "technology": {
             "ontologies": [
                 {
@@ -15489,10 +15937,16 @@
         "added_to_index": 1610801087,
         "uuid": "1fac187b-1c3f-41c4-b6b6-6a9a8c0489d1",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": []
+        },
         "technology": {
-            "others": [
-                "Microwell-seq"
+            "ontologies": [
+                {
+                    "text": "Microwell-seq",
+                    "ontology": "EFO:0009919",
+                    "ontology_label": "SPLiT-seq"
+                }
             ]
         }
     },
@@ -15654,9 +16108,22 @@
         "added_to_index": 1610801088,
         "uuid": "4ba0a537-c21b-4bc1-a54f-4ebd5fc8cf45",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
+                {
+                    "text": "10X",
+                    "ontology": "EFO:0008995",
+                    "ontology_label": "10X sequencing"
+                },
                 {
                     "text": "10X 3' v1 sequencing",
                     "ontology": "EFO:0009901",
@@ -15667,9 +16134,6 @@
                     "ontology": "EFO:0009899",
                     "ontology_label": "10X 3' v2 sequencing"
                 }
-            ],
-            "others": [
-                "RNAscope"
             ]
         }
     },
@@ -15760,7 +16224,15 @@
         "added_to_index": 1610896325,
         "uuid": "58028aa8-0ed2-49ca-b60f-15e2ed5989d5",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -15974,7 +16446,15 @@
         "added_to_index": 1610896328,
         "uuid": "d84fd289-1b4b-43f0-aa84-9f0928937106",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "heart",
+                    "ontology": "UBERON:0000948",
+                    "ontology_label": "heart"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -16179,8 +16659,59 @@
         "added_to_index": 1610896329,
         "uuid": "6c0e3b28-5be0-45b6-9e17-809048f18284",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                },
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                },
+                {
+                    "text": "liver",
+                    "ontology": "UBERON:0002107",
+                    "ontology_label": "liver"
+                },
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                },
+                {
+                    "text": "thyroid",
+                    "ontology": "UBERON:0002046",
+                    "ontology_label": "thyroid gland"
+                },
+                {
+                    "text": "parotid gland",
+                    "ontology": "UBERON:0001831",
+                    "ontology_label": "parotid gland"
+                },
+                {
+                    "text": "aorta",
+                    "ontology": "UBERON:0000947",
+                    "ontology_label": "aorta"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "sc-ATAC-seq",
+                    "ontology": "EFO:0007045",
+                    "ontology_label": "ATAC-seq"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -16416,7 +16947,15 @@
         "added_to_index": 1610896331,
         "uuid": "69d798a1-80b3-4fc8-b124-e3a256422127",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "mouth",
+                    "ontology": "UBERON:0000165",
+                    "ontology_label": "mouth"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -16558,8 +17097,12 @@
         "added_to_index": 1610896332,
         "uuid": "859affdc-3e85-4444-bb87-fe3887d6238c",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": []
+        },
+        "technology": {
+            "ontologies": []
+        }
     },
     {
         "content": {
@@ -16648,8 +17191,28 @@
         "added_to_index": 1610969897,
         "uuid": "2d4d89f2-ebeb-467c-ae60-a3efc5e8d4ba",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "airway",
+                    "ontology": "UBERON:0001005",
+                    "ontology_label": "respiratory airway"
+                },
+                {
+                    "text": "nasal swab",
+                    "ontology": "UBERON:0000402",
+                    "ontology_label": "nasal vestibule"
+                },
+                {
+                    "text": "bronchoalveolar",
+                    "ontology": "UBERON:0004903",
+                    "ontology_label": "bronchoalveolar duct junction"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": []
+        }
     },
     {
         "content": {
@@ -16937,7 +17500,9 @@
         "added_to_index": 1610969900,
         "uuid": "0406796c-5a6e-4eeb-b6e4-12de1e659bd9",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": []
+        },
         "technology": {
             "ontologies": [
                 {
@@ -16950,10 +17515,6 @@
                     "ontology": "EFO:0008992",
                     "ontology_label": "MERFISH"
                 }
-            ],
-            "others": [
-                "STARmap",
-                "Visium"
             ]
         }
     },
@@ -17238,8 +17799,24 @@
         "added_to_index": 1610969901,
         "uuid": "daf9d982-7ce6-43f6-ab51-272577290606",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -17358,7 +17935,15 @@
         "added_to_index": 1610969902,
         "uuid": "30d5c857-9d46-465b-9fd8-236ff31f2f5a",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -17424,18 +18009,26 @@
         "added_to_index": 1610989010,
         "uuid": "e4b2e4d9-2b9b-46cf-b0e0-bb23ff28030a",
         "dcp_url": null,
-        "organ": null,
-        "technology": {
+        "organ": {
             "ontologies": [
                 {
-                    "text": "scATAC-seq",
-                    "ontology": "EFO:0010891",
-                    "ontology_label": "scATAC-seq"
-                },
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
                 {
                     "text": "10X 5' v2 sequencing",
                     "ontology": "EFO:0009900",
                     "ontology_label": "10X 5' v2 sequencing"
+                },
+                {
+                    "text": "scATAC-seq",
+                    "ontology": "EFO:0010891",
+                    "ontology_label": "scATAC-seq"
                 }
             ]
         }
@@ -17517,7 +18110,15 @@
         "added_to_index": 1610989011,
         "uuid": "d363d09f-924b-43dd-9634-6988f1e46db2",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "breast",
+                    "ontology": "UBERON:0000310",
+                    "ontology_label": "breast"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -17687,8 +18288,24 @@
         "added_to_index": 1610989013,
         "uuid": "2bda737d-bd81-412f-b37b-cf76b059f778",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 3'",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -17811,7 +18428,25 @@
         "added_to_index": 1610989014,
         "uuid": "87e600d2-57ca-4f16-addd-d357ab2f24ee",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Airway",
+                    "ontology": "UBERON:0001005",
+                    "ontology_label": "respiratory airway"
+                },
+                {
+                    "text": "Lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "Organoid",
+                    "ontology": "UBERON:0010002",
+                    "ontology_label": "pulmonary neuroendocrine body"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -17950,7 +18585,15 @@
         "added_to_index": 1610989016,
         "uuid": "fc934a13-4a98-4901-8208-590534cd7b87",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "small intestine",
+                    "ontology": "UBERON:0002108",
+                    "ontology_label": "small intestine"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -18049,13 +18692,51 @@
         "added_to_index": 1610989017,
         "uuid": "a6ac6702-1938-436f-8437-67d08161fdeb",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "esophagus",
+                    "ontology": "UBERON:0001043",
+                    "ontology_label": "esophagus"
+                },
+                {
+                    "text": "stomach",
+                    "ontology": "UBERON:0000945",
+                    "ontology_label": "stomach"
+                },
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "liver",
+                    "ontology": "UBERON:0002107",
+                    "ontology_label": "liver"
+                },
+                {
+                    "text": "small intestine",
+                    "ontology": "UBERON:0002108",
+                    "ontology_label": "small intestine"
+                },
+                {
+                    "text": "large intestine",
+                    "ontology": "UBERON:0000059",
+                    "ontology_label": "large intestine"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
                     "text": "10X 3' v2 sequencing",
                     "ontology": "EFO:0009899",
                     "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "10X v3 3'",
+                    "ontology": "EFO:0009922",
+                    "ontology_label": "10x 3' v3 sequencing"
                 },
                 {
                     "text": "10x v3 sequencing",
@@ -18183,13 +18864,51 @@
         "added_to_index": 1610989019,
         "uuid": "c535ac1f-1902-43bc-86a5-1e1643a5578e",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "embryo",
+                    "ontology": "UBERON:0000922",
+                    "ontology_label": "embryo"
+                },
+                {
+                    "text": "small intestine",
+                    "ontology": "UBERON:0002108",
+                    "ontology_label": "small intestine"
+                },
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
+                {
+                    "text": "SMARTer(C1)",
+                    "ontology": "EFO:0010058",
+                    "ontology_label": "Fluidigm C1-based library preparation"
+                },
+                {
+                    "text": "10X v2 3'",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
                 {
                     "text": "10x 3' v3 sequencing",
                     "ontology": "EFO:0009922",
                     "ontology_label": "10x 3' v3 sequencing"
+                },
+                {
+                    "text": "RNAScope",
+                    "ontology": "OBI:0001686",
+                    "ontology_label": "in-situ hybridization assay"
                 },
                 {
                     "text": "10X v2 sequencing",
@@ -18339,7 +19058,30 @@
         "added_to_index": 1611065475,
         "uuid": "08fb10df-32e5-456c-9882-e33fcd49077a",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "throat",
+                    "ontology": "UBERON:0000341",
+                    "ontology_label": "throat"
+                },
+                {
+                    "text": "nasal",
+                    "ontology": "UBERON:0000402",
+                    "ontology_label": "nasal vestibule"
+                },
+                {
+                    "text": "sputum",
+                    "ontology": "UBERON:0007311",
+                    "ontology_label": "sputum"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -18348,14 +19090,14 @@
                     "ontology_label": "10X 5' v2 sequencing"
                 },
                 {
-                    "text": "10X Ig enrichment",
-                    "ontology": "EFO:0010715",
-                    "ontology_label": "10X Ig enrichment"
-                },
-                {
                     "text": "10X TCR enrichment",
                     "ontology": "EFO:0010714",
                     "ontology_label": "10X TCR enrichment"
+                },
+                {
+                    "text": "10X Ig enrichment",
+                    "ontology": "EFO:0010715",
+                    "ontology_label": "10X Ig enrichment"
                 }
             ]
         }
@@ -18516,8 +19258,29 @@
         "added_to_index": 1611075376,
         "uuid": "f71d4ab7-8115-4208-83b6-bf03dec07b74",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "breast",
+                    "ontology": "UBERON:0000310",
+                    "ontology_label": "breast"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 3'",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "SMARTer(C1)",
+                    "ontology": "EFO:0010058",
+                    "ontology_label": "Fluidigm C1-based library preparation"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -18653,18 +19416,37 @@
         "added_to_index": 1611665593,
         "uuid": "fa3f460f-4fb9-4ced-b548-8ba6a8ecae3f",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Intestine",
+                    "ontology": "UBERON:0000160",
+                    "ontology_label": "intestine"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
+                {
+                    "text": "RNAScope",
+                    "ontology": "OBI:0001686",
+                    "ontology_label": "in-situ hybridization assay"
+                },
+                {
+                    "text": "Visium",
+                    "ontology": "EFO:0008994",
+                    "ontology_label": "spatial transcriptomics"
+                },
                 {
                     "text": "10x 3' v3 sequencing",
                     "ontology": "EFO:0009922",
                     "ontology_label": "10x 3' v3 sequencing"
+                },
+                {
+                    "text": "CITE-Seq",
+                    "ontology": "EFO:0009294",
+                    "ontology_label": "CITE-seq"
                 }
-            ],
-            "others": [
-                "10X Visium",
-                "RNAScope"
             ]
         }
     }
