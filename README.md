@@ -81,8 +81,9 @@ Since a new endpoint in Ingest API will eventually be created, the JSON file cre
   - Will spin up the dev server
 - `yarn test:watch`
   - Run the unit tests in watch
-  
-to run a local instance: 
+
+to run a local instance:
+
 ```
 npm install
 npm run start
