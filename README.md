@@ -1,8 +1,8 @@
 # Projects Index (name TBD)
 
-[Production](http://www.ebi.ac.uk/humancellatlas/project-catalogue)
+[Production](https://www.ebi.ac.uk/humancellatlas/project-catalogue)
 
-[Development](http://wwwdev.ebi.ac.uk/humancellatlas/project-catalogue)
+[Development](https://wwwdev.ebi.ac.uk/humancellatlas/project-catalogue)
 
 ## Updating Projects
 
