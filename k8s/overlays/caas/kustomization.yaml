@@ -3,9 +3,9 @@ commonLabels:
 commonAnnotations:
   note: CaaS varients
 bases:
- - ../../base
+  - ../../base
 patches:
- - ci_image.yaml
- - replicas.yaml
- - probes.yaml
- - registry_credentials.yaml
+  - ci_image.yaml
+  - replicas.yaml
+  - probes.yaml
+  - registry_credentials.yaml

@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "serve:data": "http-server data/ --cors",
-    "serve:ui": "parcel index.html",
+    "serve:ui": "parcel index.html about.html",
     "start": "concurrently --kill-others \"npm run serve:data\" \"npm run serve:ui\"",
-    "build": "parcel build index.html --public-url ./",
+    "build": "parcel build index.html about.html --public-url ./",
     "test": "jest",
     "test:watch": "jest --watch"
   },
