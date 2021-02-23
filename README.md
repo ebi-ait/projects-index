@@ -82,5 +82,13 @@ Since a new endpoint in Ingest API will eventually be created, the JSON file cre
 - `yarn test:watch`
   - Run the unit tests in watch
 
+to run a local instance:
+
+```
+npm install
+npm run start
+```
+
 #### Note about URLs while developing
+
 There is a rewrite rule in nginx config to allow for URLs without the `.html` extension. This is not present with the parcel server and is [not supported](https://github.com/parcel-bundler/parcel/issues/1400). So, links won't work properly in the dev server but you can run `docker-compose up -d --build` to check everything works okay with nginx set up.
