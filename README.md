@@ -1,4 +1,4 @@
-# Projects Index (name TBD)
+# HCA Project Catalogue
 
 [Production](https://www.ebi.ac.uk/humancellatlas/project-catalogue)
 
