@@ -24,6 +24,17 @@ Data for the UI is in `data/data.json` and is created/updated by running the `sc
 
 _Note: Running `./scraper.py --help` will show other options available. In particular the `--clean` flag may be useful._
 
+### Deployments
+
+All changed in `master` are automatically deployed to the dev environment. In order to deploy to the production environment, follow the below steps:
+
+1. Make sure you have the [`git release`](https://github.com/rdgoite/hca-developer-tools/blob/master/gitconfig) command in your gitconfig.
+2. `git checkout master`
+3. `git log` -> check latest commit is the commit to be released
+4. `git release`
+
+The project catalogue is deployed to the `web-development` k8s cluster and the process is managed in the `ebiwd` namespace in [GitLab](http://gitlab.ebi.ac.uk/). If there are any problems with deployments, you can contact [www-dev@ebi.ac.uk](mailto:www-dev@ebi.ac.uk) and reference ticket `#473703`.
+
 ## Dev notes
 
 ### Tech used
@@ -55,17 +66,6 @@ _Note: Running `./scraper.py --help` will show other options available. In parti
 ### Overview of infrastructure
 
 ![infrastructure overview](./infrastructure.png)
-
-### Deployments
-
-All changed in `master` are automatically deployed to the dev environment. In order to deploy to the production environment, follow the below steps:
-
-1. Make sure you have the [`git release`](https://github.com/rdgoite/hca-developer-tools/blob/master/gitconfig) command in your gitconfig.
-2. `git checkout master`
-3. `git log` -> check latest commit is the commit to be released
-4. `git release`
-
-The project catalogue is deployed to the `web-development` k8s cluster and the process is managed in the `ebiwd` namespace in [GitLab](http://gitlab.ebi.ac.uk/). If there are any problems with deployments, you can contact [www-dev@ebi.ac.uk](mailto:www-dev@ebi.ac.uk) and reference ticket `#473703`.
 
 #### Continuous Integration
 
