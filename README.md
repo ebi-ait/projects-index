@@ -13,6 +13,7 @@ Data for the UI is in `data/data.json` and is created/updated by running the `sc
 1. Create a new branch
 1. `cd data`
 1. Update `published_uuids.txt` as per requirements
+  * organs and technologies populate from the `project.organ` & `project.technology` field. They either need to be filled in manually on the project form or by running the `set_project_tech_organs.py` script 
 1. `./scraper.py`
 1. Commit and push the changes in git
 1. Create a pull request and merge once unit tests have passed
