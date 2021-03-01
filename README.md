@@ -10,11 +10,11 @@ Data for the UI is in `data/data.json` and is created/updated by running the `sc
 
 **You will need Python3 to run the script**
 
-1. Register any projects/publications that you want to add to the catalogue in the prod ingest ui contrinute.data.humancellatlas.org
+1. Register any projects/publications that you want to add to the catalogue in the prod ingest ui [contribute.data.humancellatlas.org](https://contribute.data.humancellatlas.org/)
     1. A script to add from a publication doi exists here: [submit_project_from_doi.py](https://github.com/ebi-ait/hca-ebi-wrangler-central/blob/master/src/submit_project_from_doi.py)
 1. Create a new branch of this repository
 1. `cd data`
-1. Update `published_uuids.txt`, adding ingest project uuids for any projects you would like to add and removing any you would like to remove. Please note:
+1. Update `published_uuids.txt`, add ingest project uuids for any projects you would like to add and remove any you would like to remove. Please note:
    1. the scraper script will automatically update any new information from ingest each time it is run 
    1. organs and technologies populate from the `project['organ']` & `project['technology']` field. They either need to be filled in manually on the project form or by running the [`set_project_tech_organs.py`](https://github.com/ebi-ait/hca-ebi-dev-team/tree/master/scripts/set-project-tech-organs) script
 1. `./scraper.py`
