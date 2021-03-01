@@ -1,8 +1,8 @@
 # Projects Index (name TBD)
 
-[Production](http://www.ebi.ac.uk/humancellatlas/project-catalogue)
+[Production](https://www.ebi.ac.uk/humancellatlas/project-catalogue)
 
-[Development](http://wwwdev.ebi.ac.uk/humancellatlas/project-catalogue)
+[Development](https://wwwdev.ebi.ac.uk/humancellatlas/project-catalogue)
 
 ## Updating Projects
 
@@ -13,6 +13,7 @@ Data for the UI is in `data/data.json` and is created/updated by running the `sc
 1. Create a new branch
 1. `cd data`
 1. Update `published_uuids.txt` as per requirements
+    1. organs and technologies populate from the `project.organ` & `project.technology` field. They either need to be filled in manually on the project form or by running the `set_project_tech_organs.py` script 
 1. `./scraper.py`
 1. Commit and push the changes in git
 1. Create a pull request and merge once unit tests have passed
@@ -80,4 +81,15 @@ Since a new endpoint in Ingest API will eventually be created, the JSON file cre
 - `yarn start`
   - Will spin up the dev server
 - `yarn test:watch`
-  - Run the unit tests in watch mode
+  - Run the unit tests in watch
+
+to run a local instance:
+
+```
+npm install
+npm run start
+```
+
+#### Note about URLs while developing
+
+There is a rewrite rule in nginx config to allow for URLs without the `.html` extension. This is not present with the parcel server and is [not supported](https://github.com/parcel-bundler/parcel/issues/1400). So, links won't work properly in the dev server but you can run `docker-compose up -d --build` to check everything works okay with nginx set up.
