@@ -53,8 +53,16 @@
                 this.update({ data: [], loading: true })
 
                 resolve().then(data => {
-                    this.organNames = uniq(flatten(data.map(dataPoint => dataPoint.organ_names)));
-                    this.technologyNames = uniq(flatten(data.map(dataPoint => dataPoint.technology_names)));
+                    const compareAplhabeticalFunc = (a, b) => {
+                        const lowerA = a.toLowerCase();
+                        const lowerB = b.toLowerCase();
+                        if (lowerA < lowerB) return -1;
+                        if (lowerB < lowerA) return 1;
+                        return 0;
+                    }
+
+                    this.organNames = uniq(flatten(data.map(dataPoint => dataPoint.organ_names))).sort(compareAplhabeticalFunc);
+                    this.technologyNames = uniq(flatten(data.map(dataPoint => dataPoint.technology_names))).sort(compareAplhabeticalFunc);
 
                     this.update({
                         unfilteredData: data,
