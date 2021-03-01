@@ -3,7 +3,8 @@ name: CI
 on:
   pull_request:
     branches:
-      - master
+      - '**'        # matches every branch
+      - '!master'   # excludes master
 
 jobs:
   build-and-test:
