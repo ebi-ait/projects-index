@@ -3,7 +3,8 @@ name: Prettier
 on:
   push:
     branches:
-      - master
+      - '**'        # matches every branch
+      - '!master'   # excludes master
 
 jobs:
   prettier:
