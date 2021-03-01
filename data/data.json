@@ -592,7 +592,10 @@
             },
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null,
+            "geo_series_accessions": [
+                "GSE109564",
+                "GSE114156"
+            ],
             "supplementary_links": null,
             "publications": [
                 {
@@ -1019,6 +1022,11 @@
         "organ": {
             "ontologies": [
                 {
+                    "text": "skin of body",
+                    "ontology": "UBERON:0002097",
+                    "ontology_label": "skin of body"
+                },
+                {
                     "text": "embryo",
                     "ontology": "UBERON:0000922",
                     "ontology_label": "embryo"
@@ -1027,25 +1035,20 @@
                     "text": "immune system",
                     "ontology": "UBERON:0002405",
                     "ontology_label": "immune system"
-                },
-                {
-                    "text": "skin of body",
-                    "ontology": "UBERON:0002097",
-                    "ontology_label": "skin of body"
                 }
             ]
         },
         "technology": {
             "ontologies": [
                 {
-                    "text": "10X v2 sequencing",
-                    "ontology": "EFO:0009310",
-                    "ontology_label": "10X v2 sequencing"
-                },
-                {
                     "text": "10X 3' v2 sequencing",
                     "ontology": "EFO:0009899",
                     "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "10X v2 sequencing",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
                 }
             ]
         }
@@ -1655,8 +1658,34 @@
         "added_to_index": 1609844546,
         "uuid": "2043c65a-1cf8-4828-a656-9e247d4e64f1",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/2043c65a-1cf8-4828-a656-9e247d4e64f1?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "embryo",
+                    "ontology": "UBERON:0000922",
+                    "ontology_label": "embryo"
+                },
+                {
+                    "text": "stem cell",
+                    "ontology": "CL:0000034",
+                    "ontology_label": "stem cell"
+                },
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -1802,8 +1831,24 @@
         "added_to_index": 1609844546,
         "uuid": "2086eb05-10b9-432b-b7f0-169ccc49d270",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/2086eb05-10b9-432b-b7f0-169ccc49d270?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Heart",
+                    "ontology": "UBERON:0000948",
+                    "ontology_label": "heart"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 3' sequencing",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -1920,8 +1965,24 @@
         "added_to_index": 1609844547,
         "uuid": "2ef3655a-973d-4d69-9b41-21fa4041eed7",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/2ef3655a-973d-4d69-9b41-21fa4041eed7?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 sequencing",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -2102,8 +2163,29 @@
         "added_to_index": 1609844548,
         "uuid": "3089d311-f9ed-44dd-bb10-397059bad4dc",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "mouth",
+                    "ontology": "UBERON:0000165",
+                    "ontology_label": "mouth"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -2247,8 +2329,24 @@
         "added_to_index": 1609844549,
         "uuid": "3138bf07-b24a-49c8-b1f3-61329d7abc3b",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "skin",
+                    "ontology": "UBERON:0002097",
+                    "ontology_label": "skin of body"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10x 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -2431,7 +2529,15 @@
         "added_to_index": 1609844550,
         "uuid": "38449aea-70b5-40db-84b3-1e08f32efe34",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/38449aea-70b5-40db-84b3-1e08f32efe34?catalog=dcp2",
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -2556,8 +2662,24 @@
         "added_to_index": 1609844551,
         "uuid": "42d4f8d4-5422-4b78-adae-e7c3c2ef511c",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/42d4f8d4-5422-4b78-adae-e7c3c2ef511c?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "adipose tissue",
+                    "ontology": "UBERON:0001013",
+                    "ontology_label": "adipose tissue"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -2603,8 +2725,29 @@
         "added_to_index": 1609844552,
         "uuid": "453d7ee2-319f-496c-9862-99d397870b63",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v1 sequencing",
+                    "ontology": "EFO:0009897",
+                    "ontology_label": "10x v1 sequencing"
+                },
+                {
+                    "text": "10X v2 sequencing",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -2615,7 +2758,9 @@
             },
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null,
+            "geo_series_accessions": [
+                "GSE117156"
+            ],
             "supplementary_links": null,
             "publications": null,
             "contributors": [
@@ -2726,8 +2871,39 @@
         "added_to_index": 1609844553,
         "uuid": "4a95101c-9ffc-4f30-a809-f04518a23803",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/4a95101c-9ffc-4f30-a809-f04518a23803?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "hematopoietic tissue",
+                    "ontology": "UBERON:0002390",
+                    "ontology_label": "hematopoietic system"
+                },
+                {
+                    "text": "lung lymph node",
+                    "ontology": "UBERON:0002524",
+                    "ontology_label": "mediastinal lymph node"
+                },
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 sequencing",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -3225,8 +3401,24 @@
         "added_to_index": 1609844554,
         "uuid": "4d6f6c96-2a83-43d8-8fe1-0f53bffd4674",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/4d6f6c96-2a83-43d8-8fe1-0f53bffd4674?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "liver",
+                    "ontology": "UBERON:0002107",
+                    "ontology_label": "liver"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10x v2 sequencing",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -3471,8 +3663,34 @@
         "added_to_index": 1609844555,
         "uuid": "4e6f083b-5b9a-4393-9890-2a83da8188f1",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/4e6f083b-5b9a-4393-9890-2a83da8188f1?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "whole embryos",
+                    "ontology": "UBERON:0000922",
+                    "ontology_label": "embryo"
+                },
+                {
+                    "text": "endoderm",
+                    "ontology": "UBERON:0000925",
+                    "ontology_label": "endoderm"
+                },
+                {
+                    "text": "gut tube",
+                    "ontology": "UBERON:0007026",
+                    "ontology_label": "presumptive gut"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 sequencing",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -3598,8 +3816,34 @@
         "added_to_index": 1609844555,
         "uuid": "559bb888-7829-41f2-ace5-2c05c7eb81e9",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "spleen",
+                    "ontology": "UBERON:0002106",
+                    "ontology_label": "spleen"
+                },
+                {
+                    "text": "liver",
+                    "ontology": "UBERON:0002107",
+                    "ontology_label": "liver"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Single Cell 3' Reagent Kit v2",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -3764,8 +4008,24 @@
         "added_to_index": 1609844556,
         "uuid": "577c946d-6de5-4b55-a854-cd3fde40bff2",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/577c946d-6de5-4b55-a854-cd3fde40bff2?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 5' v2 sequencing",
+                    "ontology": "EFO:0009900",
+                    "ontology_label": "10X 5' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -3835,8 +4095,24 @@
         "added_to_index": 1609844557,
         "uuid": "592a97ab-d575-4e91-b68e-547d1d66d087",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -3958,7 +4234,15 @@
         "added_to_index": 1609844558,
         "uuid": "5b5f05b7-2482-468d-b76d-8f68c04a7a47",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/5b5f05b7-2482-468d-b76d-8f68c04a7a47?catalog=dcp2",
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -4121,8 +4405,29 @@
         "added_to_index": 1609844559,
         "uuid": "6c040a93-8cf8-4fd5-98de-2297eb07e9f6",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10x 3' v2",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10x 3' v2"
+                },
+                {
+                    "text": "DNA library construction",
+                    "ontology": "EFO:0010172",
+                    "ontology_label": "DNA library construction"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -4220,8 +4525,24 @@
         "added_to_index": 1609844560,
         "uuid": "7027adc6-c9c9-46f3-84ee-9badc3a4f53b",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/7027adc6-c9c9-46f3-84ee-9badc3a4f53b?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "heart",
+                    "ontology": "UBERON:0000948",
+                    "ontology_label": "heart"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 3' sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -4317,8 +4638,24 @@
         "added_to_index": 1609844561,
         "uuid": "74b6d569-3b11-42ef-b6b1-a0454522b4a0",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/74b6d569-3b11-42ef-b6b1-a0454522b4a0?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10x_v2",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -4704,8 +5041,24 @@
         "added_to_index": 1609844562,
         "uuid": "8185730f-4113-40d3-9cc3-929271784c2b",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/8185730f-4113-40d3-9cc3-929271784c2b?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "right eye",
+                    "ontology": "UBERON:0000970",
+                    "ontology_label": "eye"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v2 sequencing",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -5108,8 +5461,49 @@
         "added_to_index": 1609844563,
         "uuid": "83f5188e-3bf7-4956-9544-cea4f8997756",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/83f5188e-3bf7-4956-9544-cea4f8997756?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "large intestine",
+                    "ontology": "UBERON:0000059",
+                    "ontology_label": "large intestine"
+                },
+                {
+                    "text": "immune organ",
+                    "ontology": "UBERON:0005057",
+                    "ontology_label": "immune organ"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 5' v2 sequencing",
+                    "ontology": "EFO:0009900",
+                    "ontology_label": "10X 5' v2 sequencing"
+                },
+                {
+                    "text": "10X TCR enrichment",
+                    "ontology": "EFO:0010714",
+                    "ontology_label": "10X TCR enrichment"
+                },
+                {
+                    "text": "10X Ig enrichment",
+                    "ontology": "EFO:0010715",
+                    "ontology_label": "10X Ig enrichment"
+                },
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                },
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -5229,8 +5623,24 @@
         "added_to_index": 1609844564,
         "uuid": "87215108-e533-4364-abd4-0fe71edd35c1",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "High-throughput single-cell labeling with indexing droplets",
+                    "ontology": "EFO:0008780",
+                    "ontology_label": "inDrop"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -5567,8 +5977,69 @@
         "added_to_index": 1609844565,
         "uuid": "88ec040b-8705-4f77-8f41-f81e57632f7d",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/88ec040b-8705-4f77-8f41-f81e57632f7d?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10x Chromium (v2)",
+                    "ontology": "EFO:0009310",
+                    "ontology_label": "10X v2 sequencing"
+                },
+                {
+                    "text": "10x Chromium (v3)",
+                    "ontology": "EFO:0009898",
+                    "ontology_label": "10x v3 sequencing"
+                },
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                },
+                {
+                    "text": "Drop-seq",
+                    "ontology": "EFO:0008722",
+                    "ontology_label": "Drop-seq"
+                },
+                {
+                    "text": "DroNc-seq",
+                    "ontology": "EFO:0008720",
+                    "ontology_label": "DroNc-seq"
+                },
+                {
+                    "text": "Seq-Well",
+                    "ontology": "EFO:0008919",
+                    "ontology_label": "Seq-Well"
+                },
+                {
+                    "text": "inDrop",
+                    "ontology": "EFO:0008780",
+                    "ontology_label": "inDrop"
+                },
+                {
+                    "text": "CEL-seq2",
+                    "ontology": "EFO:0010010",
+                    "ontology_label": "CEL-seq2"
+                },
+                {
+                    "text": "sci-RNA-seq",
+                    "ontology": "EFO:0010550",
+                    "ontology_label": "sci-RNA-seq"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -6120,7 +6591,9 @@
             },
             "array_express_accessions": null,
             "insdc_project_accessions": null,
-            "geo_series_accessions": null,
+            "geo_series_accessions": [
+                "GSE117156"
+            ],
             "supplementary_links": null,
             "publications": [
                 {
@@ -8963,8 +9436,109 @@
         "added_to_index": 1609844584,
         "uuid": "e0009214-c0a0-4a7b-96e2-d6a83e966ce0",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/e0009214-c0a0-4a7b-96e2-d6a83e966ce0?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "adipose tissue",
+                    "ontology": "UBERON:0001013",
+                    "ontology_label": "adipose tissue"
+                },
+                {
+                    "text": "urinary bladder",
+                    "ontology": "UBERON:0001255",
+                    "ontology_label": "urinary bladder"
+                },
+                {
+                    "text": "bone tissue",
+                    "ontology": "UBERON:0002481",
+                    "ontology_label": "bone tissue"
+                },
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                },
+                {
+                    "text": "diaphragm",
+                    "ontology": "UBERON:0001103",
+                    "ontology_label": "diaphragm"
+                },
+                {
+                    "text": "heart",
+                    "ontology": "UBERON:0000948",
+                    "ontology_label": "heart"
+                },
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                },
+                {
+                    "text": "large intestine",
+                    "ontology": "UBERON:0000059",
+                    "ontology_label": "large intestine"
+                },
+                {
+                    "text": "liver",
+                    "ontology": "UBERON:0002107",
+                    "ontology_label": "liver"
+                },
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "mammary gland",
+                    "ontology": "UBERON:0001911",
+                    "ontology_label": "mammary gland"
+                },
+                {
+                    "text": "muscle organ",
+                    "ontology": "UBERON:0001630",
+                    "ontology_label": "muscle organ"
+                },
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                },
+                {
+                    "text": "skin of body",
+                    "ontology": "UBERON:0002097",
+                    "ontology_label": "skin of body"
+                },
+                {
+                    "text": "spleen",
+                    "ontology": "UBERON:0002106",
+                    "ontology_label": "spleen"
+                },
+                {
+                    "text": "thymus",
+                    "ontology": "UBERON:0002370",
+                    "ontology_label": "thymus"
+                },
+                {
+                    "text": "tongue",
+                    "ontology": "UBERON:0001723",
+                    "ontology_label": "tongue"
+                },
+                {
+                    "text": "trachea",
+                    "ontology": "UBERON:0003126",
+                    "ontology_label": "trachea"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -14974,82 +15548,6 @@
     {
         "content": {
             "project_core": {
-                "project_short_name": "ComprehensiveTranscriptomicsHumanKidney",
-                "project_title": "Comprehensive Cell Type Specific Transcriptomics of the Human Kidney.",
-                "project_description": "The human kidney is a complex organ composed of specialized cell types. To better define this cellular complexity, the individual transcriptomes of 22,469 normal human kidney cells  were profiled, identifying 27 cell types."
-            },
-            "array_express_accessions": null,
-            "insdc_project_accessions": [
-                "SRP126175"
-            ],
-            "geo_series_accessions": null,
-            "supplementary_links": null,
-            "publications": [
-                {
-                    "doi": "10.1101/238063",
-                    "url": "http://dx.doi.org/10.1101/238063",
-                    "journal_title": "bioRxiv",
-                    "title": "Comprehensive Cell Type Specific Transcriptomics of the Human Kidney.",
-                    "authors": [
-                        "Sivakamasundari V",
-                        "Bolisetty M",
-                        "Sivajothi S",
-                        "Bessonett S",
-                        "Ruan Y",
-                        "Robson P"
-                    ]
-                }
-            ],
-            "contributors": [
-                {
-                    "name": "V,,Sivakamasundari",
-                    "institution": "Jackson Laboratory for Genomic Medicine",
-                    "address": "Farmington, CT, 06032",
-                    "country": "USA"
-                },
-                {
-                    "name": "Mohan,,Bolisetty",
-                    "institution": "Jackson Laboratory for Genomic Medicine",
-                    "address": "Farmington, CT, 06032",
-                    "country": "USA"
-                },
-                {
-                    "name": "Santhosh,K,Sivajothi",
-                    "institution": "Jackson Laboratory for Genomic Medicine",
-                    "address": "Farmington, CT, 06032",
-                    "country": "USA"
-                },
-                {
-                    "name": "Shannon,,Bessonett",
-                    "institution": "Jackson Laboratory for Genomic Medicine",
-                    "address": "Farmington, CT, 06032",
-                    "country": "USA"
-                },
-                {
-                    "name": "Yijun,,Ruan",
-                    "institution": "Jackson Laboratory for Genomic Medicine",
-                    "address": "Farmington, CT, 06032",
-                    "country": "USA"
-                },
-                {
-                    "name": "Paul,,Robson",
-                    "email": "paul.robson@jax.org",
-                    "institution": "Jackson Laboratory for Genomic Medicine",
-                    "address": "Farmington, CT, 06032",
-                    "country": "USA",
-                    "corresponding_contributor": true
-                }
-            ]
-        },
-        "added_to_index": 1610801079,
-        "uuid": "35d946f4-12f5-4de8-af3b-2cf8c7948c8a",
-        "dcp_url": null,
-        "organ": null,
-        "technology": null
-    },
-    {
-        "content": {
-            "project_core": {
                 "project_short_name": "tba",
                 "project_title": "Single nucleus and in situ RNA sequencing reveals cell topographies in the human pancreas.",
                 "project_description": "<h4>Background and aims</h4>Molecular evidence of cellular heterogeneity in the human exocrine pancreas has not been yet established, due to the local concentration and cascade of hydrolytic enzymes that can rapidly degrade cells and RNA upon pancreatic resection. We sought to better understand the heterogeneity and cellular composition of the pancreas in neonates and adults in healthy and diseased conditions using single cell sequencing approaches.<h4>Methods</h4>We innovated single-nucleus RNA sequencing protocols and profiled more than 120,000 cells from pancreata of adult and neonatal human donors. We validated the single nucleus findings using RNA-FISH, in situ sequencing and computational approaches.<h4>Results</h4>We created the first comprehensive atlas of human pancreas cells, including epithelial and non-epithelial constituents and uncovered three distinct acinar cell types, with possible implications for homeostatic and inflammatory processes of the pancreas. The comparison with neonatal sNuc-seq data revealed a different cellular composition of the endocrine tissue, highlighting tissue dynamics occurring during development. By applying spatial cartography, involving cell proximity mapping through in situ sequencing, we found evidence of specific cell type neighborhoods, dynamic topographies in the endocrine and exocrine pancreas, and principles of morphological organization of the organ. Furthermore, similar analyses in chronic pancreatitis biopsies revealed the presence of acinar-REG<sup>+</sup> cells, a reciprocal association between macrophages and activated stellate cells, and a new potential role of Tuft cells in this disease.<h4>Conclusions</h4>Our human pancreas cell atlas can be interrogated to understand pancreatic cell biology and provides a crucial reference set for comparisons with diseased tissue samples to map the cellular foundations of pancreatic diseases.Interactive exploration tool and data download: http://singlecell.charite.de/pancreas. Raw sequencing access-protected data on European Genome-phenome Archive (https://www.ebi.ac.uk/ega/home): EGAS00001004653. In Situ Sequencing raw data: 10.6084/m9.figshare.12173232."
@@ -17202,11 +17700,6 @@
                     "text": "nasal swab",
                     "ontology": "UBERON:0000402",
                     "ontology_label": "nasal vestibule"
-                },
-                {
-                    "text": "bronchoalveolar",
-                    "ontology": "UBERON:0004903",
-                    "ontology_label": "bronchoalveolar duct junction"
                 }
             ]
         },
@@ -17385,8 +17878,12 @@
         "dcp_url": null,
         "organ": null,
         "technology": {
-            "others": [
-                "CITE-Seq"
+            "ontologies": [
+                {
+                    "text": "CITE-seq",
+                    "ontology": "EFO:0009294",
+                    "ontology_label": "CITE-seq"
+                }
             ]
         }
     },
@@ -18439,11 +18936,6 @@
                     "text": "Lung",
                     "ontology": "UBERON:0002048",
                     "ontology_label": "lung"
-                },
-                {
-                    "text": "Organoid",
-                    "ontology": "UBERON:0010002",
-                    "ontology_label": "pulmonary neuroendocrine body"
                 }
             ]
         },
@@ -19443,9 +19935,1861 @@
                     "ontology_label": "10x 3' v3 sequencing"
                 },
                 {
-                    "text": "CITE-Seq",
+                    "text": "CITE-seq",
                     "ontology": "EFO:0009294",
                     "ontology_label": "CITE-seq"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "ImmuneCellExhaustianHIV",
+                "project_title": "An Atlas of Immune Cell Exhaustion in HIV-Infected Individuals Revealed by Single-Cell Transcriptomics.",
+                "project_description": "The effects of HIV infection on immune cell exhaustion at the transcriptomic level was investigated by analyzing single-cell RNA sequencing of peripheral blood mononuclear cells from four healthy subjects (37,847 cells) and six HIV-infected donors (28,610 cells)."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP282057"
+            ],
+            "geo_series_accessions": [
+                "GSE157829"
+            ],
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1080/22221751.2020.1826361",
+                    "url": "http://dx.doi.org/10.1080/22221751.2020.1826361",
+                    "journal_title": "Emerging Microbes & Infections",
+                    "title": "An atlas of immune cell exhaustion in HIV-infected individuals revealed by single-cell transcriptomics.",
+                    "authors": [
+                        "Wang S",
+                        "Zhang Q",
+                        "Hui H",
+                        "Agrawal K",
+                        "Karris MAY",
+                        "Rana TM"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Shaobo,,Wang",
+                    "institution": "University of California San Diego",
+                    "laboratory": "Department of Pediatrics, Division of Genetics, Institute for Genomic Medicine, Program in Immunology",
+                    "address": "La Jolla, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Qiong,,Zhang",
+                    "institution": "University of California San Diego",
+                    "laboratory": "Department of Pediatrics, Division of Genetics, Institute for Genomic Medicine, Program in Immunology",
+                    "address": "La Jolla, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Hui,,Hui",
+                    "institution": "University of California San Diego",
+                    "laboratory": "Department of Pediatrics, Division of Genetics, Institute for Genomic Medicine, Program in Immunology",
+                    "address": "La Jolla, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Kriti,,Agrawal",
+                    "institution": "University of California San Diego",
+                    "laboratory": "Department of Pediatrics, Division of Genetics, Institute for Genomic Medicine, Program in Immunology",
+                    "address": "La Jolla, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Maile Ann Young,,Karris",
+                    "institution": "University of California San Diego",
+                    "laboratory": "Department of Medicine, Division of Infectious Diseases",
+                    "address": "La Jolla, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Tariq,M,Rana",
+                    "email": "trana@ucsd.edu",
+                    "institution": "University of California San Diego",
+                    "laboratory": "Department of Pediatrics, Division of Genetics, Institute for Genomic Medicine, Program in Immunology",
+                    "address": "La Jolla, CA",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Ami,,Day",
+                    "institution": "EMBL-EBI",
+                    "address": "Wellcome Genome Campus, Hinxton",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                }
+            ]
+        },
+        "added_to_index": 1614578371,
+        "uuid": "2dcc3807-e008-4ccc-b000-bffe2d86f429",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "EpithelialDiversityHealthInflammation",
+                "project_title": "Colonic single epithelial cell census reveals goblet cell drivers of barrier breakdown in inflammatory bowel disease.",
+                "project_description": "Three single cell RNA-sequencing (10x, Chromium) experiments were performed on healthy and inflamed human colonic samples, including from patients with Ulcerative Colitis. The authors characterised the composition of the intestinal epithelial cells in these samples."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP151260"
+            ],
+            "geo_series_accessions": [
+                "GSE116222"
+            ],
+            "supplementary_links": [
+                "https://github.com/agneantanaviciute/colonicepithelium",
+                "http://dx.doi.org/10.6019/PXD011655"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1038/s41586-019-0992-y",
+                    "url": "http://dx.doi.org/10.1038/s41586-019-0992-y",
+                    "journal_title": "Nature",
+                    "title": "Colonic epithelial cell diversity in health and inflammatory bowel disease.",
+                    "authors": [
+                        "Parikh K",
+                        "Antanaviciute A",
+                        "Fawkner-Corbett D",
+                        "Jagielowicz M",
+                        "Aulicino A",
+                        "Lagerholm C",
+                        "Davis S",
+                        "Kinchen J",
+                        "Chen HH",
+                        "Alham NK",
+                        "Ashley N",
+                        "Johnson E",
+                        "Hublitz P",
+                        "Bao L",
+                        "Lukomska J",
+                        "Andev RS",
+                        "Bj\u00f6rklund E",
+                        "Kessler BM",
+                        "Fischer R",
+                        "Goldin R",
+                        "Koohy H",
+                        "Simmons A"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Kaushal,,Parikh",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Agne,,Antanaviciute",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "David,,Fawkner-Corbett",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Marta,,Jagielowicz",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Anna,,Aulicino",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Christoffer,,Lagerholm",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Wolfson Imaging Centre Oxford",
+                    "address": "Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Simon,,Davis",
+                    "institution": "Target Discovery Institute",
+                    "laboratory": "Nuffield Department of Medicine",
+                    "address": "University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "James,,Kinchen",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Hannah,H,Chen",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Nasullah Khalid,,Alham",
+                    "institution": "John Radcliffe Hospital, University of Oxford",
+                    "laboratory": "Nuffield Department of Surgical Sciences",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Neil,,Ashley",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Errin,,Johnson",
+                    "institution": "Sir William Dunn School of Pathology, University of Oxford",
+                    "address": "University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Philip,,Hublitz",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Leyuan,,Bao",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Joanna,,Lukomska",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Rajinder Singh,,Andev",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Elisabet,,Bj\u00f6rklund",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Benedikt,M,Kessler",
+                    "institution": "Target Discovery Institute",
+                    "laboratory": "Nuffield Department of Medicine",
+                    "address": "University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Roman,,Fischer",
+                    "institution": "Target Discovery Institute",
+                    "laboratory": "Nuffield Department of Medicine",
+                    "address": "University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Robert,,Goldin",
+                    "institution": "St Mary's Hospital, Imperial College",
+                    "laboratory": "Centre for Pathology",
+                    "address": "St Mary's Hospital, Imperial College, London",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Hashem,,Koohy",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine",
+                    "laboratory": "MRC WIMM Centre For Computational Biology",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Alison,,Simmons",
+                    "email": "alison.simmons@imm.ox.ac.uk",
+                    "institution": "MRC Weatherall Institute of Molecular Medicine (WIMM)",
+                    "laboratory": "Medical Research Council (MRC) Human Immunology Unit",
+                    "address": "John Radcliffe Hospital, University of Oxford, Oxford",
+                    "country": "UK",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1614578376,
+        "uuid": "c893cb57-5c9f-4f26-9312-21b85be84313",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "digestive system",
+                    "ontology": "UBERON:0001007",
+                    "ontology_label": "digestive system"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "GSE118184KidneyOrganoid",
+                "project_title": "Comparative analysis of kidney organoid and adult human kidney single cell and single nucleus transcriptomes",
+                "project_description": "We analyzed single cell transcriptomes over 80,000 cells isolated from 65 organoids differentiated from iPSCs and ESCs using two different protocols. We find that both protocols generate kidney organoids that contain a diverse range of kidney cells at differing ratios as well as non-renal cell types. We reconstructed lineage relationships during organoid differentiation through pseudotemporal ordering, and identified transcription factor networks associated with fate decisions. When comparing to adult human kidney, we reveal immaturity of all kidney organoid cell types. These results define impressive kidney organoid cell diversity, identify incomplete differentiation as a major roadblock for current directed differentiation protocols and provide a human adult kidney snRNA-seq dataset against which to benchmark future progress. Overall design: Dropseq and 10X Chromium were used to profile organoid cells and adult kidney nuclei"
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP156469"
+            ],
+            "geo_series_accessions": [
+                "GSE118184"
+            ],
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1016/j.stem.2018.10.010",
+                    "url": "http://dx.doi.org/10.1016/j.stem.2018.10.010",
+                    "journal_title": "Cell Stem Cell",
+                    "title": "Comparative Analysis and Refinement of Human PSC-Derived Kidney Organoid Differentiation with Single-Cell Transcriptomics.",
+                    "authors": [
+                        "Wu H",
+                        "Uchimura K",
+                        "Donnelly EL",
+                        "Kirita Y",
+                        "Morris SA",
+                        "Humphreys BD"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Haojia,,Wu",
+                    "institution": "Washington University School of Medicine,",
+                    "laboratory": "Division of Nephrology, Department of Medicine,",
+                    "address": "St. Louis, MO, USA.",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Kohei,,Uchimura",
+                    "institution": "Washington University School of Medicine,",
+                    "laboratory": "Division of Nephrology, Department of Medicine,",
+                    "address": "St. Louis, MO, USA.",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Erinn L,,Donnelly",
+                    "institution": "Washington University School of Medicine,",
+                    "laboratory": "Division of Nephrology, Department of Medicine,",
+                    "address": "St. Louis, MO, USA.",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Yuhei,,Kirita",
+                    "institution": "Washington University School of Medicine,",
+                    "laboratory": "Division of Nephrology, Department of Medicine,",
+                    "address": "St. Louis, MO, USA.",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Samantha A,,Morris",
+                    "institution": "Washington University School of Medicine,",
+                    "laboratory": "Department of Developmental Biology, Department of Genetics",
+                    "address": "St. Louis, MO, USA.",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Benjamin D,,Humphreys",
+                    "email": "humphreysbd@wustl.edu",
+                    "institution": "Washington University School of Medicine,",
+                    "laboratory": "Division of Nephrology, Department of Medicine,",
+                    "address": "St. Louis, MO, USA.",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1614578381,
+        "uuid": "16ed4ad8-7319-46b2-8859-6fe1c1d73a82",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                },
+                {
+                    "text": "skin",
+                    "ontology": "UBERON:0002097",
+                    "ontology_label": "skin of body"
+                },
+                {
+                    "text": "embryo",
+                    "ontology": "UBERON:0000922",
+                    "ontology_label": "embryo"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "Drop-seq",
+                    "ontology": "EFO:0008722",
+                    "ontology_label": "Drop-seq"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "TCellsNeuroinflammation",
+                "project_title": "GM-CSF-producing T helper cells: a distinct subset of T helper cells.",
+                "project_description": "Single-cell RNA sequencing of memory T cells (CD45RA-CD4+) isolated from the peripheral blood (PBMCs) of 5 healthy human donors. Memory T cells were activated/stimulated with PMA/Ion/GP. A population of GM-CSF-producing Th cells (ThGM) was identified that lacked expression of signature transcription factors and cytokines of established Th lineages."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP260798"
+            ],
+            "geo_series_accessions": [
+                "GSE150132"
+            ],
+            "supplementary_links": null,
+            "publications": null,
+            "contributors": [
+                {
+                    "name": "Javad,,Rasouli",
+                    "institution": "Thomas Jefferson University,\u00a0Philadelphia",
+                    "address": "Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Giacomo,,Casella",
+                    "institution": "Thomas Jefferson University,\u00a0Philadelphia",
+                    "address": "Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Satoshi,,Yoshimura",
+                    "institution": "Thomas Jefferson University,\u00a0Philadelphia",
+                    "address": "Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Weifeng,,Zhang",
+                    "institution": "Thomas Jefferson University,\u00a0Philadelphia",
+                    "address": "Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Dan,,Xiao",
+                    "institution": "Thomas Jefferson University,\u00a0Philadelphia",
+                    "address": "Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "James,,Garifallou",
+                    "email": "garifalloj@email.chop.edu",
+                    "institution": "Children's Hospital of Philadelphia",
+                    "laboratory": "Center for Applied Genomics",
+                    "address": "3615 Civic Center Boulevard, Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Michael,,Gonzalez",
+                    "institution": "Children's Hospital of Philadelphia",
+                    "laboratory": "Center for Applied Genomics",
+                    "address": "3615 Civic Center Boulevard, Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Alice,,Wiedeman",
+                    "institution": "Benaroya Research Institute at Virginia Mason",
+                    "address": "Seattle, Washington",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Elisabeth,R,Mari",
+                    "institution": "Thomas Jefferson University,\u00a0Philadelphia",
+                    "address": "Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Hakon,,Hakonarson",
+                    "institution": "Children's Hospital of Philadelphia",
+                    "laboratory": "Center for Applied Genomics",
+                    "address": "3615 Civic Center Boulevard, Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "S,A,Long",
+                    "institution": "Benaroya Research Institute at Virginia Mason",
+                    "address": "Seattle, Washington",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Guang-Xian,,Zhang",
+                    "institution": "Thomas Jefferson University,\u00a0Philadelphia",
+                    "address": "Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Bogoljub,,Ciric",
+                    "institution": "Thomas Jefferson University,\u00a0Philadelphia",
+                    "address": "Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Abdolmohamad,,Rostami",
+                    "institution": "Thomas Jefferson University,\u00a0Philadelphia",
+                    "address": "Philadelphia, Pennsylvania",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                }
+            ]
+        },
+        "added_to_index": 1614578383,
+        "uuid": "41fb1734-a121-4616-95c7-3b732c9433c7",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10x 3' v3 sequencing",
+                    "ontology": "EFO:0009922",
+                    "ontology_label": "10x 3' v3 sequencing"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "HealthyAndDiabeticPancreas",
+                "project_title": "Massively parallel single-cell RNA-seq analysis of 26,677 pancreatic islets cells from both healthy and type II diabetic (T2D) donors.",
+                "project_description": "Massively parallel single-cell RNA-seq technology (Drop-Seq) was applied to analyze the transcriptome of 26,677 pancreatic islets cells from both healthy and type II diabetic (T2D) donors."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP111557"
+            ],
+            "geo_series_accessions": [
+                "GSE101207"
+            ],
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1016/j.celrep.2019.02.043",
+                    "url": "http://dx.doi.org/10.1016/j.celrep.2019.02.043",
+                    "journal_title": "Cell Reports",
+                    "title": "Single-Cell Heterogeneity Analysis and CRISPR Screen Identify Key \u03b2-Cell-Specific Disease Genes.",
+                    "authors": [
+                        "Fang Z",
+                        "Weng C",
+                        "Li H",
+                        "Tao R",
+                        "Mai W",
+                        "Liu X",
+                        "Lu L",
+                        "Lai S",
+                        "Duan Q",
+                        "Alvarez C",
+                        "Arvan P",
+                        "Wynshaw-Boris A",
+                        "Li Y",
+                        "Pei Y",
+                        "Jin F",
+                        "Li Y"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Zhou,,Fang",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Chen,,Weng",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Haiyan,,Li",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Ran,,Tao",
+                    "institution": "Brain Tumor Institute, Children's National Medical Center",
+                    "laboratory": "Center for Cancer and Immunology Research",
+                    "address": "Washington, D.C. 20010",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Weihua,,Mai",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Xiaoxiao,,Liu",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Leina,,Lu",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Sisi,,Lai",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Qing,,Duan",
+                    "institution": "University of North Carolina",
+                    "laboratory": "Department of Biostatistics, Department of Genetics, Department of Computer Science",
+                    "address": "Chapel Hill, NC 27599",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Carlos,,Alvarez",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Peter,,Arvan",
+                    "institution": "University of Michigan Medical Center",
+                    "laboratory": "Division of Metabolism, Endocrinology, and Diabetes",
+                    "address": "Ann Arbor, MI 48109",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Anthony,,Wynshaw-Boris",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Yun,,Li",
+                    "institution": "University of North Carolina",
+                    "laboratory": "Department of Biostatistics, Department of Genetics, Department of Computer Science",
+                    "address": "Chapel Hill, NC 27599",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Yanxin,,Pei",
+                    "institution": "Children's National Medical Center",
+                    "laboratory": "Center for Cancer and Immunology Research, Brain Tumor Institute",
+                    "address": "Washington, D.C. 20010",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Fulai,,Jin",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Yan,,Li",
+                    "email": "yxl1379@case.edu",
+                    "institution": "School of Medicine, Case Western Reserve University",
+                    "laboratory": "Department of Genetics and Genome Sciences",
+                    "address": "Cleveland, OH 44106",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1614578387,
+        "uuid": "1c6a960d-52ac-44ea-b728-a59c7ab9dc8e",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Drop-Seq",
+                    "ontology": "EFO:0008722",
+                    "ontology_label": "Drop-seq"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "HumanIsletType2Diabetes",
+                "project_title": "RNA Sequencing of Single Human Islet Cells Reveals Type 2 Diabetes Genes",
+                "project_description": "Pancreatic islet cells are critical for maintaining normal blood glucose levels and their malfunction underlies diabetes development and progression. We used single-cell RNA sequencing to determine the transcriptomes of 1,492 human pancreatic \u03b1-, \u03b2-, \u03b4- and PP cells from non-diabetic and type 2 diabetes organ donors. We identified cell type specific genes and pathways as well as 245 genes with disturbed expression in type 2 diabetes. Importantly, 92% of the genes have not previously been associated with islet cell function or growth. Comparison of gene profiles in mouse and human \u03b1- and \u03b2-cells revealed species-specific expression. All data are available for online browsing and download and will hopefully serve as a resource for the islet research community."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP075377"
+            ],
+            "geo_series_accessions": [
+                "GSE81608"
+            ],
+            "supplementary_links": [
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE81nnn/GSE81608/suppl/GSE81608_human_islets_rpkm.txt.gz"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1016/j.cmet.2016.08.018",
+                    "url": "http://dx.doi.org/10.1016/j.cmet.2016.08.018",
+                    "journal_title": "Cell Metabolism",
+                    "title": "RNA Sequencing of Single Human Islet Cells Reveals Type 2 Diabetes Genes",
+                    "authors": [
+                        "Xin Y",
+                        "Kim J",
+                        "Okamoto H",
+                        "Ni M",
+                        "Wei Y",
+                        "Adler C",
+                        "Murphy AJ",
+                        "Yancopoulos GD",
+                        "Lin C",
+                        "Gromada J"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Yurong,,Xin",
+                    "email": "yurong.xin@regeneron.com",
+                    "institution": "Regeneron Pharmaceuticals, Inc.",
+                    "address": "777 Old Saw Mill River Road; Tarrytown, NY 10598 USA",
+                    "country": "USA",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                }
+            ]
+        },
+        "added_to_index": 1614578390,
+        "uuid": "9cd9669b-55cf-4b32-9187-629bcc2f7bf8",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "fluidigm C1 prep",
+                    "ontology": "EFO:0010058",
+                    "ontology_label": "Fluidigm C1-based library preparation"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "SPAN",
+                "project_title": "Single nucleus and in situ RNA sequencing reveals cell topographies in the human pancreas",
+                "project_description": "Molecular evidence of cellular heterogeneity in the human exocrine pancreas has not been established, due to the local concentration of hydrolytic enzymes that can rapidly degrade cells and RNA upon resection. Here we innovated single-nucleus RNA sequencing protocols, and profiled more than 120,000 cells from adult and neonatal human donors to create the first comprehensive atlas of human pancreas cells, including epithelial and non-epithelial constituents. Adult and neonatal pancreata shared common features, including the presence of previously undetected acinar subtypes, but also showed marked differences in the composition of the endocrine, endothelial, and immune compartments. Spatial cartography, including cell proximity mapping through in situ sequencing, revealed dynamic developmental cell topographies in the endocrine and exocrine pancreas. Our human pancreas cell atlas can be interrogated to understand pancreatic cell biology, and provides a crucial reference set for future comparisons with diseased tissue samples to map the cellular foundations of pancreatic diseases."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": null,
+            "geo_series_accessions": null,
+            "supplementary_links": [
+                "https://ega-archive.org/studies/EGAS00001004653"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1053/j.gastro.2020.11.010 ",
+                    "url": "http://dx.doi.org/10.1053/j.gastro.2020.11.010",
+                    "journal_title": "Gastroenterology",
+                    "title": "Single-Nucleus and In Situ RNA-Sequencing Reveal Cell Topographies in the Human Pancreas.",
+                    "authors": [
+                        "Tosti L",
+                        "Hang Y",
+                        "Debnath O",
+                        "Tiesmeyer S",
+                        "Trefzer T",
+                        "Steiger K",
+                        "Ten FW",
+                        "Lukassen S",
+                        "Ballke S",
+                        "K\u00fchl AA",
+                        "Spieckermann S",
+                        "Bottino R",
+                        "Ishaque N",
+                        "Weichert W",
+                        "Kim SK",
+                        "Eils R",
+                        "Conrad C"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Luca,,Tosti",
+                    "email": "luca.tosti@charite.de",
+                    "institution": "Charit\u00e8-Universit\u00e4tsmedizin Berlin",
+                    "country": "Germany",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Roland,,Eils",
+                    "email": "roland.eils@charite.de",
+                    "institution": "Charit\u00e8-Universit\u00e4tsmedizin Berlin",
+                    "country": "Germany",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "administrator",
+                        "ontology": "EFO:0009743",
+                        "ontology_label": "administrator"
+                    }
+                }
+            ]
+        },
+        "added_to_index": 1614578393,
+        "uuid": "b3938158-4e8d-4fdb-9e13-9e94270dde16",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "Pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "10x 3' v3 sequencing",
+                    "ontology": "EFO:0009922",
+                    "ontology_label": "10x 3' v3 sequencing"
+                }
+            ],
+            "others": [
+                "CARTANA in situ sequencing, RNAScope in situ hybridisation"
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "CrohnsTherapyResistance",
+                "project_title": "Single-cell analysis of Crohn\u2019s disease lesions identifies a pathogenic cellular module associated with resistance to anti-TNF therapy.",
+                "project_description": "Single cell technologies were applied to ileal Crohn\u2019s disease (iCD) lesions from Crohns disease patients to address whether cellular heterogeneity contributes to treatment resistance. Single-cell sequencing analysis was performed on paired resection ileal samples from inflamed and uninflamed areas."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP216273"
+            ],
+            "geo_series_accessions": [
+                "GSE134809"
+            ],
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1016/j.cell.2019.08.008",
+                    "url": "http://dx.doi.org/10.1016/j.cell.2019.08.008",
+                    "journal_title": "Cell",
+                    "title": "Single-Cell Analysis of Crohn's Disease Lesions Identifies a Pathogenic Cellular Module Associated with Resistance to Anti-TNF Therapy.",
+                    "authors": [
+                        "Martin JC",
+                        "Chang C",
+                        "Boschetti G",
+                        "Ungaro R",
+                        "Giri M",
+                        "Grout JA",
+                        "Gettler K",
+                        "Chuang LS",
+                        "Nayar S",
+                        "Greenstein AJ",
+                        "Dubinsky M",
+                        "Walker L",
+                        "Leader A",
+                        "Fine JS",
+                        "Whitehurst CE",
+                        "Mbow ML",
+                        "Kugathasan S",
+                        "Denson LA",
+                        "Hyams JS",
+                        "Friedman JR",
+                        "Desai PT",
+                        "Ko HM",
+                        "Laface I",
+                        "Akturk G",
+                        "Schadt EE",
+                        "Salmon H",
+                        "Gnjatic S",
+                        "Rahman AH",
+                        "Merad M",
+                        "Cho JH",
+                        "Kenigsberg E"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Jerome,C,Martin",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Christie,,Chang",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Gilles,,Boschetti",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Ryan,,Ungaro",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "The Dr. Henry D. Janowitz Division of Gastroenterology",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Mamta,,Giri",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Charles Bronfman Institute for Personalized Medicine",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "John A,,Grout",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Kyle,,Gettler",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Charles Bronfman Institute for Personalized Medicine",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Ling-Shiang,,Chuang",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Charles Bronfman Institute for Personalized Medicine",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Shikha,,Nayar",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Charles Bronfman Institute for Personalized Medicine",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Alexander,J,Greenstein",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Department of Colorectal Surgery",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Marla,,Dubinsky",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Department of Pediatrics, Susan and Leonard Feinstein IBD Clinical Center",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Laura,,Walker",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Human Immune Monitoring Center",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Andrew,,Leader",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Jay,S,Fine",
+                    "institution": "Boehringer Ingelheim Pharmaceuticals, Immunology and Respiratory Diseases Research",
+                    "address": "Ridgefield, CT 06877",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Charles,E,Whitehurst",
+                    "institution": "Boehringer Ingelheim Pharmaceuticals, Immunology and Respiratory Diseases Research",
+                    "address": "Ridgefield, CT 06877",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "M Lamine,,Mbow",
+                    "institution": "Boehringer Ingelheim Pharmaceuticals, Immunology and Respiratory Diseases Research",
+                    "address": "Ridgefield, CT 06877",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Subra,,Kugathasan",
+                    "institution": "Emory University School of Medicine",
+                    "laboratory": "Division of Pediatric Gastroenterology",
+                    "address": "Atlanta, GA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Lee,A,Denson",
+                    "institution": "Cincinnati Children's Hospital Medical Center and the University of Cincinnati College of Medicine",
+                    "laboratory": "Division of Digestive Diseases, Hepatology, and Nutrition",
+                    "address": "Cincinnati, OH",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Jeffrey,S,Hyams",
+                    "institution": "Connecticut Children's Medical Center",
+                    "address": "Hartford, CT",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Joshua,R,Friedman",
+                    "institution": "Janssen Research and Development",
+                    "address": "Spring House, PA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Prerak,T,Desai",
+                    "institution": "Janssen Research and Development",
+                    "address": "Spring House, PA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Huaibin,M,Ko",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "The Dr. Henry D. Janowitz Division of Gastroenterology",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Ilaria,,Laface",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Guray,,Akturk",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Eric,E,Schadt",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Department of Genetics and Genomics Sciences",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Helene,,Salmon",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Sacha,,Gnjatic",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Adeeb,H,Rahman",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Miriam,,Merad",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Judy,H,Cho",
+                    "email": "judy.cho@mssm.edu",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Charles Bronfman Institute for Personalized Medicine",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "Ephraim,,Kenigsberg",
+                    "institution": "Icahn School of Medicine at Mount Sinai",
+                    "laboratory": "Precision Immunology Institute",
+                    "address": "New York, NY 10029",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                }
+            ]
+        },
+        "added_to_index": 1614578398,
+        "uuid": "51f40ab7-e7b2-4cad-9a62-b02ea044442c",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "colon",
+                    "ontology": "UBERON:0001155",
+                    "ontology_label": "colon"
+                },
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X v1 sequencing",
+                    "ontology": "EFO:0009897",
+                    "ontology_label": "10x v1 sequencing"
+                },
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "HumanSkinBloodHypSensAndNormalKim",
+                "project_title": "Single-cell RNA-sequencing of skin, fresh blood, and cultured peripheral blood mononuclear cells from a patient with drug-induced hypersensitivity syndrome and healthy volunteers",
+                "project_description": "Purpose: Determine new therapeutic targets for a refractory drug-induced hypersensitivity syndrome/DRESS using single cell transcriptomic analysis.,\"Methods: Skin cells were dissociated from skin biopsies of a patient with DRESS and 5 healthy volunteers using enzymatic digestion, then viable skin cells were sorted using flow cytometry. Peripheral blood mononuclear cells (PBMCs) were isolated from peripheral blood using Ficoll-paque density separation. PBMCs were cultured with or without medications for 4 days. In detail, 200,000 PBMCs were cultivated in 200ul of RPMI-1640 supplemented with 10% human AB serum with (PBMC_T4_BACT) or without (PBMC_T4_CTRL) 48 ug/mL sulfamethoxazole/trimethoprim (SMX-TMP). For the in vitro therapeutic experiments, PBMCs were cultured in the presence of SMX-TMP with (DRESS_Day4_TOFA) or without (DRESS_Day4_BACT) tofacitinib. The patient was treated with 10mg/d of tofacitinib, a JAK3 inhibitor. The freshly isolated PBMCs were collected again two weeks after initiation of intervention (PBMC_POST2W). Single cells from the skin, freshly isolated PBMCs, and culture PBMCs were captured using droplet based single-cell approach (10x Genomics) and library were prepared.\",\"Results: The lymphocytes in skin and PBMCs exhibited upregulation of skin-homing chemokine receptors, CCR4 and CCR10, and JAK3 and STAT1. Treatment with tofacitinib dramatically extinguished skin inflammation in a chronic refractory case of DiHS/DRESS.\",\"Conclusions: A successful intervention with tofacitinib in a refractory case of DiHS/DRESS was guided by the use of scRNAseq, which demonstrated aberrant activity in the JAK-STAT pathway.\""
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP201551"
+            ],
+            "geo_series_accessions": [
+                "GSE132802"
+            ],
+            "supplementary_links": [
+                "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132802/suppl/GSE132802_RAW.tar"
+            ],
+            "publications": [
+                {
+                    "doi": "10.1016/j.celrep.2018.08.056",
+                    "url": "http://dx.doi.org/10.1016/j.celrep.2018.08.056",
+                    "journal_title": "Cell Reports",
+                    "title": "Targeted Therapy guided by single cell Transcriptomic analysis in drug induced induced hypersensitivity syndrome",
+                    "authors": [
+                        "Kim D",
+                        "Kobayashi T",
+                        "Voison B",
+                        "JoJ H",
+                        "Sakamoto K",
+                        "Jin SP",
+                        "Kelly M",
+                        "Pasieka HB",
+                        "Naff JL",
+                        "Meyerle JH",
+                        "Ikpeama ID",
+                        "Fahle GA",
+                        "Davis FP",
+                        "Rosenzweig SD",
+                        "Alejo JC",
+                        "Pittaluga S",
+                        "Hong HH",
+                        "Freeman AF",
+                        "Nagao K",
+                        ""
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Doyoung,,Kim",
+                    "email": "doyoung.kim@nih.gov",
+                    "institution": "NIAMS/NIH",
+                    "laboratory": "Dermatology Branch",
+                    "address": "Bldg10, 12N256, 10 Center Dr; Bethesda, MD 20817 USA",
+                    "country": "USA",
+                    "corresponding_contributor": true,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    },
+                    "orcid_id": "0000-0002-1379-1732"
+                },
+                {
+                    "name": "Benjamin,,Voisin",
+                    "institution": "NIAMS/NIH",
+                    "laboratory": "Dermatology Branch",
+                    "address": "Bldg10, 12N256, 10 Center Dr; Bethesda, MD 20817 USA",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    }
+                },
+                {
+                    "name": "Keisuke,,Nagao",
+                    "institution": "NIAMS/NIH",
+                    "laboratory": "Dermatology Branch",
+                    "address": "Bldg10, 12N256, 10 Center Dr; Bethesda, MD 20817 USA",
+                    "country": "USA",
+                    "corresponding_contributor": false,
+                    "project_role": {
+                        "text": "experimental scientist",
+                        "ontology": "EFO:0009741",
+                        "ontology_label": "experimental scientist"
+                    },
+                    "orcid_id": "0000-0002-7005-3138"
+                }
+            ]
+        },
+        "added_to_index": 1614578401,
+        "uuid": "9d97f01f-9313-416e-9b07-560f048b2350",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "skin",
+                    "ontology": "UBERON:0002097",
+                    "ontology_label": "skin of body"
+                },
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X  5' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009900",
+                    "ontology_label": "10X 5' v2 sequencing"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "MultipleSclerosisLineageDiversity",
+                "project_title": "Single-nucleus RNA sequencing of human cortex affected by multiple sclerosis.",
+                "project_description": "Single-nucleus RNA sequencing of human cortex affected by multiple sclerosis cortical lesions."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP199470"
+            ],
+            "geo_series_accessions": null,
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1038/s41586-019-1404-z",
+                    "url": "http://dx.doi.org/10.1038/s41586-019-1404-z",
+                    "journal_title": "Nature",
+                    "title": "Neuronal vulnerability and multilineage diversity in multiple sclerosis.",
+                    "authors": [
+                        "Schirmer L",
+                        "Velmeshev D",
+                        "Holmqvist S",
+                        "Kaufmann M",
+                        "Werneburg S",
+                        "Jung D",
+                        "Vistnes S",
+                        "Stockley JH",
+                        "Young A",
+                        "Steindel M",
+                        "Tung B",
+                        "Goyal N",
+                        "Bhaduri A",
+                        "Mayer S",
+                        "Engler JB",
+                        "Bayraktar OA",
+                        "Franklin RJM",
+                        "Haeussler M",
+                        "Reynolds R",
+                        "Schafer DP",
+                        "Friese MA",
+                        "Shiow LR",
+                        "Kriegstein AR",
+                        "Rowitch DH"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Lucas,,Schirmer",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Dmitry,,Velmeshev",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Staffan,,Holmqvist",
+                    "institution": "University of Cambridge",
+                    "laboratory": "Department of Paediatrics and Wellcome-MRC Cambridge Stem Cell Institute",
+                    "address": "Cambridge",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Max,,Kaufmann",
+                    "institution": "Center for Molecular Neurobiology Hamburg, University Medical Center Hamburg-Eppendorf",
+                    "laboratory": "Institute of Neuroimmunology and Multiple Sclerosis",
+                    "address": "Hamburg",
+                    "country": "Germany",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Sebastian,,Werneburg",
+                    "institution": "University of Massachusetts Medical School",
+                    "laboratory": "Department of Neurobiology and the Brudnik Neuropsychiatric Institute",
+                    "address": "Worcester, MA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Diane,,Jung",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Stephanie,,Vistnes",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "John,H,Stockley",
+                    "institution": "University of Cambridge",
+                    "laboratory": "Department of Paediatrics and Wellcome-MRC Cambridge Stem Cell Institute",
+                    "address": "Cambridge",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Adam,,Young",
+                    "institution": "University of Cambridge",
+                    "laboratory": "Department of Clinical Neurosciences",
+                    "address": "Cambridge",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Maike,,Steindel",
+                    "institution": "University of Cambridge",
+                    "laboratory": "Department of Paediatrics and Wellcome-MRC Cambridge Stem Cell Institute",
+                    "address": "Cambridge",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Brian,,Tung",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Nitasha,,Goyal",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Aparna,,Bhaduri",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Simone,,Mayer",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Jan Broder,,Engler",
+                    "institution": "Center for Molecular Neurobiology Hamburg, University Medical Center Hamburg-Eppendorf",
+                    "laboratory": "Institute of Neuroimmunology and Multiple Sclerosis",
+                    "address": "Hamburg",
+                    "country": "Germany",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Omer A,,Bayraktar",
+                    "institution": "University of Cambridge",
+                    "laboratory": "Department of Paediatrics and Wellcome-MRC Cambridge Stem Cell Institute",
+                    "address": "Cambridge",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Robin,JM,Franklin",
+                    "institution": "University of Cambridge",
+                    "laboratory": "Department of Clinical Neurosciences",
+                    "address": "Cambridge",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Maximilian,,Haeussler",
+                    "institution": "Genomics Institute, University of California",
+                    "address": "Santa Cruz, Santa Cruz, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Richard,,Reynolds",
+                    "institution": "Imperial College London",
+                    "laboratory": "Division of Brain Sciences, Department of Medicine,",
+                    "address": "London",
+                    "country": "UK",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Dorothy,P,Schafer",
+                    "institution": "University of Massachusetts Medical School",
+                    "laboratory": "Department of Neurobiology and the Brudnik Neuropsychiatric Institute",
+                    "address": "Worcester, MA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Manuel,A,Friese",
+                    "institution": "Center for Molecular Neurobiology Hamburg, University Medical Center Hamburg-Eppendorf",
+                    "laboratory": "Institute of Neuroimmunology and Multiple Sclerosis",
+                    "address": "Hamburg",
+                    "country": "Germany",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Lawrence,R,Shiow",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Arnold,R,Kriegstein",
+                    "email": "arnold.kriegstein@ucsf.edu",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "David,H,Rowitch",
+                    "email": "dhr25@medschl.cam.ac.uk",
+                    "institution": "Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California",
+                    "address": "San Francisco, San Francisco, CA",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1614578404,
+        "uuid": "ce7b12ba-664f-4f79-8fc7-3de6b1892183",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
+    },
+    {
+        "content": {
+            "project_core": {
+                "project_short_name": "TCellsHumanCentralNervousSystem",
+                "project_title": "Transcriptomic and clonal characterization of T cells in the human central nervous system.",
+                "project_description": "Tissues develop unique homeostatic immune states through specific recruitment of immune cells that are further shaped by the tissue environment. Single-cell RNA of healthy cerebrospinal fluid (CSF) and single-nucleus RNA sequencing of brain parenchyma was used to profile the T cell state in the human central nervous system (CNS)."
+            },
+            "array_express_accessions": null,
+            "insdc_project_accessions": [
+                "SRP279608"
+            ],
+            "geo_series_accessions": [
+                "GSE157277"
+            ],
+            "supplementary_links": null,
+            "publications": [
+                {
+                    "doi": "10.1126/sciimmunol.abb8786",
+                    "url": "http://dx.doi.org/10.1126/sciimmunol.abb8786",
+                    "journal_title": "Science Immunology",
+                    "title": "Transcriptomic and clonal characterization of T cells in the human central nervous system.",
+                    "authors": [
+                        "Pappalardo JL",
+                        "Zhang L",
+                        "Pecsok MK",
+                        "Perlman K",
+                        "Zografou C",
+                        "Raddassi K",
+                        "Abulaban A",
+                        "Krishnaswamy S",
+                        "Antel J",
+                        "van Dijk D",
+                        "Hafler DA"
+                    ]
+                }
+            ],
+            "contributors": [
+                {
+                    "name": "Jenna,L,Pappalardo",
+                    "institution": "Yale School of Medicine",
+                    "laboratory": "Departments of Neurology and Immunobiology",
+                    "address": "Yale School of Medicine, New Haven, CT 06511",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Le,,Zhang",
+                    "institution": "Yale School of Medicine",
+                    "laboratory": "Departments of Neurology and Immunobiology",
+                    "address": "Yale School of Medicine, New Haven, CT 06511",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Maggie,K,Pecsok",
+                    "institution": "Yale School of Medicine",
+                    "laboratory": "Departments of Neurology and Immunobiology",
+                    "address": "Yale School of Medicine, New Haven, CT 06511",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Kelly,,Perlman",
+                    "institution": "Montreal Neurologic Institute",
+                    "address": "Montreal, Quebec",
+                    "country": "Canada",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Chrysoula,,Zografou",
+                    "institution": "Yale School of Medicine",
+                    "laboratory": "Departments of Neurology and Immunobiology",
+                    "address": "Yale School of Medicine, New Haven, CT 06511",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Khadir,,Raddassi",
+                    "institution": "Yale School of Medicine",
+                    "laboratory": "Departments of Neurology and Immunobiology",
+                    "address": "Yale School of Medicine, New Haven, CT 06511",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Ahmad,,Abulaban",
+                    "institution": "Yale School of Medicine",
+                    "laboratory": "Departments of Neurology and Immunobiology",
+                    "address": "Yale School of Medicine, New Haven, CT 06511",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Smita,,Krishnaswamy",
+                    "institution": "Yale School of Medicine",
+                    "laboratory": "Departments of Genetics and Computer Science",
+                    "address": "Yale School of Medicine, New Haven, CT 06511",
+                    "country": "USA",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "Jack,,Antel",
+                    "institution": "Montreal Neurologic Institute",
+                    "address": "Montreal, Quebec",
+                    "country": "Canada",
+                    "corresponding_contributor": false
+                },
+                {
+                    "name": "David,,van Dijk",
+                    "email": "david.vandijk@yale.edu",
+                    "institution": "Yale School of Medicine",
+                    "laboratory": "Departments of Internal Medicine (Cardiology), Cardiovascular Research Center, and Computer Science",
+                    "address": "Yale School of Medicine, New Haven, CT 06511",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                },
+                {
+                    "name": "David,A,Hafler",
+                    "email": "david.hafler@yale.edu",
+                    "institution": "Yale School of Medicine",
+                    "laboratory": "Departments of Neurology and Immunobiology",
+                    "address": "Yale School of Medicine, New Haven, CT 06511",
+                    "country": "USA",
+                    "corresponding_contributor": true
+                }
+            ]
+        },
+        "added_to_index": 1614578412,
+        "uuid": "d3a4ceac-4d66-4984-9704-2570c0647a56",
+        "dcp_url": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v3 sequencing",
+                    "ontology": "EFO:0009922",
+                    "ontology_label": "10x 3' v3 sequencing"
                 }
             ]
         }
