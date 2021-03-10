@@ -122,8 +122,24 @@
         "added_to_index": 1609786712,
         "uuid": "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "inDrop",
+                    "ontology": "EFO:0008780",
+                    "ontology_label": "inDrop"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -228,12 +244,7 @@
                 "ERP110450"
             ],
             "geo_series_accessions": null,
-            "supplementary_links": [
-                "https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6678/",
-                "https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6701/",
-                "https://www.ebi.ac.uk/ena/data/view/PRJEB25794",
-                "https://www.ebi.ac.uk/ena/data/view/PRJEB28266"
-            ],
+            "supplementary_links": null,
             "publications": null,
             "contributors": [
                 {
@@ -267,11 +278,11 @@
                     "laboratory": "Institute of Cellular Medicine",
                     "address": "Newcastle upon Tyne, NE2 4HH",
                     "country": "UK",
+                    "corresponding_contributor": true,
                     "project_role": {
                         "text": "co-investigator",
                         "ontology": "EFO:0009735"
-                    },
-                    "corresponding_contributor": true
+                    }
                 },
                 {
                     "name": "Ashley,,Moffett",
@@ -280,10 +291,10 @@
                     "laboratory": "Centre for Trophoblast Research",
                     "address": "Cambridge, CB2 3EG",
                     "country": "UK",
+                    "corresponding_contributor": true,
                     "project_role": {
                         "text": "co-investigator"
-                    },
-                    "corresponding_contributor": true
+                    }
                 },
                 {
                     "name": "Sarah,A,Teichmann",
@@ -291,20 +302,51 @@
                     "institution": "Wellcome Trust Sanger Institute",
                     "address": "Wellcome Trust Genome Campus, Cambridge",
                     "country": "UK",
+                    "corresponding_contributor": true,
                     "project_role": {
                         "text": "principal investigator",
                         "ontology": "EFO:0009736",
                         "ontology_label": "principal investigator"
-                    },
-                    "corresponding_contributor": true
+                    }
                 }
             ]
         },
         "added_to_index": 1609786713,
         "uuid": "f83165c5-e2ea-4d15-a5cf-33f3550bffde",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "decidua",
+                    "ontology": "UBERON:0002450",
+                    "ontology_label": "decidua"
+                },
+                {
+                    "text": "placenta",
+                    "ontology": "UBERON:0001987",
+                    "ontology_label": "placenta"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                },
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -580,8 +622,29 @@
         "added_to_index": 1609786714,
         "uuid": "c1a9a93d-d9de-4e65-9619-a9cec1052eaa",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/c1a9a93d-d9de-4e65-9619-a9cec1052eaa?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "10X 5' v2 sequencing",
+                    "ontology": "EFO:0009900",
+                    "ontology_label": "10X 5' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -4417,14 +4480,14 @@
         "technology": {
             "ontologies": [
                 {
-                    "text": "10x 3' v2",
-                    "ontology": "EFO:0009899",
-                    "ontology_label": "10x 3' v2"
-                },
-                {
                     "text": "DNA library construction",
                     "ontology": "EFO:0010172",
                     "ontology_label": "DNA library construction"
+                },
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
                 }
             ]
         }
@@ -6196,8 +6259,29 @@
         "added_to_index": 1609844566,
         "uuid": "8c3c290d-dfff-4553-8868-54ce45f4ba7f",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/8c3c290d-dfff-4553-8868-54ce45f4ba7f?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "lymph node",
+                    "ontology": "UBERON:0000029",
+                    "ontology_label": "lymph node"
+                },
+                {
+                    "text": "skin of body",
+                    "ontology": "UBERON:0002097",
+                    "ontology_label": "skin of body"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -6254,8 +6338,24 @@
         "added_to_index": 1609844567,
         "uuid": "90bd6933-40c0-48d4-8d76-778c103bf545",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/90bd6933-40c0-48d4-8d76-778c103bf545?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -6472,8 +6572,24 @@
         "added_to_index": 1609844568,
         "uuid": "95f07e6e-6a73-4e1b-a880-c83996b3aa5c",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/95f07e6e-6a73-4e1b-a880-c83996b3aa5c?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10x 3' v3 sequencing",
+                    "ontology": "EFO:0009922",
+                    "ontology_label": "10x 3' v3 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -6684,8 +6800,24 @@
         "added_to_index": 1609844570,
         "uuid": "a29952d9-925e-40f4-8a1c-274f118f1f51",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/a29952d9-925e-40f4-8a1c-274f118f1f51?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "bone marrow",
+                    "ontology": "UBERON:0002371",
+                    "ontology_label": "bone marrow"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "MARS-seq",
+                    "ontology": "EFO:0008796",
+                    "ontology_label": "MARS-seq"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -6934,12 +7066,12 @@
                     "laboratory": "Basu",
                     "address": "5835 S. Cottage Grove Ave., N516, Chicago, IL 60637",
                     "country": "USA",
+                    "corresponding_contributor": true,
                     "project_role": {
+                        "text": "principal investigator",
                         "ontology": "EFO:0009736",
-                        "ontology_label": "principal investigator",
-                        "text": "principal investigator"
-                    },
-                    "corresponding_contributor": true
+                        "ontology_label": "principal investigator"
+                    }
                 },
                 {
                     "name": "Sebastian,, Pott",
@@ -6947,12 +7079,12 @@
                     "institution": "University of Chicago",
                     "laboratory": "Pott",
                     "country": "USA",
+                    "corresponding_contributor": true,
                     "project_role": {
+                        "text": "principal investigator",
                         "ontology": "EFO:0009736",
-                        "ontology_label": "principal investigator",
-                        "text": "principal investigator"
-                    },
-                    "corresponding_contributor": true
+                        "ontology_label": "principal investigator"
+                    }
                 },
                 {
                     "name": "Heather,, Eckart",
@@ -6997,8 +7129,34 @@
         "added_to_index": 1609844572,
         "uuid": "a9c022b4-c771-4468-b769-cabcf9738de3",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/a9c022b4-c771-4468-b769-cabcf9738de3?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "heart",
+                    "ontology": "UBERON:0000948",
+                    "ontology_label": "heart"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "DroNc-seq",
+                    "ontology": "EFO:0008720",
+                    "ontology_label": "DroNc-seq"
+                },
+                {
+                    "text": "Drop-seq",
+                    "ontology": "EFO:0008722",
+                    "ontology_label": "Drop-seq"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -7200,8 +7358,24 @@
         "added_to_index": 1609844573,
         "uuid": "abe1a013-af7a-45ed-8c26-f3793c24a1f4",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/abe1a013-af7a-45ed-8c26-f3793c24a1f4?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -7655,8 +7829,29 @@
         "added_to_index": 1609844574,
         "uuid": "ad98d3cd-26fb-4ee3-99c9-8a2ab085e737",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/ad98d3cd-26fb-4ee3-99c9-8a2ab085e737?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "heart",
+                    "ontology": "UBERON:0000948",
+                    "ontology_label": "heart"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "10x 3' v3 sequencing",
+                    "ontology": "EFO:0009922",
+                    "ontology_label": "10x 3' v3 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -7733,8 +7928,24 @@
         "added_to_index": 1609844575,
         "uuid": "ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -7825,8 +8036,24 @@
         "added_to_index": 1609844576,
         "uuid": "b176d756-62d8-4933-83a4-8b026380262f",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/b176d756-62d8-4933-83a4-8b026380262f?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "hindlimb",
+                    "ontology": "UBERON:0002103",
+                    "ontology_label": "hindlimb"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -7981,8 +8208,24 @@
         "added_to_index": 1609844577,
         "uuid": "b4a7d12f-6c2f-40a3-9e35-9756997857e3",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/b4a7d12f-6c2f-40a3-9e35-9756997857e3?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -8906,8 +9149,39 @@
         "added_to_index": 1609844580,
         "uuid": "c4077b3c-5c98-4d26-a614-246d12c2e5d7",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/c4077b3c-5c98-4d26-a614-246d12c2e5d7?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "esophagus",
+                    "ontology": "UBERON:0001043",
+                    "ontology_label": "esophagus"
+                },
+                {
+                    "text": "spleen",
+                    "ontology": "UBERON:0002106",
+                    "ontology_label": "spleen"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "cDNA library construction",
+                    "ontology": "EFO:0004187",
+                    "ontology_label": "cDNA library construction"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -9164,8 +9438,29 @@
         "added_to_index": 1609844580,
         "uuid": "c41dffbf-ad83-447c-a0e1-13e689d9b258",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/c41dffbf-ad83-447c-a0e1-13e689d9b258?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "liver",
+                    "ontology": "UBERON:0002107",
+                    "ontology_label": "liver"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -9294,8 +9589,29 @@
         "added_to_index": 1609844581,
         "uuid": "cc95ff89-2e68-4a08-a234-480eca21ce79",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "bone marrow",
+                    "ontology": "UBERON:0002371",
+                    "ontology_label": "bone marrow"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -9344,8 +9660,24 @@
         "added_to_index": 1609844583,
         "uuid": "cddab57b-6868-4be4-806f-395ed9dd635a",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/cddab57b-6868-4be4-806f-395ed9dd635a?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -10139,8 +10471,54 @@
         "added_to_index": 1609844587,
         "uuid": "f2fe82f0-4454-4d84-b416-a885f3121e59",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f2fe82f0-4454-4d84-b416-a885f3121e59?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                },
+                {
+                    "text": "liver",
+                    "ontology": "UBERON:0002107",
+                    "ontology_label": "liver"
+                },
+                {
+                    "text": "yolk sac",
+                    "ontology": "UBERON:0001040",
+                    "ontology_label": "yolk sac"
+                },
+                {
+                    "text": "zone of skin",
+                    "ontology": "UBERON:0000014",
+                    "ontology_label": "zone of skin"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "Smart-seq2",
+                    "ontology": "EFO:0008931",
+                    "ontology_label": "Smart-seq2"
+                },
+                {
+                    "text": "10X 5' v2 sequencing",
+                    "ontology": "EFO:0009900",
+                    "ontology_label": "10X 5' v2 sequencing"
+                },
+                {
+                    "text": "10X Immune profiling",
+                    "ontology": "EFO:0010713",
+                    "ontology_label": "10X Immune profiling"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -10229,8 +10607,24 @@
         "added_to_index": 1609844588,
         "uuid": "f48e7c39-cc67-4055-9d79-bc437892840c",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f48e7c39-cc67-4055-9d79-bc437892840c?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -10323,8 +10717,24 @@
         "added_to_index": 1609844589,
         "uuid": "f81efc03-9f56-4354-aabb-6ce819c3d414",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f81efc03-9f56-4354-aabb-6ce819c3d414?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "CITE-seq",
+                    "ontology": "EFO:0009294",
+                    "ontology_label": "CITE-seq"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -10545,8 +10955,29 @@
         "added_to_index": 1609844591,
         "uuid": "f8aa201c-4ff1-45a4-890e-840d63459ca2",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/f8aa201c-4ff1-45a4-890e-840d63459ca2?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "colon",
+                    "ontology": "UBERON:0001155",
+                    "ontology_label": "colon"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                },
+                {
+                    "text": "Smart-seq",
+                    "ontology": "EFO:0008930",
+                    "ontology_label": "Smart-seq"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -14284,8 +14715,24 @@
         "added_to_index": 1610719927,
         "uuid": "091cf39b-01bc-42e5-9437-f419a66c8a45",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/091cf39b-01bc-42e5-9437-f419a66c8a45?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "bone marrow",
+                    "ontology": "UBERON:0002371",
+                    "ontology_label": "bone marrow"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -14295,7 +14742,9 @@
                 "project_description": "Haematopoietic stem and progenitor cells (HSPCs), the precursors of all blood cells, reside predominantly in the bone marrow (BM). Recent evidence suggests that other anatomical sites may contribute significantly to blood production, but the cellular, molecular and functional composition of extramedullary HSPC pools remains unexplored. Here, we comprehensively characterized the single-cell composition of the adult human HSPC pool within paired BM, spleen and peripheral blood (PB) from two healthy organ donors. 10x scRNA-seq of 30000 HSPCs from all three sites defined transcriptionally distinct cell clusters that correspond to precursors of all haematopoietic lineages but also stem cells (HSCs). Although most clusters were common to all organs, their proportions significantly differed between tissues. Altogether our data provides evidence that different organs sustain distinct topologies of the hematopoietic hierarchy, originating from HSC subsets with distinct lineage preferences.\n\nThis dataset is part of the Human Cell Atlas."
             },
             "array_express_accessions": null,
-            "insdc_project_accessions": null,
+            "insdc_project_accessions": [
+                "ERP120138"
+            ],
             "geo_series_accessions": null,
             "supplementary_links": null,
             "publications": [
@@ -14412,8 +14861,34 @@
         "added_to_index": 1610719928,
         "uuid": "455b46e6-d8ea-4611-861e-de720a562ada",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/455b46e6-d8ea-4611-861e-de720a562ada?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "bone marrow",
+                    "ontology": "UBERON:0002371",
+                    "ontology_label": "bone marrow"
+                },
+                {
+                    "text": "spleen",
+                    "ontology": "UBERON:0002106",
+                    "ontology_label": "spleen"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -14597,8 +15072,24 @@
         "added_to_index": 1610719929,
         "uuid": "9c20a245-f2c0-43ae-82c9-2232ec6b594f",
         "dcp_url": "https://data.humancellatlas.org/explore/projects/9c20a245-f2c0-43ae-82c9-2232ec6b594f?catalog=dcp2",
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "eye",
+                    "ontology": "UBERON:0000970",
+                    "ontology_label": "eye"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "10x 3' v3 sequencing",
+                    "ontology": "EFO:0009922",
+                    "ontology_label": "10x 3' v3 sequencing"
+                }
+            ]
+        }
     },
     {
         "content": {
