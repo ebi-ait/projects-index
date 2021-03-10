@@ -12055,8 +12055,29 @@
         "added_to_index": 1610626455,
         "uuid": "dbd836cf-bfc2-41f0-9834-41cc6c0b235a",
         "dcp_url": null,
-        "organ": null,
-        "technology": null
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "thymus",
+                    "ontology": "UBERON:0002370",
+                    "ontology_label": "thymus"
+                }
+            ]
+        },
+        "technology": {
+            "ontologies": [
+                {
+                    "text": "CITE-seq",
+                    "ontology": "EFO:0009294",
+                    "ontology_label": "CITE-seq"
+                }
+            ]
+        }
     },
     {
         "content": {
@@ -12337,10 +12358,22 @@
         "uuid": "7ac8822c-4ef0-4194-adf0-74290611b1c6",
         "dcp_url": null,
         "organ": {
-            "ontologies": []
+            "ontologies": [
+                {
+                    "text": "respiratory airway",
+                    "ontology": "UBERON:0001005",
+                    "ontology_label": "respiratory airway"
+                }
+            ]
         },
         "technology": {
-            "ontologies": []
+            "ontologies": [
+                {
+                    "text": "10x 3' v3 sequencing",
+                    "ontology": "EFO:0009922",
+                    "ontology_label": "10x 3' v3 sequencing"
+                }
+            ]
         }
     },
     {
@@ -13238,7 +13271,13 @@
             ]
         },
         "technology": {
-            "ontologies": []
+            "ontologies": [
+                {
+                    "text": "10X 3' v2 sequencing",
+                    "ontology": "EFO:0009899",
+                    "ontology_label": "10X 3' v2 sequencing"
+                }
+            ]
         }
     },
     {
@@ -16927,15 +16966,137 @@
         "uuid": "1fac187b-1c3f-41c4-b6b6-6a9a8c0489d1",
         "dcp_url": null,
         "organ": {
-            "ontologies": []
-        },
-        "technology": {
             "ontologies": [
                 {
-                    "text": "Microwell-seq",
-                    "ontology": "EFO:0009919",
-                    "ontology_label": "SPLiT-seq"
+                    "text": "heart",
+                    "ontology": "UBERON:0000948",
+                    "ontology_label": "heart"
+                },
+                {
+                    "text": "lung",
+                    "ontology": "UBERON:0002048",
+                    "ontology_label": "lung"
+                },
+                {
+                    "text": "small intestine",
+                    "ontology": "UBERON:0002108",
+                    "ontology_label": "small intestine"
+                },
+                {
+                    "text": "adrenal gland",
+                    "ontology": "UBERON:0002369",
+                    "ontology_label": "adrenal gland"
+                },
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                },
+                {
+                    "text": "large intestine",
+                    "ontology": "UBERON:0000059",
+                    "ontology_label": "large intestine"
+                },
+                {
+                    "text": "stomach",
+                    "ontology": "UBERON:0000945",
+                    "ontology_label": "stomach"
+                },
+                {
+                    "text": "zone of skin",
+                    "ontology": "UBERON:0000014",
+                    "ontology_label": "zone of skin"
+                },
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                },
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                },
+                {
+                    "text": "omentum",
+                    "ontology": "UBERON:0003688",
+                    "ontology_label": "omentum"
+                },
+                {
+                    "text": "eye",
+                    "ontology": "UBERON:0000970",
+                    "ontology_label": "eye"
+                },
+                {
+                    "text": "indifferent gonad",
+                    "ontology": "UBERON:0009117",
+                    "ontology_label": "indifferent gonad"
+                },
+                {
+                    "text": "bone marrow",
+                    "ontology": "UBERON:0002371",
+                    "ontology_label": "bone marrow"
+                },
+                {
+                    "text": "bone tissue",
+                    "ontology": "UBERON:0002481",
+                    "ontology_label": "bone tissue"
+                },
+                {
+                    "text": "trachea",
+                    "ontology": "UBERON:0003126",
+                    "ontology_label": "trachea"
+                },
+                {
+                    "text": "thymus",
+                    "ontology": "UBERON:0002370",
+                    "ontology_label": "thymus"
+                },
+                {
+                    "text": "placenta",
+                    "ontology": "UBERON:0001987",
+                    "ontology_label": "placenta"
+                },
+                {
+                    "text": "spleen",
+                    "ontology": "UBERON:0002106",
+                    "ontology_label": "spleen"
+                },
+                {
+                    "text": "thyroid gland",
+                    "ontology": "UBERON:0002046",
+                    "ontology_label": "thyroid gland"
+                },
+                {
+                    "text": "fallopian tube",
+                    "ontology": "UBERON:0003889",
+                    "ontology_label": "fallopian tube"
+                },
+                {
+                    "text": "uterine cervix",
+                    "ontology": "UBERON:0000002",
+                    "ontology_label": "uterine cervix"
+                },
+                {
+                    "text": "blood vessel",
+                    "ontology": "UBERON:0001981",
+                    "ontology_label": "blood vessel"
+                },
+                {
+                    "text": "uterus",
+                    "ontology": "UBERON:0000995",
+                    "ontology_label": "uterus"
+                },
+                {
+                    "text": "urinary bladder",
+                    "ontology": "UBERON:0001255",
+                    "ontology_label": "urinary bladder"
                 }
+            ]
+        },
+        "technology": {
+            "others": [
+                "Microwell-seq"
             ]
         }
     },
@@ -18087,7 +18248,103 @@
         "uuid": "859affdc-3e85-4444-bb87-fe3887d6238c",
         "dcp_url": null,
         "organ": {
-            "ontologies": []
+            "ontologies": [
+                {
+                    "text": "respiratory airway",
+                    "ontology": "UBERON:0001005",
+                    "ontology_label": "respiratory airway"
+                },
+                {
+                    "text": "skeletal muscle tissue",
+                    "ontology": "UBERON:0001134",
+                    "ontology_label": "skeletal muscle tissue"
+                },
+                {
+                    "text": "small intestine",
+                    "ontology": "UBERON:0002108",
+                    "ontology_label": "small intestine"
+                },
+                {
+                    "text": "large intestine",
+                    "ontology": "UBERON:0000059",
+                    "ontology_label": "large intestine"
+                },
+                {
+                    "text": "pancreas",
+                    "ontology": "UBERON:0001264",
+                    "ontology_label": "pancreas"
+                },
+                {
+                    "text": "liver",
+                    "ontology": "UBERON:0002107",
+                    "ontology_label": "liver"
+                },
+                {
+                    "text": "gall bladder",
+                    "ontology": "UBERON:0002110",
+                    "ontology_label": "gall bladder"
+                },
+                {
+                    "text": "heart",
+                    "ontology": "UBERON:0000948",
+                    "ontology_label": "heart"
+                },
+                {
+                    "text": "kidney",
+                    "ontology": "UBERON:0002113",
+                    "ontology_label": "kidney"
+                },
+                {
+                    "text": "placenta",
+                    "ontology": "UBERON:0001987",
+                    "ontology_label": "placenta"
+                },
+                {
+                    "text": "decidua",
+                    "ontology": "UBERON:0002450",
+                    "ontology_label": "decidua"
+                },
+                {
+                    "text": "testis",
+                    "ontology": "UBERON:0000473",
+                    "ontology_label": "testis"
+                },
+                {
+                    "text": "prostate gland",
+                    "ontology": "UBERON:0002367",
+                    "ontology_label": "prostate gland"
+                },
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                },
+                {
+                    "text": "zone of skin",
+                    "ontology": "UBERON:0000014",
+                    "ontology_label": "zone of skin"
+                },
+                {
+                    "text": "eye",
+                    "ontology": "UBERON:0000970",
+                    "ontology_label": "eye"
+                },
+                {
+                    "text": "spleen",
+                    "ontology": "UBERON:0002106",
+                    "ontology_label": "spleen"
+                },
+                {
+                    "text": "esophagus",
+                    "ontology": "UBERON:0001043",
+                    "ontology_label": "esophagus"
+                },
+                {
+                    "text": "embryo",
+                    "ontology": "UBERON:0000922",
+                    "ontology_label": "embryo"
+                }
+            ]
         },
         "technology": {
             "ontologies": []
@@ -18367,7 +18624,15 @@
         "added_to_index": 1610969898,
         "uuid": "efea6426-510a-4b60-9a19-277e52bfa815",
         "dcp_url": null,
-        "organ": null,
+        "organ": {
+            "ontologies": [
+                {
+                    "text": "blood",
+                    "ontology": "UBERON:0000178",
+                    "ontology_label": "blood"
+                }
+            ]
+        },
         "technology": {
             "ontologies": [
                 {
@@ -18489,7 +18754,13 @@
         "uuid": "0406796c-5a6e-4eeb-b6e4-12de1e659bd9",
         "dcp_url": null,
         "organ": {
-            "ontologies": []
+            "ontologies": [
+                {
+                    "text": "brain",
+                    "ontology": "UBERON:0000955",
+                    "ontology_label": "brain"
+                }
+            ]
         },
         "technology": {
             "ontologies": [
