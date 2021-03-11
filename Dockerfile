@@ -3,8 +3,7 @@ FROM ebiwd/node-bower-gulp:12 as builder
 WORKDIR /app
 COPY . /app
 ENV NODE_ENV production
-RUN yarn global add parcel-bundler
-RUN yarn install --frozen-lockfile && yarn build && yarn test
+RUN yarn install && yarn build && yarn test
 RUN cp data/data.json dist/data.json
 
 FROM nginxinc/nginx-unprivileged:1.17.2-alpine
