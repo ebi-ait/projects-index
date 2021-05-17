@@ -1,0 +1,18 @@
+.arrow-right {
+  display: inline-block;
+  margin-left: .8rem;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #3b6fb6;
+}
+.arrow-left {
+  display: inline-block;
+  margin-left: .8rem;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #3b6fb6;
+}

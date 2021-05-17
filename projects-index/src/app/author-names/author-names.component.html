@@ -1,0 +1,13 @@
+<!--style={ !state.isShowingMore && "display: inline; margin-right: 2rem"}-->
+<!--style={{ !this.fullAuthorView && "display: inline; margin-right: 2rem"}}-->
+<p>
+<a href="#" class="vf-link" (click)="toggleAuthorView()">
+  {{this.getFormattedContributors()}}
+</a>
+<a href="#" class="vf-link" (click)="toggleAuthorView()">
+  <span *ngIf="!fullAuthorView" class="arrow-right"></span>
+  <span *ngIf="fullAuthorView" class="arrow-left"></span>
+<!--  <span if={state.isTooLong && !state.isShowingMore} class="arrow-right"></span>-->
+<!--  <span if={state.isShowingMore} class="arrow-left"></span>-->
+</a>
+</p>

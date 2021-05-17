@@ -1,0 +1,107 @@
+<svg class="vf-icon-sprite vf-icon-sprite--tables" display="none">
+  <defs>
+    <g id="vf-table-sortable">
+      <path xmlns="http://www.w3.org/2000/svg" width="12" height="18" d="M6 0l6 8H0zM6 18l6-8H0z" fill-rule="evenodd" />
+    </g>
+
+  </defs>
+</svg>
+
+
+<table class="vf-table vf-table--sortable vf-table--striped" id="published-table">
+  <thead class="vf-table__header">
+  <tr class="vf-table__row">
+    <th class="vf-table__heading" scope="col">
+      <button (click)="toggleDateSort()" class="vf-button vf-button--sm vf-button--icon">
+      <span>Date added</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+          <use xlink:href="#vf-table-sortable"></use>
+        </svg>
+      </button>
+    </th>
+    <th class="vf-table__heading" scope="col">
+      Project
+    </th>
+    <th class="vf-table__heading" scope="col">
+      Organ
+    </th>
+    <th class="vf-table__heading" scope="col">
+      Technology
+    </th>
+    <th class="vf-table__heading" scope="col">
+      Data location
+    </th>
+  </tr>
+  </thead>
+
+  <tbody class="vf-table__body" *ngIf="projects">
+  <tr class="vf-table__row" *ngFor="let project of projects" key={project.uuid}>
+    <td class="vf-table__cell">{{project.date}}</td>
+    <td class="vf-table__cell">
+      <p style="margin-top: 0;">{{project.title}}</p>
+          <app-author-names
+            [authors]="project.authors"
+          ></app-author-names>
+          <p *ngFor="let publication of project.publications" style="display: inline;">
+            <a class="vf-link" href={{publication.url}} target="_blank">{{publication.journal_title}}</a>
+          </p>
+    </td>
+    <td class="vf-table__cell">
+      <ul class="comma-list">
+        <li *ngFor="let organ of project.organs">
+          {{organ}}
+        </li>
+      </ul>
+      <p *ngIf="!project.organs.length"> - </p>
+    </td>
+    <td class="vf-table__cell">
+      <ul class="comma-list">
+        <li *ngFor="let technology of project.technologies">
+          {{technology}}
+        </li>
+        <p *ngIf="!project.technologies.length"> - </p>
+      </ul>
+    </td>
+    <td class="vf-table__cell">
+      <ul class="plain-list">
+        <li *ngIf="project.enaAccessions.length">ENA:
+          <ul class="comma-list">
+            <li *ngFor="let enaAccession of project.enaAccessions">
+              <a class="vf-link" href="https://identifiers.org/ena.embl:{{enaAccession}}" target="_blank">{{enaAccession}}</a>
+            </li>
+          </ul>
+        </li>
+        <li *ngIf="project.arrayExpressAccessions.length">Arrayexpress:
+          <ul class="comma-list">
+            <li *ngFor="let arrayExpressAccession of project.arrayExpressAccessions">
+              <a class="vf-link" href="https://identifiers.org/arrayexpress:{{arrayExpressAccession}}" target="_blank">{{arrayExpressAccession}}</a>
+            </li>
+          </ul>
+        </li>
+        <li *ngIf="project.geoAccessions.length">GEO:
+          <ul class="comma-list">
+            <li *ngFor="let geoAccession of project.geoAccessions">
+              <a class="vf-link" href="https://identifiers.org/geo:{{geoAccession}}" target="_blank">{{geoAccession}}</a>
+            </li>
+          </ul>
+        </li>
+        <li *ngIf="project.egaStudiesAccessions?.length || project.egaDatasetsRegex?.length">EGA:
+          <ul class="comma-list">
+            <li *ngFor="let accession of project.egaStudiesAccessions">
+              <a class="vf-link" href="https://ega-archive.org/studies/{{accession}}" target="_blank">{{accession}}}</a>
+            </li>
+            <li *ngFor="let accession of project.egaDatasetsAccessions">
+              <a class="vf-link" href="https://ega-archive.org/datasets/{{accession}}" target="_blank">{{accession}}</a>
+            </li>
+          </ul>
+        </li>
+        <li *ngIf="project.dcpUrl">
+          <a class="vf-link" href={{project.dcp_url}} target="_blank">HCA Data Portal</a>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+

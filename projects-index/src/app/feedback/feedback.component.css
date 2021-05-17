@@ -1,0 +1,13 @@
+.feedback-button {
+  position: fixed;
+  background-color: #386cb4;
+  display: block;
+  top: 50%;
+  right: 0;
+  transform: translate(35%, -50%) rotate(-90deg);
+  color: white;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
