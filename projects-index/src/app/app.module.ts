@@ -9,6 +9,8 @@ import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AuthorNamesComponent } from './author-names/author-names.component';
+import { FiltersComponent } from './filters/filters.component';
+import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AuthorNamesComponent } from './author-names/author-names.component';
     GlobalEbiMenuComponent,
     AboutComponent,
     FeedbackComponent,
-    AuthorNamesComponent
+    AuthorNamesComponent,
+    FiltersComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,

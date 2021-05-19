@@ -1,3 +1,37 @@
+<!-- todo: should this text and button be in a separate component?-->
+<div
+  style="display: flex;
+         width: 100%;
+         margin-top: 4rem;
+         flex-wrap: wrap;
+         justify-content: space-between;"
+>
+  <p
+    class="vf-text-body vf-text-body--3"
+    style="margin-right: 2rem"
+    style="color: #505050"
+  >
+    A catalogue of single cell projects eligible for the Human Cell
+    Atlas, selected and curated by the HCA DCP wrangling teams.
+    <a href="/about">Read more ></a>
+  </p>
+  <a
+    class="vf-button vf-button--primary vf-button--outline vf-button--sm"
+    style="transform: translateY(-25%); flex-shrink: 0"
+    href="mailto:wrangler-team@data.humancellatlas.org?subject=Add a project to the HCA Project Catalogue"
+  >
+    Add a project
+  </a>
+</div>
+
+<!--todo: add the sorting and filtering stuff here-->
+  <app-filters
+    [organs]="organs"
+    [technologies]="technologies"
+    (selectedTechnology)="filterByTechnology($event)"
+    (selectedDataLocation)="filterByLocation($event)"
+    (selectedOrgan)="filterByOrgan($event)"
+  ></app-filters>
 <svg class="vf-icon-sprite vf-icon-sprite--tables" display="none">
   <defs>
     <g id="vf-table-sortable">
@@ -7,6 +41,12 @@
   </defs>
 </svg>
 
+<p
+  class="vf-text-body vf-text-body--3"
+  *ngIf="displayProjects"
+>
+  Showing <strong>{{displayProjects.length}}</strong> out of <strong>{{projects.length}}</strong> projects
+</p>
 
 <table class="vf-table vf-table--sortable vf-table--striped" id="published-table">
   <thead class="vf-table__header">
@@ -34,8 +74,8 @@
   </tr>
   </thead>
 
-  <tbody class="vf-table__body" *ngIf="projects">
-  <tr class="vf-table__row" *ngFor="let project of projects" key={project.uuid}>
+  <tbody class="vf-table__body" *ngIf="displayProjects">
+  <tr class="vf-table__row" *ngFor="let project of displayProjects" key={project.uuid}>
     <td class="vf-table__cell">{{project.date}}</td>
     <td class="vf-table__cell">
       <p style="margin-top: 0;">{{project.title}}</p>
@@ -96,7 +136,7 @@
           </ul>
         </li>
         <li *ngIf="project.dcpUrl">
-          <a class="vf-link" href={{project.dcp_url}} target="_blank">HCA Data Portal</a>
+          <a class="vf-link" href={{project.dcpUrl}} target="_blank">HCA Data Portal</a>
         </li>
       </ul>
     </td>
