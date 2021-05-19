@@ -44,10 +44,10 @@ export class ProjectsService {
       arrayExpressAccessions: res["content"]?.["array_express_accessions"] ?? [],
       // egaStudiesAccessions: res["content"]?.["supplementary_links"] ?? [],
       egaStudiesAccessions: res["content"]?.["supplementary_links"]?.map((link) => /.*\/studies\/(EGAS\d*).*/i.exec(link))
-        .filter((match) => match && match.length)
+        .filter((match) => match && match.length) ?? []
         .map((match) => match[1]),
       egaDatasetsAccessions: res["content"]?.["supplementary_links"]?.map((link) => /.*\/studies\/(EGAD\d*).*/i.exec(link))
-        .filter((match) => match && match.length)
+        .filter((match) => match && match.length) ?? []
         .map((match) => match[1]),
       publications: res["content"]?.["publications"] ?? [],
 

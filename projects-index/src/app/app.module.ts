@@ -11,6 +11,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { AuthorNamesComponent } from './author-names/author-names.component';
 import { FiltersComponent } from './filters/filters.component';
 import { SearchFilterPipe } from './search-filter.pipe';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,13 @@ import { SearchFilterPipe } from './search-filter.pipe';
     FeedbackComponent,
     AuthorNamesComponent,
     FiltersComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
