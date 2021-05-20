@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectsListComponent } from './projects-list/projects-list.component';
 import { GlobalHeaderComponent } from './global-header/global-header.component';
-import { GlobalEbiMenuComponent } from './global-ebi-menu/global-ebi-menu.component';
 import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import {HttpClientModule} from "@angular/common/http";
@@ -18,13 +17,12 @@ import { SearchComponent } from './search/search.component';
     AppComponent,
     ProjectsListComponent,
     GlobalHeaderComponent,
-    GlobalEbiMenuComponent,
     AboutComponent,
     FeedbackComponent,
     AuthorNamesComponent,
     FiltersComponent,
     SearchFilterPipe,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
