@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
+import {environment} from "../environments/environment";
 
 //todo: fix up this service
 
@@ -9,7 +10,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class ProjectsService {
-  URL = 'http://localhost:4200/assets/data.json'
+  URL = `${environment.ingestApiUrl}/projects/search/catalogue?page=0&size=200`;
 
   constructor(private http: HttpClient) {
   }
@@ -22,7 +23,7 @@ export class ProjectsService {
           return this.formatProject(response);
         }
       })
-    )
+    );
   }
 
   // todo: sort this accoding to the added_to_index field here
