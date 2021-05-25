@@ -13,9 +13,8 @@ export class ProjectsService {
 
   constructor(private http: HttpClient) {}
 
-  //original URL is STATIC_DATA_URL=/humancellatlas/project-catalogue/data.json
   getProjects(): Observable<Project[]> {
-    return this.http.get<Array<object>>(this.URL).pipe(
+    return this.http.get(this.URL).pipe(
       map((response) => {
         if (response) {
           return this.formatProject(response['_embedded']['projects']);

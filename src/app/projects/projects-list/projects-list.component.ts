@@ -19,6 +19,7 @@ interface Filters {
 })
 export class ProjectsListComponent implements OnInit {
   projects$: Observable<Project[]>;
+  totalProjects: number;
   filters: BehaviorSubject<Filters>;
   organs: string[];
   technologies: string[];
@@ -40,6 +41,7 @@ export class ProjectsListComponent implements OnInit {
           tap(() => {
             this.populateOrgans(projects);
             this.populateTechnologies(projects);
+            this.totalProjects = projects.length;
           }),
           map((filters) =>
             projects
@@ -56,7 +58,7 @@ export class ProjectsListComponent implements OnInit {
     );
   }
 
-  private filterProject(project, filters: Filters) {
+  private filterProject(project, filters: Filters): boolean {
     if (filters.organ && !project.organs.includes(filters.organ)) {
       return false;
     }
@@ -66,7 +68,6 @@ export class ProjectsListComponent implements OnInit {
     ) {
       return false;
     }
-
     switch (filters.location) {
       case 'HCA Data Portal':
         if (!project.dcpUrl) {
@@ -121,19 +122,19 @@ export class ProjectsListComponent implements OnInit {
     return searchKeywords.some((keyword) => toSearch.includes(keyword));
   }
 
-  populateOrgans(projects) {
-    this.organs = [
+  populateOrgans(projects): void {
+    this.organs = <string[]>[
       ...new Set(projects.map((project) => project.organs).flat()),
     ].sort();
   }
 
-  populateTechnologies(projects) {
-    this.technologies = [
+  populateTechnologies(projects): void {
+    this.technologies = <string[]>[
       ...new Set(projects.map((project) => project.technologies).flat()),
     ].sort();
   }
 
-  toggleDateSort() {
+  toggleDateSort(): void {
     const currentValues = this.filters.getValue();
     this.filters.next({
       ...currentValues,
@@ -141,14 +142,14 @@ export class ProjectsListComponent implements OnInit {
     });
   }
 
-  filterByTechnology($selectedTechnology: string = '') {
+  filterByTechnology($selectedTechnology: string = ''): void {
     this.filters.next({
       ...this.filters.getValue(),
       technology: $selectedTechnology,
     });
   }
 
-  filterByOrgan($selectedOrgan: string = '') {
+  filterByOrgan($selectedOrgan: string = ''): void {
     this.filters.next({
       ...this.filters.getValue(),
       organ: $selectedOrgan,
@@ -161,14 +162,14 @@ export class ProjectsListComponent implements OnInit {
   //   this.displayProjects.sort(this.sortByDate(this.recentProjectsFirst));
   // }
 
-  private filterByLocation($selectedLocation: string = '') {
+  filterByLocation($selectedLocation: string = ''): void {
     this.filters.next({
       ...this.filters.getValue(),
       location: $selectedLocation,
     });
   }
 
-  private search($search: string = '') {
+  search($search: string = ''): void {
     this.filters.next({
       ...this.filters.getValue(),
       searchVal: $search,

@@ -50,9 +50,9 @@
   </defs>
 </svg>
 
-<p class="vf-text-body vf-text-body--3" *ngIf="displayProjects">
-  Showing <strong>{{ displayProjects.length }}</strong> out of
-  <strong>{{ projects.length }}</strong> projects
+<p class="vf-text-body vf-text-body--3" *ngIf="totalProjects">
+  Showing <strong>{{ (projects$ | async).length }}</strong> out of
+  <strong>{{ totalProjects }}</strong> projects
 </p>
 
 <table
