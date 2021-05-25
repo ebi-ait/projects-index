@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Project } from './project';
+import { type } from 'os';
 
 //todo: fix up this service
 
@@ -45,7 +46,13 @@ export class ProjectsService {
           return technology['ontology_label'];
         }) ?? [],
       // technologies: res["technology"]?.["ontologies"]?.map(technology => ({technology_label: technology["ontology_label"]})) ?? [],
-      enaAccessions: res['content']?.['insdc_project_accessions'] ?? [],
+      enaAccessions: (() => {
+        const accessions = res['content']?.['insdc_project_accessions'];
+        if (typeof accessions === 'string') {
+          return [accessions];
+        }
+        return accessions ?? [];
+      })(),
       geoAccessions: res['content']?.['geo_series_accessions'] ?? [],
       arrayExpressAccessions:
         res['content']?.['array_express_accessions'] ?? [],
