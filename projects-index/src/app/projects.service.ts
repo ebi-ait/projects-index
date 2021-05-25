@@ -20,7 +20,7 @@ export class ProjectsService {
      return  this.http.get<Array<object>>(this.URL).pipe(
       map(response => {
         if (response) {
-          return this.formatProject(response);
+          return this.formatProject(response["_embedded"]["projects"]);
         }
       })
     );
