@@ -1,6 +1,6 @@
 .arrow-right {
   display: inline-block;
-  margin-left: .8rem;
+  margin-left: 0.8rem;
   width: 0;
   height: 0;
   border-top: 6px solid transparent;
@@ -9,7 +9,7 @@
 }
 .arrow-left {
   display: inline-block;
-  margin-left: .8rem;
+  margin-left: 0.8rem;
   width: 0;
   height: 0;
   border-top: 6px solid transparent;

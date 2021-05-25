@@ -1,14 +1,13 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {interval} from "rxjs";
-import {delay} from "rxjs/operators";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { interval } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.css']
+  styleUrls: ['./filters.component.css'],
 })
 export class FiltersComponent implements OnInit {
-
   @Input()
   organs: string[];
 
@@ -22,22 +21,19 @@ export class FiltersComponent implements OnInit {
   selectedTechnology = new EventEmitter<string>();
 
   @Output()
-  selectedDataLocation = new EventEmitter<string>()
+  selectedDataLocation = new EventEmitter<string>();
 
   @Output()
   valueSearched = new EventEmitter<string>();
 
-  dataLocations = ["HCA Data Portal", "GEO", "ENA", "ArrayExpress", "EGA"];
+  dataLocations = ['HCA Data Portal', 'GEO', 'ENA', 'ArrayExpress', 'EGA'];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   onOrganChange($event) {
     this.selectedOrgan.emit($event.target.value);
-
   }
 
   onTechnologyChange($event) {
@@ -50,8 +46,7 @@ export class FiltersComponent implements OnInit {
 
   triggerSearch($event) {
     // interval(500).subscribe(x => {
-     this.valueSearched.emit($event.target.value);
+    this.valueSearched.emit($event.target.value);
     // });
   }
-
 }

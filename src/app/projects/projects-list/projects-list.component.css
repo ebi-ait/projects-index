@@ -5,7 +5,7 @@
 }
 
 .plain-list li {
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
 }
 
 .comma-list {
@@ -34,7 +34,8 @@
   min-width: 950px;
 }
 
-#published-table thead tr th, #published-table thead tr th button {
+#published-table thead tr th,
+#published-table thead tr th button {
   font-weight: 600;
   font-size: 16px;
   text-align: left;
@@ -63,7 +64,6 @@
 #published-table thead tr th:nth-child(2) {
   width: 40%;
 }
-
 
 #published-table tbody tr td:nth-child(5) {
   font-size: 0.95em;

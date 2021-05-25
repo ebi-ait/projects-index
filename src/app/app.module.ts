@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 import { GlobalHeaderComponent } from './global-header/global-header.component';
 import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './feedback/feedback.component';
-import {HttpClientModule} from "@angular/common/http";
-import { ProjectsModule } from "./projects/projects.module";
+import { HttpClientModule } from '@angular/common/http';
+import { ProjectsModule } from './projects/projects.module';
 
 @NgModule({
   declarations: [
@@ -15,13 +15,8 @@ import { ProjectsModule } from "./projects/projects.module";
     AboutComponent,
     FeedbackComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ProjectsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

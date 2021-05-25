@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {ProjectsService} from "../projects/projects.service";
+import { ProjectsService } from '../projects/projects.service';
 
 @Component({
   selector: 'app-global-header',
   templateUrl: './global-header.component.html',
-  styleUrls: ['./global-header.component.css']
+  styleUrls: ['./global-header.component.css'],
 })
 export class GlobalHeaderComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

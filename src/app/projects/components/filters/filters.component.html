@@ -1,23 +1,45 @@
 <div id="filters-container">
-
   <div class="vf-search__item">
-    <label class="vf-form__label vf-u-sr-only | vf-search__label" for="inlinesearchitem">Search projects</label>
-    <input type="search" (input)="triggerSearch($event)" placeholder="Search projects" id="inlinesearchitem" class="vf-form__input | vf-search__input">
+    <label
+      class="vf-form__label vf-u-sr-only | vf-search__label"
+      for="inlinesearchitem"
+      >Search projects</label
+    >
+    <input
+      type="search"
+      (input)="triggerSearch($event)"
+      placeholder="Search projects"
+      id="inlinesearchitem"
+      class="vf-form__input | vf-search__input"
+    />
   </div>
 
   <select name="Organ" class="vf-form__select" (change)="onOrganChange($event)">
-  <option selected value="">All organs</option>
-  <option *ngFor="let organ of organs" value={{organ}}>{{organ}}</option>
+    <option selected value="">All organs</option>
+    <option *ngFor="let organ of organs" value="{{ organ }}">
+      {{ organ }}
+    </option>
   </select>
 
-  <select name="Technology" class="vf-form__select" (change)="onTechnologyChange($event)">
-  <option selected value="">All technologies</option>
-  <option *ngFor="let technology of technologies" value={{technology}}>{{technology}}</option>
+  <select
+    name="Technology"
+    class="vf-form__select"
+    (change)="onTechnologyChange($event)"
+  >
+    <option selected value="">All technologies</option>
+    <option *ngFor="let technology of technologies" value="{{ technology }}">
+      {{ technology }}
+    </option>
   </select>
 
-  <select name="Data Location" class="vf-form__select" (change)="onDataLocationChange($event)">
-  <option selected value="">All data locations</option>
-  <option *ngFor="let location of dataLocations" value={{location}}>{{location}}</option>
+  <select
+    name="Data Location"
+    class="vf-form__select"
+    (change)="onDataLocationChange($event)"
+  >
+    <option selected value="">All data locations</option>
+    <option *ngFor="let location of dataLocations" value="{{ location }}">
+      {{ location }}
+    </option>
   </select>
 </div>
-

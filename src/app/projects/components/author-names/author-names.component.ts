@@ -1,30 +1,28 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-author-names',
   templateUrl: './author-names.component.html',
-  styleUrls: ['./author-names.component.css']
+  styleUrls: ['./author-names.component.css'],
 })
 export class AuthorNamesComponent implements OnInit {
   @Input()
-  authors: string[]
+  authors: string[];
 
   @Input()
-  test: string
+  test: string;
 
-  fullAuthorView:boolean = false
+  fullAuthorView: boolean = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {}
-
 
   toggleAuthorView() {
     this.fullAuthorView = !this.fullAuthorView;
   }
 
   getFormattedContributors() {
-    return this.fullAuthorView ? this.authors : `${this.authors[0]} et. al.`
+    return this.fullAuthorView ? this.authors : `${this.authors[0]} et. al.`;
   }
-
 }

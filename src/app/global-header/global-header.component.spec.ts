@@ -8,9 +8,8 @@ describe('GlobalHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlobalHeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [GlobalHeaderComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
