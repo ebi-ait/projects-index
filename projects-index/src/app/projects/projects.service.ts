@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
 import {environment} from "../../environments/environment";
+import { Project } from "./project";
 
 //todo: fix up this service
 
@@ -14,7 +15,7 @@ export class ProjectsService {
   }
 
   //original URL is STATIC_DATA_URL=/humancellatlas/project-catalogue/data.json
-  getProjects(): Observable<object[]> {
+  getProjects(): Observable<Project[]> {
      return  this.http.get<Array<object>>(this.URL).pipe(
       map(response => {
         if (response) {
@@ -26,8 +27,7 @@ export class ProjectsService {
 
   // todo: sort this accoding to the added_to_index field here
   // sort here or in component?
-  // todo: should I make an interface for the project structure?
-  formatProject(response: object[]): object[] {
+  formatProject(response: object[]): Project[] {
     return response.map(res => ({
       uuid: res["uuid"], // why do we need this?
       dcpUrl: res["dcp_url"], // why do we need this?

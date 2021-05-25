@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectsService} from '../projects.service';
+import { Project } from "../project";
 
 @Component({
   selector: 'app-projects-list',
@@ -7,7 +8,7 @@ import {ProjectsService} from '../projects.service';
   styleUrls: ['./projects-list.component.css']
 })
 export class ProjectsListComponent implements OnInit {
-  projects: object[];
+  projects: Project[];
   displayProjects: object[];
   recentProjectsFirst: boolean = true;
   organs: string[];
