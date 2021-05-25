@@ -8,7 +8,7 @@ import {environment} from "../../environments/environment";
 
 @Injectable()
 export class ProjectsService {
-  URL = `${environment.ingestApiUrl}/projects/search/catalogue?page=0&size=200`;
+  URL = `${environment.ingestApiUrl}${environment.catalogueEndpoint}`;
 
   constructor(private http: HttpClient) {
   }
