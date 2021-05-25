@@ -9,8 +9,6 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AuthorNamesComponent } from './author-names/author-names.component';
 import { FiltersComponent } from './filters/filters.component';
-import { SearchFilterPipe } from './search-filter.pipe';
-import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +18,7 @@ import { SearchComponent } from './search/search.component';
     AboutComponent,
     FeedbackComponent,
     AuthorNamesComponent,
-    FiltersComponent,
-    SearchFilterPipe,
-    SearchComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
