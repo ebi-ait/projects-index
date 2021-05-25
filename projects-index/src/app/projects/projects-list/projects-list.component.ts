@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectsService} from '../projects.service';
 import { Project } from "../project";
-import { BehaviorSubject, Observable, Subject } from "rxjs";
+import { BehaviorSubject, Observable } from "rxjs";
 import { map, switchMap } from "rxjs/operators";
 
 interface Filters {
@@ -9,6 +9,7 @@ interface Filters {
   technology: string;
   location: string;
   searchVal: string;
+  recentFirst: boolean;
 }
 
 @Component({
@@ -20,8 +21,6 @@ export class ProjectsListComponent implements OnInit {
   projects: Project[];
   projects$: Observable<Project[]>;
   filters: BehaviorSubject<Filters>;
-  displayProjects: object[];
-  recentProjectsFirst: boolean = true;
   organs: string[];
   technologies: string[];
 
@@ -31,7 +30,6 @@ export class ProjectsListComponent implements OnInit {
   ngOnInit(): void {
     this.projectService.getProjects().subscribe(projects => {
       this.projects = projects;
-      this.displayProjects = projects.sort(this.sortByDate());
       this.populateOrgans();
       this.populateTechnologies();
     });
@@ -40,12 +38,22 @@ export class ProjectsListComponent implements OnInit {
       organ: "",
       technology: "",
       location: "",
-      searchVal: ""
+      searchVal: "",
+      recentFirst: true
     });
 
     this.projects$ = this.projectService.getProjects().pipe(
       switchMap(projects => this.filters.pipe(
-        map(filters => projects.filter(project => this.filterProject(project, filters)))
+        map(filters =>
+          projects
+            .filter(project => this.filterProject(project, filters))
+            .sort((a, b) => {
+              if (filters.recentFirst) {
+                return a.addedToIndex <= b.addedToIndex ? 1 : -1;
+              }
+              return a.addedToIndex <= b.addedToIndex ? -1 : 1;
+            })
+        )
       ))
     );
   }
@@ -99,36 +107,11 @@ export class ProjectsListComponent implements OnInit {
   }
 
   toggleDateSort() {
-    // this.recentProjectsFirst = !this.recentProjectsFirst;
-    this.filterState.recentProjectsFirst = !this.filterState.recentProjectsFirst;
-    this.applyFilters();
-    // this.displayProjects.sort(this.sortByDate(this.recentProjectsFirst));
-  }
-
-  private sortByDate(desc= true) {
-    return function (a,b) {
-      return desc ?  b.addedToIndex - a.addedToIndex: a.addedToIndex - b.addedToIndex;
-    };
-  }
-
-  private tranformProjectToString(project): string {
-      let x = [
-      project["authors"].join(", ").trim(),
-      project["uuid"],
-      project["title"].trim(),
-      project["enaAccessions"].join(" ").trim(),
-      project["arrayExpressAccessions"].join(" ").trim(),
-      project["egaStudiesAccessions"].join(" ").trim(),
-      project["egaDatasetsAccessions"].join(" ").trim(),
-      project["geoAccessions"].join(" ").trim(),
-      project["organs"].join(" ").trim(),
-      project["technologies"].join(" ").trim()
-    ].join(" ").trim().toLowerCase();
-
-    if (project["uuid"] === "f48e7c39-cc67-4055-9d79-bc437892840c" || project["uuid"] === "455b46e6-d8ea-4611-861e-de720a562ada" ) {
-      console.log(x);
-    }
-    return x;
+    const currentValues = this.filters.getValue();
+    this.filters.next({
+      ...currentValues,
+      recentFirst: !currentValues.recentFirst
+    });
   }
 
    filterByTechnology($selectedTechnology: string = "") {
