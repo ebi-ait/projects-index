@@ -119,7 +119,7 @@ export class ProjectsListComponent implements OnInit {
       .join(' ');
 
     const searchKeywords = filters.searchVal.toLowerCase().split(' ');
-    return searchKeywords.some((keyword) => toSearch.includes(keyword));
+    return searchKeywords.every((keyword) => toSearch.includes(keyword));
   }
 
   populateOrgans(projects): void {
