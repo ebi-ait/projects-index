@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {AboutComponent} from "./about/about.component";
-import {ProjectsListComponent} from "./projects-list/projects-list.component";
 
 
 const routes: Routes = [
-  {path: 'home', component: ProjectsListComponent},
-  {path: '', component: ProjectsListComponent},
   {path: 'about', component: AboutComponent },
+  {
+    path: '',
+    loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes.concat())],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

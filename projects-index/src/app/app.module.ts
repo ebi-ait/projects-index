@@ -2,28 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProjectsListComponent } from './projects-list/projects-list.component';
 import { GlobalHeaderComponent } from './global-header/global-header.component';
 import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import {HttpClientModule} from "@angular/common/http";
-import { AuthorNamesComponent } from './author-names/author-names.component';
-import { FiltersComponent } from './filters/filters.component';
+import { ProjectsModule } from "./projects/projects.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectsListComponent,
     GlobalHeaderComponent,
     AboutComponent,
     FeedbackComponent,
-    AuthorNamesComponent,
-    FiltersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ProjectsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

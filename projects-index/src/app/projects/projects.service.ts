@@ -6,9 +6,7 @@ import {environment} from "../../environments/environment";
 
 //todo: fix up this service
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProjectsService {
   URL = `${environment.ingestApiUrl}/projects/search/catalogue?page=0&size=200`;
 
