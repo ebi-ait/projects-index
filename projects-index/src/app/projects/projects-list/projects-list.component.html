@@ -76,8 +76,8 @@
   </tr>
   </thead>
 
-  <tbody class="vf-table__body" *ngIf="displayProjects">
-  <tr class="vf-table__row" *ngFor="let project of displayProjects" key={project.uuid}>
+  <tbody class="vf-table__body" *ngIf="projects$">
+  <tr class="vf-table__row" *ngFor="let project of (projects$ | async)" key={project.uuid}>
     <td class="vf-table__cell">{{project.date}}</td>
     <td class="vf-table__cell">
       <p style="margin-top: 0;">{{project.title}}</p>
@@ -85,7 +85,7 @@
             [authors]="project.authors"
           ></app-author-names>
           <p *ngFor="let publication of project.publications" style="display: inline;">
-            <a class="vf-link" href={{publication.url}} target="_blank">{{publication.journal_title}}</a>
+            <a class="vf-link" href={{publication.url}} target="_blank">{{publication.journalTitle}}</a>
           </p>
     </td>
     <td class="vf-table__cell">

@@ -29,7 +29,7 @@ export class ProjectsService {
   // sort here or in component?
   formatProject(response: object[]): Project[] {
     return response.map(res => ({
-      uuid: res["uuid"], // why do we need this?
+      uuid: res["uuid"]["uuid"], // why do we need this?
       dcpUrl: res["dcp_url"], // why do we need this?
       addedToIndex: res["added_to_index"],
       date: new Date(res["added_to_index"] * 1000).toLocaleDateString("en-gb", {timeZone: "utc",}),

@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectsService} from '../projects.service';
 import { Project } from "../project";
+import { BehaviorSubject, Observable, Subject } from "rxjs";
+import { map, switchMap } from "rxjs/operators";
+
+interface Filters {
+  organ: string;
+  technology: string;
+  location: string;
+  searchVal: string;
+}
 
 @Component({
   selector: 'app-projects-list',
@@ -9,24 +18,76 @@ import { Project } from "../project";
 })
 export class ProjectsListComponent implements OnInit {
   projects: Project[];
+  projects$: Observable<Project[]>;
+  filters: BehaviorSubject<Filters>;
   displayProjects: object[];
   recentProjectsFirst: boolean = true;
   organs: string[];
   technologies: string[];
-  filterState = {organ: "", technology: "", dataLocation: "", recentProjectsFirst: true, searchText: ""};
 
   constructor(private projectService: ProjectsService) {
   }
 
   ngOnInit(): void {
     this.projectService.getProjects().subscribe(projects => {
-      // console.log("fetched data: ", data);
       this.projects = projects;
-      console.log("fetched data: ", projects);
       this.displayProjects = projects.sort(this.sortByDate());
       this.populateOrgans();
       this.populateTechnologies();
     });
+
+    this.filters = new BehaviorSubject<Filters>({
+      organ: "",
+      technology: "",
+      location: "",
+      searchVal: ""
+    });
+
+    this.projects$ = this.projectService.getProjects().pipe(
+      switchMap(projects => this.filters.pipe(
+        map(filters => projects.filter(project => this.filterProject(project, filters)))
+      ))
+    );
+  }
+
+  private filterProject(project, filters: Filters) {
+    if (filters.organ && !project.organs.includes(filters.organ)) { return false; }
+    if (filters.technology && !project.technologies.includes(filters.technology)) { return false; }
+
+    switch (filters.location) {
+      case "HCA Data Portal":
+        if (!project.dcpUrl) { return false; }
+        break;
+      case "GEO":
+        if (!project.geoAccessions.length) { return false; }
+        break;
+      case "ArrayExpress":
+        if (!project.arrayExpressAccessions.length) { return false; }
+        break;
+      case "ENA":
+        if (!project.enaAccessions.length) { return false; }
+        break;
+      case "EGA":
+        if (!(!!project.egaStudiesAccessions.length || !!project.egaDatasetsAccessions.length)) { return false; }
+        break;
+      default:
+        break;
+    }
+
+    const toSearch = [
+      project.authors.join(", "), // This might be wrong. Might need to search contributor names to have surname
+      project.uuid,
+      project.title,
+      project.arrayExpressAccessions.join(" "),
+      project.geoAccessions.join(" "),
+      project.egaDatasetsAccessions.join(" "),
+      project.egaStudiesAccessions.join(" "),
+      project.enaAccessions.join(" "),
+      project.organs.join(" "),
+      project.technologies.join(" ")
+      ].map(x => x.toLowerCase()).join(" ");
+
+    return toSearch.includes(filters.searchVal);
   }
 
   populateOrgans() {
@@ -50,36 +111,6 @@ export class ProjectsListComponent implements OnInit {
     };
   }
 
-  applyFilters() {
-
-    this.displayProjects.sort(this.sortByDate(this.filterState.recentProjectsFirst));
-
-    this.displayProjects = this.projects
-      .filter(project => this.filterState.organ ? project?.["organs"].includes(this.filterState.organ) : true)
-      .filter(project => this.filterState.technology ? project?.["technologies"].includes(this.filterState.technology) : true);
-
-    if (this.filterState.dataLocation === "HCA Data Portal")
-      this.displayProjects = this.displayProjects.filter(project => !!project["dcpUrl"]);
-    else if (this.filterState.dataLocation === "GEO")
-      this.displayProjects = this.displayProjects.filter(project => project["geoAccessions"]?.length);
-    else if (this.filterState.dataLocation === "ArrayExpress")
-      this.displayProjects = this.displayProjects.filter(project => project["arrayExpressAccessions"]?.length);
-    else if (this.filterState.dataLocation === "ENA")
-      this.displayProjects = this.displayProjects.filter(project => project["enaAccessions"]?.length);
-    else if (this.filterState.dataLocation === "EGA")
-      this.displayProjects = this.displayProjects.filter(project => project["egaStudiesAccessions"]?.length || project["egaDatasetsAccessions"]?.length)
-
-    // for search bb:
-    // these two titles were coming up in dev, but not in my local, why? Is it because of the transformation on the author names?
-    //
-    // Single-cell RNA-seq of human peripheral blood NKT cells
-    // Transcriptomic characterisation of haematopoietic stem and progenitor cells from human adult bone marrow, spleen and peripheral blood
-
-    // also the search cross doesn't work rn
-    this.displayProjects = this.displayProjects.filter(project => this.tranformProjectToString(project).includes(this.filterState.searchText.toLowerCase()));
-
-  }
-
   private tranformProjectToString(project): string {
       let x = [
       project["authors"].join(", ").trim(),
@@ -100,14 +131,18 @@ export class ProjectsListComponent implements OnInit {
     return x;
   }
 
-   filterByTechnology($selectedTechnology: string) {
-    this.filterState.technology = $selectedTechnology ?? "";
-    this.applyFilters();
+   filterByTechnology($selectedTechnology: string = "") {
+    this.filters.next({
+      ...this.filters.getValue(),
+      technology: $selectedTechnology
+    });
    }
 
-  filterByOrgan($selectedOrgan: string) {
-    this.filterState.organ = $selectedOrgan ?? "";
-    this.applyFilters();
+  filterByOrgan($selectedOrgan: string = "") {
+    this.filters.next({
+      ...this.filters.getValue(),
+      organ: $selectedOrgan
+    });
   }
 
   // resetDisplayProjects() {
@@ -116,13 +151,17 @@ export class ProjectsListComponent implements OnInit {
   //   this.displayProjects.sort(this.sortByDate(this.recentProjectsFirst));
   // }
 
-  private filterByLocation($selectedLocation: string) {
-    this.filterState.dataLocation = $selectedLocation ?? "";
-    this.applyFilters();
+  private filterByLocation($selectedLocation: string = "") {
+    this.filters.next({
+      ...this.filters.getValue(),
+      location: $selectedLocation
+    });
   }
 
-  private search($search: string) {
-      this.filterState.searchText = $search;
-      this.applyFilters();
+  private search($search: string = "") {
+    this.filters.next({
+      ...this.filters.getValue(),
+      searchVal: $search
+    });
   }
 }
