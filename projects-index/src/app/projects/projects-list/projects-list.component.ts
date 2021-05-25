@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ProjectsService} from '../projects.service';
 import { Project } from "../project";
 import { BehaviorSubject, Observable } from "rxjs";
-import { map, switchMap } from "rxjs/operators";
+import { map, switchMap, tap } from "rxjs/operators";
 
 interface Filters {
   organ: string;
@@ -18,7 +18,6 @@ interface Filters {
   styleUrls: ['./projects-list.component.css']
 })
 export class ProjectsListComponent implements OnInit {
-  projects: Project[];
   projects$: Observable<Project[]>;
   filters: BehaviorSubject<Filters>;
   organs: string[];
@@ -28,12 +27,6 @@ export class ProjectsListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.projectService.getProjects().subscribe(projects => {
-      this.projects = projects;
-      this.populateOrgans();
-      this.populateTechnologies();
-    });
-
     this.filters = new BehaviorSubject<Filters>({
       organ: "",
       technology: "",
@@ -44,6 +37,10 @@ export class ProjectsListComponent implements OnInit {
 
     this.projects$ = this.projectService.getProjects().pipe(
       switchMap(projects => this.filters.pipe(
+        tap(() => {
+          this.populateOrgans(projects);
+          this.populateTechnologies(projects);
+        }),
         map(filters =>
           projects
             .filter(project => this.filterProject(project, filters))
@@ -98,12 +95,12 @@ export class ProjectsListComponent implements OnInit {
     return toSearch.includes(filters.searchVal);
   }
 
-  populateOrgans() {
-    this.organs = [...new Set(this.projects.map(project => project.organs).flat())].sort();
+  populateOrgans(projects) {
+    this.organs = [...new Set(projects.map(project => project.organs).flat())].sort();
   }
 
-  populateTechnologies() {
-    this.technologies = [...new Set(this.projects.map(project => project.technologies).flat())].sort();
+  populateTechnologies(projects) {
+    this.technologies = [...new Set(projects.map(project => project.technologies).flat())].sort();
   }
 
   toggleDateSort() {
