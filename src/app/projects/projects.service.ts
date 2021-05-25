@@ -4,7 +4,6 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Project } from './project';
-import { type } from 'os';
 
 //todo: fix up this service
 
