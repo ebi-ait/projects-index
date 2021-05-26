@@ -24,6 +24,6 @@ export class AuthorNamesComponent implements OnInit {
   }
 
   getFormattedContributors() {
-    return this.fullAuthorView ? this.formattedNames : `${this.formattedNames[0]} et. al.`;
+    return this.fullAuthorView ? this.formattedNames.join(', ') : `${this.formattedNames[0]} et. al.`;
   }
 }
