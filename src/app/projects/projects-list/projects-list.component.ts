@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../projects.service';
 import { Project } from '../project';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map, startWith, switchMap, tap } from "rxjs/operators";
+import { map, startWith, switchMap, tap } from 'rxjs/operators';
+import { environment } from '../../../environments/environment';
 
 interface Filters {
   organ: string;
@@ -23,6 +24,7 @@ export class ProjectsListComponent implements OnInit {
   filters: BehaviorSubject<Filters>;
   organs: string[];
   technologies: string[];
+  wranglerEmail: string = environment.wranglerEmail;
 
   constructor(private projectService: ProjectsService) {}
 
@@ -45,7 +47,9 @@ export class ProjectsListComponent implements OnInit {
           }),
           map((filters: Filters) =>
             projects
-              .filter((project: Project) => this.filterProject(project, filters))
+              .filter((project: Project) =>
+                this.filterProject(project, filters)
+              )
               .sort((a, b) => {
                 if (filters.recentFirst) {
                   return a.addedToIndex <= b.addedToIndex ? 1 : -1;
@@ -104,7 +108,7 @@ export class ProjectsListComponent implements OnInit {
     }
 
     const toSearch = [
-      project.authors.map(author => author.fullName).join(', '),
+      project.authors.map((author) => author.fullName).join(', '),
       project.uuid,
       project.title,
       project.arrayExpressAccessions.join(' '),
@@ -123,15 +127,17 @@ export class ProjectsListComponent implements OnInit {
   }
 
   populateOrgans(projects): void {
-    this.organs = <string[]>[
-      ...new Set(projects.map((project) => project.organs).flat()),
-    ].sort();
+    this.organs = <string[]>(
+      [...new Set(projects.map((project) => project.organs).flat())].sort()
+    );
   }
 
   populateTechnologies(projects): void {
-    this.technologies = <string[]>[
-      ...new Set(projects.map((project) => project.technologies).flat()),
-    ].sort();
+    this.technologies = <string[]>(
+      [
+        ...new Set(projects.map((project) => project.technologies).flat()),
+      ].sort()
+    );
   }
 
   toggleDateSort(): void {

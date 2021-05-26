@@ -21,7 +21,7 @@
             The list is curated by the HCA Data Wrangling team at EMBL-EBI, but
             is open for contribution of any suitable projects. To suggest a
             project for the catalogue which we have missed out,
-            <a href="mailto:wrangler-team@data.humancellatlas.org"
+            <a href="mailto:{{ wranglerEmail }}"
               >send an email to the data wrangler team
             </a>
             .
@@ -110,7 +110,9 @@
 
           <a
             class="vf-button vf-button--primary vf-button--sm"
-            href="mailto:wrangler-team@data.humancellatlas.org?subject=Add a project to the HCA Project Catalogue"
+            href="mailto:{{
+              wranglerEmail
+            }}?subject=Add a project to the HCA Project Catalogue"
             >Suggest a project
           </a>
         </div>

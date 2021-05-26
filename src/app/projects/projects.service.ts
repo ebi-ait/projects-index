@@ -9,7 +9,6 @@ import { Project } from './project';
 
 @Injectable()
 export class ProjectsService {
-
   constructor(private http: HttpClient) {}
   URL = `${environment.ingestApiUrl}${environment.catalogueEndpoint}`;
 
@@ -23,14 +22,15 @@ export class ProjectsService {
     );
   }
 
-  formatDate = (timestamp) => new Date(timestamp).toLocaleDateString('en-gb', {
-    timeZone: 'utc',
-  })
+  formatDate = (timestamp) =>
+    new Date(timestamp).toLocaleDateString('en-gb', {
+      timeZone: 'utc',
+    });
 
   captureRegexGroups = (regex: RegExp, strings: string[]) =>
-    strings.map((str) => regex.exec(str))
-      .filter((match) => match && match.length) ??
-      [].map((match) => match[1])
+    strings
+      .map((str) => regex.exec(str))
+      .filter((match) => match && match.length) ?? [].map((match) => match[1]);
 
   formatProject = (obj: any): Project => {
     try {
@@ -40,8 +40,10 @@ export class ProjectsService {
         addedToIndex: obj.added_to_index,
         date: obj.added_to_index ? this.formatDate(obj.added_to_index) : '-',
         title: obj.content.project_core.project_title,
-        organs: obj.organ?.ontologies?.map(organ => organ.ontology_label) ?? [],
-        technologies: obj.technology?.ontologies?.map(tech => tech.ontology_label) ?? [],
+        organs:
+          obj.organ?.ontologies?.map((organ) => organ.ontology_label) ?? [],
+        technologies:
+          obj.technology?.ontologies?.map((tech) => tech.ontology_label) ?? [],
         // Temp fix until ena accessions fixed in core
         enaAccessions: (() => {
           const accessions = obj.content?.insdc_project_accessions;
@@ -52,22 +54,28 @@ export class ProjectsService {
         })(),
         geoAccessions: obj.content.geo_series_accessions ?? [],
         arrayExpressAccessions: obj.content.array_expobjs_accessions ?? [],
-        egaStudiesAccessions:
-          this.captureRegexGroups(/.*\/studies\/(EGAS\d*).*/i, obj.content.supplementary_links || []),
-        egaDatasetsAccessions:
-          this.captureRegexGroups( /.*\/studies\/(EGAD\d*).*/i, obj.content.supplementary_links || []),
+        egaStudiesAccessions: this.captureRegexGroups(
+          /.*\/studies\/(EGAS\d*).*/i,
+          obj.content.supplementary_links || []
+        ),
+        egaDatasetsAccessions: this.captureRegexGroups(
+          /.*\/studies\/(EGAD\d*).*/i,
+          obj.content.supplementary_links || []
+        ),
         publications: obj.content.publications ?? [],
-        authors: obj.content.contributors.map(author => {
+        authors: obj.content.contributors.map((author) => {
           const names = author.name.split(',');
-          const formattedName = `${names[names.length - 1]} ${names[0][0].toUpperCase()}`;
+          const formattedName = `${
+            names[names.length - 1]
+          } ${names[0][0].toUpperCase()}`;
           return {
             fullName: author.name,
-            formattedName
+            formattedName,
           };
-        })
+        }),
       };
     } catch (e) {
-      console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`)
+      console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
     }
-  }
+  };
 }

@@ -20,7 +20,9 @@
   <a
     class="vf-button vf-button--primary vf-button--outline vf-button--sm"
     style="transform: translateY(-25%); flex-shrink: 0"
-    href="mailto:wrangler-team@data.humancellatlas.org?subject=Add a project to the HCA Project Catalogue"
+    href="mailto:{{
+      wranglerEmail
+    }}?subject=Add a project to the HCA Project Catalogue"
   >
     Add a project
   </a>
@@ -50,7 +52,7 @@
   </defs>
 </svg>
 
-<ng-container *ngIf="(projects$ | async) as projects; else loading">
+<ng-container *ngIf="projects$ | async as projects; else loading">
   <p class="vf-text-body vf-text-body--3">
     Showing <strong>{{ projects.length }}</strong> out of
     <strong>{{ totalProjects }}</strong> projects
@@ -211,7 +213,7 @@
 </ng-template>
 <p>
   Have feedback or want to suggest a project for the HCA Project Catalogue?
-  <a class="vf-link" href="mailto:?subject=" target="_blank"
+  <a class="vf-link" href="mailto:{{wranglerEmail}}?subject=Feedback about the HCA Project Catalogue" target="_blank"
     >Email the data wrangling team</a
   >.
 </p>

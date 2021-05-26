@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   ingestApiUrl: 'http://localhost:8080',
   catalogueEndpoint: '/projects/search/catalogue?page=0&size=200',
+  wranglerEmail: 'wrangler-team@data.humancellatlas.org',
 };
 
 /*
