@@ -45,8 +45,6 @@ export class FiltersComponent implements OnInit {
   }
 
   triggerSearch($event) {
-    // interval(500).subscribe(x => {
     this.valueSearched.emit($event.target.value);
-    // });
   }
 }

@@ -6,6 +6,11 @@ interface Publication {
   authors: string[];
 }
 
+export interface Author {
+  fullName: string;
+  formattedName: string;
+}
+
 export interface Project {
   uuid: string;
   dcpUrl: string;
@@ -20,5 +25,5 @@ export interface Project {
   egaStudiesAccessions: string[];
   egaDatasetsAccessions: string[];
   publications: Publication[];
-  authors: string[];
+  authors: Author[];
 }
