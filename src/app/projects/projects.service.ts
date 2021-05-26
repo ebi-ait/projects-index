@@ -33,7 +33,7 @@ export class ProjectsService {
         uuid: obj.uuid.uuid,
         dcpUrl: obj.dcp_url,
         addedToIndex: obj.added_to_index,
-        date: this.formatDate(obj.added_to_index),
+        date: obj.added_to_index ? this.formatDate(obj.added_to_index) : '-',
         title: obj.content.project_core.project_title,
         organs: obj.organ?.ontologies?.map(organ => organ.ontology_label) ?? [],
         technologies: obj.technology?.ontologies?.map(tech => tech.ontology_label) ?? [],
