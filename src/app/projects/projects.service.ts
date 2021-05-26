@@ -27,6 +27,11 @@ export class ProjectsService {
     timeZone: 'utc',
   })
 
+  captureRegexGroups = (regex: RegExp, strings: string[]) =>
+    strings.map((str) => regex.exec(str))
+      .filter((match) => match && match.length) ??
+      [].map((match) => match[1])
+
   formatProject = (obj: any): Project => {
     try {
       return {
@@ -48,15 +53,9 @@ export class ProjectsService {
         geoAccessions: obj.content.geo_series_accessions ?? [],
         arrayExpressAccessions: obj.content.array_expobjs_accessions ?? [],
         egaStudiesAccessions:
-          obj.content.supplementary_links
-            ?.map((link) => /.*\/studies\/(EGAS\d*).*/i.exec(link))
-            .filter((match) => match && match.length) ??
-          [].map((match) => match[1]),
+          this.captureRegexGroups(/.*\/studies\/(EGAS\d*).*/i, obj.content.supplementary_links || []),
         egaDatasetsAccessions:
-          obj.content.supplementary_links
-            ?.map((link) => /.*\/studies\/(EGAD\d*).*/i.exec(link))
-            .filter((match) => match && match.length) ??
-          [].map((match) => match[1]),
+          this.captureRegexGroups( /.*\/studies\/(EGAD\d*).*/i, obj.content.supplementary_links || []),
         publications: obj.content.publications ?? [],
         authors: obj.content.contributors.map(author => {
           const names = author.name.split(',');
