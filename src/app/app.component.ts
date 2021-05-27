@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'projects-index';
 
   isAboutPage(): boolean {
     var url = window.location.href;
