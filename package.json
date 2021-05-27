@@ -12,7 +12,7 @@
     "start:prod": "ng serve -c production",
     "start:staging": "ng serve -c staging",
     "build": "ng build -c production",
-    "test": "ng test --watch false",
+    "test": "ng test --watch false --browsers=ChromeHeadlessCustom",
     "test:watch": "ng test",
     "lint": "ng lint",
     "e2e": "ng ../e2e"
