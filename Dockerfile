@@ -8,6 +8,6 @@ RUN npm install && npm run test && npm run build
 FROM nginxinc/nginx-unprivileged:1.17.2-alpine
 
 COPY docker-assets/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/dist/ /usr/share/nginx/html/humancellatlas/project-catalogue
+COPY --from=builder /app/dist/projects-index /usr/share/nginx/html/humancellatlas/project-catalogue
 
 USER 101
