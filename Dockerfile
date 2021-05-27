@@ -1,8 +1,7 @@
-FROM quay.io/ebi-ait/ingest-base-images:trion_ng-cli-karma_11.2.6 as builder
+FROM quay.io/ebi-ait/ingest-base-images:trion_ng-cli-karma_12.0.0 as builder
 
 WORKDIR /app
 COPY . /app
-ENV NODE_ENV production
 RUN npm install -g @angular/cli
 RUN npm install && npm run test && npm run build
 

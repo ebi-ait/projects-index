@@ -27,7 +27,6 @@
   </a>
 </div>
 
-<!--todo: add the sorting and filtering stuff here-->
 <app-filters
   [organs]="organs"
   [technologies]="technologies"
@@ -170,12 +169,7 @@
                 </li>
               </ul>
             </li>
-            <li
-              *ngIf="
-                project.egaStudiesAccessions?.length ||
-                project.egaDatasetsRegex?.length
-              "
-            >
+            <li *ngIf="project.egaStudiesAccessions?.length">
               EGA:
               <ul class="comma-list">
                 <li *ngFor="let accession of project.egaStudiesAccessions">
@@ -183,7 +177,7 @@
                     class="vf-link"
                     href="https://ega-archive.org/studies/{{ accession }}"
                     target="_blank"
-                    >{{ accession }}}</a
+                    >{{ accession }}</a
                   >
                 </li>
                 <li *ngFor="let accession of project.egaDatasetsAccessions">
@@ -212,7 +206,12 @@
 </ng-template>
 <p>
   Have feedback or want to suggest a project for the HCA Project Catalogue?
-  <a class="vf-link" href="mailto:{{wranglerEmail}}?subject=Feedback about the HCA Project Catalogue" target="_blank"
+  <a
+    class="vf-link"
+    href="mailto:{{
+      wranglerEmail
+    }}?subject=Feedback about the HCA Project Catalogue"
+    target="_blank"
     >Email the data wrangling team</a
   >.
 </p>

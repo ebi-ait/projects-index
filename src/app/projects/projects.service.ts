@@ -28,15 +28,16 @@ export class ProjectsService {
   captureRegexGroups = (regex: RegExp, strings: string[]) =>
     strings
       .map((str) => regex.exec(str))
-      .filter((match) => match && match.length) ?? [].map((match) => match[1]);
+      .filter((match) => match && match.length)
+      .map((match) => match[1]);
 
   formatProject = (obj: any): Project => {
     try {
       return {
         uuid: obj.uuid.uuid,
         dcpUrl: obj.dcp_url,
-        addedToIndex: obj.added_to_index,
-        date: obj.publishedToCatalogue ? this.formatDate(obj.publishedToCatalogue) : '-',
+        addedToIndex: obj.cataloguedDate,
+        date: obj.cataloguedDate ? this.formatDate(obj.cataloguedDate) : '-',
         title: obj.content.project_core.project_title,
         organs:
           obj.organ?.ontologies?.map((organ) => organ.ontology_label) ?? [],
@@ -60,7 +61,7 @@ export class ProjectsService {
           /.*\/studies\/(EGAD\d*).*/i,
           obj.content.supplementary_links || []
         ),
-        publications: obj.content.publications ?? [],
+        publications: obj.publicationsInfo ?? [],
         authors: obj.content.contributors.map((author) => {
           const names = author.name.split(',');
           const formattedName = `${
