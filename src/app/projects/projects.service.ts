@@ -35,7 +35,7 @@ export class ProjectsService {
       return {
         uuid: obj.uuid.uuid,
         dcpUrl: obj.dcp_url,
-        addedToIndex: obj.added_to_index,
+        addedToIndex: obj.cataloguedDate,
         date: obj.cataloguedDate ? this.formatDate(obj.cataloguedDate) : '-',
         title: obj.content.project_core.project_title,
         organs:
