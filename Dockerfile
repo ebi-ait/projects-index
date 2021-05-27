@@ -1,10 +1,10 @@
-FROM ebiwd/node-bower-gulp:12 as builder
+FROM quay.io/ebi-ait/ingest-base-images:trion_ng-cli-karma_11.2.6 as builder
 
 WORKDIR /app
 COPY . /app
 ENV NODE_ENV production
-RUN yarn install && yarn build -c production && yarn test
-RUN cp data/data.json dist/data.json
+RUN npm install -g @angular/cli
+RUN npm install && npm run test && npm run build
 
 FROM nginxinc/nginx-unprivileged:1.17.2-alpine
 
