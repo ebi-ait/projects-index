@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projects-index';
+
+  isAboutPage(): boolean {
+    var url = window.location.href;
+    var lastPart = url.substr(url.lastIndexOf('/') + 1);
+
+    return lastPart === "about" ?? false
+  }
 }
