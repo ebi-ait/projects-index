@@ -60,7 +60,7 @@ export class ProjectsService {
           /.*\/studies\/(EGAD\d*).*/i,
           obj.content.supplementary_links || []
         ),
-        publications: obj.content.publications ?? [],
+        publications: obj.publicationsInfo ?? [],
         authors: obj.content.contributors.map((author) => {
           const names = author.name.split(',');
           const formattedName = `${
