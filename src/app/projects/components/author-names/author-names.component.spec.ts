@@ -15,6 +15,7 @@ describe('AuthorNamesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AuthorNamesComponent);
     component = fixture.componentInstance;
+    component.authors = [];
     fixture.detectChanges();
   });
 
