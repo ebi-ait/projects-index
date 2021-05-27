@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../projects.service';
 import { Project } from '../project';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map, startWith, switchMap, tap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 
 interface Filters {
@@ -161,12 +161,6 @@ export class ProjectsListComponent implements OnInit {
       organ: $selectedOrgan,
     });
   }
-
-  // resetDisplayProjects() {
-  //   this.displayProjects = this.projects;
-  //   //todo: ask Gabs if we want the sorting to be retained in these cases
-  //   this.displayProjects.sort(this.sortByDate(this.recentProjectsFirst));
-  // }
 
   filterByLocation($selectedLocation: string = ''): void {
     this.filters.next({

@@ -5,8 +5,6 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Project } from './project';
 
-// todo: fix up this service
-
 @Injectable()
 export class ProjectsService {
   constructor(private http: HttpClient) {}

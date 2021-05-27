@@ -1,6 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { interval } from 'rxjs';
-import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-filters',
