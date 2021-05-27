@@ -3,7 +3,7 @@ FROM quay.io/ebi-ait/ingest-base-images:trion_ng-cli-karma_12.0.0 as builder
 WORKDIR /app
 COPY . /app
 RUN npm install -g @angular/cli
-RUN npm install && ng test --watch false && npm run build
+RUN npm install && ng run test && npm run build
 
 FROM nginxinc/nginx-unprivileged:1.17.2-alpine
 
