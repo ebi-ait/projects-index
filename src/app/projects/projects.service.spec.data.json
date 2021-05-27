@@ -13,12 +13,8 @@
           "supplementary_links": [
             "https://www.ebi.ac.uk/gxa/sc/experiments/E-GEOD-81547/Results"
           ],
-          "insdc_project_accessions": [
-            "SRP075496"
-          ],
-          "geo_series_accessions": [
-            "GSE81547"
-          ],
+          "insdc_project_accessions": ["SRP075496"],
+          "geo_series_accessions": ["GSE81547"],
           "publications": [
             {
               "authors": [
@@ -170,4 +166,3 @@
     ]
   }
 }
-

@@ -170,11 +170,7 @@
                 </li>
               </ul>
             </li>
-            <li
-              *ngIf="
-                project.egaStudiesAccessions?.length
-              "
-            >
+            <li *ngIf="project.egaStudiesAccessions?.length">
               EGA:
               <ul class="comma-list">
                 <li *ngFor="let accession of project.egaStudiesAccessions">
@@ -211,7 +207,12 @@
 </ng-template>
 <p>
   Have feedback or want to suggest a project for the HCA Project Catalogue?
-  <a class="vf-link" href="mailto:{{wranglerEmail}}?subject=Feedback about the HCA Project Catalogue" target="_blank"
+  <a
+    class="vf-link"
+    href="mailto:{{
+      wranglerEmail
+    }}?subject=Feedback about the HCA Project Catalogue"
+    target="_blank"
     >Email the data wrangling team</a
   >.
 </p>
