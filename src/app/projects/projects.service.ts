@@ -28,7 +28,7 @@ export class ProjectsService {
   captureRegexGroups = (regex: RegExp, strings: string[]) =>
     strings
       .map((str) => regex.exec(str))
-      .filter((match) => match && match.length) ?? [].map((match) => match[1]);
+      .filter((match) => match && match.length).map((match) => match[1]);
 
   formatProject = (obj: any): Project => {
     try {

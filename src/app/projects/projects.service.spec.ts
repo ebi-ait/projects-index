@@ -3,7 +3,6 @@ import { TestBed } from '@angular/core/testing';
 import { ProjectsService } from './projects.service';
 import { HttpClientTestingModule, HttpTestingController } from "@angular/common/http/testing";
 import { HttpClient } from "@angular/common/http";
-import { Project } from "./project";
 import { environment } from "../../environments/environment";
 import testIngestProjects from './projects.service.spec.data.json';
 

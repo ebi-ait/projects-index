@@ -172,8 +172,7 @@
             </li>
             <li
               *ngIf="
-                project.egaStudiesAccessions?.length ||
-                project.egaDatasetsRegex?.length
+                project.egaStudiesAccessions?.length
               "
             >
               EGA:
@@ -183,7 +182,7 @@
                     class="vf-link"
                     href="https://ega-archive.org/studies/{{ accession }}"
                     target="_blank"
-                    >{{ accession }}}</a
+                    >{{ accession }}</a
                   >
                 </li>
                 <li *ngFor="let accession of project.egaDatasetsAccessions">
