@@ -11,7 +11,7 @@
     "start:dev": "ng serve -c dev",
     "start:prod": "ng serve -c production",
     "start:staging": "ng serve -c staging",
-    "build": "ng build",
+    "build": "ng build -c production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng ../e2e"
