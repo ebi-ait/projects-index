@@ -1,11 +1,11 @@
-<main *ngIf="isAboutPage()" id="root" class="vf-body | vf-stack vf-stack--400">
-  <nav class="vf-breadcrumbs" aria-label="Breadcrumb">
+  <nav *ngIf="isAboutPage()" class="vf-breadcrumbs" aria-label="Breadcrumb">
     <ul class="vf-breadcrumbs__list | vf-list vf-list--inline">
       <li class="vf-breadcrumbs__item"><a routerLink="/" class="vf-breadcrumbs__link">HCA Project Catalogue </a></li>
       <li class="vf-breadcrumbs__item" aria-current="location">About</li>
     </ul>
   </nav>
-</main>
+
+  <br>
 
 <app-global-header></app-global-header>
 <app-feedback></app-feedback>
