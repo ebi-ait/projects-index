@@ -53,6 +53,14 @@ export class ProjectsListComponent implements OnInit {
 
     this.currentPage$ = this.pagination.pipe(map(({currentPage}) => currentPage));
 
+    this.pagination.subscribe(() => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    });
+
     this.projects$ = this.projectService.getProjects().pipe(
       switchMap((projects: Project[]) =>
         this.filters.pipe(
