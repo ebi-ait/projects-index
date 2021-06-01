@@ -1,0 +1,8 @@
+.vf-hero-hca {
+  --vf-hero--spacing: 2rem;
+  background-image: url(~src/assets/header1.png);
+  margin-bottom: 2rem;
+  margin-bottom: var(--vf-hero--spacing, 2rem);
+  padding: 2rem 0;
+  padding: var(--vf-hero--spacing, 2rem) 0;
+}
