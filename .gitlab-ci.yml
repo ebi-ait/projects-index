@@ -36,7 +36,7 @@ container_scanning:
 deploy_to_hh_wp_dev:
   stage: deploy_dev
   only:
-    - master
+    - dev
   variables:
     NAMESPACE: static-sites-dev
     KUBE_CONFIG: $HH_WP_KUBE_CONFIG
@@ -45,7 +45,7 @@ deploy_to_hh_wp_dev:
 deploy_to_hx_wp_dev:
   stage: deploy_dev
   only:
-    - master
+    - dev
   variables:
     NAMESPACE: static-sites-dev
     KUBE_CONFIG: $HX_WP_KUBE_CONFIG
@@ -54,7 +54,7 @@ deploy_to_hx_wp_dev:
 deploy_to_hh_wp_prod:
   stage: deploy_prod
   only:
-    - tags
+    - master
   variables:
     NAMESPACE: static-sites-prod
     KUBE_CONFIG: $HH_WP_KUBE_CONFIG
@@ -63,7 +63,7 @@ deploy_to_hh_wp_prod:
 deploy_to_hx_wp_prod:
   stage: deploy_prod
   only:
-    - tags
+    - master
   variables:
     NAMESPACE: static-sites-prod
     KUBE_CONFIG: $HX_WP_KUBE_CONFIG
