@@ -9,7 +9,7 @@ spec:
         - name: humancellatlas-project-catalogue
           readinessProbe:
             httpGet:
-              path: /humancellatlas/project-catalogue/data.json
+              path: /humancellatlas/project-catalogue/index.html
               port: 8080
             initialDelaySeconds: 5
             timeoutSeconds: 1
