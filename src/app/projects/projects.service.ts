@@ -35,7 +35,7 @@ export class ProjectsService {
     try {
       return {
         uuid: obj.uuid.uuid,
-        dcpUrl: obj.dcp_url,
+        dcpUrl: obj.wranglingState === 'Published in DCP' && `https://data.humancellatlas.org/explore/projects/${obj.uuid.uuid}`,
         addedToIndex: obj.cataloguedDate,
         date: obj.cataloguedDate ? this.formatDate(obj.cataloguedDate) : '-',
         title: obj.content.project_core.project_title,
