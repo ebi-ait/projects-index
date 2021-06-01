@@ -13,6 +13,11 @@ interface Filters {
   recentFirst: boolean;
 }
 
+interface Pagination {
+  itemsPerPage: number;
+  currentPage: number;
+}
+
 @Component({
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
@@ -26,6 +31,10 @@ export class ProjectsListComponent implements OnInit {
   technologies: string[];
   wranglerEmail: string = environment.wranglerEmail;
 
+  private pagination: BehaviorSubject<Pagination>;
+  currentPage$: Observable<number>;
+  totalPages: number;
+
   constructor(private projectService: ProjectsService) {}
 
   ngOnInit(): void {
@@ -37,6 +46,13 @@ export class ProjectsListComponent implements OnInit {
       recentFirst: true,
     });
 
+    this.pagination = new BehaviorSubject<Pagination>({
+      itemsPerPage: 20,
+      currentPage: 1
+    });
+
+    this.currentPage$ = this.pagination.pipe(map(({currentPage}) => currentPage));
+
     this.projects$ = this.projectService.getProjects().pipe(
       switchMap((projects: Project[]) =>
         this.filters.pipe(
@@ -44,6 +60,7 @@ export class ProjectsListComponent implements OnInit {
             this.populateOrgans(projects);
             this.populateTechnologies(projects);
             this.totalProjects = projects.length;
+            this.totalPages = Math.ceil(projects.length / this.pagination.getValue().itemsPerPage);
           }),
           map((filters: Filters) =>
             projects
@@ -57,6 +74,15 @@ export class ProjectsListComponent implements OnInit {
                 return a.addedToIndex <= b.addedToIndex ? -1 : 1;
               })
           )
+        )
+      ),
+      switchMap((projects: Project[]) =>
+        this.pagination.pipe(
+          map(({ itemsPerPage, currentPage}) => {
+            const startIndex = Math.min(itemsPerPage * (currentPage - 1), projects.length - itemsPerPage);
+            console.log(startIndex);
+            return projects.slice(startIndex, startIndex + itemsPerPage);
+          })
         )
       )
     );
@@ -127,17 +153,17 @@ export class ProjectsListComponent implements OnInit {
   }
 
   populateOrgans(projects): void {
-    this.organs = <string[]>(
+    this.organs = ((
       [...new Set(projects.map((project) => project.organs).flat())].sort()
-    );
+    ) as string[]);
   }
 
   populateTechnologies(projects): void {
-    this.technologies = <string[]>(
+    this.technologies = ((
       [
         ...new Set(projects.map((project) => project.technologies).flat()),
       ].sort()
-    );
+    ) as string[]);
   }
 
   toggleDateSort(): void {
@@ -173,6 +199,15 @@ export class ProjectsListComponent implements OnInit {
     this.filters.next({
       ...this.filters.getValue(),
       searchVal: $search,
+    });
+  }
+
+  changePage($pageNumber: number): void {
+    if ((($pageNumber - 1) * this.pagination.getValue().itemsPerPage) > this.totalProjects) { return; }
+
+    this.pagination.next({
+      ...this.pagination.getValue(),
+      currentPage: $pageNumber
     });
   }
 }
