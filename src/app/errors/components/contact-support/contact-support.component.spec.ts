@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ErrorJavascriptComponent } from './error-javascript.component';
+import { ContactSupportComponent } from './contact-support.component';
 
-describe('ErrorJavascriptComponent', () => {
-  let component: ErrorJavascriptComponent;
-  let fixture: ComponentFixture<ErrorJavascriptComponent>;
+describe('ContactSupportComponent', () => {
+  let component: ContactSupportComponent;
+  let fixture: ComponentFixture<ContactSupportComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ErrorJavascriptComponent ]
+      declarations: [ ContactSupportComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ErrorJavascriptComponent);
+    fixture = TestBed.createComponent(ContactSupportComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

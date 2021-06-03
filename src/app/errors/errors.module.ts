@@ -6,13 +6,13 @@ import { HttpErrorInterceptor } from './http-error.interceptor';
 import { ErrorsRoutingModule } from './errors-routing.module';
 import { ErrorServerComponent } from './error-server/error-server.component';
 import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
-import { ErrorJavascriptComponent } from './error-javascript/error-javascript.component';
 import { ErrorGeneralComponent } from './error-general/error-general.component';
+import { ContactSupportComponent } from './components/contact-support/contact-support.component';
 
 
 
 @NgModule({
-  declarations: [ErrorServerComponent, ErrorNotFoundComponent, ErrorJavascriptComponent, ErrorGeneralComponent],
+  declarations: [ErrorServerComponent, ErrorNotFoundComponent, ErrorGeneralComponent, ContactSupportComponent],
   imports: [CommonModule, ErrorsRoutingModule],
   providers: [
     {
