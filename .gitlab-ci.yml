@@ -16,7 +16,6 @@ build_dev:
     - dind
   only:
     - master
-    - test-build-dev
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker build -t $IMAGE_NAME --build-arg DEPLOYMENT_ENV=staging .
@@ -27,13 +26,10 @@ build_prod:
   tags:
     - dind
   only:
-#    - tags
-    - test-build-prod
+    - tags
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-#    TODO uncomment after testing
-#    - export DEV_IMAGE_NAME=$CI_REGISTRY_IMAGE/master:$CI_COMMIT_SHA
-    - export DEV_IMAGE_NAME=$CI_REGISTRY_IMAGE/test-build-dev:$CI_COMMIT_SHA
+    - export DEV_IMAGE_NAME=$CI_REGISTRY_IMAGE/master:$CI_COMMIT_SHA
     - docker pull $DEV_IMAGE_NAME || true
     - docker build --cache-from $DEV_IMAGE_NAME -t $IMAGE_NAME --build-arg DEPLOYMENT_ENV=prod .
     - docker push $IMAGE_NAME
