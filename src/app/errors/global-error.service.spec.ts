@@ -1,12 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
 import { GlobalErrorService } from './global-error.service';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('GlobalErrorService', () => {
   let service: GlobalErrorService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({imports: [RouterTestingModule], providers: [GlobalErrorService]});
     service = TestBed.inject(GlobalErrorService);
   });
 
