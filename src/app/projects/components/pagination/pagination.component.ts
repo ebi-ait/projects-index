@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
-
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 interface PaginationEvent {
   itemsPerPage: number;
@@ -10,7 +9,7 @@ interface PaginationEvent {
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.css']
+  styleUrls: ['./pagination.component.css'],
 })
 export class PaginationComponent implements OnInit {
   @Input() items: any[];
@@ -20,7 +19,7 @@ export class PaginationComponent implements OnInit {
   private currentPage: number;
   private totalPages: number;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.itemsPerPage = 20;
@@ -29,17 +28,19 @@ export class PaginationComponent implements OnInit {
   }
 
   changePage($pageNumber: number): void {
-    if ((($pageNumber - 1) * this.itemsPerPage) > this.items.length) { return; }
+    if (($pageNumber - 1) * this.itemsPerPage > this.items.length) {
+      return;
+    }
 
     this.paginateItems.emit({
       currentPage: $pageNumber,
-      itemsPerPage: this.itemsPerPage
+      itemsPerPage: this.itemsPerPage,
     });
 
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   }
 }

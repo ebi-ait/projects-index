@@ -9,23 +9,26 @@ import { ErrorNotFoundComponent } from './error-not-found/error-not-found.compon
 import { ErrorGeneralComponent } from './error-general/error-general.component';
 import { ContactSupportComponent } from './components/contact-support/contact-support.component';
 
-
-
 @NgModule({
-  declarations: [ErrorServerComponent, ErrorNotFoundComponent, ErrorGeneralComponent, ContactSupportComponent],
+  declarations: [
+    ErrorServerComponent,
+    ErrorNotFoundComponent,
+    ErrorGeneralComponent,
+    ContactSupportComponent,
+  ],
   imports: [CommonModule, ErrorsRoutingModule],
   providers: [
     {
       // processes all errors
       provide: ErrorHandler,
-      useClass: GlobalErrorService
+      useClass: GlobalErrorService,
     },
     {
       // interceptor for HTTP errors
       provide: HTTP_INTERCEPTORS,
       useClass: HttpErrorInterceptor,
-      multi: true // multiple interceptors are possible
-    }
-  ]
+      multi: true, // multiple interceptors are possible
+    },
+  ],
 })
-export class ErrorsModule { }
+export class ErrorsModule {}

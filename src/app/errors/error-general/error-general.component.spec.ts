@@ -8,9 +8,8 @@ describe('ErrorGeneralComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ErrorGeneralComponent ]
-    })
-    .compileComponents();
+      declarations: [ErrorGeneralComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -16,7 +16,13 @@ import { ErrorsModule } from './errors/errors.module';
     AboutComponent,
     FeedbackComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule, ErrorsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ProjectsModule,
+    ErrorsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
