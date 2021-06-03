@@ -27,7 +27,7 @@ build_prod:
   tags:
     - dind
   only:
-    - tags
+#    - tags
     - test-build-prod
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
