@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
+import { ErrorsModule } from './errors/errors.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { ProjectsModule } from './projects/projects.module';
     AboutComponent,
     FeedbackComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule, ErrorsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
