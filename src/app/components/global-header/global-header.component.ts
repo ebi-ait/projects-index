@@ -23,18 +23,18 @@ export class GlobalHeaderComponent implements OnInit {
   get headerTitle() {
       if (this.activatedRoute.includes('about')) {
         return 'About the Catalogue';
-      } else {
-        return 'HCA Project Catalogue';
       }
+      
+      return 'HCA Project Catalogue';
   }
-
+  
   get headerText() {
     if (this.activatedRoute.includes('about')) {
       this.showAboutLink = false;
       return 'Aims, eligibility criteria and selection process';
-    } else {
-      this.showAboutLink = true;
-      return 'A comprehensive list of cellular resolution datasets for the Human Cell Atlas.';
     }
+    
+    this.showAboutLink = true;
+    return 'A comprehensive list of cellular resolution datasets for the Human Cell Atlas.';
   }
 }
