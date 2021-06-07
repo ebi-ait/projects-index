@@ -10,13 +10,26 @@ stages:
   - deploy_dev
   - deploy_prod
 
-build:
+build_dev:
   stage: build
   tags:
     - dind
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-    - docker build -t $IMAGE_NAME .
+    - docker build -t $IMAGE_NAME --build-arg DEPLOYMENT_ENV=staging .
+    - docker push $IMAGE_NAME
+
+build_prod:
+  stage: build
+  tags:
+    - dind
+  only:
+    - tags
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - export DEV_IMAGE_NAME=$CI_REGISTRY_IMAGE/master:$CI_COMMIT_SHA
+    - docker pull $DEV_IMAGE_NAME || true
+    - docker build --cache-from $DEV_IMAGE_NAME -t $IMAGE_NAME --build-arg DEPLOYMENT_ENV=prod .
     - docker push $IMAGE_NAME
 
 container_scanning:

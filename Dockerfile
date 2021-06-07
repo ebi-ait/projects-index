@@ -1,9 +1,14 @@
 FROM quay.io/ebi-ait/ingest-base-images:trion_ng-cli-karma_12.0.0 as builder
 
+ARG DEPLOYMENT_ENV
+ENV DEPLOYMENT_ENV $DEPLOYMENT_ENV
+RUN echo "Environment: ${DEPLOYMENT_ENV}"
+
 WORKDIR /app
 COPY . /app
+
 RUN npm install -g @angular/cli
-RUN npm install && npm run test && npm run build
+RUN npm install && npm run test && npm run build-${DEPLOYMENT_ENV}
 
 FROM nginxinc/nginx-unprivileged:1.17.2-alpine
 
