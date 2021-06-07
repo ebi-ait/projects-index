@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProjectsService } from '../projects.service';
 import { Project } from '../project';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map, switchMap, tap } from 'rxjs/operators';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { map, switchMap, takeUntil, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 
 interface Filters {
@@ -16,10 +16,11 @@ interface Filters {
 @Component({
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.css'],
+  styleUrls: ['./projects-list.component.css']
 })
-export class ProjectsListComponent implements OnInit {
-  projects$: Observable<Project[]>;
+export class ProjectsListComponent implements OnInit, OnDestroy {
+  private unsubscribe$ = new Subject<void>();
+  projects: Project[];
   totalProjects: number;
   filters: BehaviorSubject<Filters>;
   organs: string[];
@@ -37,7 +38,7 @@ export class ProjectsListComponent implements OnInit {
       recentFirst: true,
     });
 
-    this.projects$ = this.projectService.getProjects().pipe(
+    this.projectService.getProjects().pipe(
       switchMap((projects: Project[]) =>
         this.filters.pipe(
           tap(() => {
@@ -59,7 +60,14 @@ export class ProjectsListComponent implements OnInit {
           )
         )
       )
-    );
+    )
+    .pipe(takeUntil(this.unsubscribe$))
+    .subscribe(projects => this.projects = projects);
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 
   private filterProject(project, filters: Filters): boolean {
@@ -173,6 +181,17 @@ export class ProjectsListComponent implements OnInit {
     this.filters.next({
       ...this.filters.getValue(),
       searchVal: $search,
+    });
+
+    const LIMIT = 5;
+
+    window['dataLayer'].push({
+      event: "search_projects",
+      search_term: $search,
+      search_projects_term_and_uuids:
+        `term: ${$search}, results: ${this.projects.slice(0, LIMIT).map(dataPoint => dataPoint.uuid).join(",")}`,
+      search_projects_term_and_titles:
+        `term: ${$search}, results: ${this.projects.slice(0, LIMIT).map(dataPoint => dataPoint.title).join(",")}`,
     });
   }
 }

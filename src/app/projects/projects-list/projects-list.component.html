@@ -50,7 +50,7 @@
   </defs>
 </svg>
 
-<ng-container *ngIf="projects$ | async as projects; else loading">
+<ng-container *ngIf="projects; else loading">
   <p class="vf-text-body vf-text-body--3">
     Showing <strong>{{ projects.length }}</strong> out of
     <strong>{{ totalProjects }}</strong> projects
