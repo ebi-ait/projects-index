@@ -4,6 +4,7 @@ import { Project } from '../project';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { map, switchMap, takeUntil, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
+import { AnalyticsService } from 'src/app/services/analytics.service';
 
 interface Filters {
   organ: string;
@@ -27,7 +28,8 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
   technologies: string[];
   wranglerEmail: string = environment.wranglerEmail;
 
-  constructor(private projectService: ProjectsService) {}
+  constructor(private projectService: ProjectsService,
+              private analyticsService: AnalyticsService) {}
 
   ngOnInit(): void {
     this.filters = new BehaviorSubject<Filters>({
@@ -183,15 +185,6 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       searchVal: $search,
     });
 
-    const LIMIT = 5;
-
-    window['dataLayer'].push({
-      event: "search_projects",
-      search_term: $search,
-      search_projects_term_and_uuids:
-        `term: ${$search}, results: ${this.projects.slice(0, LIMIT).map(dataPoint => dataPoint.uuid).join(",")}`,
-      search_projects_term_and_titles:
-        `term: ${$search}, results: ${this.projects.slice(0, LIMIT).map(dataPoint => dataPoint.title).join(",")}`,
-    });
+    this.analyticsService.pushSearchTerms($search, this.projects);
   }
 }
