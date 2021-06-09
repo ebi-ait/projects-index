@@ -97,14 +97,13 @@
         <td class="vf-table__cell">
           <p style="margin-top: 0">{{ project.title }}</p>
           <app-author-names [authors]="project.authors"></app-author-names>
-          <p
+          <ng-container
             *ngFor="let publication of project.publications"
-            style="display: inline"
           >
             <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">{{
               publication.journalTitle
             }} </a>
-          </p>
+          </ng-container>
         </td>
         <td class="vf-table__cell">
           <ul class="comma-list">
