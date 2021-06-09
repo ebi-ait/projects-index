@@ -63,7 +63,7 @@ export class ProjectsService {
           obj.content.supplementary_links || []
         ),
         publications: obj.publicationsInfo ?? [],
-        authors: obj.content.contributors.map((author) => {
+        authors: obj.content.contributors?.map((author) => {
           const names = author.name.split(',');
           const formattedName = `${
             names[names.length - 1]
@@ -72,7 +72,7 @@ export class ProjectsService {
             fullName: author.name,
             formattedName,
           };
-        }),
+        }) || [],
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
