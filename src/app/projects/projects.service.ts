@@ -14,7 +14,8 @@ export class ProjectsService {
     return this.http.get<any>(this.URL).pipe(
       map((response) => {
         if (response) {
-          return response._embedded.projects.map(this.formatProject);
+          return response._embedded.projects.map(this.formatProject)
+            .filter(project => !!project);
         }
       })
     );
@@ -75,6 +76,7 @@ export class ProjectsService {
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
+      return null;
     }
   };
 }
