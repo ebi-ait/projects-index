@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
+import { WINDOW_PROVIDERS } from './services/window.provider';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ProjectsModule } from './projects/projects.module';
     FeedbackComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule],
-  providers: [],
+  providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
