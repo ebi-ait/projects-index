@@ -126,7 +126,7 @@
         </td>
 
         <td class="vf-table__cell">
-          {{project.cellCount}}<p *ngIf="!project.cellCount">-</p>
+          {{project.cellCount}}<p *ngIf="project.cellCount === undefined || project.cellCount === null">-</p>
         </td>
 
         <td class="vf-table__cell">
