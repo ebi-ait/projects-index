@@ -39,7 +39,7 @@ export class ProjectsService {
         dcpUrl: obj.wranglingState === 'Published in DCP' && `https://data.humancellatlas.org/explore/projects/${obj.uuid.uuid}`,
         addedToIndex: obj.cataloguedDate,
         date: obj.cataloguedDate ? this.formatDate(obj.cataloguedDate) : '-',
-        title: obj.content.project_core.project_title,
+        title: obj.content.project_core.project_title || (() => { throw new Error('No title'); })(),
         organs:
           obj.organ?.ontologies?.map((organ) => organ.ontology_label) ?? [],
         technologies:
