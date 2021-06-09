@@ -108,17 +108,13 @@
         </td>
         <td class="vf-table__cell">
           <ul class="comma-list">
-            <li *ngFor="let organ of project.organs">
-              {{ organ }}
-            </li>
+            <li *ngFor="let organ of project.organs">{{ organ }}</li>
           </ul>
           <p *ngIf="!project.organs.length">-</p>
         </td>
         <td class="vf-table__cell">
           <ul class="comma-list">
-            <li *ngFor="let technology of project.technologies">
-              {{ technology }}
-            </li>
+            <li *ngFor="let technology of project.technologies">{{ technology }}</li>
             <p *ngIf="!project.technologies.length">-</p>
           </ul>
         </td>
