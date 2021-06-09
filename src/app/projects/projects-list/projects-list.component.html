@@ -83,8 +83,8 @@
         <th class="vf-table__heading" scope="col">Project</th>
         <th class="vf-table__heading" scope="col">Organ</th>
         <th class="vf-table__heading" scope="col">Technology</th>
-        <th class="vf-table__heading" scope="col">Cell count</th>
-        <th class="vf-table__heading" scope="col">Data location</th>
+        <th class="vf-table__heading" scope="col">Cell Count</th>
+        <th class="vf-table__heading" scope="col">Data Location</th>
       </tr>
     </thead>
 
@@ -126,7 +126,7 @@
         </td>
 
         <td class="vf-table__cell">
-          {{project.cellCount}}
+          {{project.cellCount}}<p *ngIf="!project.cellCount">-</p>
         </td>
 
         <td class="vf-table__cell">
