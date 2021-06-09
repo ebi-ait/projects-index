@@ -52,7 +52,7 @@ export class ProjectsService {
           return accessions ?? [];
         })(),
         geoAccessions: obj.content.geo_series_accessions ?? [],
-        arrayExpressAccessions: obj.content.array_expobjs_accessions ?? [],
+        arrayExpressAccessions: obj.content.array_express_accessions ?? [],
         egaStudiesAccessions: this.captureRegexGroups(
           /.*\/studies\/(EGAS\d*).*/i,
           obj.content.supplementary_links || []
