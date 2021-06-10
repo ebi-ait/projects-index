@@ -98,29 +98,24 @@
         <td class="vf-table__cell">
           <p style="margin-top: 0">{{ project.title }}</p>
           <app-author-names [authors]="project.authors"></app-author-names>
-          <p
+          <ng-container
             *ngFor="let publication of project.publications"
-            style="display: inline"
           >
-            <a class="vf-link" href="{{ publication.url }}" target="_blank">{{
+            <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">{{
               publication.journalTitle
-            }}</a>
-          </p>
+            }} </a>
+          </ng-container>
         </td>
         <td class="vf-table__cell">
           <ul class="comma-list">
-            <li *ngFor="let organ of project.organs">
-              {{ organ }}
-            </li>
+            <li *ngFor="let organ of project.organs">{{ organ }}</li>
           </ul>
           <p *ngIf="!project.organs.length">-</p>
         </td>
 
         <td class="vf-table__cell">
           <ul class="comma-list">
-            <li *ngFor="let technology of project.technologies">
-              {{ technology }}
-            </li>
+            <li *ngFor="let technology of project.technologies">{{ technology }}</li>
             <p *ngIf="!project.technologies.length">-</p>
           </ul>
         </td>
