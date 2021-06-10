@@ -64,7 +64,7 @@ export class ProjectsService {
           obj.content.supplementary_links || []
         ),
         publications: obj.publicationsInfo ?? [],
-        authors: obj.content.contributors?.map((author) => {
+        authors: obj.content.contributors.map((author) => {
           const names = author.name.split(',');
           const formattedName = `${
             names[names.length - 1]
