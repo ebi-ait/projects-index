@@ -44,6 +44,7 @@ describe('ProjectsService', () => {
         'title',
         'organs',
         'technologies',
+        'cellCount',
         'enaAccessions',
         'geoAccessions',
         'arrayExpressAccessions',

@@ -83,6 +83,7 @@
         <th class="vf-table__heading" scope="col">Project</th>
         <th class="vf-table__heading" scope="col">Organ</th>
         <th class="vf-table__heading" scope="col">Technology</th>
+        <th class="vf-table__heading" scope="col">Cell count</th>
         <th class="vf-table__heading" scope="col">Data location</th>
       </tr>
     </thead>
@@ -114,6 +115,7 @@
           </ul>
           <p *ngIf="!project.organs.length">-</p>
         </td>
+
         <td class="vf-table__cell">
           <ul class="comma-list">
             <li *ngFor="let technology of project.technologies">
@@ -122,6 +124,11 @@
             <p *ngIf="!project.technologies.length">-</p>
           </ul>
         </td>
+
+        <td class="vf-table__cell">
+          <p>{{project.cellCount ? (project.cellCount | number) : '-' }}</p>
+        </td>
+
         <td class="vf-table__cell">
           <ul class="plain-list">
             <li *ngIf="project.enaAccessions.length">

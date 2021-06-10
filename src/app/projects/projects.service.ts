@@ -43,6 +43,7 @@ export class ProjectsService {
           obj.organ?.ontologies?.map((organ) => organ.ontology_label) ?? [],
         technologies:
           obj.technology?.ontologies?.map((tech) => tech.ontology_label) ?? [],
+        cellCount: obj.cellCount,
         // Temp fix until ena accessions fixed in core
         enaAccessions: (() => {
           const accessions = obj.content?.insdc_project_accessions;
