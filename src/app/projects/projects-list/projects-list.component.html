@@ -104,9 +104,10 @@
           <ng-container
             *ngFor="let publication of project.publications"
           >
-            <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">{{
-              publication.journalTitle
-            }} </a>
+            <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">
+              {{publication.journalTitle}}
+              <ng-container *ngIf="publication.journalTitle === 'bioRxiv'">(pre-publication)</ng-container>
+            </a>
           </ng-container>
         </td>
         <td class="vf-table__cell">
