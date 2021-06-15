@@ -50,7 +50,7 @@
   </defs>
 </svg>
 
-<ng-container *ngIf="projects$ | async as projects; else loading">
+<ng-container *ngIf="projects; else loading">
   <p class="vf-text-body vf-text-body--3">
     Showing <strong>{{ projects.length }}</strong> out of
     <strong>{{ totalProjects }}</strong> projects
@@ -83,6 +83,7 @@
         <th class="vf-table__heading" scope="col">Project</th>
         <th class="vf-table__heading" scope="col">Organ</th>
         <th class="vf-table__heading" scope="col">Technology</th>
+        <th class="vf-table__heading" scope="col">Cell count</th>
         <th class="vf-table__heading" scope="col">Data location</th>
       </tr>
     </thead>
@@ -97,31 +98,32 @@
         <td class="vf-table__cell">
           <p style="margin-top: 0">{{ project.title }}</p>
           <app-author-names [authors]="project.authors"></app-author-names>
-          <p
+          <ng-container
             *ngFor="let publication of project.publications"
-            style="display: inline"
           >
-            <a class="vf-link" href="{{ publication.url }}" target="_blank">{{
+            <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">{{
               publication.journalTitle
-            }}</a>
-          </p>
+            }} </a>
+          </ng-container>
         </td>
         <td class="vf-table__cell">
           <ul class="comma-list">
-            <li *ngFor="let organ of project.organs">
-              {{ organ }}
-            </li>
+            <li *ngFor="let organ of project.organs">{{ organ }}</li>
           </ul>
           <p *ngIf="!project.organs.length">-</p>
         </td>
+
         <td class="vf-table__cell">
           <ul class="comma-list">
-            <li *ngFor="let technology of project.technologies">
-              {{ technology }}
-            </li>
+            <li *ngFor="let technology of project.technologies">{{ technology }}</li>
             <p *ngIf="!project.technologies.length">-</p>
           </ul>
         </td>
+
+        <td class="vf-table__cell">
+          <p>{{project.cellCount ? (project.cellCount | number) : '-' }}</p>
+        </td>
+
         <td class="vf-table__cell">
           <ul class="plain-list">
             <li *ngIf="project.enaAccessions.length">

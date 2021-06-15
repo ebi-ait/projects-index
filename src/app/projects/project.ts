@@ -19,6 +19,7 @@ export interface Project {
   title: string;
   organs: string[];
   technologies: string[];
+  cellCount: number;
   enaAccessions: string[];
   geoAccessions: string[];
   arrayExpressAccessions: string[];

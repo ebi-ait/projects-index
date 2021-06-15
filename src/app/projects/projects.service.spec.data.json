@@ -136,6 +136,7 @@
         "accessionDate": null,
         "technology": null,
         "organ": null,
+        "cellCount": 1000,
         "dataAccess": null,
         "identifyingOrganisms": null,
         "publishedToCatalogue": true,

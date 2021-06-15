@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProjectsService } from '../projects.service';
 import { Project } from '../project';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map, switchMap, tap } from 'rxjs/operators';
+import { BehaviorSubject, Observable, Subject } from "rxjs";
+import { map, switchMap, takeUntil, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
+import { AnalyticsService } from 'src/app/services/analytics.service';
 
 interface Filters {
   organ: string;
@@ -21,10 +22,11 @@ interface Pagination {
 @Component({
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.css'],
+  styleUrls: ['./projects-list.component.css']
 })
-export class ProjectsListComponent implements OnInit {
-  projects$: Observable<Project[]>;
+export class ProjectsListComponent implements OnInit, OnDestroy {
+  private unsubscribe$ = new Subject<void>();
+  projects: Project[];
   totalProjects: number;
   filters: BehaviorSubject<Filters>;
   organs: string[];
@@ -35,7 +37,8 @@ export class ProjectsListComponent implements OnInit {
   currentPage$: Observable<number>;
   totalPages: number;
 
-  constructor(private projectService: ProjectsService) {}
+  constructor(private projectService: ProjectsService,
+              private analyticsService: AnalyticsService) {}
 
   ngOnInit(): void {
     this.filters = new BehaviorSubject<Filters>({
@@ -61,7 +64,7 @@ export class ProjectsListComponent implements OnInit {
       });
     });
 
-    this.projects$ = this.projectService.getProjects().pipe(
+    this.projectService.getProjects().pipe(
       switchMap((projects: Project[]) =>
         this.filters.pipe(
           tap(() => {
@@ -93,7 +96,14 @@ export class ProjectsListComponent implements OnInit {
           })
         )
       )
-    );
+    )
+    .pipe(takeUntil(this.unsubscribe$))
+    .subscribe(projects => this.projects = projects);
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 
   private filterProject(project, filters: Filters): boolean {
@@ -208,6 +218,8 @@ export class ProjectsListComponent implements OnInit {
       ...this.filters.getValue(),
       searchVal: $search,
     });
+
+    this.analyticsService.pushSearchTerms($search, this.projects);
   }
 
   changePage($pageNumber: number): void {
