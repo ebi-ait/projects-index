@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { PaginatedList, PaginatedProjects, Project } from './project';
+import { PaginatedProjects, Project } from './project';
 
 interface Filters {
   organ: string;

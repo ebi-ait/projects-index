@@ -1,8 +1,8 @@
-import { Component, EventEmitter, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProjectsService } from '../projects.service';
-import { PaginatedList, PaginatedProjects, Project } from '../project';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { map, switchMap, takeUntil, tap } from 'rxjs/operators';
+import { PaginatedProjects } from '../project';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { AnalyticsService } from 'src/app/services/analytics.service';
 import { PaginationEvent } from '../components/pagination/pagination.component';
