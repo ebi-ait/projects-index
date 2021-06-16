@@ -97,6 +97,7 @@ export class ProjectsService {
 
   setFilters(filters: Filters) {
     this.filters.next(filters);
+    this.changePage(1);
   }
 
   private getAllProjects(): Observable<Project[]> {

@@ -203,7 +203,7 @@
     </tbody>
   </table>
 
-  <app-pagination (page)="changePage($event)" [itemsPerPage]="projects.itemsPerPage" [totalItems]="projects.totalItems"></app-pagination>
+  <app-pagination (page)="changePage($event)" [itemsPerPage]="projects.itemsPerPage" [totalItems]="projects.totalItems" [currentPage]="projects.currentPage"></app-pagination>
 </ng-container>
 <ng-template #loading>
   <p>Loading...</p>

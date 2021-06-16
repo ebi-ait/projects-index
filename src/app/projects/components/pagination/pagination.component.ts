@@ -19,10 +19,10 @@ export interface PaginationEvent {
   styleUrls: ['./pagination.component.css'],
 })
 export class PaginationComponent implements OnInit, OnChanges {
-  currentPage: number;
   totalPages: number;
   @Input() totalItems: number;
   @Input() itemsPerPage: number;
+  @Input() currentPage: number;
   @Output() page = new EventEmitter<PaginationEvent>();
 
   constructor() {}
@@ -49,10 +49,8 @@ export class PaginationComponent implements OnInit, OnChanges {
       return;
     }
 
-    this.currentPage = pageNumber;
-
     this.page.emit({
-      currentPage: this.currentPage,
+      currentPage: pageNumber,
       itemsPerPage: this.itemsPerPage,
     });
   }
