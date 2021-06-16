@@ -34,9 +34,8 @@ describe('ProjectsService', () => {
 
   it('should return a list of correctly formatted projects', () => {
     const firstProject = testIngestProjects._embedded.projects[0];
-    service.retrieveProjects();
     const sub = service.projects$.subscribe((projects) => {
-      const project = projects[0];
+      const project = projects.items[0];
       const props = [
         'uuid',
         'dcpUrl',
@@ -73,6 +72,7 @@ describe('ProjectsService', () => {
       expect(project.uuid).toEqual(firstProject.uuid.uuid);
     });
 
+    service.retrieveProjects();
     const req = httpTestingController.expectOne(
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
@@ -82,7 +82,6 @@ describe('ProjectsService', () => {
   });
 
   it('should return an HTTP error', () => {
-    service.retrieveProjects();
     const sub = service.projects$.subscribe(
       (project) => {},
       (error) => {
@@ -90,6 +89,8 @@ describe('ProjectsService', () => {
         expect(error.message).toContain('400 bad request');
       }
     );
+
+    service.retrieveProjects();
     const req = httpTestingController.expectOne(
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
