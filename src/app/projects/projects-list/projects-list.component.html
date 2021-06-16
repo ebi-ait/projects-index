@@ -27,7 +27,7 @@
   </a>
 </div>
 
-<app-filters
+<app-filters *ngIf="projects"
   [organs]="projects.availableOrgans"
   [technologies]="projects.availableTechnologies"
   (selectedTechnology)="filterByTechnology($event)"
