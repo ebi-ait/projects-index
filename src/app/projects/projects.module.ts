@@ -5,10 +5,11 @@ import { AuthorNamesComponent } from './components/author-names/author-names.com
 import { FiltersComponent } from './components/filters/filters.component';
 import { ProjectsService } from './projects.service';
 import { ProjectsRoutingModule } from './projects-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [ProjectsListComponent, AuthorNamesComponent, FiltersComponent],
   providers: [ProjectsService],
-  imports: [CommonModule, ProjectsRoutingModule],
+  imports: [CommonModule, ProjectsRoutingModule, SharedModule],
 })
 export class ProjectsModule {}
