@@ -1,0 +1,35 @@
+<nav class="vf-pagination" aria-label="Pagination">
+  <ul class="vf-pagination__list">
+    <li class="vf-pagination__item vf-pagination__item--previous-page">
+      <a href="javascript:void(0);" class="vf-pagination__link" (click)="changePage(currentPage - 1)">
+        Previous<span class="vf-u-sr-only"> page</span>
+      </a>
+    </li>
+    <li class="vf-pagination__item">
+      <a href="javascript:void(0);" class="vf-pagination__link" (click)="changePage(1)">
+        1<span class="vf-u-sr-only"> page</span>
+      </a>
+    </li>
+    <li class="vf-pagination__item">
+      <span class="vf-pagination__label">...</span>
+    </li>
+    <li class="vf-pagination__item vf-pagination__item--is-active">
+          <span class="vf-pagination__label" aria-current="page">
+            <span class="vf-u-sr-only">Page </span>{{currentPage}}
+          </span>
+    </li>
+    <li class="vf-pagination__item">
+      <span class="vf-pagination__label">...</span>
+    </li>
+    <li class="vf-pagination__item" *ngIf="totalPages">
+      <a href="javascript:void(0);" class="vf-pagination__link" (click)="changePage(totalPages)">
+        {{totalPages}}<span class="vf-u-sr-only"> page</span>
+      </a>
+    </li>
+    <li class="vf-pagination__item vf-pagination__item--next-page">
+      <a href="javascript:void(0);" class="vf-pagination__link" (click)="changePage(currentPage + 1)">
+        Next<span class="vf-u-sr-only"> page</span>
+      </a>
+    </li>
+  </ul>
+</nav>

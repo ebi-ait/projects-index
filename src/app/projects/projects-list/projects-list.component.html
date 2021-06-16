@@ -28,8 +28,8 @@
 </div>
 
 <app-filters
-  [organs]="organs"
-  [technologies]="technologies"
+  [organs]="projects.availableOrgans"
+  [technologies]="projects.availableTechnologies"
   (selectedTechnology)="filterByTechnology($event)"
   (selectedDataLocation)="filterByLocation($event)"
   (selectedOrgan)="filterByOrgan($event)"
@@ -52,8 +52,8 @@
 
 <ng-container *ngIf="projects; else loading">
   <p class="vf-text-body vf-text-body--3">
-    Showing <strong>{{ projects.length }}</strong> out of
-    <strong>{{ totalProjects }}</strong> projects
+    Showing <strong>{{ projects.items.length }}</strong> out of
+    <strong>{{ projects.totalItems }}</strong> projects
   </p>
 
   <table
@@ -91,7 +91,7 @@
     <tbody class="vf-table__body" *ngIf="projects">
       <tr
         class="vf-table__row"
-        *ngFor="let project of projects"
+        *ngFor="let project of projects.items"
         key="{project.uuid}"
       >
         <td class="vf-table__cell">{{ project.date }}</td>
@@ -203,44 +203,7 @@
     </tbody>
   </table>
 
-  <ng-container *ngIf="currentPage$ | async as currentPage">
-    <nav class="vf-pagination" aria-label="Pagination">
-      <ul class="vf-pagination__list">
-        <li class="vf-pagination__item vf-pagination__item--previous-page">
-          <a href="javascript:void(0);" class="vf-pagination__link" (click)="changePage(currentPage - 1)">
-            Previous<span class="vf-u-sr-only"> page</span>
-          </a>
-        </li>
-        <li class="vf-pagination__item">
-          <a href="javascript:void(0);" class="vf-pagination__link" (click)="changePage(1)">
-            1<span class="vf-u-sr-only"> page</span>
-          </a>
-        </li>
-        <li class="vf-pagination__item">
-          <span class="vf-pagination__label">...</span>
-        </li>
-        <li class="vf-pagination__item vf-pagination__item--is-active">
-          <span class="vf-pagination__label" aria-current="page">
-            <span class="vf-u-sr-only">Page </span>{{currentPage}}
-          </span>
-        </li>
-        <li class="vf-pagination__item">
-          <span class="vf-pagination__label">...</span>
-        </li>
-        <li class="vf-pagination__item" *ngIf="totalPages">
-          <a href="javascript:void(0);" class="vf-pagination__link" (click)="changePage(totalPages)">
-            {{totalPages}}<span class="vf-u-sr-only"> page</span>
-          </a>
-        </li>
-        <li class="vf-pagination__item vf-pagination__item--next-page">
-          <a href="javascript:void(0);" class="vf-pagination__link" (click)="changePage(currentPage + 1)">
-            Next<span class="vf-u-sr-only"> page</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </ng-container>
-
+  <app-pagination (page)="changePage($event)" [itemsPerPage]="projects.itemsPerPage" [totalItems]="projects.totalItems"></app-pagination>
 </ng-container>
 <ng-template #loading>
   <p>Loading...</p>

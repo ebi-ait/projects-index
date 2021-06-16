@@ -28,3 +28,14 @@ export interface Project {
   publications: Publication[];
   authors: Author[];
 }
+export interface PaginatedList<T> {
+  items: T[];
+  currentPage: number;
+  itemsPerPage: number;
+  totalItems: number;
+}
+
+export interface PaginatedProjects extends PaginatedList<Project> {
+  availableTechnologies: string[];
+  availableOrgans: string[];
+}
