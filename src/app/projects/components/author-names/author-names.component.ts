@@ -10,7 +10,7 @@ export class AuthorNamesComponent implements OnInit {
   @Input()
   authors: Author[];
 
-  fullAuthorView: boolean = false;
+  fullAuthorView = false;
   formattedNames: string[];
 
   constructor() {}
