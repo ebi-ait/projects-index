@@ -44,13 +44,13 @@ export class ProjectsService {
     this.getAllProjects()
       .pipe(
         tap((projects) => {
-          this.availableOrgans = [
+          this.availableOrgans = (([
             ...new Set(projects.map((project) => project.organs).flat()),
-          ].sort() as string[];
+          ].sort()) as string[]);
 
-          this.availableTechnologies = [
+          this.availableTechnologies = (([
             ...new Set(projects.map((project) => project.technologies).flat()),
-          ].sort() as string[];
+          ].sort()) as string[]);
         }),
         switchMap((projects: Project[]) =>
           this.filters.pipe(
