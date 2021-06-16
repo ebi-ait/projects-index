@@ -19,6 +19,8 @@ export class ProjectsService {
 
   private projectsPerPage = 20;
   private currentPage = new BehaviorSubject<number>(1);
+  private availableTechnologies: string[];
+  private availableOrgans: string[];
   private filters = new BehaviorSubject<Filters>({
     organ: '',
     technology: '',
@@ -41,6 +43,15 @@ export class ProjectsService {
   retrieveProjects(): void {
     this.getAllProjects()
       .pipe(
+        tap((projects) => {
+          this.availableOrgans = [
+            ...new Set(projects.map((project) => project.organs).flat()),
+          ].sort() as string[];
+
+          this.availableTechnologies = [
+            ...new Set(projects.map((project) => project.technologies).flat()),
+          ].sort() as string[];
+        }),
         switchMap((projects: Project[]) =>
           this.filters.pipe(
             map((filters: Filters) =>
@@ -65,23 +76,13 @@ export class ProjectsService {
                 currentPage * this.projectsPerPage
               );
 
-              const availableOrgans = [
-                ...new Set(projects.map((project) => project.organs).flat()),
-              ].sort() as string[];
-
-              const availableTechnologies = [
-                ...new Set(
-                  projects.map((project) => project.technologies).flat()
-                ),
-              ].sort() as string[];
-
               return {
                 items: paginatedProjects,
                 currentPage,
                 itemsPerPage: this.projectsPerPage,
                 totalItems: projects.length,
-                availableOrgans,
-                availableTechnologies,
+                availableOrgans: this.availableOrgans,
+                availableTechnologies: this.availableTechnologies,
               };
             })
           )
