@@ -35,7 +35,7 @@ describe('ProjectsService', () => {
   it('should return a list of correctly formatted projects', () => {
     const firstProject = testIngestProjects._embedded.projects[0];
     service.retrieveProjects();
-    service.projects$.subscribe((projects) => {
+    const sub = service.projects$.subscribe((projects) => {
       const project = projects[0];
       const props = [
         'uuid',
@@ -78,11 +78,12 @@ describe('ProjectsService', () => {
     );
     expect(req.request.method).toEqual('GET');
     req.flush(testIngestProjects);
+    sub.unsubscribe();
   });
 
   it('should return an HTTP error', () => {
     service.retrieveProjects();
-    service.projects$.subscribe(
+    const sub = service.projects$.subscribe(
       (project) => {},
       (error) => {
         expect(error).toBeTruthy();
@@ -94,5 +95,6 @@ describe('ProjectsService', () => {
     );
     expect(req.request.method).toEqual('GET');
     req.flush(null, { status: 400, statusText: 'bad request' });
+    sub.unsubscribe();
   });
 });
