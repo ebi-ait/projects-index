@@ -7,7 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
-import { WINDOW_PROVIDERS } from './services/window.provider';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +16,13 @@ import { WINDOW_PROVIDERS } from './services/window.provider';
     AboutComponent,
     FeedbackComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule],
-  providers: [WINDOW_PROVIDERS],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ProjectsModule,
+    SharedModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
