@@ -34,7 +34,8 @@ describe('ProjectsService', () => {
 
   it('should return a list of correctly formatted projects', () => {
     const firstProject = testIngestProjects._embedded.projects[0];
-    service.getProjects().subscribe((projects) => {
+    service.retrieveProjects();
+    service.projects$.subscribe((projects) => {
       const project = projects[0];
       const props = [
         'uuid',
@@ -80,7 +81,8 @@ describe('ProjectsService', () => {
   });
 
   it('should return an HTTP error', () => {
-    service.getProjects().subscribe(
+    service.retrieveProjects();
+    service.projects$.subscribe(
       (project) => {},
       (error) => {
         expect(error).toBeTruthy();
