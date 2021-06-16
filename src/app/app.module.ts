@@ -8,6 +8,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
 import { WINDOW_PROVIDERS } from './services/window.provider';
+import { ExternalLinkComponent } from './shared/components/external-link/external-link.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { WINDOW_PROVIDERS } from './services/window.provider';
     GlobalHeaderComponent,
     AboutComponent,
     FeedbackComponent,
+    ExternalLinkComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule],
   providers: [WINDOW_PROVIDERS],
