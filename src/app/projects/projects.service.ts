@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
@@ -14,33 +14,33 @@ interface Filters {
 }
 
 @Injectable()
-export class ProjectsService {
+export class ProjectsService implements OnDestroy {
   private URL = `${environment.ingestApiUrl}${environment.catalogueEndpoint}`;
 
   private projectsPerPage = 20;
-  private currentPage = new BehaviorSubject<number>(1);
+  private currentPage: BehaviorSubject<number>;
   private availableTechnologies: string[];
   private availableOrgans: string[];
-  private filters = new BehaviorSubject<Filters>({
-    organ: '',
-    technology: '',
-    location: '',
-    searchVal: '',
-    recentFirst: true,
-  });
-
+  private filters: BehaviorSubject<Filters>;
   currentFilters: Filters;
 
   private projects = new Subject<PaginatedProjects>();
   projects$ = this.projects.asObservable();
 
   constructor(private http: HttpClient) {
+    this.filters = new BehaviorSubject<Filters>({
+      organ: '',
+      technology: '',
+      location: '',
+      searchVal: '',
+      recentFirst: true,
+    });
     this.filters.subscribe((filters) => {
       this.currentFilters = filters;
     });
-  }
 
-  retrieveProjects(): void {
+    this.currentPage = new BehaviorSubject(1);
+
     this.changePage(1);
     this.setFilters({
       organ: '',
@@ -50,6 +50,16 @@ export class ProjectsService {
       recentFirst: true,
     });
 
+    this.retrieveProjects();
+  }
+
+  ngOnDestroy(): void {
+    this.projects.complete();
+    this.currentPage.complete();
+    this.filters.complete();
+  }
+
+  private retrieveProjects(): void {
     this.getAllProjects()
       .pipe(
         tap((projects) => {

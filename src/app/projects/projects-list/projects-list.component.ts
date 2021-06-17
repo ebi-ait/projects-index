@@ -11,6 +11,9 @@ import { PaginationEvent } from '../components/pagination/pagination.component';
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
   styleUrls: ['./projects-list.component.css'],
+  // Don't want projects service to be a singleton since we shouldn't keep project data when not looking at ProjectsList
+  // Hence, it is provided here and not in the module
+  providers: [ ProjectsService ]
 })
 export class ProjectsListComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>();
@@ -30,8 +33,6 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       .subscribe((paginatedProjects) => {
         this.projects = paginatedProjects;
       });
-
-    this.projectService.retrieveProjects();
   }
 
   ngOnDestroy(): void {

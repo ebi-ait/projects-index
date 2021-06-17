@@ -16,20 +16,18 @@ describe('ProjectsService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [ProjectsService],
+      imports: [HttpClientTestingModule]
     });
-    service = TestBed.inject(ProjectsService);
     httpClient = TestBed.inject(HttpClient);
     httpTestingController = TestBed.inject(HttpTestingController);
   });
 
-  afterEach(() => {
-    httpTestingController.verify();
+  beforeEach(() => {
+    service = new ProjectsService(httpClient);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  afterEach(() => {
+    httpTestingController.verify();
   });
 
   it('should return a list of correctly formatted projects', () => {
@@ -72,7 +70,6 @@ describe('ProjectsService', () => {
       expect(project.uuid).toEqual(firstProject.uuid.uuid);
     });
 
-    service.retrieveProjects();
     const req = httpTestingController.expectOne(
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
@@ -90,7 +87,6 @@ describe('ProjectsService', () => {
       }
     );
 
-    service.retrieveProjects();
     const req = httpTestingController.expectOne(
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
