@@ -82,7 +82,7 @@ describe('ProjectsService', () => {
   });
 
   it('should return an HTTP error', () => {
-    const sub = service.projects$.subscribe(
+    service.projects$.subscribe(
       (project) => {},
       (error) => {
         expect(error).toBeTruthy();
@@ -96,6 +96,5 @@ describe('ProjectsService', () => {
     );
     expect(req.request.method).toEqual('GET');
     req.flush(null, { status: 400, statusText: 'bad request' });
-    sub.unsubscribe();
   });
 });
