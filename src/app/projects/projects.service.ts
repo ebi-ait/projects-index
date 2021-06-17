@@ -113,7 +113,10 @@ export class ProjectsService implements OnDestroy {
           )
         )
       )
-      .subscribe((projects) => this.projects.next(projects));
+      .subscribe(
+        (projects) => this.projects.next(projects),
+        (error => this.projects.error(error))
+      );
   }
 
   changePage(page: number) {
