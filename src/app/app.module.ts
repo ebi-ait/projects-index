@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
 import { WINDOW_PROVIDERS } from './services/window.provider';
 import { AddProjectComponent } from './add-project/add-project.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AddProjectComponent } from './add-project/add-project.component';
     AboutComponent,
     FeedbackComponent,
     AddProjectComponent,
+    NavComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule],
   providers: [WINDOW_PROVIDERS],
