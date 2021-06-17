@@ -98,7 +98,7 @@
         <td class="vf-table__cell">{{ project.date }}</td>
         <td class="vf-table__cell">
           <p style="margin-top: 0">{{ project.title }}</p>
-          <app-author-names [authors]="project.authors"></app-author-names>
+          <app-author-names *ngIf="project.authors.length" [authors]="project.authors"></app-author-names>
           <ng-container *ngFor="let publication of project.publications">
             <a
               class="vf-link"
