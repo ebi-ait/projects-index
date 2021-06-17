@@ -41,6 +41,15 @@ export class ProjectsService {
   }
 
   retrieveProjects(): void {
+    this.changePage(1);
+    this.setFilters({
+      organ: '',
+      technology: '',
+      location: '',
+      searchVal: '',
+      recentFirst: true,
+    });
+
     this.getAllProjects()
       .pipe(
         tap((projects) => {
