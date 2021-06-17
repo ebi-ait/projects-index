@@ -7,7 +7,12 @@ import { ProjectsRoutingModule } from './projects-routing.module';
 import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
-  declarations: [ProjectsListComponent, AuthorNamesComponent, FiltersComponent, PaginationComponent],
+  declarations: [
+    ProjectsListComponent,
+    AuthorNamesComponent,
+    FiltersComponent,
+    PaginationComponent,
+  ],
   imports: [CommonModule, ProjectsRoutingModule],
 })
 export class ProjectsModule {}

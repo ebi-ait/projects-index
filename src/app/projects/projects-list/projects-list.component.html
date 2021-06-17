@@ -27,7 +27,8 @@
   </a>
 </div>
 
-<app-filters *ngIf="projects"
+<app-filters
+  *ngIf="projects"
   [organs]="projects.availableOrgans"
   [technologies]="projects.availableTechnologies"
   (selectedTechnology)="filterByTechnology($event)"
@@ -98,12 +99,14 @@
         <td class="vf-table__cell">
           <p style="margin-top: 0">{{ project.title }}</p>
           <app-author-names [authors]="project.authors"></app-author-names>
-          <ng-container
-            *ngFor="let publication of project.publications"
-          >
-            <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">{{
-              publication.journalTitle
-            }} </a>
+          <ng-container *ngFor="let publication of project.publications">
+            <a
+              class="vf-link"
+              style="white-space: nowrap"
+              href="{{ publication.url }}"
+              target="_blank"
+              >{{ publication.journalTitle }}
+            </a>
           </ng-container>
         </td>
         <td class="vf-table__cell">
@@ -115,13 +118,15 @@
 
         <td class="vf-table__cell">
           <ul class="comma-list">
-            <li *ngFor="let technology of project.technologies">{{ technology }}</li>
+            <li *ngFor="let technology of project.technologies">
+              {{ technology }}
+            </li>
             <p *ngIf="!project.technologies.length">-</p>
           </ul>
         </td>
 
         <td class="vf-table__cell">
-          <p>{{project.cellCount ? (project.cellCount | number) : '-' }}</p>
+          <p>{{ project.cellCount ? (project.cellCount | number) : "-" }}</p>
         </td>
 
         <td class="vf-table__cell">
@@ -203,7 +208,12 @@
     </tbody>
   </table>
 
-  <app-pagination (page)="changePage($event)" [itemsPerPage]="projects.itemsPerPage" [totalItems]="projects.totalItems" [currentPage]="projects.currentPage"></app-pagination>
+  <app-pagination
+    (page)="changePage($event)"
+    [itemsPerPage]="projects.itemsPerPage"
+    [totalItems]="projects.totalItems"
+    [currentPage]="projects.currentPage"
+  ></app-pagination>
 </ng-container>
 <ng-template #loading>
   <p>Loading...</p>

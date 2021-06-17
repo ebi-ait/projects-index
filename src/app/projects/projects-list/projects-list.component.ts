@@ -13,7 +13,7 @@ import { PaginationEvent } from '../components/pagination/pagination.component';
   styleUrls: ['./projects-list.component.css'],
   // Don't want projects service to be a singleton since we shouldn't keep project data when not looking at ProjectsList
   // Hence, it is provided here and not in the module
-  providers: [ ProjectsService ]
+  providers: [ProjectsService],
 })
 export class ProjectsListComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>();

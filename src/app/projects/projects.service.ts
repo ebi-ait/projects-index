@@ -1,4 +1,4 @@
-import { Injectable, OnDestroy } from "@angular/core";
+import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
@@ -66,13 +66,13 @@ export class ProjectsService implements OnDestroy {
     this.getAllProjects()
       .pipe(
         tap((projects) => {
-          this.availableOrgans = (([
+          this.availableOrgans = [
             ...new Set(projects.map((project) => project.organs).flat()),
-          ].sort()) as string[]);
+          ].sort() as string[];
 
-          this.availableTechnologies = (([
+          this.availableTechnologies = [
             ...new Set(projects.map((project) => project.technologies).flat()),
-          ].sort()) as string[]);
+          ].sort() as string[];
 
           this.availableProjects = projects.length;
         }),
@@ -115,7 +115,7 @@ export class ProjectsService implements OnDestroy {
       )
       .subscribe(
         (projects) => this.projects.next(projects),
-        (error => this.projects.error(error))
+        (error) => this.projects.error(error)
       );
   }
 
