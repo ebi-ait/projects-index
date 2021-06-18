@@ -35,14 +35,15 @@ export class ProjectsService {
     try {
       return {
         uuid: obj.uuid.uuid,
-        dcpUrl: obj.dcp_url,
+        dcpUrl: obj.wranglingState === 'Published in DCP' && `https://data.humancellatlas.org/explore/projects/${obj.uuid.uuid}`,
         addedToIndex: obj.cataloguedDate,
         date: obj.cataloguedDate ? this.formatDate(obj.cataloguedDate) : '-',
-        title: obj.content.project_core.project_title,
+        title: obj.content.project_core.project_title || (() => { throw new Error('No title'); })(),
         organs:
           obj.organ?.ontologies?.map((organ) => organ.ontology_label) ?? [],
         technologies:
           obj.technology?.ontologies?.map((tech) => tech.ontology_label) ?? [],
+        cellCount: obj.cellCount,
         // Temp fix until ena accessions fixed in core
         enaAccessions: (() => {
           const accessions = obj.content?.insdc_project_accessions;
@@ -52,7 +53,7 @@ export class ProjectsService {
           return accessions ?? [];
         })(),
         geoAccessions: obj.content.geo_series_accessions ?? [],
-        arrayExpressAccessions: obj.content.array_expobjs_accessions ?? [],
+        arrayExpressAccessions: obj.content.array_express_accessions ?? [],
         egaStudiesAccessions: this.captureRegexGroups(
           /.*\/studies\/(EGAS\d*).*/i,
           obj.content.supplementary_links || []
@@ -62,16 +63,24 @@ export class ProjectsService {
           obj.content.supplementary_links || []
         ),
         publications: obj.publicationsInfo ?? [],
-        authors: obj.content.contributors.map((author) => {
-          const names = author.name.split(',');
-          const formattedName = `${
-            names[names.length - 1]
-          } ${names[0][0].toUpperCase()}`;
+        authors: obj.content.contributors?.map((author) => {
+          let formattedName = '';
+          let fullName = '';
+          if (author.hasOwnProperty('name')) {
+            const names = author.name.split(',');
+            formattedName = `${
+              names[names.length - 1]
+            } ${names[0][0].toUpperCase()}`;
+            fullName = author.name;
+          } else if (author.hasOwnProperty('last')) {
+            formattedName = author.last;
+            fullName = author.last;
+          }
           return {
-            fullName: author.name,
+            fullName: fullName,
             formattedName,
           };
-        }),
+        }) || [],
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);

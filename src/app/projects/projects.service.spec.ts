@@ -8,6 +8,7 @@ import {
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import testIngestProjects from './projects.service.spec.data.json';
+import testIngestProjectWithoutNameField from './projects.service.spec.data_with_no_contributors_name_field.json';
 
 describe('ProjectsService', () => {
   let service: ProjectsService;
@@ -76,6 +77,27 @@ describe('ProjectsService', () => {
     );
     expect(req.request.method).toEqual('GET');
     req.flush(testIngestProjects);
+  });
+
+  it('should return a correct fullName and formattedName fields', () => {
+    service.getProjects().subscribe((projects) => {
+      expect(projects.length).toBeGreaterThan(0);
+
+      const project = projects[0];
+
+      expect(project).not.toBeNull();
+
+      project.authors.forEach((author) => {
+        expect(author.hasOwnProperty('fullName')).toBeTruthy();
+        expect(author.hasOwnProperty('formattedName')).toBeTruthy();
+      });
+    });
+
+    const req = httpTestingController.expectOne(
+      `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
+    );
+    expect(req.request.method).toEqual('GET');
+    req.flush(testIngestProjectWithoutNameField);
   });
 
   it('should return an HTTP error', () => {
