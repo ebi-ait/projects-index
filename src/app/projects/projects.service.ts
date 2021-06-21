@@ -14,8 +14,9 @@ export class ProjectsService {
     return this.http.get<any>(this.URL).pipe(
       map((response) => {
         if (response) {
-          return response._embedded.projects.map(this.formatProject)
-            .filter(project => !!project);
+          return response._embedded.projects
+            .map(this.formatProject)
+            .filter((project) => !!project);
         }
       })
     );
@@ -26,7 +27,8 @@ export class ProjectsService {
       timeZone: 'utc',
     });
 
-  isWrangler = (contributor) => contributor.project_role?.ontology === 'EFO:0009737';
+  isWrangler = (contributor) =>
+    contributor.project_role?.ontology === environment.wranglerOntology;
 
   captureRegexGroups = (regex: RegExp, strings: string[]) =>
     strings
@@ -38,10 +40,16 @@ export class ProjectsService {
     try {
       return {
         uuid: obj.uuid.uuid,
-        dcpUrl: obj.wranglingState === 'Published in DCP' && `https://data.humancellatlas.org/explore/projects/${obj.uuid.uuid}`,
+        dcpUrl:
+          obj.wranglingState === 'Published in DCP' &&
+          `https://data.humancellatlas.org/explore/projects/${obj.uuid.uuid}`,
         addedToIndex: obj.cataloguedDate,
         date: obj.cataloguedDate ? this.formatDate(obj.cataloguedDate) : '-',
-        title: obj.content.project_core.project_title || (() => { throw new Error('No title'); })(),
+        title:
+          obj.content.project_core.project_title ||
+          (() => {
+            throw new Error('No title');
+          })(),
         organs:
           obj.organ?.ontologies?.map((organ) => organ.ontology_label) ?? [],
         technologies:
@@ -66,17 +74,19 @@ export class ProjectsService {
           obj.content.supplementary_links || []
         ),
         publications: obj.publicationsInfo ?? [],
-        authors: obj.content.contributors?.filter(c => !this.isWrangler(c))
-          .map((author) => {
-            const names = author.name.split(',');
-            const formattedName = `${
-              names[names.length - 1]
-            } ${names[0][0].toUpperCase()}`;
-            return {
-              fullName: author.name,
-              formattedName,
-            };
-          }) || [],
+        authors:
+          obj.content.contributors
+            ?.filter((c) => !this.isWrangler(c))
+            .map((author) => {
+              const names = author.name.split(',');
+              const formattedName = `${
+                names[names.length - 1]
+              } ${names[0][0].toUpperCase()}`;
+              return {
+                fullName: author.name,
+                formattedName,
+              };
+            }) || [],
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
