@@ -14,7 +14,8 @@ export class ProjectsService {
     return this.http.get<any>(this.URL).pipe(
       map((response) => {
         if (response) {
-          return response._embedded.projects.map(this.formatProject);
+          return response._embedded.projects.map(this.formatProject)
+            .filter(project => !!project);
         }
       })
     );
@@ -38,11 +39,12 @@ export class ProjectsService {
         dcpUrl: obj.wranglingState === 'Published in DCP' && `https://data.humancellatlas.org/explore/projects/${obj.uuid.uuid}`,
         addedToIndex: obj.cataloguedDate,
         date: obj.cataloguedDate ? this.formatDate(obj.cataloguedDate) : '-',
-        title: obj.content.project_core.project_title,
+        title: obj.content.project_core.project_title || (() => { throw new Error('No title'); })(),
         organs:
           obj.organ?.ontologies?.map((organ) => organ.ontology_label) ?? [],
         technologies:
           obj.technology?.ontologies?.map((tech) => tech.ontology_label) ?? [],
+        cellCount: obj.cellCount,
         // Temp fix until ena accessions fixed in core
         enaAccessions: (() => {
           const accessions = obj.content?.insdc_project_accessions;
@@ -52,7 +54,7 @@ export class ProjectsService {
           return accessions ?? [];
         })(),
         geoAccessions: obj.content.geo_series_accessions ?? [],
-        arrayExpressAccessions: obj.content.array_expobjs_accessions ?? [],
+        arrayExpressAccessions: obj.content.array_express_accessions ?? [],
         egaStudiesAccessions: this.captureRegexGroups(
           /.*\/studies\/(EGAS\d*).*/i,
           obj.content.supplementary_links || []
@@ -62,7 +64,7 @@ export class ProjectsService {
           obj.content.supplementary_links || []
         ),
         publications: obj.publicationsInfo ?? [],
-        authors: obj.content.contributors.map((author) => {
+        authors: obj.content.contributors?.map((author) => {
           const names = author.name.split(',');
           const formattedName = `${
             names[names.length - 1]
@@ -71,10 +73,11 @@ export class ProjectsService {
             fullName: author.name,
             formattedName,
           };
-        }),
+        }) || [],
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
+      return null;
     }
   };
 }

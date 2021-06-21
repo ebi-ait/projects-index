@@ -8,6 +8,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
 import { ErrorsModule } from './errors/errors.module';
+import { WINDOW_PROVIDERS } from './services/window.provider';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ErrorsModule } from './errors/errors.module';
     ProjectsModule,
     ErrorsModule,
   ],
-  providers: [],
+  providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
