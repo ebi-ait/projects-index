@@ -8,6 +8,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
 import { SharedModule } from './shared/shared.module';
+import { ErrorsModule } from './errors/errors.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     ProjectsModule,
     SharedModule,
+    ErrorsModule,
   ],
   bootstrap: [AppComponent],
 })

@@ -209,6 +209,9 @@ export class ProjectsService implements OnDestroy {
       timeZone: 'utc',
     });
 
+  isWrangler = (contributor) =>
+    contributor.project_role?.ontology === environment.wranglerOntology;
+
   private captureRegexGroups = (regex: RegExp, strings: string[]) =>
     strings
       .map((str) => regex.exec(str))
@@ -254,16 +257,18 @@ export class ProjectsService implements OnDestroy {
         ),
         publications: obj.publicationsInfo ?? [],
         authors:
-          obj.content.contributors?.map((author) => {
-            const names = author.name.split(',');
-            const formattedName = `${
-              names[names.length - 1]
-            } ${names[0][0].toUpperCase()}`;
-            return {
-              fullName: author.name,
-              formattedName,
-            };
-          }) || [],
+          obj.content.contributors
+            ?.filter((c) => !this.isWrangler(c))
+            .map((author) => {
+              const names = author.name.split(',');
+              const formattedName = `${
+                names[names.length - 1]
+              } ${names[0][0].toUpperCase()}`;
+              return {
+                fullName: author.name,
+                formattedName,
+              };
+            }) || [],
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
