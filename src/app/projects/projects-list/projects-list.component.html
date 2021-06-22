@@ -52,10 +52,15 @@
 </svg>
 
 <ng-container *ngIf="projects; else loading">
-  <p class="vf-text-body vf-text-body--3">
-    Showing <strong>{{ projects.items.length }}</strong> out of
-    <strong>{{ projects.totalItems }}</strong> projects
-  </p>
+  <div style="display: flex; justify-content: space-between">
+    <p class="vf-text-body vf-text-body--3">
+      Showing <strong>{{ projects.items.length }}</strong> out of
+      <strong>{{ projects.totalItems }}</strong> projects
+    </p>
+    <a (click)="saveSearchResultsAsTsv()" class="vf-link" href="javascript:void(0)">
+      Export results as .tsv
+    </a>
+  </div>
 
   <table
     class="vf-table vf-table--sortable vf-table--striped"
