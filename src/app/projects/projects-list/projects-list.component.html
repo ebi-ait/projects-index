@@ -28,8 +28,9 @@
 </div>
 
 <app-filters
-  [organs]="organs"
-  [technologies]="technologies"
+  *ngIf="projects"
+  [organs]="projects.availableOrgans"
+  [technologies]="projects.availableTechnologies"
   (selectedTechnology)="filterByTechnology($event)"
   (selectedDataLocation)="filterByLocation($event)"
   (selectedOrgan)="filterByOrgan($event)"
@@ -52,8 +53,8 @@
 
 <ng-container *ngIf="projects; else loading">
   <p class="vf-text-body vf-text-body--3">
-    Showing <strong>{{ projects.length }}</strong> out of
-    <strong>{{ totalProjects }}</strong> projects
+    Showing <strong>{{ projects.items.length }}</strong> out of
+    <strong>{{ projects.totalItems }}</strong> projects
   </p>
 
   <table
@@ -91,7 +92,7 @@
     <tbody class="vf-table__body" *ngIf="projects">
       <tr
         class="vf-table__row"
-        *ngFor="let project of projects"
+        *ngFor="let project of projects.items"
         key="{project.uuid}"
       >
         <td class="vf-table__cell">{{ project.date }}</td>
@@ -120,13 +121,15 @@
 
         <td class="vf-table__cell">
           <ul class="comma-list">
-            <li *ngFor="let technology of project.technologies">{{ technology }}</li>
+            <li *ngFor="let technology of project.technologies">
+              {{ technology }}
+            </li>
             <p *ngIf="!project.technologies.length">-</p>
           </ul>
         </td>
 
         <td class="vf-table__cell">
-          <p>{{project.cellCount ? (project.cellCount | number) : '-' }}</p>
+          <p>{{ project.cellCount ? (project.cellCount | number) : "-" }}</p>
         </td>
 
         <td class="vf-table__cell">
@@ -207,6 +210,13 @@
       </tr>
     </tbody>
   </table>
+
+  <app-pagination
+    (page)="changePage($event)"
+    [itemsPerPage]="projects.itemsPerPage"
+    [totalItems]="projects.totalItems"
+    [currentPage]="projects.currentPage"
+  ></app-pagination>
 </ng-container>
 <ng-template #loading>
   <p>Loading...</p>

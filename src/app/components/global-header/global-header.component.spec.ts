@@ -11,14 +11,12 @@ describe('GlobalHeaderComponent', () => {
   beforeEach(async(() => {
     let routerEventRelaySubject = new ReplaySubject<RouterEvent>(1);
     let routerMock = {
-      events: routerEventRelaySubject.asObservable()
+      events: routerEventRelaySubject.asObservable(),
     };
 
     TestBed.configureTestingModule({
       declarations: [GlobalHeaderComponent],
-      providers: [
-        {provide: Router, useValue: routerMock}
-      ]
+      providers: [{ provide: Router, useValue: routerMock }],
     }).compileComponents();
   }));
 

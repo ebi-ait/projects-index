@@ -17,25 +17,23 @@ describe('ProjectsService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [ProjectsService],
     });
-    service = TestBed.inject(ProjectsService);
     httpClient = TestBed.inject(HttpClient);
     httpTestingController = TestBed.inject(HttpTestingController);
+  });
+
+  beforeEach(() => {
+    service = new ProjectsService(httpClient);
   });
 
   afterEach(() => {
     httpTestingController.verify();
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-
   it('should return a list of correctly formatted projects', () => {
     const firstProject = testIngestProjects._embedded.projects[0];
-    service.getProjects().subscribe((projects) => {
-      const project = projects[0];
+    const sub = service.projects$.subscribe((projects) => {
+      const project = projects.items[0];
       const props = [
         'uuid',
         'dcpUrl',
@@ -77,16 +75,18 @@ describe('ProjectsService', () => {
     );
     expect(req.request.method).toEqual('GET');
     req.flush(testIngestProjects);
+    sub.unsubscribe();
   });
 
   it('should return an HTTP error', () => {
-    service.getProjects().subscribe(
+    service.projects$.subscribe(
       (project) => {},
       (error) => {
         expect(error).toBeTruthy();
         expect(error.message).toContain('400 bad request');
       }
     );
+
     const req = httpTestingController.expectOne(
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );

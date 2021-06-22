@@ -7,9 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
-import { ErrorsModule } from './errors/errors.module';
-import { WINDOW_PROVIDERS } from './services/window.provider';
 import { SharedModule } from './shared/shared.module';
+import { ErrorsModule } from './errors/errors.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     ErrorsModule,
   ],
-  providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

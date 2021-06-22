@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 
 import { AnalyticsService } from './analytics.service';
-import { WINDOW_PROVIDERS } from './window.provider';
+import { WINDOW_PROVIDERS } from '../shared/services/window.provider';
 
 describe('AnalyticsService', () => {
   let service: AnalyticsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [WINDOW_PROVIDERS, AnalyticsService]
+      providers: [WINDOW_PROVIDERS, AnalyticsService],
     });
     service = TestBed.inject(AnalyticsService);
   });
