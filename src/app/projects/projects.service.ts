@@ -22,7 +22,6 @@ export class ProjectsService implements OnDestroy {
 
   private availableTechnologies: string[];
   private availableOrgans: string[];
-  private availableProjects: number;
 
   private filters: BehaviorSubject<Filters>;
   currentFilters: Filters;
@@ -73,8 +72,6 @@ export class ProjectsService implements OnDestroy {
           this.availableTechnologies = [
             ...new Set(projects.map((project) => project.technologies).flat()),
           ].sort() as string[];
-
-          this.availableProjects = projects.length;
         }),
         switchMap((projects: Project[]) =>
           this.filters.pipe(
@@ -105,7 +102,6 @@ export class ProjectsService implements OnDestroy {
                 currentPage,
                 itemsPerPage: this.projectsPerPage,
                 totalItems: projects.length,
-                availableProjects: this.availableProjects,
                 availableOrgans: this.availableOrgans,
                 availableTechnologies: this.availableTechnologies,
               };

@@ -38,9 +38,4 @@ export interface PaginatedList<T> {
 export interface PaginatedProjects extends PaginatedList<Project> {
   availableTechnologies: string[];
   availableOrgans: string[];
-  // The total number of projects available
-  // This is different to PaginatedList.totalItems as totalItems could be the
-  // length of the filtered list. While availableProjects is the length of the
-  // list without any filters applied.
-  availableProjects: number;
 }
