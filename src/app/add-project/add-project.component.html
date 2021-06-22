@@ -1,57 +1,78 @@
 <section class="vf-content add-project-container">
-  <p>
-    Send us your suggestions for the HCA Project Catalogue. You can submit both
-    published and pre-print projects. Our data wranglers will review your entry
-    and get back to you.
-  </p>
-  <hr class="vf-divider" />
-  <form
-    class="vf-stack vf-stack--400"
-    (ngSubmit)="onSubmit(f.value)"
-    #f="ngForm"
-  >
-    <app-form-input
-      label="Publication DOI/Project URL"
-      [required]="true"
-      ngModel
-      name="doi"
-    ></app-form-input>
-    <app-form-input
-      label="Contact email address"
-      [required]="true"
-      ngModel
-      name="email"
-    ></app-form-input>
-    <app-form-input
-      label="Contact name"
-      [required]="true"
-      ngModel
-      name="contactName"
-    ></app-form-input>
-    <app-form-textarea
-      label="Comments"
-      ngModel
-      name="comments"
-    ></app-form-textarea>
-    <app-form-checkbox [required]="true" ngModel name="privacy">
-      I agree to limited processing of my personal data according to this
-      <a
-        href="https://www.ebi.ac.uk/data-protection/privacy-notice/human-cell-atlas-ingest-submission"
-        target="_blank"
-        >privacy policy</a
-      >.
-    </app-form-checkbox>
-    <app-button [primary]="true">Submit</app-button>
-  </form>
+  <ng-container *ngIf="!submitted; else thankyou">
+    <p>
+      Send us your suggestions for the HCA Project Catalogue. You can submit
+      both published and pre-print projects. Our data wranglers will review your
+      entry and get back to you.
+    </p>
+    <hr class="vf-divider" />
+    <form
+      class="vf-stack vf-stack--400"
+      (ngSubmit)="onSubmit(f.value)"
+      #f="ngForm"
+    >
+      <app-form-input
+        label="Publication DOI/Project URL"
+        [required]="true"
+        ngModel
+        name="doi"
+      ></app-form-input>
+      <app-form-input
+        label="Contact email address"
+        [required]="true"
+        ngModel
+        name="email"
+      ></app-form-input>
+      <app-form-input
+        label="Contact name"
+        [required]="true"
+        ngModel
+        name="contactName"
+      ></app-form-input>
+      <app-form-textarea
+        label="Comments"
+        ngModel
+        name="comments"
+      ></app-form-textarea>
+      <app-form-checkbox [required]="true" ngModel name="privacy">
+        I agree to limited processing of my personal data according to this
+        <a
+          href="https://www.ebi.ac.uk/data-protection/privacy-notice/human-cell-atlas-ingest-submission"
+          target="_blank"
+          >privacy policy</a
+        >.
+      </app-form-checkbox>
+      <app-button [primary]="true">Submit</app-button>
+    </form>
 
-  <p style="margin-top: 4rem">
-    If you don't have a publication yet, or you wish to get help with data
-    submission to the Human Cell Atlas,
+    <p style="margin-top: 4rem">
+      If you don't have a publication yet, or you wish to get help with data
+      submission to the Human Cell Atlas,
+      <a
+        href="mailto:{{
+          wranglerEmail
+        }}?subject=Submitting to the HCA Project Catalogue"
+        >email our data wranglers</a
+      >.
+    </p>
+  </ng-container>
+  <ng-template #thankyou>
+    <p>
+      Thank you for suggesting a project for the HCA Project Catalogue. Our data
+      wrangling team will review your entry and get in touch.
+    </p>
+    <hr class="vf-divider" />
     <a
-      href="mailto:{{
-        wranglerEmail
-      }}?subject=Submitting to the HCA Project Catalogue"
-      >email our data wranglers</a
-    >.
-  </p>
+      href="javascript:void(0)"
+      class="vf-text vf-text-heading--5 vf-section-header__heading--is-link"
+      (click)="reset()"
+    >
+      Suggest another project
+    </a>
+    <a
+      routerLink="/"
+      class="vf-text vf-text-heading--5 vf-section-header__heading--is-link"
+      >Go back to explore the HCA Project Catalogue</a
+    >
+  </ng-template>
 </section>

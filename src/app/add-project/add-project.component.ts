@@ -8,6 +8,7 @@ import { environment } from '../../environments/environment';
 })
 export class AddProjectComponent implements OnInit {
   wranglerEmail = environment.wranglerEmail;
+  submitted = false;
   constructor() {}
 
   ngOnInit(): void {}
@@ -15,5 +16,10 @@ export class AddProjectComponent implements OnInit {
   onSubmit(f): void {
     // TODO Implement sending of data here
     console.log(f);
+    this.submitted = true;
+  }
+
+  reset(): void {
+    this.submitted = false;
   }
 }
