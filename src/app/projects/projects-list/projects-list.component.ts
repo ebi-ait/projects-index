@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProjectsService } from '../projects.service';
-import { PaginatedProjects } from '../project';
+import { PaginatedProjects, Project } from '../project';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { AnalyticsService } from 'src/app/services/analytics.service';
 import { PaginationEvent } from '../components/pagination/pagination.component';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-projects-list',
@@ -18,6 +19,7 @@ import { PaginationEvent } from '../components/pagination/pagination.component';
 export class ProjectsListComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>();
   projects: PaginatedProjects;
+  filteredProjects: Project[];
   organs: string[];
   technologies: string[];
   wranglerEmail: string = environment.wranglerEmail;
@@ -32,6 +34,11 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((paginatedProjects) => {
         this.projects = paginatedProjects;
+      });
+    this.projectService.filteredProjects$
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((filteredProjects: Project[]) => {
+        this.filteredProjects = filteredProjects;
       });
   }
 
@@ -80,5 +87,53 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
 
   changePage(page: PaginationEvent) {
     this.projectService.changePage(page.currentPage);
+  }
+
+  saveSearchResultsAsTsv() {
+    const columns = {
+      date: 'Date added',
+      title: 'Project Title',
+      publications: 'Publications',
+      authors: 'Authors',
+      organs: 'Organs',
+      technologies: 'Technologies',
+      cellCount: 'Cell count',
+      enaAccessions: 'ENA',
+      arrayExpressAccessions: 'Arrayexpress',
+      geoAccessions: 'GEO',
+      egaStudiesAccessions: 'EGA',
+      dcpUrl: 'DCP'
+    };
+    const tsvArray = this.projectsAsTsv(this.filteredProjects, columns);
+    const tsvString = tsvArray.join('\r\n');
+    const blob = new Blob([tsvString], {type: 'text/tab-separated-values' });
+    saveAs(blob, 'HumanCellAtlas.tsv');
+  }
+
+  projectsAsTsv(projects: Project[], columns: object) {
+    const tsvArray = projects.map(
+      (project: Project) => this.projectAsTsv(project, Object.keys(columns))
+    );
+    tsvArray.unshift(Object.values(columns).join('\t'));
+    return tsvArray;
+  }
+
+  projectAsTsv(project: Project, keys) {
+    return keys.map(key => {
+      if (project[key] === null || project[key] === false) {
+        return '';
+      }
+      if (key === 'authors') {
+        return project[key].map(author => author.formattedName).join(', ');
+      }
+      if (key === 'publications') {
+        // ToDo: Flatten Publication Info
+        return '';
+      }
+      if (Array.isArray(project[key])) {
+        return project[key].join(', ');
+      }
+      return project[key];
+    }).join('\t');
   }
 }
