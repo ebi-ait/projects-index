@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
+import { ErrorsModule } from './errors/errors.module';
 import { WINDOW_PROVIDERS } from './services/window.provider';
 
 @NgModule({
@@ -16,7 +17,13 @@ import { WINDOW_PROVIDERS } from './services/window.provider';
     AboutComponent,
     FeedbackComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ProjectsModule,
+    ErrorsModule,
+  ],
   providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent],
 })
