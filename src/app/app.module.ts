@@ -10,6 +10,8 @@ import { ProjectsModule } from './projects/projects.module';
 import { WINDOW_PROVIDERS } from './services/window.provider';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { NavComponent } from './components/nav/nav.component';
+import { VisualFrameworkModule } from './visual-framework/visual-framework.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,15 @@ import { NavComponent } from './components/nav/nav.component';
     AddProjectComponent,
     NavComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ProjectsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ProjectsModule,
+    VisualFrameworkModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent],
 })

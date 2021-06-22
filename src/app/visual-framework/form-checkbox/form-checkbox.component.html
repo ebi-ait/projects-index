@@ -1,0 +1,18 @@
+<div class="vf-form__item vf-form__item--checkbox">
+  <input
+    type="checkbox"
+    class="vf-form__checkbox"
+    [disabled]="disabled"
+    id="{{name}}"
+    #checkbox
+    (change)="onChange($event.target.checked)"
+    (blur)="onTouched()"
+  />
+  <label for="{{name}}" class="vf-form__label {{required && 'vf-form__label--required'}}">
+    <ng-content></ng-content>
+    <span *ngIf="required" class="vf-u-sr-only">this field is required.</span>
+
+    <span *ngIf="required" class="asterisk">*</span>
+  </label>
+
+</div>
