@@ -30,6 +30,9 @@ export class ProjectsService implements OnDestroy {
   private pagedProjects = new Subject<PaginatedProjects>();
   pagedProjects$ = this.pagedProjects.asObservable();
 
+  private filteredProjects = new Subject<Project[]>();
+  filteredProjects$ = this.filteredProjects.asObservable();
+
   constructor(private http: HttpClient) {
     this.filters = new BehaviorSubject<Filters>({
       organ: '',
@@ -58,6 +61,7 @@ export class ProjectsService implements OnDestroy {
 
   ngOnDestroy(): void {
     this.pagedProjects.complete();
+    this.filteredProjects.complete();
     this.currentPage.complete();
     this.filters.complete();
   }
@@ -92,6 +96,7 @@ export class ProjectsService implements OnDestroy {
             )
           )
         ),
+        tap((projects: Project[]) => this.filteredProjects.next(projects)),
         switchMap((projects: Project[]) =>
           this.currentPage.pipe(
             map((currentPage) => {
