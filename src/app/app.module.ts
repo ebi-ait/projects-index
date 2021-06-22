@@ -6,6 +6,7 @@ import { GlobalHeaderComponent } from './components/global-header/global-header.
 import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavigationComponent } from './navigation/navigation.component';
 import { ProjectsModule } from './projects/projects.module';
 import { SharedModule } from './shared/shared.module';
 import { ErrorsModule } from './errors/errors.module';
@@ -16,6 +17,7 @@ import { ErrorsModule } from './errors/errors.module';
     GlobalHeaderComponent,
     AboutComponent,
     FeedbackComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
