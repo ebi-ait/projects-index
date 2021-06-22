@@ -22,6 +22,7 @@
         [required]="true"
         ngModel
         name="email"
+        [pattern]="'[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}'"
       ></app-form-input>
       <app-form-input
         label="Contact name"
@@ -42,7 +43,7 @@
           >privacy policy</a
         >.
       </app-form-checkbox>
-      <app-button [primary]="true">Submit</app-button>
+      <app-button [primary]="true" [disabled]="!f.valid">Submit</app-button>
     </form>
 
     <p style="margin-top: 4rem">

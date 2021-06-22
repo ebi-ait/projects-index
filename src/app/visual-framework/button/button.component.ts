@@ -8,8 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
       [ngClass]="{
         'vf-button--primary': primary,
         'vf-button--secondary': secondary && !primary,
-        'vf-button--sm': small
+        'vf-button--sm': small,
+        'vf-button--tertiary': disabled
       }"
+      [disabled]="disabled"
     >
       <ng-content></ng-content>
     </button>
@@ -20,6 +22,7 @@ export class ButtonComponent implements OnInit {
   @Input() primary = false;
   @Input() secondary = true;
   @Input() small = false;
+  @Input() disabled = false;
 
   constructor() {}
 

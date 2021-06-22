@@ -1,25 +1,56 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  Self,
+  ViewChild,
+} from '@angular/core';
+import {
+  AbstractControl,
+  ControlValueAccessor,
+  NgControl,
+  Validator,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-base-form-input',
   template: ` <p>base-form-input works!</p> `,
   styleUrls: ['./base-form-input.component.css'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      multi: true,
-      useExisting: BaseFormInputComponent,
-    },
-  ],
 })
-export class BaseFormInputComponent implements OnInit, ControlValueAccessor {
+export class BaseFormInputComponent
+  implements OnInit, ControlValueAccessor, Validator {
   disabled = false;
   @ViewChild('input') input: ElementRef;
   @Input() name: string;
-  constructor() {}
+  @Input() required = false;
+  @Input() pattern: RegExp;
 
-  ngOnInit(): void {}
+  constructor(@Self() public controlDir: NgControl) {
+    this.controlDir.valueAccessor = this;
+  }
+
+  ngOnInit(): void {
+    const control = this.controlDir.control;
+    const validators = this.validate(control);
+
+    control.setValidators(validators);
+    control.updateValueAndValidity();
+  }
+
+  validate(c: AbstractControl): ValidatorFn[] {
+    const validators: ValidatorFn[] = c.validator ? [c.validator] : [];
+    if (this.required) {
+      validators.push(Validators.required);
+    }
+    if (this.pattern) {
+      validators.push(Validators.pattern(this.pattern));
+    }
+
+    return validators;
+  }
 
   writeValue(obj: any): void {
     this.input.nativeElement.value = obj;
@@ -35,6 +66,14 @@ export class BaseFormInputComponent implements OnInit, ControlValueAccessor {
 
   setDisabledState?(isDisabled: boolean): void {
     this.disabled = isDisabled;
+  }
+
+  isInvalid(): boolean {
+    return (
+      this.controlDir &&
+      !this.controlDir.control.valid &&
+      this.controlDir.control.touched
+    );
   }
 
   onChange(event) {}

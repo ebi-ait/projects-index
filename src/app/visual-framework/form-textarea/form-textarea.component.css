@@ -5,3 +5,7 @@
 .vf-form__item {
   margin-bottom: 1.5rem;
 }
+
+.vf-form__textarea--invalid {
+  border-color: #d32f2f;
+}

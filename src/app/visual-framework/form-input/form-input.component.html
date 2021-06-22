@@ -8,10 +8,12 @@
 
     <span *ngIf="required" class="asterisk">*</span>
   </label>
+
   <input
     type="text"
     id="{{name}}"
     class="vf-form__input"
+    [ngClass]="{'vf-form__input--invalid': isInvalid()}"
     [disabled]="disabled"
     #input
     (input)="onChange($event.target.value)"

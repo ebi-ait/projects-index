@@ -7,6 +7,7 @@
   </label>
   <textarea
     class="vf-form__textarea"
+    [ngClass]="{'vf-form__textarea--invalid': isInvalid()}"
     name="text-area"
     rows="5"
     id="{{name}}"

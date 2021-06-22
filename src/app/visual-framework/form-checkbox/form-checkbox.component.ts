@@ -1,27 +1,27 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { BaseFormInputComponent } from '../base-form-input/base-form-input.component';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { AbstractControl, ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-checkbox',
   templateUrl: './form-checkbox.component.html',
   styleUrls: ['./form-checkbox.component.css'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      multi: true,
-      useExisting: FormCheckboxComponent,
-    },
-  ],
 })
-export class FormCheckboxComponent extends BaseFormInputComponent {
+export class FormCheckboxComponent
+  extends BaseFormInputComponent
+  implements OnInit {
   @Input() required = false;
   @Input() value: string;
 
   disabled = false;
   @ViewChild('checkbox') input: ElementRef;
 
-  onChange2(e) {
-    console.log(e);
+  validate(c: AbstractControl): ValidatorFn[] {
+    const validators: ValidatorFn[] = [];
+    if (this.required) {
+      validators.push(Validators.requiredTrue);
+    }
+
+    return validators;
   }
 }
