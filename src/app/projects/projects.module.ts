@@ -6,6 +6,7 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { SharedModule } from '../shared/shared.module';
+import {ProjectsService} from "./projects.service";
 
 @NgModule({
   declarations: [
@@ -15,5 +16,6 @@ import { SharedModule } from '../shared/shared.module';
     PaginationComponent,
   ],
   imports: [CommonModule, ProjectsRoutingModule, SharedModule],
+  providers: [ProjectsService]
 })
 export class ProjectsModule {}

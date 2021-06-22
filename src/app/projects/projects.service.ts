@@ -124,7 +124,7 @@ export class ProjectsService implements OnDestroy {
     this.changePage(1);
   }
 
-  private getAllProjects(): Observable<Project[]> {
+  public getAllProjects(): Observable<Project[]> {
     return this.http.get<any>(this.URL).pipe(
       map((response) => {
         if (response) {

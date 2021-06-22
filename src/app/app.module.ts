@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ProjectsModule } from './projects/projects.module';
 import { SharedModule } from './shared/shared.module';
+import {SummaryModule} from "./summary/summary.module";
 import { ErrorsModule } from './errors/errors.module';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ErrorsModule } from './errors/errors.module';
     HttpClientModule,
     ProjectsModule,
     SharedModule,
+    SummaryModule,
     ErrorsModule,
   ],
   bootstrap: [AppComponent],
