@@ -28,7 +28,7 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.projectService.projects$
+    this.projectService.pagedProjects$
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((paginatedProjects) => {
         this.projects = paginatedProjects;

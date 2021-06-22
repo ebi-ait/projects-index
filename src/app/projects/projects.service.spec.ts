@@ -32,7 +32,7 @@ describe('ProjectsService', () => {
 
   it('should return a list of correctly formatted projects', () => {
     const firstProject = testIngestProjects._embedded.projects[0];
-    const sub = service.projects$.subscribe((projects) => {
+    const sub = service.pagedProjects$.subscribe((projects) => {
       const project = projects.items[0];
       const props = [
         'uuid',
@@ -79,7 +79,7 @@ describe('ProjectsService', () => {
   });
 
   it('should return an HTTP error', () => {
-    service.projects$.subscribe(
+    service.pagedProjects$.subscribe(
       (project) => {},
       (error) => {
         expect(error).toBeTruthy();
