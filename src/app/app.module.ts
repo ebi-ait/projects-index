@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
 import { ErrorsModule } from './errors/errors.module';
 import { WINDOW_PROVIDERS } from './services/window.provider';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { WINDOW_PROVIDERS } from './services/window.provider';
     AppRoutingModule,
     HttpClientModule,
     ProjectsModule,
+    SharedModule,
     ErrorsModule,
   ],
   providers: [WINDOW_PROVIDERS],
