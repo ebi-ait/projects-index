@@ -95,12 +95,17 @@
         <td class="vf-table__cell">
           <p style="margin-top: 0">{{ project.title }}</p>
           <app-author-names *ngIf="project.authors.length" [authors]="project.authors"></app-author-names>
+          <span *ngIf="!project.publications.length">
+            pre-publication or citation missing
+          </span>
           <ng-container
             *ngFor="let publication of project.publications"
           >
-            <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">{{
-              publication.journalTitle
-            }} </a>
+            <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">
+              {{publication.journalTitle}}
+              <ng-container *ngIf="publication.journalTitle === 'bioRxiv'">(pre-publication)</ng-container>
+              <app-external-link></app-external-link>
+            </a>
           </ng-container>
         </td>
         <td class="vf-table__cell">
