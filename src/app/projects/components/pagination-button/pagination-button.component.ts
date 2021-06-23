@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class PaginationButtonComponent implements OnInit {
   constructor() {}
 
-  @Input() pageNumber: number | string;
+  @Input() pageNumber: any;
   @Input() isCurrent: boolean;
   @Input() extraClasses: string;
   @Output() paginate: EventEmitter<number> = new EventEmitter();
