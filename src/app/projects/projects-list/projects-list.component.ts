@@ -108,7 +108,7 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
     const tsvArray = this.projectsAsTsvArray(this.filteredProjects, columns);
     const tsvString = tsvArray.join('\r\n');
     const blob = new Blob([tsvString], {type: 'text/tab-separated-values' });
-    saveAs(blob, 'HumanCellAtlas.tsv');
+    saveAs(blob, 'HcaCatalogueExport.tsv');
   }
 
   private projectsAsTsvArray(projects: Project[], columns: object) {
