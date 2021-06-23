@@ -6,6 +6,7 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { SharedModule } from '../shared/shared.module';
+import { PaginationButtonComponent } from './components/pagination-button/pagination-button.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { SharedModule } from '../shared/shared.module';
     AuthorNamesComponent,
     FiltersComponent,
     PaginationComponent,
+    PaginationButtonComponent,
   ],
   imports: [CommonModule, ProjectsRoutingModule, SharedModule],
 })
