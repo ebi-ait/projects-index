@@ -10,9 +10,9 @@ import {Project} from "../../projects/project";
              templateUrl: './chart.component.html',
              styleUrls: ['./chart.component.css']
            })
-export class ChartComponent implements OnInit, OnDestroy {
+export class ChartComponent implements OnInit {
   @Input() key: string;
-  @ViewChild(BaseChartDirective) chart;
+  @Input() list: any[];
 
   public barChartOptions: ChartOptions = {
     responsive: true,
@@ -36,27 +36,19 @@ export class ChartComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.projects$ = this.projectService.getAllProjects()
-                         .subscribe((projects) => {
-                           let groupedProjects = this.groupListByKey(projects, this.key);
-                           Object.entries(groupedProjects)
-                                 .sort(([k1, v1], [k2, v2]) => v2 - v1)
-                                 .slice(0, 10)
-                                 .forEach(([key, value]) => {
-                                   this.barChartLabels.push(key);
-                                   this.barChartData[0].data.push(value);
-                                 })
-                           this.barChartOptions.title.text = `Projects by ${this.key}`;
-                           this.chart.refresh();
-                         });
+    let groupedProjects = this.groupListByKey(this.list, this.key);
+    Object.entries(groupedProjects)
+          ?.sort(([k1, v1], [k2, v2]) => v2 - v1)
+          .slice(0, 10)
+          .forEach(([key, value]) => {
+            this.barChartLabels.push(key);
+            this.barChartData[0].data.push(value);
+          })
+    this.barChartOptions.title.text = `By ${this.key}`;
   }
 
-  ngOnDestroy() {
-    this.projects$.unsubscribe();
-  }
-
-  private groupListByKey(projects: Project[], groupKey: string) {
-    let groupedProjects: { [key: string]: number } = projects.reduce((acc, val) => {
+  private groupListByKey(list: any[], groupKey: string) {
+    let groupedList: { [key: string]: number } = list?.reduce((acc, val) => {
       val[groupKey].forEach((key => {
         if (!acc[key]) {
           acc[key] = 0;
@@ -65,6 +57,6 @@ export class ChartComponent implements OnInit, OnDestroy {
       }));
       return acc;
     }, {});
-    return groupedProjects;
+    return groupedList;
   }
 }

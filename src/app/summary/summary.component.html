@@ -1,10 +1,10 @@
 <div class="vf-grid vf-grid__col-2">
 
-  <div class="vf-box">
-    <app-chart key="organs"></app-chart>
+  <div class="vf-box" *ngIf="projects$ | async as projects">
+    <app-chart [list]="projects" key="organs"></app-chart>
   </div>
-  <div class="vf-box">
-    <app-chart key="technologies"></app-chart>
+  <div class="vf-box" *ngIf="projects$ | async as projects">
+    <app-chart [list]="projects" key="technologies"></app-chart>
   </div>
 
 </div>
