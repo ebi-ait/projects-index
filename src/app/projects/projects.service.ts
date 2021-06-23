@@ -256,10 +256,10 @@ export class ProjectsService implements OnDestroy {
           obj.content.contributors
             ?.filter((c) => !this.isWrangler(c))
             .map((author) => {
-              const names = author.name.split(',');
+              const names = author.name?.split(',');
               const formattedName = `${
-                names[names.length - 1]
-              } ${names[0][0].toUpperCase()}`;
+                names?.[names?.length - 1]
+              } ${names?.[0]?.[0].toUpperCase()}`;
               return {
                 fullName: author.name,
                 formattedName,
