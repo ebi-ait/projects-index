@@ -91,6 +91,7 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
 
   saveSearchResultsAsTsv() {
     const columns = {
+      uuid: 'Unique Key',
       date: 'Date added',
       title: 'Project Title',
       publications: 'Publications',
@@ -102,38 +103,39 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       arrayExpressAccessions: 'Arrayexpress',
       geoAccessions: 'GEO',
       egaStudiesAccessions: 'EGA',
-      dcpUrl: 'DCP'
+      dcpUrl: 'HCA Data Portal URL'
     };
-    const tsvArray = this.projectsAsTsv(this.filteredProjects, columns);
+    const tsvArray = this.projectsAsTsvArray(this.filteredProjects, columns);
     const tsvString = tsvArray.join('\r\n');
     const blob = new Blob([tsvString], {type: 'text/tab-separated-values' });
     saveAs(blob, 'HumanCellAtlas.tsv');
   }
 
-  projectsAsTsv(projects: Project[], columns: object) {
+  private projectsAsTsvArray(projects: Project[], columns: object) {
     const tsvArray = projects.map(
-      (project: Project) => this.projectAsTsv(project, Object.keys(columns))
+      (project: Project) => this.projectAsTsvString(project, Object.keys(columns))
     );
     tsvArray.unshift(Object.values(columns).join('\t'));
     return tsvArray;
   }
 
-  projectAsTsv(project: Project, keys) {
-    return keys.map(key => {
-      if (project[key] === null || project[key] === false) {
-        return '';
-      }
-      if (key === 'authors') {
-        return project[key].map(author => author.formattedName).join(', ');
-      }
-      if (key === 'publications') {
-        // ToDo: Flatten Publication Info
-        return '';
-      }
-      if (Array.isArray(project[key])) {
-        return project[key].join(', ');
-      }
-      return project[key];
-    }).join('\t');
+  private projectAsTsvString(project: Project, keys) {
+    return keys.map(key => this.flattenProjectField(key, project[key])).join('\t');
+  }
+
+  private flattenProjectField(key: string, value) {
+    if (value === null || value === false) {
+      return '';
+    }
+    if (key === 'authors') {
+      return value.map(author => author.formattedName).join(', ');
+    }
+    if (key === 'publications') {
+      return value.map(publication => `[${publication.journalTitle}](${publication.url})`).join(', ');
+    }
+    if (Array.isArray(value)) {
+      return value.join(', ');
+    }
+    return value;
   }
 }
