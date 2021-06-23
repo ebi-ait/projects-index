@@ -1,9 +1,7 @@
 .vf-card__heading {
-  font-size: 6em;
+  font-size: 4em;
   color: #2A4B8C;
-  vertical-align: center;
 }
 
 .vf-card {
-  max-height: 400px;
 }
