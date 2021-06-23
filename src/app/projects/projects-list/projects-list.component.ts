@@ -5,6 +5,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 import { map, switchMap, takeUntil, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { AnalyticsService } from 'src/app/services/analytics.service';
+import { HeadingService } from '../../services/heading.service';
 
 interface Filters {
   organ: string;
@@ -17,7 +18,7 @@ interface Filters {
 @Component({
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.css']
+  styleUrls: ['./projects-list.component.css'],
 })
 export class ProjectsListComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>();
@@ -28,8 +29,18 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
   technologies: string[];
   wranglerEmail: string = environment.wranglerEmail;
 
-  constructor(private projectService: ProjectsService,
-              private analyticsService: AnalyticsService) {}
+  constructor(
+    private projectService: ProjectsService,
+    private analyticsService: AnalyticsService,
+    private headingService: HeadingService
+  ) {
+    this.headingService.setTitle(
+      'HCA Project Catalogue',
+      'A comprehensive list of cellular resolution datasets for the Human Cell Atlas.',
+      true
+    );
+    this.headingService.hideBreadcrumbs();
+  }
 
   ngOnInit(): void {
     this.filters = new BehaviorSubject<Filters>({
@@ -40,31 +51,33 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       recentFirst: true,
     });
 
-    this.projectService.getProjects().pipe(
-      switchMap((projects: Project[]) =>
-        this.filters.pipe(
-          tap(() => {
-            this.populateOrgans(projects);
-            this.populateTechnologies(projects);
-            this.totalProjects = projects.length;
-          }),
-          map((filters: Filters) =>
-            projects
-              .filter((project: Project) =>
-                this.filterProject(project, filters)
-              )
-              .sort((a, b) => {
-                if (filters.recentFirst) {
-                  return a.addedToIndex <= b.addedToIndex ? 1 : -1;
-                }
-                return a.addedToIndex <= b.addedToIndex ? -1 : 1;
-              })
+    this.projectService
+      .getProjects()
+      .pipe(
+        switchMap((projects: Project[]) =>
+          this.filters.pipe(
+            tap(() => {
+              this.populateOrgans(projects);
+              this.populateTechnologies(projects);
+              this.totalProjects = projects.length;
+            }),
+            map((filters: Filters) =>
+              projects
+                .filter((project: Project) =>
+                  this.filterProject(project, filters)
+                )
+                .sort((a, b) => {
+                  if (filters.recentFirst) {
+                    return a.addedToIndex <= b.addedToIndex ? 1 : -1;
+                  }
+                  return a.addedToIndex <= b.addedToIndex ? -1 : 1;
+                })
+            )
           )
         )
       )
-    )
-    .pipe(takeUntil(this.unsubscribe$))
-    .subscribe(projects => this.projects = projects);
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((projects) => (this.projects = projects));
   }
 
   ngOnDestroy(): void {
