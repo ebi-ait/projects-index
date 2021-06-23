@@ -1,3 +1,16 @@
+<h1 class="vf-intro__heading">Projects Summary Statistics</h1>
+<div class="vf-grid vf-grid__col-3">
+
+  <div class="vf-box" *ngIf="projects$ | async as projects">
+    <app-mini-card title="Projects" value="{{projects.length}}"></app-mini-card>
+  </div>
+  <div class="vf-box" *ngIf="projects$ | async as projects">
+    <app-mini-card title="Cell Count" value="2.5M"></app-mini-card>
+  </div>
+  <div class="vf-box" *ngIf="projects$ | async as projects">
+    <app-mini-card title="Cell Count" value="2.5M"></app-mini-card>
+  </div>
+</div>
 <div class="vf-grid vf-grid__col-2">
 
   <div class="vf-box" *ngIf="projects$ | async as projects">
