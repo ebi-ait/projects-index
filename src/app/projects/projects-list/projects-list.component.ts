@@ -6,6 +6,7 @@ import { takeUntil } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { AnalyticsService } from 'src/app/services/analytics.service';
 import { PaginationEvent } from '../components/pagination/pagination.component';
+import { ProjectsTsvService } from '../services/projects-tsv.service';
 import { saveAs } from 'file-saver';
 
 @Component({
@@ -105,37 +106,8 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       egaStudiesAccessions: 'EGA',
       dcpUrl: 'HCA Data Portal URL'
     };
-    const tsvArray = this.projectsAsTsvArray(this.filteredProjects, columns);
-    const tsvString = tsvArray.join('\r\n');
+    const tsvString = ProjectsTsvService.asTsvString(this.filteredProjects, columns);
     const blob = new Blob([tsvString], {type: 'text/tab-separated-values' });
     saveAs(blob, 'HcaCatalogueExport.tsv');
-  }
-
-  private projectsAsTsvArray(projects: Project[], columns: object) {
-    const tsvArray = projects.map(
-      (project: Project) => this.projectAsTsvString(project, Object.keys(columns))
-    );
-    tsvArray.unshift(Object.values(columns).join('\t'));
-    return tsvArray;
-  }
-
-  private projectAsTsvString(project: Project, keys) {
-    return keys.map(key => this.flattenProjectField(key, project[key])).join('\t');
-  }
-
-  private flattenProjectField(key: string, value) {
-    if (!value && value !== 0) {
-      return '';
-    }
-    if (key === 'authors') {
-      return value.map(author => author.formattedName).join(', ');
-    }
-    if (key === 'publications') {
-      return value.map(publication => `[${publication.journalTitle}](${publication.url})`).join(', ');
-    }
-    if (Array.isArray(value)) {
-      return value.join(', ');
-    }
-    return value;
   }
 }
