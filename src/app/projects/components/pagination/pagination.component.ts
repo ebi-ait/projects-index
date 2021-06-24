@@ -48,7 +48,6 @@ export class PaginationComponent implements OnInit, OnChanges {
     ) {
       return;
     }
-    console.log(pageNumber);
 
     this.page.emit({
       currentPage: pageNumber,
