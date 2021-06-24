@@ -124,7 +124,7 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
   }
 
   private flattenProjectField(key: string, value) {
-    if (value === null || value === false) {
+    if (!value && value !== 0) {
       return '';
     }
     if (key === 'authors') {
