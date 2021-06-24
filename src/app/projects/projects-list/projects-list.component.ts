@@ -1,11 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProjectsService } from '../projects.service';
-import { PaginatedProjects } from '../project';
+import { PaginatedProjects, Project } from '../project';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { AnalyticsService } from 'src/app/services/analytics.service';
 import { PaginationEvent } from '../components/pagination/pagination.component';
+import { ProjectsTsvService } from '../services/projects-tsv.service';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-projects-list',
@@ -18,6 +20,7 @@ import { PaginationEvent } from '../components/pagination/pagination.component';
 export class ProjectsListComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>();
   projects: PaginatedProjects;
+  filteredProjects: Project[];
   organs: string[];
   technologies: string[];
   wranglerEmail: string = environment.wranglerEmail;
@@ -28,10 +31,15 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.projectService.projects$
+    this.projectService.pagedProjects$
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((paginatedProjects) => {
         this.projects = paginatedProjects;
+      });
+    this.projectService.filteredProjects$
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((filteredProjects: Project[]) => {
+        this.filteredProjects = filteredProjects;
       });
   }
 
@@ -80,5 +88,26 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
 
   changePage(page: PaginationEvent) {
     this.projectService.changePage(page.currentPage);
+  }
+
+  saveSearchResultsAsTsv() {
+    const columns = {
+      uuid: 'Unique Key',
+      date: 'Date added',
+      title: 'Project Title',
+      publications: 'Publications',
+      authors: 'Authors',
+      organs: 'Organs',
+      technologies: 'Technologies',
+      cellCount: 'Cell count',
+      enaAccessions: 'ENA',
+      arrayExpressAccessions: 'Arrayexpress',
+      geoAccessions: 'GEO',
+      egaStudiesAccessions: 'EGA',
+      dcpUrl: 'HCA Data Portal URL'
+    };
+    const tsvString = ProjectsTsvService.asTsvString(this.filteredProjects, columns);
+    const blob = new Blob([tsvString], {type: 'text/tab-separated-values' });
+    saveAs(blob, 'HcaCatalogueExport.tsv');
   }
 }
