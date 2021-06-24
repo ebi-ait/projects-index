@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HeadingService } from '../services/heading.service';
+import { AddProjectService } from './add-project.service';
 
 @Component({
   selector: 'app-add-project',
@@ -10,7 +11,11 @@ import { HeadingService } from '../services/heading.service';
 export class AddProjectComponent {
   wranglerEmail = environment.wranglerEmail;
   submitted = false;
-  constructor(private headingService: HeadingService) {
+  error = false;
+  constructor(
+    private headingService: HeadingService,
+    private addProjectService: AddProjectService
+  ) {
     this.headingService.setTitle(
       'Suggest a project',
       'For inclusion in the HCA project catalogue'
@@ -21,10 +26,19 @@ export class AddProjectComponent {
   onSubmit(f): void {
     // TODO Implement sending of data here
     console.log(f);
-    this.submitted = true;
+    this.addProjectService
+      .submitProject(f)
+      .then(() => {
+        this.submitted = true;
+      })
+      .catch((e) => {
+        console.error(e);
+        this.error = true;
+      });
   }
 
   reset(): void {
     this.submitted = false;
+    this.error = false;
   }
 }
