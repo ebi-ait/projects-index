@@ -6,13 +6,9 @@ export const environment = {
   production: false,
   ingestApiUrl: 'http://localhost:8080',
   catalogueEndpoint: '/projects/search/catalogue?page=0&size=200',
+  suggestEndpoint: '/projectSuggestion',
   wranglerEmail: 'wrangler-team@data.humancellatlas.org',
   wranglerOntology: 'EFO:0009737',
-  // GitHub PAT for accessing the projects index repo
-  // IMPORTANT! This PAT should ONLY have the `public_repo` scopes
-  // Guide for creating a PAT:
-  // https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
-  gh_pat: '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',
 };
 
 /*

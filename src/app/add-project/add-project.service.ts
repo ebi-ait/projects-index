@@ -1,30 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Octokit } from '@octokit/core';
 import { environment } from '../../environments/environment';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AddProjectService {
-  octokit: any;
-  githubRepo = 'ebi-ait/hca-ebi-wrangler-central';
-  constructor() {
-    this.octokit = new Octokit({ auth: environment.gh_pat });
-  }
+  URL = `${environment.ingestApiUrl}${environment.suggestEndpoint}`;
 
-  async submitProject({ doi, email, contactName, comments }) {
-    return await this.octokit.request(`POST /repos/${this.githubRepo}/issues`, {
-      owner: 'octocat',
-      repo: 'hello-world',
-      title: `Project Catalogue Submission: ${doi}`,
-      labels: ['Project Catalogue Submission', 'dataset'],
-      body: `A new project has been submitted to the project catalogue!
+  constructor(private http: HttpClient) {}
 
-- Publication DOI/Project URL: ${doi},
-- Contact name: ${contactName}
-- Contact email: ${email}
-- Comments: ${comments}
-      `,
-    });
+  async submitProject(suggestion: {
+    doi: string;
+    email: string;
+    name: string;
+    comments: string;
+  }) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+    };
+    return this.http.post(this.URL, suggestion, httpOptions).toPromise();
   }
 }
