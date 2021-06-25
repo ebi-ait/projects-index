@@ -2,8 +2,8 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { environment } from '../../environments/environment';
-import { PaginatedProjects, Project } from './project';
+import { environment } from '../../../environments/environment';
+import { PaginatedProjects, Project } from '../project';
 
 interface Filters {
   organ: string;

@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectsListComponent } from './projects-list.component';
-import { ProjectsService } from '../projects.service';
-import { FiltersComponent } from '../components/filters/filters.component';
+import { ProjectsService } from '../../services/projects.service';
+import { FiltersComponent } from '../../components/filters/filters.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AnalyticsService } from 'src/app/services/analytics.service';
 import { WINDOW_PROVIDERS } from 'src/app/shared/services/window.provider';

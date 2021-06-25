@@ -1,0 +1,19 @@
+<div class="vf-form__item">
+  <label for="{{name}}" class="vf-form__label {{required && 'vf-form__label--required'}}">
+    {{label}}
+    <span *ngIf="required" class="vf-u-sr-only">this field is required.</span>
+
+    <span *ngIf="required" class="asterisk">*</span>
+  </label>
+  <textarea
+    class="vf-form__textarea"
+    [ngClass]="{'vf-form__textarea--invalid': isInvalid()}"
+    name="text-area"
+    rows="5"
+    id="{{name}}"
+    #textArea
+    [disabled]="disabled"
+    (input)="onChange($event.target.value)"
+    (blur)="onTouched()"
+  ></textarea>
+</div>

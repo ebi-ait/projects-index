@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectsListComponent } from './projects-list/projects-list.component';
+import { ProjectsListComponent } from './pages/projects-list/projects-list.component';
 import { AuthorNamesComponent } from './components/author-names/author-names.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { ProjectsRoutingModule } from './projects-routing.module';

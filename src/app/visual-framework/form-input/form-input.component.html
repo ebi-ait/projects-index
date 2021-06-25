@@ -1,0 +1,23 @@
+<div class="vf-form__item vf-stack">
+  <label
+    for="{{name}}"
+    class="vf-form__label {{ required && 'vf-form__label--required' }}"
+  >
+    {{ label }}
+    <span *ngIf="required" class="vf-u-sr-only">this field is required.</span>
+
+    <span *ngIf="required" class="asterisk">*</span>
+  </label>
+
+  <input
+    type="text"
+    id="{{name}}"
+    class="vf-form__input"
+    [ngClass]="{'vf-form__input--invalid': isInvalid()}"
+    [disabled]="disabled"
+    #input
+    (input)="onChange($event.target.value)"
+    (blur)="onTouched()"
+    [placeholder]="placeholder"
+  />
+</div>
