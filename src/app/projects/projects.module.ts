@@ -6,8 +6,8 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PaginationButtonComponent } from './components/pagination-button/pagination-button.component';
-import { ProjectsService} from "./projects.service";
 import { SharedModule } from '../shared/shared.module';
+import {ProjectsService} from "./services/projects.service";
 
 @NgModule({
   declarations: [

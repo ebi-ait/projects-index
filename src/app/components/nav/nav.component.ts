@@ -16,6 +16,10 @@ export class NavComponent implements OnInit {
       text: 'About',
     },
     {
+      url: '/summary',
+      text: 'Summary',
+    },
+    {
       url: '/add-project',
       text: 'Suggest a project',
     },

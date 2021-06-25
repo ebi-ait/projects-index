@@ -8,7 +8,6 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { GlobalHeaderComponent } from './components/global-header/global-header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsModule } from './projects/projects.module';
-import { SharedModule } from './shared/shared.module';
 import { ErrorsModule } from './errors/errors.module';
 import { NavComponent } from './components/nav/nav.component';
 import { VisualFrameworkModule } from './visual-framework/visual-framework.module';
