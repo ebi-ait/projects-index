@@ -17,37 +17,13 @@
       </li>
     </ng-container>
 
-    <ng-container *ngIf="currentPage === 1">
-      <ng-container *ngFor="let i of [1,2,3]">
-        <app-pagination-button
-          *ngIf="i >= 1 && i <= totalPages"
-          [pageNumber]="i"
-          (paginate)="changePage(i)"
-          [isCurrent]="i===currentPage"
-        ></app-pagination-button>
-      </ng-container>
-    </ng-container>
-
-    <ng-container *ngIf="currentPage === totalPages">
-      <ng-container *ngFor="let i of [totalPages - 2, totalPages - 1, totalPages]">
-        <app-pagination-button
-          *ngIf="i >= 1 && i <= totalPages"
-          [pageNumber]="i"
-          (paginate)="changePage(i)"
-          [isCurrent]="i===currentPage"
-        ></app-pagination-button>
-      </ng-container>
-    </ng-container>
-
-    <ng-container *ngIf="currentPage > 1 && currentPage < totalPages">
-      <ng-container *ngFor="let i of [currentPage - 1, currentPage, currentPage + 1]">
-        <app-pagination-button
-          *ngIf="i >= 1 && i <= totalPages"
-          [pageNumber]="i"
-          (paginate)="changePage(i)"
-          [isCurrent]="i===currentPage"
-        ></app-pagination-button>
-      </ng-container>
+    <ng-container *ngFor="let i of this.visibleButtons">
+      <app-pagination-button
+        *ngIf="i >= 1 && i <= totalPages"
+        [pageNumber]="i"
+        (paginate)="changePage(i)"
+        [isCurrent]="i===currentPage"
+      ></app-pagination-button>
     </ng-container>
 
     <ng-container *ngIf="totalPages > 3 && currentPage < totalPages - 1">
