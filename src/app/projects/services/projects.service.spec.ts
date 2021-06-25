@@ -6,7 +6,7 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import testIngestProjects from './projects.service.spec.data.json';
 import testIngestProjectWithoutNameField from './projects.service.spec.data_with_no_contributors_name_field.json';
 
