@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { environment } from '../../environments/environment';
-import { HeadingService } from '../services/heading.service';
+import { environment } from '../../../environments/environment';
+import { HeadingService } from '../../services/heading.service';
 
 @Component({
   selector: 'app-about',

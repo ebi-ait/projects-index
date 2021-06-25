@@ -1,13 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ProjectsService } from '../projects.service';
-import { PaginatedProjects, Project } from '../project';
+import { ProjectsService } from '../../projects.service';
+import { PaginatedProjects, Project } from '../../project';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../../environments/environment';
 import { AnalyticsService } from 'src/app/services/analytics.service';
-import { HeadingService } from '../../services/heading.service';
-import { PaginationEvent } from '../components/pagination/pagination.component';
-import { ProjectsTsvService } from '../services/projects-tsv.service';
+import { HeadingService } from '../../../services/heading.service';
+import { PaginationEvent } from '../../components/pagination/pagination.component';
+import { ProjectsTsvService } from '../../services/projects-tsv.service';
 import { saveAs } from 'file-saver';
 
 @Component({
@@ -113,10 +113,13 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       arrayExpressAccessions: 'Arrayexpress',
       geoAccessions: 'GEO',
       egaStudiesAccessions: 'EGA',
-      dcpUrl: 'HCA Data Portal URL'
+      dcpUrl: 'HCA Data Portal URL',
     };
-    const tsvString = ProjectsTsvService.asTsvString(this.filteredProjects, columns);
-    const blob = new Blob([tsvString], {type: 'text/tab-separated-values' });
+    const tsvString = ProjectsTsvService.asTsvString(
+      this.filteredProjects,
+      columns
+    );
+    const blob = new Blob([tsvString], { type: 'text/tab-separated-values' });
     saveAs(blob, 'HcaCatalogueExport.tsv');
   }
 }
