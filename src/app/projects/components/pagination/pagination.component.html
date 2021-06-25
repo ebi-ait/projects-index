@@ -7,7 +7,7 @@
       (paginate)="changePage(currentPage - 1)"
     ></app-pagination-button>
 
-    <ng-container *ngIf="currentPage > 2">
+    <ng-container *ngIf="!this.visibleButtons.includes(1)">
       <app-pagination-button
         [pageNumber]="1"
         (paginate)="changePage($event)"
@@ -26,7 +26,7 @@
       ></app-pagination-button>
     </ng-container>
 
-    <ng-container *ngIf="totalPages > 3 && currentPage < totalPages - 1">
+    <ng-container *ngIf="!this.visibleButtons.includes(totalPages)">
       <li class="vf-pagination__item" style="flex: none;">
         <span class="vf-pagination__label">...</span>
       </li>
