@@ -3,6 +3,7 @@ import {
   ElementRef,
   Input,
   OnInit,
+  Optional,
   Self,
   ViewChild,
 } from '@angular/core';
@@ -28,16 +29,20 @@ export class BaseFormInputComponent
   @Input() required = false;
   @Input() pattern: RegExp;
 
-  constructor(@Self() public controlDir: NgControl) {
-    this.controlDir.valueAccessor = this;
+  constructor(@Self() @Optional() public controlDir: NgControl) {
+    if (this.controlDir) {
+      this.controlDir.valueAccessor = this;
+    }
   }
 
   ngOnInit(): void {
-    const control = this.controlDir.control;
-    const validators = this.validate(control);
+    if (this.controlDir) {
+      const control = this.controlDir.control;
+      const validators = this.validate(control);
 
-    control.setValidators(validators);
-    control.updateValueAndValidity();
+      control.setValidators(validators);
+      control.updateValueAndValidity();
+    }
   }
 
   validate(c: AbstractControl): ValidatorFn[] {
