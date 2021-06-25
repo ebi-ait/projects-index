@@ -6,8 +6,8 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
-import testIngestProjects from './projects.service.spec.data.json';
+import { environment } from '../../../environments/environment';
+import testIngestProjects from '../projects.service.spec.data.json';
 
 describe('ProjectsService', () => {
   let service: ProjectsService;

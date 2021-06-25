@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ProjectsService } from '../../projects.service';
+import { ProjectsService } from '../../services/projects.service';
 import { PaginatedProjects, Project } from '../../project';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
