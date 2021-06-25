@@ -6,8 +6,9 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
-import testIngestProjects from '../projects.service.spec.data.json';
+import { environment } from '../../environments/environment';
+import testIngestProjects from './projects.service.spec.data.json';
+import testIngestProjectWithoutNameField from './projects.service.spec.data_with_no_contributors_name_field.json';
 
 describe('ProjectsService', () => {
   let service: ProjectsService;
@@ -75,6 +76,28 @@ describe('ProjectsService', () => {
     );
     expect(req.request.method).toEqual('GET');
     req.flush(testIngestProjects);
+    sub.unsubscribe();
+  });
+
+  it('should return a correct fullName and formattedName fields', () => {
+    const sub = service.pagedProjects$.subscribe((projects) => {
+      expect(projects.items.length).toBeGreaterThan(0);
+
+      const project = projects.items[0];
+
+      expect(project).not.toBeNull();
+
+      project.authors.forEach((author) => {
+        expect(author.hasOwnProperty('fullName')).toBeTruthy();
+        expect(author.hasOwnProperty('formattedName')).toBeTruthy();
+      });
+    });
+
+    const req = httpTestingController.expectOne(
+      `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
+    );
+    expect(req.request.method).toEqual('GET');
+    req.flush(testIngestProjectWithoutNameField);
     sub.unsubscribe();
   });
 

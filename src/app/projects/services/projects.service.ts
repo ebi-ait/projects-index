@@ -261,12 +261,20 @@ export class ProjectsService implements OnDestroy {
           obj.content.contributors
             ?.filter((c) => !this.isWrangler(c))
             .map((author) => {
-              const names = author.name.split(',');
-              const formattedName = `${
-                names[names.length - 1]
-              } ${names[0][0].toUpperCase()}`;
+              let formattedName = '';
+              let fullName = '';
+              if (author.hasOwnProperty('name')) {
+                const names = author.name.split(',');
+                formattedName = `${
+                  names[names.length - 1]
+                } ${names[0][0].toUpperCase()}`;
+                fullName = author.name;
+              } else if (author.hasOwnProperty('last')) {
+                formattedName = author.last;
+                fullName = author.last;
+              }
               return {
-                fullName: author.name,
+                fullName: fullName,
                 formattedName,
               };
             }) || [],
