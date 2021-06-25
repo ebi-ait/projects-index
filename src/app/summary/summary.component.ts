@@ -1,7 +1,8 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
-import {Observable, Subscription} from "rxjs";
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {Observable} from "rxjs";
 import {ProjectsService} from "../projects/projects.service";
 import {Project} from "../projects/project";
+import {ProjectCount, SummaryService} from "./summary.service";
 
 @Component({
   selector: 'app-summary',
@@ -12,17 +13,19 @@ import {Project} from "../projects/project";
 export class SummaryComponent implements OnInit {
 
   projects$: Observable<Project[]>;
-  constructor(private projectService: ProjectsService
+  projectsByOrgan$: Observable<ProjectCount[]>;
+  projectsByTech$: Observable<ProjectCount[]>;
+  cellCount$: Observable<number>;
+  constructor(private projectService: ProjectsService,
+              private summaryService: SummaryService
   ) {
   }
 
   ngOnInit(): void {
-    this.getProjects();
-  }
-
-  getProjects() {
     this.projects$ = this.projectService.getAllProjects();
+    this.projectsByOrgan$ = this.summaryService.projectsByOrgan$;
+    this.projectsByTech$ = this.summaryService.projectsByTech$;
+    this.cellCount$ = this.summaryService.cellCount$;
   }
-
 
 }

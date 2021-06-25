@@ -9,25 +9,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ProjectsModule } from './projects/projects.module';
 import { SharedModule } from './shared/shared.module';
-import {SummaryModule} from "./summary/summary.module";
+import { SummaryModule} from "./summary/summary.module";
 import { ErrorsModule } from './errors/errors.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    GlobalHeaderComponent,
     AboutComponent,
+    AppComponent,
     FeedbackComponent,
+    GlobalHeaderComponent,
     NavigationComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
+    ErrorsModule,
     HttpClientModule,
     ProjectsModule,
     SharedModule,
     SummaryModule,
-    ErrorsModule,
   ],
   bootstrap: [AppComponent],
 })

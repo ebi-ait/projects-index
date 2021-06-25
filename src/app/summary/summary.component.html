@@ -2,20 +2,22 @@
 <div class="vf-grid vf-grid__col-6">
 
   <div class="vf-grid__col--span-2" *ngIf="projects$ | async as projects">
-    <app-mini-card title="Projects" value="{{projects.length}}"></app-mini-card>
+    <app-mini-card title="Project Count" value="{{projects.length}}"></app-mini-card>
   </div>
-  <div class="vf-grid__col--span-2" *ngIf="projects$ | async as projects">
-    <app-mini-card title="Cell Count" value="2.5M"></app-mini-card>
-  </div>
-  <div class="vf-grid__col--span-2" *ngIf="projects$ | async as projects">
-    <app-mini-card title="Cell Count" value="2.5M"></app-mini-card>
+  <div class="vf-grid__col--span-2" *ngIf="cellCount$ | async as cellCount">
+    <app-mini-card title="Cell Count" value="{{cellCount /1000000 | number:'0.1-2' }}M"></app-mini-card>
   </div>
 
-  <div class="vf-grid__col--span-3" *ngIf="projects$ | async as projects">
-    <app-chart [list]="projects" key="organs"></app-chart>
+  <div class="vf-grid__col--span-2" *ngIf="projectsByOrgan$ | async as projectsByOrgan">
+    <app-mini-card title="Organ Count" value="{{projectsByOrgan.length}}"></app-mini-card>
   </div>
-  <div class="vf-grid__col--span-3" *ngIf="projects$ | async as projects">
-    <app-chart [list]="projects" key="technologies"></app-chart>
+
+  <div class="vf-grid__col--span-3" *ngIf="projectsByOrgan$ | async as projectsByOrgan">
+    <app-chart [list]="projectsByOrgan | slice:1:10 " key="organs"></app-chart>
   </div>
+  <div class="vf-grid__col--span-3" *ngIf="projectsByTech$ | async as projectsByTech">
+    <app-chart [list]="projectsByTech | slice:1:10" key="technologies"></app-chart>
+  </div>
+
 
 </div>

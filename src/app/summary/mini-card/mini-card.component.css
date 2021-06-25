@@ -16,5 +16,6 @@
   box-sizing: border-box;
   -webkit-box-shadow: 0 .125rem .25rem rgba(84,88,90,.5);
   position: relative;
+  padding: 16px;
 }
 
