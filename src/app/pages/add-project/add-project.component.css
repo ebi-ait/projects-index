@@ -1,0 +1,11 @@
+.add-project-container {
+  margin: 0 auto;
+  width: 70%;
+}
+
+/*Should use VF breakpoint vars here but wait until using VF npm/sass package*/
+@media only screen and (max-width: 600px) {
+  .add-project-container {
+    width: 100%;
+  }
+}

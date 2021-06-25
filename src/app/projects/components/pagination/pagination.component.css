@@ -3,3 +3,7 @@
   min-width: 400px;
   margin: 2rem 0;
 }
+
+.vf-pagination__list {
+  justify-content: normal;
+}

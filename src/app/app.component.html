@@ -1,4 +1,4 @@
-<div *ngIf="isAboutPage()">
+<div *ngIf="showBreadcrumbs$ | async">
   <nav class="vf-breadcrumbs" aria-label="Breadcrumb">
     <ul class="vf-breadcrumbs__list | vf-list vf-list--inline">
       <li class="vf-breadcrumbs__item">
@@ -6,13 +6,13 @@
           >HCA Project Catalogue
         </a>
       </li>
-      <li class="vf-breadcrumbs__item" aria-current="location">About</li>
+      <li class="vf-breadcrumbs__item" aria-current="location">{{currentLocation$ | async}}</li>
     </ul>
   </nav>
   <br />
 </div>
 
 <app-global-header></app-global-header>
-<app-navigation></app-navigation>
+<app-nav></app-nav>
 <app-feedback></app-feedback>
 <router-outlet></router-outlet>

@@ -26,6 +26,7 @@
     "@angular/cli": "~9.1.1",
     "@angular/compiler-cli": "~9.1.1",
     "@angular/language-service": "~9.1.1",
+    "@types/file-saver": "~2.0.2",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^5.1.2",
@@ -54,6 +55,7 @@
     "@angular/router": "~9.1.1",
     "chart.js": "^2.9.4",
     "ng2-charts": "^2.4.2",
+    "file-saver": "^2.0.5",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

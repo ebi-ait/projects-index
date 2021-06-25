@@ -2,8 +2,8 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { environment } from '../../environments/environment';
-import { PaginatedProjects, Project } from './project';
+import { environment } from '../../../environments/environment';
+import { PaginatedProjects, Project } from '../project';
 
 interface Filters {
   organ: string;
@@ -26,8 +26,11 @@ export class ProjectsService implements OnDestroy {
   private filters: BehaviorSubject<Filters>;
   currentFilters: Filters;
 
-  private projects = new Subject<PaginatedProjects>();
-  projects$ = this.projects.asObservable();
+  private pagedProjects = new Subject<PaginatedProjects>();
+  pagedProjects$ = this.pagedProjects.asObservable();
+
+  private filteredProjects = new Subject<Project[]>();
+  filteredProjects$ = this.filteredProjects.asObservable();
 
   constructor(private http: HttpClient) {
     this.filters = new BehaviorSubject<Filters>({
@@ -56,7 +59,8 @@ export class ProjectsService implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.projects.complete();
+    this.pagedProjects.complete();
+    this.filteredProjects.complete();
     this.currentPage.complete();
     this.filters.complete();
   }
@@ -89,6 +93,7 @@ export class ProjectsService implements OnDestroy {
             )
           )
         ),
+        tap((projects: Project[]) => this.filteredProjects.next(projects)),
         switchMap((projects: Project[]) =>
           this.currentPage.pipe(
             map((currentPage) => {
@@ -110,8 +115,8 @@ export class ProjectsService implements OnDestroy {
         )
       )
       .subscribe(
-        (projects) => this.projects.next(projects),
-        (error) => this.projects.error(error)
+        (projects) => this.pagedProjects.next(projects),
+        (error) => this.pagedProjects.error(error)
       );
   }
 
@@ -256,12 +261,20 @@ export class ProjectsService implements OnDestroy {
           obj.content.contributors
             ?.filter((c) => !this.isWrangler(c))
             .map((author) => {
-              const names = author.name?.split(',');
-              const formattedName = `${
-                names?.[names?.length - 1]
-              } ${names?.[0]?.[0].toUpperCase()}`;
+              let formattedName = '';
+              let fullName = '';
+              if (author.hasOwnProperty('name')) {
+                const names = author.name.split(',');
+                formattedName = `${
+                  names[names.length - 1]
+                } ${names[0][0].toUpperCase()}`;
+                fullName = author.name;
+              } else if (author.hasOwnProperty('last')) {
+                formattedName = author.last;
+                fullName = author.last;
+              }
               return {
-                fullName: author.name,
+                fullName: fullName,
                 formattedName,
               };
             }) || [],

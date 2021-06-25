@@ -1,0 +1,13 @@
+<nav class="vf-navigation vf-navigation--main | vf-cluster" style="margin-bottom: 2rem">
+  <ul class="vf-navigation__list | vf-list | vf-cluster__inner">
+    <li *ngFor="let route of routes" class="vf-navigation__item">
+      <a
+        [routerLink]="route.url"
+        class="vf-navigation__link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >{{ route.text }}</a
+      >
+    </li>
+  </ul>
+</nav>
