@@ -28,8 +28,9 @@
 </div>
 
 <app-filters
-  [organs]="organs"
-  [technologies]="technologies"
+  *ngIf="projects"
+  [organs]="projects.availableOrgans"
+  [technologies]="projects.availableTechnologies"
   (selectedTechnology)="filterByTechnology($event)"
   (selectedDataLocation)="filterByLocation($event)"
   (selectedOrgan)="filterByOrgan($event)"
@@ -50,11 +51,16 @@
   </defs>
 </svg>
 
-<ng-container *ngIf="projects$ | async as projects; else loading">
-  <p class="vf-text-body vf-text-body--3">
-    Showing <strong>{{ projects.length }}</strong> out of
-    <strong>{{ totalProjects }}</strong> projects
-  </p>
+<ng-container *ngIf="projects; else loading">
+  <div style="display: flex; justify-content: space-between">
+    <p class="vf-text-body vf-text-body--3">
+      Showing <strong>{{ projects.items.length }}</strong> out of
+      <strong>{{ projects.totalItems }}</strong> projects
+    </p>
+    <a (click)="saveSearchResultsAsTsv()" class="vf-link" href="javascript:void(0)">
+      Export results as .tsv
+    </a>
+  </div>
 
   <table
     class="vf-table vf-table--sortable vf-table--striped"
@@ -83,6 +89,7 @@
         <th class="vf-table__heading" scope="col">Project</th>
         <th class="vf-table__heading" scope="col">Organ</th>
         <th class="vf-table__heading" scope="col">Technology</th>
+        <th class="vf-table__heading" scope="col">Cell count</th>
         <th class="vf-table__heading" scope="col">Data location</th>
       </tr>
     </thead>
@@ -90,30 +97,32 @@
     <tbody class="vf-table__body" *ngIf="projects">
       <tr
         class="vf-table__row"
-        *ngFor="let project of projects"
-        key="{project.uuid}"
+        *ngFor="let project of projects.items"
       >
         <td class="vf-table__cell">{{ project.date }}</td>
         <td class="vf-table__cell">
           <p style="margin-top: 0">{{ project.title }}</p>
-          <app-author-names [authors]="project.authors"></app-author-names>
-          <p
+          <app-author-names *ngIf="project.authors.length" [authors]="project.authors"></app-author-names>
+          <span *ngIf="!project.publications.length">
+            pre-publication or citation missing
+          </span>
+          <ng-container
             *ngFor="let publication of project.publications"
-            style="display: inline"
           >
-            <a class="vf-link" href="{{ publication.url }}" target="_blank">{{
-              publication.journalTitle
-            }}</a>
-          </p>
+            <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">
+              {{publication.journalTitle}}
+              <ng-container *ngIf="publication.journalTitle === 'bioRxiv'">(pre-publication)</ng-container>
+              <app-external-link></app-external-link>
+            </a>
+          </ng-container>
         </td>
         <td class="vf-table__cell">
           <ul class="comma-list">
-            <li *ngFor="let organ of project.organs">
-              {{ organ }}
-            </li>
+            <li *ngFor="let organ of project.organs">{{ organ }}</li>
           </ul>
           <p *ngIf="!project.organs.length">-</p>
         </td>
+
         <td class="vf-table__cell">
           <ul class="comma-list">
             <li *ngFor="let technology of project.technologies">
@@ -122,6 +131,11 @@
             <p *ngIf="!project.technologies.length">-</p>
           </ul>
         </td>
+
+        <td class="vf-table__cell">
+          <p>{{ project.cellCount ? (project.cellCount | number) : "-" }}</p>
+        </td>
+
         <td class="vf-table__cell">
           <ul class="plain-list">
             <li *ngIf="project.enaAccessions.length">
@@ -200,6 +214,13 @@
       </tr>
     </tbody>
   </table>
+
+  <app-pagination
+    (page)="changePage($event)"
+    [itemsPerPage]="projects.itemsPerPage"
+    [totalItems]="projects.totalItems"
+    [currentPage]="projects.currentPage"
+  ></app-pagination>
 </ng-container>
 <ng-template #loading>
   <p>Loading...</p>

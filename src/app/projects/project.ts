@@ -19,6 +19,7 @@ export interface Project {
   title: string;
   organs: string[];
   technologies: string[];
+  cellCount: number;
   enaAccessions: string[];
   geoAccessions: string[];
   arrayExpressAccessions: string[];
@@ -26,4 +27,15 @@ export interface Project {
   egaDatasetsAccessions: string[];
   publications: Publication[];
   authors: Author[];
+}
+export interface PaginatedList<T> {
+  items: T[];
+  currentPage: number;
+  itemsPerPage: number;
+  totalItems: number;
+}
+
+export interface PaginatedProjects extends PaginatedList<Project> {
+  availableTechnologies: string[];
+  availableOrgans: string[];
 }

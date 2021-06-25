@@ -1,14 +1,17 @@
-<p
-  [ngStyle]="{
-    display: fullAuthorView ? 'inline-block' : 'inline',
-    marginRight: fullAuthorView ? '0' : '2rem'
-  }"
->
+<p *ngIf="!fullAuthorView" style="margin-right: 2rem; display: inline;">
   <a href="javascript:void(0)" class="vf-link" (click)="toggleAuthorView()">
     {{ this.getFormattedContributors() }}
-  </a>
-  <a href="javascript:void(0)" class="vf-link" (click)="toggleAuthorView()">
-    <span *ngIf="!fullAuthorView" class="arrow-right"></span>
-    <span *ngIf="fullAuthorView" class="arrow-left"></span>
+    <app-chevron></app-chevron>
   </a>
 </p>
+<div *ngIf="fullAuthorView">
+  <p>
+    {{ this.getFormattedContributors() }}
+  </p>
+  <p>
+    <a href="javascript:void(0)" class="vf-link" (click)="toggleAuthorView()">
+      see less
+      <app-chevron up="true"></app-chevron>
+    </a>
+  </p>
+</div>
