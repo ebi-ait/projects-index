@@ -20,6 +20,7 @@ export interface PaginationEvent {
 })
 export class PaginationComponent implements OnInit, OnChanges {
   totalPages: number;
+  visibleButtons: number[];
   @Input() totalItems: number;
   @Input() itemsPerPage: number;
   @Input() currentPage: number;
@@ -35,10 +36,32 @@ export class PaginationComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.calculateTotalPages();
+    this.calculateVisibleButtons();
   }
 
   private calculateTotalPages() {
     this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
+  }
+
+  private calculateVisibleButtons() {
+    switch (this.currentPage) {
+      case 1:
+        this.visibleButtons = [1, 2, 3];
+        break;
+      case this.totalPages:
+        this.visibleButtons = [
+          this.totalPages - 2,
+          this.totalPages - 1,
+          this.totalPages,
+        ];
+        break;
+      default:
+        this.visibleButtons = [
+          this.currentPage - 1,
+          this.currentPage,
+          this.currentPage + 1,
+        ];
+    }
   }
 
   changePage(pageNumber: number): void {
