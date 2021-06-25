@@ -80,10 +80,10 @@ describe('ProjectsService', () => {
   });
 
   it('should return a correct fullName and formattedName fields', () => {
-    service.pagedProjects$.subscribe((projects) => {
+    const sub = service.pagedProjects$.subscribe((projects) => {
       expect(projects.items.length).toBeGreaterThan(0);
 
-      const project = projects[0];
+      const project = projects.items[0];
 
       expect(project).not.toBeNull();
 
@@ -98,6 +98,7 @@ describe('ProjectsService', () => {
     );
     expect(req.request.method).toEqual('GET');
     req.flush(testIngestProjectWithoutNameField);
+    sub.unsubscribe();
   });
 
   it('should return an HTTP error', () => {
