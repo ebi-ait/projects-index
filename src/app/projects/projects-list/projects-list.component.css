@@ -41,10 +41,6 @@
   text-align: left;
 }
 
-#published-table thead tr th {
-  padding: 16px;
-}
-
 #published-table tbody tr td {
   font-size: 16px;
 }
@@ -52,10 +48,6 @@
 #published-table thead tr th button svg {
   opacity: 1 !important;
   margin-top: 2px;
-}
-
-#published-table tbody td {
-  padding: 22px 16px;
 }
 
 #published-table thead tr th:nth-child(1) {

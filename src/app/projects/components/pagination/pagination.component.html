@@ -1,0 +1,86 @@
+<nav class="vf-pagination" aria-label="Pagination" *ngIf="totalPages > 1">
+  <ul class="vf-pagination__list">
+    <!--Previous-->
+    <app-pagination-button
+      [extraClasses]="'vf-pagination__item--previous-page'"
+      pageNumber="Previous"
+      (paginate)="changePage(currentPage - 1)"
+    ></app-pagination-button>
+
+    <ng-container *ngIf="currentPage > 2">
+      <app-pagination-button
+        [pageNumber]="1"
+        (paginate)="changePage($event)"
+      ></app-pagination-button>
+      <li class="vf-pagination__item" style="flex: none">
+        <span class="vf-pagination__label">...</span>
+      </li>
+    </ng-container>
+
+    <ng-container *ngIf="currentPage === 1">
+      <app-pagination-button
+        pageNumber="1"
+        (paginate)="changePage(1)"
+        [isCurrent]="true"
+      ></app-pagination-button>
+      <app-pagination-button
+        pageNumber="2"
+        (paginate)="changePage(2)"
+      ></app-pagination-button>
+      <app-pagination-button
+        pageNumber="3"
+        (paginate)="changePage(3)"
+      ></app-pagination-button>
+    </ng-container>
+
+    <ng-container *ngIf="currentPage === totalPages">
+      <app-pagination-button
+        [pageNumber]="totalPages - 2"
+        (paginate)="changePage($event)"
+      ></app-pagination-button>
+      <app-pagination-button
+        [pageNumber]="totalPages - 1"
+        (paginate)="changePage($event)"
+      ></app-pagination-button>
+      <app-pagination-button
+        [pageNumber]="totalPages"
+        (paginate)="changePage($event)"
+        [isCurrent]="true"
+      ></app-pagination-button>
+    </ng-container>
+
+    <ng-container *ngIf="currentPage > 1 && currentPage < totalPages">
+      <app-pagination-button
+        [pageNumber]="currentPage - 1"
+        (paginate)="changePage($event)"
+      ></app-pagination-button>
+      <app-pagination-button
+        [pageNumber]="currentPage"
+        [isCurrent]="true"
+        (paginate)="changePage($event)"
+      ></app-pagination-button>
+      <app-pagination-button
+        [pageNumber]="currentPage + 1"
+        (paginate)="changePage($event)"
+      ></app-pagination-button>
+    </ng-container>
+
+    <ng-container *ngIf="totalPages > 3 && currentPage < totalPages - 1">
+      <li class="vf-pagination__item" style="flex: none;">
+        <span class="vf-pagination__label">...</span>
+      </li>
+      <app-pagination-button
+        [pageNumber]="totalPages"
+        (paginate)="changePage($event)"
+        [isCurrent]="currentPage === totalPages"
+      ></app-pagination-button>
+    </ng-container>
+
+    <!--Next-->
+    <app-pagination-button
+      [extraClasses]="'vf-pagination__item--next-page'"
+      pageNumber="Next"
+      (paginate)="changePage(currentPage + 1)"
+    ></app-pagination-button>
+  </ul>
+</nav>

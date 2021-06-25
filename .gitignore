@@ -10,12 +10,15 @@
 # dependencies
 /node_modules
 
+# npm lock files, use yarn instead
+package-lock.json
+
 # profiling files
 chrome-profiler-events*.json
 speed-measure-plugin*.json
 
 # IDEs and editors
-/.idea
+.idea
 .project
 .classpath
 .c9/
@@ -46,4 +49,3 @@ testem.log
 Thumbs.db
 
 .cache/
-.idea
