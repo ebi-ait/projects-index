@@ -24,8 +24,6 @@ export class AddProjectComponent {
   }
 
   onSubmit(f): void {
-    // TODO Implement sending of data here
-    console.log(f);
     this.addProjectService
       .submitProject(f)
       .then(() => {
