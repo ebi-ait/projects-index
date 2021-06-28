@@ -1,9 +1,9 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
-import {Project} from "../projects/project";
-import {ProjectCount, SummaryService} from "./summary.service";
-import {ProjectsService} from "../projects/services/projects.service";
-import {HeadingService} from "../services/heading.service";
+import {Project} from "../../../projects/project";
+import {ProjectCount, SummaryService} from "../../summary.service";
+import {ProjectsService} from "../../../projects/services/projects.service";
+import {HeadingService} from "../../../services/heading.service";
 
 @Component({
              selector: 'app-summary',
