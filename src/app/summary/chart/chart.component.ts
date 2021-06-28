@@ -24,8 +24,17 @@ export class ChartComponent implements OnInit {
     scales: {
       xAxes: [{}],
       yAxes: [
-        {id: 'project-count-axis', position: 'left'},
-        {id: 'cell-count-axis', position: 'right'}
+        {
+          id: 'project-count-axis',
+          position: 'left',
+          gridLines: { display:false },
+        },
+        {
+          id: `key-count-axis`,
+          position: 'right',
+          ticks: { callback:(value)=>`${parseInt(value+'')/1000000}M` },
+          gridLines: { display:false}
+        }
       ]
     }
   };
@@ -35,7 +44,7 @@ export class ChartComponent implements OnInit {
   public barChartPlugins = [];
   public barChartData: ChartDataSets[] = [
     {data: [], label: 'Project Count', backgroundColor: '#2A4B8C'},
-    {data: [], label: 'Cell Count', backgroundColor: '#4B89BF', yAxisID: 'cell-count-axis'},
+    {data: [], label: `Key Count`, backgroundColor: '#4B89BF', yAxisID: 'key-count-axis'},
   ];
 
   constructor() {}
@@ -45,6 +54,7 @@ export class ChartComponent implements OnInit {
     this.list.forEach(projectCount=> {
       this.barChartData[0].data.push(projectCount.count);
       this.barChartData[1].data.push(projectCount.cellCount);
+      this.barChartData[1].label = `${this.key} Count`;
       this.barChartLabels.push(projectCount.group);
     })
   }

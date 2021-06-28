@@ -9,6 +9,7 @@ export class MiniCardComponent implements OnInit {
 
   @Input() title:string;
   @Input() value:string;
+  @Input() icon:string;
 
   constructor() { }
 

@@ -5,6 +5,8 @@ import {ChartsModule} from "ng2-charts";
 import {MiniCardComponent} from "./mini-card/mini-card.component";
 import {SummaryComponent} from "./summary.component";
 import {SummaryService} from "./summary.service";
+import {FaIconLibrary, FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {fas} from "@fortawesome/free-solid-svg-icons";
 
 @NgModule({
             declarations: [
@@ -12,10 +14,11 @@ import {SummaryService} from "./summary.service";
               MiniCardComponent,
               SummaryComponent,
             ],
-            imports: [
-              CommonModule,
-              ChartsModule,
-            ],
+              imports: [
+                  CommonModule,
+                  ChartsModule,
+                  FontAwesomeModule,
+              ],
             exports: [
               ChartComponent,
               MiniCardComponent,
@@ -25,4 +28,7 @@ import {SummaryService} from "./summary.service";
 
           })
 export class SummaryModule {
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas);
+  }
 }
