@@ -31,7 +31,7 @@ export class SummaryService implements OnDestroy {
         .subscribe(projects => this.cellCount.next(projects.reduce((acc, val) => acc + val, 0)));
   }
 
-  groupProjectsByKey(key: string, subject: Subject<any>) {
+  groupProjectsByKey(key: string, subject: Subject<any>) : void  {
     this.projectService.getAllProjects()
         .pipe(
           map(projects => {
@@ -63,7 +63,7 @@ export class SummaryService implements OnDestroy {
   }
 
   private groupListByKey(list: any[], groupKey: string) {
-    let groupedList: { [key: string]: number } = list?.reduce((acc, val) => {
+    return list?.reduce((acc, val) => {
       val[groupKey].forEach((key => {
         if (!acc[key]) {
           acc[key] = {count: 0, cellCount: 0};
@@ -73,6 +73,5 @@ export class SummaryService implements OnDestroy {
       }));
       return acc;
     }, {});
-    return groupedList;
   }
 }

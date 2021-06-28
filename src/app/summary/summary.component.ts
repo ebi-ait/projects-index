@@ -3,22 +3,29 @@ import {Observable} from "rxjs";
 import {Project} from "../projects/project";
 import {ProjectCount, SummaryService} from "./summary.service";
 import {ProjectsService} from "../projects/services/projects.service";
+import {HeadingService} from "../services/heading.service";
 
 @Component({
-  selector: 'app-summary',
-  templateUrl: './summary.component.html',
-  styleUrls: ['./summary.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
-})
+             selector: 'app-summary',
+             templateUrl: './summary.component.html',
+             styleUrls: ['./summary.component.css'],
+             changeDetection: ChangeDetectionStrategy.OnPush
+           })
 export class SummaryComponent implements OnInit {
 
   projects$: Observable<Project[]>;
   projectsByOrgan$: Observable<ProjectCount[]>;
   projectsByTech$: Observable<ProjectCount[]>;
   cellCount$: Observable<number>;
+
   constructor(private projectService: ProjectsService,
-              private summaryService: SummaryService
-  ) {
+              private summaryService: SummaryService,
+              private headingService: HeadingService) {
+    this.headingService.setTitle(
+      'Summary',
+      'Projects Summary Statistics'
+    );
+    this.headingService.setBreadcrumbs('Summary');
   }
 
   ngOnInit(): void {

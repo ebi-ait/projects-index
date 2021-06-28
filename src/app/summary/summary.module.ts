@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ChartComponent} from "./chart/chart.component";
-import {ChartsModule} from "ng2-charts";
-import {MiniCardComponent} from "./mini-card/mini-card.component";
-import {SummaryComponent} from "./summary.component";
-import {SummaryService} from "./summary.service";
-import {FaIconLibrary, FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import {fas} from "@fortawesome/free-solid-svg-icons";
+import {ChartComponent} from './components/chart/chart.component';
+import {ChartsModule} from "ng2-charts/public_api";
+import {MiniCardComponent} from './components/mini-card/mini-card.component';
+import {SummaryComponent} from './summary.component';
+import {SummaryService} from './summary.service';
+import {FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {fas} from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
             declarations: [
@@ -14,11 +14,11 @@ import {fas} from "@fortawesome/free-solid-svg-icons";
               MiniCardComponent,
               SummaryComponent,
             ],
-              imports: [
-                  CommonModule,
-                  ChartsModule,
-                  FontAwesomeModule,
-              ],
+            imports: [
+              CommonModule,
+              ChartsModule,
+              FontAwesomeModule,
+            ],
             exports: [
               ChartComponent,
               MiniCardComponent,
