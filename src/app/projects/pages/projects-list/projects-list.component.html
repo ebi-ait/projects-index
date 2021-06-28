@@ -104,7 +104,8 @@
         </td>
 
         <td class="vf-table__cell">
-          <p>{{ project.cellCount ? (project.cellCount | number) : "-" }}</p>
+          <span *ngIf="project.cellCount">{{ (project.cellCount | number) }}</span>
+          <p *ngIf="!project.cellCount">-</p>
         </td>
 
         <td class="vf-table__cell">
