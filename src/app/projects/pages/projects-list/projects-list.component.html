@@ -1,20 +1,3 @@
-<div
-  style="
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  "
->
-  <a
-    class="vf-button vf-button--primary vf-button--outline vf-button--sm"
-    style="transform: translateY(-25%); flex-shrink: 0"
-    routerLink="/add-project"
-  >
-    Add a project
-  </a>
-</div>
-
 <app-filters
   *ngIf="projects"
   [organs]="projects.availableOrgans"
