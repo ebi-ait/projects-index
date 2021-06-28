@@ -1,29 +1,3 @@
-<div
-  style="
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  "
->
-  <p
-    class="vf-text-body vf-text-body--3"
-    style="margin-right: 2rem"
-    style="color: #505050"
-  >
-    A catalogue of single cell projects eligible for the Human Cell Atlas,
-    selected and curated by the HCA DCP wrangling teams.
-    <a routerLink="/about">Read more ></a>
-  </p>
-  <a
-    class="vf-button vf-button--primary vf-button--outline vf-button--sm"
-    style="transform: translateY(-25%); flex-shrink: 0"
-    routerLink="/add-project"
-  >
-    Add a project
-  </a>
-</div>
-
 <app-filters
   *ngIf="projects"
   [organs]="projects.availableOrgans"
