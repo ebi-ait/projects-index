@@ -1,7 +1,7 @@
 import {Injectable, OnDestroy} from '@angular/core';
-import {map} from "rxjs/operators";
+import {map} from 'rxjs/operators';
 import {Subject} from "rxjs";
-import {ProjectsService} from "../projects/services/projects.service";
+import {ProjectsService} from '../projects/services/projects.service';
 
 export interface ProjectCount {
   group: string;
