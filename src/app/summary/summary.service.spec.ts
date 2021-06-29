@@ -74,7 +74,18 @@ describe('SummaryService', () => {
     });
   });
 
-  it('should group projects by cell count', () => {
+  it('should group projects by tech', () => {
+    service.projectsByTech$.subscribe(value => {
+      expect(value)
+        .toEqual([
+                {group: 't1', count: 2, cellCount: 500},
+                {group: 't2', count: 1, cellCount: 200},
+                {group: 't3', count: 1, cellCount: 300},
+              ]);
+    });
+  });
+
+  it('should group projects by organ', () => {
     service.projectsByOrgan$.subscribe(value => {
       expect(value)
         .toEqual([
