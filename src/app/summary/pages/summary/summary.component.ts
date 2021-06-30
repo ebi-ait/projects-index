@@ -1,18 +1,19 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
+import {Observable, Subject} from "rxjs";
 import {Project} from "../../../projects/project";
 import {ProjectCount, SummaryService} from "../../services/summary.service";
 import {ProjectsService} from "../../../projects/services/projects.service";
 import {HeadingService} from "../../../services/heading.service";
+import {takeUntil} from "rxjs/operators";
 
 @Component({
              selector: 'app-summary',
              templateUrl: './summary.component.html',
              styleUrls: ['./summary.component.css'],
-             changeDetection: ChangeDetectionStrategy.OnPush
+             providers: [SummaryService],
+
            })
 export class SummaryComponent implements OnInit {
-
   projects$: Observable<Project[]>;
   projectsByOrgan$: Observable<ProjectCount[]>;
   projectsByTech$: Observable<ProjectCount[]>;
