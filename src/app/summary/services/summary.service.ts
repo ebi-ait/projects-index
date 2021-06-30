@@ -9,9 +9,7 @@ export interface ProjectCount {
   cellCount: number;
 }
 
-@Injectable({
-              providedIn: 'root'
-            })
+@Injectable()
 export class SummaryService implements OnDestroy {
 
   private projectsByOrgan = new Subject<ProjectCount[]>();
