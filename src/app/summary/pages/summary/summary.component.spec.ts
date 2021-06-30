@@ -2,7 +2,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SummaryComponent} from './summary.component';
 import {ProjectsService} from "../../../projects/services/projects.service";
-import {SummaryService} from "../../summary.service";
+import {SummaryService} from "../../services/summary.service";
 import {HttpClientTestingModule} from "@angular/common/http/testing";
 import {HeadingService} from "../../../services/heading.service";
 

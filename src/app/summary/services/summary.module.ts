@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ChartComponent} from './components/chart/chart.component';
-import {MiniCardComponent} from './components/mini-card/mini-card.component';
-import {SummaryComponent} from './pages/summary/summary.component';
+import {ChartComponent} from '../components/chart/chart.component';
+import {MiniCardComponent} from '../components/mini-card/mini-card.component';
+import {SummaryComponent} from '../pages/summary/summary.component';
 import {SummaryService} from './summary.service';
 import {FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {fas} from '@fortawesome/free-solid-svg-icons';

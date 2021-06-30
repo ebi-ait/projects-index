@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Label} from "ng2-charts";
 import {ChartDataSets, ChartOptions, ChartType} from "chart.js";
-import {ProjectCount} from "../../summary.service";
+import {ProjectCount} from "../../services/summary.service";
 
 const DefaultMaxChartEntries = 7;
 
