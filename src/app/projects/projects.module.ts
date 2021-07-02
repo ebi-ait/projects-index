@@ -18,6 +18,5 @@ import {ProjectsService} from "./services/projects.service";
     PaginationButtonComponent,
   ],
   imports: [CommonModule, ProjectsRoutingModule, SharedModule],
-  providers: [ProjectsService]
 })
 export class ProjectsModule {}
