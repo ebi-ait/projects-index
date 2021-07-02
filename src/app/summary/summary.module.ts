@@ -24,8 +24,6 @@ import {ChartsModule} from "ng2-charts";
               MiniCardComponent,
               SummaryComponent,
             ],
-            providers: [SummaryService]
-
           })
 export class SummaryModule {
   constructor(library: FaIconLibrary) {

@@ -10,7 +10,7 @@ import {takeUntil} from "rxjs/operators";
              selector: 'app-summary',
              templateUrl: './summary.component.html',
              styleUrls: ['./summary.component.css'],
-             providers: [SummaryService],
+             providers: [SummaryService, ProjectsService],
 
            })
 export class SummaryComponent implements OnInit {
