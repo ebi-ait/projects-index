@@ -43,8 +43,8 @@ export class ChartComponent implements OnInit {
   public barChartLegend = true;
   public barChartPlugins = [];
   public barChartData: ChartDataSets[] = [
-    {data: [], label: 'Project Count', backgroundColor: '#2A4B8C'},
-    {data: [], label: `Key Count`, backgroundColor: '#4B89BF', yAxisID: 'key-count-axis'},
+    {data: [], label: 'Project Count', backgroundColor: '#2A4B8C', hoverBackgroundColor: '#53669f'},
+    {data: [], label: `Key Count`, backgroundColor: '#4B89BF', hoverBackgroundColor: '#6e9cca', yAxisID: 'key-count-axis'},
   ];
 
   constructor() {}
