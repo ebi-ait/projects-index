@@ -5,8 +5,8 @@ import { AuthorNamesComponent } from './components/author-names/author-names.com
 import { FiltersComponent } from './components/filters/filters.component';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { PaginationComponent } from './components/pagination/pagination.component';
-import { SharedModule } from '../shared/shared.module';
 import { PaginationButtonComponent } from './components/pagination-button/pagination-button.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [

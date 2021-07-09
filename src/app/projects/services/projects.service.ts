@@ -34,12 +34,12 @@ export class ProjectsService implements OnDestroy {
 
   constructor(private http: HttpClient) {
     this.filters = new BehaviorSubject<Filters>({
-      organ: '',
-      technology: '',
-      location: '',
-      searchVal: '',
-      recentFirst: true,
-    });
+                                                  organ: '',
+                                                  technology: '',
+                                                  location: '',
+                                                  searchVal: '',
+                                                  recentFirst: true,
+                                                });
     this.filters.subscribe((filters) => {
       this.currentFilters = filters;
     });
@@ -48,12 +48,12 @@ export class ProjectsService implements OnDestroy {
 
     this.changePage(1);
     this.setFilters({
-      organ: '',
-      technology: '',
-      location: '',
-      searchVal: '',
-      recentFirst: true,
-    });
+                      organ: '',
+                      technology: '',
+                      location: '',
+                      searchVal: '',
+                      recentFirst: true,
+                    });
 
     this.retrieveProjects();
   }
@@ -129,7 +129,7 @@ export class ProjectsService implements OnDestroy {
     this.changePage(1);
   }
 
-  private getAllProjects(): Observable<Project[]> {
+  public getAllProjects(): Observable<Project[]> {
     return this.http.get<any>(this.URL).pipe(
       map((response) => {
         if (response) {

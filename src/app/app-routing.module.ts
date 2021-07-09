@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
 import { AddProjectComponent } from './pages/add-project/add-project.component';
 import { ErrorNotFoundComponent } from './errors/pages/error-not-found/error-not-found.component';
+import {SummaryComponent} from './summary/pages/summary/summary.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'add-project', component: AddProjectComponent },
+  { path: 'summary', component: SummaryComponent },
   {
     path: 'error',
     loadChildren: () =>

@@ -1,0 +1,26 @@
+.mini-card-title {
+  color: #2A4B8C;
+  padding: 0px;
+  margin: 0px;
+  text-transform: capitalize;
+}
+.mini-card-value {
+  font-size: 4em;
+  color: #2A4B8C;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mini-card {
+  box-shadow: 0 0.125rem 0.25rem rgba(84 88 90 50);
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 .125rem .25rem rgba(84,88,90,.5);
+  position: relative;
+  padding: 16px;
+}
+
+.mini-card-icon {
+  font-size: 4em;
+  vertical-align: center;
+  color: #2A4B8C;
+}

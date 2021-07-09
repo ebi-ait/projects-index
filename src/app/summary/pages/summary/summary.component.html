@@ -1,0 +1,31 @@
+<h1 class="vf-intro__heading">Projects Summary Statistics</h1>
+<div class="vf-grid vf-grid__col-6">
+
+  <div class="vf-grid__col--span-2" *ngIf="projects$ | async as projects">
+    <app-mini-card title="Project Count"
+                   value="{{projects.length}}"
+                   icon="project-diagram"></app-mini-card>
+  </div>
+
+  <div class="vf-grid__col--span-2" *ngIf="cellCount$ | async as cellCount">
+    <app-mini-card title="Cell Count"
+                   value="{{cellCount /1000000 | number:'0.1-2' }}M"
+                   icon="meteor"></app-mini-card>
+  </div>
+
+  <div class="vf-grid__col--span-2" *ngIf="projectsByOrgan$ | async as projectsByOrgan">
+    <app-mini-card title="Organ Count"
+                   value="{{projectsByOrgan.length}}"
+                   icon="lungs"></app-mini-card>
+  </div>
+
+  <div class="vf-grid__col--span-3" *ngIf="projectsByOrgan$ | async as projectsByOrgan">
+    <app-chart [list]="projectsByOrgan | slice:1:10 " key="organs"></app-chart>
+  </div>
+
+  <div class="vf-grid__col--span-3" *ngIf="projectsByTech$ | async as projectsByTech">
+    <app-chart [list]="projectsByTech | slice:1:10" key="technologies"></app-chart>
+  </div>
+
+
+</div>
