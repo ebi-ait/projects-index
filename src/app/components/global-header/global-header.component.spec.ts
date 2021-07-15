@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Router, RouterEvent } from '@angular/router';
 import { ReplaySubject } from 'rxjs';
 
@@ -8,7 +8,7 @@ describe('GlobalHeaderComponent', () => {
   let component: GlobalHeaderComponent;
   let fixture: ComponentFixture<GlobalHeaderComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     let routerEventRelaySubject = new ReplaySubject<RouterEvent>(1);
     let routerMock = {
       events: routerEventRelaySubject.asObservable(),
