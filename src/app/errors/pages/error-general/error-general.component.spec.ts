@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ErrorGeneralComponent } from './error-general.component';
 
@@ -6,7 +6,7 @@ describe('ErrorGeneralComponent', () => {
   let component: ErrorGeneralComponent;
   let fixture: ComponentFixture<ErrorGeneralComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ErrorGeneralComponent],
     }).compileComponents();
