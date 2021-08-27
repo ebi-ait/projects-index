@@ -134,7 +134,10 @@ export class ProjectsService implements OnDestroy {
   }
 
   setFilters(filters: Filters) {
-    if (!ProjectsService.allowedLocations.includes(filters.location)) {
+    if (
+      filters.location &&
+      !ProjectsService.allowedLocations.includes(filters.location)
+    ) {
       console.error(`${filters.location} not an allowed data location.`);
       return;
     }
