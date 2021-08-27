@@ -176,6 +176,19 @@
                 </li>
               </ul>
             </li>
+            <li *ngIf="project.dbgapAccessions.length">
+              dbGaP:
+              <ul class="comma-list">
+                <li *ngFor="let accession of project.dbgapAccessions">
+                  <a
+                    class="vf-link"
+                    href="https://identifiers.org/dbgap:{{ accession }}"
+                    target="_blank"
+                  >{{ accession }}</a
+                  >
+                </li>
+              </ul>
+            </li>
             <li *ngIf="project.dcpUrl">
               <a class="vf-link" href="{{ project.dcpUrl }}" target="_blank"
                 >HCA Data Portal</a

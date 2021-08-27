@@ -113,6 +113,7 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       arrayExpressAccessions: 'Arrayexpress',
       geoAccessions: 'GEO',
       egaStudiesAccessions: 'EGA',
+      dbgapAccessions: 'dbGaP',
       dcpUrl: 'HCA Data Portal URL',
     };
     const tsvString = ProjectsTsvService.asTsvString(

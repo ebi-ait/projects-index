@@ -34,12 +34,12 @@ export class ProjectsService implements OnDestroy {
 
   constructor(private http: HttpClient) {
     this.filters = new BehaviorSubject<Filters>({
-                                                  organ: '',
-                                                  technology: '',
-                                                  location: '',
-                                                  searchVal: '',
-                                                  recentFirst: true,
-                                                });
+      organ: '',
+      technology: '',
+      location: '',
+      searchVal: '',
+      recentFirst: true,
+    });
     this.filters.subscribe((filters) => {
       this.currentFilters = filters;
     });
@@ -48,12 +48,12 @@ export class ProjectsService implements OnDestroy {
 
     this.changePage(1);
     this.setFilters({
-                      organ: '',
-                      technology: '',
-                      location: '',
-                      searchVal: '',
-                      recentFirst: true,
-                    });
+      organ: '',
+      technology: '',
+      location: '',
+      searchVal: '',
+      recentFirst: true,
+    });
 
     this.retrieveProjects();
   }
@@ -182,6 +182,11 @@ export class ProjectsService implements OnDestroy {
           return false;
         }
         break;
+      case 'dbGaP':
+        if (!project.dbgapAccessions.length) {
+          return false;
+        }
+        break;
       default:
         break;
     }
@@ -249,13 +254,14 @@ export class ProjectsService implements OnDestroy {
         geoAccessions: obj.content.geo_series_accessions ?? [],
         arrayExpressAccessions: obj.content.array_express_accessions ?? [],
         egaStudiesAccessions: this.captureRegexGroups(
-          /.*\/studies\/(EGAS\d*).*/i,
-          obj.content.supplementary_links || []
+          /(EGAS\d*)/i,
+          obj.content.ega_accessions || []
         ),
         egaDatasetsAccessions: this.captureRegexGroups(
-          /.*\/studies\/(EGAD\d*).*/i,
-          obj.content.supplementary_links || []
+          /(EGAD\d*)/i,
+          obj.content.ega_accessions || []
         ),
+        dbgapAccessions: obj.content.dbgap_accessions ?? [],
         publications: obj.publicationsInfo ?? [],
         authors:
           obj.content.contributors
@@ -274,7 +280,7 @@ export class ProjectsService implements OnDestroy {
                 fullName = author.last;
               }
               return {
-                fullName: fullName,
+                fullName,
                 formattedName,
               };
             }) || [],

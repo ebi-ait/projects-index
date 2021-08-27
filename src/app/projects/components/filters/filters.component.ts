@@ -24,7 +24,14 @@ export class FiltersComponent implements OnInit {
   @Output()
   valueSearched = new EventEmitter<string>();
 
-  dataLocations = ['HCA Data Portal', 'GEO', 'ENA', 'ArrayExpress', 'EGA'];
+  dataLocations = [
+    'HCA Data Portal',
+    'GEO',
+    'ENA',
+    'ArrayExpress',
+    'EGA',
+    'dbGaP',
+  ];
 
   constructor() {}
 

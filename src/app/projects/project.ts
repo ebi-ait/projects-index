@@ -25,6 +25,7 @@ export interface Project {
   arrayExpressAccessions: string[];
   egaStudiesAccessions: string[];
   egaDatasetsAccessions: string[];
+  dbgapAccessions: string[];
   publications: Publication[];
   authors: Author[];
 }
