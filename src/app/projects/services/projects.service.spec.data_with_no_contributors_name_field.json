@@ -15,6 +15,7 @@
           ],
           "insdc_project_accessions": ["SRP075496"],
           "geo_series_accessions": ["GSE81547"],
+          "dbgap_accessions": ["phs001861.v1.p1"],
           "publications": [
             {
               "authors": [
