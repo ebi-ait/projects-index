@@ -18,8 +18,8 @@ export class ProjectsService implements OnDestroy {
   static allowedLocations = [
     'HCA Data Portal',
     'GEO',
-    'ENA',
     'ArrayExpress',
+    'ENA',
     'EGA',
     'dbGaP',
   ];
