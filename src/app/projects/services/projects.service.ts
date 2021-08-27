@@ -165,27 +165,27 @@ export class ProjectsService implements OnDestroy {
       return false;
     }
     switch (filters.location) {
-      case 'HCA Data Portal':
+      case ProjectsService.allowedLocations[0]:
         if (!project.dcpUrl) {
           return false;
         }
         break;
-      case 'GEO':
+      case ProjectsService.allowedLocations[1]:
         if (!project.geoAccessions.length) {
           return false;
         }
         break;
-      case 'ArrayExpress':
+      case ProjectsService.allowedLocations[2]:
         if (!project.arrayExpressAccessions.length) {
           return false;
         }
         break;
-      case 'ENA':
+      case ProjectsService.allowedLocations[3]:
         if (!project.enaAccessions.length) {
           return false;
         }
         break;
-      case 'EGA':
+      case ProjectsService.allowedLocations[4]:
         if (
           !(
             !!project.egaStudiesAccessions.length ||
@@ -195,7 +195,7 @@ export class ProjectsService implements OnDestroy {
           return false;
         }
         break;
-      case 'dbGaP':
+      case ProjectsService.allowedLocations[5]:
         if (!project.dbgapAccessions.length) {
           return false;
         }
