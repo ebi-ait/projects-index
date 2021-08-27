@@ -15,6 +15,15 @@ interface Filters {
 
 @Injectable()
 export class ProjectsService implements OnDestroy {
+  static allowedLocations = [
+    'HCA Data Portal',
+    'GEO',
+    'ENA',
+    'ArrayExpress',
+    'EGA',
+    'dbGaP',
+  ];
+
   private URL = `${environment.ingestApiUrl}${environment.catalogueEndpoint}`;
 
   private projectsPerPage = 20;
@@ -125,6 +134,10 @@ export class ProjectsService implements OnDestroy {
   }
 
   setFilters(filters: Filters) {
+    if (!ProjectsService.allowedLocations.includes(filters.location)) {
+      console.error(`${filters.location} not an allowed data location.`);
+      return;
+    }
     this.filters.next(filters);
     this.changePage(1);
   }
