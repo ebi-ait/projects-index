@@ -25,7 +25,7 @@ export class FiltersComponent implements OnInit {
   @Output()
   valueSearched = new EventEmitter<string>();
 
-  dataLocations = ProjectsService.allowedLocations;
+  dataLocations = Object.values(ProjectsService.allowedLocations);
 
   constructor() {}
 

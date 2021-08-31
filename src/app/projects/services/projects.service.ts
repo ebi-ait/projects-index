@@ -15,14 +15,14 @@ interface Filters {
 
 @Injectable()
 export class ProjectsService implements OnDestroy {
-  static allowedLocations = [
-    'HCA Data Portal',
-    'GEO',
-    'ArrayExpress',
-    'ENA',
-    'EGA',
-    'dbGaP',
-  ];
+  static allowedLocations = {
+    HCA: 'HCA Data Portal',
+    GEO: 'GEO',
+    ARRAY_EXPRESS: 'ArrayExpress',
+    ENA: 'ENA',
+    EGA: 'EGA',
+    DBGAP: 'dbGaP',
+  } as const;
 
   private URL = `${environment.ingestApiUrl}${environment.catalogueEndpoint}`;
 
@@ -168,27 +168,27 @@ export class ProjectsService implements OnDestroy {
       return false;
     }
     switch (filters.location) {
-      case ProjectsService.allowedLocations[0]:
+      case ProjectsService.allowedLocations.HCA:
         if (!project.dcpUrl) {
           return false;
         }
         break;
-      case ProjectsService.allowedLocations[1]:
+      case ProjectsService.allowedLocations.GEO:
         if (!project.geoAccessions.length) {
           return false;
         }
         break;
-      case ProjectsService.allowedLocations[2]:
+      case ProjectsService.allowedLocations.ARRAY_EXPRESS:
         if (!project.arrayExpressAccessions.length) {
           return false;
         }
         break;
-      case ProjectsService.allowedLocations[3]:
+      case ProjectsService.allowedLocations.ENA:
         if (!project.enaAccessions.length) {
           return false;
         }
         break;
-      case ProjectsService.allowedLocations[4]:
+      case ProjectsService.allowedLocations.EGA:
         if (
           !(
             !!project.egaStudiesAccessions.length ||
@@ -198,7 +198,7 @@ export class ProjectsService implements OnDestroy {
           return false;
         }
         break;
-      case ProjectsService.allowedLocations[5]:
+      case ProjectsService.allowedLocations.DBGAP:
         if (!project.dbgapAccessions.length) {
           return false;
         }
