@@ -15,6 +15,15 @@ interface Filters {
 
 @Injectable()
 export class ProjectsService implements OnDestroy {
+  static allowedLocations = {
+    HCA: 'HCA Data Portal',
+    GEO: 'GEO',
+    ARRAY_EXPRESS: 'ArrayExpress',
+    ENA: 'ENA',
+    EGA: 'EGA',
+    DBGAP: 'dbGaP',
+  } as const;
+
   private URL = `${environment.ingestApiUrl}${environment.catalogueEndpoint}`;
 
   private projectsPerPage = 20;
@@ -34,12 +43,12 @@ export class ProjectsService implements OnDestroy {
 
   constructor(private http: HttpClient) {
     this.filters = new BehaviorSubject<Filters>({
-                                                  organ: '',
-                                                  technology: '',
-                                                  location: '',
-                                                  searchVal: '',
-                                                  recentFirst: true,
-                                                });
+      organ: '',
+      technology: '',
+      location: '',
+      searchVal: '',
+      recentFirst: true,
+    });
     this.filters.subscribe((filters) => {
       this.currentFilters = filters;
     });
@@ -48,12 +57,12 @@ export class ProjectsService implements OnDestroy {
 
     this.changePage(1);
     this.setFilters({
-                      organ: '',
-                      technology: '',
-                      location: '',
-                      searchVal: '',
-                      recentFirst: true,
-                    });
+      organ: '',
+      technology: '',
+      location: '',
+      searchVal: '',
+      recentFirst: true,
+    });
 
     this.retrieveProjects();
   }
@@ -152,33 +161,38 @@ export class ProjectsService implements OnDestroy {
       return false;
     }
     switch (filters.location) {
-      case 'HCA Data Portal':
+      case ProjectsService.allowedLocations.HCA:
         if (!project.dcpUrl) {
           return false;
         }
         break;
-      case 'GEO':
+      case ProjectsService.allowedLocations.GEO:
         if (!project.geoAccessions.length) {
           return false;
         }
         break;
-      case 'ArrayExpress':
+      case ProjectsService.allowedLocations.ARRAY_EXPRESS:
         if (!project.arrayExpressAccessions.length) {
           return false;
         }
         break;
-      case 'ENA':
+      case ProjectsService.allowedLocations.ENA:
         if (!project.enaAccessions.length) {
           return false;
         }
         break;
-      case 'EGA':
+      case ProjectsService.allowedLocations.EGA:
         if (
           !(
             !!project.egaStudiesAccessions.length ||
             !!project.egaDatasetsAccessions.length
           )
         ) {
+          return false;
+        }
+        break;
+      case ProjectsService.allowedLocations.DBGAP:
+        if (!project.dbgapAccessions.length) {
           return false;
         }
         break;
@@ -249,13 +263,14 @@ export class ProjectsService implements OnDestroy {
         geoAccessions: obj.content.geo_series_accessions ?? [],
         arrayExpressAccessions: obj.content.array_express_accessions ?? [],
         egaStudiesAccessions: this.captureRegexGroups(
-          /.*\/studies\/(EGAS\d*).*/i,
-          obj.content.supplementary_links || []
+          /(EGAS\d*)/i,
+          obj.content.ega_accessions || []
         ),
         egaDatasetsAccessions: this.captureRegexGroups(
-          /.*\/studies\/(EGAD\d*).*/i,
-          obj.content.supplementary_links || []
+          /(EGAD\d*)/i,
+          obj.content.ega_accessions || []
         ),
+        dbgapAccessions: obj.content.dbgap_accessions ?? [],
         publications: obj.publicationsInfo ?? [],
         authors:
           obj.content.contributors
@@ -274,7 +289,7 @@ export class ProjectsService implements OnDestroy {
                 fullName = author.last;
               }
               return {
-                fullName: fullName,
+                fullName,
                 formattedName,
               };
             }) || [],

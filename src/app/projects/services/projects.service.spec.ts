@@ -49,6 +49,7 @@ describe('ProjectsService', () => {
         'arrayExpressAccessions',
         'egaStudiesAccessions',
         'egaDatasetsAccessions',
+        'dbgapAccessions',
         'publications',
         'authors',
       ];

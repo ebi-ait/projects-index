@@ -1,31 +1,42 @@
-import {Project} from "../../projects/project";
+import { Project } from '../../projects/project';
 
 function makeProject() {
   return {
-    addedToIndex: "",
+    addedToIndex: '',
     arrayExpressAccessions: [],
     authors: [],
-    date: "",
-    dcpUrl: "",
+    date: '',
+    dcpUrl: '',
     egaDatasetsAccessions: [],
     egaStudiesAccessions: [],
+    dbgapAccessions: [],
     enaAccessions: [],
     geoAccessions: [],
     publications: [],
-    title: "",
-    uuid: "",
+    title: '',
+    uuid: '',
     organs: [],
     technologies: [],
-    cellCount: 0
+    cellCount: 0,
   };
 }
 
 export function makeDummyProjects() {
-  let dummyProject: Project = makeProject();
+  const dummyProject: Project = makeProject();
 
-  let projects: Project[] = [
-    {...dummyProject, organs: ['lungs', 'brain'], technologies: ['t1', 't2'], cellCount: 200},
-    {...dummyProject, organs: ['kidney', 'lungs'], technologies: ['t1', 't3'], cellCount: 300}
+  const projects: Project[] = [
+    {
+      ...dummyProject,
+      organs: ['lungs', 'brain'],
+      technologies: ['t1', 't2'],
+      cellCount: 200,
+    },
+    {
+      ...dummyProject,
+      organs: ['kidney', 'lungs'],
+      technologies: ['t1', 't3'],
+      cellCount: 300,
+    },
   ];
   return projects;
 }

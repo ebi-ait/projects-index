@@ -61,6 +61,6 @@
   width: 40%;
 }
 
-#published-table tbody tr td:nth-child(5) {
-  font-size: 0.95em;
+#published-table thead tr th:nth-child(6) {
+  width: 11%;
 }

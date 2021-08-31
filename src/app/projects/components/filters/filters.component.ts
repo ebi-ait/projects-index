@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'app-filters',
@@ -24,7 +25,7 @@ export class FiltersComponent implements OnInit {
   @Output()
   valueSearched = new EventEmitter<string>();
 
-  dataLocations = ['HCA Data Portal', 'GEO', 'ENA', 'ArrayExpress', 'EGA'];
+  dataLocations = Object.values(ProjectsService.allowedLocations);
 
   constructor() {}
 
