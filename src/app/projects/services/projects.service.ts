@@ -134,13 +134,6 @@ export class ProjectsService implements OnDestroy {
   }
 
   setFilters(filters: Filters) {
-    if (
-      filters.location &&
-      !ProjectsService.allowedLocations.includes(filters.location)
-    ) {
-      console.error(`${filters.location} not an allowed data location.`);
-      return;
-    }
     this.filters.next(filters);
     this.changePage(1);
   }
