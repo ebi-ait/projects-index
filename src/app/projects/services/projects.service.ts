@@ -233,7 +233,7 @@ export class ProjectsService implements OnDestroy {
       .filter((match) => match && match.length)
       .map((match) => match[1]);
 
-  private formatProject = (obj: any): Project => {
+  formatProject = (obj: any): Project => {
     try {
       return {
         uuid: obj.uuid.uuid,
@@ -251,7 +251,9 @@ export class ProjectsService implements OnDestroy {
           obj.organ?.ontologies?.map((organ) => organ.ontology_label) ?? [],
         technologies:
           obj.technology?.ontologies?.map((tech) => tech.ontology_label) ?? [],
-        cellCount: obj.cellCount,
+        // TO DO: Remove usage of cellCount once the cellCount has been copied to content.estimated_cell_count
+        // GH issue : https://github.com/ebi-ait/dcp-ingest-central/issues/445
+        cellCount: obj.content.estimated_cell_count || obj.cellCount,
         // Temp fix until ena accessions fixed in core
         enaAccessions: (() => {
           const accessions = obj.content?.insdc_project_accessions;
