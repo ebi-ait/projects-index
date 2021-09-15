@@ -3,7 +3,7 @@
     "projects": [
       {
         "content": {
-          "describedBy": "https://schema.humancellatlas.org/type/project/14.0.0/project",
+          "describedBy": "https://schema.humancellatlas.org/type/project/14.3.0/project",
           "schema_type": "project",
           "project_core": {
             "project_short_name": "Single cell transcriptome analysis of human pancreas",
@@ -16,6 +16,7 @@
           "insdc_project_accessions": ["SRP075496"],
           "geo_series_accessions": ["GSE81547"],
           "dbgap_accessions": ["phs001861.v1.p1"],
+          "estimated_cell_count": 1000,
           "publications": [
             {
               "authors": [
@@ -101,7 +102,6 @@
         "accessionDate": null,
         "technology": null,
         "organ": null,
-        "cellCount": 1000,
         "dataAccess": null,
         "identifyingOrganisms": null,
         "publishedToCatalogue": true,

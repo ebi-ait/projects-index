@@ -117,4 +117,24 @@ describe('ProjectsService', () => {
     expect(req.request.method).toEqual('GET');
     req.flush(null, { status: 400, statusText: 'bad request' });
   });
+
+  it('should return the cell count from project metadata', () => {
+    const sub = service.pagedProjects$.subscribe((projects) => {
+      expect(projects.items.length).toBeGreaterThan(0);
+
+      const project = projects.items[0];
+
+      expect(project).not.toBeNull();
+
+      expect(project.cellCount).toEqual(1000);
+    });
+
+    const req = httpTestingController.expectOne(
+      `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
+    );
+    expect(req.request.method).toEqual('GET');
+    req.flush(testIngestProjectWithoutNameField);
+    sub.unsubscribe();
+  });
+
 });
