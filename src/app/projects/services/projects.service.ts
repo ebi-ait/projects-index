@@ -251,7 +251,7 @@ export class ProjectsService implements OnDestroy {
           obj.organ?.ontologies?.map((organ) => organ.ontology_label) ?? [],
         technologies:
           obj.technology?.ontologies?.map((tech) => tech.ontology_label) ?? [],
-        // TO DO: Remove usage of cellCount once the cellCount has been copied to content.estimated_cell_count
+        // TODO: Remove usage of cellCount once the cellCount has been copied to content.estimated_cell_count
         // GH issue : https://github.com/ebi-ait/dcp-ingest-central/issues/445
         cellCount: obj.content.estimated_cell_count || obj.cellCount,
         // Temp fix until ena accessions fixed in core
