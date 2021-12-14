@@ -1,6 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, switchMap, tap } from 'rxjs/operators';
+import { uniq, flatten } from 'lodash';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { PaginatedProjects, Project } from '../project';
@@ -274,27 +275,7 @@ export class ProjectsService implements OnDestroy {
         ),
         dbgapAccessions: obj.content.dbgap_accessions ?? [],
         publications: obj.publicationsInfo ?? [],
-        authors:
-          obj.content.contributors
-            ?.filter((c) => !this.isWrangler(c))
-            .map((author) => {
-              let formattedName = '';
-              let fullName = '';
-              if (author.hasOwnProperty('name')) {
-                const names = author.name.split(',');
-                formattedName = `${
-                  names[names.length - 1]
-                } ${names[0][0].toUpperCase()}`;
-                fullName = author.name;
-              } else if (author.hasOwnProperty('last')) {
-                formattedName = author.last;
-                fullName = author.last;
-              }
-              return {
-                fullName,
-                formattedName,
-              };
-            }) || [],
+        authors: uniq(flatten(obj.publicationsInfo?.map(({ authors }) => authors ))) ?? [],
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
