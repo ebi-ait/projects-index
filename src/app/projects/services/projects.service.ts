@@ -1,7 +1,6 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, switchMap, tap } from 'rxjs/operators';
-import { uniq, flatten } from 'lodash';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { PaginatedProjects, Project } from '../project';
@@ -275,7 +274,7 @@ export class ProjectsService implements OnDestroy {
         ),
         dbgapAccessions: obj.content.dbgap_accessions ?? [],
         publications: obj.publicationsInfo ?? [],
-        authors: uniq(flatten(obj.publicationsInfo?.map(({ authors }) => authors ))) ?? [],
+        authors: obj.publicationsInfo[0]?.authors ?? [],
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
