@@ -274,27 +274,7 @@ export class ProjectsService implements OnDestroy {
         ),
         dbgapAccessions: obj.content.dbgap_accessions ?? [],
         publications: obj.publicationsInfo ?? [],
-        authors:
-          obj.content.contributors
-            ?.filter((c) => !this.isWrangler(c))
-            .map((author) => {
-              let formattedName = '';
-              let fullName = '';
-              if (author.hasOwnProperty('name')) {
-                const names = author.name.split(',');
-                formattedName = `${
-                  names[names.length - 1]
-                } ${names[0][0].toUpperCase()}`;
-                fullName = author.name;
-              } else if (author.hasOwnProperty('last')) {
-                formattedName = author.last;
-                fullName = author.last;
-              }
-              return {
-                fullName,
-                formattedName,
-              };
-            }) || [],
+        authors: obj.publicationsInfo.length ? obj.publicationsInfo[0].authors : [],
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
