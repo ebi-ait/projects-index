@@ -1,17 +1,23 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Author } from '../../project';
 
 @Component({
   selector: 'app-author-names',
   templateUrl: './author-names.component.html',
   styleUrls: ['./author-names.component.css'],
 })
-export class AuthorNamesComponent {
+export class AuthorNamesComponent implements OnInit {
   @Input()
-  authors: string[];
+  authors: Author[];
 
   fullAuthorView = false;
+  formattedNames: string[];
 
   constructor() {}
+
+  ngOnInit(): void {
+    this.formattedNames = this.authors.map((author) => author.formattedName);
+  }
 
   toggleAuthorView() {
     this.fullAuthorView = !this.fullAuthorView;
@@ -19,7 +25,7 @@ export class AuthorNamesComponent {
 
   getFormattedContributors() {
     return this.fullAuthorView
-      ? this.authors.join(', ')
-      : `${this.authors[0]} et. al.`;
+      ? this.formattedNames.join(', ')
+      : `${this.formattedNames[0]} et. al.`;
   }
 }

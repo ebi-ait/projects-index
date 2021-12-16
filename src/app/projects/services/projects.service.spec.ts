@@ -58,7 +58,8 @@ describe('ProjectsService', () => {
       });
 
       project.authors.forEach((author) => {
-        expect(author).toEqual(jasmine.any(String));
+        expect(author.hasOwnProperty('fullName')).toBeTruthy();
+        expect(author.hasOwnProperty('formattedName')).toBeTruthy();
       });
 
       project.publications.forEach((publication) => {
@@ -79,7 +80,7 @@ describe('ProjectsService', () => {
     sub.unsubscribe();
   });
 
-  it('each author should be a string containing a space', () => {
+  it('should return a correct fullName and formattedName fields', () => {
     const sub = service.pagedProjects$.subscribe((projects) => {
       expect(projects.items.length).toBeGreaterThan(0);
 
@@ -88,8 +89,8 @@ describe('ProjectsService', () => {
       expect(project).not.toBeNull();
 
       project.authors.forEach((author) => {
-        expect(author).toEqual(jasmine.any(String));
-        expect(author).toContain(' ');
+        expect(author.hasOwnProperty('fullName')).toBeTruthy();
+        expect(author.hasOwnProperty('formattedName')).toBeTruthy();
       });
     });
 
