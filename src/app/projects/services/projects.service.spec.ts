@@ -163,16 +163,12 @@ describe('ProjectsService', () => {
     spyOn(console, 'error');
 
     const sub = service.pagedProjects$.subscribe((projects) => {
-      expect(projects.items.length).toBeGreaterThan(0);
-
-      const project = projects.items[2];
-
-      expect(project).not.toBeNull();
+      // The project with no title has been filtered out
+      expect(projects.items.length).toBe(2);
 
       expect(console.error).toHaveBeenCalledWith(
         jasmine.stringMatching(/title/)
       );
-      expect(project.title).toBeNull();
     });
 
     const req = httpTestingController.expectOne(
