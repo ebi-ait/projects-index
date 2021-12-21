@@ -8,7 +8,6 @@ import {
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import testIngestProjects from './projects.service.spec.data.json';
-import testIngestProjectWithoutNameField from './projects.service.spec.data_with_no_contributors_name_field.json';
 
 describe('ProjectsService', () => {
   let service: ProjectsService;
@@ -97,7 +96,7 @@ describe('ProjectsService', () => {
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
     expect(req.request.method).toEqual('GET');
-    req.flush(testIngestProjectWithoutNameField);
+    req.flush(testIngestProjects);
     sub.unsubscribe();
   });
 
@@ -132,8 +131,53 @@ describe('ProjectsService', () => {
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
     expect(req.request.method).toEqual('GET');
-    req.flush(testIngestProjectWithoutNameField);
+    req.flush(testIngestProjects);
     sub.unsubscribe();
   });
 
+  it('should allow no publicationsInfo', () => {
+    spyOn(console, 'error');
+
+    const sub = service.pagedProjects$.subscribe((projects) => {
+      expect(projects.items.length).toBeGreaterThan(0);
+
+      const project = projects.items[1];
+
+      expect(project).not.toBeNull();
+
+      expect(console.error).not.toHaveBeenCalledWith(
+        jasmine.stringMatching(/authors/)
+      );
+      expect(project.authors).toEqual([]);
+    });
+
+    const req = httpTestingController.expectOne(
+      `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
+    );
+    expect(req.request.method).toEqual('GET');
+    req.flush(testIngestProjects);
+    sub.unsubscribe();
+  });
+
+  it('should not allow no title', () => {
+    spyOn(console, 'error');
+
+    const sub = service.pagedProjects$.subscribe((projects) => {
+      // The project with no title has been filtered out
+      expect(projects.items.length).toEqual(
+        testIngestProjects._embedded.projects.length - 1
+      );
+
+      expect(console.error).toHaveBeenCalledWith(
+        jasmine.stringMatching(/title/)
+      );
+    });
+
+    const req = httpTestingController.expectOne(
+      `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
+    );
+    expect(req.request.method).toEqual('GET');
+    req.flush(testIngestProjects);
+    sub.unsubscribe();
+  });
 });
