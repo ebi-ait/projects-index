@@ -164,7 +164,9 @@ describe('ProjectsService', () => {
 
     const sub = service.pagedProjects$.subscribe((projects) => {
       // The project with no title has been filtered out
-      expect(projects.items.length).toBe(2);
+      expect(projects.items.length).toEqual(
+        testIngestProjects._embedded.projects.length - 1
+      );
 
       expect(console.error).toHaveBeenCalledWith(
         jasmine.stringMatching(/title/)
