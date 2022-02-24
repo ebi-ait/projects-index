@@ -10,6 +10,10 @@ import { environment } from '../../../environments/environment';
 import testIngestProjects from './projects.service.spec.data.json';
 import cloneDeep from 'lodash/cloneDeep';
 
+/**
+ * Generates a sample list of 1 project to provide to the service
+ * @param mapper (optional) function that receives the sample project and returns a new project. Used to edit the project
+ */
 const makeInputData = (mapper?) => {
   let project = cloneDeep(testIngestProjects);
   if (mapper) {
