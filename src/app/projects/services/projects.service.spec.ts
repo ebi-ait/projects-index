@@ -8,23 +8,6 @@ import {
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import testIngestProjects from './projects.service.spec.data.json';
-import cloneDeep from 'lodash/cloneDeep';
-
-/**
- * Generates a sample list of 1 project to provide to the service
- * @param mapper (optional) function that receives the sample project and returns a new project. Used to edit the project
- */
-const makeInputData = (mapper?) => {
-  let project = cloneDeep(testIngestProjects);
-  if (mapper) {
-    project = mapper(project);
-  }
-  return {
-    _embedded: {
-      projects: [project],
-    },
-  };
-};
 
 describe('ProjectsService', () => {
   let service: ProjectsService;
@@ -48,8 +31,7 @@ describe('ProjectsService', () => {
   });
 
   it('should return a list of correctly formatted projects', () => {
-    const data = makeInputData();
-    const firstProject = data._embedded.projects[0];
+    const firstProject = testIngestProjects._embedded.projects[0];
     const sub = service.pagedProjects$.subscribe((projects) => {
       const project = projects.items[0];
       const props = [
@@ -92,7 +74,7 @@ describe('ProjectsService', () => {
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
     expect(req.request.method).toEqual('GET');
-    req.flush(data);
+    req.flush(testIngestProjects);
     sub.unsubscribe();
   });
 
@@ -102,7 +84,7 @@ describe('ProjectsService', () => {
 
       const project = projects.items[0];
 
-      expect(project).toBeDefined();
+      expect(project).not.toBeNull();
 
       project.authors.forEach((author) => {
         expect(author).toEqual(jasmine.any(String));
@@ -114,7 +96,7 @@ describe('ProjectsService', () => {
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
     expect(req.request.method).toEqual('GET');
-    req.flush(makeInputData());
+    req.flush(testIngestProjects);
     sub.unsubscribe();
   });
 
@@ -140,7 +122,7 @@ describe('ProjectsService', () => {
 
       const project = projects.items[0];
 
-      expect(project).toBeDefined();
+      expect(project).not.toBeNull();
 
       expect(project.cellCount).toEqual(1000);
     });
@@ -149,7 +131,7 @@ describe('ProjectsService', () => {
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
     expect(req.request.method).toEqual('GET');
-    req.flush(makeInputData());
+    req.flush(testIngestProjects);
     sub.unsubscribe();
   });
 
@@ -159,39 +141,9 @@ describe('ProjectsService', () => {
     const sub = service.pagedProjects$.subscribe((projects) => {
       expect(projects.items.length).toBeGreaterThan(0);
 
-      const project = projects.items[0];
+      const project = projects.items[1];
 
-      expect(project).toBeDefined();
-
-      expect(console.error).not.toHaveBeenCalledWith(
-        jasmine.stringMatching(/authors/)
-      );
-      expect(project.authors).toEqual([]);
-    });
-
-    const req = httpTestingController.expectOne(
-      `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
-    );
-    expect(req.request.method).toEqual('GET');
-
-    const noPublicationsInfo = makeInputData((project) => {
-      delete project.publicationsInfo;
-      return project;
-    });
-
-    req.flush(noPublicationsInfo);
-    sub.unsubscribe();
-  });
-
-  it('should allow empty publicationsInfo', () => {
-    spyOn(console, 'error');
-
-    const sub = service.pagedProjects$.subscribe((projects) => {
-      expect(projects.items.length).toBeGreaterThan(0);
-
-      const project = projects.items[0];
-
-      expect(project).toBeDefined();
+      expect(project).not.toBeNull();
 
       expect(console.error).not.toHaveBeenCalledWith(
         jasmine.stringMatching(/authors/)
@@ -203,13 +155,7 @@ describe('ProjectsService', () => {
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
     expect(req.request.method).toEqual('GET');
-
-    const emptyPublicationsInfo = makeInputData((project) => {
-      project.publicationsInfo = [];
-      return project;
-    });
-
-    req.flush(emptyPublicationsInfo);
+    req.flush(testIngestProjects);
     sub.unsubscribe();
   });
 
@@ -217,7 +163,10 @@ describe('ProjectsService', () => {
     spyOn(console, 'error');
 
     const sub = service.pagedProjects$.subscribe((projects) => {
-      expect(projects.items.length).toEqual(0);
+      // The project with no title has been filtered out
+      expect(projects.items.length).toEqual(
+        testIngestProjects._embedded.projects.length - 1
+      );
 
       expect(console.error).toHaveBeenCalledWith(
         jasmine.stringMatching(/title/)
@@ -228,33 +177,7 @@ describe('ProjectsService', () => {
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
     );
     expect(req.request.method).toEqual('GET');
-
-    const noTitle = makeInputData((project) => {
-      delete project.content.project_core.project_title;
-      return project;
-    });
-    req.flush(noTitle);
-    sub.unsubscribe();
-  });
-
-  it('should allow no authors', () => {
-    const sub = service.pagedProjects$.subscribe((projects) => {
-      const project = projects.items[0];
-      expect(project).toBeDefined();
-      expect(project.authors).toEqual([]);
-    });
-
-    const req = httpTestingController.expectOne(
-      `${environment.ingestApiUrl}${environment.catalogueEndpoint}`
-    );
-
-    expect(req.request.method).toEqual('GET');
-
-    const noAuthors = makeInputData((project) => {
-      delete project.publicationsInfo[0].authors;
-      return project;
-    });
-    req.flush(noAuthors);
+    req.flush(testIngestProjects);
     sub.unsubscribe();
   });
 });
