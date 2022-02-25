@@ -274,7 +274,7 @@ export class ProjectsService implements OnDestroy {
         ),
         dbgapAccessions: obj.content.dbgap_accessions ?? [],
         publications: obj.publicationsInfo ?? [],
-        authors: obj.publicationsInfo ? obj.publicationsInfo[0].authors : [],
+        authors: obj.publicationsInfo?.[0]?.authors || [],
       };
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
