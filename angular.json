@@ -18,7 +18,6 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/projects-index",
-            "deployUrl": "/humancellatlas/project-catalogue/",
             "baseHref": "/humancellatlas/project-catalogue/",
             "index": "src/index.html",
             "main": "src/main.ts",
