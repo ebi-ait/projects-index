@@ -9,11 +9,11 @@ import {
   FontAwesomeModule,
 } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { ChartsModule } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [ChartComponent, MiniCardComponent, SummaryComponent],
-  imports: [CommonModule, ChartsModule, FontAwesomeModule],
+  imports: [CommonModule, NgChartsModule, FontAwesomeModule],
   exports: [ChartComponent, MiniCardComponent, SummaryComponent],
 })
 export class SummaryModule {
