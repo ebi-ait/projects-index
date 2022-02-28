@@ -2,12 +2,11 @@
   <article class="vf-card vf-card--brand ">
     <div class="vf-card__content">
       <canvas baseChart
-              [datasets]="barChartData"
-              [labels]="barChartLabels"
+              [data]="barChartData"
               [options]="barChartOptions"
               [plugins]="barChartPlugins"
               [legend]="barChartLegend"
-              [chartType]="barChartType">
+              [type]="barChartType">
       </canvas>
     </div>
   </article>
