@@ -11,10 +11,12 @@ spec:
   selector:
     app: humancellatlas-project-catalogue
 ---
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: humancellatlas-project-catalogue
+  labels:
+    app: humancellatlas-project-catalogue
 spec:
   selector:
     matchLabels:
