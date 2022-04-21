@@ -1,18 +1,10 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { SummaryService } from './summary.service';
 import { ProjectsService } from '../../projects/services/projects.service';
-import { Observable, of } from 'rxjs';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { Project } from '../../projects/project';
-import { delay } from 'rxjs/operators';
-import { makeDummyProjects } from './projects.data';
 
-class MockProjectsService {
-  getAllProjects(): Observable<Project[]> {
-    return of(makeDummyProjects()).pipe(delay(1));
-  }
-}
+class MockProjectsService {}
 
 describe('SummaryService', () => {
   let service: SummaryService;

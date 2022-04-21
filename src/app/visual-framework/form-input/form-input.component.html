@@ -16,7 +16,7 @@
     [ngClass]="{ 'vf-form__input--invalid': isInvalid() }"
     [disabled]="disabled"
     #input
-    (input)="onChange($event.target.value)"
+    (input)="onChange()"
     (blur)="onTouched()"
     [placeholder]="placeholder"
   />

@@ -6,7 +6,7 @@
     [disabled]="disabled"
     id="{{ name }}"
     #checkbox
-    (change)="onChange($event.target.checked)"
+    (change)="onChange()"
     (blur)="onTouched()"
   />
   <label
@@ -19,11 +19,7 @@
 
     <span *ngIf="required" class="asterisk">*</span>
 
-    <p
-      *ngIf="isInvalid() && required"
-      class="required-message"
-      class="invalid-message"
-    >
+    <p *ngIf="isInvalid() && required" class="required-message invalid-message">
       This field is required
     </p>
   </label>

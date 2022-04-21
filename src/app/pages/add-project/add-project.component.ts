@@ -12,6 +12,7 @@ export class AddProjectComponent {
   wranglerEmail = environment.wranglerEmail;
   submitted = false;
   error = false;
+
   constructor(
     private headingService: HeadingService,
     private addProjectService: AddProjectService

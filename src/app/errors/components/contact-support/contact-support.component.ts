@@ -8,6 +8,7 @@ import { environment } from '../../../../environments/environment';
 })
 export class ContactSupportComponent implements OnInit {
   wranglerEmail: string;
+
   constructor() {}
 
   ngOnInit(): void {

@@ -1,15 +1,9 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Project } from '../../../projects/project';
 import { ProjectCount, SummaryService } from '../../services/summary.service';
 import { ProjectsService } from '../../../projects/services/projects.service';
 import { HeadingService } from '../../../services/heading.service';
-import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-summary',

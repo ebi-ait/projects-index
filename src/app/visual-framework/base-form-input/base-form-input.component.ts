@@ -82,7 +82,7 @@ export class BaseFormInputComponent
     );
   }
 
-  onChange(event) {}
+  onChange() {}
 
   onTouched() {}
 }

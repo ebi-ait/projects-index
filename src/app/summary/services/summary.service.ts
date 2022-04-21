@@ -37,21 +37,19 @@ export class SummaryService implements OnDestroy {
       .pipe(
         map((projects) => {
           let groupedProjects = this.groupListByKey(projects, key);
-          let data: ProjectCount[] = [];
-          this.sortByValue(groupedProjects)?.forEach(([key, value]) => {
-            data.push({
+          return SummaryService.sortByValue(groupedProjects)?.map(
+            ([key, value]) => ({
               count: value.count,
               cellCount: value.cellCount,
               group: key,
-            });
-          });
-          return data;
+            })
+          );
         })
       )
-      .subscribe(
-        (x) => subject.next(x),
-        (x) => subject.error(x)
-      );
+      .subscribe({
+        next: (x) => subject.next(x),
+        error: (x) => subject.error(x),
+      });
   }
 
   ngOnDestroy() {
@@ -59,9 +57,9 @@ export class SummaryService implements OnDestroy {
     this.projectsByTech.complete();
   }
 
-  private sortByValue(groupedProjects: { [p: string]: any }) {
+  private static sortByValue(groupedProjects: { [p: string]: any }) {
     return Object.entries(groupedProjects)?.sort(
-      ([k1, v1], [k2, v2]) => v2.count - v1.count
+      ([k1, v1], [, v2]) => v2.count - v1.count
     );
   }
 

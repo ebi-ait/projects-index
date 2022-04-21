@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { BaseFormInputComponent } from '../base-form-input/base-form-input.component';
-import { AbstractControl, ValidatorFn, Validators } from '@angular/forms';
+import { ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-checkbox',
@@ -17,7 +17,7 @@ export class FormCheckboxComponent
   disabled = false;
   @ViewChild('checkbox') input: ElementRef;
 
-  validate(c: AbstractControl): ValidatorFn[] {
+  validate(): ValidatorFn[] {
     const validators: ValidatorFn[] = [];
     if (this.required) {
       validators.push(Validators.requiredTrue);
