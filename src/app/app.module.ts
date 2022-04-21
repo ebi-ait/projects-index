@@ -13,7 +13,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { VisualFrameworkModule } from './visual-framework/visual-framework.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
-import { SummaryModule} from "./summary/summary.module";
+import { SummaryModule } from './summary/summary.module';
 
 @NgModule({
   declarations: [

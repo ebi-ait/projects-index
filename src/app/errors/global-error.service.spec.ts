@@ -7,7 +7,10 @@ describe('GlobalErrorService', () => {
   let service: GlobalErrorService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({imports: [RouterTestingModule], providers: [GlobalErrorService]});
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+      providers: [GlobalErrorService],
+    });
     service = TestBed.inject(GlobalErrorService);
   });
 

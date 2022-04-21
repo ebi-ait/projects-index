@@ -3,8 +3,8 @@
     <ng-container *ngIf="!submitted; else thankyou">
       <p>
         Send us your suggestions for the HCA Project Catalogue. You can submit
-        both published and pre-print projects. Our data wranglers will review your
-        entry and get back to you.
+        both published and pre-print projects. Our data wranglers will review
+        your entry and get back to you.
       </p>
       <hr class="vf-divider" />
       <form
@@ -37,7 +37,8 @@
           name="comments"
         ></app-form-textarea>
         <app-form-checkbox [required]="true" ngModel name="privacy">
-          I agree to the limited processing of my personal data according to this
+          I agree to the limited processing of my personal data according to
+          this
           <a
             href="https://www.ebi.ac.uk/data-protection/privacy-notice/human-cell-atlas-ingest-submission"
             target="_blank"

@@ -7,7 +7,7 @@ describe('HttpErrorInterceptor', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       providers: [HttpErrorInterceptor],
-      imports: [RouterTestingModule]
+      imports: [RouterTestingModule],
     })
   );
 

@@ -6,11 +6,13 @@ describe('ErrorNotFoundComponent', () => {
   let component: ErrorNotFoundComponent;
   let fixture: ComponentFixture<ErrorNotFoundComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ErrorNotFoundComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [ErrorNotFoundComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ErrorNotFoundComponent);

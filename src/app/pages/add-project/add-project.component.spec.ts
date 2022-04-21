@@ -9,12 +9,14 @@ describe('AddProjectComponent', () => {
   let component: AddProjectComponent;
   let fixture: ComponentFixture<AddProjectComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, FormsModule, VisualFrameworkModule],
-      declarations: [AddProjectComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [HttpClientTestingModule, FormsModule, VisualFrameworkModule],
+        declarations: [AddProjectComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AddProjectComponent);

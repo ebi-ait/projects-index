@@ -1,18 +1,16 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 
-import {SummaryService} from './summary.service';
-import {ProjectsService} from "../../projects/services/projects.service";
-import {Observable, of} from "rxjs";
-import {HttpClientTestingModule} from "@angular/common/http/testing";
-import {Project} from "../../projects/project";
-import {delay} from "rxjs/operators";
-import {makeDummyProjects} from "./projects.data";
-
+import { SummaryService } from './summary.service';
+import { ProjectsService } from '../../projects/services/projects.service';
+import { Observable, of } from 'rxjs';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { Project } from '../../projects/project';
+import { delay } from 'rxjs/operators';
+import { makeDummyProjects } from './projects.data';
 
 class MockProjectsService {
   getAllProjects(): Observable<Project[]> {
-    return of(makeDummyProjects())
-      .pipe(delay(1));
+    return of(makeDummyProjects()).pipe(delay(1));
   }
 }
 
@@ -21,55 +19,48 @@ describe('SummaryService', () => {
   let mockProjectsService: ProjectsService;
 
   beforeEach(() => {
-
     TestBed.configureTestingModule({
-                                     imports: [HttpClientTestingModule],
-                                     providers: [
-                                       SummaryService,
-                                       {provide: ProjectsService, useClass: MockProjectsService}
-                                     ]
-                                   });
+      imports: [HttpClientTestingModule],
+      providers: [
+        SummaryService,
+        { provide: ProjectsService, useClass: MockProjectsService },
+      ],
+    });
 
     service = TestBed.inject(SummaryService);
     mockProjectsService = TestBed.inject(ProjectsService);
   });
 
   it('should be created', () => {
-    expect(service)
-      .toBeTruthy();
+    expect(service).toBeTruthy();
   });
 
   it('should sum all projects', (done) => {
-    service.cellCount$.subscribe(value => {
-      expect(value)
-        .toEqual(500);
+    service.cellCount$.subscribe((value) => {
+      expect(value).toEqual(500);
       done();
     });
   });
 
   it('should group projects by tech', (done) => {
-    service.projectsByTech$.subscribe(value => {
-      expect(value)
-        .toEqual([
-                   {group: 't1', count: 2, cellCount: 500},
-                   {group: 't2', count: 1, cellCount: 200},
-                   {group: 't3', count: 1, cellCount: 300},
-                 ]);
+    service.projectsByTech$.subscribe((value) => {
+      expect(value).toEqual([
+        { group: 't1', count: 2, cellCount: 500 },
+        { group: 't2', count: 1, cellCount: 200 },
+        { group: 't3', count: 1, cellCount: 300 },
+      ]);
       done();
     });
   });
 
   it('should group projects by organ', (done) => {
-    service.projectsByOrgan$.subscribe(value => {
-      expect(value)
-        .toEqual([
-                   {group: 'lungs', count: 2, cellCount: 500},
-                   {group: 'brain', count: 1, cellCount: 200},
-                   {group: 'kidney', count: 1, cellCount: 300},
-                 ]);
+    service.projectsByOrgan$.subscribe((value) => {
+      expect(value).toEqual([
+        { group: 'lungs', count: 2, cellCount: 500 },
+        { group: 'brain', count: 1, cellCount: 200 },
+        { group: 'kidney', count: 1, cellCount: 300 },
+      ]);
       done();
     });
   });
-
 });
-

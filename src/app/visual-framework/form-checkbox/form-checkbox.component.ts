@@ -9,7 +9,8 @@ import { AbstractControl, ValidatorFn, Validators } from '@angular/forms';
 })
 export class FormCheckboxComponent
   extends BaseFormInputComponent
-  implements OnInit {
+  implements OnInit
+{
   @Input() required = false;
   @Input() value: string;
 

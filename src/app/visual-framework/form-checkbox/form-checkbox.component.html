@@ -2,21 +2,29 @@
   <input
     type="checkbox"
     class="vf-form__checkbox"
-    [ngClass]="{'vf-form__checkbox--invalid': isInvalid()}"
+    [ngClass]="{ 'vf-form__checkbox--invalid': isInvalid() }"
     [disabled]="disabled"
-    id="{{name}}"
+    id="{{ name }}"
     #checkbox
     (change)="onChange($event.target.checked)"
     (blur)="onTouched()"
   />
-  <label for="{{name}}" class="vf-form__label {{required && 'vf-form__label--required'}}">
+  <label
+    for="{{ name }}"
+    class="vf-form__label {{ required && 'vf-form__label--required' }}"
+  >
     <ng-content></ng-content>
     <span></span>
     <span *ngIf="required" class="vf-u-sr-only">this field is required.</span>
 
     <span *ngIf="required" class="asterisk">*</span>
 
-    <p *ngIf="isInvalid() && required" class="required-message" class="invalid-message">This field is required</p>
+    <p
+      *ngIf="isInvalid() && required"
+      class="required-message"
+      class="invalid-message"
+    >
+      This field is required
+    </p>
   </label>
-
 </div>

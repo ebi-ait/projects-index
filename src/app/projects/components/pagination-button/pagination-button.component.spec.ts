@@ -6,12 +6,13 @@ describe('PaginationButtonComponent', () => {
   let component: PaginationButtonComponent;
   let fixture: ComponentFixture<PaginationButtonComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PaginationButtonComponent ]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [PaginationButtonComponent],
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PaginationButtonComponent);

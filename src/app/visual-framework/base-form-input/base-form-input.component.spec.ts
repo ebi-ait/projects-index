@@ -6,12 +6,13 @@ describe('BaseFormInputComponent', () => {
   let component: BaseFormInputComponent;
   let fixture: ComponentFixture<BaseFormInputComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ BaseFormInputComponent ]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [BaseFormInputComponent],
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BaseFormInputComponent);

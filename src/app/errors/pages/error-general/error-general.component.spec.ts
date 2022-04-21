@@ -6,11 +6,13 @@ describe('ErrorGeneralComponent', () => {
   let component: ErrorGeneralComponent;
   let fixture: ComponentFixture<ErrorGeneralComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ErrorGeneralComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [ErrorGeneralComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ErrorGeneralComponent);

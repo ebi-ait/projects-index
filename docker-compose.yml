@@ -5,6 +5,6 @@ services:
     build:
       context: .
       args:
-          DEPLOYMENT_ENV: prod # local|dev|staging|prod
+        DEPLOYMENT_ENV: prod # local|dev|staging|prod
     ports:
       - "8000:8080"
