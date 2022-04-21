@@ -19,7 +19,34 @@ The project catalogue is deployed to the `web-development` k8s cluster and the p
 
 ### Overview of infrastructure
 
-![infrastructure overview](./infrastructure.png)
+```mermaid
+%%{init: {'theme':'base'}}%%
+graph RL
+
+    subgraph Deployments
+        push(push to master) --> gitlab
+
+        subgraph wp[web-prod infrastructure]
+            gitlab{{GitLab}}
+            gitlab -->|deploy|dev[Dev cluster]
+            gitlab -->|deploy| prod[Prod cluster]
+        end
+    end
+
+    subgraph Runtime
+        subgraph hca[HCA Ingest infrastructure]
+            core[ingest-core] --> mongo[(mongodb)]
+        end
+
+        subgraph pc[project catalogue frontend]
+            www-->|GET /projects/search/catalogue|core
+            wwwdev-->|GET /projects/search/catalogue|core
+        end
+
+        user{{User}}-->|GET|www
+        user-->|GET|wwwdev
+    end
+```
 
 #### Continuous Integration
 
