@@ -52,6 +52,10 @@ graph RL
 
 CI is done in GitLab but only those in the `ebiwd` namespace have access to see progress of the pipeline. So, unit tests are also ran using GitHub actions (see `.github/workflows/ci.yml`) so that any unit test and build errors are caught.
 
+#### Prettier
+
+Prettier is used for this project for code formatting and is forced through CI. It should run on a pre-commit hook automatically after you `yarn install` but if not you can either set up prettier in your IDE of choice or ust run `yarn prettier . --write` to format your changes.
+
 ### Developing
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
