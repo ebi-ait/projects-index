@@ -6,13 +6,11 @@ describe('ExternalLinkComponent', () => {
   let component: ExternalLinkComponent;
   let fixture: ComponentFixture<ExternalLinkComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [ExternalLinkComponent],
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [ExternalLinkComponent],
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ExternalLinkComponent);

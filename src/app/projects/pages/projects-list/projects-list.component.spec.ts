@@ -11,15 +11,13 @@ describe('ProjectsListComponent', () => {
   let component: ProjectsListComponent;
   let fixture: ComponentFixture<ProjectsListComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule],
-        providers: [ProjectsService, WINDOW_PROVIDERS, AnalyticsService],
-        declarations: [ProjectsListComponent, FiltersComponent],
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [ProjectsService, WINDOW_PROVIDERS, AnalyticsService],
+      declarations: [ProjectsListComponent, FiltersComponent],
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProjectsListComponent);

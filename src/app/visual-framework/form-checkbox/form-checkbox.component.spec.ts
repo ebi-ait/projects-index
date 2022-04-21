@@ -6,13 +6,11 @@ describe('FormCheckboxComponent', () => {
   let component: FormCheckboxComponent;
   let fixture: ComponentFixture<FormCheckboxComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [FormCheckboxComponent],
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [FormCheckboxComponent],
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FormCheckboxComponent);

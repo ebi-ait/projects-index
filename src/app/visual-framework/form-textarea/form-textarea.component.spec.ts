@@ -6,13 +6,11 @@ describe('FormTextareaComponent', () => {
   let component: FormTextareaComponent;
   let fixture: ComponentFixture<FormTextareaComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [FormTextareaComponent],
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [FormTextareaComponent],
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FormTextareaComponent);
