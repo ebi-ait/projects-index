@@ -16,7 +16,7 @@ workflow:
     - if: $CI_COMMIT_BRANCH == "master"
     - if: $CI_COMMIT_BRANCH == "dev"
 
-build:
+test:
   stage: test
   script:
     - yarn --frozen-lockfile
