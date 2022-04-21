@@ -10,10 +10,25 @@ stages:
   - deploy_dev
   - deploy_prod
 
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "external_pull_request_event"'
+    - if: $CI_COMMIT_BRANCH == "master"
+    - if: $CI_COMMIT_BRANCH == "dev"
+
+build:
+  stage: test
+  script:
+    - yarn --frozen-lockfile
+    - yarn prettier . --check
+    - yarn build-prod
+
 build_dev:
   stage: build
   tags:
     - dind
+  only:
+    - master
   except:
     - tags
   script:
