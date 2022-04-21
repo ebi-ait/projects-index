@@ -22,6 +22,9 @@ export class ProjectsService implements OnDestroy {
     ENA: 'ENA',
     EGA: 'EGA',
     DBGAP: 'dbGaP',
+    cellxgene: 'cellxgene',
+    SCEA: 'Single Cell Expression Atlas',
+    UCSC: 'UCSC Cell Browser',
   } as const;
 
   private URL = `${environment.ingestApiUrl}${environment.catalogueEndpoint}`;
@@ -196,6 +199,21 @@ export class ProjectsService implements OnDestroy {
           return false;
         }
         break;
+      case ProjectsService.allowedLocations.cellxgene:
+        if (!project.cellXGeneLinks.length) {
+          return false;
+        }
+        break;
+      case ProjectsService.allowedLocations.SCEA:
+        if (!project.sceaLinks.length) {
+          return false;
+        }
+        break;
+      case ProjectsService.allowedLocations.UCSC:
+        if (!project.ucscLinks.length) {
+          return false;
+        }
+        break;
       default:
         break;
     }
@@ -232,7 +250,7 @@ export class ProjectsService implements OnDestroy {
 
   formatProject = (obj: any): Project => {
     try {
-      return {
+      let project: Project = {
         uuid: obj.uuid.uuid,
         dcpUrl:
           obj.wranglingState === 'Published in DCP' &&
@@ -270,12 +288,53 @@ export class ProjectsService implements OnDestroy {
           obj.content.ega_accessions || []
         ),
         dbgapAccessions: obj.content.dbgap_accessions ?? [],
+        cellXGeneLinks: [],
+        sceaLinks: [],
+        ucscLinks: [],
         publications: obj.publicationsInfo ?? [],
         authors: obj.publicationsInfo?.[0]?.authors || [],
       };
+      this.addSupplementaryLinks(
+        project,
+        obj.content.supplementary_links ?? []
+      );
+      return project;
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
       return null;
     }
   };
+
+  private addSupplementaryLinks(project: Project, links: string[]) {
+    const cellxRegex =
+      /^https?:\/\/cellxgene\.cziscience\.com\/collections\/(?<accession>[^;/?:@=&\s]+)(?:\/.*)*$/i;
+    const sceaRegex =
+      /^https?:\/\/www\.ebi\.ac\.uk\/gxa\/sc\/experiments\/(?<accession>[^;/?:@=&\s]+)\/results(?:\/tsne)?$/i;
+    const ucscRegex =
+      /^https?:\/\/cells\.ucsc\.edu\/\?(.*&)*(ds=(?<accession>[^;/?:@=&\s]+))(?:&.*)*$/i;
+
+    links.forEach((link) => {
+      let match = cellxRegex.exec(link);
+      if (match) {
+        project.cellXGeneLinks.push({
+          name: match.groups.accession,
+          href: link,
+        });
+      }
+      match = sceaRegex.exec(link);
+      if (match) {
+        project.sceaLinks.push({
+          name: match.groups.accession,
+          href: link,
+        });
+      }
+      match = ucscRegex.exec(link);
+      if (match) {
+        project.ucscLinks.push({
+          name: match.groups.accession,
+          href: link,
+        });
+      }
+    });
+  }
 }

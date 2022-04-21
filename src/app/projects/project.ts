@@ -1,3 +1,8 @@
+interface Link {
+  name: string;
+  href: string;
+}
+
 interface Publication {
   doi: string;
   url: string;
@@ -21,6 +26,9 @@ export interface Project {
   egaStudiesAccessions: string[];
   egaDatasetsAccessions: string[];
   dbgapAccessions: string[];
+  cellXGeneLinks: Link[];
+  sceaLinks: Link[];
+  ucscLinks: Link[];
   publications: Publication[];
   authors: string[];
 }

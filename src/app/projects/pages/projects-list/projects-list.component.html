@@ -122,7 +122,7 @@
         <td class="vf-table__cell">
           <ul class="plain-list">
             <li *ngIf="project.enaAccessions.length">
-              ENA:
+              ENA: <br />
               <ul class="comma-list">
                 <li *ngFor="let enaAccession of project.enaAccessions">
                   <a
@@ -135,7 +135,7 @@
               </ul>
             </li>
             <li *ngIf="project.arrayExpressAccessions.length">
-              Arrayexpress:
+              Arrayexpress: <br />
               <ul class="comma-list">
                 <li
                   *ngFor="
@@ -154,7 +154,7 @@
               </ul>
             </li>
             <li *ngIf="project.geoAccessions.length">
-              GEO:
+              GEO: <br />
               <ul class="comma-list">
                 <li *ngFor="let geoAccession of project.geoAccessions">
                   <a
@@ -167,7 +167,7 @@
               </ul>
             </li>
             <li *ngIf="project.egaStudiesAccessions?.length">
-              EGA:
+              EGA: <br />
               <ul class="comma-list">
                 <li *ngFor="let accession of project.egaStudiesAccessions">
                   <a
@@ -188,7 +188,7 @@
               </ul>
             </li>
             <li *ngIf="project.dbgapAccessions.length">
-              dbGaP:
+              dbGaP: <br />
               <ul class="comma-list">
                 <li *ngFor="let accession of project.dbgapAccessions">
                   <a
@@ -197,6 +197,36 @@
                     target="_blank"
                     >{{ accession }}</a
                   >
+                </li>
+              </ul>
+            </li>
+            <li *ngIf="project.cellXGeneLinks.length">
+              cellxgene: <br />
+              <ul class="comma-list">
+                <li *ngFor="let link of project.cellXGeneLinks">
+                  <a class="vf-link" href="{{ link.href }}" target="_blank">{{
+                    link.name
+                  }}</a>
+                </li>
+              </ul>
+            </li>
+            <li *ngIf="project.sceaLinks.length">
+              SCEA: <br />
+              <ul class="comma-list">
+                <li *ngFor="let link of project.sceaLinks">
+                  <a class="vf-link" href="{{ link.href }}" target="_blank">{{
+                    link.name
+                  }}</a>
+                </li>
+              </ul>
+            </li>
+            <li *ngIf="project.ucscLinks.length">
+              UCSC Cell Browser: <br />
+              <ul class="comma-list">
+                <li *ngFor="let link of project.ucscLinks">
+                  <a class="vf-link" href="{{ link.href }}" target="_blank">{{
+                    link.name
+                  }}</a>
                 </li>
               </ul>
             </li>
