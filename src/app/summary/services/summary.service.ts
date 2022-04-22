@@ -37,7 +37,7 @@ export class SummaryService implements OnDestroy {
       .pipe(
         map((projects) => {
           let groupedProjects = this.groupListByKey(projects, key);
-          return SummaryService.sortByValue(groupedProjects)?.map(
+          return SummaryService.sortByValue(groupedProjects)?.map<ProjectCount>(
             ([key, value]) => ({
               count: value.count,
               cellCount: value.cellCount,
