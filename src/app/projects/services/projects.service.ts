@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { PaginatedProjects, Project } from '../project';
+import { Link, PaginatedProjects, Project } from '../project';
 
 interface Filters {
   organ: string;
@@ -226,7 +226,7 @@ export class ProjectsService implements OnDestroy {
       project.geoAccessions.join(' '),
       project.egaDatasetsAccessions.join(' '),
       project.egaStudiesAccessions.join(' '),
-      project.enaAccessions.join(' '),
+      project.enaAccessions.map((acc) => acc.name).join(' '),
       project.organs.join(' '),
       project.technologies.join(' '),
     ]
@@ -270,13 +270,9 @@ export class ProjectsService implements OnDestroy {
         // GH issue : https://github.com/ebi-ait/dcp-ingest-central/issues/445
         cellCount: obj.content.estimated_cell_count || obj.cellCount,
         // Temp fix until ena accessions fixed in core
-        enaAccessions: (() => {
-          const accessions = obj.content?.insdc_project_accessions;
-          if (typeof accessions === 'string') {
-            return [accessions];
-          }
-          return accessions ?? [];
-        })(),
+        enaAccessions: ProjectsService.enaAccessionLinks(
+          obj.content?.insdc_project_accessions
+        ),
         geoAccessions: obj.content.geo_series_accessions ?? [],
         arrayExpressAccessions: obj.content.array_express_accessions ?? [],
         egaStudiesAccessions: this.captureRegexGroups(
@@ -294,7 +290,7 @@ export class ProjectsService implements OnDestroy {
         publications: obj.publicationsInfo ?? [],
         authors: obj.publicationsInfo?.[0]?.authors || [],
       };
-      this.addSupplementaryLinks(
+      ProjectsService.addSupplementaryLinks(
         project,
         obj.content.supplementary_links ?? []
       );
@@ -305,7 +301,17 @@ export class ProjectsService implements OnDestroy {
     }
   };
 
-  private addSupplementaryLinks(project: Project, links: string[]) {
+  private static enaAccessionLinks(ena_accessions: any): Link[] {
+    if (typeof ena_accessions === 'string') {
+      ena_accessions = [ena_accessions];
+    }
+    return (ena_accessions ?? []).map((accession) => ({
+      name: accession,
+      href: `https://identifiers.org/ena.embl:${accession}`,
+    }));
+  }
+
+  private static addSupplementaryLinks(project: Project, links: string[]) {
     const cellxRegex =
       /^https?:\/\/cellxgene\.cziscience\.com\/collections\/(?<accession>[^;/?:@=&\s]+)(?:\/.*)*$/i;
     const sceaRegex =

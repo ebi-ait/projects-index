@@ -122,17 +122,10 @@
         <td class="vf-table__cell">
           <ul class="plain-list">
             <li *ngIf="project.enaAccessions.length">
-              ENA: <br />
-              <ul class="comma-list">
-                <li *ngFor="let enaAccession of project.enaAccessions">
-                  <a
-                    class="vf-link"
-                    href="https://identifiers.org/ena.embl:{{ enaAccession }}"
-                    target="_blank"
-                    >{{ enaAccession }}</a
-                  >
-                </li>
-              </ul>
+              <list-of-links
+                name="ENA"
+                [links]="project.enaAccessions"
+              ></list-of-links>
             </li>
             <li *ngIf="project.arrayExpressAccessions.length">
               Arrayexpress: <br />
