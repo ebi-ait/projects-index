@@ -22,7 +22,8 @@ import {
   styleUrls: ['./base-form-input.component.css'],
 })
 export class BaseFormInputComponent
-  implements OnInit, ControlValueAccessor, Validator {
+  implements OnInit, ControlValueAccessor, Validator
+{
   disabled = false;
   @ViewChild('input') input: ElementRef;
   @Input() name: string;
@@ -81,7 +82,7 @@ export class BaseFormInputComponent
     );
   }
 
-  onChange(event) {}
+  onChange() {}
 
   onTouched() {}
 }

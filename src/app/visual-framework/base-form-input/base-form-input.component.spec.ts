@@ -8,9 +8,8 @@ describe('BaseFormInputComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ BaseFormInputComponent ]
-    })
-    .compileComponents();
+      declarations: [BaseFormInputComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

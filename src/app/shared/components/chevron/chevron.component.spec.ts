@@ -8,9 +8,8 @@ describe('ChevronComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChevronComponent ]
-    })
-    .compileComponents();
+      declarations: [ChevronComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

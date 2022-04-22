@@ -19,11 +19,42 @@ The project catalogue is deployed to the `web-development` k8s cluster and the p
 
 ### Overview of infrastructure
 
-![infrastructure overview](./infrastructure.png)
+```mermaid
+%%{init: {'theme':'base'}}%%
+graph RL
+
+    subgraph Deployments
+        push(push to master) --> gitlab
+
+        subgraph wp[web-prod infrastructure]
+            gitlab{{GitLab}}
+            gitlab -->|deploy|dev[Dev cluster]
+            gitlab -->|deploy| prod[Prod cluster]
+        end
+    end
+
+    subgraph Runtime
+        subgraph hca[HCA Ingest infrastructure]
+            core[ingest-core] --> mongo[(mongodb)]
+        end
+
+        subgraph pc[project catalogue frontend]
+            www-->|GET /projects/search/catalogue|core
+            wwwdev-->|GET /projects/search/catalogue|core
+        end
+
+        user{{User}}-->|GET|www
+        user-->|GET|wwwdev
+    end
+```
 
 #### Continuous Integration
 
 CI is done in GitLab but only those in the `ebiwd` namespace have access to see progress of the pipeline. So, unit tests are also ran using GitHub actions (see `.github/workflows/ci.yml`) so that any unit test and build errors are caught.
+
+#### Prettier
+
+Prettier is used for this project for code formatting and is forced through CI. It should run on a pre-commit hook automatically after you `yarn install` but if not you can either set up prettier in your IDE of choice or ust run `yarn prettier . --write` to format your changes.
 
 ### Developing
 
@@ -54,6 +85,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 #### Running via Docker
+
 If you make changes to the nginx configuration in `/docker-assets` then it is necessary to verify functionality from the docker container.
 
 `docker-compose up -d --build`

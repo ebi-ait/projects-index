@@ -123,10 +123,10 @@ export class ProjectsService implements OnDestroy {
           )
         )
       )
-      .subscribe(
-        (projects) => this.pagedProjects.next(projects),
-        (error) => this.pagedProjects.error(error)
-      );
+      .subscribe({
+        next: (projects) => this.pagedProjects.next(projects),
+        error: (error) => this.pagedProjects.error(error),
+      });
   }
 
   changePage(page: number) {
@@ -223,9 +223,6 @@ export class ProjectsService implements OnDestroy {
     new Date(timestamp).toLocaleDateString('en-gb', {
       timeZone: 'utc',
     });
-
-  isWrangler = (contributor) =>
-    contributor.project_role?.ontology === environment.wranglerOntology;
 
   private captureRegexGroups = (regex: RegExp, strings: string[]) =>
     strings

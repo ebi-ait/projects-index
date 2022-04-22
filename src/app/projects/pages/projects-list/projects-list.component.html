@@ -28,7 +28,11 @@
       Showing <strong>{{ projects.items.length }}</strong> out of
       <strong>{{ projects.totalItems }}</strong> projects
     </p>
-    <a (click)="saveSearchResultsAsTsv()" class="vf-link" href="javascript:void(0)">
+    <a
+      (click)="saveSearchResultsAsTsv()"
+      class="vf-link"
+      href="javascript:void(0)"
+    >
       Export results as .tsv
     </a>
   </div>
@@ -66,23 +70,28 @@
     </thead>
 
     <tbody class="vf-table__body" *ngIf="projects">
-      <tr
-        class="vf-table__row"
-        *ngFor="let project of projects.items"
-      >
+      <tr class="vf-table__row" *ngFor="let project of projects.items">
         <td class="vf-table__cell">{{ project.date }}</td>
         <td class="vf-table__cell">
           <p style="margin-top: 0">{{ project.title }}</p>
-          <app-author-names *ngIf="project.authors.length" [authors]="project.authors"></app-author-names>
+          <app-author-names
+            *ngIf="project.authors.length"
+            [authors]="project.authors"
+          ></app-author-names>
           <span *ngIf="!project.publications.length">
             pre-publication or citation missing
           </span>
-          <ng-container
-            *ngFor="let publication of project.publications"
-          >
-            <a class="vf-link" style="white-space: nowrap;" href="{{ publication.url }}" target="_blank">
-              {{publication.journalTitle}}
-              <ng-container *ngIf="publication.journalTitle === 'bioRxiv'">(pre-publication)</ng-container>
+          <ng-container *ngFor="let publication of project.publications">
+            <a
+              class="vf-link"
+              style="white-space: nowrap"
+              href="{{ publication.url }}"
+              target="_blank"
+            >
+              {{ publication.journalTitle }}
+              <ng-container *ngIf="publication.journalTitle === 'bioRxiv'"
+                >(pre-publication)
+              </ng-container>
               <app-external-link></app-external-link>
             </a>
           </ng-container>
@@ -104,7 +113,9 @@
         </td>
 
         <td class="vf-table__cell">
-          <span *ngIf="project.cellCount">{{ (project.cellCount | number) }}</span>
+          <span *ngIf="project.cellCount">{{
+            project.cellCount | number
+          }}</span>
           <p *ngIf="!project.cellCount">-</p>
         </td>
 
@@ -184,7 +195,7 @@
                     class="vf-link"
                     href="https://identifiers.org/dbgap:{{ accession }}"
                     target="_blank"
-                  >{{ accession }}</a
+                    >{{ accession }}</a
                   >
                 </li>
               </ul>

@@ -119,13 +119,13 @@ describe('ProjectsService', () => {
   });
 
   it('should return an HTTP error', () => {
-    service.pagedProjects$.subscribe(
-      (project) => {},
-      (error) => {
+    service.pagedProjects$.subscribe({
+      next: () => {},
+      error: (error) => {
         expect(error).toBeTruthy();
         expect(error.message).toContain('400 bad request');
-      }
-    );
+      },
+    });
 
     const req = httpTestingController.expectOne(
       `${environment.ingestApiUrl}${environment.catalogueEndpoint}`

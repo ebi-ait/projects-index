@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
+
 #filters-container > * {
   flex: 1 0;
   max-width: 250px;

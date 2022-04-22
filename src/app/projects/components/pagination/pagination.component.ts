@@ -5,7 +5,6 @@ import {
   OnChanges,
   OnInit,
   Output,
-  SimpleChanges,
 } from '@angular/core';
 
 export interface PaginationEvent {
@@ -34,7 +33,7 @@ export class PaginationComponent implements OnInit, OnChanges {
     this.changePage(1);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     this.calculateTotalPages();
     this.calculateVisibleButtons();
   }

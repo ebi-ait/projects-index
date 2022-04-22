@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -21,6 +22,6 @@ export class AddProjectService {
         'Content-Type': 'application/json',
       }),
     };
-    return this.http.post(this.URL, suggestion, httpOptions).toPromise();
+    return firstValueFrom(this.http.post(this.URL, suggestion, httpOptions));
   }
 }

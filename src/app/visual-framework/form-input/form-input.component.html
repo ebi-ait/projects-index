@@ -1,6 +1,6 @@
 <div class="vf-form__item vf-stack">
   <label
-    for="{{name}}"
+    for="{{ name }}"
     class="vf-form__label {{ required && 'vf-form__label--required' }}"
   >
     {{ label }}
@@ -11,12 +11,12 @@
 
   <input
     type="text"
-    id="{{name}}"
+    id="{{ name }}"
     class="vf-form__input"
-    [ngClass]="{'vf-form__input--invalid': isInvalid()}"
+    [ngClass]="{ 'vf-form__input--invalid': isInvalid() }"
     [disabled]="disabled"
     #input
-    (input)="onChange($event.target.value)"
+    (input)="onChange()"
     (blur)="onTouched()"
     [placeholder]="placeholder"
   />

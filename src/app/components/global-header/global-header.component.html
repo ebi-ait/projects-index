@@ -1,11 +1,18 @@
-<section
-  class="vf-hero | vf-u-fullbleed vf-hero-hca"
->
+<section class="vf-hero | vf-u-fullbleed vf-hero-hca">
   <div class="vf-hero__content | vf-box | vf-stack vf-stack--400">
-    <h2 class="vf-hero__heading"><a class="vf-hero__heading_link" routerLink="/"> {{ headerTitle$ | async }} </a></h2>
+    <h2 class="vf-hero__heading">
+      <a class="vf-hero__heading_link" routerLink="/">
+        {{ headerTitle$ | async }}
+      </a>
+    </h2>
     <p class="vf-hero__subheading">
       {{ headerText$ | async }}
-      <a *ngIf="showAboutLink$ | async" class="vf-hero__link" routerLink="/about">About the catalogue</a>
+      <a
+        *ngIf="showAboutLink$ | async"
+        class="vf-hero__link"
+        routerLink="/about"
+        >About the catalogue</a
+      >
     </p>
   </div>
 </section>

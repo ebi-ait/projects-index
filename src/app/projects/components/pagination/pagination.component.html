@@ -22,12 +22,12 @@
         *ngIf="i >= 1 && i <= totalPages"
         [pageNumber]="i"
         (paginate)="changePage(i)"
-        [isCurrent]="i===currentPage"
+        [isCurrent]="i === currentPage"
       ></app-pagination-button>
     </ng-container>
 
     <ng-container *ngIf="!this.visibleButtons.includes(totalPages)">
-      <li class="vf-pagination__item" style="flex: none;">
+      <li class="vf-pagination__item" style="flex: none">
         <span class="vf-pagination__label">...</span>
       </li>
       <app-pagination-button

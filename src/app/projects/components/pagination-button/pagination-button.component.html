@@ -1,5 +1,9 @@
-<li class="vf-pagination__item {{extraClasses}}" [class.vf-pagination__item--is-active]="isCurrent">
-  <a *ngIf="!isCurrent"
+<li
+  class="vf-pagination__item {{ extraClasses }}"
+  [class.vf-pagination__item--is-active]="isCurrent"
+>
+  <a
+    *ngIf="!isCurrent"
     href="javascript:void(0);"
     class="vf-pagination__link"
     [attr.aria-current]="isCurrent && 'page'"
@@ -7,10 +11,7 @@
   >
     {{ pageNumber }}<span class="vf-u-sr-only"> page</span>
   </a>
-  <span *ngIf="isCurrent"
-     class="vf-pagination__label"
-     aria-current="page"
-  >
+  <span *ngIf="isCurrent" class="vf-pagination__label" aria-current="page">
     {{ pageNumber }}<span class="vf-u-sr-only"> page</span>
   </span>
 </li>

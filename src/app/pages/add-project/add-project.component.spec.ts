@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AddProjectComponent } from './add-project.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { VisualFrameworkModule } from '../../visual-framework/visual-framework.module';
 
 describe('AddProjectComponent', () => {
