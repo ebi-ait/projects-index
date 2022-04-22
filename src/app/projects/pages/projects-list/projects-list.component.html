@@ -201,34 +201,22 @@
               </ul>
             </li>
             <li *ngIf="project.cellXGeneLinks.length">
-              cellxgene: <br />
-              <ul class="comma-list">
-                <li *ngFor="let link of project.cellXGeneLinks">
-                  <a class="vf-link" href="{{ link.href }}" target="_blank">{{
-                    link.name
-                  }}</a>
-                </li>
-              </ul>
+              <list-of-links
+                name="cellxgene"
+                [links]="project.cellXGeneLinks"
+              ></list-of-links>
             </li>
             <li *ngIf="project.sceaLinks.length">
-              SCEA: <br />
-              <ul class="comma-list">
-                <li *ngFor="let link of project.sceaLinks">
-                  <a class="vf-link" href="{{ link.href }}" target="_blank">{{
-                    link.name
-                  }}</a>
-                </li>
-              </ul>
+              <list-of-links
+                name="SCEA"
+                [links]="project.sceaLinks"
+              ></list-of-links>
             </li>
             <li *ngIf="project.ucscLinks.length">
-              UCSC Cell Browser: <br />
-              <ul class="comma-list">
-                <li *ngFor="let link of project.ucscLinks">
-                  <a class="vf-link" href="{{ link.href }}" target="_blank">{{
-                    link.name
-                  }}</a>
-                </li>
-              </ul>
+              <list-of-links
+                name="UCSC Cell Browser"
+                [links]="project.ucscLinks"
+              ></list-of-links>
             </li>
             <li *ngIf="project.dcpUrl">
               <a class="vf-link" href="{{ project.dcpUrl }}" target="_blank"
