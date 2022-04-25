@@ -21,11 +21,10 @@ export interface Project {
   technologies: string[];
   cellCount: number;
   enaAccessions: Link[];
-  geoAccessions: string[];
-  arrayExpressAccessions: string[];
-  egaStudiesAccessions: string[];
-  egaDatasetsAccessions: string[];
-  dbgapAccessions: string[];
+  arrayExpressAccessions: Link[];
+  geoAccessions: Link[];
+  egaAccessions: Link[];
+  dbgapAccessions: Link[];
   cellXGeneLinks: Link[];
   sceaLinks: Link[];
   ucscLinks: Link[];

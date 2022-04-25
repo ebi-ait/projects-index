@@ -185,12 +185,7 @@ export class ProjectsService implements OnDestroy {
         }
         break;
       case ProjectsService.allowedLocations.EGA:
-        if (
-          !(
-            !!project.egaStudiesAccessions.length ||
-            !!project.egaDatasetsAccessions.length
-          )
-        ) {
+        if (!project.egaAccessions.length) {
           return false;
         }
         break;
@@ -222,11 +217,14 @@ export class ProjectsService implements OnDestroy {
       project.authors.map((author) => author.fullName).join(', '),
       project.uuid,
       project.title,
-      project.arrayExpressAccessions.join(' '),
-      project.geoAccessions.join(' '),
-      project.egaDatasetsAccessions.join(' '),
-      project.egaStudiesAccessions.join(' '),
       project.enaAccessions.map((acc) => acc.name).join(' '),
+      project.arrayExpressAccessions.map((acc) => acc.name).join(' '),
+      project.geoAccessions.map((acc) => acc.name).join(' '),
+      project.egaAccessions.map((acc) => acc.name).join(' '),
+      project.dbgapAccessions.map((acc) => acc.name).join(' '),
+      project.cellXGeneLinks.map((acc) => acc.name).join(' '),
+      project.sceaLinks.map((acc) => acc.name).join(' '),
+      project.ucscLinks.map((acc) => acc.name).join(' '),
       project.organs.join(' '),
       project.technologies.join(' '),
     ]
@@ -237,17 +235,6 @@ export class ProjectsService implements OnDestroy {
     return searchKeywords.every((keyword) => toSearch.includes(keyword));
   }
 
-  private formatDate = (timestamp) =>
-    new Date(timestamp).toLocaleDateString('en-gb', {
-      timeZone: 'utc',
-    });
-
-  private captureRegexGroups = (regex: RegExp, strings: string[]) =>
-    strings
-      .map((str) => regex.exec(str))
-      .filter((match) => match && match.length)
-      .map((match) => match[1]);
-
   formatProject = (obj: any): Project => {
     try {
       let project: Project = {
@@ -256,7 +243,9 @@ export class ProjectsService implements OnDestroy {
           obj.wranglingState === 'Published in DCP' &&
           `https://data.humancellatlas.org/explore/projects/${obj.uuid.uuid}`,
         addedToIndex: obj.cataloguedDate,
-        date: obj.cataloguedDate ? this.formatDate(obj.cataloguedDate) : '-',
+        date: obj.cataloguedDate
+          ? ProjectsService.formatDate(obj.cataloguedDate)
+          : '-',
         title:
           obj.content.project_core.project_title ||
           (() => {
@@ -269,21 +258,24 @@ export class ProjectsService implements OnDestroy {
         // TODO: Remove usage of cellCount once the cellCount has been copied to content.estimated_cell_count
         // GH issue : https://github.com/ebi-ait/dcp-ingest-central/issues/445
         cellCount: obj.content.estimated_cell_count || obj.cellCount,
-        // Temp fix until ena accessions fixed in core
         enaAccessions: ProjectsService.enaAccessionLinks(
           obj.content?.insdc_project_accessions
         ),
-        geoAccessions: obj.content.geo_series_accessions ?? [],
-        arrayExpressAccessions: obj.content.array_express_accessions ?? [],
-        egaStudiesAccessions: this.captureRegexGroups(
-          /(EGAS\d*)/i,
+        arrayExpressAccessions: ProjectsService.accessionLinks(
+          obj.content.array_express_accessions ?? [],
+          'https://identifiers.org/arrayexpress:'
+        ),
+        geoAccessions: ProjectsService.accessionLinks(
+          obj.content.geo_series_accessions ?? [],
+          'https://identifiers.org/geo:'
+        ),
+        egaAccessions: ProjectsService.egaAccessionLinks(
           obj.content.ega_accessions || []
         ),
-        egaDatasetsAccessions: this.captureRegexGroups(
-          /(EGAD\d*)/i,
-          obj.content.ega_accessions || []
+        dbgapAccessions: ProjectsService.accessionLinks(
+          obj.content.dbgap_accessions ?? [],
+          'https://identifiers.org/dbgap:'
         ),
-        dbgapAccessions: obj.content.dbgap_accessions ?? [],
         cellXGeneLinks: [],
         sceaLinks: [],
         ucscLinks: [],
@@ -301,15 +293,49 @@ export class ProjectsService implements OnDestroy {
     }
   };
 
-  private static enaAccessionLinks(ena_accessions: any): Link[] {
-    if (typeof ena_accessions === 'string') {
-      ena_accessions = [ena_accessions];
-    }
-    return (ena_accessions ?? []).map((accession) => ({
+  private static formatDate = (timestamp) =>
+    new Date(timestamp).toLocaleDateString('en-gb', {
+      timeZone: 'utc',
+    });
+
+  private static accessionLinks(
+    accessions: any[],
+    link_prefix: string
+  ): Link[] {
+    return accessions.map((accession) => ({
       name: accession,
-      href: `https://identifiers.org/ena.embl:${accession}`,
+      href: link_prefix.concat(accession),
     }));
   }
+
+  private static enaAccessionLinks(ena_accessions: any): Link[] {
+    if (typeof ena_accessions === 'string') {
+      // Temp fix until ena accessions fixed in core
+      ena_accessions = [ena_accessions];
+    }
+    return ProjectsService.accessionLinks(
+      ena_accessions ?? [],
+      'https://identifiers.org/ena.embl:'
+    );
+  }
+
+  private static egaAccessionLinks(ega_accessions: any[]): Link[] {
+    return ProjectsService.accessionLinks(
+      this.captureRegexGroups(/(EGAS\d*)/i, ega_accessions),
+      'https://ega-archive.org/studies/'
+    ).concat(
+      ProjectsService.accessionLinks(
+        this.captureRegexGroups(/(EGAD\d*)/i, ega_accessions),
+        'https://ega-archive.org/datasets/'
+      )
+    );
+  }
+
+  private static captureRegexGroups = (regex: RegExp, strings: string[]) =>
+    strings
+      .map((str) => regex.exec(str))
+      .filter((match) => match && match.length)
+      .map((match) => match[1]);
 
   private static addSupplementaryLinks(project: Project, links: string[]) {
     const cellxRegex =
