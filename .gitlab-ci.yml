@@ -16,13 +16,14 @@ workflow:
     - if: $CI_COMMIT_BRANCH == "master"
     - if: $CI_COMMIT_BRANCH == "dev"
 
-test:
-  stage: test
-  script:
-    - yarn --frozen-lockfile
-    - yarn prettier . --check
-    - yarn build-prod
-
+#This doesn't work because yarn is not installed
+#test:
+#  stage: test
+#  script:
+#    - yarn --frozen-lockfile
+#    - yarn prettier . --check
+#    - yarn build-prod
+#
 build_dev:
   stage: build
   tags:
