@@ -81,20 +81,9 @@
           <span *ngIf="!project.publications.length">
             pre-publication or citation missing
           </span>
-          <ng-container *ngFor="let publication of project.publications">
-            <a
-              class="vf-link"
-              style="white-space: nowrap"
-              href="{{ publication.url }}"
-              target="_blank"
-            >
-              {{ publication.journalTitle }}
-              <ng-container *ngIf="publication.journalTitle === 'bioRxiv'"
-                >(pre-publication)
-              </ng-container>
-              <app-external-link></app-external-link>
-            </a>
-          </ng-container>
+          <list-of-links
+            [links]="mapPublicationLinks(project.publications)"
+          ></list-of-links>
         </td>
         <td class="vf-table__cell">
           <ul class="comma-list">

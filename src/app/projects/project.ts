@@ -3,7 +3,7 @@ export interface Link {
   href: string;
 }
 
-interface Publication {
+export interface Publication {
   doi: string;
   url: string;
   journalTitle: string;
