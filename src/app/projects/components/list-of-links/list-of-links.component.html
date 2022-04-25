@@ -1,0 +1,8 @@
+<div *ngIf="name">{{ name }}:</div>
+<ul class="comma-list">
+  <li *ngFor="let link of links">
+    <a class="vf-link" href="{{ link.href }}" target="_blank"
+      >{{ link.name }}<app-external-link></app-external-link
+    ></a>
+  </li>
+</ul>

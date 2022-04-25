@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProjectsService } from '../../services/projects.service';
-import { PaginatedProjects, Project } from '../../project';
+import { Link, PaginatedProjects, Project, Publication } from '../../project';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { environment } from '../../../../environments/environment';
@@ -123,4 +123,14 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
     const blob = new Blob([tsvString], { type: 'text/tab-separated-values' });
     saveAs(blob, 'HcaCatalogueExport.tsv');
   }
+
+  mapPublicationLinks = (publications: Publication[]): Link[] => {
+    return publications.map((publication) => ({
+      name:
+        publication.journalTitle === 'bioRxiv'
+          ? 'bioRxiv (pre-publication)'
+          : publication.journalTitle,
+      href: publication.url,
+    }));
+  };
 }

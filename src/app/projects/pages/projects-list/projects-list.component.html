@@ -81,20 +81,9 @@
           <span *ngIf="!project.publications.length">
             pre-publication or citation missing
           </span>
-          <ng-container *ngFor="let publication of project.publications">
-            <a
-              class="vf-link"
-              style="white-space: nowrap"
-              href="{{ publication.url }}"
-              target="_blank"
-            >
-              {{ publication.journalTitle }}
-              <ng-container *ngIf="publication.journalTitle === 'bioRxiv'"
-                >(pre-publication)
-              </ng-container>
-              <app-external-link></app-external-link>
-            </a>
-          </ng-container>
+          <list-of-links
+            [links]="mapPublicationLinks(project.publications)"
+          ></list-of-links>
         </td>
         <td class="vf-table__cell">
           <ul class="comma-list">
@@ -122,88 +111,58 @@
         <td class="vf-table__cell">
           <ul class="plain-list">
             <li *ngIf="project.enaAccessions.length">
-              ENA:
-              <ul class="comma-list">
-                <li *ngFor="let enaAccession of project.enaAccessions">
-                  <a
-                    class="vf-link"
-                    href="https://identifiers.org/ena.embl:{{ enaAccession }}"
-                    target="_blank"
-                    >{{ enaAccession }}</a
-                  >
-                </li>
-              </ul>
+              <list-of-links
+                name="ENA"
+                [links]="project.enaAccessions"
+              ></list-of-links>
             </li>
             <li *ngIf="project.arrayExpressAccessions.length">
-              Arrayexpress:
-              <ul class="comma-list">
-                <li
-                  *ngFor="
-                    let arrayExpressAccession of project.arrayExpressAccessions
-                  "
-                >
-                  <a
-                    class="vf-link"
-                    href="https://identifiers.org/arrayexpress:{{
-                      arrayExpressAccession
-                    }}"
-                    target="_blank"
-                    >{{ arrayExpressAccession }}</a
-                  >
-                </li>
-              </ul>
+              <list-of-links
+                name="Arrayexpress"
+                [links]="project.arrayExpressAccessions"
+              ></list-of-links>
             </li>
             <li *ngIf="project.geoAccessions.length">
-              GEO:
-              <ul class="comma-list">
-                <li *ngFor="let geoAccession of project.geoAccessions">
-                  <a
-                    class="vf-link"
-                    href="https://identifiers.org/geo:{{ geoAccession }}"
-                    target="_blank"
-                    >{{ geoAccession }}</a
-                  >
-                </li>
-              </ul>
+              <list-of-links
+                name="GEO"
+                [links]="project.geoAccessions"
+              ></list-of-links>
             </li>
-            <li *ngIf="project.egaStudiesAccessions?.length">
-              EGA:
-              <ul class="comma-list">
-                <li *ngFor="let accession of project.egaStudiesAccessions">
-                  <a
-                    class="vf-link"
-                    href="https://ega-archive.org/studies/{{ accession }}"
-                    target="_blank"
-                    >{{ accession }}</a
-                  >
-                </li>
-                <li *ngFor="let accession of project.egaDatasetsAccessions">
-                  <a
-                    class="vf-link"
-                    href="https://ega-archive.org/datasets/{{ accession }}"
-                    target="_blank"
-                    >{{ accession }}</a
-                  >
-                </li>
-              </ul>
+            <li *ngIf="project.egaAccessions.length">
+              <list-of-links
+                name="EGA"
+                [links]="project.egaAccessions"
+              ></list-of-links>
             </li>
             <li *ngIf="project.dbgapAccessions.length">
-              dbGaP:
-              <ul class="comma-list">
-                <li *ngFor="let accession of project.dbgapAccessions">
-                  <a
-                    class="vf-link"
-                    href="https://identifiers.org/dbgap:{{ accession }}"
-                    target="_blank"
-                    >{{ accession }}</a
-                  >
-                </li>
-              </ul>
+              <list-of-links
+                name="dbGaP"
+                [links]="project.dbgapAccessions"
+              ></list-of-links>
+            </li>
+            <li *ngIf="project.cellXGeneLinks.length">
+              <list-of-links
+                name="cellxgene"
+                [links]="project.cellXGeneLinks"
+              ></list-of-links>
+            </li>
+            <li *ngIf="project.sceaLinks.length">
+              <list-of-links
+                name="SCEA"
+                [links]="project.sceaLinks"
+              ></list-of-links>
+            </li>
+            <li *ngIf="project.ucscLinks.length">
+              <list-of-links
+                name="UCSC Cell Browser"
+                [links]="project.ucscLinks"
+              ></list-of-links>
             </li>
             <li *ngIf="project.dcpUrl">
-              <a class="vf-link" href="{{ project.dcpUrl }}" target="_blank"
-                >HCA Data Portal</a
-              >
+              <list-of-links
+                name="HCA"
+                [links]="[{ name: 'Data Portal', href: project.dcpUrl }]"
+              ></list-of-links>
             </li>
           </ul>
         </td>

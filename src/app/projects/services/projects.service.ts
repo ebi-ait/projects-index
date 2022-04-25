@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { PaginatedProjects, Project } from '../project';
+import { Link, PaginatedProjects, Project } from '../project';
 
 interface Filters {
   organ: string;
@@ -22,6 +22,9 @@ export class ProjectsService implements OnDestroy {
     ENA: 'ENA',
     EGA: 'EGA',
     DBGAP: 'dbGaP',
+    cellxgene: 'cellxgene',
+    SCEA: 'Single Cell Expression Atlas',
+    UCSC: 'UCSC Cell Browser',
   } as const;
 
   private URL = `${environment.ingestApiUrl}${environment.catalogueEndpoint}`;
@@ -182,17 +185,27 @@ export class ProjectsService implements OnDestroy {
         }
         break;
       case ProjectsService.allowedLocations.EGA:
-        if (
-          !(
-            !!project.egaStudiesAccessions.length ||
-            !!project.egaDatasetsAccessions.length
-          )
-        ) {
+        if (!project.egaAccessions.length) {
           return false;
         }
         break;
       case ProjectsService.allowedLocations.DBGAP:
         if (!project.dbgapAccessions.length) {
+          return false;
+        }
+        break;
+      case ProjectsService.allowedLocations.cellxgene:
+        if (!project.cellXGeneLinks.length) {
+          return false;
+        }
+        break;
+      case ProjectsService.allowedLocations.SCEA:
+        if (!project.sceaLinks.length) {
+          return false;
+        }
+        break;
+      case ProjectsService.allowedLocations.UCSC:
+        if (!project.ucscLinks.length) {
           return false;
         }
         break;
@@ -204,11 +217,14 @@ export class ProjectsService implements OnDestroy {
       project.authors.map((author) => author.fullName).join(', '),
       project.uuid,
       project.title,
-      project.arrayExpressAccessions.join(' '),
-      project.geoAccessions.join(' '),
-      project.egaDatasetsAccessions.join(' '),
-      project.egaStudiesAccessions.join(' '),
-      project.enaAccessions.join(' '),
+      project.enaAccessions.map((acc) => acc.name).join(' '),
+      project.arrayExpressAccessions.map((acc) => acc.name).join(' '),
+      project.geoAccessions.map((acc) => acc.name).join(' '),
+      project.egaAccessions.map((acc) => acc.name).join(' '),
+      project.dbgapAccessions.map((acc) => acc.name).join(' '),
+      project.cellXGeneLinks.map((acc) => acc.name).join(' '),
+      project.sceaLinks.map((acc) => acc.name).join(' '),
+      project.ucscLinks.map((acc) => acc.name).join(' '),
       project.organs.join(' '),
       project.technologies.join(' '),
     ]
@@ -219,26 +235,17 @@ export class ProjectsService implements OnDestroy {
     return searchKeywords.every((keyword) => toSearch.includes(keyword));
   }
 
-  private formatDate = (timestamp) =>
-    new Date(timestamp).toLocaleDateString('en-gb', {
-      timeZone: 'utc',
-    });
-
-  private captureRegexGroups = (regex: RegExp, strings: string[]) =>
-    strings
-      .map((str) => regex.exec(str))
-      .filter((match) => match && match.length)
-      .map((match) => match[1]);
-
   formatProject = (obj: any): Project => {
     try {
-      return {
+      let project: Project = {
         uuid: obj.uuid.uuid,
         dcpUrl:
           obj.wranglingState === 'Published in DCP' &&
           `https://data.humancellatlas.org/explore/projects/${obj.uuid.uuid}`,
         addedToIndex: obj.cataloguedDate,
-        date: obj.cataloguedDate ? this.formatDate(obj.cataloguedDate) : '-',
+        date: obj.cataloguedDate
+          ? ProjectsService.formatDate(obj.cataloguedDate)
+          : '-',
         title:
           obj.content.project_core.project_title ||
           (() => {
@@ -251,31 +258,115 @@ export class ProjectsService implements OnDestroy {
         // TODO: Remove usage of cellCount once the cellCount has been copied to content.estimated_cell_count
         // GH issue : https://github.com/ebi-ait/dcp-ingest-central/issues/445
         cellCount: obj.content.estimated_cell_count || obj.cellCount,
-        // Temp fix until ena accessions fixed in core
-        enaAccessions: (() => {
-          const accessions = obj.content?.insdc_project_accessions;
-          if (typeof accessions === 'string') {
-            return [accessions];
-          }
-          return accessions ?? [];
-        })(),
-        geoAccessions: obj.content.geo_series_accessions ?? [],
-        arrayExpressAccessions: obj.content.array_express_accessions ?? [],
-        egaStudiesAccessions: this.captureRegexGroups(
-          /(EGAS\d*)/i,
+        enaAccessions: ProjectsService.enaAccessionLinks(
+          obj.content?.insdc_project_accessions
+        ),
+        arrayExpressAccessions: ProjectsService.accessionLinks(
+          obj.content.array_express_accessions ?? [],
+          'https://identifiers.org/arrayexpress:'
+        ),
+        geoAccessions: ProjectsService.accessionLinks(
+          obj.content.geo_series_accessions ?? [],
+          'https://identifiers.org/geo:'
+        ),
+        egaAccessions: ProjectsService.egaAccessionLinks(
           obj.content.ega_accessions || []
         ),
-        egaDatasetsAccessions: this.captureRegexGroups(
-          /(EGAD\d*)/i,
-          obj.content.ega_accessions || []
+        dbgapAccessions: ProjectsService.accessionLinks(
+          obj.content.dbgap_accessions ?? [],
+          'https://identifiers.org/dbgap:'
         ),
-        dbgapAccessions: obj.content.dbgap_accessions ?? [],
+        cellXGeneLinks: [],
+        sceaLinks: [],
+        ucscLinks: [],
         publications: obj.publicationsInfo ?? [],
         authors: obj.publicationsInfo?.[0]?.authors || [],
       };
+      ProjectsService.addSupplementaryLinks(
+        project,
+        obj.content.supplementary_links ?? []
+      );
+      return project;
     } catch (e) {
       console.error(`Error in project ${obj.uuid.uuid}: ${e.message}`);
       return null;
     }
   };
+
+  private static formatDate = (timestamp) =>
+    new Date(timestamp).toLocaleDateString('en-gb', {
+      timeZone: 'utc',
+    });
+
+  private static accessionLinks(
+    accessions: any[],
+    link_prefix: string
+  ): Link[] {
+    return accessions.map((accession) => ({
+      name: accession,
+      href: link_prefix.concat(accession),
+    }));
+  }
+
+  private static enaAccessionLinks(ena_accessions: any): Link[] {
+    if (typeof ena_accessions === 'string') {
+      // Temp fix until ena accessions fixed in core
+      ena_accessions = [ena_accessions];
+    }
+    return ProjectsService.accessionLinks(
+      ena_accessions ?? [],
+      'https://identifiers.org/ena.embl:'
+    );
+  }
+
+  private static egaAccessionLinks(ega_accessions: any[]): Link[] {
+    return ProjectsService.accessionLinks(
+      this.captureRegexGroups(/(EGAS\d*)/i, ega_accessions),
+      'https://ega-archive.org/studies/'
+    ).concat(
+      ProjectsService.accessionLinks(
+        this.captureRegexGroups(/(EGAD\d*)/i, ega_accessions),
+        'https://ega-archive.org/datasets/'
+      )
+    );
+  }
+
+  private static captureRegexGroups = (regex: RegExp, strings: string[]) =>
+    strings
+      .map((str) => regex.exec(str))
+      .filter((match) => match && match.length)
+      .map((match) => match[1]);
+
+  private static addSupplementaryLinks(project: Project, links: string[]) {
+    const cellxRegex =
+      /^https?:\/\/cellxgene\.cziscience\.com\/collections\/(?<accession>[^;/?:@=&\s]+)(?:\/.*)*$/i;
+    const sceaRegex =
+      /^https?:\/\/www\.ebi\.ac\.uk\/gxa\/sc\/experiments\/(?<accession>[^;/?:@=&\s]+)\/results(?:\/tsne)?$/i;
+    const ucscRegex =
+      /^https?:\/\/cells\.ucsc\.edu\/\?(.*&)*(ds=(?<accession>[^;/?:@=&\s]+))(?:&.*)*$/i;
+
+    links.forEach((link) => {
+      let match = cellxRegex.exec(link);
+      if (match) {
+        project.cellXGeneLinks.push({
+          name: match.groups.accession,
+          href: link,
+        });
+      }
+      match = sceaRegex.exec(link);
+      if (match) {
+        project.sceaLinks.push({
+          name: match.groups.accession,
+          href: link,
+        });
+      }
+      match = ucscRegex.exec(link);
+      if (match) {
+        project.ucscLinks.push({
+          name: match.groups.accession,
+          href: link,
+        });
+      }
+    });
+  }
 }

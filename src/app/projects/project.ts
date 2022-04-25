@@ -1,4 +1,9 @@
-interface Publication {
+export interface Link {
+  name: string;
+  href: string;
+}
+
+export interface Publication {
   doi: string;
   url: string;
   journalTitle: string;
@@ -15,12 +20,14 @@ export interface Project {
   organs: string[];
   technologies: string[];
   cellCount: number;
-  enaAccessions: string[];
-  geoAccessions: string[];
-  arrayExpressAccessions: string[];
-  egaStudiesAccessions: string[];
-  egaDatasetsAccessions: string[];
-  dbgapAccessions: string[];
+  enaAccessions: Link[];
+  arrayExpressAccessions: Link[];
+  geoAccessions: Link[];
+  egaAccessions: Link[];
+  dbgapAccessions: Link[];
+  cellXGeneLinks: Link[];
+  sceaLinks: Link[];
+  ucscLinks: Link[];
   publications: Publication[];
   authors: string[];
 }

@@ -7,6 +7,7 @@ import { ProjectsRoutingModule } from './projects-routing.module';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PaginationButtonComponent } from './components/pagination-button/pagination-button.component';
 import { SharedModule } from '../shared/shared.module';
+import { ListOfLinksComponent } from './components/list-of-links/list-of-links.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SharedModule } from '../shared/shared.module';
     FiltersComponent,
     PaginationComponent,
     PaginationButtonComponent,
+    ListOfLinksComponent,
   ],
   imports: [CommonModule, ProjectsRoutingModule, SharedModule],
 })
