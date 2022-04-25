@@ -33,6 +33,20 @@ export class ProjectsTsvService {
         )
         .join(', ');
     }
+    if (
+      [
+        'enaAccessions',
+        'arrayExpressAccessions',
+        'geoAccessions',
+        'egaAccessions',
+        'dbgapAccessions',
+        'cellXGeneLinks',
+        'sceaLinks',
+        'ucscLinks',
+      ].includes(key)
+    ) {
+      return value.map((link) => link.name).join(', ');
+    }
     if (Array.isArray(value)) {
       return value.join(', ');
     }

@@ -112,8 +112,11 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       enaAccessions: 'ENA',
       arrayExpressAccessions: 'Arrayexpress',
       geoAccessions: 'GEO',
-      egaStudiesAccessions: 'EGA',
+      egaAccessions: 'EGA',
       dbgapAccessions: 'dbGaP',
+      cellXGeneLinks: 'cellxgene',
+      sceaLinks: 'Single Cell Expression Atlas',
+      ucscLinks: 'UCSC Cell Browser',
       dcpUrl: 'HCA Data Portal URL',
     };
     const tsvString = ProjectsTsvService.asTsvString(

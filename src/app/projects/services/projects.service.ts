@@ -227,6 +227,7 @@ export class ProjectsService implements OnDestroy {
       project.ucscLinks.map((acc) => acc.name).join(' '),
       project.organs.join(' '),
       project.technologies.join(' '),
+      project.publications.map((pub) => pub.journalTitle).join(' '),
     ]
       .map((x) => x.toLowerCase())
       .join(' ');
