@@ -159,9 +159,10 @@
               ></list-of-links>
             </li>
             <li *ngIf="project.dcpUrl">
-              <a class="vf-link" href="{{ project.dcpUrl }}" target="_blank"
-                >HCA Data Portal<app-external-link></app-external-link
-              ></a>
+              <list-of-links
+                name="HCA"
+                [links]="[{ name: 'Data Portal', href: project.dcpUrl }]"
+              ></list-of-links>
             </li>
           </ul>
         </td>
