@@ -34,11 +34,11 @@ graph RL
     end
 
     subgraph Runtime
-        subgraph hca_prod[HCA Ingest infrastructure (prod)]
+        subgraph hca_prod[HCA Ingest infrastructure - prod]
             core_prod[ingest-core] --> mongo_prod[(mongodb)]
         end
         
-        subgraph hca_staging[HCA Ingest infrastructure (staging)]
+        subgraph hca_staging[HCA Ingest infrastructure - staging]
             core_staging[ingest-core] --> mongo_staging[(mongodb)]
         end
 
