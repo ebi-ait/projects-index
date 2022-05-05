@@ -29,7 +29,7 @@ graph RL
         subgraph wp[web-prod infrastructure]
             gitlab{{GitLab}}
             gitlab -->|deploy|dev[Dev cluster]
-            gitlab -->|deploy (only for tagged commits)| prod[Prod cluster]
+            gitlab -->|deploy - only for tagged commits| prod[Prod cluster]
         end
     end
 
