@@ -34,13 +34,17 @@ graph RL
     end
 
     subgraph Runtime
-        subgraph hca[HCA Ingest infrastructure]
-            core[ingest-core] --> mongo[(mongodb)]
+        subgraph hca[HCA Ingest infrastructure (prod)]
+            core_prod[ingest-core] --> mongo_prod[(mongodb)]
+        end
+        
+        subgraph hca[HCA Ingest infrastructure (staging)]
+            core_staging[ingest-core] --> mongo_staging[(mongodb)]
         end
 
         subgraph pc[project catalogue frontend]
-            www-->|GET /projects/search/catalogue|core
-            wwwdev-->|GET /projects/search/catalogue|core
+            www-->|GET /projects/search/catalogue|core_prod
+            wwwdev-->|GET /projects/search/catalogue|core_staging
         end
 
         user{{User}}-->|GET|www
