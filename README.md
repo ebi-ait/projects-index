@@ -52,6 +52,9 @@ graph RL
     end
 ```
 
+### Updating of project catalogue in core to include latest projects
+At the moment, this is done via [this CRON job](https://github.com/ebi-ait/ingest-kube-deployment/tree/master/cron-jobs/update-project-catalogue). The job will update core with all of the latest information for projects in the catalogue so that they appear in the catalogue.
+
 #### Continuous Integration
 
 CI is done in GitLab but only those in the `ebiwd` namespace have access to see progress of the pipeline. So, unit tests are also ran using GitHub actions (see `.github/workflows/ci.yml`) so that any unit test and build errors are caught.
