@@ -343,8 +343,10 @@ export class ProjectsService implements OnDestroy {
       /^https?:\/\/cellxgene\.cziscience\.com\/collections\/(?<accession>[^;/?:@=&\s]+)(?:\/.*)*$/i;
     const sceaRegex =
       /^https?:\/\/www\.ebi\.ac\.uk\/gxa\/sc\/experiments\/(?<accession>[^;/?:@=&\s]+)\/results(?:\/tsne)?$/i;
-    const ucscRegex =
-      /^https?:\/\/cells\.ucsc\.edu\/\?(.*&)*(ds=(?<accession>[^;/?:@=&\s]+))(?:&.*)*$/i;
+    const ucscPostRegex =
+      /^https?:\/\/(?:.*\.)?cells\.ucsc\.edu\/?\?(?:.*&)*ds=(?<accession>[^;\/?:@=&\s]+)(?:&.*)*$/i;
+    const ucscPreRegex =
+      /^https?:\/\/(?<accession>[^;\/?:@=&\s]+)\.cells\.ucsc\.edu\/?(?:\?.*)?$/i;
 
     links.forEach((link) => {
       let match = cellxRegex.exec(link);
@@ -361,7 +363,10 @@ export class ProjectsService implements OnDestroy {
           href: link,
         });
       }
-      match = ucscRegex.exec(link);
+      match = ucscPostRegex.exec(link);
+      if (!match) {
+        match = ucscPreRegex.exec(link);
+      }
       if (match) {
         project.ucscLinks.push({
           name: match.groups.accession,
