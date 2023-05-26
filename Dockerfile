@@ -7,7 +7,7 @@ RUN echo "Environment: ${DEPLOYMENT_ENV}"
 WORKDIR /app
 COPY . /app
 
-RUN yarn global add @angular/cli
+RUN yarn global add @angular/cli@13.3.3
 RUN yarn install && yarn test && yarn run build-${DEPLOYMENT_ENV} && rm -rf node_modules
 
 FROM nginxinc/nginx-unprivileged:1.17.2-alpine
