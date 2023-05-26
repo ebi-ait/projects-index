@@ -65,7 +65,7 @@ Prettier is used for this project for code formatting and is forced through CI. 
 
 ### Developing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+This project uses [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
 #### Development server
 
