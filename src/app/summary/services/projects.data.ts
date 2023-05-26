@@ -1,6 +1,7 @@
-import { Project } from '../../projects/project';
+import { HCABionetwork, Project } from '../../projects/project';
+import { ProjectsService } from '../../projects/services/projects.service';
 
-function makeProject() {
+function makeProject(): Project {
   return {
     addedToIndex: '',
     authors: [],
@@ -20,12 +21,18 @@ function makeProject() {
     organs: [],
     technologies: [],
     cellCount: 0,
+    hca_bionetworks: [],
   };
 }
 
 export function makeDummyProjects() {
   const dummyProject: Project = makeProject();
-
+  const dummyNetwork: HCABionetwork = {
+    name: '',
+    hca_tissue_atlas: '',
+    hca_tissue_atlas_version: '',
+    atlas_project: false,
+  };
   const projects: Project[] = [
     {
       ...dummyProject,
@@ -37,6 +44,7 @@ export function makeDummyProjects() {
       ...dummyProject,
       organs: ['kidney', 'lungs'],
       technologies: ['t1', 't3'],
+      hca_bionetworks: [{ ...dummyNetwork, name: 'Lung' }],
       cellCount: 300,
     },
   ];
