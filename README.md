@@ -37,7 +37,7 @@ graph RL
         subgraph hca_prod[HCA Ingest infrastructure - prod]
             core_prod[ingest-core] --> mongo_prod[(mongodb)]
         end
-        
+
         subgraph hca_staging[HCA Ingest infrastructure - staging]
             core_staging[ingest-core] --> mongo_staging[(mongodb)]
         end
@@ -53,6 +53,7 @@ graph RL
 ```
 
 ### Updating of project catalogue in core to include latest projects
+
 At the moment, this is done via [this CRON job](https://github.com/ebi-ait/ingest-kube-deployment/tree/master/cron-jobs/update-project-catalogue). The job will update core with all of the latest information for projects in the catalogue so that they appear in the catalogue.
 
 #### Continuous Integration
