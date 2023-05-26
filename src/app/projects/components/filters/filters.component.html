@@ -33,6 +33,20 @@
   </select>
 
   <select
+    name="Bionetwork"
+    class="vf-form__select"
+    (change)="onBionetworkChange($event)"
+  >
+    <option selected value="">All bionetworks</option>
+    <option
+      *ngFor="let hca_bionetwork of hca_bionetworks"
+      value="{{ hca_bionetwork }}"
+    >
+      {{ hca_bionetwork }}
+    </option>
+  </select>
+
+  <select
     name="Data Location"
     class="vf-form__select"
     (change)="onDataLocationChange($event)"

@@ -13,6 +13,9 @@ export class FiltersComponent implements OnInit {
   @Input()
   technologies: string[];
 
+  @Input()
+  hca_bionetworks: string[];
+
   @Output()
   selectedOrgan = new EventEmitter<string>();
 
@@ -21,6 +24,9 @@ export class FiltersComponent implements OnInit {
 
   @Output()
   selectedDataLocation = new EventEmitter<string>();
+
+  @Output()
+  selectedHcaBioNetwork = new EventEmitter<string>();
 
   @Output()
   valueSearched = new EventEmitter<string>();
@@ -41,6 +47,11 @@ export class FiltersComponent implements OnInit {
 
   onDataLocationChange($event) {
     this.selectedDataLocation.emit($event.target.value);
+  }
+
+  onBionetworkChange($event) {
+    debugger;
+    this.selectedHcaBioNetwork.emit($event.target.value);
   }
 
   triggerSearch($event) {
