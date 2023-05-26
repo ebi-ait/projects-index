@@ -8,12 +8,7 @@
 
 All changed in `master` are automatically deployed to the dev environment. In order to deploy to the production environment, follow the below steps:
 
-1. Make sure you have the [`git release`](https://github.com/rdgoite/hca-developer-tools/blob/master/gitconfig) command in your gitconfig.
-2. `git checkout master`
-3. `git log` -> check latest commit is the commit to be released
-4. `git release`
-
-The project catalogue is deployed to the `web-development` k8s cluster and the process is managed in the `ebiwd` namespace in [GitLab](http://gitlab.ebi.ac.uk/). If there are any problems with deployments, you can contact [www-dev@ebi.ac.uk](mailto:www-dev@ebi.ac.uk) and reference ticket `#473703`.
+The project catalogue is deployed to the `web-development` k8s cluster and the process is managed in the [ebi.ac.uk.humancellatlas.project-catalogue project](https://gitlab.ebi.ac.uk/ebiwd/html-sites/ebi.ac.uk.humancellatlas.project-catalogue) in the [`ebiwd` namespace](https://gitlab.ebi.ac.uk/ebiwd) in [GitLab](http://gitlab.ebi.ac.uk/). If there are any problems with deployments, you can contact [www-dev@ebi.ac.uk](mailto:www-dev@ebi.ac.uk) via [Service Now](https://embl.service-now.com/)
 
 ## Dev notes
 
