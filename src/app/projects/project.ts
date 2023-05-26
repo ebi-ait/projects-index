@@ -11,6 +11,12 @@ export interface Publication {
   authors: string[];
 }
 
+export interface HCABionetwork {
+  name: string;
+  hca_tissue_atlas: string;
+  hca_tissue_atlas_version: string;
+  atlas_project: boolean;
+}
 export interface Project {
   uuid: string;
   dcpUrl: string;
@@ -30,6 +36,7 @@ export interface Project {
   ucscLinks: Link[];
   publications: Publication[];
   authors: string[];
+  hca_bionetworks: HCABionetwork[];
 }
 
 export interface PaginatedList<T> {
@@ -42,4 +49,5 @@ export interface PaginatedList<T> {
 export interface PaginatedProjects extends PaginatedList<Project> {
   availableTechnologies: string[];
   availableOrgans: string[];
+  availableHcaBionetworks: string[];
 }

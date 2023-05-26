@@ -11,6 +11,7 @@ interface Filters {
   location: string;
   searchVal: string;
   recentFirst: boolean;
+  hcaBionetwork: string;
 }
 
 @Injectable()
@@ -34,6 +35,7 @@ export class ProjectsService implements OnDestroy {
 
   private availableTechnologies: string[];
   private availableOrgans: string[];
+  private availableHcaBionetworks: string[];
 
   private filters: BehaviorSubject<Filters>;
   currentFilters: Filters;
@@ -51,6 +53,7 @@ export class ProjectsService implements OnDestroy {
       location: '',
       searchVal: '',
       recentFirst: true,
+      hcaBionetwork: '',
     });
     this.filters.subscribe((filters) => {
       this.currentFilters = filters;
@@ -65,6 +68,7 @@ export class ProjectsService implements OnDestroy {
       location: '',
       searchVal: '',
       recentFirst: true,
+      hcaBionetwork: '',
     });
 
     this.retrieveProjects();
@@ -87,6 +91,16 @@ export class ProjectsService implements OnDestroy {
 
           this.availableTechnologies = [
             ...new Set(projects.map((project) => project.technologies).flat()),
+          ].sort() as string[];
+
+          this.availableHcaBionetworks = [
+            ...new Set(
+              projects
+                .map((project) => {
+                  return project.hca_bionetworks.map((network) => network.name);
+                })
+                .flat()
+            ),
           ].sort() as string[];
         }),
         switchMap((projects: Project[]) =>
@@ -121,6 +135,7 @@ export class ProjectsService implements OnDestroy {
                 totalItems: projects.length,
                 availableOrgans: this.availableOrgans,
                 availableTechnologies: this.availableTechnologies,
+                availableHcaBionetworks: this.availableHcaBionetworks,
               };
             })
           )
@@ -160,6 +175,16 @@ export class ProjectsService implements OnDestroy {
     if (
       filters.technology &&
       !project.technologies.includes(filters.technology)
+    ) {
+      return false;
+    }
+    console.log(project.hca_bionetworks);
+    debugger;
+    if (
+      filters.hcaBionetwork &&
+      !project.hca_bionetworks
+        .map((n) => n.name)
+        .includes(filters.hcaBionetwork)
     ) {
       return false;
     }
@@ -282,6 +307,7 @@ export class ProjectsService implements OnDestroy {
         ucscLinks: [],
         publications: obj.publicationsInfo ?? [],
         authors: obj.publicationsInfo?.[0]?.authors || [],
+        hca_bionetworks: obj.content.hca_bionetworks ?? [],
       };
       ProjectsService.addSupplementaryLinks(
         project,

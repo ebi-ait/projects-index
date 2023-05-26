@@ -85,6 +85,13 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
       location: $selectedLocation,
     });
   }
+  filterByHcaBionetwrok($selectedHcaBionetwork: string = ''): void {
+    debugger;
+    this.projectService.setFilters({
+      ...this.projectService.currentFilters,
+      hcaBionetwork: $selectedHcaBionetwork,
+    });
+  }
 
   search($search: string = ''): void {
     this.projectService.setFilters({

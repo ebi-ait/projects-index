@@ -2,9 +2,11 @@
   *ngIf="projects"
   [organs]="projects.availableOrgans"
   [technologies]="projects.availableTechnologies"
+  [hca_bionetworks]="projects.availableHcaBionetworks"
   (selectedTechnology)="filterByTechnology($event)"
   (selectedDataLocation)="filterByLocation($event)"
   (selectedOrgan)="filterByOrgan($event)"
+  (selectedHcaBioNetwork)="filterByHcaBionetwrok($event)"
   (valueSearched)="search($event)"
 ></app-filters>
 
@@ -65,6 +67,7 @@
         <th class="vf-table__heading" scope="col">Organ</th>
         <th class="vf-table__heading" scope="col">Technology</th>
         <th class="vf-table__heading" scope="col">Cell count</th>
+        <th class="vf-table__heading" scope="col">Bionetworks</th>
         <th class="vf-table__heading" scope="col">Data location</th>
       </tr>
     </thead>
@@ -107,7 +110,14 @@
           }}</span>
           <p *ngIf="!project.cellCount">-</p>
         </td>
-
+        <td class="vf-table__cell">
+          <ul class="comma-list">
+            <li *ngFor="let hca_bionetwork of project.hca_bionetworks">
+              {{ hca_bionetwork.name }}
+            </li>
+            <p *ngIf="!project.hca_bionetworks.length">-</p>
+          </ul>
+        </td>
         <td class="vf-table__cell">
           <ul class="plain-list">
             <li *ngIf="project.enaAccessions.length">
