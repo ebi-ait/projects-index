@@ -4,11 +4,11 @@
 
 [Development](https://wwwdev.ebi.ac.uk/humancellatlas/project-catalogue)
 
-### Deployments
+## Deployments - CI/CD
 
-All changed in `master` are automatically deployed to the dev environment. In order to deploy to the production environment, follow the below steps:
+All changed in `master` are automatically deployed to the dev environment via a gitlab pipeline. In order to deploy to the production environment, follow the below steps:
 
-The project catalogue is deployed to the `web-development` k8s cluster and the process is managed in the [ebi.ac.uk.humancellatlas.project-catalogue project](https://gitlab.ebi.ac.uk/ebiwd/html-sites/ebi.ac.uk.humancellatlas.project-catalogue) in the [`ebiwd` namespace](https://gitlab.ebi.ac.uk/ebiwd) in [GitLab](http://gitlab.ebi.ac.uk/). If there are any problems with deployments, you can contact [www-dev@ebi.ac.uk](mailto:www-dev@ebi.ac.uk) via [Service Now](https://embl.service-now.com/). The sync between github and gitlab is defined in gitlab.
+The project catalogue is deployed to the `web-development` k8s cluster and the process is managed in the [ebi.ac.uk.humancellatlas.project-catalogue project](https://gitlab.ebi.ac.uk/ebiwd/html-sites/ebi.ac.uk.humancellatlas.project-catalogue) in the [`ebiwd` namespace](https://gitlab.ebi.ac.uk/ebiwd) in [GitLab](http://gitlab.ebi.ac.uk/). If there are any problems with deployments, you can contact [www-dev@ebi.ac.uk](mailto:www-dev@ebi.ac.uk) via [Service Now](https://embl.service-now.com/). The sync between github and gitlab is defined in gitlab and maintained by the webprod team.
 
 ## Dev notes
 
