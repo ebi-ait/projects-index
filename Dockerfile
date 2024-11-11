@@ -10,7 +10,7 @@ COPY . /app
 RUN yarn global add @angular/cli@13.3.3
 RUN yarn install && yarn test && yarn run build-${DEPLOYMENT_ENV} && rm -rf node_modules
 
-FROM nginxinc/nginx-unprivileged:1.17.2-alpine
+FROM nginxinc/nginx-unprivileged:1.27-alpine
 
 COPY docker-assets/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist/projects-index /usr/share/nginx/html/humancellatlas/project-catalogue
