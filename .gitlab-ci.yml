@@ -56,7 +56,7 @@ deploy_to_hh_wp_dev:
     - master
   variables:
     NAMESPACE: static-sites-dev
-    KUBE_CONFIG: $HH_WP_KUBE_CONFIG
+    KUBE_CONFIG: $HH_EBIWD_STATIC_KUBE_CONFIG
   <<: *deploy
 
 deploy_to_hx_wp_dev:
@@ -65,7 +65,7 @@ deploy_to_hx_wp_dev:
     - master
   variables:
     NAMESPACE: static-sites-dev
-    KUBE_CONFIG: $HX_WP_KUBE_CONFIG
+    KUBE_CONFIG: $HX_EBIWD_STATIC_KUBE_CONFIG
   <<: *deploy
 
 deploy_to_hh_wp_prod:
@@ -74,7 +74,7 @@ deploy_to_hh_wp_prod:
     - tags
   variables:
     NAMESPACE: static-sites-prod
-    KUBE_CONFIG: $HH_WP_KUBE_CONFIG
+    KUBE_CONFIG: $HH_EBIWD_STATIC_KUBE_CONFIG
   <<: *deploy
 
 deploy_to_hx_wp_prod:
@@ -83,5 +83,5 @@ deploy_to_hx_wp_prod:
     - tags
   variables:
     NAMESPACE: static-sites-prod
-    KUBE_CONFIG: $HX_WP_KUBE_CONFIG
+    KUBE_CONFIG: $HX_EBIWD_STATIC_KUBE_CONFIG
   <<: *deploy
