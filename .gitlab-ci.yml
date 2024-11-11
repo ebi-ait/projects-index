@@ -1,9 +1,11 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  DOCKER_DRIVER: overlay2
+  GIT_STRATEGY: fetch
+  CS_DOCKERFILE_PATH: $CI_PROJECT_DIR/Dockerfile
 before_script:
-  - export IMAGE_NAME=$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA
-
-include:
-  - template: Container-Scanning.gitlab-ci.yml
-
+  export IMAGE_NAME=$CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID
+  
 stages:
   - build
   - test
@@ -37,8 +39,31 @@ build_prod:
     - docker push $IMAGE_NAME
 
 container_scanning:
+  stage: test
   tags:
     - dind2
+  rules:
+      - if: $CI_COMMIT_BRANCH == 'master'
+  variables:
+    # To provide a `vulnerability-allowlist.yml` file, override the GIT_STRATEGY variable in your
+    # `.gitlab-ci.yml` file and set it to `fetch`.
+    # For details, see the following links:
+    # https://docs.gitlab.com/ee/user/application_security/container_scanning/index.html#overriding-the-container-scanning-template
+    # https://docs.gitlab.com/ee/user/application_security/container_scanning/#vulnerability-allowlisting
+    GIT_STRATEGY: fetch
+    IMAGE_NAME: $CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID
+    CS_IMAGE: $IMAGE_NAME
+    CS_DOCKERFILE_PATH: $CI_PROJECT_DIR/Dockerfile
+    SECURE_LOG_LEVEL: "debug"
+    # allow_failure: true
+    # artifacts:
+    #   reports:
+    #     container_scanning: gl-container-scanning-report.json
+      #     dependency_scanning: gl-dependency-scanning-report.json
+      #   paths: [gl-container-scanning-report.json, gl-dependency-scanning-report.json]
+
+include:
+  - template: Jobs/Container-Scanning.gitlab-ci.yml
 
 # Reusable template, requires the $KUBE_CONFIG and $NAMESPACE variables to be set
 # This subsitutes the environment variable $IMAGE_NAME in the overlay file, and deploys
