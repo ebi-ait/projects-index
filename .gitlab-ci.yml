@@ -1,8 +1,13 @@
-before_script:
-  - export IMAGE_NAME=$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  DOCKER_DRIVER: overlay2
+  GIT_STRATEGY: fetch
+  CS_DOCKERFILE_PATH: $CI_PROJECT_DIR/Dockerfile
 
-include:
-  - template: Container-Scanning.gitlab-ci.yml
+# Can't use the {::8} notation to get a short sha in the variables section, so exporting below
+before_script:
+  - export CI_COMMIT_SHA_SHORT=${CI_COMMIT_SHA::8}
+  - export IMAGE_NAME=$CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID
 
 stages:
   - build
@@ -10,35 +15,41 @@ stages:
   - deploy_dev
   - deploy_prod
 
-build_dev:
+build:
   stage: build
   tags:
     - dind
-  only:
-    - master
-  except:
-    - tags
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-    - docker build -t $IMAGE_NAME --build-arg DEPLOYMENT_ENV=staging .
-    - docker push $IMAGE_NAME
-
-build_prod:
-  stage: build
-  tags:
-    - dind
-  only:
-    - tags
-  script:
-    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-    - export DEV_IMAGE_NAME=$CI_REGISTRY_IMAGE/master:$CI_COMMIT_SHA
-    - docker pull $DEV_IMAGE_NAME || true
-    - docker build --cache-from $DEV_IMAGE_NAME -t $IMAGE_NAME --build-arg DEPLOYMENT_ENV=prod .
+    - docker build -t $IMAGE_NAME .
     - docker push $IMAGE_NAME
 
 container_scanning:
+  stage: test
   tags:
     - dind2
+  rules:
+      - if: $CI_COMMIT_BRANCH == 'master'
+  variables:
+    # To provide a `vulnerability-allowlist.yml` file, override the GIT_STRATEGY variable in your
+    # `.gitlab-ci.yml` file and set it to `fetch`.
+    # For details, see the following links:
+    # https://docs.gitlab.com/ee/user/application_security/container_scanning/index.html#overriding-the-container-scanning-template
+    # https://docs.gitlab.com/ee/user/application_security/container_scanning/#vulnerability-allowlisting
+    GIT_STRATEGY: fetch
+    IMAGE_NAME: $CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID
+    CS_IMAGE: $IMAGE_NAME
+    CS_DOCKERFILE_PATH: $CI_PROJECT_DIR/Dockerfile
+    SECURE_LOG_LEVEL: "debug"
+    # allow_failure: true
+    # artifacts:
+    #   reports:
+    #     container_scanning: gl-container-scanning-report.json
+      #     dependency_scanning: gl-dependency-scanning-report.json
+      #   paths: [gl-container-scanning-report.json, gl-dependency-scanning-report.json]
+
+include:
+  - template: Jobs/Container-Scanning.gitlab-ci.yml
 
 # Reusable template, requires the $KUBE_CONFIG and $NAMESPACE variables to be set
 # This subsitutes the environment variable $IMAGE_NAME in the overlay file, and deploys
@@ -56,7 +67,7 @@ deploy_to_hh_wp_dev:
     - master
   variables:
     NAMESPACE: static-sites-dev
-    KUBE_CONFIG: $HH_WP_KUBE_CONFIG
+    KUBE_CONFIG: $HH_EBIWD_STATIC_KUBE_CONFIG
   <<: *deploy
 
 deploy_to_hx_wp_dev:
@@ -65,7 +76,7 @@ deploy_to_hx_wp_dev:
     - master
   variables:
     NAMESPACE: static-sites-dev
-    KUBE_CONFIG: $HX_WP_KUBE_CONFIG
+    KUBE_CONFIG: $HX_EBIWD_STATIC_KUBE_CONFIG
   <<: *deploy
 
 deploy_to_hh_wp_prod:
@@ -74,7 +85,7 @@ deploy_to_hh_wp_prod:
     - tags
   variables:
     NAMESPACE: static-sites-prod
-    KUBE_CONFIG: $HH_WP_KUBE_CONFIG
+    KUBE_CONFIG: $HH_EBIWD_STATIC_KUBE_CONFIG
   <<: *deploy
 
 deploy_to_hx_wp_prod:
@@ -83,5 +94,6 @@ deploy_to_hx_wp_prod:
     - tags
   variables:
     NAMESPACE: static-sites-prod
-    KUBE_CONFIG: $HX_WP_KUBE_CONFIG
+    KUBE_CONFIG: $HX_EBIWD_STATIC_KUBE_CONFIG
   <<: *deploy
+

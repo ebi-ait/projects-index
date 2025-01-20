@@ -1,11 +1,15 @@
-commonLabels:
-  varient: caas
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+labels:
+- includeSelectors: true
+  pairs:
+    varient: caas
 commonAnnotations:
   note: CaaS varients
-bases:
-  - ../../base
+resources:
+- ../../base
 patches:
-  - ci_image.yaml
-  - replicas.yaml
-  - probes.yaml
-  - registry_credentials.yaml
+- path: ./ci_image.yaml
+- path: ./replicas.yaml
+- path: ./probes.yaml
+- path: ./registry_credentials.yaml
