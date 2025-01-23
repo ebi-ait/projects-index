@@ -15,21 +15,38 @@ stages:
   - deploy_dev
   - deploy_prod
 
-build:
+build_dev:
   stage: build
   tags:
     - dind
+  only:
+    - master
+  except:
+    - tags
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-    - docker build -t $IMAGE_NAME .
+    - docker build -t $IMAGE_NAME --build-arg DEPLOYMENT_ENV=staging .
     - docker push $IMAGE_NAME
+
+build_prod:
+  stage: build
+  tags:
+    - dind
+  only:
+    - tags
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - export DEV_IMAGE_NAME=$CI_REGISTRY_IMAGE/master:$CI_COMMIT_SHA
+    - docker pull $DEV_IMAGE_NAME || true
+    - docker build --cache-from $DEV_IMAGE_NAME -t $IMAGE_NAME --build-arg DEPLOYMENT_ENV=prod .
+    - docker build -t $IMAGE_NAME
 
 container_scanning:
   stage: test
   tags:
     - dind2
   rules:
-      - if: $CI_COMMIT_BRANCH == 'master'
+    - if: $CI_COMMIT_BRANCH == 'master'
   variables:
     # To provide a `vulnerability-allowlist.yml` file, override the GIT_STRATEGY variable in your
     # `.gitlab-ci.yml` file and set it to `fetch`.
@@ -45,8 +62,8 @@ container_scanning:
     # artifacts:
     #   reports:
     #     container_scanning: gl-container-scanning-report.json
-      #     dependency_scanning: gl-dependency-scanning-report.json
-      #   paths: [gl-container-scanning-report.json, gl-dependency-scanning-report.json]
+    #     dependency_scanning: gl-dependency-scanning-report.json
+    #   paths: [gl-container-scanning-report.json, gl-dependency-scanning-report.json]
 
 include:
   - template: Jobs/Container-Scanning.gitlab-ci.yml
@@ -96,4 +113,3 @@ deploy_to_hx_wp_prod:
     NAMESPACE: static-sites-prod
     KUBE_CONFIG: $HX_EBIWD_STATIC_KUBE_CONFIG
   <<: *deploy
-
