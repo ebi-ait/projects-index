@@ -1,7 +1,7 @@
-FROM quay.io/ebi-ait/ingest-base-images:trion_ng-cli-karma_12.0.0 as builder
+FROM quay.io/ebi-ait/ingest-base-images:trion_ng-cli-karma_12.0.0 AS builder
 
 ARG DEPLOYMENT_ENV
-ENV DEPLOYMENT_ENV $DEPLOYMENT_ENV
+ENV DEPLOYMENT_ENV=$DEPLOYMENT_ENV
 RUN echo "Environment: ${DEPLOYMENT_ENV}"
 
 WORKDIR /app
